@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StableRandomVariable}
+\pmcreated{2013-03-22 16:25:56}
+\pmmodified{2013-03-22 16:25:56}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{stable random variable}
+\pmrecord{13}{38584}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E07}
+\pmdefines{stable distribution function}
+\pmdefines{strictly stable random variable}
+\pmdefines{strictly stable distribution function}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{stable}
+
+A real random variable $X$ defined on a probability space $(\Omega, \mathcal{F}, P)$ is said to be \emph{stable} if 
+\begin{enumerate}
+\item $X$ is not trivial; that is, the range of the distribution function of $X$ strictly includes $\lbrace 0,1\rbrace$, and
+\item given any positive integer $n$ and $X_1,\ldots,X_n$ random variables, iid as $X$: $$S_n:=X_1+\cdots +X_n \stackrel{t}{=} X.$$
+In other words, there are real constants $a,b$ such that $S_n$ and $aX+b$ have the same distribution functions; $S_n$ and $X$ are of the same type.
+\end{enumerate}
+
+Furthermore, $X$ is \emph{strictly stable} if $X$ is stable and the $b$ given above can always be take as $0$.  In other words, $X$ is strictly stable if $S_n$ and $X$ belong to the same scale family.
+
+A distribution function is said to be \emph{stable} (\emph{strictly stable}) if it is the distribution function of a stable (strictly stable) random variable.
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item If $X$ is stable, then $aX+b$ is stable for any $a,b\in \mathbb{R}$.
+\item If $X$ and $Y$ are independent, stable, and of the same type, then $X+Y$ is stable.
+\item $X$ is stable iff for any independent $X_1,X_2$, identically distributed as $X$, and any $a,b\in\mathbb{R}$, there exist $c,d\in\mathbb{R}$ such that $aX_1+bX_2$ and $cX+d$ are identically distributed.
+\item
+A stable distribution function is \PMlinkname{absolutely continuous}{AbsolutelyContinuousFunction2} and infinitely divisible.
+\end{itemize}
+
+Some common stable distribution functions are the normal distributions and Cauchy distributions.
+%%%%%
+%%%%%
+\end{document}

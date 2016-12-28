@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BrownianMotion}
+\pmcreated{2013-03-22 15:12:46}
+\pmmodified{2013-03-22 15:12:46}
+\pmowner{skubeedooo}{5401}
+\pmmodifier{skubeedooo}{5401}
+\pmtitle{Brownian motion}
+\pmrecord{16}{36974}
+\pmprivacy{1}
+\pmauthor{skubeedooo}{5401}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60J65}
+\pmsynonym{Wiener process}{BrownianMotion}
+%\pmkeywords{Levy characterization}
+\pmrelated{WienerMeasure}
+\pmrelated{StochasticCalculusAndSDE}
+
+% this is the default PlanetMath preamble.  as your 
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need 
+
+% define commands here
+
+\begin{document}
+\theoremstyle{definition}
+\newtheorem*{mydefn}{Definition}
+\begin{mydefn}
+One-dimensional \emph{Brownian motion} is a stochastic process $W(t)$, defined for $t\in [0,\infty)$ such that
+\begin{enumerate}
+\item $W(0) = 0$ almost surely
+\item The sample paths $t \mapsto W(t)$ are almost surely continuous.
+\item For any finite sequence of times $t_0 < t_1 < \cdots <t_n$,
+the increments 
+\[
+W(t_1)-W(t_0), W(t_2)-W(t_1), \dotsc, W(t_n)-W(t_{n-1})
+\]
+are independent.
+\item
+For any times $s < t$, $W(t)-W(s)$ is normally distributed with mean zero
+and variance $t-s$.
+\end{enumerate}
+\end{mydefn}
+
+\begin{mydefn}
+A $d$-dimensional Brownian motion is a stochastic process 
+$W(t) = (W_1(t), \dots, W_d(t))$ in 
+$\mathbb{R}^d$ whose coordinate processes $W_i(t)$ are 
+independent one-dimensional Brownian motions.
+\end{mydefn}
+
+\begin{figure}
+\includegraphics{brownian.eps}
+\caption{Sample paths of a standard Brownian motion}
+\end{figure}
+
+
+%%%%%
+%%%%%
+\end{document}

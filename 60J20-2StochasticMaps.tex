@@ -1,0 +1,320 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{2StochasticMaps}
+\pmcreated{2014-04-23 0:51:47}
+\pmmodified{2014-04-23 0:51:47}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{2. Stochastic maps}
+\pmrecord{11}{88086}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Feature}
+\pmclassification{msc}{60J20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\DeclareMathOperator{\Hom}{Hom}
+
+\newcommand{\vecify}{{\mathcal V}}
+\newcommand{\Act}{{A}}
+\newcommand{\act}{{a}}
+\newcommand{\Sit}{{S}}
+\newcommand{\occ}{{v}}
+\newcommand{\univ}{{\mathbf D}}
+\newcommand{\uout}{{d_{out}}}
+\newcommand{\uin}{{d_{in}}}
+\newcommand{\mangle}{{\mathbf C}}
+
+\newcommand{\psheaf}{{\mathcal F}}
+\newcommand{\scat}{{\mathtt{Stoch}}}
+\newcommand{\subs}{{\mathtt{Sys}}}
+\newcommand{\mcat}{{\mathtt{Meas}}}
+\newcommand{\eop}{{$\blacksquare$}}
+\newcommand{\eod}{{${}$\\}}
+\newcommand{\bra}{{\langle}}
+\newcommand{\ket}{{\rangle}}
+
+\newcommand{\cN}{{\mathcal N}}
+\newcommand{\bR}{{\mathbb R}}
+\newcommand{\fm}{{\mathfrak m}}
+\newcommand{\cP}{{\mathcal P}}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+
+\theoremstyle{remark}
+\newtheorem{eg}{Example}
+\newtheorem{rem}{Remark}
+\newtheorem{defn}{Definition}
+
+\setcounter{eg}{0}
+\setcounter{rem}{0}
+\setcounter{defn}{1}
+\begin{document}
+Any conditional distribution $p(y|x)$ on finite sets $X$ and $Y$ can be 
+represented as a matrix as follows. Let $\vecify X=\{\varphi:X\rightarrow 
+\bR\}$ denote the vector space of real valued functions on $X$ and similarly
+for $Y$. $\vecify X$ is equipped with Dirac basis 
+$\{\delta_x:X\rightarrow\bR|x\in X\}$, where
+\begin{equation*}
+    \delta_x(x') = \left\{\begin{matrix}
+		1 & \mbox{if }x=x'\\
+		0 & \mbox{else}.
+	\end{matrix}\right.
+\end{equation*}
+Given a conditional distribution $p(y|x)$ construct matrix $\fm_p$ with 
+entry $p(y|x)$ in column $\delta_x$ and row $\delta_y$. Matrix $\fm_p$ is 
+\emph{stochastic}: it has nonnegative entries and its columns sum to 1. 
+Alternatively, given a stochastic matrix $\fm:\vecify X\rightarrow \vecify 
+Y$, we can recover the conditional distribution. The Dirac basis induces 
+Euclidean metric
+\begin{equation}
+	\bra\bullet|\bullet\ket:\vecify X\otimes\vecify X\rightarrow\bR:
+	\left\langle\sum\alpha_x\delta_x\left|\sum\beta_x\delta_x\right\rangle\right.=\sum\alpha_x\beta_x
+	\label{e:metric}
+\end{equation}
+which identifies vector spaces with their duals $\vecify X\approx 
+(\vecify X)^*$. Let $p_\fm(y|x) := \bra\delta_y|\fm(\delta_x)\ket$.
+
+\begin{defn}
+	\label{d:catstoch}
+	The \emph{category of stochastic maps} $\scat$ has function spaces 
+    $\vecify X$ for objects and stochastic matrices $\fm:\vecify 
+    X\rightarrow \vecify Y$ with respect to Dirac bases for arrows. We 
+    identify of $(\vecify X)^*$ with $\vecify X$ using the Dirac basis 
+    without further comment below.
+\end{defn}
+	
+\begin{defn}
+	\label{d:dual}
+	The \emph{dual} of surjective stochastic map $\fm:\vecify X\rightarrow 
+    \vecify Y$ is the composition $\fm^\natural:= \vecify 
+    Y\xrightarrow{\fm^*\circ ren} \vecify X$, where $ren$ is the unique map 
+    making diagram
+	% $\fm^\natural:\vecify Y\rightarrow \vecify X$, the transpose 
+    $\fm^\perp$ of $\fm$ with columns renormalized to sum to 1. The 
+    stochastic dual $\fm^\natural$ is
+\begin{figure}
+ \centering}
+ \includegraphics{information-theoretic-distributed-measurement-2.1.png}
+\end{figure}
+%\begin{equation*}
+%	\xymatrix{
+%	& (\vecify Y)^*\ar[rr]^{\fm^*} & & 
+%	(\vecify X)^*\ar[d]_{\omega_X}\\ 
+%	& (\vecify Y)^*\ar[u]^{ren}\ar[rr]_{\omega_Y}  & & \bR 
+%	}
+%	\end{equation*}
+	commute. Precomposing $\fm^*$ with $ren$ renormalizes
+    \footnote{If $\fm$ is not surjective, i.e. if one of the rows has all 
+    zero entries, then the renormalization is not well-defined.} its 
+    columns to sum to 1. The stochastic dual of a stochastic transform is 
+    stochastic; further, if $\fm$ is stochastic then 
+    $(\fm^\natural)^\natural=\fm$.
+\end{defn}
+
+Category $\scat$ is described in terms of braid-like generators and 
+relations in \cite{fritz:09}. A more general, but also more complicated, 
+category of conditional distributions was introduced by Giry \cite{giry:81},
+see \cite{panangaden:98}. 
+
+\begin{eg}[deterministic functions]
+    \label{eg:det}
+	Let $\mathtt{FSet}$ be the category of finite sets. Define faithful 
+    functor $\vecify:\mathtt{FSet}\rightarrow \scat$ taking set $X$ to 
+    $\vecify X$ and function $f:X\rightarrow Y$ to stochastic map 
+    $\vecify f:\vecify X\rightarrow \vecify Y:\delta_x\mapsto 
+    \delta_{f(x)}$. It is easy to see that $\vecify(X\times Y)=\vecify 
+    X\otimes \vecify Y$ and $\vecify (X\cup Y)=\vecify X\times \vecify Y$.
+
+We introduce special notation for commonly used functions:
+\begin{itemize}
+	\item \emph{Set inclusion.} 
+	For any inclusion $i:X\hookrightarrow Y$ of sets, let $\iota:=\vecify 
+    i:\vecify X\rightarrow \vecify Y$ denote the corresponding stochastic 
+    map. Two important examples are
+	\begin{itemize}
+		\item \emph{Point inclusion.} 
+		Given $x\in X$ define $\iota_x:\bR\rightarrow \vecify X:1\mapsto 
+        \delta_x$.
+		\item \emph{Diagonal map.} 
+		Inclusion $\Delta:X\hookrightarrow X\times X:x\mapsto(x,x)$ 
+        induces $\iota_\Delta:\vecify X\rightarrow \vecify X\otimes 
+        \vecify X:\delta_x\mapsto \delta_x\otimes \delta_x$.		
+	\end{itemize}
+	\item \emph{Terminal map.}
+	Let $\omega_X:\vecify X\rightarrow \bR:\delta_x\mapsto 1$ denote the 
+    terminal map induced by $X\rightarrow\{\bullet\}$.
+	\item \emph{Projection.}
+	Let $\pi_{XY,X}:\vecify X\otimes \vecify Y\rightarrow \vecify 
+    X:\delta_x\otimes \delta_y\mapsto \delta_x$ denote the projection 
+    induced by $pr_{X\times Y,X}:X\times Y\rightarrow X:(x,y)\mapsto x$.
+\end{itemize}
+\end{eg}
+
+\begin{prop}
+	[dual is Bayes over uniform distribution]
+	\label{t:dual}
+	The dual of a stochastic map applies Bayes rule to compute the 
+    posterior distribution $\bra \fm^\natural(\delta_y)|\delta_x\ket=
+    p_\fm(x|y)$ using the uniform probability distribution.
+\end{prop}
+
+\noindent
+Proof: 
+The uniform distribution is the dual $\omega_X^\natural:
+\bR\rightarrow\vecify X:1\mapsto \frac{1}{|X|}\sum_x \delta_x$ 
+of the terminal map $\omega_X:\vecify X\rightarrow \bR$. It assigns 
+equal probability $p_{\omega^\natural}(x)=\frac{1}{|X|}$ to all of $X$'s 
+elements, and can be characterized as the maximally uninformative 
+distribution \cite{jaynes:57}. Let $\fm:\vecify X\rightarrow \vecify Y$. 
+The normalized transpose is 
+\begin{equation*}
+	\fm^\natural(\delta_y)= \sum_x \frac{p_\fm(y|x)}{\sum_{x'}p_\fm(y|x')}
+    \delta_x
+	= \sum_x \frac{p_\fm(y|x)\cdot p_{\omega^\natural}(x)}
+    {\sum_{x'}p_\fm(y|x')p_{\omega^\natural}(x')}\delta_x
+	= \sum_x p_\fm(x|y) \cdot \delta_x.
+	\,\,\blacksquare
+\end{equation*}
+
+\begin{rem}
+    \label{r:notdirac}
+	Note that $p_\fm(x|y):=\bra \fm^\natural(\delta_y)|
+    \delta_x\ket\neq\bra \delta_y|\fm(\delta_x)\ket=:p_\fm(y|x)$. 
+    Dirac's bra-ket notation must be used with care since stochastic 
+    matrices are not necessarily symmetric \cite{dirac:58}.
+\end{rem}
+
+\begin{cor}
+	[preimages]
+	\label{t:preimage}
+	The dual $(\vecify f)^\natural:\vecify Y\rightarrow \vecify X$ of 
+    stochastic map $\vecify f:\vecify X\rightarrow \vecify Y$ is 
+    conditional distribution
+	\begin{equation}
+		\label{e:preimage}
+		p_{\vecify f}(x|y) = \left\{\begin{matrix}
+			\frac{1}{|f^{-1}(y)|} & \mbox{if } f(x)=y\\
+			0 &\mbox{else}.
+		\end{matrix}\right.
+	\end{equation}
+\end{cor}
+
+\noindent
+Proof:
+By the proof of Proposition~\ref{t:dual}
+\begin{equation*}
+		(\vecify f)^\natural(\delta_y)=
+		\frac{1}{|f^{-1}(y)|}\sum_{\{x|f(x)=y\}}\delta_x.
+		\,\,\blacksquare
+\end{equation*}
+
+The support of $p_{\vecify f}(X|y)$ is $f^{-1}(y)$. Elements in the 
+support are assigned equal probability, thereby treating them as an 
+undifferentiated list. Dual $(\vecify f)^\natural$ thus generalizes the 
+inverse image $f^{-1}:Y\rightarrow \underline{2}^X$. Conveniently however, 
+the dual $(\vecify X)^\natural$ simply flips the domain and range of 
+$\vecify f$, whereas the inverse image maps to powerset $\underline{2}^X$, 
+an entirely new object.
+
+\begin{cor}
+	[marginalization with respect to uniform distribution]
+	\label{t:marginalize}
+	Precomposing $\vecify X\otimes \vecify Y\xrightarrow{\fm}\vecify Z$ 
+    with the dual $\pi_X^\natural$ to $\vecify X\otimes\vecify 
+    Y\xrightarrow{\pi_X}\vecify X$ marginalizes $p_\fm(z|x,y)$ 
+    over the uniform distribution on $Y$.
+\end{cor}
+
+\noindent
+Proof:
+By Corollary~\ref{t:preimage} we have $\pi^\natural_X:\vecify X
+\rightarrow \vecify X\otimes \vecify Y:\delta_y\mapsto 
+\frac{1}{|Y|}\sum_{y\in Y}\delta_x\otimes \delta_y$. It follows 
+immediately that
+\begin{equation*}
+	p_{\fm\circ\pi^\natural_X}(z|x)=\frac{1}{|Y|}\sum_{y\in Y} 
+    p_\fm(z|x,y).
+	\,\,\blacksquare
+\end{equation*}
+
+Precomposing with $\pi_X^\natural$ treats inputs from $Y$ as 
+extrinsic noise. Although duals can be defined so that they 
+implement Bayes' rule with respect to other probability distributions, 
+this paper restricts attention to the simplest possible renormalization 
+of columns, Definition \ref{d:catstoch}. The uniform distribution is 
+convenient since it uses minimal prior knowledge (it depends only on the 
+number of elements in the set) to generalize pre-images to the stochastic 
+case, Proposition~\ref{t:preimage}.
+
+\begin{thebibliography}{99}
+%\providecommand{\bibitemdeclare}[2]{}
+\providecommand{\urlprefix}{Available at }
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{\texttt{#2}}
+\providecommand{\urlalt}[2]{\href{#1}{#2}}
+\providecommand{\doi}[1]{doi:\urlalt{http://dx.doi.org/#1}{#1}}
+\providecommand{\bibinfo}[2]{#2}
+
+%\bibitemdeclare{book}{dirac:58}
+\bibitem{dirac:58}
+\bibinfo{author}{P~A~M Dirac} (\bibinfo{year}{1958}): \emph{\bibinfo{title}{The
+  {P}rinciples of {Q}uantum {M}echanics}}.
+\newblock \bibinfo{publisher}{Oxford University Press}.
+
+%\bibitemdeclare{article}{fritz:09}
+\bibitem{fritz:09}
+\bibinfo{author}{Tobias Fritz} (\bibinfo{year}{2009}): \emph{\bibinfo{title}{A
+  presentation of the category of stochastic matrices}}.
+\newblock {\sl \bibinfo{journal}{arXiv:0902.2554v1}} .
+
+%\bibitemdeclare{incollection}{giry:81}
+\bibitem{giry:81}
+\bibinfo{author}{M~Giry} (\bibinfo{year}{1981}): \emph{\bibinfo{title}{A
+  categorical approach to probability theory}}.
+\newblock In \bibinfo{editor}{B~Banaschewski}, editor: {\sl
+  \bibinfo{booktitle}{Categorical {A}spects of {T}opology and {A}nalysis}},
+  \bibinfo{publisher}{Springer}.
+
+%\bibitemdeclare{article}{jaynes:57}
+\bibitem{jaynes:57}
+\bibinfo{author}{E~T Jaynes} (\bibinfo{year}{1957}):
+  \emph{\bibinfo{title}{Information theory and statistical mechanics}}.
+\newblock {\sl \bibinfo{journal}{Phys. Rev.}}
+  \bibinfo{volume}{106}(\bibinfo{number}{4}), pp. \bibinfo{pages}{620--630}.
+  
+%\bibitemdeclare{inproceedings}{panangaden:98}
+\bibitem{panangaden:98}
+\bibinfo{author}{P~Panangaden} (\bibinfo{year}{1998}):
+  \emph{\bibinfo{title}{Probabilistic relations}}.
+\newblock In \bibinfo{editor}{C~Baier}, \bibinfo{editor}{M~Huth},
+  \bibinfo{editor}{M~Kwiatkowska} \& \bibinfo{editor}{M~Ryan}, editors: {\sl
+  \bibinfo{booktitle}{PROBMIV'98}}, pp. \bibinfo{pages}{59--74}.
+
+\end{thebibliography}
+
+\end{document}

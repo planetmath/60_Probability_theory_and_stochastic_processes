@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GammaRandomVariable}
+\pmcreated{2013-03-22 11:54:27}
+\pmmodified{2013-03-22 11:54:27}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{gamma random variable}
+\pmrecord{14}{30529}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60-00}
+\pmclassification{msc}{62-00}
+\pmsynonym{gamma distribution}{GammaRandomVariable}
+\pmdefines{Erlang random variable}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%%\usepackage{xypic}
+\begin{document}
+A \textbf{gamma random variable} with parameters $\alpha>0$ and $\lambda>0$ is one whose probability density function is given by
+\begin{align*}
+f_X(x) = \frac{ \lambda^\alpha}{\Gamma(\alpha)} x^{\alpha - 1} e^{-\lambda x}  
+\end{align*}
+for $x>0$, and is denoted by $X\sim Gamma(\alpha, \lambda)$.
+
+Notes:\\
+\begin{enumerate}
+\item Gamma random variables are widely used in many applications. Taking $\alpha = 1$ reduces the form to that of an exponential random variable. If $\alpha = \frac{n}{2}$ and $\lambda = \frac{1}{2}$, this is a chi-squared random variable.
+\item The function $\Gamma: [0,\infty] \to R$ is the gamma function, defined as $\Gamma(t) = \int_{0}^{\infty}{x^{t-1} e^{-x} dx}$. 
+\item The expected value of a gamma random variable is given by $E[X]=\frac{\alpha}{\lambda}$, and the variance by $Var[X] = \frac{\alpha}{\lambda^2}$
+\item The moment generating function of a gamma random variable is given by $M_X(t) = (\frac{\lambda}{\lambda - t})^\alpha$.
+\end{enumerate}
+
+If the first parameter is a positive integer, the variate is usually called Erlang random variate. The sum of $n$ exponentially distributed variables with parameter $\lambda$ is a gamma (Erlang) variate with parameters $n, \lambda$.
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

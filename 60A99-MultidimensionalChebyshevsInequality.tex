@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MultidimensionalChebyshevsInequality}
+\pmcreated{2013-03-22 18:17:55}
+\pmmodified{2013-03-22 18:17:55}
+\pmowner{daniWk}{21206}
+\pmmodifier{daniWk}{21206}
+\pmtitle{Multidimensional Chebyshev's inequality}
+\pmrecord{5}{40916}
+\pmprivacy{1}
+\pmauthor{daniWk}{21206}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $X$ be an N-dimensional random variable with mean $\mu=\mathbb{E}[X]$ and covariance matrix $V=\mathbb{E}\left[ \left( X-\mu\right) \, \left( X-\mu\right)^T\right]$.
+
+If $V$ is invertible (i.e., strictly positive), for any $t>0$:
+\[ \Pr\left( \sqrt{\left( X-\mu\right)^T \, V^{-1} \, \left( X-\mu\right) } > t \right) \le \frac{N}{t^2} \]
+
+{\em Proof:}
+$V$ is positive, so $V^{-1}$ is.
+Define the random variable
+\[ y = \left( X-\mu\right)^T \, V^{-1} \, \left( X-\mu\right) \]
+$y$ is positive, then Markov's inequality holds:
+\[ \Pr\left( \sqrt{\left( X-\mu\right)^T \, V^{-1} \, \left( X-\mu\right) } > t\right) = \Pr\left( \sqrt{y} > t\right) =\Pr\left( y > t^2 \right) \le \frac{\mathbb{E}[y]}{t^2} \]
+
+Since $V$ is symmetric, a rotation $R$ (i.e., $R\, R^T = R^T\, R = I$) and a diagonal matrix $D$ (i.e., $i\neq j \, \Rightarrow \, D_{i,j}=0$) exist such that
+\[ V = R^T \, D \, R \]
+Since $V$ is positive $D_{ii}>0$.
+Besides
+\[ V^{-1} = R^{-1} \, D^{-1} \, (R^T)^{-1} = R^T \, D^{-1} \, R \]
+clearly $\left[ D^{-1}\right]_{ii} = \frac{1}{D_{ii}}$.
+
+Define $Z = R \, \left( X-\mu\right)$.
+
+The following identities hold:
+\[ \mathbb{E}\left[ Z \, Z^T \right] = R \,\mathbb{E}\left[ \left( X-\mu\right) \, \left( X-\mu\right)^T \right] \, R^T  = R \, R^T \, D \, R \, R^T = D  \quad \Rightarrow \quad \forall i \quad \mathbb{E}\left[ Z_i^2 \right] = D_{ii} \]
+and
+\[ y = Z^T \, R \, V^{-1} \, R^T \, Z = Z^T \, D^{-1} \, Z = \sum\limits_{i=1}^N \frac{Z_i^2}{D_{ii}} \]
+then
+\[ \mathbb{E} [y] = \sum\limits_{i=1}^N \frac{\mathbb{E}\left[ Z_i^2 \right] }{D_{ii}} = N \]
+%%%%%
+%%%%%
+\end{document}

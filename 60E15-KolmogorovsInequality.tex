@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KolmogorovsInequality}
+\pmcreated{2013-03-22 13:13:15}
+\pmmodified{2013-03-22 13:13:15}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Kolmogorov's inequality}
+\pmrecord{9}{33687}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E15}
+\pmrelated{ChebyshevsInequality2}
+\pmrelated{MarkovsInequality}
+\pmrelated{ChebyshevsInequality}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $X_1,\dots, X_n$ be independent random variables in a probability space, such that $\operatorname{E}[X_k]=0$ and $\operatorname{Var}[X_k] <\infty$ for 
+$k=1,\dots, n$. Then, for each $\lambda>0$, 
+
+\[P\left(\max_{1\leq k\leq n} |S_k|\geq\lambda\right)\leq \frac{1}{\lambda^2}\operatorname{Var}[S_n] = \frac{1}{\lambda^2}\sum_{k=1}^n \operatorname{Var}[X_k], \]
+
+where $S_k = X_1 +\cdots + X_k$.
+%%%%%
+%%%%%
+\end{document}

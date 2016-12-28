@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlmostEverywhere}
+\pmcreated{2013-03-22 12:20:58}
+\pmmodified{2013-03-22 12:20:58}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{almost everywhere}
+\pmrecord{7}{32002}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A10}
+\pmsynonym{almost surely}{AlmostEverywhere}
+\pmsynonym{a.s.}{AlmostEverywhere}
+\pmsynonym{a.e.}{AlmostEverywhere}
+\pmsynonym{almost all}{AlmostEverywhere}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\mv}[1]{\mathbf{#1}}	% matrix or vector
+\newcommand{\mvt}[1]{\mv{#1}^{\mathrm{T}}}
+\newcommand{\mvi}[1]{\mv{#1}^{-1}}
+\newcommand{\mpderiv}[1]{\frac{\partial}{\partial {#1}}}
+\newcommand{\borel}{\mathfrak{B}}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\defined}{:=}
+\newcommand{\var}{\mathrm{var}}
+\newcommand{\cov}{\mathrm{cov}}
+\newcommand{\corr}{\mathrm{corr}}
+\newcommand{\set}[1]{\{#1\}}
+\begin{document}
+Let $(X, \borel, \mu)$ be a measure space.  A condition holds \emph{almost everywhere} on $X$ if it holds ``with probability $1$,'' i.e. if it holds everywhere except for a subset of $X$ with measure $0$.  For example, let $f$ and $g$ be nonnegative functions on $X$.  Suppose we want a sufficient condition on functions $f(x)$ and $g(x)$ such that the relation
+\begin{equation}
+\int_{X} f d\mu(x) \le \int_{X} g d\mu(x) 
+\end{equation}
+holds.  Certainly $f(x)\leq g(x)$ for all $x\in X$ is a sufficient condition, but in fact it's enough to have $f(x)\leq g(x)$ almost surely on $X$.  In fact, we can loosen the above non-negativity condition to only require that $f$ and $g$ are almost surely nonnegative as well.
+
+If $X = [0,1]$, then $g$ might be less than $f$ on the Cantor set, an uncountable set with measure $0$, and still satisfy the condition.  We say that $f \le g$ almost everywhere (often abbreviated \emph{a.e.}).   
+
+Note that this \PMlinkescapetext{term} is the \PMlinkescapetext{equivalent} of the \PMlinkescapetext{term} ``almost surely'' from probabilistic measure \PMlinkescapetext{theory}.
+%%%%%
+%%%%%
+\end{document}

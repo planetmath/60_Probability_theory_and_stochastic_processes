@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SymmetricRandomVariable}
+\pmcreated{2013-03-22 16:25:45}
+\pmmodified{2013-03-22 16:25:45}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{symmetric random variable}
+\pmrecord{8}{38581}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E99}
+\pmclassification{msc}{60A99}
+\pmdefines{symmetric distribution function}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{symmetric}
+
+Let $(\Omega,\mathcal{F},P)$ be a probability space and $X$ a real random variable defined on $\Omega$.  $X$ is said to be \emph{symmetric} if $-X$ has the same distribution function as $X$.  A distribution function $F:\mathbb{R}\to [0,1]$ is said to be \emph{symmetric} if it is the distribution function of a symmetric random variable.
+
+\textbf{Remark}.  By definition, if a random variable $X$ is symmetric, then $E[X]$ exists ($<\infty$).  Furthermore, $E[X]=E[-X]=-E[X]$, so that $E[X]=0$.  Furthermore, let $F$ be the distribution function of $X$.  If $F$ is continuous at $x\in\mathbb{R}$, then $$F(-x)=P(X\le -x)=P(-X\le -x)=P(X\ge x)=1-P(X\le x)=1-F(x),$$ so that $F(x)+F(-x)=1$.  This also shows that if $X$ has a density function $f(x)$, then $f(x)=f(-x)$.
+
+There are many examples of symmetric random variables, and the most common one being the normal random variables centered at $0$.  For any random variable $X$, then the difference $\Delta X$ of two independent random variables, identically distributed as $X$ is symmetric.
+%%%%%
+%%%%%
+\end{document}

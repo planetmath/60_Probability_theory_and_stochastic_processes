@@ -1,0 +1,168 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBernsteinInequalities}
+\pmcreated{2013-03-22 16:09:32}
+\pmmodified{2013-03-22 16:09:32}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{proof of Bernstein inequalities}
+\pmrecord{32}{38240}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+1) By \PMlinkname{Chernoff-Cram\`{e}r bound}{ChernoffCramerBound}, we have:
+\[
+\Pr\left\{ \sum_{i=1}^{n}\left( X_{i}-E[X_{i}]\right) >\varepsilon \right\}
+\leq \exp \left[ -\sup_{t > 0}\left( t\varepsilon -\psi (t)\right) \right] 
+\]
+where
+\[
+\psi (t)=\sum_{i=1}^{n}\left( \ln E\left[ e^{tX_{i}}\right] -tE\left[ X_{i}%
+\right] \right) 
+\]
+
+Since $\ln x\leq x-1$ $\forall x\geq 0$,
+\begin{eqnarray*}
+\psi (t) &=&\sum_{i=1}^{n}\left( \ln E\left[ e^{tX_{i}}\right] -tE\left[
+X_{i}\right] \right) \\
+&\leq &\sum_{i=1}^{n}E\left[ e^{tX_{i}}\right] -tE\left[ X_{i}\right] -1 \\
+&=&\sum_{i=1}^{n}E\left[ 1+tX_{i}+\frac{1}{2}t^{2}X_{i}^{2}+\sum_{k=3}^{+%
+\infty }\frac{t^{k}X_{i}^{k}}{k!}\right] -tE\left[ X_{i}\right] -1 \\
+&=&\sum_{i=1}^{n}\left( \frac{1}{2}t^{2}E\left[ X_{i}^{2}\right]
++\sum_{k=3}^{+\infty }\frac{t^{k}E\left[ X_{i}^{k}\right] }{k!}\right) \\
+&=&\frac{1}{2}t^{2}\sum_{i=1}^{n}E\left[ X_{i}^{2}\right] +\sum_{k=3}^{+%
+\infty }\frac{t^{k}\sum_{i=1}^{n}E\left[ X_{i}^{k}\right] }{k!} \\
+&\leq &\frac{1}{2}t^{2}\sum_{i=1}^{n}E\left[ X_{i}^{2}\right]
++\sum_{k=3}^{+\infty }\frac{t^{k}\sum_{i=1}^{n}E\left[ \left\vert
+X_{i}\right\vert ^{k}\right] }{k!},
+\end{eqnarray*}
+and, keeping in mind hypotheses a) and b),
+\begin{eqnarray*}
+\psi (t) &\leq &\frac{1}{2}t^{2}v^2+\sum_{k=3}^{+\infty }\frac{t^{k}}{2}%
+v^2c^{k-2}=\frac{1}{2}t^{2}v^2+\frac{1}{2}t^{3}v^2c\sum_{k=0}^{+\infty }\left( tc\right)^{k}
+\end{eqnarray*}
+
+Now, if $tc<1$, we obtain
+\[
+\psi (t)\leq \frac{1}{2}t^{2}v^2\left( 1+\frac{tc}{1-tc}\right) =\frac{v^2t^{2}}{%
+2\left( 1-tc\right) } 
+\]
+whence
+\[
+\sup_{t > 0}\left( t\varepsilon -\psi (t)\right) \geq \sup_{0 < t < 
+\frac{1}{c}}\left( t\varepsilon -\frac{v^2t^{2}}{2\left( 1-tc\right) }\right) 
+\]
+
+By elementary calculus, we obtain the value of $t$ that maximizes the
+expression in brackets (out of the two roots of the second degree polynomial equation, we choose the one which is $<\frac{1}{c}$):
+\[
+t_{opt}=\frac{v^2+2c\varepsilon -v^2\sqrt{1+\frac{2c\varepsilon }{v^2}}}{c\left(
+v^2+2c\varepsilon \right) }=\frac{1}{c}\left( 1-\frac{1}{\sqrt{1+\frac{%
+2c\varepsilon }{v^2}}}\right) 
+\]
+which, once plugged into the bounds, yields
+\[
+\Pr\left\{ \sum_{i=1}^{n}\left( X_{i}-E[X_{i}]\right) >\varepsilon \right\}
+\leq \exp \left[ -\frac{v^2}{c^{2}}\left( 1+\frac{c\varepsilon }{v^2}-\sqrt{1+2
+\frac{c\varepsilon }{v^2}}\right) \right] 
+\]
+
+Observing that $\sqrt{1+x}\leq 1+\frac{1}{2}x$, one gets:
+\[
+t_{opt}=\frac{1}{c}\left( 1-\frac{1}{\sqrt{1+\frac{2c\varepsilon }{v^2}}}
+\right) \leq \frac{1}{c}\left( 1-\frac{1}{1+\frac{c\varepsilon }{v^2}}\right) =%
+\frac{\varepsilon }{v^2+c\varepsilon }=t^{^{\prime }}<\frac{1}{c}
+\]
+Plugging $t^{\prime }$ in the bound expression, the sub-optimal yet more
+easily manageable formula is obtained:
+\[
+\Pr\left\{ \sum_{i=1}^{n}\left( X_{i}-E[X_{i}]\right) >\varepsilon \right\}
+\leq \exp \left( -\frac{\varepsilon ^{2}}{2\left( v^2+c\varepsilon \right) }%
+\right) 
+\]
+which is obviously a worse bound than the preceeding one, since $t^{\prime
+}\neq t_{opt}$. One can also verify the consistency of this inequality
+directly proving that, for any $x\geq 0$, 
+\[
+1+x-\sqrt{1+2x}\geq \frac{x^{2}}{2\left( 1+x\right) }
+\]
+(see \PMlinkname{here}{ASimpleMethodForComparingRealFunctions} for an easy way, which can be used with $x_0=0$)
+
+2) To prove this more specialized statement let's recall that the condition
+\[
+\Pr\left\{ \left\vert X_{i}\right\vert \leq M\right\} =1\text{ \ }\forall i
+\]
+implies that, for all $i$,
+\[
+E[\left\vert X_{i}\right\vert ^{k}]\leq M^{k} \text{ \ }\forall k\geq 0
+\]
+(See \PMlinkname{here}{RelationBetweenAlmostSurelyAbsolutelyBoundedRandomVariablesAndTheirAbsoluteMoments} for a proof.)
+
+Now, it's enough to verify that the condition
+\[
+E[\left\vert X_{i}\right\vert ^{k}]\leq M^{k} 
+\]
+imply both conditions a) and b) in part 1).
+
+Indeed, part a) is obvious, while for part b) one happens to have:
+\[
+E[\left\vert X_{i}\right\vert ^{k}]\leq E\left[X_{i}^{2}\right] M^{k-2}
+\]
+(see \PMlinkname{here}{AbsoluteMomentsBoundingNecessaryAndSufficientCondition} for a proof).
+
+So
+\[
+\sum_{i=1}^{n}E[\left\vert X_{i}\right\vert ^{k}]\leq \sum_{i=1}^{n}E\left[
+X_{i}^{2}\right] M^{k-2}=v^2M^{k-2}
+\]
+
+Let's find a value for $c$ such that $v^2M^{k-2}\leq \frac{k!}{2}v^2c^{k-2}$,
+thus satisfying part b) of the hypotheses.
+
+After simplifying, we have to study the inequality%
+\[
+k!c^{k-2}\geq 2\cdot M^{k-2}
+\]
+for any $k\geq 3$. Let's proceed by induction. For $k=3$, we have%
+\[
+6c\geq 2M
+\]
+which suggests $c=\frac{M}{3}$. Let's now verify if this position is
+consistent with the inductive hypothesis:%
+\[
+\left( k+1\right) !=\left( k+1\right) k!\geq \left( k+1\right) \cdot 2\cdot
+3^{k-2}\geq 3\cdot 2\cdot 3^{k-2}=2\cdot 3^{(k+1)-2}
+\]
+which confirms the validity of the choice $c=\frac{M}{3}$, which has to be
+plugged into the former bound to obtain the new one.
+
+[to be continued...]
+%%%%%
+%%%%%
+\end{document}

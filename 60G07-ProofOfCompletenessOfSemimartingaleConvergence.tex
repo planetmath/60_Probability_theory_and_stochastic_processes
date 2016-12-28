@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCompletenessOfSemimartingaleConvergence}
+\pmcreated{2013-03-22 18:40:54}
+\pmmodified{2013-03-22 18:40:54}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof of completeness of semimartingale convergence}
+\pmrecord{4}{41432}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G07}
+\pmclassification{msc}{60G48}
+\pmclassification{msc}{60H05}
+%\pmkeywords{semimartingale}
+%\pmkeywords{semimartingale topology}
+%\pmkeywords{complete}
+%\pmkeywords{topological vector space}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{addition}
+\PMlinkescapeword{multiplication}
+\PMlinkescapeword{real numbers}
+\PMlinkescapeword{operations}
+\PMlinkescapeword{generate}
+\PMlinkescapeword{vector}
+\PMlinkescapeword{complete}
+\PMlinkescapeword{sequence}
+\PMlinkescapeword{limit}
+\PMlinkescapeword{implies}
+\PMlinkescapeword{infinity}
+We start by showing that semimartingale convergence is a \PMlinkname{vector topology}{TopologicalVectorSpace} on the space of semimartingales. That is, addition of processes and multiplication by real numbers are \PMlinkname{continuous}{Continuous} operations.
+
+The continuity of addition follows immediately from the fact that the topology is given by a translation-invariant metric $D^{\rm s}$; if $X^n\rightarrow X$ and $Y^n\rightarrow Y$ then
+\begin{equation*}
+D^{\rm s}(X^n+Y^n-X-Y)\le D^{\rm s}(X^n-X)+D^{\rm s}(Y^n-Y)\rightarrow 0
+\end{equation*}
+so $X^n+Y^n\rightarrow X+Y$.
+Also, suppose that $\lambda_n$ are real numbers converging to $\lambda$. Then, it is easily shown that $D^{\rm s}(\lambda_nY)\le\max(|\lambda_n|,1)D^{\rm s}(Y)$ for all processes $Y$ and, therefore,
+\begin{equation*}\begin{split}
+D^{\rm s}(\lambda_nX^n-\lambda X)&\le D^{\rm s}(\lambda_n(X^n-X))+D^{\rm s}((\lambda_n-\lambda)X)\\
+&\le \max(|\lambda_n|,1)D^{\rm s}(X^n-X)+D^{\rm s}((\lambda_n-\lambda)X).
+\end{split}\end{equation*}
+As was noted (in \PMlinkname{semimartingale convergence}{SemimartingaleConvergence}), the statement that $D^{\rm}((\lambda_n-\lambda)X)\rightarrow 0$ whenever $\lambda_n\rightarrow \lambda$ is equivalent to the statement that $X$ is a semimartingale, so $\lambda_nX_n\rightarrow\lambda X$ and $D^{\rm s}$ does indeed generate a vector topology.
+
+It only remains to show that the topology is complete.
+So, suppose that $X^n-X^m\rightarrow 0$ under the semimartingale topology. Then, we also have ucp convergence (see semimartingale convergence implies ucp convergence) and, $X^n\xrightarrow{\rm ucp} X$ for a cadlag adapted process $X$ (see completeness under ucp convergence). We need to show that this also converges under the semimartingale topology.
+
+For any simple predictable process $\xi$, $\int_0^t\xi\,dX^n\rightarrow\int_0^t\xi\,dX$ in probability. Therefore, for any sequence of simple predictable processes $\xi^n$,
+\begin{equation*}
+\int_0^t\xi^n\,dX^n-\int_0^t\xi^n\,dX
+=\lim_{m\rightarrow \infty}\left(\int_0^t\xi^n\,dX^n-\int_0^t\xi^n\,dX^m\right)
+\end{equation*}
+where the limit is taken in probability. If $|\xi^n|\le 1$ then the condition that $X^n-X^m$ goes to zero in the semimartingale topology implies that the right hand side tends to zero in probability as $n$ goes to infinity and, $X^n\rightarrow X$ in the semimartingale topology.
+
+This shows that semimartingale convergence is complete on the space of cadlag adapted processes. To show that it is complete on the set of semimartingales, we just need to show that the process $X$ above is a semimartingale whenever $X^n$ are.
+However, for any sequence of real numbers $\lambda_n\rightarrow 0$ then,
+\begin{equation*}
+D^{\rm s}(\lambda_n X)\le D^{\rm s}(\lambda_nX^m)+\max(|\lambda_n|,1)D^{\rm s}(X-X^m).
+\end{equation*}
+As noted previously, the condition that $X^m$ are semimartingales gives $\lambda_nX^m\rightarrow 0$ as $n$ tends to infinity.
+\begin{equation*}
+\limsup_{n\rightarrow\infty}D^{\rm s}(\lambda_n X)\le \sup_n\max(|\lambda_n|,1)D^{\rm s}(X-X^m).
+\end{equation*}
+Taking the limit $m\rightarrow\infty$ shows that $\lambda_n X$ tends to zero in the semimartingale topology and, consequently, $X$ is a semimartingale.
+
+%%%%%
+%%%%%
+\end{document}

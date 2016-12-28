@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BorelCantelliLemma}
+\pmcreated{2013-03-22 13:13:18}
+\pmmodified{2013-03-22 13:13:18}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Borel-Cantelli lemma}
+\pmrecord{7}{33688}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $A_1, A_2,\dots$ be random events in a probability space.
+
+\begin{enumerate}
+\item If $\sum_{n=1}^\infty P(A_n)<\infty$, then 
+$P(A_n \operatorname{i.o.}) = 0$;
+
+\item If $A_1,A_2,\dots$ are independent, and $\sum_{n=1}^\infty P(A_n)=\infty$,
+then $P(A_n \operatorname{i.o.})=1$
+\end{enumerate}
+
+where $A=[A_n \operatorname{i.o.}]$ represents the event ``$A_n$ happens for infinitely many values of $n$.'' 
+Formally, $A = \limsup A_n$, which is a limit superior of sets.
+%%%%%
+%%%%%
+\end{document}

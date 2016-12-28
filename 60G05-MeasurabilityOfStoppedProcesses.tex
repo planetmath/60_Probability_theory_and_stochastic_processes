@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MeasurabilityOfStoppedProcesses}
+\pmcreated{2013-03-22 18:39:00}
+\pmmodified{2013-03-22 18:39:00}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{measurability of stopped processes}
+\pmrecord{4}{41392}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G05}
+%\pmkeywords{stochastic process}
+%\pmkeywords{stopping time}
+%\pmkeywords{stopped process}
+\pmrelated{MeasurabilityOfStochasticProcesses}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{satisfies}
+Let $X$ be a real-valued stochastic process and $\tau$ be a stopping time. If $X$ satisfies any of the following properties then so does the stopped process $X^\tau$.
+\begin{enumerate}
+\item $X$ is jointly measurable.
+\item $X$ is progressively measurable.
+\item $X$ is optional.
+\item $X$ is predictable.
+\end{enumerate}
+
+In particular, if $X$ is a right-continuous and adapted process then it is progressive (alternatively, it is optional). Then, the stopped process $X^\tau$ will also be progressive and is therefore right-continuous and adapted.
+
+Also, for any progressive process $X$ and bounded stopping time $\tau\le t$, the above result shows that $X_\tau=X^\tau_t$ will be $\mathcal{F}_t$-measurable.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RecurrenceInAMarkovChain}
+\pmcreated{2013-03-22 16:24:43}
+\pmmodified{2013-03-22 16:24:43}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{recurrence in a Markov chain}
+\pmrecord{5}{38561}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60J10}
+\pmsynonym{null recurrent}{RecurrenceInAMarkovChain}
+\pmsynonym{positive recurrent}{RecurrenceInAMarkovChain}
+\pmsynonym{strongly ergodic}{RecurrenceInAMarkovChain}
+\pmsynonym{weakly ergodic}{RecurrenceInAMarkovChain}
+\pmdefines{recurrent state}
+\pmdefines{persistent state}
+\pmdefines{transient state}
+\pmdefines{null state}
+\pmdefines{positive state}
+\pmdefines{ergodic state}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Let $\lbrace X_n\rbrace$ be a \PMlinkname{stationary}{StationaryProcess} Markov chain and $I$ the state space. Given $i,j\in I$ and any non-negative integer $n$, define a number $F_{ij}^n$ as follows:
+$$
+F_{ij}^n:=
+\begin{cases}
+0&\text{if } n=0,\\
+P(X_n=j\mbox{ and }X_m\ne j\mbox{ for }0<m<n \mid X_0=i)&\text{otherwise}.
+\end{cases}
+$$
+In other words, $F_{ij}^n$ is the probability that the process \emph{first} reaches state $j$ at time $n$ from state $i$ at time $0$.
+
+From the definition of $F_{ij}^n$, we see that the probability of the process reaching state $j$ \emph{within and including} time $n$ from state $i$ at time $0$ is given by 
+$$\sum_{m=0}^n F_{ij}^m.$$
+As $n\to \infty$, we have the limiting probability of the process reaching $j$ \emph{eventually} from the initial state of $i$ at $0$, which we denote by $F_{ij}$:
+$$F_{ij}:=\sum_{m=0}^{\infty} F_{ij}^m.$$
+
+\textbf{Definitions}.  A state $i\in I$ is said to be \emph{recurrent} or \emph{persistent} if $F_{ii}=1$, and \emph{transient} otherwise.
+
+Given a recurrent state $i$, we can further classify it according to ``how soon'' the state $i$ returns after its initial appearance.  Given $F_{ii}^n$, we can calculate the expected number of steps or transitions required to \emph{return} to state $i$ by time $n$.  This expectation is given by
+$$\sum_{m=0}^n m F_{ii}^m.$$
+When $n\to \infty$, the above expression may or may not approach a limit.  It is the expected number of transitions needed to return to state $i$ \emph{at all} from the beginning.  We denote this figure by $\mu_i$:
+$$\mu_{i}:=\sum_{m=0}^{\infty} m F_{ii}^m.$$
+
+\textbf{Definitions}.  A recurrent state $i\in I$ is said to be \emph{\PMlinkescapetext{positive}} or \emph{strongly ergodic} if $\mu_i<\infty$, otherwise it is called \emph{null} or \emph{weakly ergodic}.  If a stronly ergodic state is in addition \PMlinkname{aperiodic}{PeriodicityOfAMarkovChain}, then it is said to be an \emph{ergodic state}.
+%%%%%
+%%%%%
+\end{document}

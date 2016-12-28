@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DensityFunction}
+\pmcreated{2013-03-22 13:02:49}
+\pmmodified{2013-03-22 13:02:49}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{density function}
+\pmrecord{12}{33450}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E05}
+\pmsynonym{probability function}{DensityFunction}
+\pmsynonym{density}{DensityFunction}
+\pmsynonym{probabilities function}{DensityFunction}
+\pmrelated{DistributionFunction}
+\pmrelated{CumulativeDistributionFunction}
+\pmrelated{RandomVariable}
+\pmrelated{Distribution}
+\pmrelated{GeometricDistribution2}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\begin{document}
+Let $X$ be a discrete random variable with sample space $\{x_1,x_2,\ldots\}$.
+Let $p_k$ be the probability of $X$ taking the value $x_k$.
+
+The function
+$$
+f(x)=\
+\begin{cases}
+p_k & \text{if }x=x_k\\
+0 & \text{otherwise}
+\end{cases}
+$$
+is called the \emph{probability function} or \emph{density function}.
+
+It must hold:
+$$\sum_{j=1}^{\infty} f(x_j)=1$$
+
+If the density function for a random variable is known, we can calculate the probability of $X$ being on certain interval:
+$$P[a<X\leq b] = \sum_{a<x_j\leq b}f(x_j) = \sum_{a<x_j\leq b}p_j.$$
+
+The definition can be extended to continuous random variables in a direct way: The probability of $x$ being on a given interval is calculated with an integral instead of using a summation:
+$$P[a<X\leq b] = \int_a^b f(x) dx.$$
+
+For a more formal approach using measure theory, look at probability distribution function entry.
+%%%%%
+%%%%%
+\end{document}

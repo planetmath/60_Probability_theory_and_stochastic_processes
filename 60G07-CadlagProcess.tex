@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CadlagProcess}
+\pmcreated{2013-03-22 18:36:36}
+\pmmodified{2013-03-22 18:36:36}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{c\`adl\`ag process}
+\pmrecord{7}{41343}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G07}
+\pmsynonym{cadlag process}{CadlagProcess}
+\pmsynonym{rcll process}{CadlagProcess}
+\pmsynonym{R-process}{CadlagProcess}
+\pmsynonym{right-process}{CadlagProcess}
+%\pmkeywords{stochastic process}
+\pmrelated{UcpConvergenceOfProcesses}
+\pmdefines{cadlag}
+\pmdefines{rcll}
+\pmdefines{R-process}
+\pmdefines{right-process}
+\pmdefines{c\`agl\`ad}
+\pmdefines{lcrl}
+\pmdefines{L-process}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{word}
+\PMlinkescapeword{types}
+\PMlinkescapeword{terms}
+A c\`adl\`ag process $X$ is a stochastic process for which the paths $t\mapsto X_t$ are right-continuous with left limits everywhere, with probability one. The word \emph{c\`adl\`ag} is an acronym from the French for ``continu \`a droite, limites \`a gauche''.
+Such processes are widely used in the theory of noncontinuous stochastic processes. For example, semimartingales are c\`adl\`ag, and continuous-time martingales and many types of Markov processes have c\`adl\`ag modifications.
+
+Given a c\`adl\`ag process $X_t$ with time index $t$ ranging over the nonnegative real numbers, its left limits are often denoted by
+\begin{equation*}
+X_{t-}=\lim_{\substack{s\rightarrow t,\\ s<t}}X_s
+\end{equation*}
+for every $t>0$. Also, the jump at time $t$ is written as
+\begin{equation*}
+\Delta X_t = X_t-X_{t-}.
+\end{equation*}
+
+Alternative terms used to refer to a c\`adl\`ag process are \emph{rcll} (right-continuous with left limits), \emph{R-process} and \emph{right-process}.
+
+Although used less frequently, a process whose paths are almost surely left-continuous with right limits everywhere are known as \emph{c\`agl\`ad}, \emph{lcrl} or \emph{L-processes}.
+
+%%%%%
+%%%%%
+\end{document}

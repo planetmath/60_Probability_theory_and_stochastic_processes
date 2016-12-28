@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfMartingaleConvergenceTheorem}
+\pmcreated{2013-03-22 18:34:33}
+\pmmodified{2013-03-22 18:34:33}
+\pmowner{scineram}{4030}
+\pmmodifier{scineram}{4030}
+\pmtitle{proof of martingale convergence theorem}
+\pmrecord{4}{41300}
+\pmprivacy{1}
+\pmauthor{scineram}{4030}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60F15}
+\pmclassification{msc}{60G44}
+\pmclassification{msc}{60G46}
+\pmclassification{msc}{60G42}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $(X_n)_{n\in\mathbb{N}}$ be a supermartingale such that $\mathbb{E}|X_n|\le M$, and let $a<b$. We define a random variable counting how many times the process crosses the stripe between $a$ and $b$:
+\[U_n:=\max\{0,r\in\{1,\ldots,n\}\mid\exists 0\le s_1<t_1<s_2<t_2<\ldots<s_r<t_r\le n\;\forall i\in\{1,\ldots,r\}\colon X_{s_i}\le a\wedge X_{t_i}\ge b\}.\]
+Obviously $U_{n+1}\ge U_n$ therefore $U_\infty=\lim_{n\to\infty}U_n$ exists almost surely. Next we will construct a new process that mirrors the movement of $X_n$ but only if the original process is underway of going from below $a$ to over $b$, and is constant otherwise. To do this let $C_1:=\chi[X_0<a]$, $C_k:=\chi[C_{k-1}=0\wedge X_{k-1}<a]+\chi[C_{k-1}=1\wedge X_{k-1}\le b]$ for $k\ge 2$, and define $Y_0:=0$, $Y_n:=\sum\limits_{k=1}^n C_k(X_k-X_{k-1})$. Then $Y_n$ is also a supermartingale, and the inequality $Y_n\ge(b-a)U_n-|X_n-a|$ holds, which gives $0\ge\mathbb{E}(Y_n)\ge(b-a)\mathbb{E}(U_n)-\mathbb{E}|X_n-a|$. After rearrangement we get
+\[\mathbb{E}(U_n)\le\frac{\mathbb{E}|X_n-a|}{b-a}\le\frac{\mathbb{E}|X_n|+|a|}{b-a}\le\frac{M+|a|}{b-a}.\]
+Therefore by the monotone convergence theorem
+\[\mathbb{E}(U_\infty)=\lim_{n\to\infty}\mathbb{E}(U_n)\le\frac{M+|a|}{b-a}<\infty,\]
+which means $\mathbb{P}(U_\infty=\infty)=0$. Since $a$ and $b$ were arbitrary $X=\lim_{n\to\infty}X_n$ exists almost surely. Now the Fatou lemma gives
+\[\mathbb{E}|X|=\mathbb{E}(\lim_{n\to\infty}|X_n|)\le\liminf_{n\to\infty}\mathbb{E}|X_n|\le M<\infty.\]
+Thus $X_n$ is in fact convergent almost surely, and $X\in L^1. \qed$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfKolmogorovsInequality}
+\pmcreated{2013-03-22 17:48:35}
+\pmmodified{2013-03-22 17:48:35}
+\pmowner{kshum}{5987}
+\pmmodifier{kshum}{5987}
+\pmtitle{proof of Kolmogorov's inequality}
+\pmrecord{4}{40272}
+\pmprivacy{1}
+\pmauthor{kshum}{5987}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+For $k = 1,2,\ldots, n$, let $A_k$ be the event that $|S_k| \geq \lambda$ but $|S_i| < \lambda$ for all $i=1,2,\ldots, k-1$. Note that the events $A_1$, $A_2, \ldots , A_n$ are disjoint, and
+\[
+\bigcup_{k=1}^n A_k = \Big\{ \max_{1\leq k \leq n} |S_k| \geq \lambda \Big\}.
+\]
+
+Let $I_A$ be the indicator function of event $A$. Since $A_1$, $A_2, \ldots , A_n$ are disjoint, we have
+\[
+0 \leq \sum_{k=1}^n I_{A_k} \leq 1.
+\]
+Hence, we obtain
+\[ \sum_{k=1}^n \text{Var}[X_k] = E[S_n^2] 
+ \geq \sum_{k=1}^n E[S_n^2 I_{A_k}].
+\]
+
+After replacing $S_n^2$ by $S_k^2 + 2S_k(S_n-S_k) + (S_n-S_k)^2$, we get
+\begin{align*}
+\sum_{k=1}^n \text{Var}[X_k] &\geq 
+\sum_{k=1}^n E[ (S_k^2 + 2S_k(S_n-S_k) + (S_n-S_k)^2) I_{A_k}] \\
+&\geq  \sum_{k=1}^n E[ (S_k^2 + 2S_k(S_n-S_k)) I_{A_k}] \\
+&=  \sum_{k=1}^n E[ S_k^2 I_{A_k}] + 2 \sum_{k=1}^n E[S_n-S_k]E[S_k I_{A_k}] \\
+&= \sum_{k=1}^n E[ S_k^2 I_{A_k}] \\
+& \geq \lambda^2 \sum_{k=1}^n E[I_{A_k}] \\
+& = \lambda^2  \sum_{k=1}^n \Pr(A_k) \\
+& = \lambda^2 \Pr \Big( \bigcup_{k=1}^n A_k \Big) \\
+& = \lambda^2 \Pr \Big( \max_{1\leq k \leq n} |S_k| \geq \lambda \Big),
+\end{align*}
+where in the third line, we have used the assumption that $S_n-S_k$ is independent of $S_k I_{A_k}$.
+
+%%%%%
+%%%%%
+\end{document}

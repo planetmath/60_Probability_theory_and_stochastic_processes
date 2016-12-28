@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuadraticVariationOfBrownianMotion}
+\pmcreated{2013-03-22 18:41:25}
+\pmmodified{2013-03-22 18:41:25}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{quadratic variation of Brownian motion}
+\pmrecord{6}{41442}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60H10}
+\pmclassification{msc}{60J65}
+%\pmkeywords{Brownian motion}
+%\pmkeywords{quadratic variation}
+\pmrelated{QuadraticVariation}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{property}
+\PMlinkescapeword{interval}
+
+\begin{theorem*}
+Let $(W_t)_{t\in\mathbb{R}_+}$ be a standard Brownian motion. Then, its quadratic variation exists and is given by
+\begin{equation*}
+[W]_t=t.
+\end{equation*}
+\end{theorem*}
+
+As Brownian motion is a martingale and, in particular, is a semimartingale then \PMlinkname{its quadratic variation must exist}{QuadraticVariationOfASemimartingale}. We just need to compute its value along a sequence of partitions.
+
+If $P=\{0=t_0\le t_1\le\cdots\le t_m=t\}$ is a \PMlinkname{partition}{SubintervalPartition} of the interval $[0,t]$, then the quadratic variation on $P$ is
+\begin{equation*}
+[W]^P=\sum_{k=1}^m(W_{t_k}-W_{t_{k-1}})^2.
+\end{equation*}
+Using the property that the increments $W_{t_k}-W_{t_{k-1}}$ are independent normal random variables with mean zero and variance $t_k-t_{k-1}$, the mean and variance of $[W]^P$ are
+\begin{align*}
+\mathbb{E}\left[[W]^P\right]&=\sum_{k=1}^m\mathbb{E}\left[(W_{t_k}-W_{t_{k-1}})^2\right]=\sum_{k=1}^m(t_k-t_{k-1})=t,\\
+\operatorname{Var}\left[[W]^P\right]&=\sum_{k=1}^m\operatorname{Var}\left[(W_{t_k}-W_{t_{k-1}})^2\right]=\sum_{k=1}^m2(t_k-t_{k-1})^2\\
+&\le 2|P|\sum_{k=1}^m(t_k-t_{k-1})=2|P|t.
+\end{align*}
+Here, $|P|=\max_k(t_k-t_{k-1})$ is the mesh of the partition.
+If $(P_n)_{n=1,2,\ldots}$ is a sequence of partitions of $[0,t]$ with mesh going to zero as $n\rightarrow \infty$ then,
+\begin{equation*}
+\mathbb{E}\left[([W]^{P_n}-t)^2\right]\le 2|P_n|t\rightarrow 0
+\end{equation*}
+as $n\rightarrow\infty$. This shows that $[W]^{P_n}\rightarrow t$ in the $L^2$ norm and, in particular, converges in probability. So, $[W]_t=t$.
+
+%%%%%
+%%%%%
+\end{document}

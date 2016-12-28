@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DoobsInequalities}
+\pmcreated{2013-03-22 18:39:52}
+\pmmodified{2013-03-22 18:39:52}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{Doob's inequalities}
+\pmrecord{7}{41407}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G46}
+\pmclassification{msc}{60G44}
+\pmclassification{msc}{60G42}
+\pmsynonym{Doob's inequality}{DoobsInequalities}
+%\pmkeywords{martingale}
+%\pmkeywords{$L^p$-norm}
+\pmrelated{KolmogorovsMartingaleInequality}
+\pmdefines{Doob's maximal quadratic inequality}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{index set}
+\PMlinkescapeword{terminal value}
+\PMlinkescapeword{theorem}
+\PMlinkescapeword{terminal}
+\PMlinkescapeword{place}
+\PMlinkescapeword{bounds}
+\PMlinkescapeword{terminal}
+
+Doob's inequalities place bounds on the maximum value attained by a martingale in terms of the terminal value.
+We consider a process $(X_t)_{t\in\mathbb{T}}$ defined on the filtered probability space $(\Omega,\mathcal{F},(\mathcal{F})_{t\in\mathbb{T}},\mathbb{P})$. The associated maximum process $(X^*_t)$ is
+\begin{equation*}
+X^*_t\equiv\sup_{s\le t}|X_s|.
+\end{equation*}
+The notation $\Vert \cdot\Vert_p$ for the \PMlinkname{$L^p$-norm}{LpSpace} of a random variable will be used.
+In discrete-time or, more generally whenever the index set $\mathbb{T}$ is countable, then Doob's inequalities are as follows.
+
+\begin{theorem}[Doob]\label{thm:1}
+Let $(X_t)_{t\in\mathbb{T}}$ be a submartingale with countable index set $\mathbb{T}$. Then,
+\begin{equation}\label{eq:1}
+\mathbb{P}\left(\sup_{s\le t}X_s\ge K\right)\le K^{-1}\mathbb{E}[(X_t)_+]
+\end{equation}
+If $X$ is either a martingale or nonnegative submartingale then,
+\begin{gather}
+\label{eq:2}\mathbb{P}(X^*_t\ge K)\le K^{-1}\mathbb{E}[|X_t|],\\
+\label{eq:3}\Vert X^*_t\Vert_p\le \frac{p}{p-1}\Vert X_t\Vert_p. 
+\end{gather}
+for every $K>0$ and $p>1$.
+\end{theorem}
+
+In particular, (\ref{eq:3}) shows that the maximum of any $L^p$-bounded martingale is itself $L^p$-bounded and, martingales $X^n$ converge to $X$ in the $L^p$-norm if and only if $(X^n-X)^*\rightarrow 0$ in the $L^p$-norm. The special case where $p=2$ gives
+\begin{equation*}
+\mathbb{E}[(X^*_t)^2]\le 4\mathbb{E}[X_t^2]
+\end{equation*}
+which is known as \emph{Doob's maximal quadratic inequality}.
+
+Similarly, (\ref{eq:2}) shows that any $L^1$-bounded martingale is almost surely bounded and that convergence in the $L^1$-norm implies ucp convergence. Inequality (\ref{eq:1}) is also known as Kolmogorov's submartingale inequality.
+
+Doob's inequalities are often applied to continuous-time processes, where $\mathbb{T}=\mathbb{R}_+$. In this case, $X^*_t=\sup_{s\le t}|X_s|$ is a supremum of uncountably many random variables, and need not be measurable. Instead, it is typically assumed that the processes are right-continuous, in which case, for any $t>0$ the supremum may be restricted to the countable set
+\begin{equation*}
+\mathbb{T}^\prime=\{s\in\mathbb{R}_+:s/t\in\mathbb{Q}\}.
+\end{equation*}
+Putting this into Theorem \ref{thm:1} gives the following continuous-time version of the inequalities.
+
+\begin{theorem}[Doob]
+Let $(X_t)_{t\in\mathbb{R}_+}$ be a right-continuous submartingale. Then,
+\begin{equation*}
+\mathbb{P}\left(\sup_{s\le t}X_s\ge K\right)\le K^{-1}\mathbb{E}[(X_t)]
+\end{equation*}
+for every $K>0$.
+If $X$ is right-continuous and either a martingale or nonnegative submartingale then,
+\begin{gather*}
+\mathbb{P}(X^*_t\ge K)\le K^{-1}\mathbb{E}[|X_t|],\\
+\Vert X^*_t\Vert_p\le \frac{p}{p-1}\Vert X_t\Vert_p. 
+\end{gather*}
+for every $K>0$ and $p>1$.
+\end{theorem}
+
+%%%%%
+%%%%%
+\end{document}

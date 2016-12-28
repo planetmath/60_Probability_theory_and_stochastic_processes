@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StoppedProcess}
+\pmcreated{2013-03-22 18:37:38}
+\pmmodified{2013-03-22 18:37:38}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{stopped process}
+\pmrecord{5}{41364}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G40}
+\pmclassification{msc}{60G05}
+\pmsynonym{optional stopping}{StoppedProcess}
+%\pmkeywords{stochastic process}
+%\pmkeywords{stopping time}
+\pmdefines{pre-stopped process}
+\pmdefines{prestopped process}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{stable}
+\PMlinkescapeword{equivalent}
+A stochastic process $(X_t)_{t\in\mathbb{T}}$ defined on a measurable space $(\Omega,\mathcal{F})$ can be stopped at a random time $\tau\colon\Omega\rightarrow\mathbb{T}\cup\{\infty\}$. The resulting stopped process is denoted by $X^{\tau}$,
+\begin{equation*}
+X^\tau_t\equiv X_{\min(t,\tau)}.
+\end{equation*}
+The random time $\tau$ used is typically a stopping time.
+
+If the process $X_t$ has \PMlinkname{left limits}{CadlagProcess} for every $t\in\mathbb{T}$, then it can alternatively be stopped just before the time $\tau$, resulting in the pre-stopped process
+\begin{equation*}
+X^{\tau-}\equiv\left\{
+\begin{array}{ll}
+X_t,&\textrm{if }t<\tau,\\
+X_{\tau-},&\textrm{if }t\ge\tau.
+\end{array}
+\right.
+\end{equation*}
+
+Stopping is often used to enforce boundedness or integrability constraints on a process.
+For example, if $B$ is a Brownian motion and $\tau$ is the first time at which $|B_{\tau}|$ hits some given positive value, then the stopped process $B^{\tau}$ will be a continuous and bounded martingale.
+It can be shown that many properties of stochastic processes, such as the martingale property, are stable under stopping at any stopping time $\tau$. On the other hand, a pre-stopped martingale need not be a martingale.
+
+For continuous processes, stopping and pre-stopping are equivalent procedures.
+If $\tau$ is the first time at which $|X_\tau|\ge K$, for any given real number $K$, then the pre-stopped process $X^{\tau-}$ will be uniformly bounded.
+However, for some noncontinuous processes it is not possible to find a stopping time $\tau>0$ making $X^\tau$ into a uniformly bounded process. For example, this is the case for any \PMlinkname{Levy process}{LevyProcess} with unbounded jump distribution.
+
+Stopping is used to generalize properties of stochastic processes to obtain the related localized property. See, for example, local martingales.
+
+%%%%%
+%%%%%
+\end{document}

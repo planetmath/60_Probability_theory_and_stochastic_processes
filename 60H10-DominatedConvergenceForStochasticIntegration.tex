@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DominatedConvergenceForStochasticIntegration}
+\pmcreated{2013-03-22 18:41:03}
+\pmmodified{2013-03-22 18:41:03}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{dominated convergence for stochastic integration}
+\pmrecord{8}{41435}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60H10}
+\pmclassification{msc}{60G07}
+\pmclassification{msc}{60H05}
+%\pmkeywords{stochastic integral}
+%\pmkeywords{dominated convergence}
+%\pmkeywords{ucp convergence}
+%\pmkeywords{semimartingale topology}
+\pmdefines{locally bounded convergence theorem}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{states}
+\PMlinkescapeword{sequence}
+\PMlinkescapeword{limit}
+\PMlinkescapeword{similar}
+\PMlinkescapeword{bounded}
+\PMlinkescapeword{locally bounded}
+
+The dominated convergence theorem for standard integration states that if a sequence of measurable functions converge to a limit, and are dominated by an integrable function, then their integrals converge to the integral of the limit. That is, the limit commutes with integration. A similar result holds for stochastic integration with respect to a semimartingale $X$, except the integrals are random variables, and the integrals converge in probability.
+
+\begin{theorem*}[Dominated convergence]
+If $\xi^n$ are predictable processes converging pointwise to $\xi$, and $|\xi^n|\le\alpha$ for every $n$ and some $X$-integrable process $\alpha$, then
+\begin{equation}\label{eq:1}
+\int_0^t\xi^n\,dX\rightarrow\int_0^t\xi\,dX
+\end{equation}
+in probability as $n\rightarrow\infty$. Furthermore, ucp convergence and semimartingale convergence hold.
+\end{theorem*}
+
+Note that as $\xi$ and $\xi^n$ are bounded by an $X$-integrable process, they are guaranteed to also be $X$-integrable. Convergence in probability for each $t$ was taken as part of the definition of the stochastic integral, but the dominated convergence theorem stated here says that the stronger ucp and semimartingale convergence also hold.
+
+If $\alpha$ is a \PMlinkname{locally bounded}{LocalPropertiesOfProcesses} predictable process, then it is automatically $X$-integrable for any semimartingale $X$. It follows that if $\xi^n$ are predictable processes converging to $\xi$ and if $\sup_n|\xi^n|$ is locally bounded then the limit (\ref{eq:1}) holds. This result is sometimes known as the \emph{locally bounded convergence theorem}.
+
+
+To prove this result, it is enough to show that semimartingale convergence holds, as semimartingale convergence implies ucp convergence.
+So, let $|\alpha^n|\le 1$ be a sequence of simple predictable processes and set $Y^n=\int\xi^n\,dX$, $Y=\int\xi\,dX$. Associativity of stochastic integration gives
+\begin{equation*}
+\int_0^t\alpha^n\,dY^n-\int_0^t\alpha^n\,dY
+=\int_0^t \alpha^n(\xi^n-\xi)\,dX
+\end{equation*}
+However, $|\alpha^n(\xi^n-\xi)|\le 2\alpha$, which is $X$-integrable. So, this converges to zero in probability by the definition of the stochastic integral, and $Y^n\rightarrow Y$ in the semimartingale topology.
+
+%%%%%
+%%%%%
+\end{document}

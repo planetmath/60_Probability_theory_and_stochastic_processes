@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DoobsOptionalSamplingTheorem}
+\pmcreated{2013-03-22 16:43:41}
+\pmmodified{2013-03-22 16:43:41}
+\pmowner{skubeedooo}{5401}
+\pmmodifier{skubeedooo}{5401}
+\pmtitle{Doob's optional sampling theorem}
+\pmrecord{8}{38949}
+\pmprivacy{1}
+\pmauthor{skubeedooo}{5401}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G44}
+\pmclassification{msc}{60G46}
+\pmclassification{msc}{60G42}
+\pmrelated{Martingale}
+\pmrelated{StoppingTime}
+\pmrelated{SigmaAlgebraAtAStoppingTime}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{optional}
+\PMlinkescapeword{sampling theorem}
+\PMlinkescapeword{index set}
+\PMlinkescapeword{place}
+\PMlinkescapeword{continuous}
+
+Given a filtered probability space $(\Omega,\mathcal{F},(\mathcal{F}_t)_{t\in\mathbb{T}},\mathbb{P})$, a process $(X_t)_{t\in\mathbb{T}}$ is a martingale if it satisfies the equality
+\begin{equation*}
+\mathbb{E}[X_t\mid\mathcal{F}_s]=X_s
+\end{equation*}
+for all $s<t$ in the index set $\mathbb{T}$. Doob's optional sampling theorem says that this equality still holds if the times $s,t$ are replaced by bounded stopping times $S,T$. In this case, the $\sigma$-algebra $\mathcal{F}_s$ is replaced by the collection of \PMlinkname{events observable at the random time $S$}{SigmaAlgebraAtAStoppingTime},
+\begin{equation*}
+\mathcal{F}_S=\left\{A\in\mathcal{F}:A\cap\{S\le t\}\in\mathcal{F}_t\textrm{ for all }t\in\mathbb{T}\right\}.
+\end{equation*}
+In discrete-time, when the index set $\mathbb{T}$ is countable, the result is as follows.
+
+\newtheorem*{thm}{Doob's Optional Sampling Theorem}
+\begin{thm}
+Suppose that the index set $\mathbb{T}$ is countable and that $S\le T$ are stopping times bounded above by some constant $c\in\mathbb{T}$.
+If $(X_t)$ is a martingale then $X_T$ is an integrable random variable and
+\begin{equation}
+\mathbb{E}[X_T|\mathcal{F}_S] = X_S,\ \mathbb{P}\textrm{ almost surely}.
+\end{equation}
+Similarly, if $X$ is a submartingale then $X_T$ is integrable and
+\begin{equation}
+\mathbb{E}[X_T|\mathcal{F}_S] \ge X_S,\ \mathbb{P}\textrm{ almost surely}.
+\end{equation}
+If $X$ is a supermartingale then $X_T$ is integrable and
+\begin{equation}
+\mathbb{E}[X_T|\mathcal{F}_S] \le X_S,\ \mathbb{P}\textrm{ almost surely}.
+\end{equation}
+\end{thm}
+
+
+This theorem shows, amongst other things, that in the case of a fair casino, where your return is a martingale, betting strategies involving `knowing when to quit' do not enhance your expected return.
+
+In continuous-time, when the index set $\mathbb{T}$ an interval of the real numbers, then the stopping times $S,T$ can have a continuous distribution and $X_S,X_T$ need not be measurable quantities. Then, it is necessary to place conditions on the sample paths of the process $X$. In particular, Doob's optional sampling theorem holds in continuous-time if $X$ is assumed to be right-continuous.
+
+%%%%%
+%%%%%
+\end{document}

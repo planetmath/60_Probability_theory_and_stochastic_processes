@@ -1,0 +1,148 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{6Discussion}
+\pmcreated{2014-04-22 15:13:32}
+\pmmodified{2014-04-22 15:13:32}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{6. Discussion}
+\pmrecord{2}{88090}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Feature}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\DeclareMathOperator{\Hom}{Hom}
+
+\newcommand{\vecify}{{\mathcal V}}
+\newcommand{\Act}{{A}}
+\newcommand{\act}{{a}}
+\newcommand{\Sit}{{S}}
+\newcommand{\occ}{{v}}
+\newcommand{\univ}{{\mathbf D}}
+\newcommand{\uout}{{d_{out}}}
+\newcommand{\uin}{{d_{in}}}
+\newcommand{\mangle}{{\mathbf C}}
+
+\newcommand{\psheaf}{{\mathcal F}}
+\newcommand{\scat}{{\mathtt{Stoch}}}
+\newcommand{\subs}{{\mathtt{Sys}}}
+\newcommand{\mcat}{{\mathtt{Meas}}}
+\newcommand{\eop}{{$\blacksquare$}}
+\newcommand{\eod}{{${}$\\}}
+\newcommand{\bra}{{\langle}}
+\newcommand{\ket}{{\rangle}}
+
+\newcommand{\cN}{{\mathcal N}}
+\newcommand{\bR}{{\mathbb R}}
+\newcommand{\fm}{{\mathfrak m}}
+\newcommand{\cP}{{\mathcal P}}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+
+\theoremstyle{remark}
+\newtheorem{eg}{Example}
+\newtheorem{rem}{Remark}
+\newtheorem{defn}{Definition}
+
+\begin{document}
+This paper developed techniques for analyzing the internal 
+structure of distributed measurements. We introduced 
+entanglement, which quantifies the extent to which a 
+measurement is indecomposable. Entanglement can be shown 
+to quantify context-dependence. Moreover, positive entanglement 
+is necessary for a system to generate more information than the 
+sum of its subsystems.  Along the way, we constructed the quale,
+which geometrically represents the compositional structure of a 
+distributed measurement. The information-theoretic approach 
+developed here is dual, in a precise sense, to the algorithmic 
+perspective on computation. Studying duals $\fm^\natural$ 
+instead of mechanisms $\fm$ shifts the focus from \emph{what} 
+the algorithm does to \emph{how} it does it: instead of 
+analyzing rules we analyze functional dependencies. 
+
+The intuition driving the paper is that the structure presheaf 
+$\psheaf$ is an information-theoretic analogue of a tangent 
+space. A particle moving in a manifold $X$ defines a vector 
+field -- a section of the tangent space to $X$, which is a 
+sheaf. The tangent vector at a point depends on the particle's 
+location at ``nearby time-points'': it is computed by taking 
+the limit of difference in positions at $t$ and $t+h$ as 
+$h\rightarrow 0$. Similarly, a system performing a measurement 
+generates a quale, a section of the structure presheaf 
+consisting of ``nearby counterfactuals''. The quale is computed 
+by applying Bayes' rule to determine which inputs could have led
+to the output.\footnote{A counterfactual input is ``nearby'' to 
+an output if it causes (leads to) that output.} How far this 
+analogy can be developed remains to be seen.
+
+Entanglement can be loosely considered as an 
+information-theoretic analogue of curvature: the extent to 
+which interactions within a system ``warp'' sections of 
+$\psheaf$ away from a product structure. A related approach 
+to geometrically analyzing the complexity of interactions was 
+proposed in \cite{ay:06}. In fact, this project began as an 
+attempt to reformulate \cite{bt:09} in terms of sheaf 
+cohomology using ideas from \cite{ay:06}. We failed at the 
+first step since the structure presheaf is not a sheaf. 
+However, the failure was instructive since it is precisely 
+the \emph{obstruction} to forming a sheaf that is of interest 
+since it is the obstruction (entanglement) that quantifies 
+indecomposability and context-dependence, and only systems 
+whose measurements are entangled are able to generate more 
+information than the sum of their subsystems.
+
+\begin{thebibliography}{10}
+%\providecommand{\bibitemdeclare}[2]{}
+\providecommand{\urlprefix}{Available at }
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{\texttt{#2}}
+\providecommand{\urlalt}[2]{\href{#1}{#2}}
+\providecommand{\doi}[1]{doi:\urlalt{http://dx.doi.org/#1}{#1}}
+\providecommand{\bibinfo}[2]{#2}
+
+%\bibitemdeclare{incollection}{ay:06}
+\bibitem{ay:06}
+\bibinfo{author}{N~Ay}, \bibinfo{author}{E~Olbrich},
+  \bibinfo{author}{N~Bertschinger} \& \bibinfo{author}{J~Jost}
+  (\bibinfo{year}{2006}): \emph{\bibinfo{title}{A unifying framework for
+  complexity measures of finite systems}}.
+\newblock In: {\sl \bibinfo{booktitle}{Proceedings of ECCS06, European Complex
+  Systems Society}}, \bibinfo{address}{Oxford, UK}, pp.
+  \bibinfo{pages}{ECCS06--174}.
+  
+%\bibitemdeclare{article}{bt:09}
+\bibitem{bt:09}
+\bibinfo{author}{David Balduzzi} \& \bibinfo{author}{Giulio Tononi}
+  (\bibinfo{year}{2009}): \emph{\bibinfo{title}{Qualia: the geometry of
+  integrated information}}.
+\newblock {\sl \bibinfo{journal}{PLoS Comput Biol}}
+  \bibinfo{volume}{5}(\bibinfo{number}{8}), p. \bibinfo{pages}{e1000462},
+  \doi{10.1371/journal.pcbi.1000462}.
+
+\end{thebibliography}
+\end{document}

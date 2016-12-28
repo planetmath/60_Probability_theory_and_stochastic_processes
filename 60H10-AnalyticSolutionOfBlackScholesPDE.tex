@@ -1,0 +1,234 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnalyticSolutionOfBlackScholesPDE}
+\pmcreated{2013-03-22 16:31:34}
+\pmmodified{2013-03-22 16:31:34}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{analytic solution of Black-Scholes PDE}
+\pmrecord{6}{38706}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60H10}
+\pmclassification{msc}{91B28}
+\pmrelated{ExampleOfSolvingTheHeatEquation}
+\pmrelated{BlackScholesPDE}
+\pmrelated{BlackScholesFormula}
+
+% The standard font packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% For neatly defining theorems and definitions
+%\usepackage{amsthm}
+
+% Including EPS/PDF graphics (\includegraphics)
+%\usepackage{graphicx}
+
+% Making matrix-based graphics
+%%%\usepackage{xypic}
+
+% Enumeration lists with different styles
+%\usepackage{enumerate}
+
+% Set up the theorem environments
+%\newtheorem{thm}{Theorem}
+%\newtheorem*{thm*}{Theorem}
+
+\providecommand{\defnterm}[1]{\emph{#1}}
+
+% The standard number systems
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\intset}{\mathbb{Z}}
+
+% Absolute values and norms
+% Normal, wide, and big versions of the delimeters
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+
+% Differentiation operators
+\providecommand{\od}[2]{\frac{d #1}{d #2}}
+\providecommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\providecommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2}}
+\providecommand{\ipd}[2]{\partial #1 / \partial #2}
+
+% Differentials on integrals
+\newcommand{\dx}{\, dx}
+\newcommand{\dt}{\, dt}
+\newcommand{\dmu}{\, d\mu}
+
+% Inner products
+\providecommand{\ip}[2]{\langle {#1}, {#2} \rangle}
+
+% Calligraphic letters
+\newcommand{\sF}{\mathcal{F}}
+\newcommand{\sD}{\mathcal{D}}
+
+% Standard spaces
+\newcommand{\Hilb}{\mathcal{H}}
+\newcommand{\Le}{\mathbf{L}}
+
+% Operators and functions occassionally used in my articles
+\DeclareMathOperator{\D}{D}
+\DeclareMathOperator{\linspan}{span}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\lindim}{dim}
+\DeclareMathOperator{\sinc}{sinc}
+
+% Probability stuff
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+
+\begin{document}
+\PMlinkescapeword{relations}
+\PMlinkescapeword{terms}
+\PMlinkescapeword{terminal}
+
+Here we present
+an analytical 
+solution for the \defnterm{Black-Scholes partial differential equation},
+\begin{align}\label{eq:bs-pde}
+rf = \pd{f}{t} + rx \, \pd{f}{x} + \frac12 \sigma^2 x^2 \, \pdd{f}{x^2}\,,
+\quad f = f(t,x)\,, 
+\end{align}
+over the domain $0 < x < \infty, \: 0 \leq t \leq T$,
+with terminal condition $f(T,x) = \psi(x)$,
+by reducing this parabolic PDE to
+the heat equation of physics.
+
+We begin by making the substitution:
+\[
+u = e^{-rt} \, f\,,
+\]
+which is motivated by the fact that it is the portfolio value
+\emph{discounted by the interest rate $r$} (see the derivation of the 
+Black-Scholes formula)
+that  is a martingale.
+Using the product rule on $f = e^{rt} \, u$,
+we derive the PDE that the function $u$ must satisfy:
+\[
+rf = re^{rt} \, u = re^{rt} \, u + e^{rt} \pd{u}{t}
++ rx e^{rt} \pd{u}{x} + \frac12 \sigma^2 x^2 e^{rt} \pdd{u}{x^2}\,;
+\]
+or simply,
+\begin{align}\label{eq:pde-u}
+0 = \pd{u}{t} + rx \pd{u}{x} + \frac12 \sigma^2 x^2 \pdd{u}{x^2}\,.
+\end{align}
+
+Next, we make the substitutions:
+\[
+y = \log x\,, \quad s = T-t\,.
+\]
+These changes of variables can be motivated
+by observing that:
+\begin{itemize}
+\item
+The underlying process described by the variable $x$
+is a geometric Brownian motion
+(as explained in the derivation of the Black-Scholes formula itself),
+so that $\log x$ describes a Brownian motion, possibly
+with a drift.
+Then $\log x$ should satisfy some sort of diffusion equation
+(well-known in physics).
+\item
+The evolution of the system
+is backwards from the terminal state of the system.  Indeed,
+the boundary condition is given as a terminal state,
+and the coefficient of $\ipd{u}{t}$ is positive in equation \eqref{eq:pde-u}.
+(Compare with the standard heat equation,
+$0 = -\ipd{u}{t} + \ipd{u}{x}$, which describes a
+temperature \PMlinkescapetext{distribution} evolving forwards in time.)
+So to get to the heat equation, 
+we have to use a substitution to reverse time.
+\end{itemize}
+
+Since
+\[
+\pd{u}{s} = -\pd{u}{t}\,, \quad
+ \pd{u}{x} = \pd{u}{y} \, \od{y}{x} = \frac{1}{x} \, \pd{u}{y}\,,
+\]
+and
+\[
+\pdd{u}{x^2} = \pd{}{x} \left( \frac{1}{x} \pd{u}{y} \right)
+= -\frac{1}{x^2} \, \pd{u}{y} + \frac{1}{x^2} \pdd{u}{y^2}\,,
+\]
+substituting in equation \eqref{eq:pde-u},
+we find:
+\begin{align}\label{eq:pde-y}
+0 = -\pd{u}{s} + (r- \tfrac12 \sigma^2) \pd{u}{y} + \frac12 \sigma^2 \, \pdd{u}{y^2}\,.
+\end{align}
+The first partial derivative with respect to $y$
+does not cancel (unless $r = \tfrac12 \sigma^2$) 
+because we have not take into account
+the drift of the Brownian motion.
+To cancel the drift (which is linear in time),
+we make the substitutions:
+\[
+z = y + (r - \tfrac12 \sigma^2) \tau\,, \quad \tau = s\,.
+\]
+Under the new coordinate system $(z,\tau)$, we have the relations
+amongst vector fields:
+\[
+\pd{}{z} = \pd{}{y}\,, \quad \pd{}{\tau} = -(r-\tfrac12 \sigma^2) \pd{}{y} + \pd{}{s}\,,
+\]
+leading to the following \PMlinkescapetext{transformation}
+of equation \eqref{eq:pde-y}:
+\begin{align*}
+0 = -\pd{u}{\tau} -(r-\tfrac12 \sigma^2) \pd{u}{z}
++ (r-\tfrac12 \sigma^2) \pd{u}{z} + \frac12 \sigma^2 \pdd{u}{z^2}\,;
+\end{align*}
+or:
+\begin{align}\label{eq:diffusion}
+\pd{u}{\tau} = \frac12 \sigma^2 \pdd{u}{z^2}\,, \quad u = u(\tau, z)\,,
+\end{align}
+which is one form of the diffusion equation.
+The domain is on
+$-\infty < z < \infty$
+and $0 \leq \tau \leq T$;
+the initial condition is to be:
+\begin{align*}
+u(0, z) = e^{-rT} \, \psi(e^{z} ) := u_0(z)\,.
+\end{align*}
+The original function $f$ can be recovered
+by \[
+f(t, x) = e^{rt} \, u\Bigl(T-t,\: \log x + (r-\tfrac12 \sigma^2) \tau  \Bigr)\,.
+\]
+
+The fundamental solution of the PDE \eqref{eq:diffusion}
+is known to be:
+\[
+G_\tau(z) = \frac{1}{\sqrt{2\pi \sigma^2 \tau}} \exp\Bigl( -\frac{z}{2\sigma^2 \tau} \Bigr)
+\]
+(derived using the Fourier transform);
+and the solution $u$ with initial condition $u_0$
+is given by the convolution:
+\[
+u(\tau, z) = u_0 * G_\tau(z)
+= \frac{e^{-rT}}{\sqrt{2\pi \sigma^2 \tau}} \, \int_{-\infty}^\infty \psi(e^\zeta) \,
+\exp \Bigl( - \frac{(z-\zeta)^2}{2\sigma^2 \tau} \Bigr) \, d\zeta\,.
+\]
+In terms of the original function $f$:
+\[
+f(t, x) = \frac{e^{-r\tau}}{\sqrt{2\pi \sigma^2 \tau}}
+\int_{-\infty}^\infty
+\psi (e^\zeta)
+\,
+\exp \Bigl( - \frac{\bigl(\log x + (r-\frac12 \sigma^2)\tau -\zeta\bigr)^2}
+{2\sigma^2 \tau} \Bigr) \, d\zeta\,,
+\]
+($\tau = T -t$) which agrees with the \PMlinkname{result derived using probabilistic methods}{BlackScholesFormula}.
+
+
+%%%%%
+%%%%%
+\end{document}

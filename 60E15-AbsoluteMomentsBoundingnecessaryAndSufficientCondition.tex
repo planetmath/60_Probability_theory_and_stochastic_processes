@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AbsoluteMomentsBoundingnecessaryAndSufficientCondition}
+\pmcreated{2013-03-22 16:13:58}
+\pmmodified{2013-03-22 16:13:58}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{absolute moments bounding (necessary and sufficient condition)}
+\pmrecord{5}{38333}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $X$ be a random variable; then%
+\[
+E[\left\vert X\right\vert ^{k}]\leq M^{k}\text{ \ \ \ \ \ \ }\forall k\geq
+1,k\in \mathbf{N}
+\]
+
+\bigskip if and only if,$\forall i\geq 0,i\in \mathbf{N}$ 
+\[
+E\left[ \left\vert X\right\vert ^{k}\right] \leq E\left[ \left\vert
+X\right\vert ^{i}\right] M^{k-i}\text{ \ \ \ \ \ \ \ }\forall k\geq i,k\in \mathbf{N}
+\]
+
+\bigskip 
+
+\begin{proof}
+
+
+a) $(E\left[ \left\vert X\right\vert ^{k}\right] \leq E\left[
+\left\vert X\right\vert ^{i}\right] M^{k-i}$ \ $\Longrightarrow $ \ $%
+E[\left\vert X\right\vert ^{k}]\leq M^{k})$
+
+It's enough to take $i=0$ and the thesis follows easily.
+
+\bigskip 
+
+b)  $(E[\left\vert X\right\vert ^{k}]\leq M^{k}$ $\Longrightarrow E\left[
+\left\vert X\right\vert ^{k}\right] \leq E\left[ \left\vert X\right\vert ^{i}%
+\right] M^{k-i})$
+
+Let $1\leq i\leq k$ (the case $i=0$ is trivial). Then, using Cauchy-Schwarz
+inequality $N$ times, one has:%
+\begin{eqnarray*}
+E[\left\vert X\right\vert ^{k}] &=&E\left[ \left\vert X\right\vert ^{\frac{i%
+}{2}}\left\vert X\right\vert ^{k-\frac{i}{2}}\right]  \\
+&\leq &E\left[ \left\vert X\right\vert ^{i}\right] ^{\frac{1}{2}}E\left[
+\left\vert X\right\vert ^{2k-i}\right] ^{\frac{1}{2}} \\
+&=&E\left[ \left\vert X\right\vert ^{i}\right] ^{\frac{1}{2}}E\left[
+\left\vert X\right\vert ^{\frac{i}{2}}\left\vert X\right\vert ^{2k-\frac{3}{2%
+}i}\right] ^{\frac{1}{2}} \\
+&\leq &E\left[ \left\vert X\right\vert ^{i}\right] ^{\left( \frac{1}{2}+%
+\frac{1}{4}\right) }E\left[ \left\vert X\right\vert ^{4k-3i}\right] ^{\frac{1%
+}{4}} \\
+&\leq &E\left[ \left\vert X\right\vert ^{i}\right] ^{\left( \frac{1}{2}+%
+\frac{1}{4}+\frac{1}{8}\right) }E\left[ \left\vert X\right\vert ^{\left(
+8k-7i\right) }\right] ^{\frac{1}{8}} \\
+&&... \\
+&\leq &E\left[ \left\vert X\right\vert ^{i}\right] ^{\left( \sum_{m=1}^{N}%
+\frac{1}{2^{m}}\right) }E\left[ \left\vert X\right\vert ^{2^{N}k-\left(
+2^{N}-1\right) i}\right] ^{\frac{1}{2^{N}}} \\
+&=&E\left[ \left\vert X\right\vert ^{i}\right] ^{\left( 1-\frac{1}{2^{N}}%
+\right) }E\left[ \left\vert X\right\vert ^{2^{N}\left( k-i\right) +i}\right]
+^{\frac{1}{2^{N}}} \\
+&\leq &E\left[ \left\vert X\right\vert ^{i}\right] ^{\left( 1-\frac{1}{2^{N}}%
+\right) }M^{\left( k-i\right) +\frac{i}{2^{N}}},
+\end{eqnarray*}
+
+and since this must hold for any $N$, we obtain
+\[
+E[\left\vert X\right\vert ^{k}]\leq E\left[ \left\vert X\right\vert ^{i}%
+\right] M^{k-i}
+\]
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

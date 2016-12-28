@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WaldsEquation}
+\pmcreated{2013-03-22 14:40:04}
+\pmmodified{2013-03-22 14:40:04}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Wald's equation}
+\pmrecord{8}{36267}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60K05}
+\pmclassification{msc}{60G40}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $X_1, X_2,\ldots, X_N$ be a sequence of $N$ iid random variables distributed as random variable $X$, such that 
+\begin{enumerate}
+\item $N>0$ is itself a random variable (integer-valued),
+\item the expectation of $X$, $\operatorname{E}[X]<\infty$, and
+\item $\operatorname{E}[N]<\infty$. 
+\end{enumerate}
+Then 
+$$\operatorname{E}\Big[\sum_{i=1}^{N}X_i\Big]=\operatorname{E}[N]\operatorname{E}[X].$$
+\par
+The integer $N$ from above can be viewed as a stopping time for the stochastic process $\lbrace X_i \mid i\in\mathbb{Z}^+ \rbrace$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SimplePredictableProcess}
+\pmcreated{2013-03-22 18:36:33}
+\pmmodified{2013-03-22 18:36:33}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{simple predictable process}
+\pmrecord{7}{41342}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G07}
+%\pmkeywords{$\sigma$-algebra}
+%\pmkeywords{filtration}
+\pmdefines{simple predictable}
+\pmdefines{elementary predictable}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{simple}
+\PMlinkescapeword{class}
+\PMlinkescapeword{filtration}
+Simple predictable processes are a particularly simple class of stochastic processes, for which the Ito integral can be defined directly. They are often used as the starting point for defining stochastic integrals of more general predictable integrands.
+
+Suppose we are given a \PMlinkname{filtration}{FiltrationOfSigmaAlgebras} $(\mathcal{F}_t)$ on the measurable space $(\Omega,\mathcal{F})$ with time index $t$ ranging over the nonnegative real numbers.
+A simple predictable process $\xi$ is a left-continuous and adapted process which can be written as
+\begin{equation*}
+\xi_t=1_{\{t=0\}}A_0+\sum_{k=1}^n1_{\{S_k<t\le T_k\}}A_k
+\end{equation*}
+for some $n\ge 0$, stopping times $S_k<T_k$, $\mathcal{F}_0$-measurable and bounded random variable $A_0$ and $\mathcal{F}_{S_k}$-measurable and bounded random variables $A_k$.
+In the case where $S_k$ and $T_k$ are deterministic times, then $\xi$ is called an \emph{elementary predictable} process.
+
+The stochastic integral of the simple predictable process $\xi$ with respect to a stochastic process $X_t$ can then be written as
+\begin{equation*}
+\int_0^t\xi\,dX = \sum_{k=1}^n1_{\{t>S_k\}}A_k(X_{\min(t,T_k)}-X_{S_k}).
+\end{equation*}
+
+%%%%%
+%%%%%
+\end{document}

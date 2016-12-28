@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MultidimensionalGaussianIntegral}
+\pmcreated{2013-03-22 12:18:44}
+\pmmodified{2013-03-22 12:18:44}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{multidimensional Gaussian integral}
+\pmrecord{22}{31914}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60B11}
+\pmclassification{msc}{62H99}
+\pmclassification{msc}{62H10}
+\pmrelated{JacobiDeterminant}
+\pmrelated{AreaUnderGaussianCurve}
+\pmrelated{ProofOfGaussianMaximizesEntropyForGivenCovariance}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\mv}[1]{\mathbf{#1}}	% matrix or vector
+\newcommand{\cov}{\mathrm{cov}}
+\newcommand{\mvt}[1]{\mv{#1}^{\mathrm{T}}}
+\newcommand{\mvi}[1]{\mv{#1}^{-1}}
+\newcommand{\mpderiv}[1]{\frac{\partial}{\partial {#1}}}
+\begin{document}
+Let $\mv{x} = [x_1\ x_2\ \ldots\ x_n]^T$ and $d^n \mv{x} \equiv \prod_{i=1}^{n} d x_i$.
+\newtheorem{thm}{Theorem}
+\begin{thm}[]
+Let  $K$ be a  symmetric \PMlinkname{positive definite}{PositiveDefinite} matrix and
+ $f: R^n \to R$, where
+$f(x) = \exp{(- \frac{1}{2} \mv{x}^T \mv{K}^{-1} \mv{x})}$.
+Then  
+\begin{equation}
+\int e^{-\frac{1}{2} \mv{x}^T \mv{K}^{-1} \mv{x}} d^n \mv{x} = \left((2\pi)^n |\mv{K}| \right)^{\frac{1}{2}}
+\end{equation}
+where $|\mv{K}| = \det{\mv{K}}$.
+\end{thm}
+\emph{Proof.} $\mvi{K}$ is real and symmetric (since $(\mvi{K})^{\mathrm{T}} = (\mvt{K})^{-1} = \mv{K}^{-1})$.  For convenience, let $\mv{A} = \mvi{K}$.  We can decompose $\mv{A}$ into $\mv{A} = \mv{T} \mv{\Lambda} \mvi{T}$, where $\mv{T}$ is an orthonormal ($\mvt{T} \mv{T} = \mv{I}$) matrix of the eigenvectors of $\mv{A}$ and $\mv{\Lambda}$ is a diagonal matrix of the eigenvalues of $\mv{A}$.  Then
+\begin{equation}
+\int e^{-\frac{1}{2} \mvt{x} \mv{A} \mv{x}} d^n \mv{x} = \int e^{-\frac{1}{2} \mvt{x} \mv{T} \mv{\Lambda} \mvi{T} \mv{x}} d^n \mv{x}.
+\end{equation}
+
+Because $\mv{T}$ is orthonormal, we have $\mvi{T} = \mvt{T}$.  Now define a new vector variable $\mv{y} \equiv \mvt{T} \mv{x}$, and substitute:
+
+\begin{align}
+\int e^{-\frac{1}{2} \mvt{x} \mv{T} \mv{\Lambda} \mvi{T} \mv{x}} d^n \mv{x}
+&= \int e^{-\frac{1}{2} \mvt{x} \mv{T} \mv{\Lambda} \mvt{T} \mv{x}} d^n \mv{x}\\
+&= \int e^{-\frac{1}{2} \mvt{y} \mv{\Lambda}\mv{y}} |\mv{J}| d^n \mv{y}\\
+\end{align}
+where $|\mv{J}|$ is the determinant of the Jacobian matrix $J_{mn} = \frac{\partial{x_m}}{\partial{y_n}}$.  In this case, $\mv{J} = \mv{T}$ and thus $|\mv{J}| = 1$.
+
+Since  $\mv{\Lambda}$ is diagonal,  the integral may be separated into the product of $n$ independent Gaussian distributions, each of which we can integrate separately using the well-known formula
+
+\begin{equation}
+\int e^{-\frac{1}{2} a t^2} dt = \left(\frac{2 \pi}{a}\right)^{\frac{1}{2}}.
+\end{equation}
+
+Carrying out this program, we get
+
+\begin{align}
+\int e^{-\frac{1}{2} \mvt{y} \mv{\Lambda}\mv{y}} d^n \mv{y}
+&= \prod_{k=1}^{n} \int e^{-\frac{1}{2} \lambda_k y_k^2} d y_k\\
+&= \prod_{k=1}^{n} \left(\frac{2 \pi}{\lambda_k}\right)^{\frac{1}{2}} \\
+&= \left(\frac{(2 \pi)^n}{\prod_{k=1}^{n}\lambda_k}\right)^{\frac{1}{2}} \\
+&= \left(\frac{(2 \pi)^n}{|\mv{\Lambda}|}\right)^{\frac{1}{2}}. \\
+\end{align}
+
+Now, we have $|\mv{A}| = |\mv{T} \mv{\Lambda} \mvi{T}| = |\mv{T}| |\mv{\Lambda}| |\mvi{T}|  = |\mv{\Lambda}|$, so this becomes
+
+\begin{equation}
+\int e^{-\frac{1}{2} \mvt{x} \mv{A} \mv{x}} d^n \mv{x} = \left(\frac{(2 \pi)^n}{|\mv{A}|}\right)^{\frac{1}{2}}.
+\end{equation}
+
+Substituting back in for $\mvi{K}$, we get
+
+\begin{equation}
+\int e^{-\frac{1}{2} \mvt{x} \mvi{K} \mv{x}} d^n \mv{x} = \left(\frac{(2 \pi)^n}{|\mvi{K}|}\right)^{\frac{1}{2}} = \left((2 \pi)^n |\mv{K}|\right)^{\frac{1}{2}},
+\end{equation}
+as promised.
+%%%%%
+%%%%%
+\end{document}

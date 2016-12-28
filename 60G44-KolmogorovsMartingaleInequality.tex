@@ -1,0 +1,196 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KolmogorovsMartingaleInequality}
+\pmcreated{2013-03-22 17:20:22}
+\pmmodified{2013-03-22 17:20:22}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{Kolmogorov's martingale inequality}
+\pmrecord{8}{39694}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G44}
+\pmclassification{msc}{60G07}
+\pmsynonym{Kolmogorov's submartingale inequality}{KolmogorovsMartingaleInequality}
+\pmrelated{MarkovsInequality}
+\pmrelated{DoobsInequalities}
+
+% The standard font packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% For neatly defining theorems and definitions
+\usepackage{amsthm}
+
+% Including EPS/PDF graphics (\includegraphics)
+%\usepackage{graphicx}
+
+% Making matrix-based graphics
+%%%\usepackage{xypic}
+
+% Enumeration lists with different styles
+%\usepackage{enumerate}
+
+% Set up the theorem environments
+%\newtheorem{thm}{Theorem}
+\newtheorem*{thm*}{Theorem}
+
+\newcommand{\defnterm}[1]{\emph{#1}}
+
+% The standard number systems
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\intset}{\mathbb{Z}}
+
+% Absolute values and norms
+% Normal, wide, and big versions of the delimeters
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\absW}[1]{\left\lvert#1\right\rvert}
+\newcommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\newcommand{\normW}[1]{\left\lVert#1\right\rVert}
+\newcommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+
+% Inverse functions
+\newcommand{\inv}[1]{{#1}^{-1}}
+
+% Differentiation operators
+\newcommand{\od}[2]{\frac{d #1}{d #2}}
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2}}
+\newcommand{\ipd}[2]{\partial #1 / \partial #2}
+
+% Differentials on integrals
+\newcommand{\dx}{\, dx}
+\newcommand{\dt}{\, dt}
+\newcommand{\dmu}{\, d\mu}
+
+% Inner products
+\newcommand{\ip}[2]{\langle {#1}, {#2} \rangle}
+
+% Complex numbers
+\DeclareMathOperator{\zRe}{Re}
+\DeclareMathOperator{\zIm}{Im}
+\newcommand{\conjug}[1]{\overline{#1}}
+
+% Calligraphic letters
+\newcommand{\sF}{\mathcal{F}}
+\newcommand{\sD}{\mathcal{D}}
+
+% Standard spaces
+\newcommand{\Hilb}{\mathcal{H}}
+\newcommand{\Le}{\mathbf{L}}
+
+% Operators and functions occassionally used in my articles
+\DeclareMathOperator{\D}{D}
+\DeclareMathOperator{\linspan}{span}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\lindim}{dim}
+\DeclareMathOperator{\sinc}{sinc}
+
+% Probability stuff
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+
+\newcommand{\indc}{\mathbf{1}}
+\newtheorem*{cor*}{Corollary}
+\DeclareMathOperator{\Var}{Var}
+
+\begin{document}
+\begin{thm*}[Kolmogorov's martingale inequality]
+Let $X(t)$, for $0 \leq t \leq T$, be a submartingale
+with continuous sample paths.
+Then for any constant $\alpha > 0$,
+\[
+\PP \Bigl( \max_{0 \leq t \leq T} X(t) \geq \alpha \Bigr)
+\leq \frac{\E[ X(T)^+ ]}{\alpha}\,.
+\]
+\end{thm*}
+(The notation $X(T)^+$ means $\max(X(T),0)$, the positive part of $X(T)$.)
+
+Notice the analogy with Markov's inequality.
+Of course, the conclusion is much stronger than Markov's inequality,
+as the probabilistic bound applies to an uncountable number
+of random variables.  The continuity and submartingale hypotheses
+are used to establish the stronger bound.
+
+\begin{proof}
+Let $\{ t_i \}_{i=1}^n$ be a partition of the interval $[0,T]$.
+Let 
+\[
+B = \Bigl\{ \max_{1 \leq i \leq n} X(t_i) \geq \alpha \Bigr\}
+\]
+and split $B$ into disjoint parts $B_i$,
+defined by
+\[
+B_i = \Bigl\{ X(t_j) < \alpha \text{ for all } j < i
+                              \text{ but } X(t_i) \geq \alpha \Bigr\}\,.
+\]
+Also let $\{ \sF_t \}$ be the filtration under which $X(t)$ 
+is a submartingale.
+
+Then
+\begin{align*}
+\PP(B) 
+ &=
+   \sum_{i=1}^n \E\bigl[1(B_i)\bigr] \\
+ &\leq 
+  \sum_{i=1}^n \E \left[ \frac{X(t_i)}{\alpha} \, \indc(B_i) \right] 
+  & \text{definition of $B_i$} \\
+ &\leq 
+  \frac{1}{\alpha} \sum_{i=1}^n 
+    \E\Bigl[ \E \bigl[X(T) \mid \sF_{t_i} \bigr] \, \indc(B_i) \Bigr] 
+  & \text{$X(t)$ is submartingale} \\
+ &=
+  \frac{1}{\alpha} \sum_{i=1}^n
+    \E\Bigl[ \E\bigl[X(T) \, \indc(B_i) \mid \sF_{t_i} \bigr] \Bigr] 
+  & \text{$B_i$ is $\sF_{t_i}$-measurable} \\
+ &=
+  \frac{1}{\alpha} \sum_{i=1}^n
+    \E\bigl[ X(T) \, \indc(B_i) \bigr] 
+  & \text{iterated expectation} \\
+ &=
+  \frac{1}{\alpha} \E\bigl[ X(T) \, \indc(B) \bigr] \\
+ &\leq
+  \frac{1}{\alpha} \E\bigl[ X(T)^+ \, \indc(B) \bigr] \\
+ &\leq
+  \frac{1}{\alpha} \E\bigl[ X(T)^+ \bigr] &
+  \text{monotonicity.} 
+\end{align*}
+
+Since the sample paths are continuous by hypothesis,
+the event 
+\[
+A = \Bigl\{ \max_{0 \leq t \leq T} X(t) \geq \alpha \Bigr\}
+\]
+can be expressed as an countably infinite intersection
+of events of the form $B$ with finer and finer partitions $\{ t_i \}$
+of the time interval $[0,T]$.
+By taking limits, it follows
+$\PP(A)$
+has the same bound as the probabilities $\PP(B)$.
+\end{proof}
+
+\begin{cor*}
+Let $X(t)$, for $0 \leq t \leq T$, be a square-integrable martingale
+possessing continuous sample paths, whose
+ unconditional mean is $m = \E[X(0)]$.
+For any constant $\alpha > 0$,
+\[
+\PP \Bigl( \max_{0 \leq t \leq T} \abs{X(t)-m} \geq \alpha \Bigr)
+\leq \frac{\Var[X(T)]}{\alpha^2}\,.
+\]
+\begin{proof}
+Apply Kolmogorov's martingale inequality to $(X(t)-m)^2$,
+which is a submartingale by Jensen's inequality.
+\end{proof}
+\end{cor*}
+
+%%%%%
+%%%%%
+\end{document}

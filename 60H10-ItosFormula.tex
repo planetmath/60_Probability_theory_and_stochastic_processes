@@ -1,0 +1,201 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ItosFormula}
+\pmcreated{2013-03-22 17:16:14}
+\pmmodified{2013-03-22 17:16:14}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{It\^o's formula}
+\pmrecord{13}{39610}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Axiom}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60H10}
+\pmclassification{msc}{60H05}
+\pmsynonym{It\^o's formula}{ItosFormula}
+\pmsynonym{It\^o's chain rule}{ItosFormula}
+\pmsynonym{Ito's formula}{ItosFormula}
+\pmsynonym{Ito's lemma}{ItosFormula}
+\pmsynonym{Ito's chain rule}{ItosFormula}
+\pmrelated{ItosLemma2}
+\pmrelated{GeneralizedItoFormula}
+
+% The standard font packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% For neatly defining theorems and definitions
+%\usepackage{amsthm}
+
+% Including EPS/PDF graphics (\includegraphics)
+%\usepackage{graphicx}
+
+% Making matrix-based graphics
+%%%\usepackage{xypic}
+
+% Enumeration lists with different styles
+%\usepackage{enumerate}
+
+% Set up the theorem environments
+%\newtheorem{thm}{Theorem}
+%\newtheorem*{thm*}{Theorem}
+
+\providecommand{\defnterm}[1]{\emph{#1}}
+
+% The standard number systems
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\intset}{\mathbb{Z}}
+
+% Absolute values and norms
+% Normal, wide, and big versions of the delimeters
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+
+% Differentiation operators
+\providecommand{\od}[2]{\frac{d #1}{d #2}}
+\providecommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\providecommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2}}
+\providecommand{\ipd}[2]{\partial #1 / \partial #2}
+
+% Differentials on integrals
+\newcommand{\dx}{\, dx}
+\newcommand{\dt}{\, dt}
+\newcommand{\dmu}{\, d\mu}
+
+% Inner products
+\providecommand{\ip}[2]{\langle {#1}, {#2} \rangle}
+
+% Calligraphic letters
+\newcommand{\sF}{\mathcal{F}}
+\newcommand{\sD}{\mathcal{D}}
+
+% Standard spaces
+\newcommand{\Hilb}{\mathcal{H}}
+\newcommand{\Le}{\mathbf{L}}
+
+% Operators and functions occassionally used in my articles
+\DeclareMathOperator{\D}{D}
+\DeclareMathOperator{\linspan}{span}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\lindim}{dim}
+\DeclareMathOperator{\sinc}{sinc}
+\DeclareMathOperator{\tr}{tr}
+
+% Probability stuff
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+
+\begin{document}
+\subsection{Case of single space dimension}
+
+Let $X_t$ be an It\^o process satisfying the stochastic
+differential equation
+\[
+dX_t = \mu_t \, dt + \sigma_t \, dW_t\,,
+\]
+with $\mu_t$ and $\sigma_t$ being adapted processes,
+adapted to the same filtration as the Brownian motion $W_t$. 
+Let $f$ be a function with continuous partial derivatives
+$\pd{f}{t}$, $\pd{f}{x}$ and $\pdd{f}{x^2}$.
+
+Then $Y_t = f(X_t)$ is also an It\^o process, and its stochastic
+differential equation
+is
+\begin{align*}
+dY_t &= \pd{f}{t} \, dt + \pd{f}{x} \, dX_t + \frac12 \pdd{f}{x^2} (dX_t)(dX_t)
+\\
+&= \left( \pd{f}{t} + \pd{f}{x} \mu_t + \frac12 \sigma_t^2 \right) \, dt
++ \pd{f}{x} \sigma_t \, dW_t\,,
+\end{align*}
+where all partial derivatives are to be taken at $(t,X_t)$.
+
+\subsection{Case of multiple space dimensions}
+
+There is also an analogue for multiple space dimensions.
+
+Let $X_t$ be a $\real^n$-valued It\^o process satisfying the stochastic
+differential equation
+\[
+dX_t = \mu_t \, dt + \sigma_t \, dW_t\,,
+\]
+with $\mu_t$ and $\sigma_t$ being adapted processes,
+adapted to the same filtration as the $m$-dimensional Brownian motion $W_t$. 
+$\mu_t$ is $\real^n$-valued and $\sigma_t$ is $L(\real^m, \real^n)$-valued.
+
+Let $f\colon \real^n \times \real \to \real$ be a function with 
+continuous partial derivatives.
+
+Then $Y_t = f(X_t)$ is also an It\^o process, and its stochastic
+differential equation
+is
+\begin{align*}
+d Y_t 
+      &= \pd{f}{t} \, dt + (\D f ) \, dX_t 
+                + \tfrac12 dX_t^* ( \D^2 f ) dX_t \\
+      &= \pd{f}{t} \, dt + (\D f ) \mu_t \, dt 
+                + (\D f) \sigma_t \, dW_t 
+                + \tfrac12 dW_t^* \, \sigma_t^* ( \D^2 f ) \sigma_t \, dW_t \\
+      &= \pd{f}{t} \, dt + (\D f) \mu_t \, dt 
+                + (\D f) \sigma_t \, dW_t 
+                + \tfrac12 \tr\bigl( \sigma_t^* \,
+                                  (\D^2 f) \, \sigma_t \bigr) \, dt \\
+      &= \left( \pd{f}{t} + (\D f) \mu_t
+                + \tfrac12 \tr\bigl( (\sigma_t \sigma_t^* ) (\D^2 f) \bigr) 
+         \right) \, dt 
+                + (\D f) \sigma_t \, dW_t \,,
+\end{align*}
+where 
+\begin{itemize}
+\item
+$\tr$ is the trace operation; ${}^\ast$ is the transpose
+\item
+$\D f$ is the derivative with respect to the space variables;
+its value is a linear transformation from $L(\real^n, \real)$
+\item
+$\D^2 f$ is the second derivative with respect to space variables;
+represented as the Hessian matrix
+\item
+the third line follows because $dW_t^i \, dW_t^j = \delta_{ij} \, dt$.
+\end{itemize}
+
+The quadratic form $\tr(\sigma_t \sigma_t^* \, \D^2 f) \, dt $
+represents the quadratic variation of the process.  When $\sigma_t$ is the identity
+transformation, this reduces to the Laplacian of $f$.
+
+It\^o's formula in multiple dimensions can also be written with
+the standard vector calculus operators.
+It is in the similar notation typically used for the 
+related parabolic partial differential equation
+describing an It\^o diffusion:
+
+\[
+d Y_t 
+      = \left( \pd{f}{t} + \mu_t \cdot \nabla f
+                + \tfrac12 \bigl( \nabla \cdot (\sigma_t \sigma_t^*) \nabla \bigr) f
+         \right)  dt 
+                + ( \sigma_t \, dW_t ) \cdot \nabla f \,.
+\]
+
+
+\begin{thebibliography}{9}
+\bibitem{Oksendal}
+Bernt \O{}ksendal.
+{\em \PMlinkescapetext{Stochastic Differential Equations},
+An Introduction with Applications}. 5th ed., Springer 1998.
+\bibitem{Kuo}
+Hui-Hsiung Kuo. {\em Introduction to Stochastic Integration}.
+Springer 2006.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

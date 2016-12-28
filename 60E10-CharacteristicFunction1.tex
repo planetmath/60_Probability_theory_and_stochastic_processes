@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CharacteristicFunction1}
+\pmcreated{2013-03-22 13:14:28}
+\pmmodified{2013-03-22 13:14:28}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{characteristic function}
+\pmrecord{5}{33714}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E10}
+\pmsynonym{joint characteristic function}{CharacteristicFunction1}
+\pmrelated{MomentGeneratingFunction}
+\pmrelated{CumulantGeneratingFunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $X$ be a random variable. The \emph{characteristic function} of $X$ is a function
+$\varphi_X:\mathbb{R}\rightarrow\mathbb{C}$ defined by
+\[\varphi_X(t) = Ee^{itX} = E\cos(tX) + iE\sin(tX),\]
+that is, $\varphi_X(t)$ is the expectation of the random variable $e^{itX}$.
+
+Given a random vector $\overline{X}=(X_1,\dots,X_n)$, the characteristic function of
+$\overline{X}$, also called \emph{joint characteristic function} of $X_1,\dots,X_n$,
+is a function $\varphi_{\overline{X}}:\mathbb{R}^n\rightarrow\mathbb{C}$ defined by
+\[\varphi_{\overline{X}}(t)=Ee^{i{\overline{t}}\cdot{\overline{X}}},\]
+where $\overline{t} = (t_1,\dots,t_n)$ and
+${\overline{t}}\cdot{\overline{X}} = t_1X_1+\cdots+t_nX_n$ (the dot product.)
+
+\textbf{Remark.} If $F_X$ is the distribution function associated to $X$, by the
+properties of expectation we have
+\[\varphi_X(t) = \int_\mathbb{R} e^{itx}dF_X(x),\]
+which is known as the Fourier-Stieltjes transform of $F_X$, and provides an alternate
+definition of the characteristic function. From this, it is clear that the characteristic
+function depends only on the distribution function of $X$, hence one can define the characteristic
+function associated to a distribution even when there is no random variable involved.
+This implies that two random variables with the same distribution must have the same
+characteristic function. It is also true that each characteristic function determines
+a unique distribution; hence the \PMlinkescapetext{name}, since it characterizes the distribution function (see property 6.)
+
+\textbf{Properties}
+
+\begin{enumerate}
+\item The characteristic function is bounded by $1$, i.e. $|\varphi_X(t)|\leq 1$ for all $t$;
+\item $\varphi_X(0)=1$;
+\item $\overline{\varphi_X(t)} = \varphi_X(-t)$, where $\overline{z}$ denotes the complex conjugate of $z$;
+\item $\varphi_X$ is uniformly continuous in $\mathbb{R}$;
+\item If $X$ and $Y$ are independent random variables, then $\varphi_{X+Y} = \varphi_X\varphi_Y$;
+\item The characteristic function determines the distribution function; hence, $\varphi_X=\varphi_Y$ if and only if $F_X = F_Y$.
+This is a consequence of the \emph{inversion \PMlinkescapetext{formula}}: Given a random variable $X$
+with characteristic function $\varphi$ and distribution function $F$, if $x$ and $y$
+are continuity points of $F$ such that $x<y$, then
+\[F(x) - F(y) = \frac{1}{2\pi}\lim_{s\rightarrow\infty}\int_{-s}^s
+\frac{e^{-itx}-e^{-ity}}{it}\varphi(t)dt;\]
+\item A random variable $X$ has a symmetrical distribution (i.e. one such that $F_X = F_{-X}$)
+if and only if $\varphi_X(t)\in \mathbb{R}$ for all $t\in \mathbb{R}$;
+\item For real numbers $a,b$, $\varphi_{aX+b}(t) = e^{itb}\varphi_X(at)$;
+\item If $E|X|^n<\infty$, then $\varphi_X$ has continuous $n$-th derivatives and
+\[\frac{d^k\varphi_X}{dt^k}(t) = \varphi_X^{(k)}(t)=\int_\mathbb{R}(ix)^ke^{itx}dF_X(x), \;\; 1\leq k\leq n.\]
+Particularly, $\varphi_X^{(k)}(0)=i^kEX^k$; characteristic functions are similar to
+moment generating functions in this sense.
+\end{enumerate}
+
+Similar properties hold for joint characteristic functions.
+Other important result related to characteristic functions is the Paul L\'evy
+continuity theorem.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,151 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StochasticIntegral}
+\pmcreated{2013-03-22 18:36:45}
+\pmmodified{2013-03-22 18:36:45}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{stochastic integral}
+\pmrecord{9}{41346}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G07}
+\pmclassification{msc}{60H10}
+\pmclassification{msc}{60H05}
+\pmsynonym{stochastic integration}{StochasticIntegral}
+%\pmkeywords{semimartingale}
+%\pmkeywords{predictable process}
+%\pmkeywords{c\`adl\`ag process}
+\pmrelated{ItoIntegral}
+\pmrelated{PropertiesOfXIntegrableProcesses}
+\pmrelated{StochasticIntegrationAsALimitOfRiemannSums}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{calculus}
+\PMlinkescapeword{definitions}
+\PMlinkescapeword{terms}
+\PMlinkescapeword{decompositions}
+\PMlinkescapeword{basic}
+\PMlinkescapeword{properties}
+\PMlinkescapeword{sum}
+\PMlinkescapeword{satisfies}
+\PMlinkescapeword{paths}
+\PMlinkescapeword{infinite}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{fixed}
+\PMlinkescapeword{property}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{expression}
+\PMlinkescapeword{contains}
+\PMlinkescapeword{locally bounded} %need to add locally bounded process
+\PMlinkescapeword{order}
+\PMlinkescapeword{differential form}
+
+We present a definition of the stochastic integral of a predictable process with respect to a general real-valued semimartingale.
+In the literature on stochastic calculus there are actually several different different definitions available, often based on specific constructions of the integral in terms of decompositions of the semimartingale into a sum of a local martingale and a finite variation process.
+The approach taken here is to instead define the integral in terms of its most basic properties --- in particular that it satisfies the expected generalizations of standard non-stochastic integration, namely linearity and dominated convergence. Unlike in standard calculus, where the value of an integral is a real number, here the value is a random variable.
+
+Many stochastic processes, such as Brownian motion, have paths which are nowhere differentiable and have infinite total variation over finite time intervals. In such cases, standard definitions of integration, such as the Riemann-Stieltjes integral, cannot be used. However, by only considering predictable integrands and by relaxing properties such as dominated convergence to only require convergence in probability, the stochastic integral is a well-defined quantity.
+
+Stochastic integration as described here is sometimes referred to as the It\"o or forward integral, in order to distinguish it from the backward and Stratonovich integrals.
+
+
+Let $X$ be a semimartingale defined with respect to a filtered probability space $(\Omega,\mathcal{F},(\mathcal{F}_t)_{t\in\mathbb{R}_+},\mathbb{P})$.
+Then, for a predictable process $\xi$, the stochastic integral of $\xi$ with respect to $X$ is a c\`adl\`ag process
+\begin{equation*}
+t\mapsto\int_0^t\xi\,dX.
+\end{equation*}
+For each fixed time $t$, this is a random variable defined on the measurable space $(\Omega,\mathcal{F})$.
+
+For bounded integrands, the integral satisfies the following properties.
+\begin{enumerate}
+\item\label{elementary} (Elementary integrands)
+For any time $T\in\mathbb{R}_+$ and bounded, $\mathcal{F}_T$-measurable random variable $A$, a predictable process satisfying $\xi_t=1_{\{t>T\}}A$ over $t>0$ has the integral
+\begin{equation*}
+\int_0^t\xi\,dX = A1_{\{t>T\}}(X_t-X_T)\ \textrm{(almost surely)}.
+\end{equation*}
+\item (Linearity) If $\alpha,\beta$ are bounded and predictable processes and $\lambda,\mu\in\mathbb{R}$ then
+\begin{equation}\label{eq:linearity}
+\int_0^t\left(\lambda\alpha+\mu\beta\right)\,dX = \lambda\int_0^t\alpha\,dX+\mu\int_0^t\beta\,dX\ \textrm{(almost surely).}
+\end{equation}
+\item (Bounded convergence in probability)
+If $(\xi^n)_{n\in\mathbb{N}}$ is a sequence of predictable processes such that $|\xi^n|\le 1$ and $\xi^n\rightarrow 0$ as $n$ tends to infinity then,
+\begin{equation*}
+\int_0^t\xi^n\,dX\rightarrow 0
+\end{equation*}
+in probability as $n\rightarrow\infty$, for each $t\ge 0$.
+\end{enumerate}
+
+These three properties uniquely define the integration for bounded integrands.
+By linearity, property \ref{elementary} above is equivalent to stating that the integral agrees with the explicit expression for elementary predictable integrands and then, by bounded convergence, that it agrees with the explicit expression for all simple predictable integrands.
+
+The stochastic integral can be extended to more general unbounded predictable integrands.
+A predictable process $\xi$ is $X$-integrable if the set of random variables
+\begin{equation*}
+\left\{\int_0^t\alpha\,dX:|\alpha|\le |\xi|\textrm{ is bounded and predictable}\right\}
+\end{equation*}
+is bounded in probability for every $t\in\mathbb{R}_+$.
+The set of all $X$-integrable processes is sometimes denoted by $L^1(X)$. By bounded convergence in probability, this contains all bounded predictable processes, and it is easily shown that the set of $X$-integrable processes are closed under taking linear combinations.
+Furthermore, regardless of the specific semimartingale under consideration, every locally bounded predictable process will be $X$-integrable.
+
+The stochastic integral of arbitrary integrands in $L^1(X)$ is the unique extension from bounded predictable integrands described above such that linearity (\ref{eq:linearity}) holds, and the following dominated convergence result holds. If $\xi$ is $X$-integrable and $(\xi^n)_{n\in\mathbb{N}}$ is a sequence of $X$-integrable processes such that $|\xi^n|\le|\xi|$ and $\xi^n\rightarrow 0$ then
+\begin{equation*}
+\int_0^t\xi^n\,dX\rightarrow 0
+\end{equation*}
+in probability as $n\rightarrow\infty$, for each $t\in\mathbb{R}_+$.
+
+For any semimartingale $X$ and $X$-integrable process $\xi$, the integral is sometimes denoted by $\xi\cdot X$,
+\begin{equation*}
+(\xi\cdot X)_t\equiv\int_0^t\xi\,dX.
+\end{equation*}
+Alternatively, stochastic integrals are often written in differential form. That is,
+\begin{equation*}
+dY=\xi\,dX
+\end{equation*}
+is equivalent to stating that $Y_t-Y_0=\int_0^t\xi\,dX$ for each $t>0$.
+
+
+\begin{thebibliography}{9}
+\bibitem{bichteler}
+K. Bichteler, \emph{Stochastic integration with jumps}. Encyclopedia of Mathematics and its Applications, 89. Cambridge University Press, 2002.
+\bibitem{he}
+Sheng-we He, Jia-gang Wang, Jia-an Yan,\emph{Semimartingale theory and stochastic calculus.} Kexue Chubanshe (Science Press), CRC Press, 1992.
+\bibitem{kallenberg}
+Olav Kallenberg, \emph{Foundations of modern probability}, Second edition. Probability and its Applications. Springer-Verlag, 2002.
+\bibitem{protter}
+Philip E. Protter, \emph{Stochastic integration and differential equations.} Second edition. Applications of Mathematics, 21. Stochastic Modelling and Applied Probability. Springer-Verlag, 2004.
+\bibitem{rogers}
+L.C.G. Rogers \& David Williams, \emph{Diffusions, Markov processes, and martingales. Vol. 2. It\^o calculus.} Reprint of the second edition. Cambridge Mathematical Library. Cambridge University Press, 2000.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

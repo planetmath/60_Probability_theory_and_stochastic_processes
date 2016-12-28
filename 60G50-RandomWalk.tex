@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RandomWalk}
+\pmcreated{2013-03-22 14:59:22}
+\pmmodified{2013-03-22 14:59:22}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{random walk}
+\pmrecord{7}{36694}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G50}
+\pmclassification{msc}{82B41}
+\pmdefines{simple random walk}
+\pmdefines{symmetric simple random walk}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\textbf{Definition}.  Let $(\Omega,\mathcal{F},\mathbf{P})$ be a
+probability space and $\lbrace X_i \rbrace$ a discrete-time
+stochastic process defined on $(\Omega,\mathcal{F},\mathbf{P})$,
+such that the $X_i$ are iid real-valued random variables, and
+$i\in\mathbb{N}$, the set of natural numbers.  The \emph{random
+walk} defined on $X_i$ is the sequence of partial sums, or partial
+series $$S_n\colon=\sum_{i=1}^{n}X_i.$$  If $X_i\in\lbrace -1,1
+\rbrace$, then the random walk defined on $X_i$ is called a
+\emph{simple random walk}.  A \emph{symmetric simple random walk} is
+a simple random walk such that $\mathbf{P}(X_i=1)=1/2$.
+
+The above defines random walks in one-dimension.  One can easily
+generalize to define higher dimensional random walks, by requiring
+the $X_i$ to be vector-valued (in $\mathbb{R}^n$), instead of
+$\mathbb{R}$.
+
+\textbf{Remarks}.
+\begin{enumerate}
+\item  Intuitively, a random walk can be viewed as movement in space
+where the length and the direction of each step are random.
+\item  It can be shown that, the limiting case of a random walk is a
+Brownian motion (with some conditions imposed on the $X_i$ so as to
+satisfy part of the defining conditions of a Brownian motion). By
+limiting case we mean, loosely speaking, that the lengths of the
+steps are very small, approaching 0, while the total lengths of the
+walk remains a constant (so that the number of steps is very large,
+approaching $\infty$).
+\item  If the random variables $X_i$ defining the random walk $w_i$
+are integrable with zero mean $\operatorname{E}[X_i]=0$, $S_i$ is a
+martingale.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,191 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StochasticDifferentialEquation}
+\pmcreated{2013-03-22 16:10:07}
+\pmmodified{2013-03-22 16:10:07}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{stochastic differential equation}
+\pmrecord{13}{38252}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60H10}
+\pmclassification{msc}{34-00}
+\pmsynonym{SDE}{StochasticDifferentialEquation}
+\pmrelated{ItoIntegral}
+\pmrelated{WienerProcess}
+\pmrelated{BrownianMotion}
+
+% The standard font packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% For neatly defining theorems and definitions
+%\usepackage{amsthm}
+
+% Including EPS/PDF graphics (\includegraphics)
+%\usepackage{graphicx}
+
+% Making matrix-based graphics
+%%%\usepackage{xypic}
+
+% Enumeration lists with different styles
+%\usepackage{enumerate}
+
+% Set up the theorem environments
+%\newtheorem{thm}{Theorem}
+%\newtheorem*{thm*}{Theorem}
+
+\providecommand{\defnterm}[1]{\emph{#1}}
+
+% The standard number systems
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\intset}{\mathbb{Z}}
+
+% Absolute values and norms
+% Normal, wide, and big versions of the delimeters
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+
+% Differentiation operators
+\providecommand{\od}[2]{\frac{d #1}{d #2}}
+\providecommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\providecommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2}}
+\providecommand{\ipd}[2]{\partial #1 / \partial #2}
+
+% Differentials on integrals
+\newcommand{\dx}{\, dx}
+\newcommand{\dt}{\, dt}
+\newcommand{\dmu}{\, d\mu}
+
+% Inner products
+\providecommand{\ip}[2]{\langle {#1}, {#2} \rangle}
+
+% Calligraphic letters
+\newcommand{\sF}{\mathcal{F}}
+\newcommand{\sD}{\mathcal{D}}
+
+% Standard spaces
+\newcommand{\Hilb}{\mathcal{H}}
+\newcommand{\Le}{\mathbf{L}}
+
+% Operators and functions occassionally used in my articles
+\DeclareMathOperator{\D}{D}
+\DeclareMathOperator{\linspan}{span}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\lindim}{dim}
+\DeclareMathOperator{\sinc}{sinc}
+
+% Probability stuff
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+
+\begin{document}
+\PMlinkescapeword{term}
+\PMlinkescapeword{types}
+\PMlinkescapeword{extensions}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{satisfy}
+\PMlinkescapeword{argument}
+\PMlinkescapeword{relation}
+
+Consider the ordinary differential equation, for 
+example, the population growth model 
+\[
+\frac{dX(t)}{dt}=a(t)X(t),\, X(0)=X_0\,,
+\]
+where $a(t)$ is the relative rate of growth at time $t$, and $X(t)$ 
+is the solution-trajectory
+of the system. 
+
+But we may want to take into account, in our model, 
+the randomness or the uncertainty 
+of our knowledge of the data.
+In this case we may introduce the data $a(t)$
+as:
+\[
+a(t)=r(t)+ N(t)\,,
+\]
+where $N(t)$ is a noise term, represented by a random variable
+with some postulated probability distribution.
+
+In general, stochastic differential equations
+can be posed in the case that the infinitesimal increment $dX(t)$
+is a Gaussian random variable.  (Other types of random variables are 
+also possible, but require extensions of the basic theory.)
+A \emph{stochastic differential equation} (SDE) is an equation
+of the form:
+\[
+dX(t; \omega) = \mu(t; \omega) \, dt + \sigma (t; \omega) \, dW(t; \omega)
+\]
+where $\omega$ lives in some probability space, and $W(t)$
+is a Wiener process on that probability space.
+The real-valued functions $\mu$ and $\sigma$ are to satisfy certain measurability requirements, and are usually assumed to be known, with the process $X(t)$ being sought.
+
+The argument $\omega$ is usually suppressed in the notation:
+\begin{align}\label{eq:sde}
+dX(t) = \mu(t) \, dt + \sigma (t) \, dW(t)\,,
+\end{align}
+with the understanding that $X(t)$, $W(t)$, $\mu(t)$ and $\sigma(t)$ denote
+random variables for each time $t$.
+
+The interpretation of 
+the stochastic differential equation \eqref{eq:sde} is that 
+a process $X(t)$ satisfies it if and only if it satisfies
+this relation amongst integrals:
+\begin{align}\label{eq:ito}
+X(t_1) - X(t_0) = \int_{t_0}^{t_1} \mu(t) \, dt
++ \int_{t_0}^{t_1} \sigma(t) \, dW(t)
+\end{align}
+for all times $t_0$ and $t_1$.
+The last integral is an It\^o integral.
+
+In many cases, the coefficients $\mu$ and $\sigma$
+depend on $X(t)$ itself:
+\[
+dX(t) = \mu(t, X(t)) \, dt + \sigma(t, X(t)) \, dW(t)\,.
+\]
+In this case, equation \eqref{eq:ito} does not give
+an explicit solution for the stochastic differential equation.
+Nevertheless, there are theorems analogous to those
+of ordinary differential equations,
+that guarantee existence of solutions given certain 
+bounds on the growth of the coefficients $\mu(t,x)$ and $\sigma(t,x)$.
+
+In simpler cases, stochastic differential equations that
+involve unknowns on the right-hand side may still be solved
+explicitly using changes of variables (often called It\^o's formula
+in this context).
+For example, 
+\[
+X(t) = X_0 \, e^{-\kappa t} + \theta \, (1 - e^{-\kappa t})
++ \sigma \int_0^t e^{-\kappa (t-s)} \, dW(s)
+\]
+(for any initial condition $X_0$) provides a solution to:
+\[
+dX(t) = \kappa\, (\theta - X(t)) \, dt + \sigma \, dW(t)\,.
+\]
+
+\begin{thebibliography}{9}
+\bibitem{Oksendal:several}
+Bernt \O ksendal.
+{\em \PMlinkescapetext{Stochastic Differential Equations},
+An Introduction with Applications.} 5th ed. Springer 1998.
+\bibitem{Evans:several}
+Lawrence Evans. {\em \PMlinkescapetext{An Introduction to Stochastic Differential Equations}.} Department of Mathematics, 
+U.C. Berkeley.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

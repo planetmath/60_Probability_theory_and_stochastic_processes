@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfXintegrableProcesses}
+\pmcreated{2013-03-22 18:40:59}
+\pmmodified{2013-03-22 18:40:59}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{properties of $X$-integrable processes}
+\pmrecord{5}{41434}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60H10}
+\pmclassification{msc}{60G07}
+\pmclassification{msc}{60H05}
+%\pmkeywords{stochastic integral}
+%\pmkeywords{predictable process}
+%\pmkeywords{$X$-integrable}
+\pmrelated{StochasticIntegration}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{properties}
+\PMlinkescapeword{bounded}
+\PMlinkescapeword{integrable}
+
+Let $X$ be a semimartingale. Then a predictable process $\xi$ is $X$-integrable if the stochastic integral $\int\xi\,dX$ is defined, which is equivalent to the set
+\begin{equation*}
+\left\{\int_0^t\alpha\,dX:|\alpha|\le |\xi|\textrm{ is predictable}\right\}
+\end{equation*}
+being bounded in probability, for each $t>0$. We list some properties of $X$-integrable processes.
+
+\begin{enumerate}
+\item Every locally bounded predictable process is $X$-integrable.
+\item The $X$-integrable processes are closed under linear combinations. That is, if $\alpha,\beta$ are $X$-integrable and $\lambda,\mu\in\mathbb{R}$, then $\lambda\alpha+\mu\beta$ is $X$-integrable.
+\item If $|\alpha|\le|\beta|$ are predictable processes and $\beta$ is $X$-integrable, then so is $\alpha$.
+\item A process is $X$-integrable if it is locally $X$-integrable. That is, if there are stopping times $\tau_n$ almost surely increasing to infinity and such that $1_{\{t\le\tau_n\}}\xi_t$ is $X$-integrable, then $\xi$ is $X$-integrable.
+\end{enumerate}
+
+%%%%%
+%%%%%
+\end{document}

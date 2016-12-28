@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BuffonsNeedle}
+\pmcreated{2013-03-22 16:09:28}
+\pmmodified{2013-03-22 16:09:28}
+\pmowner{georgiosl}{7242}
+\pmmodifier{georgiosl}{7242}
+\pmtitle{Buffon's needle}
+\pmrecord{8}{38239}
+\pmprivacy{1}
+\pmauthor{georgiosl}{7242}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60D05}
+\pmclassification{msc}{60-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The plane is ruled by parallel lines $ 2$ inches apart and a $ 1$-inch long needle is dropped at random on the
+plane. What is the probability that it hits parallel lines?
+\\\textit{Solution.}
+\\The first issue is to find some appropriate probability space $(\Omega, \mathcal{F}, P)$. For this,
+\begin{itemize}
+\item $h=$ distance from the center of the needle to the nearest line 
+\item $\theta=$ the angle that the needle makes with the horizontal ranging from $0$ to $\frac{\pi}{2}$.
+\end{itemize}
+These fully determine the position of the needle. Let us next take the 
+\begin{enumerate}
+\item The probability space is $\Omega=[0,1]\times[0,\frac{\pi}{2})$
+\item The probability of an event $B$ is denoted by $P[B]$ is equal to 
+$\frac{area\,\ of\,\ B}{\frac{\pi}{2}}$
+\end{enumerate}
+Now we denote by $A$ the event that the needle hits a horizontal line. It is easily seen that this happens
+when $\sin\theta\geq \frac{h}{1/2}$. Consequently $A=\{(\theta, h)\in \Omega : h\leq \frac{\sin\theta}{2}\}$
+and then we get $P[A]=\frac{2}{\pi}\int_0^\frac{\pi}{2}\frac{1}{2}\sin\theta d\theta=\frac{1}{\pi}\square$
+
+In general case, when the length of needle is $l$ and the distance of parallel lines is $d$ provided that $l<d$, the probability we want is $\frac{2l}{\pi d}$. This is obvious just taking the $l/d$-point from one edge instead of the center of the needle.
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SemimartingaleTopology}
+\pmcreated{2013-03-22 18:40:41}
+\pmmodified{2013-03-22 18:40:41}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{semimartingale topology}
+\pmrecord{6}{41428}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G48}
+\pmclassification{msc}{60G07}
+\pmclassification{msc}{60H05}
+\pmsynonym{semimartingale convergence}{SemimartingaleTopology}
+%\pmkeywords{semimartingale}
+\pmrelated{UcpConvergence}
+\pmrelated{UcpConvergenceOfProcesses}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{sequence}
+\PMlinkescapeword{stochastic integration}
+\PMlinkescapeword{implies}
+\PMlinkescapeword{sequences}
+\PMlinkescapeword{integral}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{bounded}
+\PMlinkescapeword{restricted}
+
+Let $(\Omega,\mathcal{F},(\mathcal{F}_t)_{t\in\mathbb{R}_+}),\mathbb{P})$ be a filtered probability space and $(X^n_t)$, $(X_t)$ be cadlag adapted processes.
+Then, $X^n$ is said to converge to $X$ in the \emph{semimartingale topology} if $X^n_0\rightarrow X_0$ in probability and
+\begin{equation*}
+\int_0^t\xi^n\,dX^n-\int_0^t\xi^n\,dX\rightarrow 0
+\end{equation*}
+in probability as $n\rightarrow\infty$, for every $t>0$ and sequence of simple predictable processes $|\xi^n|\le 1$.
+
+This topology occurs with stochastic calculus where, according to the \PMlinkname{dominated convergence theorem}{DominatedConvergenceForStochasticIntegration}, stochastic integrals converge in the semimartingale topology.
+Furthermore, stochastic integration with respect to any \PMlinkname{locally bounded}{LocalPropertiesOfProcesses} predictable process $\xi$ is continuous under the semimartingale topology. That is, if $X^n$ are semimartingales converging to $X$ then $\int\xi\,dX^n$ converges to $\int\xi\,dX$, a fact which does not hold under weaker topologies such as ucp convergence.
+
+Also, for cadlag martingales, $L^1$ convergence implies semimartingale convergence.
+
+It can be shown that semimartingale convergence implies ucp convergence. Consequently, $X^n$ converges to $X$ in the semimartingale topology if and only if
+\begin{equation*}
+X^n_0-X_0+\int\xi^n\,dX^n-\int\xi^n\,dX\xrightarrow{\rm ucp} 0
+\end{equation*}
+for all sequences of simple predictable processes $|\xi^n|\le 1$.
+
+The topology is described by a metric as follows. First, let $D^{\rm ucp}(X-Y)$ be a metric defining the ucp topology. For example,
+\begin{equation*}
+D^{\rm ucp}(X)=\sum_{n=1}^\infty 2^{-n}\mathbb{E}\left[\min\left(1,\sup_{t<n}|X_t|\right)\right].
+\end{equation*}
+Then, a metric $D^{\rm s}(X-Y)$ for semimartingale convergence is given by
+\begin{equation*}
+D^{\rm s}(X)=\sup\left\{D^{\rm ucp}(X_0+\xi\cdot X):|\xi|\le 1\textrm{ is simple previsible}\right\}
+\end{equation*}
+($\xi\cdot X$ denotes the integral $\int\xi\,dX$). This is a proper metric under identification of processes with almost surely equivalent sample paths, otherwise it is a pseudometric.
+
+
+If $\lambda_n\not=0$ is a sequence of real numbers converging to zero and $X$ is a cadlag adapted process then $\lambda_nX\rightarrow 0$ in the semimartingale topology if and only if
+\begin{equation*}
+\lambda_n\int_0^t\xi^n\,dX\rightarrow 0
+\end{equation*}
+in probability, for every $t>0$ and simple predictable processes $|\xi^n|\le 1$.
+By the \PMlinkname{sequential characterization of boundedness}{SequentialCharacterizationOfBoundedness}, this is equivalent to the statement that
+\begin{equation*}
+\left\{\int_0^t\xi\,dX:|\xi|\le 1\textrm{ is simple predictable}\right\}
+\end{equation*}
+is bounded in probability for every $t>0$.
+So, $\lambda_nX\rightarrow 0$ in the semimartingale topology if and only if $X$ is a semimartingale. It follows that semimartingale convergence only becomes a \PMlinkname{vector topology}{TopologicalVectorSpace} when restricted to the space of semimartingales. Then, it can be shown that \PMlinkname{the set of semimartingales is a complete topological vector space}{CompletenessOfSemimartingaleConvergence}.
+%%%%%
+%%%%%
+\end{document}

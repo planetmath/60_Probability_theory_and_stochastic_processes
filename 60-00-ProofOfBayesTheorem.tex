@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBayesTheorem}
+\pmcreated{2013-03-22 12:45:09}
+\pmmodified{2013-03-22 12:45:09}
+\pmowner{ariels}{338}
+\pmmodifier{ariels}{338}
+\pmtitle{proof of Bayes' Theorem}
+\pmrecord{5}{33058}
+\pmprivacy{1}
+\pmauthor{ariels}{338}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60-00}
+\pmclassification{msc}{62A01}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\Prob}[2]{\mathbb{P}_{#1}\left\{#2\right\}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\begin{document}
+\newcommand{\prob}[1]{\Prob{}{#1}}
+The proof of Bayes' theorem is no more than an exercise in substituting the definition of conditional probability into the formula, and applying the total probability theorem.
+$$
+\frac{\prob{B}\prob{E|B}}{\sum_i \prob{A_i}\prob{E|A_i}} =
+\frac{\prob{E\cap B}}{\sum_i \prob{E\cap A_i}} =
+= \frac{\prob{E\cap B}}{\prob{E}} = \prob{B|E}.
+$$
+%%%%%
+%%%%%
+\end{document}

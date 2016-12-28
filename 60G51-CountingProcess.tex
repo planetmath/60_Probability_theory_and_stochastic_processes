@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CountingProcess}
+\pmcreated{2013-03-22 15:01:19}
+\pmmodified{2013-03-22 15:01:19}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{counting process}
+\pmrecord{5}{36730}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G51}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A stochastic process $\lbrace X(t)\mid t\in
+\mathbb{R}^{+}\cup\lbrace 0 \rbrace \rbrace$ is called a
+\emph{counting process} if, for each outcome $\omega$ in the sample space $\Omega$,
+\begin{enumerate}
+\item $X(t)\in \mathbb{Z}^{+}\cup\lbrace 0 \rbrace$ for all $t$,
+\item $X(t)(\omega)$ is piecewise constant,
+\item $X(t)(\omega)$ is non-decreasing,
+\item $X(t)(\omega)$ is right continuous (continuous from the right), and
+\item for any $t$, there is an $s\in\mathbb{R}$ such that $t<s$ and $X(t)(\omega)+1=X(s)(\omega)$.
+\end{enumerate}
+
+\textbf{Remark}.  For any $t$, the random variable $X(t)$ is usually called the number of occurrences of some event by time $t$.  Then, for $s<t$,
+$X(t)-X(s)$ is the number of occurrences in the half-open interval
+$(s,t]$.
+%%%%%
+%%%%%
+\end{document}

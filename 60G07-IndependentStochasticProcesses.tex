@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IndependentStochasticProcesses}
+\pmcreated{2013-03-22 15:24:36}
+\pmmodified{2013-03-22 15:24:36}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{independent stochastic processes}
+\pmrecord{6}{37250}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G07}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+Two stochastic processes $\lbrace X(t)\mid t\in T \rbrace$ and
+$\lbrace Y(t)\mid t\in T \rbrace$ are said to be \emph{\PMlinkescapetext{independent}}
+if for \emph{any} positive integer $n<\infty$, and \emph{any}
+sequence $t_1,\ldots,t_n\in T$, the random vectors
+$\boldsymbol{X}:=(X(t_1),\ldots,X(t_n))$ and
+$\boldsymbol{Y}:=(Y(t_1),\ldots,Y(t_n))$ are independent.  This means,
+for any two $n$-dimensional Borel sets $A,B\subseteq\mathbb{R}^n$,
+we have
+$$P\Big[\boldsymbol{X}^{-1}(A)\cap\boldsymbol{Y}^{-1}(B)\Big]
+=P\Big[\boldsymbol{X}^{-1}(A)\Big]P\Big[\boldsymbol{Y}^{-1}(B)\Big].$$
+%%%%%
+%%%%%
+\end{document}

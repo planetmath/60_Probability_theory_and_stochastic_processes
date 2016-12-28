@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PredictableStoppingTime}
+\pmcreated{2013-03-22 18:37:19}
+\pmmodified{2013-03-22 18:37:19}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{predictable stopping time}
+\pmrecord{6}{41357}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G40}
+\pmclassification{msc}{60G05}
+\pmsynonym{predictable time}{PredictableStoppingTime}
+\pmsynonym{previsible time}{PredictableStoppingTime}
+\pmsynonym{previsible stopping time}{PredictableStoppingTime}
+%\pmkeywords{filtration}
+%\pmkeywords{stopping time}
+\pmrelated{StoppingTime}
+\pmrelated{PredictableProcess}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{predictable}
+\PMlinkescapeword{previsible}
+\PMlinkescapeword{filtration}
+\PMlinkescapeword{level}
+\PMlinkescapeword{runnning}
+\PMlinkescapeword{index set}
+A predictable, or \emph{previsible} stopping time is a random time which is possible to predict just before the event.
+Letting  $(\mathcal{F}_t)_{t\in\mathbb{R}_+}$ be a \PMlinkname{filtration}{FiltrationOfSigmaAlgebras} on a measurable space $(\Omega,\mathcal{F})$, then, a stopping time $\tau$ is predictable if there exists an increasing sequence of stopping times $\tau_n$ satisfying the following.
+\begin{itemize}
+\item $\tau_n<\tau$ whenever $\tau>0$.
+\item $\tau_n\rightarrow\tau$ as $n\rightarrow\infty$.
+\end{itemize}
+The sequence $\tau_n$ is said to announce or foretell $\tau$.
+
+For example, if $X$ is a continuous adapted process with $X_0=0$, such as Brownian motion, then the first time $\tau$ at which it hits a given level $K\not=0$ is a predictable stopping time.
+In this case, if $\tau_n$ is the first time at which $X$ hits the level $K(1-1/n)$, then the sequence $\tau_n$ announces $\tau$.
+
+On the other hand, if $X$ is a Poisson process then the first time $\tau$ at which it is nonzero is not predictable. To show this, suppose that $\tau_n<\tau$ are stopping times. The fact that $X_t-\lambda t$ is a martingale means that Doob's optional sampling theorem can be applied, giving $\mathbb{E}[X_{\tau_n}-\lambda\tau_n]=0$.
+Then, $X_t=0$ for $t<\tau$ gives $\mathbb{E}[\tau_n]=0$. So, $\tau_n=0$ with probability one, and the sequence $\tau_n$ cannot announce $\tau$.
+
+
+In discrete time, where the filtration $(\mathcal{F}_t)$ has time $t$ running over the index set $\mathbb{Z}_+$, then a stopping time is said to be predictable if $\{\tau\le t\}$ is $\mathcal{F}_{t-1}$-measurable for every time $t=1,2,\ldots$.
+
+This can be generalized to an arbitrary index set $\mathbb{T}$, where a stopping time $\tau\colon\Omega\rightarrow\mathbb{T}\cup\{\infty\}$ is predictable if there exists an increasing sequence of stopping times $\tau_n\le\tau$ such that $\tau_n<\tau$ whenever $\tau$ is not equal to a minimal element of $\mathbb{T}$, and $\bigcap_n(\tau_n,\tau)$ contains no elements of $\mathbb{T}$.
+
+%%%%%
+%%%%%
+\end{document}

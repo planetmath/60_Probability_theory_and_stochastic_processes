@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NeutrosophicProbability}
+\pmcreated{2013-03-22 15:23:22}
+\pmmodified{2013-03-22 15:23:22}
+\pmowner{para0doxa}{5174}
+\pmmodifier{para0doxa}{5174}
+\pmtitle{neutrosophic probability}
+\pmrecord{8}{37220}
+\pmprivacy{1}
+\pmauthor{para0doxa}{5174}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A10}
+%\pmkeywords{NeutrosophicLogic}
+%\pmkeywords{NeutrosophicSet}
+\pmdefines{neutrosophic probablistic components}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\emph{Neutrosophic probability} is a probability in which 
+\begin{itemize}
+\item the chance that an event $\mathfrak{A}$ occurs is $T$;
+\item the indeterminate chance (i.e. neither occurring nor not-occurring, unknown chance) is $I$;
+\item and the chance that the event does not occur is $F$;
+\end{itemize}
+where $T, I, F$ are standard or non-standard real subsets of the non-standard unit interval $]^-0, 1^+[$.
+\newline We note the neutrosophic probability $NP(\mathfrak{A}) = (T, I, F)$, and $T, I, F$ are called \emph{neutrosophic probabilistic components}.
+
+Now let's explain the previous notations:
+\newline A number $\varepsilon$ is said to be \emph{infinitesimal} if and only if for all positive integers $n$ one has $|\varepsilon| < \frac{1}{n}$.  Let $\varepsilon > 0$ be a such infinitesimal number.  The \emph{hyper-real number set} is an  extension of the real number set, which includes classes of infinite numbers and classes of infinitesimal numbers.  
+\newline Generally, for any real number $a$ one defines $^-a$ which signifies a \emph{monad}, i.e. a set of hyper-real numbers in non-standard analysis, as follows:
+\newline $^-a = \{a-\varepsilon: \varepsilon \in R^*, \varepsilon$ is infinitesimal $\}$,
+\newline and similarly one defines $a^+$, which is also a monad, as:
+\newline $a^+ = \{a+\varepsilon: \varepsilon \in R^*, \varepsilon$ is infinitesimal $\}$.
+\newline A \emph{binad} $^-a^+$ is a union of the above two monads, i.e.
+\newline $ ^-a^+ = ^-a \cup a^+$.
+\newline For example: The non-standard finite number $1^+ = 1+\varepsilon$, where $1$ is its \emph{standard part} and $\varepsilon$ its \emph{non-standard part}, and similarly the non-standard finite number $^-0 = 0-\varepsilon$, where $0$ is its standard part and $\varepsilon$ its \emph{non-standard part}.
+\newline Similarly for $3^+ = 3+ \varepsilon$, etc.
+\newline Note that $] ^-0, 1^+ [$ is called the \emph{non-standard unit interval}.  
+\newline More information on hyperreal intervals \PMlinkexternal{is available}{http://www.gallup.unm.edu/~smarandache/Introduction.pdf}.
+
+The superior sum of the neutrosophic components is defined as 
+$$n_{sup} = sup(T) + sup(I) + sup(F) \in ] ^-0, 3^+[$$
+which may be as high as 3 or $3^+$. 
+\newline While the inferior sum of the neutrosophic components is defined as 
+$$n_{inf} = inf(T) + inf(I) + inf(F) \in ] ^-0, 3^+[$$
+\newline which may be as low as 0 or $^-0$.  
+
+Neutrosophic probability was introduced by Florentin Smarandache in 1995 and this entry contains excerpts from his below book which is for free online.
+\newline NP is a generalization of (a) \emph{classical probability}, i.e. when the set $I$ is empty and the other two probabilistic components are each reduced to a crisp number: $t \in T$ and it is understood that $f \in F$ such that $t+f = 1$, and (b) \emph{imprecise probability}, i.e.  when the set $I$ is also empty, but $T \subset [0, 1]$ is a subset with an upper bound and a lower bound, not a crisp number $p \in [0, 1]$, while $F$ is understood to be the opposite of $T$.
+\newline Unlike the classical probability and imprecise probability, which both use the standard unit interval $[0, 1]$, neutrosophic probability uses the non-standard unit interval $]^-0, 1^+[$ in order to make a distinction between \emph{absolutely sure event}, which is an event that occurs in all possible worlds, and \emph{relatively sure event}, which is an event that occurs in at least one world.  Similarly for \emph {absolutely unsure event} and \emph {relatively unsure event}, or \emph {absolutely indeterminate event} and \emph {relatively indeterminate event}.
+
+The universal set, endowed with a neutrosophic probability defined for each of its subset, forms a \emph{neutrosophic probability space}. 
+
+{\bf  Four examples}:
+\newline a) From a pool of refugees, waiting in a political refugee camp in Turkey to get the American visa, $a\%$ have the chance to be accepted - where $a$ varies in the set $A$, $r\%$ to be rejected - where $r$ varies in the set $R$, and $p\%$ to be in pending (not yet decided) - where $p$ varies in $P$, with the sets $A, R, P \subset [0,1]$. In technical applications, where there is no need for distinctions between absolutely sure event and relatively sure event, we can use standard subsets instead of non-standard subsets and respectively the unit interval $[0,1]$ instead of the non-standard unit interval $]^-0, 1^+[$.
+\newline b) The probability that candidate $C$ will win an election is say 0.25-0.30 true (percent of people voting for him), 0.35 false (percent of people voting against him), and 0.40 or 0.41 indeterminate (percent of people not coming to the ballot box, or giving a blank vote i.e. not selecting anyone, or giving a negative vote i.e. cutting all candidates on the list).
+\newline c) The probability that tomorrow it will rain is say 0.50-0.54 true according to meteorologists who have investigated the past years' weather, 0.30 or 0.34-0.35 false according to today's very sunny and droughty summer, and 0.10 or 0.20 undecided (indeterminate) because of some unexpected and unknown parameters.
+\newline d) The probability that Yankees will win tomorrow versus Cowboys is 0.60 true (according to their confrontation's history giving Yankees' satisfaction), 0.30-0.32 false (supposing Cowboys are actually up to the mark, while Yankees are declining), and 0.10 or 0.11 or 0.12 indeterminate (left to the hazard: sickness of players, referee's mistakes, atmospheric conditions during the game).  These parameters act on players' psychology.
+
+{\bf Remarks}:
+\newline - Neutrosophic probability are useful to those events which involve some degree of indeterminacy (unknown) and more criteria of evaluation as above.  This kind of probability is necessary because it provides a better approach than classical probability to uncertain events.  
+\newline - This probability uses a subset-approximation for the truth-value (like imprecise probability), but also subset-approximations for indeterminacy- and falsity-values.
+\newline - In the case when the truth and false components are complementary, i.e. no indeterminacy exists and the sum of the neutrosophic components is 1, one falls to the classical probability.  As, for example, tossing dice or coins, or drawing cards from a well shuffled deck, or drawing balls from an urn.
+
+\begin{thebibliography}{9}
+\bibitem{bhattacharya} S. Bhattacharya, {\em Utility, Rationality and Beyond, from Behavioral Finance to Informational Finance} (using Neutrosophic Probability), Ph. D. Dissertation, Bond University, Australia, 2004.
+\bibitem{smarandache} F. Smarandache, {\em A Unifying Field in Logics: Neutrosophic Logic. Neutrosophy, Neutrosophic Set, Neutrosophic Probability and Statistics}, third edition, Xiquan, Phoenix, 2003.
+\PMlinkexternal{Also online.}{http://www.gallup.unm.edu/~smarandache/eBook-Neutrosophics2.pdf}
+\bibitem{smarandache2} F. Smarandache, {\em An Introduction to the Neutrosophic Probability Applied in Quantum Physics}, in {\it Bulletin of Pure and Applied Sciences}, Physics, 13-25, Vol. 22D, No. 1, 2003.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

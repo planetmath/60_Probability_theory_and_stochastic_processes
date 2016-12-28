@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LevyProcess1}
+\pmcreated{2013-03-22 17:58:09}
+\pmmodified{2013-03-22 17:58:09}
+\pmowner{juansba}{18789}
+\pmmodifier{juansba}{18789}
+\pmtitle{Levy process}
+\pmrecord{11}{40475}
+\pmprivacy{1}
+\pmauthor{juansba}{18789}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\cadlag{c\`adl\`ag }
+\def\ito{It\^o }
+\def\levy{L\`evy }
+
+\begin{document}
+Let $(\Omega,\Psi,P,({\cal F})_{0\le t<\infty})$ be a filtered
+probability space. A \levy process on that space is an stochastic
+process $L\colon[0,\infty)\times\Omega\rightarrow \Re^n$ that has the
+following properties:
+\begin{enumerate}
+\item $L$ has increments independent of the past: for any $t\ge 0$ and for all $s\ge 0$, $L_{t+s}-L_t$ in independent of ${\cal F}_t$
+\item $L$ has stationary increments: if $t\ge s\ge 0$ then $L_t-L_s$ and $L_{t-s}$ have the same distribution. This particulary implies that $L_{t+s}-L_{t}$ and $L_{s}$ have the same distribution.
+\item $L$ is continous in probability: for any $t,s\in [0,\infty)$, $\lim_{t\rightarrow s}=X_s$, the limit taken in probability.
+\end{enumerate}
+\vskip 0.5pc
+
+Some important properties of any \levy processes $L$ are:
+\begin{enumerate}
+\item There exist a modification of $L$ that has \cadlag paths a.s. (\cadlag paths means that the paths are continuous from the right and that the left limits exist for any $t\ge 0$).
+\item $L_t$ is an infinite divisible random variable for all $t\in [0,\infty)$
+\item {\it \levy-\ito decomposition}: $L$ can be written as the sum of a diffusion, a continuous Martingale and a pure jump process; i.e:$$L_t=\alpha t+\sigma B_t+\int_{\vert x\vert<1}x\,d\tilde N_t(\cdot,dx)+\int_{\vert x\vert\ge 1}x\,dN_t(\cdot,dx)\quad \hbox{for all $t\ge 0$}$$where $\alpha \in \Re$, $B_t$ is a standard brownian motion. $N$ is defined to be the Poisson random measure of the \levy process (the process that counts the jumps): for any Borel $A$ in $\Re^n$ such that $0 \notin cl(A)$ then $N_t(\cdot,A)\colon= \sum_{0<s\le t}1_{A}(\Delta L_s)$, where $\Delta L_s\colon= L_s-L_{s-}$; and $\tilde N_t(\cdot,A)=N_t(\cdot,A)-tE[N_1(\cdot,A)]$ is the compensated jump process, which is a martingale.
+\item {\it \levy-Khintchine formula}: from the previous property it can be shown that for any $t\ge 0$ one has that$$E[e^{iuL_t}]=e^{-t\psi(u)}$$where$$\psi(u)=-i\alpha u+{\sigma^2 \over 2}u^2+\int_{\vert x\vert \ge 1}(1-e^{iux})\,d\nu(x)+\int_{\vert x\vert<1}(1-e^{iux}+iux)\,d\nu(x)$$with $\alpha\in \Re$, $\sigma \in [0,\infty)$ and $\nu$ is a positive, borel, $\sigma$-finite measure called {\it \levy measure}. (Actually $\nu(\cdot)=E[N_1(\cdot,A)]$). The second formula is usually called the \levy exponent or \levy symbol of the process.
+\item $L$ is a semimartingale (in the classical sense of being a sum of a finite variation process and a local martingale), so it is a {\it good} integrator, in the stochastic sense.
+\end{enumerate}
+
+Some important examples of \levy processes include: the Poisson
+Process, the Compound Poisson process, Brownian Motion, Stable Processes,
+Subordinators, etc.\vskip 1pc
+
+\noindent{\bf Bibliography}
+\begin{itemize}
+\item{} Protter, Phillip (1992). Stochastic Integration and Differential Equations. A New Approach. Springer-Verlag, Berlin, Germany.
+\item{} Applebaum David (2004). \levy Procesess and Stochastic Calculus.  Cambridge University Press, Cambrigde, UK.
+\end{itemize}
+
+
+\end{document}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StochasticIntegrationAsALimitOfRiemannSums}
+\pmcreated{2013-03-22 18:41:33}
+\pmmodified{2013-03-22 18:41:33}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{stochastic integration as a limit of Riemann sums}
+\pmrecord{4}{41452}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60H05}
+\pmclassification{msc}{60G07}
+\pmclassification{msc}{60H10}
+%\pmkeywords{semimartingale}
+%\pmkeywords{stochastic integral}
+%\pmkeywords{Riemann sum}
+%\pmkeywords{partition}
+\pmrelated{StochasticIntegration}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{limit}
+\PMlinkescapeword{approximations}
+\PMlinkescapeword{partitions}
+\PMlinkescapeword{terms}
+\PMlinkescapeword{infinity}
+\PMlinkescapeword{points}
+\PMlinkescapeword{integral}
+\PMlinkescapeword{even}
+\PMlinkescapeword{necessary}
+\PMlinkescapeword{left limit}
+
+As with the \PMlinkname{Riemann}{RiemannIntegral} and Riemann-Stieltjes integrals, the stochastic integral can be calculated as a limit of approximations computed on \PMlinkname{partitions}{Partition3}, called Riemann sums.
+
+Let $P_n$ be a sequence of partitions of $\mathbb{R}_+$,
+\begin{equation*}
+P_n=\left\{0=\tau^n_0\le\tau^n_1\le\cdots\uparrow\infty\right\}
+\end{equation*}
+where, $\tau^n_k$ can, in general, be stopping times. Suppose that the mesh $|P_n^t|=\sup_k(\tau^n_k\wedge t-\tau^n_{k-1}\wedge t)$ tends to zero \PMlinkname{in probability}{ConvergenceInProbability} as $n\rightarrow\infty$, for each time $t>0$.
+
+The stochastic integral of a process $Y$ with respect to $X$ can be defined on each of the partitions,
+\begin{equation*}
+I^n_t(Y,X)\equiv\sum_k Y_{\tau^n_{k-1}}(X_{\tau^n_k\wedge t}-X_{\tau^n_{k-1}\wedge t}).
+\end{equation*}
+Since the times $\tau^n_k$ tend to infinity as $k\rightarrow\infty$, all but finitely many terms are zero.
+Note that here, the process $Y$ is sampled at $\tau^n_{k-1}$, which are the left hand points of the intervals. For this reason, the stochastic integral is sometimes called the forward integral. Alternatively, the backward integral can be computed by sampling $Y$ at time $t_k$ and the Stratonovich integral takes the average of $Y_{t_{k-1}}$ and $Y_{t_k}$. However, these alternative integrals are less general and may not exist even when $Y$ is a continuous and adapted process.
+
+For left-continuous integrands, the approximations do indeed converge to the stochastic integral.
+
+\begin{theorem}
+Suppose that $X$ is a semimartingale and $Y$ is an adapted, left-continuous and locally bounded process. Then,
+\begin{equation*}
+I^n_t(Y,X)\rightarrow\int_0^t Y\,dX
+\end{equation*}
+in probability as $n\rightarrow\infty$. Furthermore, this converges ucp and in the semimartingale topology.
+\end{theorem}
+
+Similarly, convergence is also obtained for cadlag integrands. However, in this case, it is necessary to use the left limit $Y_{s-}$ in the integral. The integral of $Y$ does not even exist when it is a general cadlag adapted process, as it might not be predictable.
+
+\begin{theorem}
+Suppose that $X$ is a semimartingale and $Y$ is a cadlag adapted process. Then,
+\begin{equation*}
+I^n_t(Y,X)\rightarrow\int_0^t Y_{s-}\,dX_s
+\end{equation*}
+in probability as $n\rightarrow\infty$. Furthermore, this converges ucp and in the semimartingale topology.
+\end{theorem}
+
+%%%%%
+%%%%%
+\end{document}

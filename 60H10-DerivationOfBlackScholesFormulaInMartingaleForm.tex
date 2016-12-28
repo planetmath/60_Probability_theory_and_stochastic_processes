@@ -1,0 +1,389 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivationOfBlackScholesFormulaInMartingaleForm}
+\pmcreated{2013-03-22 17:20:37}
+\pmmodified{2013-03-22 17:20:37}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{derivation of Black-Scholes formula in martingale form}
+\pmrecord{5}{39699}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60H10}
+\pmclassification{msc}{91B28}
+\pmrelated{BlackScholesFormula}
+
+% The standard font packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% For neatly defining theorems and definitions
+%\usepackage{amsthm}
+
+% Including EPS/PDF graphics (\includegraphics)
+%\usepackage{graphicx}
+
+% Making matrix-based graphics
+%%%\usepackage{xypic}
+
+% Enumeration lists with different styles
+%\usepackage{enumerate}
+
+% Set up the theorem environments
+%\newtheorem{thm}{Theorem}
+%\newtheorem*{thm*}{Theorem}
+
+\newcommand{\defnterm}[1]{\emph{#1}}
+
+% The standard number systems
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\intset}{\mathbb{Z}}
+
+% Absolute values and norms
+% Normal, wide, and big versions of the delimeters
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\absW}[1]{\left\lvert#1\right\rvert}
+\newcommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\newcommand{\normW}[1]{\left\lVert#1\right\rVert}
+\newcommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+
+% Inverse functions
+\newcommand{\inv}[1]{{#1}^{-1}}
+
+% Differentiation operators
+\newcommand{\od}[2]{\frac{d #1}{d #2}}
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2}}
+\newcommand{\ipd}[2]{\partial #1 / \partial #2}
+
+% Differentials on integrals
+\newcommand{\dx}{\, dx}
+\newcommand{\dt}{\, dt}
+\newcommand{\dmu}{\, d\mu}
+
+% Inner products
+\newcommand{\ip}[2]{\langle {#1}, {#2} \rangle}
+
+% Complex numbers
+\DeclareMathOperator{\zRe}{Re}
+\DeclareMathOperator{\zIm}{Im}
+\newcommand{\conjug}[1]{\overline{#1}}
+
+% Calligraphic letters
+\newcommand{\sF}{\mathcal{F}}
+\newcommand{\sD}{\mathcal{D}}
+
+% Standard spaces
+\newcommand{\Hilb}{\mathcal{H}}
+\newcommand{\Le}{\mathbf{L}}
+
+% Operators and functions occassionally used in my articles
+\DeclareMathOperator{\D}{D}
+\DeclareMathOperator{\linspan}{span}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\lindim}{dim}
+\DeclareMathOperator{\sinc}{sinc}
+
+% Probability stuff
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+
+\newcommand{\EQ}{\mathbb{E}^\mathbb{Q}}
+\newcommand{\PQ}{\mathbb{Q}}
+
+\begin{document}
+\PMlinkescapeword{periods}
+\PMlinkescapeword{real}
+\PMlinkescapeword{unit}
+\PMlinkescapeword{units}
+\PMlinkescapeword{thin}
+\PMlinkescapeword{term}
+\PMlinkescapeword{terms}
+\PMlinkescapeword{representation}
+\PMlinkescapeword{divisible}
+\PMlinkescapeword{specification}
+\PMlinkescapeword{terminal}
+\PMlinkescapeword{holder}
+\PMlinkescapeword{even}
+
+\tableofcontents
+
+\medskip
+
+This entry derives the Black-Scholes formula in martingale form.
+
+The portfolio process $V_t$ representing a stock option
+will be shown to satisfy:
+\begin{align}\label{eq:port-result}
+V_t = e^{-r(T-t)} \, \EQ\bigl[ V_T \mid \sF_t \bigr]\,.
+\end{align}
+(The quantities appearing here are defined precisely,
+in the section on ``Assumptions'' below.)
+
+Equation \eqref{eq:port-result}
+can be used in practice to calculate $V_t$ for all times $t$,
+because from the specification of a financial contract,
+the value of the portfolio at time $T$,
+or in other words, its pay-off at time $T$,
+will be a known function.
+Mathematically speaking, $V_T$ gives the \emph{terminal condition}
+for the solution of a stochastic differential equation.
+
+\subsection{Assumptions}
+
+\subsubsection{Asset price}
+
+The asset or stock price $X_t$ is to be modelled by the stochastic
+differential equation:
+\begin{align}\label{eq:stock}
+d X_t = \mu X_t \, dt + \sigma X_t \, dW_t\,,
+\end{align}
+where $\mu$ and $\sigma > 0$ are constants.
+
+The stochastic process $W_t$ is a standard Brownian motion
+adapted to the filtration $\{ \sF_t \}$.
+
+See the main article 
+on the \PMlinkname{Black-Scholes formula}{BlackScholesFormula}
+for an explanation and justification of this modelling assumption.
+
+\subsubsection{Money-market account}
+
+The money-market account accumulates interest compounded continuously
+at a rate of $r$.
+It satisfies the stochastic differential equation:
+\begin{align}\label{eq:money-sde}
+dM_t = rM_t \, dt\,.
+\end{align}
+
+This happens to take the same form as an ordinary differential equation,
+ for the process $M_t$ has no randomness in it at all,
+under the assumption of a fixed interest rate $r$.
+
+The solution is to equation \eqref{eq:money-sde} with initial condition 
+$M_0$ is $M_t = M_0 \, e^{rt}$.
+
+\subsubsection{Portfolio process}
+The price of the option is derived by following a \emph{replicating portfolio}
+consisting of $\Delta_t$ units of the stock $X_t$
+and $\Theta_t$ units of the money-market
+account.  If $V_t$ denotes the value of this portfolio at time $t$,
+then
+\begin{align}\label{eq:port}
+V_t = \Delta_t \, X_t + \Theta_t \, M_t\,.
+\end{align}
+A certain ``self-financing condition'' on the portfolio requires that
+$V_t$ also satisfy the stochastic differential equation:
+\begin{align}\label{eq:port-self-financing}
+d V_t = \Delta_t \, dX_t + \Theta_t \, dM_t\,.
+\end{align}
+This condition essentially says that we cannot input extra amounts
+of money out of thin air into our portfolio; we must start with what we have.
+
+Equation \eqref{eq:port-self-financing} is not a mathematically proven statement,
+but another modelling assumption, justified by an analogous equation
+governing trading in discretized time periods.
+
+
+\subsection{Derivation}
+
+We first manipulate the
+stochastic differential equation \eqref{eq:port}
+for the portfolio process $V_t$,
+to express it in terms of the Brownian motion $W_t$.
+\begin{align*}
+dV_t &= \Delta_t \, dX_t + \Theta_t \, r M_t \, dt
+& \text{from eq. \eqref{eq:port-self-financing} and \eqref{eq:money-sde}} \\
+&= \Delta_t \, dX_t + r\bigl(V_t - \Delta_t X_t\bigr) \, dt
+& \text{from eq. \eqref{eq:port}} \\
+&= \Delta_t \, \bigl(  \mu X_t \, dt + \sigma X_t \, dW_t \bigr) \\
+& \qquad + r \bigl(V_t - \Delta_t X_t \bigr) \, dt 
+& \text{from eq. \eqref{eq:stock}} \\
+&= rV_t \, dt + \Delta_t X_t \, \bigl( (\mu - r) \, dt + \sigma \, dW_t \bigr) & \text{rearrangement}
+\end{align*}
+
+\subsubsection{Change of probability measure}
+
+Define the Brownian motion with drift $\lambda$:
+\begin{align}\label{eq:wiener-drift}
+\widetilde{W}_t = \lambda t + W_t\,, \quad \lambda = \frac{\mu - r}{\sigma}\,;
+\end{align}
+so that $d\widetilde{W}_t = \lambda \, dt + dW_t$, and
+\begin{align}\label{eq:port-sde}
+dV_t = rV_t \, dt + \sigma \, \Delta_t X_t \,  d\widetilde{W}_t\,.
+\end{align}
+
+The introduction of the process $\widetilde{W}_t$
+is not merely for notational convenience but is mathematically
+meaningful.  If the probability space we are working in
+is $(\Omega, \sF_T, \PP)$,
+and $W_t$, for $0 \leq t \leq T$, is a 
+standard Wiener process on $(\Omega, \sF_T, \PP)$,
+then $\widetilde{W}_t$ will not be a standard Wiener process
+on $(\Omega, \sF_T, \PP)$, but it \emph{will} be a standard Wiener process
+under $(\Omega, \sF_T, \PQ)$ \emph{with a different probability measure} 
+$\PQ$.
+
+The probability measure $\PQ$ is obtained by Girsanov's theorem.
+The exact form for $\PQ$ can be calculated,
+but it will not be needed in this derivation.
+
+In finance, $\PQ$ is known as the \emph{risk-neutral measure},
+and the quantity $\lambda$ is the \emph{market price of risk}.
+
+\subsubsection{Discounted portfolio process is a martingale}
+
+From equation \eqref{eq:port-sde},
+we see that the value of the portfolio grows at the risk-free
+interest rate of $r$,
+apart from the randomness associated due to the stochastic
+differential $d\widetilde{W}_t$.
+
+It is thus reasonable to expect that,
+if we normalize the portfolio value amount
+by the amount that cash grows due to accumulation of risk-free
+interest,
+the resulting process, $V_t/M_t$, should have a zero growth rate.
+That this is indeed the case can be verified
+by a computation with It\^o's formula
+--- more specifically, the 
+\PMlinkescapetext{product rule} for It\^o integrals:
+\begin{align*}
+d \left( \frac{V_t}{M_t} \right)
+&= d \left(V_t \cdot \frac{1}{M_t} \right) \\
+&= \bigl( d V_t \bigr) \, \frac{1}{M_t} + 
+V_t \, d \left( \frac{1}{M_t}\right) 
+\\
+&= r \frac{V_t}{M_t} \, dt + \sigma \Delta_t \frac{X_t}{M_t} \, d\widetilde{W}_t+
+V_t \, d \left( \frac{1}{M_t}\right) & \text{from eq. \eqref{eq:port-sde}}
+\\
+&= r \frac{V_t}{M_t} \, dt + \sigma \Delta_t \frac{X_t}{M_t} \, d\widetilde{W}_t+
+\frac{V_t}{M_t} \, dt
+& \text{from $\frac{1}{M_t} = \frac{e^{-rt}}{M_0}$.}
+\end{align*}
+
+Thus,
+\begin{align*}
+d\left(\frac{V_t}{M_t}\right) = \sigma \Delta_t \, \frac{X_t}{M_t} \, d\widetilde{W}_t\,.
+\end{align*}
+Or, in integral form:
+\begin{align}\label{eq:port-integral}
+\frac{V_{t_1}}{M_{t_1}} = \frac{V_{t_0}}{M_{t_0}} + \int_{t_0}^{t_1} \, \sigma \Delta_t \, \frac{X_t}{M_t} \, d\widetilde{W}_t\,, \quad 0 \leq t_0 \leq t_1 \leq T\,.
+\end{align}
+Assuming $\Delta_t$ is a $\sF_t$-adapted process
+--- where $\{ \sF_t \}$ is the filtration generated by the Brownian
+motion $W_t$ (or equivalently $\widetilde{W}_t$) ---
+the It\^o integral in equation \eqref{eq:port-integral}
+is a martingle under the probability space $(\Omega, \sF_T, \PQ)$.
+
+\subsubsection{Portfolio process as a conditional expectation}
+
+Then by the definition of a martingale,
+we have
+\[
+\frac{V_{t_0}}{M_{t_0}} = \EQ \left[ \frac{V_{t_1}}{M_{t_1}} \mid \sF_{t_0} \right]\,, \quad 0 \leq t_0 \leq t_1 \leq T\,,
+\]
+where $\EQ[ \cdot \mid \sF_t ]$ denotes the conditional 
+expectation, of a random variable
+on the measurable space $(\Omega, \sF_T)$, 
+under
+the probability measure $\PQ$.
+
+In particular, setting $t_0 = t \leq T$ and $t_1 = T$,
+and rearranging the factors of $M_t = e^{rt}$,
+we obtain the desired result, equation \eqref{eq:port-result}.
+
+
+\subsection{Existence of solutions}
+So far,
+we have derived the form of the solution for the portfolio value process 
+$V_t$\,, 
+\emph{assuming that it exists}.
+Actually, if we were to take only
+equations \eqref{eq:port} and \eqref{eq:port-self-financing}
+as the problem to solve mathematically,
+without any reference to the financial motivations,
+it is possible to work backwards and deduce the existence
+of the solution.
+
+\subsubsection{Proposed construction}
+
+Let $\PQ$ be the risk-neutral probability measure,
+and let $U$ be any given $\Le^1(\Omega, \sF_T, \PQ)$ random variable,
+representing the \emph{terminal condition}.
+Define the family of random variables dependent on time,
+\begin{align}\label{eq:port-construct}
+V_t = e^{-r(T-t)} \, \EQ[ U \mid \sF_t ]\,, \quad 0 \leq t \leq T\,.
+\end{align}
+It is easy to verify that, for any $U$,
+the process $V_t \, e^{-rt}$ is a martingale
+with respect to $\sF_t$, the filtration generated 
+by the Wiener process $\widetilde{W}_t$ under the probability
+measure $\PQ$.
+
+\subsubsection{Verification}
+
+We now invoke the martingale representation theorem for It\^o processes:
+for any martingale $Z_t$, with respect to $\sF_t$ under
+the probability measure $\PQ$, 
+there exists a $\sF_t$-adapted process $G_t$
+such that $Z_t$ has the representation:
+\begin{align*}
+Z_{t_1} - Z_{t_0} = \int_{t_0}^{t_1} G_t \, d\widetilde{W}_t\,.
+\end{align*}
+
+Letting $Z_t = V_t \, e^{-rt}$ and 
+comparing with equations \eqref{eq:port-integral}
+and \eqref{eq:port},
+we are motivated to \emph{define}
+the $\sF_t$-adapted processes:
+\[
+\Delta_t = \frac{G_t \, e^{rt}}{\sigma X_t}\,,
+\quad \Theta_t = \frac{V_t - \Delta_t X_t}{M_t} = \frac{Z_t - G_t/\sigma}{M_0}\,.
+\]
+Then the process $V_t$ constructed
+by equation \eqref{eq:port-construct}
+trivially satisfies equation \eqref{eq:port}.
+And it is a simple matter to check that 
+equation \eqref{eq:port-self-financing} holds as well:
+\begin{align*}
+d V_t = d\bigl( Z_t \, e^{rt} \bigr) 
+&= e^{rt} \, dZ_t + re^{rt} \, Z_t \, dt & \text{It\^o's product rule}\\
+&= e^{rt} \, G_t \, d\widetilde{W}_t  + r V_t \, dt \\
+&= \sigma \Delta_t X_t \, d\widetilde{W}_t + rV_t \, dt \\
+&= \Delta_t \, X_t (r \, dt + \sigma d\widetilde{W}_t) 
+& \text{add and subtract}
+\\
+& \qquad + r\bigl( V_t - \Delta_t X_t \bigr) 
+& \text{the $dt$ term} \\
+&= \Delta_t \, dX_t + r \, \Theta_t \, M_t \, dt\,,
+\end{align*}
+where in the last equality we have used the SDE for $X_t$
+in terms of $d\widetilde{W}_t$ in place of $dW_t$:
+\begin{align*}
+dX_t = r X_t \, dt + \sigma X_t \, d\widetilde{W}_t\,,
+\end{align*}
+obtained by substituting 
+in equation \eqref{eq:stock},
+the differential of equation \eqref{eq:wiener-drift}.
+
+\begin{thebibliography}{6}
+\bibitem{Oksendal}
+Bernt \O{}ksendal.
+\emph{Stochastic Differential Equations,
+An Introduction with Applications}, 5th edition. Springer, 1998.
+\bibitem{Shreve}
+Steven E. Shreve. \emph{Stochastic Calculus for Finance II: 
+Continuous-Time Models}. Springer, 2004.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfTheDebutTheorem}
+\pmcreated{2013-03-22 18:39:15}
+\pmmodified{2013-03-22 18:39:15}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof of the d\'ebut theorem}
+\pmrecord{6}{41397}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G40}
+\pmclassification{msc}{60G05}
+%\pmkeywords{d\'ebut}
+%\pmkeywords{stopping time}
+%\pmkeywords{progressively measurable}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{right limit}
+\PMlinkescapeword{point}
+\PMlinkescapeword{sequence}
+
+Let $(\mathcal{F})_{t\in\mathbb{T}}$ be a right-continuous \PMlinkname{filtration}{FiltrationOfSigmaAlgebras} on the measurable space $(\Omega,\mathcal{F})$, It is assumed that $\mathbb{T}$ is a closed subset of $\mathbb{R}$ and that $\mathcal{F}_t$ is universally complete for each $t\in\mathbb{T}$.
+
+If $A\subseteq\mathbb{T}\times\Omega$ is a progressively measurable set, then we show that its d\'ebut
+\begin{equation*}
+D(A)=\inf\left\{t\in\mathbb{T}:(t,\omega)\in A\right\}
+\end{equation*}
+is a stopping time.
+
+As $A$ is progressively measurable, the set $A\cap((-\infty,t)\times\Omega)$ is $\mathcal{B}(\mathbb{T})\times\mathcal{F}_t$-measurable. By the measurable projection theorem it follows that
+\begin{equation*}
+\left\{D(A)<t\right\}=\left\{\omega\in\Omega:(s,\omega)\in A\cap((-\infty,t)\times\Omega)\textrm{ for some }s\in\mathbb{T}\right\}
+\end{equation*}
+is in $\mathcal{F}_t$. If there exists a sequence $t_n\in\mathbb{T}$ with $t_n>t$ and $t_n\rightarrow t$, then
+\begin{equation*}
+\left\{D(A)\le t\right\}=\bigcap_n\left\{D(A)<t_n\right\}\in\bigcap_n\mathcal{F}_{t_n}=\mathcal{F}_{t+}=\mathcal{F}_t.
+\end{equation*}
+On the other hand, if $t$ is not a right limit point of $\mathbb{T}$ then
+\begin{equation*}
+\{D(A)\le t\}=\{D(A)<t\}\cup\{\omega\in\Omega:(t,\omega)\in A\}\in\mathcal{F}_t.
+\end{equation*}
+In either case, $\{D(A)\le t\}$ is in $\mathcal{F}_t$, so $D(A)$ is a stopping time.
+
+%%%%%
+%%%%%
+\end{document}

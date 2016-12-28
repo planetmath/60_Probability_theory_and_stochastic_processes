@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BonferroniInequalities}
+\pmcreated{2013-03-22 14:30:40}
+\pmmodified{2013-03-22 14:30:40}
+\pmowner{kshum}{5987}
+\pmmodifier{kshum}{5987}
+\pmtitle{Bonferroni inequalities}
+\pmrecord{9}{36049}
+\pmprivacy{1}
+\pmauthor{kshum}{5987}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A99}
+\pmrelated{BrunsPureSieve}
+\pmdefines{union bound}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $E(1)$, $E(2),\ldots, E(n)$ be events in a sample space. Define
+\begin{align*}
+ S_1 := \sum_{i=1}^n \Pr(E(i)) \\
+ S_2 := \sum_{i<j} \Pr(E(i) \cap E(j)),
+\end{align*}
+and for $2<k\leq n$,
+\[
+  S_k := \sum \Pr(E(i_1)\cap \cdots \cap E(i_k) )
+\]
+where the summation is taken over all ordered $k$-tuples of distinct integers.
+
+{\bf Theorem}
+
+For odd $k$, $1 \leq k \leq n$,
+\[
+\Pr(E(1)\cup\cdots\cup E(n)) \leq \sum_{j=1}^k (-1)^{j+1} S_j, 
+\]
+and for even $k$, $2\leq k \leq n$,
+\[
+\Pr(E(1)\cup\cdots\cup E(n)) \geq \sum_{j=1}^k (-1)^{j+1} S_j, 
+\]
+
+
+{\bf Remark} When $k=1$, the Bonferroni inequality is also known as the union bound. 
+When $k=n$, we have an equality, also known as the inclusion-exclusion principle.
+%%%%%
+%%%%%
+\end{document}

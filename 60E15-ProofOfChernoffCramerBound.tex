@@ -1,0 +1,114 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfChernoffCramerBound}
+\pmcreated{2013-03-22 16:09:05}
+\pmmodified{2013-03-22 16:09:05}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{proof of Chernoff-Cramer bound}
+\pmrecord{26}{38231}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $h(x)$ be the step function ($h(x)=1$ for\ $x\geq 0
+$, $h(x)=0$  for $x<0$); then, by generalized Markov inequality, for any $t > 0$ and
+any $\varepsilon \geq 0$,
+\begin{eqnarray*}
+\Pr\left\{ \sum_{i=1}^{n}\left( X_{i}-E[X_{i}]\right) >\varepsilon \right\} 
+&=&E\left[ h\left( \sum_{i=1}^{n}\left( X_{i}-E[X_{i}]\right) -\varepsilon
+\right) \right] \leq  \\
+&\leq &E\left[ e^{t\left( \sum_{i=1}^{n}\left( X_{i}-E[X_{i}]\right)
+-\varepsilon \right) }\right] = \\
+&=&\exp (-\varepsilon t)E\left[ e^{\sum_{i=1}^{n}t\left(
+X_{i}-E[X_{i}]\right) }\right] = \\
+&=&\exp (-\varepsilon t)E\left[ \prod_{i=1}^{n}e^{t\left(
+X_{i}-E[X_{i}]\right) }\right] = \\
+\text{(by independence)} &=&\exp (-\varepsilon t)\prod_{i=1}^{n}E\left[
+e^{t\left( X_{i}-E[X_{i}]\right) }\right] = \\
+&=&\exp \left( -\varepsilon t+\sum_{i=1}^{n}\ln E\left[ e^{t\left(
+X_{i}-E[X_{i}]\right) }\right] \right) = \\
+&=&\exp \left[ -\left( t\varepsilon -\psi (t)\right) \right]. 
+\end{eqnarray*}
+
+
+Since this expression is valid for any $t > 0$, the best bound is obtained taking the supremum:
+
+\[
+\Pr\left\{ \sum_{i=1}^{n}\left( X_{i}-E[X_{i}]\right) >\varepsilon \right\}
+\leq e^{-\sup_{t > 0}\left( t\varepsilon -\psi (t)\right)}
+\]
+
+which proves part c).
+
+To prove part a), let's observe that $\Psi (0)=\sup_{t > 0}(-\psi (t))=-\inf_{t > 0}(\psi (t))$
+and that
+\begin{eqnarray*}
+E\left[ e^{t\left( X_{i}-E[X_{i}]\right) }\right]  &\geq &E[1+t\left(
+X_{i}-E[X_{i}]\right) ]= \\
+&=&E[1]+tE[X_{i}]-tE[E[X_{i}]]= \\
+&=&1=E\left[ e^{t\left( X_{i}-E[X_{i}]\right) }\right] _{t=0}
+\end{eqnarray*}
+that is, $t=0$ is the infimum point for $E\left[ e^{t\left(
+X_{i}-E[X_{i}]\right) }\right] $ $\forall i$ and consequently for $\psi
+(t)=\sum_{i=1}^{n}\ln E\left[ e^{t\left( X_{i}-EX_{i}\right) }\right] $, so as a conclusion $\Psi (0)=-\psi(0)=0$
+
+b) Let $x>0$ be fixed and let $t_{0}$ be the supremum point for $tx-\psi (t)
+$; we have to show that $t_{0}x-\psi (t_{0})>0$.
+
+By differentiation, $\psi ^{\prime }(t_{0})=x$.
+
+Let's recall that the moment generating function is convex, so $\psi
+^{\prime \prime }(t)>0$. Writing the Taylor expansion for $\psi (t)$
+around  $t=t_{0}$, we have, with a suitable $t_1<t_{0}$,
+\[
+0=\psi (0)=\psi (t_{0})-\psi ^{\prime }(t_{0})t_{0}+\frac{1}{2}\psi ^{\prime
+\prime }(t_{1})t_{0}^{2}
+\]
+that is
+\[
+\Psi (x)=t_{0}x-\psi (t_{0})=t_{0}\psi ^{\prime }(t_{0})-\psi (t_{0})=\frac{1%
+}{2}\psi ^{\prime \prime }(t_{1})t_{0}^{2}>0
+\]
+
+The convexity of $\Psi (x)$ follows from the fact that $\Psi (x)$ is the supremum of the linear (and hence convex) functions ${tx-\psi (t)}$ and so must be convex itself.
+
+Eventually, in \PMlinkescapetext{order} to prove that $ \Psi (x)$ is an increasing function, let's note that
+\[
+\Psi ^{\prime }(0)=\lim_{x\rightarrow 0}\frac{\Psi (x)-\Psi (0)}{x}%
+=\lim_{x\rightarrow 0}\frac{\Psi (x)}{x}>0
+\]
+and that, by Taylor formula with Lagrange form remainder, for a $\xi=\xi(x)$
+\[
+\Psi ^{\prime }(x)=\Psi ^{\prime }(0)+\Psi ^{\prime \prime }(\xi )x\geq 0
+\]
+since $\Psi ^{\prime \prime }(\xi )\geq 0$ by convexity and $x\geq 0$ by
+hypotheses.
+%%%%%
+%%%%%
+\end{document}

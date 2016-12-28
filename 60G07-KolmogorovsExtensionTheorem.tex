@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KolmogorovsExtensionTheorem}
+\pmcreated{2013-04-12 21:33:32}
+\pmmodified{2013-04-12 21:33:32}
+\pmowner{Filipe}{28191}
+\pmmodifier{Filipe}{28191}
+\pmtitle{Kolmogorov's extension theorem}
+\pmrecord{3}{87348}
+\pmprivacy{1}
+\pmauthor{Filipe}{28191}
+\pmtype{Theorem}
+\pmclassification{msc}{60G07}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+For all $t_1,\cdots,t_k$, $k\in \mathbb{N}$, let $v_{t_1,\cdots,t_k}$ be probability measures on $\mathbb{R}^{nk}$ satisfying the following properties (consistency conditions):
+\begin{enumerate}
+\item $v_{t_{\sigma(1)},\cdots,t_{\sigma(k)}}(F_1\times \cdots \times F_k)=v_{t_1,\cdots t_k}(F_{\sigma^{-1}(1)}\times \cdots F_{\sigma^{-1}(k)})$ for all permutations $\sigma$ of $\lbrace 1,2,\cdots,k\rbrace$ and for all Borel sets $F_i$ of $\mathbb{R}^n$
+\item $v_{t_1,\cdots,t_k}(F_1 \times \cdots \times F_k)=v_{t_1,\cdots,t_k,t_{k+1},\cdots t_{k+m}}(F_1 \times \cdots \times F_k \times \mathbb{R}^n \times \cdots \times \mathbb{R}^n)$ for all $m \in \mathbb{N}$ and for all Borel sets $F_i$ of $\mathbb{R}^n$
+\end{enumerate}
+
+Then there exists a probability space $(\Omega,\mathcal{F},P)$ and a stochastic process $X_t$ on $\Omega$, indexed by $T$, taking values in $\mathbb{R}^n$ such that 
+$$ v_{t_1,\cdots,t_k}(F_1 \times \cdots \times F_k)=P(X_{t_1}\in F_1, \cdots, X_{t_k}\in F_k)$$ for all $t_i\in T, k \in \mathbb{R}^n$ and all Borel sets $F_i$ of $\mathbb{R}^n$
+\end{document}

@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MemorylessRandomVariable}
+\pmcreated{2013-03-22 14:39:49}
+\pmmodified{2013-03-22 14:39:49}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{memoryless random variable}
+\pmrecord{8}{36261}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60K05}
+\pmclassification{msc}{60G07}
+%\pmkeywords{memoryless}
+%\pmkeywords{lack of memory}
+\pmrelated{MarkovChain}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A non-negative-valued random variable $X$ is \emph{memoryless} if 
+$P(X>s+t\mid X>s)=P(X>t)$  for $s,t\ge0$.
+\par
+In words, given that a certain event did not occur during time period $s$ \emph{in the past}, the chance that an event will occur after an additional time period $t$ \emph{in the future} is the same as the chance that the event would occur after a time period $t$ from the beginning, regardless of how long or how short the time period $s$ is; the memory is \emph{erased}.  
+\par
+From the definition, we see that $$P(X>t)=P(X>s+t\mid X>s)=\frac{P(X>s+t\mbox{ and }X>s)}{P(X>s)}=\frac{P(X>s+t)}{P(X>s)},$$
+so $P(X>s+t)=P(X>s)P(X>t)$ iff $X$ is memoryless.
+\par
+An example of a discrete memoryless random variable is the geometric random variable, since $P(X>s+t)=(1-p)^{s+t}=(1-p)^s(1-p)^t=P(X>s)P(X>t)$, where $p$ is the probability of $X$=success.  The exponential random variable is an example of a continuous memoryless random variable, which can be proved similarly with $1-p$ replaced by $e^{-\lambda}$.  In fact, the exponential random variable is the only continuous random variable having the memoryless property.
+%%%%%
+%%%%%
+\end{document}

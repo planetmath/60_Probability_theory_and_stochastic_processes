@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CramerWoldTheorem}
+\pmcreated{2013-03-22 13:14:21}
+\pmmodified{2013-03-22 13:14:21}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Cram\'er-Wold theorem}
+\pmrecord{4}{33711}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let 
+\[\overline{X}_n = (X_{n1},\dots,X_{nk}) \;\mbox{and} \; 
+\overline{X} = (X_1,\dots,X_k)\]
+be \PMlinkescapetext{k-dimensional} random vectors. Then $\overline{X}_n$ converges to $\overline{X}$ \PMlinkname{in distribution}{ConvergenceInDistribution} if and only if
+\[\sum_{i=1}^k t_iX_{ni} \xrightarrow[n\rightarrow\infty]{D} 
+\sum_{i=1}^k t_iX_i.\]
+for each $(t_1,\dots,t_k)\in \mathbb{R}^k$. That is, if every 
+\PMlinkescapetext{fixed} linear combination of the coordinates of $\overline{X}_n$ converges in distribution to the correspondent linear combination of coordinates of $\overline{X}$.
+%%%%%
+%%%%%
+\end{document}

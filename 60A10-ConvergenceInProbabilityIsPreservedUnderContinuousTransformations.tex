@@ -1,0 +1,132 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConvergenceInProbabilityIsPreservedUnderContinuousTransformations}
+\pmcreated{2013-03-22 16:15:05}
+\pmmodified{2013-03-22 16:15:05}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{convergence in probability is preserved under continuous transformations}
+\pmrecord{10}{38356}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A10}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{enumerate}
+%\usepackage{graphicx}
+%\usepackage{psfrag}
+%%%\usepackage{xypic}
+
+% define commands here
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\PP}{\mathbb{P}}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+\providecommand{\defnterm}[1]{\emph{#1}}
+
+
+\DeclareMathOperator{\D}{D}
+\DeclareMathOperator{\linspan}{span}
+
+\newtheorem{thm}{Theorem}
+\begin{document}
+\begin{thm}
+Let $g\colon \real^k \to \real^l$ be a continuous function.
+If $\{ X_n \}$ are $\real^k$-valued random variables converging to $X$
+in probability, then $\{ g(X_n) \}$ converge in probability to
+$g(X)$ also.
+
+\begin{proof}
+Suppose first that $g$ is uniformly continuous.
+Given $\epsilon > 0$, there is $\delta > 0$ such that
+$\norm{g(X_n) - g(X)} < \epsilon$ whenever
+$\norm{X_n - X} < \delta$.
+Therefore,
+\[
+\PP \bigl( \norm{g(X_n) - g(X)} \geq \epsilon \bigr)
+\leq \PP \bigl( \norm{X_n - X} \geq \delta \bigr) \to 0
+\]
+as $n \to \infty$.
+
+Now suppose $g$ is not necessarily uniformly continuous on $\real^k$.
+But it will be uniformly continuous on any compact set 
+$\{ x \in \real^k \colon \norm{x} \leq m \}$ for $m \geq 0$.
+Consequently, if $X_n$ and $X$ are bounded (by $m$), then the proof just
+given is applicable.  Thus we attempt to reduce the general case
+to the case that $X_n$ and $X$ are bounded.
+
+Let 
+\[
+f_m(x) = \begin{cases}
+x\,, & \norm{x} \leq m \\
+mx/\norm{x} \,, & \norm{x} \geq m
+\end{cases}
+\]
+Clearly, $f_m\colon \real^k \to \real^k$ is continuous; in fact, it can be verified that
+$f_m$ is uniformly continuous on $\real^k$.  
+(This is geometrically obvious in the one-dimensional case.)
+
+Set $X_n^m = f_m(X_n)$ and $X^m = f_m(X)$,
+so that $X_n^m$ converge to $X^m$ in probability for each $m \geq 0$.
+
+We now show that $g(X_n)$ converge to $g(X)$ in probability by a four-step estimate.  Let $\epsilon > 0$ and $\delta > 0$ be given.
+For any $m \geq 0$ (which we will \PMlinkescapetext{fix} later),
+\[
+\PP\bigl( \norm{g(X_n) - g(X)} \geq \delta \bigr)
+\leq \PP\bigl( \norm{g(X_n^m) - g(X^m) } \geq \delta \bigr)
++ \PP\bigl( \norm{X_n} \geq m \bigr) 
++ \PP\bigl( \norm{X} \geq m \bigr)\,.
+\]
+
+Choose $M$ such that for $m \geq M$,
+\[
+\PP\bigl( \norm{X} \geq m \bigr) \leq \PP \bigl( \norm{X} \geq M \bigr) < \frac{\epsilon}{4}\,.
+\]
+(This is possible since $\lim_{m \to \infty} \PP \bigl( \norm{X} \geq m \bigr)
+= \PP \bigl( \bigcap_{m=0}^\infty \{ \norm{X} \geq m \} \bigr) = \PP(\emptyset) = 0$.)
+
+In particular, let $m = M+1$.
+Since $X_n^m$ converge in probability to $X^m$
+and $X_n^m$, $X^m$ are bounded,
+$g(X_n^m)$ converge in probability to $g(X^m)$.
+That means for $n$ large enough, 
+\[
+\PP\bigl( \norm{g(X_n^m) - g(X^m)} \geq \delta \bigr) < \frac{\epsilon}{4}\,.
+\]
+
+Finally, since $\norm{X_n} \leq \norm{X_n - X} + \norm{X}$,
+and $X_n$ converge to $X$ in probability,
+we have
+\[
+\PP\bigl( \norm{X_n} \geq m = M+1 \bigr)
+\leq \PP \bigl( \norm{X_n - X} \geq 1 \bigr) + \PP\bigl( \norm{X} \geq M \bigr)
+< \frac{\epsilon}{4} + \frac{\epsilon}{4}
+\]
+for large enough $n$.
+
+Collecting the previous inequalities together,
+we have 
+\[
+\PP\bigl(\norm{g(X_n) - g(X)} \geq \delta \bigr) < \epsilon
+\]
+for large enough $n$.
+\end{proof}
+
+\end{thm}
+
+%%%%%
+%%%%%
+\end{document}

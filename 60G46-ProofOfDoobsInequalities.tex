@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfDoobsInequalities}
+\pmcreated{2013-03-22 18:39:55}
+\pmmodified{2013-03-22 18:39:55}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof of Doob's inequalities}
+\pmrecord{5}{41409}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G46}
+\pmclassification{msc}{60G44}
+\pmclassification{msc}{60G42}
+%\pmkeywords{submartingale}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{index set}
+\PMlinkescapeword{term}
+
+Let $(\Omega,\mathcal{F},(\mathcal{F}_t)_{t\in\mathbb{T}},\mathbb{P})$ be a filtered probability space with countable index set $\mathbb{T}$.
+If $(X_t)_{t\in\mathbb{T}}$ is a submartingale, we show that
+\begin{equation}\label{eq:1}
+\mathbb{P}\left(\sup_{s\le t}X_s\ge K\right)\le K^{-1}\mathbb{E}[(X_t)_+]
+\end{equation}
+and if $X$ is a martingale or nonnegative submartingale then,
+\begin{gather}
+\label{eq:2}\mathbb{P}(X^*_t\ge K)\le K^{-1}\mathbb{E}[|X_t|],\\
+\label{eq:3}\Vert X^*_t\Vert_p\le \frac{p}{p-1}\Vert X_t\Vert_p. 
+\end{gather}
+for every $K>0$ and $p>1$.
+
+First, let us consider the case where $\mathbb{T}$ is finite. The first time at which $X_t\ge K$,
+\begin{equation*}
+\tau=\inf\left\{t\in\mathbb{T}:X_t\ge K\right\}
+\end{equation*}
+is a stopping time (as hitting times are stopping times). By Doob's optional sampling theorem for submartingales $X_{\tau\wedge t}\le\mathbb{E}[X_t\mid\mathcal{F}_{\tau\wedge t}]$ and therefore,
+\begin{equation*}
+K\mathbb{P}(\tau\le t)
+\le\mathbb{E}[1_{\{\tau\le t\}}X_{\tau\wedge t}]
+\le\mathbb{E}[1_{\{\tau\le t\}}X_{t}]
+\end{equation*}
+However, $\tau\le t$ if and only if $\sup_{s\le t}X_s\ge K$ giving,
+\begin{equation}\label{eq:4}
+\mathbb{P}\left(\sup_{s\le t}X_s\ge K\right)\le K^{-1}\mathbb{E}[1_{\{\sup_{s\le t}X_s\ge K\}}X_t],
+\end{equation}
+where the supremum is understood to be over $s\in\mathbb{T}$.
+Now suppose that $\mathbb{T}$ is countable. Then choose finite subsets $\mathbb{T}_n\subseteq\mathbb{T}$ which increase to $\mathbb{T}$ as $n$ goes to infinity. Replacing $\mathbb{T}$ by $\mathbb{T}_n$ in inequality (\ref{eq:4}) and using the monotone convergence theorem to take the limit $n\rightarrow\infty$ extends (\ref{eq:4}) to arbitrary uncountable index sets. Then, inequality (\ref{eq:1}) follows immediately from (\ref{eq:4}).
+
+Now, suppose that $X$ is a martingale. Jensen's inequality gives
+\begin{equation*}
+\mathbb{E}[|X_t|\mid\mathcal{F}_s]\ge \left|\mathbb{E}[X_t\mid\mathcal{F}_s]\right|=|X_s|
+\end{equation*}
+for any $s<t$, so $|X|$ is a nonnegative submartingale. Therefore, it is enough to prove inequalities (\ref{eq:2}) and (\ref{eq:3}) for $X$ a nonnegative submartingale, and the martingale case follows by replacing $X$ by $|X|$.
+
+So, we take $X$ to be a nonnegative submartingale in the following. In this case, (\ref{eq:2}) just reduces to (\ref{eq:1}) and it only remains to prove inequality (\ref{eq:3}).
+
+For $p>1$, multiply (\ref{eq:4}) by $K^{p-1}$ and integrate up to some limit $L>0$,
+\begin{equation}\label{eq:5}
+\int_0^LK^{p-1}\mathbb{P}(X^*_t\ge K)\,dK\le \int_0^LK^{p-2}\mathbb{E}[1_{\{X^*_t\ge K\}}X_t]\,dK.
+\end{equation}
+The left hand side of this inequality can be computed by commuting the order of integration with respect to $\mathbb{P}$ and $dK$ (Fubini's theorem),
+\begin{equation*}\begin{split}
+\int_0^L K^{p-1}\mathbb{P}(X^*_t\ge K)\,dK
+&=\mathbb{E}\left[\int_0^L K^{p-1}1_{\{X^*_t\ge K\}}\,dK\right]\\
+&=\frac{1}{p}\mathbb{E}[(L\wedge X^*)^p].
+\end{split}\end{equation*}
+The right hand side of (\ref{eq:5}) can be computed similarly,
+\begin{equation*}\begin{split}
+\int_0^LK^{p-2}\mathbb{E}[1_{\{X^*_t\ge K\}}X_t]\,dK
+&=\mathbb{E}\left[X_t\int_0^LK^{p-2}1_{\{X^*_t\ge K\}}\,dK\right]\\
+&=\frac{1}{p-1}\mathbb{E}[X_t(L\wedge X^*_t)^{p-1}].
+\end{split}\end{equation*}
+Putting these back into (\ref{eq:5}),
+\begin{equation}\label{eq:6}
+\Vert L\wedge X^*_t\Vert_p^p\le\frac{p}{p-1}\mathbb{E}[X_t(L\wedge X^*_t)^{p-1}].
+\end{equation}
+Now let $q=p/(p-1)$, so that $p,q$ are \PMlinkname{conjugate}{ConjugateIndex} and the H\"older inequality gives
+\begin{equation*}
+\mathbb{E}[X_t(L\wedge X^*_t)^{p-1}]
+\le\Vert X_t\Vert_p \Vert (L\wedge X^*_t)^{p-1}\Vert_q
+=\Vert X_t\Vert_p \Vert L\wedge X^*_t\Vert_p^{p-1}.
+\end{equation*}
+Substituting into (\ref{eq:6}), the finite term $\Vert L\wedge X^*_t\Vert_p^{p-1}$ cancels to get
+\begin{equation*}
+\Vert L\wedge X^*_t \Vert_p\le \frac{p}{p-1}\Vert X_t\Vert_p,
+\end{equation*}
+and the result follows by letting $L$ increase to infinity.
+
+%%%%%
+%%%%%
+\end{document}

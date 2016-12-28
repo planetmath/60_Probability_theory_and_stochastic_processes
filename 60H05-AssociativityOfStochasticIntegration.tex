@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AssociativityOfStochasticIntegration}
+\pmcreated{2013-03-22 18:41:06}
+\pmmodified{2013-03-22 18:41:06}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{associativity of stochastic integration}
+\pmrecord{4}{41436}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60H05}
+\pmclassification{msc}{60G07}
+\pmclassification{msc}{60H10}
+%\pmkeywords{stochastic integral}
+%\pmkeywords{semimartingale}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{terms}
+\PMlinkescapeword{derivative}
+\PMlinkescapeword{satisfies}
+
+The chain rule for expressing the derivative of a variable $z$ with respect to $x$ in terms of a third variable $y$ is
+\begin{equation*}
+\frac{dz}{dx}=\frac{dz}{dy}\frac{dy}{dx}.
+\end{equation*}
+Equivalently, if $dy=\alpha\,dx$ and $dz=\beta\,dy$ then $dz=\beta\alpha\,dx$.
+The following theorem shows that the stochastic integral satisfies a generalization of this.
+
+\begin{theorem*}
+Let $X$ be a semimartingale and $\alpha$ be an $X$-integrable process. Setting $Y=\int\alpha\,dX$ then $Y$ is a semimartingale. Furthermore, a predictable process $\beta$ is $Y$-integrable if and only if $\beta\alpha$ is $X$-integrable, in which case
+\begin{equation}\label{eq:1}
+\int\beta\,dY=\int\beta\alpha\,dX.
+\end{equation}
+\end{theorem*}
+Note that expressed in alternative notation, (\ref{eq:1}) becomes
+\begin{equation*}
+\beta\cdot(\alpha\cdot X)=(\beta\alpha)\cdot X
+\end{equation*}
+or, in differential notional,
+\begin{equation*}
+\beta(\alpha\,dX)=(\beta\alpha)\,dX.
+\end{equation*}
+That is, stochastic integration is associative.
+
+%%%%%
+%%%%%
+\end{document}

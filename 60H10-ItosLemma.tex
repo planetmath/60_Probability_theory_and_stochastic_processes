@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ItosLemma}
+\pmcreated{2013-03-22 18:41:44}
+\pmmodified{2013-03-22 18:41:44}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{Ito's lemma}
+\pmrecord{5}{41456}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60H10}
+\pmclassification{msc}{60G07}
+\pmclassification{msc}{60H05}
+\pmsynonym{It\^o's lemma}{ItosLemma}
+\pmsynonym{It\"o's lemma}{ItosLemma}
+\pmsynonym{Ito's formula}{ItosLemma}
+\pmsynonym{It\^o's formula}{ItosLemma}
+\pmsynonym{It\"o's formula}{ItosLemma}
+%\pmkeywords{semimartingale}
+%\pmkeywords{stochastic integral}
+%\pmkeywords{quadratic variation}
+%\pmkeywords{quadratic covariation}
+\pmrelated{ItosFormula}
+\pmrelated{GeneralizedItoFormula}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{extension}
+\PMlinkescapeword{calculus}
+\PMlinkescapeword{coordinate}
+\PMlinkescapeword{second order}
+\PMlinkescapeword{derivatives}
+\PMlinkescapeword{variables}
+\PMlinkescapeword{formula}
+\PMlinkescapeword{terms}
+\PMlinkescapeword{equation}
+\PMlinkescapeword{even}
+\PMlinkescapeword{consequence}
+\PMlinkescapeword{necessary}
+
+It\^o's lemma, also known as \emph{It\^o's formula}, is an extension of the \PMlinkname{chain rule}{ChainRuleSeveralVariables} to the stochastic integral, and is often regarded as one of the most important results of stochastic calculus. The case described here applies to arbitrary continuous semimartingales. For the application to It\^o processes see \PMlinkname{It\^o's formula}{ItosFormula} or see the \PMlinkname{generalized It\^o formula}{GeneralizedItoFormula} for noncontinuous processes.
+
+For a function $f$ on a subset of $\mathbb{R}^n$, we write $f_{,i}$ for the partial derivative with respect to the $i$'th coordinate and $f_{,ij}$ for the second order derivatives.
+
+\begin{theorem*}[It\^o]
+Suppose that $X=(X^1,\ldots,X^n)$ is a continuous semimartingale taking values in an open subset $U$ of $\mathbb{R}^n$ and $f\colon U\rightarrow\mathbb{R}$ is twice continuously differentiable. Then,
+\begin{equation}\label{eq:1}
+df(X)=\sum_{i=1}^n f_{,i}(X)\,dX^i + \frac{1}{2}\sum_{i,j=1}^nf_{,ij}(X)\,d[X^i,X^j].
+\end{equation}
+\end{theorem*}
+
+In particular, for a continuous real-valued semimartingale $X$, (\ref{eq:1}) becomes
+\begin{equation*}
+df(X)=f^\prime(X)\,dX + \frac{1}{2}f^{\prime\prime}(X)\,d[X],
+\end{equation*}
+which is a form of the ``change of variables formula'' for stochastic calculus.
+A major distinction between standard and stochastic calculus is that here we need to include the quadratic variation and covariation terms $[X]$ and $[X^i,X^j]$.
+
+Equation (\ref{eq:1}) results from taking a Taylor expansion up to second order which, setting $\delta f(x)\equiv f(x+\delta x)-f(x)$, reads
+\begin{equation}\label{eq:2}
+\delta f(x)= \sum_{i=1}^n f_{,i}(x)\delta x^i + \frac{1}{2}\sum_{i,j=1}^n f_{,ij}(x)\delta x^i\delta x^j + o(\delta x^2).
+\end{equation}
+Taking the limit as $\delta x$ goes to zero, all of the terms on the right hand side of (\ref{eq:2}), other than the first, go to zero with \PMlinkname{order}{LandauNotation} $O(\delta x^2)$ and, therefore, can be neglected in the limit. This results in the standard chain rule. However, when $\delta X = X_{t+h}-X_t$ for a semimartingale $X$ then the second order terms in (\ref{eq:2}) only go to zero at rate $O(h)$ and, therefore, must be retained even in the limit as $h\rightarrow 0$. This is a consequence of semimartingales, such as Brownian motion, being nowhere differentiable.
+In fact, if $X$ is a finite variation process, then it can be shown that the quadratic covariation terms are zero, and the standard chain rule results.
+
+A consequence of It\^o's lemma is that if $X$ is a continuous semimartingale and $f$ is twice continuously differentiable, then $f(X)$ will be a semimartingale. However, the generalized It\^o formula shows that it is not necessary to restrict this statement to continuous processes.
+%%%%%
+%%%%%
+\end{document}

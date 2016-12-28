@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MeanSquareConvergenceOfTheSampleMeanOfAStationaryProcess}
+\pmcreated{2013-03-22 15:20:52}
+\pmmodified{2013-03-22 15:20:52}
+\pmowner{georgiosl}{7242}
+\pmmodifier{georgiosl}{7242}
+\pmtitle{mean square convergence of the sample mean of a stationary process}
+\pmrecord{5}{37168}
+\pmprivacy{1}
+\pmauthor{georgiosl}{7242}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\var{\operatorname{var}}
+\def\cov{\operatorname{cov}}
+\begin{document}
+If $\{ X_t, t \in T \}$ is a stationary process with mean $\mu$ and autocovariance function $\gamma(\cdotp)$, then as $n \to  \infty$
+we have the
+following:
+\begin{itemize}
+\item $\var[\bar X_n]= E[ (\bar X_n - \mu)^2 ] \to 0$ if $\gamma(n) \to 0$ 
+\item $nE[ (\bar X_n - \mu)^2] \to \sum_{h=-\infty}^{\infty}\gamma(h)$ if
+$\sum_{h=-\infty}^{\infty}|\gamma(h)|<\infty$
+where
+$$\bar X_n=\frac{1}{n}\sum_{k=1}^{n} X_k$$ is the sample mean which is a natural unbiased estimator of the mean $\mu$ of the stationary process  
+$\{ X_t\}$.
+\end{itemize}
+\begin{thebibliography}{6}
+\bibitem{AW}
+Peter J. Brockwell G., Richard A. Davis , {\it Time Series $\colon$Theory and Methods}.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

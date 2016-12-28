@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MultivariateDistributionFunction}
+\pmcreated{2013-03-22 16:33:50}
+\pmmodified{2013-03-22 16:33:50}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{multivariate distribution function}
+\pmrecord{7}{38753}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E05}
+\pmclassification{msc}{62E10}
+\pmrelated{Copula}
+\pmdefines{multivariate cumulative distribution function}
+\pmdefines{joint distribution function}
+\pmdefines{margin}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+A function $F:\mathbb{R}^n\to [0,1]$ is said to be a \emph{multivariate distribution function} if
+\begin{enumerate}
+\item $F$ is non-decreasing in each of its arguments; i.e., for any $1\le i\le n$, the function $G_i:\mathbb{R}\to [0,1]$ given by $G_i(x):=F(a_1,\ldots,a_{i-1},x,a_{i+1},\ldots,a_n)$ is non-decreasing for any set of $a_j\in \mathbb{R}$ such that $j\ne i$.
+\item $G_i(-\infty)=0$, where $G_i$ is defined as above; i.e., the limit of $G_i$ as $x\to -\infty$ is $0$
+\item $F(\infty,\ldots,\infty)=1$; i.e. the limit of $F$ as each of its arguments approaches infinity, is 1.
+\end{enumerate}
+
+Generally, right-continuty of $F$ in each of its arguments is added as one of the conditions, but it is not assumed here.
+
+If, in the second condition above, we set $a_j=\infty$ for $j\ne i$, then $G_i(x)$ is called a (one-dimensional) \emph{margin} of $F$.  Similarly, one defines an $m$-dimensional ($m<n$) \emph{margin} of $F$ by setting $n-m$ of the arguments in $F$ to $\infty$.  For each $m<n$, there are $\binom{n}{m}$ $m$-dimensional margins of $F$.  Each $m$-dimensional margin of a multivariate distribution function is itself a multivariate distribution function.  A one-dimensional margin is a distribution function.
+
+Multivariate distribution functions are typically found in probability theory, and especially in statistics.  An example of a commonly used multivariate distribution function is the multivariate Gaussian distribution function.  In $\mathbb{R}^2$, the standard bivariate Gaussian distribution function (with zero mean vector, and the identity matrix as its covariance matrix) is given by
+$$F(x,y)=\frac{1}{2\pi}\int_{-\infty}^x \int_{-\infty}^y \operatorname{exp}\big({-\frac{s^2+t^2}{2}}\big) ds dt$$
+
+B. Schweizer and A. Sklar have generalized the above definition to include a wider class of functions.  The generalization has to do with the weakening of the coordinate-wise non-decreasing condition (first condition above).  The attempt here is to study a class of functions that can be used as models for distributions of distances between points in a ``probabilistic metric space''.
+
+\begin{thebibliography}{8}
+\bibitem{bs as} B. Schweizer and A. Sklar, {\em Probabilistic Metric Spaces}, Dover Publications, (2005).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

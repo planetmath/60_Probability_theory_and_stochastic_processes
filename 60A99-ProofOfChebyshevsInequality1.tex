@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfChebyshevsInequality}
+\pmcreated{2013-03-22 12:47:58}
+\pmmodified{2013-03-22 12:47:58}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{proof of Chebyshev's inequality}
+\pmrecord{6}{33116}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\Prob}[2]{\mathbb{P}_{#1}\left\{#2\right\}}
+\newcommand{\Expect}{\mathbb{E}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+
+
+
+%%%%%% END OF SAVED PREAMBLE %%%%%%
+\begin{document}
+The proof of Chebyshev's inequality follows from the application of Markov's inequality.
+
+Define $Y = (X - \mu)^2$.  Then $Y \ge 0$ is a random variable, and $$\Expect[Y] = \operatorname{Var}[X] = \sigma^2.$$
+
+Applying Markov's inequality to $Y$, we see that $$\Prob{}{\left|X - \mu \right| \ge t} = \Prob{}{Y \ge t^2} \le \frac{1}{t^2}\Expect[Y] = \frac{\sigma^2}{t^2}.$$
+%%%%%
+%%%%%
+\end{document}

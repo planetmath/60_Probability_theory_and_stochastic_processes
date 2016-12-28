@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CameronMartinSpace}
+\pmcreated{2013-03-22 15:55:56}
+\pmmodified{2013-03-22 15:55:56}
+\pmowner{neldredge}{4974}
+\pmmodifier{neldredge}{4974}
+\pmtitle{Cameron-Martin space}
+\pmrecord{6}{37941}
+\pmprivacy{1}
+\pmauthor{neldredge}{4974}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60H99}
+\pmrelated{WienerMeasure}
+\pmdefines{Cameron-Martin space}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\begin{document}
+\begin{definition}
+Let $W(\mathbb{R}^d)$ be Wiener space.  The \emph{Cameron-Martin space} $H(\mathbb{R}^d)$ is the subspace of $W(\mathbb{R}^d)$ consisting of all paths $\omega$ such that $\omega$ is absolutely continuous and $\int_0^\infty |\omega'(s)|^2\,ds < \infty$.  (Note that if $\omega$ is absolutely continuous, then it is almost everywhere differentiable, so the integral makes sense.)
+\end{definition}
+
+This can be thought of as the set of paths with ``finite energy.''
+
+Note that $H(\mathbb{R}^d)$ has Wiener measure $0$, since sample paths of Brownian motion are nowhere differentiable, whereas a path from $H(\mathbb{R}^d)$ is almost everywhere differentiable.
+
+%%%%%
+%%%%%
+\end{document}

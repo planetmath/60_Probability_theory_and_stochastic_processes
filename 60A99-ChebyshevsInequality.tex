@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ChebyshevsInequality}
+\pmcreated{2013-03-22 12:47:55}
+\pmmodified{2013-03-22 12:47:55}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Chebyshev's inequality}
+\pmrecord{6}{33115}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A99}
+%\pmkeywords{variance}
+%\pmkeywords{mean}
+%\pmkeywords{deviation}
+\pmrelated{MarkovsInequality}
+\pmrelated{ChebyshevsInequality}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\Prob}[2]{\mathbb{P}_{#1}\left\{#2\right\}}
+\newcommand{\Expect}{\mathbb{E}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+
+
+
+%%%%%% END OF SAVED PREAMBLE %%%%%%
+\begin{document}
+Let $ X\in \textbf{L}^2$ be a real-valued random variable with mean $ \mu=\mathbb{E}[X]$ and variance $ \sigma^2=\operatorname{Var} [X]$.   Then for any standard of accuracy $t>0$,
+$$
+\Prob{}{\left| X - \mu \right| \ge t} \le \frac{\sigma^2}{t^2}.
+$$
+
+\textbf{Note:} There is another \PMlinkname{Chebyshev's inequality}{ChebyshevsInequality}, which is unrelated.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IndependentIdenticallyDistributed}
+\pmcreated{2013-03-22 14:27:29}
+\pmmodified{2013-03-22 14:27:29}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{independent identically distributed}
+\pmrecord{8}{35977}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60-00}
+\pmsynonym{iid}{IndependentIdenticallyDistributed}
+\pmsynonym{independent and identically distributed}{IndependentIdenticallyDistributed}
+\pmdefines{identically distributed}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\begin{document}
+Two random variables $X$ and $Y$ are said to be \emph{identically distributed} if they are defined on the same probability space $(\Omega,\mathcal{F},P)$, and the distribution function $F_X$ of $X$ and the distribution function $F_Y$ of $Y$ are the same: $F_X=F_Y$.  When $X$ and $Y$ are identically distributed, we write $X \stackrel{d}{=} Y$.  
+
+A set of random variables $X_i$, $i$ in some index set $I$, is identically distributed if $X_i \stackrel{d}{=} X_j$ for every pair $i,j\in I$.
+
+A collection of random variables $X_i$ ($i\in I$) is said to be \emph{independent identically distributed}, if the $X_i$'s are identically distributed, and \PMlinkname{mutually independent}{Independent} (every finite subfamily of $X_i$ is independent). This is often abbreviated as \emph{iid}.
+
+For example, the interarrival times $T_i$ of a Poisson process of rate $\lambda$ are independent and each have an exponential distribution with mean $1/\lambda$, so the $T_i$ are independent identically distributed random variables.
+
+Many other examples are found in statistics, where individual data points are often assumed to realizations of iid random variables.
+%%%%%
+%%%%%
+\end{document}

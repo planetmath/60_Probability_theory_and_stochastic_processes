@@ -1,0 +1,211 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ItoIntegral}
+\pmcreated{2013-03-22 16:13:29}
+\pmmodified{2013-03-22 16:13:29}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{It\^o integral}
+\pmrecord{21}{38323}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60H10}
+\pmsynonym{Ito integral}{ItoIntegral}
+\pmsynonym{stochastic integral}{ItoIntegral}
+\pmrelated{StochasticCalculusAndSDE}
+\pmrelated{StochasticIntegration}
+\pmdefines{It\^o integral}
+
+% The standard font packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% For neatly defining theorems and definitions
+%\usepackage{amsthm}
+
+% Including EPS/PDF graphics (\includegraphics)
+%\usepackage{graphicx}
+
+% Making matrix-based graphics
+%%%\usepackage{xypic}
+
+% Enumeration lists with different styles
+%\usepackage{enumerate}
+
+% Set up the theorem environments
+%\newtheorem{thm}{Theorem}
+%\newtheorem*{thm*}{Theorem}
+
+\providecommand{\defnterm}[1]{\emph{#1}}
+
+% The standard number systems
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\intset}{\mathbb{Z}}
+
+% Absolute values and norms
+% Normal, wide, and big versions of the delimeters
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+
+% Differentiation operators
+\providecommand{\od}[2]{\frac{d #1}{d #2}}
+\providecommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\providecommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2}}
+\providecommand{\ipd}[2]{\partial #1 / \partial #2}
+
+% Differentials on integrals
+\newcommand{\dx}{\, dx}
+\newcommand{\dt}{\, dt}
+\newcommand{\dmu}{\, d\mu}
+
+% Inner products
+\providecommand{\ip}[2]{\langle {#1}, {#2} \rangle}
+
+% Calligraphic letters
+\newcommand{\sF}{\mathcal{F}}
+\newcommand{\sB}{\mathcal{B}}
+\newcommand{\sD}{\mathcal{D}}
+
+% Standard spaces
+\newcommand{\Hilb}{\mathcal{H}}
+\newcommand{\Le}{\mathbf{L}}
+
+% Operators and functions occassionally used in my articles
+\DeclareMathOperator{\D}{D}
+\DeclareMathOperator{\linspan}{span}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\lindim}{dim}
+\DeclareMathOperator{\sinc}{sinc}
+
+% Probability stuff
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+
+\begin{document}
+\PMlinkescapeword{clear}
+\PMlinkescapeword{scaling}
+\PMlinkescapeword{factor}
+\PMlinkescapeword{terms}
+\PMlinkescapeword{right hand side}
+\PMlinkescapeword{infinite}
+\PMlinkescapeword{increasing}
+\PMlinkescapeword{solution}
+\PMlinkescapeword{variables}
+\PMlinkescapeword{identity}
+\PMlinkescapeword{equation}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{restriction}
+\PMlinkescapeword{applications}
+\PMlinkescapeword{even}
+\PMlinkescapeword{infinity}
+\PMlinkescapeword{bounded}
+\PMlinkescapeword{solutions}
+\PMlinkescapeword{necessary}
+
+\section{The need for a stochastic integral}
+
+Suppose that we wish to model a system which is continuously subject to random shocks. Then, we may want to consider a differential equation of the form
+\begin{equation}\label{eq:1}
+\frac{dX_t}{dt}=b(X_t)+a(X_t)\xi_t.
+\end{equation}
+Here, $X_t$ is the stochastic process describing the state of the system at each time $t\ge 0$, $b$ describes the behavior in the absence of any random shocks and $a$ is the sensitivity to the the random  noise $\xi_t$. The random variables $\xi_t$ are assumed to be independent and identically distributed with mean zero for each $t\ge 0$, and defined on an underlying probability space $(\Omega,\mathcal{F},\mathbb{P})$.
+
+The first problem is that it is not clear how to define $\xi$ continuously in time such that (\ref{eq:1}) can be solved. Let $W$ be the integral
+\begin{equation*}
+W_t=\int_0^t\xi_s\,ds.
+\end{equation*}
+Then, $W_t$ should be continuous in $t$ and, for each $h>0$, the sequence of increments $(W_{(n+1)h}-W_{nh})_{n=0,1,\ldots}$ should be independent and identically distributed random variables. A possible candidate for $W$ is Brownian motion, and it can be shown that, up to a constant scaling factor, this is the only possibility.
+However, Brownian motion is nowhere differentiable and $\xi_t=dW_t/dt$ cannot exist. We therefore re-express (\ref{eq:1}) in terms of $W$ by integrating it
+\begin{equation}\label{eq:2}
+X_t=X_0+\int_0^tb(X_s)\,ds+\int_0^ta(X_s)\,dW_s.
+\end{equation}
+The idea of It\^o integration is to give meaning to the final integral on the right hand side of (\ref{eq:2}).
+Defining the integral with respect to piecewise constant functions of the form
+\begin{equation}\label{eq:3}
+\alpha_t = \sum_{k=1}^n c_k 1_{\{t_{k-1}<t\le t_k\}}
+\end{equation}
+is easy. Here, $0\le t_0\le t_1\le\cdots\le t_n$ is an increasing sequence of times and $c_k$ are random variables. Then, the integral of $\alpha$ with respect to $W$ is
+\begin{equation}\label{eq:4}
+\int_0^t\alpha_s\,dW_s = \sum_{k=1}^n c_k \left(W_{t_{k}\wedge t}-W_{t_{k-1}\wedge t}\right).
+\end{equation}
+We could attempt to define the integral with respect to $W$ on the right hand side of (\ref{eq:2}) by approximating $a(X_t)$ by such piecewise constant functions. However, the sample paths of Brownian motion are of infinite total variation over all intervals. This means that if we let $\alpha^n$ be
+\begin{equation*}
+\alpha^n_t = \sum_{k=1}^n \operatorname{sign}(W_{k/n}-W_{(k-1)/n}) 1_{\{(k-1)/n<t\le k/n\}}
+\end{equation*}
+then the integrals
+\begin{equation*}
+\int_0^1\alpha^n\,dW=\sum_{k=1}^n\left|W_{k/n}-W_{(k-1)/n}\right|
+\end{equation*}
+will tend to infinity as $n\rightarrow\infty$, despite the fact that $\alpha^n$ are all bounded by one. This means that even if we approximate $a(X_t)$ as closely as we like by piecewise constant functions, the integral can diverge to infinity.
+
+\section{The It\^o integral}
+
+It\^o's solution was to first note that if we can define the integral in a way such that (\ref{eq:2}) has a unique solution, then $X_t$ should only depend on the values of $W_s$ for $s\le t$. So, define $\mathcal{F}_t$ to be the collection of events in the probability space observable up until time $t$. This is the smallest $\sigma$-algebra with respect to which $W_s$ is measurable for $s\le t$,
+\begin{equation*}
+\mathcal{F}_t=\sigma\left(W_s:s\le t\right).
+\end{equation*}
+Then, $(\mathcal{F}_t)_{t\in\mathbb{R}_+}$ is a \PMlinkname{filtration of $\sigma$-algebras}{FiltrationOfSigmaAlgebras} to which $W$ is adapted.
+If we assume that the piecewise constant process $\alpha_t$ is adapted, then the variables $c_k$ in (\ref{eq:1}) will be $\mathcal{F}_{t_{k-1}}$-measurable. Such processes are called \emph{elementary predictable}, and the following identity is obtained
+\begin{equation}\label{eq:5}
+\mathbb{E}\left[\left(\int_0^t\alpha\,dW\right)^2\right]=\mathbb{E}\left[\int_0^t\alpha^2_s\,ds\right].
+\end{equation}
+This is known as the \emph{It\^o isometry}. It ensures that, for bounded and adapted integrands $\alpha$, the integral with respect to $W$ cannot become too large, on average. Furthermore, the right hand side is defined for all jointly measurable processes $\alpha$, and allows us extend the integral with respect to $W$ to integrands which can be approximated by piecewise constant and adapted processes. Such processes are called \emph{predictable} and include all continuous and adapted processes, so it gives meaning to (\ref{eq:2}). If we define
+\begin{equation*}
+\Vert \alpha\Vert _{2,t}\equiv\mathbb{E}\left[\int_0^t \alpha^2_s\,ds\right]^{\frac{1}{2}}
+\end{equation*}
+then this is a norm on the set of predictable processes --- in fact, it is the $L^2(\mathbb{P}\times\lambda)$-norm, where $\lambda$ is the Lebesgue measure on $[0,t]$. Equation (\ref{eq:5}) shows that the map taking the adapted and piecewise constant function $\alpha$ to $\int_0^t\alpha\,dW$ is an \emph{isometry} with respect to the norms $\Vert\cdot\Vert_{2,t}$ and the $L^2(\mathbb{P})$-norm $\Vert\cdot\Vert_2$. Furthermore, it can be shown, by using the functional monotone class theorem, that every predictable process $\alpha$ with finite $\Vert\cdot\Vert_{2,t}$ norm can be approximated in this norm by a sequence elementary predictable processes $\alpha^n$. That is, the elementary predictable processes are \PMlinkname{dense}{Dense} under the $\Vert\cdot\Vert_{2,t}$ norm, and the It\^o integral is defined to be the unique \PMlinkname{continuous extension}{BoundedLinearExtension} from the elementary predictable processes. So, if $\Vert\alpha-\alpha^n\Vert_{2,t}\rightarrow 0$ then,
+\begin{equation*}
+\int_0^t\alpha\,dW=\lim_{n\rightarrow\infty}\int_0^t\alpha^n\,dW
+\end{equation*}
+where convergence is in the $L^2(\mathbb{P})$ norm.
+
+\section{Extension of the integral}
+
+The definition above gives a construction of the It\^o integral which is useful in many applications.
+However, the restriction that $\Vert\alpha\Vert_{2,t}$ must be finite is too restrictive for some situations.
+For example, it is possible to construct solutions to the stochastic differential equation
+\begin{equation*}
+dX = X^c\,dW
+\end{equation*}
+for any constant $c>0$ and any given initial value $X_0>0$. When $c>1$ then it is known that $X^{2c}_t$ does not have finite expectation for $t>0$ and, therefore, $X^c$ does not have finite $\Vert\cdot\Vert_{2,t}$ norm.
+
+The It\^o integral can be extended to all predictable processes $\alpha$ such that
+\begin{equation*}
+\int_0^t\alpha^2_s\,ds<\infty
+\end{equation*}
+with probability one, for each $t>0$. Such processes are said to be $W$-integrable.
+Given any such $\alpha$, the functional monotone class theorem can be used to show that there exists a sequence of elementary predictable processes $\alpha^n$ such that
+\begin{equation*}
+\int_0^t(\alpha^n_s-\alpha_s)^2\,ds\rightarrow 0
+\end{equation*}
+\PMlinkname{in probability}{ConvergenceInProbability} for every $t>0$. Then, using the It\^o isometry it can be shown that the limit
+\begin{equation*}
+\int_0^t\alpha\,dW\equiv \lim_{n\rightarrow\infty}\int_0^t\alpha^n\,dW
+\end{equation*}
+exists, where convergence is in probability.
+Finally, we note that that this only defines the integral $\mathbb{P}$-almost everywhere, at each time. However, as probability measures only satisfy countable additivity, this only simultaneously defines the values of the integral at different times $t$ on countable subsets of $\mathbb{R}_+$. The additional constraint is added that the sample paths $t\mapsto\int_0^t\alpha\,dW$ are continuous, and it can be shown that it is possible to take such continuous versions of the integral. This defines the integral simultaneously at all times up to a zero probability set.
+
+We have presented a definition of the It\^o integral with respect to a Brownian motion $W$. Then, an important result for manipulating such integrals is \PMlinkname{It\^o's lemma}{ItosFormula}.
+Furthermore, it is sometimes necessary to define integration for more general processes. See \PMlinkname{stochastic integral}{StochasticIntegration} for a definition of the integral with respect to general semimartingales, which includes discontinuous processes, such as L\'evy processes.
+
+
+\begin{thebibliography}{9}
+\bibitem{Oksendal:several}
+Bernt \O{}ksendal.
+{\em \PMlinkescapetext{Stochastic Differential Equations},
+An Introduction with Applications.} 5th ed. Springer, 1998.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

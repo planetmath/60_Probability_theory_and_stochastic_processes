@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CriterionForAlmostsureConvergence}
+\pmcreated{2013-03-22 15:54:45}
+\pmmodified{2013-03-22 15:54:45}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{criterion for almost-sure convergence}
+\pmrecord{15}{37916}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Corollary}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A99}
+\pmsynonym{corollary of Borel-Cantelli lemma}{CriterionForAlmostsureConvergence}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{enumerate}
+%\usepackage{graphicx}
+%\usepackage{psfrag}
+%%%\usepackage{xypic}
+
+% define commands here
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\PP}{\mathbb{P}}
+
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+
+
+\begin{document}
+Let $X_1, X_2, \dotsc$ and $X$ be random variables.
+If, for every $\epsilon > 0$, the sum $\sum_{n=1}^\infty \PP( \abs{X_n - X} > \epsilon )$  is finite,
+then $X_n$ converge to $X$ almost surely.
+
+\begin{proof}
+By the Borel-Cantelli lemma, we have $\PP(\limsup_n \{ \abs{X_n - X} > \epsilon \})=0 $.
+But $\limsup_n \{ \abs{X_n - X} > \epsilon \}$ is the same as the event $\{ \limsup_n \abs{X_n - X} > \epsilon \}$.
+(The latter event involves the \PMlinkname{limit superior of \emph{numbers}}{LimitSuperior}; the former involves the 
+\PMlinkname{limit superior of \emph{sets}}{InfinitelyOften}.)
+So taking the limit $\epsilon \searrow 0$,
+we have $\PP( \limsup_n \abs{X_n - X} > 0) = 0$, 
+or equivalently
+$\PP( \limsup_n \abs{X_n - X} = 0) = 1$.
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

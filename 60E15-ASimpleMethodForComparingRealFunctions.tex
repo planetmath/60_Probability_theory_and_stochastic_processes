@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ASimpleMethodForComparingRealFunctions}
+\pmcreated{2013-03-22 16:10:47}
+\pmmodified{2013-03-22 16:10:47}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{a simple method for comparing real functions}
+\pmrecord{10}{38267}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Theorem:
+
+Let $f(x)$ and $g(x)$ be real-valued, twice differentiable
+functions on $[a,b]$, and let $x_{0}$ $\in [a,b]$.
+
+If $f(x_{0})=g(x_{0})$, $f^{\prime }(x_{0})=g^{\prime }(x_{0})$, $f^{\prime \prime }(x)\leq g^{\prime \prime }(x)$ for all $x$ in $[a,b]$, then $f(x)\leq g(x)$ for all $x$ in $[a,b]$.
+
+\begin{proof}
+
+Let $h(x)=g(x)-f(x)$; by our hypotheses, $h(x)$ is a twice differentiable
+function on $[a,b]$, and by the Taylor formula with \PMlinkname{Lagrange form remainder}{RemainderVariousFormulas} one has for any $x\in [a,b]$:
+\[
+h(x)=h(x_{0})+h^{\prime }(x_{0})(x-x_{0})+\frac{1}{2}h^{\prime \prime }(\xi
+)(x-x_{0})^{2}
+\]
+
+where $\xi =\xi (x)\in [x,x_{0}]$.
+
+Then by hypotheses,
+\begin{eqnarray*}
+h(x_{0}) &=&g(x_{0})-f(x_{0})=0 \\
+h^{\prime }(x_{0}) &=&g^{\prime }(x_{0})-f^{\prime }(x_{0})=0 \\
+h^{\prime \prime }(\xi ) &=&g^{\prime \prime }(\xi )-f^{\prime \prime }(\xi
+)\geq 0
+\end{eqnarray*}
+so that
+\[
+h(x)=\frac{1}{2}h^{\prime \prime }(\xi )(x-x_{0})^{2}\geq 0
+\]
+whence the thesis.
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

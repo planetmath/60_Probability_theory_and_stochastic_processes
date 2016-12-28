@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AdaptedProcess}
+\pmcreated{2013-03-22 16:16:43}
+\pmmodified{2013-03-22 16:16:43}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{adapted process}
+\pmrecord{19}{38390}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A99}
+\pmclassification{msc}{60G07}
+\pmsynonym{adapted}{AdaptedProcess}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $\lbrace X_t \mid t\in T\rbrace$ be a stochastic process defined on a probability space $(\Omega,\mathcal{F},P)$ and $\lbrace \mathcal{F}_t \mid t\in T\rbrace$ a filtration (an increasing sequence of sigma subalgebras of $\mathcal{F}$), where $T$ is a linearly ordered subset of $\mathbb{R}$ with a minimum $t_0$.  Then the process $\lbrace X_t\rbrace$ is said to be \emph{adapted to} the filtration $\lbrace \mathcal{F}_t\rbrace$ if for each $t\ge t_0$, $X_t$ is \PMlinkname{$\mathcal{F}_t$-measurable}{MathcalFMeasurableFunction}:
+$$X_t^{-1}(B)\in \mathcal{F}_t\mbox{ for each Borel set }B\in\mathbb{R}.$$
+A stochastic process is an \emph{adapted process} if it is adapted to some filtration.
+%%%%%
+%%%%%
+\end{document}

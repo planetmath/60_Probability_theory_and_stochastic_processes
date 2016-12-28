@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MedianOfADistribution}
+\pmcreated{2013-03-22 14:24:10}
+\pmmodified{2013-03-22 14:24:10}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{median of a distribution}
+\pmrecord{12}{35900}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A99}
+\pmclassification{msc}{62-07}
+\pmsynonym{second quartile}{MedianOfADistribution}
+\pmdefines{median}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Given a probability distribution (density) function $f_X(x)$ on $\Omega$ over a random variable $X$, with the associated probability measure $P$, a \emph{median} $m$ of $f_X$ is a real number such that 
+\begin{enumerate}
+\item
+$P(X\leq m)\geq \frac{1}{2},$
+\item
+$P(X\geq m)\geq \frac{1}{2}.$
+\end{enumerate}
+
+The median is also known as the $50^{\text{th}}$-percentile or the second quartile.
+
+\textbf{Examples:}
+\begin{itemize}
+\item
+An example from a discrete distribution.  Let $\Omega=\mathbb{R}$.  Suppose the random variable $X$ has the following distribution: $P(X=0)=0.99$ and $P(X=1000)=0.01$.  Then we can easily see the median is 0.
+\item
+Another example from a discrete distribution.  Again, let $\Omega=\mathbb{R}$.  Suppose the random variable $X$ has distribution $P(X=0)=0.5$ and $P(X=1000)=0.5$.  Then we see that the median is not unique.  In fact, all real values in the interval $[0,1000]$ are medians.
+\item
+In practice, however, the median may be calculated as follows: if there are $N$ numeric data points, then by ordering the data values (either non-decreasingly or non-increasingly), 
+\begin{enumerate}
+\item
+the $(\frac{N+1}{2})$-th data point is the median if $N$ is odd, and 
+\item
+the midpoint of the $(N-1)$th and the $(N+1)$th data points is the median if $N$ is even.
+\end{enumerate}
+\item
+The median of a normal distribution (with mean $\mu$ and variance $\sigma^2$) is $\mu$.  In fact, for a normal distribution, mean = median = mode.
+\item
+The median of a uniform distribution in the interval $[a,b]$ is $(a+b)/2$.
+\item
+The median of a Cauchy distribution with location parameter t and scale parameter s is the location parameter.
+\item
+The median of an exponential distribution with location parameter $\mu$ and scale parameter $\beta$ is the scale parameter times the natural log of 2, $\beta\operatorname{ln}2$.
+\item
+The median of a Weibull distribution with shape parameter $\gamma$, location parameter $\mu$, and scale parameter $\alpha$ is $\alpha(\operatorname{ln}2)^{1/\gamma}+\mu$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

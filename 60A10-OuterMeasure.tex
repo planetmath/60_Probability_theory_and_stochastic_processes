@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OuterMeasure}
+\pmcreated{2013-03-22 13:45:20}
+\pmmodified{2013-03-22 13:45:20}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{outer measure}
+\pmrecord{6}{34456}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A10}
+\pmclassification{msc}{28A10}
+\pmrelated{CaratheodorysExtensionTheorem}
+\pmrelated{CaratheodorysLemma}
+\pmrelated{ProofOfCaratheodorysExtensionTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+\begin{document}
+{\bf Definition} \cite{mukherjea, friedman, folland}
+Let $X$ be a set, and let $\mathcal{P}(X)$ be the
+power set of $X$. An \emph{outer measure} on $X$ is a function
+$\mu^\ast:\mathcal{P}(X)\to [0,\infty]$ satisfying the properties
+\begin{enumerate}
+\item $\mu^\ast(\emptyset)=0$. 
+\item If $A\subset B$ are subsets in $X$, then $\mu^\ast(A)\le \mu^\ast(B)$. 
+\item If $\{A_i\}$ is a countable collection of subsets of $X$, 
+then 
+$$ \mu^\ast(\bigcup_i A_i) \le \sum_i \mu^\ast (A_i).$$
+\end{enumerate}
+
+Here, we can make two remarks. First, from (1) and (2), it follows
+that $\mu^\ast$ is a positive function on $\mathcal{P}(X)$. Second, 
+property (3) also holds for any finite collection of subsets since
+we can always append an infinite sequence of empty sets to 
+such a collection.
+
+\begin{thebibliography}{9}
+ \bibitem{mukherjea}
+ A. Mukherjea, K. Pothoven,
+ \emph{Real and Functional analysis},
+ Plenum press, 1978.
+ \bibitem{friedman}
+A. Friedman, 
+ \emph{Foundations of Modern Analysis},
+Dover publications, 1982. 
+\bibitem{folland}
+ G.B. Folland, \emph{Real Analysis: Modern Techniques and Their Applications}, 2nd ed, John Wiley \& Sons, Inc., 1999.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

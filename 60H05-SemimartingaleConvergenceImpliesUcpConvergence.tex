@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SemimartingaleConvergenceImpliesUcpConvergence}
+\pmcreated{2013-03-22 18:40:44}
+\pmmodified{2013-03-22 18:40:44}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{semimartingale convergence implies ucp convergence}
+\pmrecord{5}{41429}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60H05}
+\pmclassification{msc}{60G48}
+\pmclassification{msc}{60G07}
+%\pmkeywords{semimartingale convergence}
+%\pmkeywords{ucp convergence}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{sequence}
+\PMlinkescapeword{minor}
+\PMlinkescapeword{point}
+\PMlinkescapeword{hitting times}
+\PMlinkescapeword{filtration}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{dense subsets}
+
+Let $(\Omega,\mathcal{F},(\mathcal{F}_t)_{t\in\mathbb{F}},\mathbb{P})$ be a filtered probability space. On the space of cadlag adapted processes, the semimartingale topology is stronger than ucp convergence.
+
+\begin{theorem*}
+Let $X^n$ be a sequence of cadlag adapted processes converging to $X$ in the semimartingale topology. Then, $X^n$ converges ucp to $X$.
+\end{theorem*}
+
+To show this, suppose that $X^n\rightarrow X$ in the semimartingale topology, and define the stopping times $\tau_n$ by
+\begin{equation}\label{eq:1}
+\tau_n =\inf\left\{t\ge 0:|X^n_t-X_t|\ge\epsilon\right\}
+\end{equation}
+(hitting times are stopping times).
+Then, letting $\xi^n_t$ be the simple predictable process $1_{\{t\le\tau_n\}}$,
+\begin{equation*}
+X^n_{\tau_n\wedge t}-X_{\tau_n\wedge t}=X^n_0-X_0+\int_0^t\xi^n\,dX^n-\int_0^t\xi^n\,dX\rightarrow 0
+\end{equation*}
+in probability as $n\rightarrow\infty$. However, note that whenever $|X^n_s-X_s|>\epsilon$ for some $s<t$ then $\tau\le s<t$ and $|X^n_{\tau_n}-X_{\tau_n}|\ge\epsilon$. So
+\begin{equation*}
+\mathbb{P}\left(\sup_{s<t}|X^n_s-X_s|>\epsilon\right)\le\mathbb{P}(\tau_n\le t)
+\le \mathbb{P}\left(|X^n_{\tau_n\wedge t}-X_{\tau_n\wedge t}|\ge\epsilon\right)\rightarrow 0
+\end{equation*}
+as $n\rightarrow\infty$, proving ucp convergence. 
+
+As a minor technical point, note that the result that the hitting times $\tau_n$ are stopping times requires the filtration to be at least universally complete. However, this condition is not needed. It is easily shown that semimartingale convergence is not affected by passing to the \PMlinkname{completion}{CompleteMeasure} of the filtered probability space or, alternatively, it is enough to define the stopping times in (\ref{eq:1}) by restricting $\tau_n$ to finite but suitably dense subsets of $[0,t]$ and using the right-continuity of the processes.
+
+%%%%%
+%%%%%
+\end{document}

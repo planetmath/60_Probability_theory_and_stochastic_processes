@@ -1,0 +1,151 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnalyticSolutionToOrnsteinUhlenbeckSDE}
+\pmcreated{2013-03-22 17:19:29}
+\pmmodified{2013-03-22 17:19:29}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{analytic solution to Ornstein-Uhlenbeck SDE}
+\pmrecord{4}{39676}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60H10}
+\pmclassification{msc}{60-00}
+
+% The standard font packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% For neatly defining theorems and definitions
+%\usepackage{amsthm}
+
+% Including EPS/PDF graphics (\includegraphics)
+%\usepackage{graphicx}
+
+% Making matrix-based graphics
+%%%\usepackage{xypic}
+
+% Enumeration lists with different styles
+%\usepackage{enumerate}
+
+% Set up the theorem environments
+%\newtheorem{thm}{Theorem}
+%\newtheorem*{thm*}{Theorem}
+
+\providecommand{\defnterm}[1]{\emph{#1}}
+
+% The standard number systems
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\intset}{\mathbb{Z}}
+
+% Absolute values and norms
+% Normal, wide, and big versions of the delimeters
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+
+% Differentiation operators
+\providecommand{\od}[2]{\frac{d #1}{d #2}}
+\providecommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\providecommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2}}
+\providecommand{\ipd}[2]{\partial #1 / \partial #2}
+
+% Differentials on integrals
+\newcommand{\dx}{\, dx}
+\newcommand{\dt}{\, dt}
+\newcommand{\dmu}{\, d\mu}
+
+% Inner products
+\providecommand{\ip}[2]{\langle {#1}, {#2} \rangle}
+
+% Calligraphic letters
+\newcommand{\sF}{\mathcal{F}}
+\newcommand{\sD}{\mathcal{D}}
+
+% Standard spaces
+\newcommand{\Hilb}{\mathcal{H}}
+\newcommand{\Le}{\mathbf{L}}
+
+% Operators and functions occassionally used in my articles
+\DeclareMathOperator{\D}{D}
+\DeclareMathOperator{\linspan}{span}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\lindim}{dim}
+\DeclareMathOperator{\sinc}{sinc}
+
+% Probability stuff
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+
+\begin{document}
+This entry derives
+the analytical solution
+to the stochastic differential equation
+for the Ornstein-Uhlenbeck process:
+\begin{align}\label{eq:x}
+dX_t = \kappa ( \theta - X_t) \, dt + \sigma \, dW_t\,,
+\end{align}
+where $W_t$ is a standard Brownian motion,
+and $\kappa > 0$, $\theta$, and $\sigma > 0$ are
+constants.
+
+Motivated by the observation
+that $\theta$ is supposed to be the long-term mean
+of the process $X_t$,
+we can simplify the SDE \eqref{eq:x}
+by introducing the change of variable 
+\[
+Y_t = X_t - \theta
+\]
+that subtracts off the mean.
+Then $Y_t$ satisfies the SDE:
+\begin{align}\label{eq:y}
+dY_t = dX_t = -\kappa Y_t \, dt + \sigma \, dW_t\,.
+\end{align}
+
+In SDE \eqref{eq:y}, the process $Y_t$ is seen to have a drift
+towards the value zero, at an exponential rate $\kappa$.  This motivates
+the change of variables
+\[
+Y_t = e^{-\kappa t} Z_t \quad \Leftrightarrow \quad Z_t = e^{\kappa t} Y_t\,,
+\]
+which should remove the drift.
+A calculation with the product rule for It\^o integrals
+shows that this is so:
+\begin{align*}
+dZ_t &= \kappa e^{\kappa t} Y_t \, dt + e^{\kappa t} \, dY_t \\
+&= \kappa e^{\kappa t} Y_t \, dt + 
+e^{\kappa t} \bigl( -\kappa Y_t \, dt + \sigma \, dW_t \bigr) \\
+&=
+0 \, dt + \sigma e^{\kappa t} \, dW_t \,.
+\end{align*}
+The solution for $Z_t$ is immediately obtained 
+by It\^o-integrating both sides from $s$ to $t$:
+\begin{align*}
+Z_t = Z_s + \sigma \int_s^t e^{\kappa u} \, dW_u\,.
+\end{align*}
+Reversing the changes of variables, we have:
+\[
+Y_t = e^{-\kappa t} Z_t =
+e^{-\kappa (t-s)} Y_s
++ \sigma e^{-\kappa t} \int_s^t e^{\kappa u} \, dW_u\,,
+\]
+and
+\[
+X_t = Y_t + \theta = \theta + e^{-\kappa (t-s)} (X_s - \theta)
+ + \sigma \int_s^t e^{-\kappa(t-u)} \, dW_u\,.
+\]
+
+
+%%%%%
+%%%%%
+\end{document}

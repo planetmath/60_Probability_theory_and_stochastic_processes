@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DiscreteDensityFunction}
+\pmcreated{2013-03-22 11:53:14}
+\pmmodified{2013-03-22 11:53:14}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{discrete density function}
+\pmrecord{16}{30486}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E99}
+\pmclassification{msc}{00-02}
+\pmsynonym{discrete probability function}{DiscreteDensityFunction}
+\pmrelated{Distribution}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%%\usepackage{xypic}
+\begin{document}
+\PMlinkescapeword{difference}
+\PMlinkescapeword{properties}
+\PMlinkescapeword{satisfy}
+\PMlinkescapeword{syntax}
+
+Let $X$ be a discrete random variable. The function $f_X\colon\mathbb{R} \to [0,1]$ defined as  $f_X(x)=P[X=x]$ is called the {\it discrete probability function} of $X$. Sometimes the syntax $p_X(x)$ is used, to mark the difference between this function and the continuous density function.
+
+If $X$ has discrete density function $f_X(x)$, it is said that the random variable $X$ {\it has the distribution} or {\it is distributed} $f_X(x)$, and this fact is denoted as $X \sim f_X(x)$.
+
+Discrete density functions are required to satisfy the following properties:
+\begin{itemize}
+\item $f_X(x) \geq 0$ for all $x$
+\item $\sum_{x}f_X(x) = 1$
+\end{itemize}
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConvergenceInProbability}
+\pmcreated{2013-03-22 15:01:05}
+\pmmodified{2013-03-22 15:01:05}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{convergence in probability}
+\pmrecord{7}{36725}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60B10}
+\pmsynonym{converge in probability}{ConvergenceInProbability}
+\pmsynonym{converges in measure}{ConvergenceInProbability}
+\pmsynonym{converge in measure}{ConvergenceInProbability}
+\pmsynonym{convergence in measure}{ConvergenceInProbability}
+\pmdefines{converges in probability}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\lbrace X_i \rbrace$ be a sequence of random variables defined on a probability space $(\Omega,\mathcal{F},P)$ taking values in a separable metric
+space $(Y,d)$, where $d$ is the metric.  Then we say the sequence
+$X_i$ \emph{converges in probability} or \emph{converges in measure} to a random variable $X$ if
+for every $\varepsilon>0$,
+$$\lim_{i\rightarrow\infty}P(d(X_i,X)\geq\varepsilon)=0.$$
+We denote convergence in probability of $X_i$ to $X$ by
+$$X_i\stackrel{pr}{\longrightarrow} X.$$
+Equivalently, $X_i\stackrel{pr}{\longrightarrow} X$ iff every subsequence of $\lbrace X_i\rbrace$ contains a subsequence which converges to $X$ almost surely.
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item Unlike ordinary convergence, $X_i\stackrel{pr}{\longrightarrow} X$ and $X_i\stackrel{pr}{\longrightarrow} Y$ only implies that $X=Y$ almost surely.
+\item The need for separability on $Y$ is to ensure that the metric, $d(X_i,X)$, is a random variable, for all random variables $X_i$ and $X$.
+\item Convergence almost surely implies convergence in probability but not conversely.
+\end{itemize}
+
+\begin{thebibliography}{8}
+\bibitem{dudley} R. M. Dudley, {\em Real Analysis and Probability}, Cambridge University Press (2002).
+\bibitem{feller} W. Feller, {\em An Introduction to Probability Theory and Its Applications. Vol. 1}, Wiley, 3rd ed. (1968).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

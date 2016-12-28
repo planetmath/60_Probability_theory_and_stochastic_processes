@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralizedItoFormula}
+\pmcreated{2013-03-22 18:41:47}
+\pmmodified{2013-03-22 18:41:47}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{generalized Ito formula}
+\pmrecord{6}{41457}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G07}
+\pmclassification{msc}{60H05}
+\pmclassification{msc}{60H10}
+\pmsynonym{generalized It\^o formula}{GeneralizedItoFormula}
+\pmsynonym{generalized It\"o formula}{GeneralizedItoFormula}
+\pmsynonym{generalized Ito's lemma}{GeneralizedItoFormula}
+\pmsynonym{generalized It\^o's lemma}{GeneralizedItoFormula}
+\pmsynonym{generalized It\"o's lemma}{GeneralizedItoFormula}
+%\pmkeywords{semimartingale}
+%\pmkeywords{stochastic integral}
+%\pmkeywords{quadratic covariation}
+\pmrelated{ItosLemma2}
+\pmrelated{ItosFormula}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{extension}
+\PMlinkescapeword{represents}
+\PMlinkescapeword{term}
+\PMlinkescapeword{right hand side}
+\PMlinkescapeword{sum}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{bound}
+\PMlinkescapeword{formula}
+\PMlinkescapeword{clear}
+\PMlinkescapeword{expression}
+\PMlinkescapeword{it\^o's formula}
+\PMlinkescapeword{vanish}
+\PMlinkescapeword{consequence}
+\PMlinkescapeword{terms}
+
+The generalized It\^o formula, or \emph{generalized It\^o's lemma}, is an extension of \PMlinkname{It\^o's lemma}{ItosLemma2} that applies also to discontinuous processes. For a cadlag process $X$, we write $\Delta X_t\equiv X_t-X_{t-}$ for its jump at time $t$.
+
+\begin{theorem*}
+Suppose that $X=(X^1,\ldots,X^n)$ is a semimartingale taking values in an open subset $U$ of $\mathbb{R}^n$ and $f\colon U\rightarrow\mathbb{R}$ is twice continuously differentiable. Then,
+\begin{equation}\label{eq:1}\begin{split}
+df(X_s)=&\sum_{i=1}^n f_{,i}(X_{t-})\,dX^i_t + \frac{1}{2}\sum_{i,j=1}^nf_{,ij}(X_{t-})\,d[X^i,X^j]^c_t\\
+& + \left(\Delta f(X_t)-\sum_{i=1}^n f_{,i}(X_{t-})\,\Delta X^i_t\right).
+\end{split}\end{equation}
+\end{theorem*}
+
+Here, $[X^i,X^j]^c$ represents the continuous part of the quadratic covariation,
+\begin{equation*}
+[X^i,X^j]^c_t=[X^i,X^j]_t-\sum_{s\le t}\Delta X^i_s\Delta X^j_s
+\end{equation*}
+which is a continuous finite variation process.
+The final term on the right hand side of (\ref{eq:1}) involving the jumps of $X$ represents the differential $dZ$ of the process
+\begin{equation*}
+Z_t=\sum_{s\le t}\left(\Delta f(X_s)-\sum_{i=1}^n f_{,i}(X_{s-})\,\Delta X^i_s\right).
+\end{equation*}
+This is indeed a well defined finite variation process, as the sum of the absolute values
+\begin{equation*}
+\sum_{s\le t}\left|\Delta f(X_s)-\sum_{i=1}^n f_{,i}(X_{s-})\,\Delta X^i_s\right|
+\le K\sum_{s\le t}\Vert \Delta X_s\Vert^2\le K\sum_{i=1}^n [X^i]_t
+\end{equation*}
+is finite. Here, $K$ is a finite random variable, and this bound follows from expanding $f$ as a Taylor series to second order.
+
+The reason for using differential notation and writing the formula in terms of the continuous part of the quadratic covariation should be clear when it is considered that writing out the expression in full gives the following rather messy formula.
+\begin{equation*}\begin{split}
+&f(X_t)=f(X_0)+\sum_{i=1}^n \int_0^tf_{,i}(X_{s-})\,dX^i_s + \frac{1}{2}\sum_{i,j=1}^n\int_0^tf_{,ij}(X_{s-})\,d[X^i,X^j]_s\\
+&\ + \sum_{s\le t}\left(\Delta f(X_s)-\sum_{i=1}^n f_{,i}(X_{s-})\,\Delta X^i_s-\frac{1}{2}\sum_{i,j=1}^n\int_0^tf_{,ij}(X_{s-})\,\Delta X^i_s\Delta X^j_s\right).
+\end{split}\end{equation*}
+This formula may be understood as \PMlinkname{It\^o's formula}{ItosLemma2} for continuous processes together with an additional term to ensure that the jumps of the right hand side are equal to $\Delta f(X_t)$. The need for this adjustment term comes from the fact that It\^o's formula for continuous processes is essentially a Taylor expansion to second order, which only applies when the increments $\delta X_t=X_{t+\delta t}-X_t$ vanish in the limit of small $\delta t$. This needs adjusting whenever the process jumps.
+
+The first term on the right hand side of (\ref{eq:1}) is a stochastic integral and, hence, is a semimartingale. As the remaining terms are finite variation processes, the following consequence is obtained.
+
+\begin{corollary*}
+Suppose that $X=(X^1,\ldots,X^n)$ is a semimartingale taking values in an open subset $U$ of $\mathbb{R}^n$ and $f\colon U\rightarrow\mathbb{R}$ is twice continuously differentiable. Then $f(X)$ is a semimartingale.
+\end{corollary*}
+
+%%%%%
+%%%%%
+\end{document}

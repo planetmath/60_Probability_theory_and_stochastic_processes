@@ -1,0 +1,163 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MartingaleProofOfTheRadonNikodymTheorem}
+\pmcreated{2013-03-22 18:34:10}
+\pmmodified{2013-03-22 18:34:10}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{martingale proof of the Radon-Nikodym theorem}
+\pmrecord{9}{41293}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G42}
+\pmclassification{msc}{28A15}
+%\pmkeywords{measure}
+%\pmkeywords{martingale}
+\pmrelated{RadonNikodymTheorem}
+\pmrelated{MartingaleConvergenceTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+
+
+\begin{document}
+We apply the martingale convergence theorem to prove the Radon-Nikodym theorem, which states that if $\mu$ and $\nu$ are $\sigma$-finite measures on a measurable space $(\Omega,\mathcal{F})$ and $\nu$ is absolutely continuous with respect to $\mu$ then there exists a non-negative and measurable $f\colon\Omega\rightarrow\mathbb{R}$ such that $\nu(A)=\int_Af\,d\mu$ for all measurable sets $A$.
+
+As \PMlinkname{any $\sigma$-finite measure is equivalent to a probability measure}{AnySigmaFiniteMeasureIsEquivalentToAProbabilityMeasure}, it is enough to prove the result in the case where $\mu$ and $\nu$ are probability measures. Furthermore, by the Jordan decomposition, the result generalizes to the case where $\nu$ is a signed measure. So, we just need to prove the following.
+
+\begin{theorem*}[Radon-Nikodym]
+Let $\mathbb{P}$ and $\mathbb{Q}$ be probability measures on the measurable space $(\Omega,\mathcal{F})$, such that $\mathbb{Q}$ is absolutely continuous with respect to $\mathbb{P}$.
+Then, there exists a non-negative random variable $X$ such that $\mathbb{E}_\mathbb{P}[X]=1$ and $\mathbb{Q}(A)=\mathbb{E}_\mathbb{P}[1_AX]$ for every $A\in\mathcal{F}$.
+\end{theorem*}
+
+Here, $X$ is called the Radon-Nikodym derivative of $\mathbb{Q}$ with respect to $\mathbb{P}$.
+
+More generally, for any sub-$\sigma$-algebra $\mathcal{G}$ of $\mathcal{F}$ we can restrict the measures $\mathbb{P}$ and $\mathbb{Q}$ to $\mathcal{G}$ and ask if the Radon-Nikodym derivative of $\mathbb{Q}|_\mathcal{G}$ with respect to $\mathbb{P}|_\mathcal{G}$ exists. If it does we shall denote it by $X_\mathcal{G}$, which by definition is a non-negative $\mathcal{G}$-measurable random variable satisfying $\mathbb{Q}(A)=\mathbb{E}_\mathbb{P}[1_AX_\mathcal{G}]$ for all $A\in\mathcal{G}$.
+
+We note that if $X_\mathcal{G}$ does exist, then it is uniquely defined ($\mathbb{P}$-almost everywhere). Suppose that $\tilde X_{\mathcal{G}}$ also satisfied the required properties, then
+\begin{equation*}\begin{split}
+\mathbb{E}_{\mathbb{P}}[\max(X_{\mathcal{G}}-\tilde X_{\mathcal{G}},0)]
+&=\mathbb{E}_{\mathbb{P}}[X_\mathcal{G}1_{\left\{X_{\mathcal{G}}>\tilde X_{\mathcal{G}}\right\}}]-\mathbb{E}_{\mathbb{P}}[\tilde X_\mathcal{G}1_{\left\{X_{\mathcal{G}}>\tilde X_{\mathcal{G}}\right\}}]\\
+&=\mathbb{Q}(X_{\mathcal{G}}>\tilde X_{\mathcal{G}})-\mathbb{Q}(X_{\mathcal{G}}>\tilde X_{\mathcal{G}})=0
+\end{split}\end{equation*}
+so $X_\mathcal{G}\le \tilde X_\mathcal{G}$ almost surely. Similarly, $\tilde X_\mathcal{G}\le X_\mathcal{G}$ and therefore $\tilde X_\mathcal{G}= X_\mathcal{G}$ (almost surely).
+
+
+First, the easy case. For a finite $\sigma$-algebra, the Radon-Nikodym derivative can be written out explicitly.
+
+\begin{lemma}
+If $\mathcal{G}$ is a finite sub-$\sigma$-algebra of $\mathcal{F}$ then the Radon-Nikodym derivative $X_\mathcal{G}$ exists.
+\end{lemma}
+\begin{proof}
+Let $A_1,A_2,\ldots,A_n$ be the minimal non-empty elements of $\mathcal{G}$. These are pairwise disjoint subsets of $\Omega$ such that every set in $\mathcal{G}$ is a union of a subcollection of the $A_k$. Set
+\begin{equation*}
+X_\mathcal{G}=\sum_{k=1}^n \frac{\mathbb{Q}(A_k)}{\mathbb{P}(A_k)}1_{A_k}
+\end{equation*}
+Note that whenever $\mathbb{P}(A_k)=0$ then $\mathbb{Q}(A_k)=0$, and we adopt the convention that $\frac{0}{0}=0$. Clearly, $X_\mathcal{G}$ is $\mathcal{G}$-measurable, and
+\begin{equation*}\begin{split}
+\mathbb{E}_{\mathbb{P}}[1_{A_k}X_\mathcal{G}]
+&=\frac{\mathbb{Q}(A_k)}{\mathbb{P}(A_k)}\mathbb{E}_{\mathbb{P}}[1_{A_k}]+\sum_{j\not=k}\frac{\mathbb{Q}(A_j)}{\mathbb{P}(A_j)}\mathbb{E}_{\mathbb{P}}[1_{A_k\cap A_j}]\\
+&=\mathbb{Q}(A_k).
+\end{split}\end{equation*}
+Here, we have used $\mathbb{E}_{\mathbb{P}}[1_{A_k}]=\mathbb{P}(A_k)$ and $1_{A_k\cap A_j}=0$. By linearity, this equality remains true if both sides are replaced by any union of the $A_k$, and therefore $X_\mathcal{G}$ is the required Radon-Nikodym derivative.
+\end{proof}
+
+Next, martingale convergence is used to prove the existence of the Radon-Nikodym derivative in the case where the $\sigma$-algebra $\mathcal{G}$ is separable. By separable, we mean that there is a countable sequence of sets $A_1,A_2,\ldots$ generating $\mathcal{G}$. Note that if we let $\mathcal{G}_n$ be the $\sigma$-algebra generated by $A_1,A_2,\ldots,A_n$, then $\mathcal{G}_n$ is an increasing sequence of finite sub-$\sigma$-algebras such that $\bigcup_n\mathcal{G}_n$ generates $\mathcal{G}$. The following result is general enough to apply in many useful cases, such as with the Boral $\sigma$-algebra on $\mathbb{R}^n$.
+
+\begin{lemma}\label{lem:1}
+Let $\mathcal{G}$ be a separable sub-$\sigma$-algebra of $\mathcal{F}$. Then, the Radon-Nikodym derivative $X_\mathcal{G}$ exists.
+If furthermore, $\mathcal{G}_n$ is an increasing sequence of finite $\sigma$-algebras satisfying $\mathcal{G}=\sigma(\bigcup_n\mathcal{G}_n)$ then $\mathbb{E}_\mathbb{P}[|X_{\mathcal{G}}-X_{\mathcal{G}_n}|]\rightarrow 0$ as $n\rightarrow\infty$.
+\end{lemma}
+\begin{proof}
+Let us set $X_n\equiv X_{\mathcal{G}_n}$.
+If $m<n$ then the conditional expectation $\mathbb{E}_{\mathbb{P}}[X_n\mid\mathcal{G}_m]$ is $\mathcal{G}_m$-measurable, and for every $A\in\mathcal{G}_m$,
+\begin{equation*}
+\mathbb{E}_\mathbb{P}\left[1_A\mathbb{E}_{\mathbb{P}}[X_n\mid\mathcal{G}_m]\right]
+=\mathbb{E}_{\mathbb{P}}\left[1_AX_n\right]=\mathbb{Q}(A).
+\end{equation*}
+This equality just uses the definition of the conditional expectation and then the definition of $X_n$ as the Radon-Nikodym derivative restricted to $\mathcal{G}_n$. So, $\mathbb{E}_{\mathbb{P}}[X_n\mid\mathcal{G}_m]$ is the Radon-Nikodym derivative restricted to $\mathcal{G}_m$, and equals $X_m$ (almost-surely).
+
+Therefore, $X_n$ is a martingale and the martingale convergence theorem implies that the limit
+\begin{equation}\label{eq:1}
+X_\mathcal{G}=\lim_{n\rightarrow\infty}X_n
+\end{equation}
+exists almost surely. We now show that the sequence $X_n$ is uniformly integrable. Choose any $\epsilon>0$. As $\mathbb{Q}$ is absolutely continuous with respect to $\mathbb{P}$, there exists a $\delta>0$ such that $\mathbb{Q}(A)<\epsilon$ whenever $\mathbb{P}(A)<\delta$. Using
+\begin{equation*}
+\mathbb{P}(X_n>K)=\mathbb{E}_{\mathbb{P}}[1_{\{X_n>K\}}]\le\mathbb{E}_\mathbb{P}\left[\frac{X_n}{K}\right]=\frac{1}{K}
+\end{equation*}
+we see that $\mathbb{P}(X_n>K)<\delta$ whenever $K>\delta^{-1}$ and, therefore, $\mathbb{Q}(X_n>K)<\epsilon$. So
+\begin{equation*}
+\mathbb{E}_{\mathbb{P}}[X_n1_{\{X_n>K\}}]=\mathbb{Q}(X_n>K)<\epsilon
+\end{equation*}
+for every $n$, showing that $X_n$ is a uniformly integrable sequence with respect to $\mathbb{P}$.
+Therefore, convergence in (\ref{eq:1}) is in $L^1$, and $\mathbb{E}_{\mathbb{P}}[|X_n-X_\mathcal{G}|]\rightarrow 0$ as $n\rightarrow\infty$. So, for any $A\in\bigcup_n\mathcal{G}_n$,
+\begin{equation}\label{eq:3}
+\mathbb{E}_\mathbb{P}[X_\mathcal{G}1_A]=\lim_{m\rightarrow\infty}\mathbb{E}_\mathbb{P}[X_m1_A]=\mathbb{Q}(A).
+\end{equation}
+By linearity and the monotone convergence theorem, the collection of sets $A$ satisfying (\ref{eq:3}) is a Dynkin system containing the $\pi$-system $\bigcup_n\mathcal{G}_n$ so, by Dynkin's lemma, is satisfied for every $A\in\sigma(\bigcup_n\mathcal{G}_n)=\mathcal{G}$ and, by definition, $X_\mathcal{G}$ is the Radon-Nikodym derivative restricted to $\mathcal{G}$.
+\end{proof}
+
+Finally, by approximating by finite $\sigma$-algebras we can prove the Radon-Nikodym theorem for arbitrary inseparable $\sigma$-algebras $\mathcal{F}$.
+
+\
+
+\noindent{\bf Proof of the Radon-Nikodym theorem:}
+
+First, we use contradiction to show that for any $\epsilon>0$ there exists a finite $\sigma$-algebra $\mathcal{G}\subseteq\mathcal{F}$ satisfying $\mathbb{E}_\mathbb{P}[|X_\mathcal{G}-X_\mathcal{H}|]<\epsilon$ for every finite $\sigma$-algebra $\mathcal{H}$ with $\mathcal{G}\subseteq\mathcal{H}\subseteq{F}$. If this were not the case, then by induction we could find an increasing sequence of finite sub-$\sigma$-algebras of $\mathcal{F}$ satisfying $\mathbb{E}_\mathbb{P}[|X_{\mathcal{G}_n}-X_{\mathcal{G}_m}|]\ge\epsilon$.
+However, letting $\mathcal{G}=\sigma(\bigcup_n\mathcal{G}_n)$, Lemma \ref{lem:1} shows that $X_\mathcal{G}$ exists and
+\begin{equation*}
+\epsilon\le\lim_{n\rightarrow\infty}\mathbb{E}_\mathbb{P}[|X_{\mathcal{G}_n}-X_{\mathcal{G}_{n+1}}|]
+\le\lim_{n\rightarrow\infty}\mathbb{E}_\mathbb{P}[|X_{\mathcal{G}_n}-X_{\mathcal{G}}|]+\lim_{n\rightarrow\infty}\mathbb{E}_\mathbb{P}[|X_{\mathcal{G}_{n+1}}-X_{\mathcal{G}}|]=0
+\end{equation*}
+--- a contradiction.
+
+So, there exists a sequence of finite sub-$\sigma$-algebras $\mathcal{G}_n$ of $\mathcal{F}$ such that $\mathbb{E}_\mathbb{P}[|X_{\mathcal{G}_n}-X_\mathcal{H}|]<2^{-n}$ for every finite sub-$\sigma$-algebra $\mathcal{H}$ of $\mathcal{F}$ containing $\mathcal{G}_n$. Let $\mathcal{G}$ be the (separable) $\sigma$-algebra generated by $\bigcup_n\mathcal{G}_n$, and set $\mathcal{\tilde G}_n=\sigma(\bigcup_{k=1}^n\mathcal{G}_k)$.
+By Lemma \ref{lem:1}, the Radon-Nikodym derivative restricted to $\mathcal{G}$, $X_\mathcal{G}$, exists, and we show that it is the required derivative of $\mathbb{Q}$ with respect to $\mathbb{P}$.
+
+Choose any set $A\in\mathcal{F}$ and let $\mathcal{H}_n$ be the (finite) $\sigma$-algebra generated by $\mathcal{G}_n\cup\{A\}$. Then, $X_{\mathcal{H}_n}$ exists and satisfies $\mathbb{E}_{\mathbb{P}}[X_{\mathcal{H}_n}1_A]=\mathbb{Q}(A)$ and,
+\begin{equation*}\begin{split}
+\left|\mathbb{E}_\mathbb{P}[X_\mathcal{G}1_A]-\mathbb{Q}(A)\right|
+&=\lim_{n\rightarrow\infty}\left|\mathbb{E}_\mathbb{P}[X_{\mathcal{\tilde G}_n}1_A]-\mathbb{Q}(A)\right|\\
+&=\lim_{n\rightarrow\infty}\left|\mathbb{E}_\mathbb{P}[X_{\mathcal{\tilde G}_n}1_A]-\mathbb{E}_\mathbb{P}[X_{\mathcal{H}_n}1_A]\right|\\
+&\le\lim_{n\rightarrow\infty}\mathbb{E}_\mathbb{P}[|X_{\mathcal{\tilde G}_n}-X_{\mathcal{G}_n}|]+\lim_{n\rightarrow\infty}\mathbb{E}_\mathbb{P}[|X_{\mathcal{H}_n}-X_{\mathcal{G}_n}|]\\
+&\le\lim_{n\rightarrow\infty}(2^{-n}+2^{-n})=0.
+\end{split}\end{equation*}
+So, $\mathbb{E}_{\mathbb{P}}[X_\mathcal{G}1_A]=\mathbb{Q}(A)$ as required.
+
+
+\begin{thebibliography}{9}
+\bibitem{williams}
+David Williams, \emph{Probability with martingales},
+Cambridge Mathematical Textbooks, Cambridge University Press, 1991.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

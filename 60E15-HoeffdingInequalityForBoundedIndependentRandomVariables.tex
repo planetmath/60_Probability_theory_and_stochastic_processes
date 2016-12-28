@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HoeffdingInequalityForBoundedIndependentRandomVariables}
+\pmcreated{2013-03-22 17:46:02}
+\pmmodified{2013-03-22 17:46:02}
+\pmowner{kshum}{5987}
+\pmmodifier{kshum}{5987}
+\pmtitle{Hoeffding inequality for bounded independent random variables}
+\pmrecord{8}{40222}
+\pmprivacy{1}
+\pmauthor{kshum}{5987}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E15}
+\pmrelated{ChernoffCramerBound}
+\pmdefines{Hoeffding's inequality}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $X_1$, $X_2, \ldots, X_n$ be independent random variables, such that $\Pr(a_k \leq X_k \leq b_k)= 1$ for all $k$, where $a_k$ and $b_k$ are constant, $a_k<b_k$. Let $S_n$ be the sum $X_1+\ldots+X_n$. Then
+\[
+\Pr(S_n - E[S_n] > \epsilon) \leq \exp\Big( - \frac{2 \epsilon^2}{\sum_{k=1}^n(b_k-a_k)^2} \Big),
+\]
+\[
+\Pr(|S_n - E[S_n]| > \epsilon) \leq 2 \exp\Big( - \frac{2 \epsilon^2}{\sum_{k=1}^n(b_k-a_k)^2} \Big).
+\]
+
+
+
+\begin{thebibliography}{1}
+\bibitem{ph} W. Hoeffding, ``Probability inequalities for sums of bounded random variables'',  \emph{J. Amer. Statist. Assoc.}, vol. 58, pp.13-30, 1963. 
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

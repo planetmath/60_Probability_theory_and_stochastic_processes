@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{JointCumulativeDistributionFunction}
+\pmcreated{2013-03-22 11:54:52}
+\pmmodified{2013-03-22 11:54:52}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{joint cumulative distribution function}
+\pmrecord{9}{30571}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A10}
+\pmsynonym{joint cumulative distribution}{JointCumulativeDistributionFunction}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%%\usepackage{xypic}
+\begin{document}
+Let $X_1, X_2, ..., X_n$ be $n$ random variables all defined on the same probability space. The \textbf{joint cumulative distribution function} of $X_1, X_2, ..., X_n$, denoted by $F_{X_1, X_2, ..., X_n}(x_1,x_2,...,x_n)$, is the following function:\\
+\par
+$F_{X_1, X_2, ..., X_n}: R^n \to R$\\
+$F_{X_1, X_2, ..., X_n}(x_1,x_2,...,x_n) = P[X_1 \leq x_1, X_2 \leq x_2, ... , X_n \leq x_n]$\\
+\par
+As in the unidimensional case, this function satisfies:\\
+\par
+\begin{enumerate}
+\item $\lim_{(x_1,...,x_n) \to (-\infty,...,-\infty)}{F_{X_1, X_2, ..., X_n}(x_1,...,x_n)} = 0$  and  $\lim_{(x_1,...,x_n) \to (\infty,...,\infty)}{F_{X_1, X_2, ..., X_n}(x_1,...,x_n)} = 1$
+\item $F_{X_1, X_2, ..., X_n}(x_1,...,x_n)$ is a monotone, nondecreasing function.
+\item $F_{X_1, X_2, ..., X_n}(x_1,...,x_n)$ is continuous from the right in each variable.
+\end{enumerate}
+
+The way to evaluate $F_{X_1, X_2, ..., X_n}(x_1,...,x_n)$ is the following:\\
+\par
+$F_{X_1, X_2, ..., X_n}(x_1,...,x_n) = \int_{-\infty}^{x_1}{   \int_{-\infty}^{x_2}{ \cdots \int_{-\infty}^{x_n}{   f_{X_1, X_2, ..., X_n}(u_1,...,u_n)    du_1 du_2 \cdots du_n}}}$\\
+\par
+(if $F$ is continuous) or\\
+\par
+$F_{X_1, X_2, ..., X_n}(x_1,...,x_n) = \sum_{i_1 \leq x_1, ... , i_n \leq x_n}^{} {  f_{X_1, X_2, ..., X_n}(i_1,...,i_n)  }$\\
+\par
+(if $F$ is discrete), \\
+\par
+where $f_{X_1, X_2, ..., X_n}$ is the \emph{joint density function} of  $X_1, ..., X_n$.
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

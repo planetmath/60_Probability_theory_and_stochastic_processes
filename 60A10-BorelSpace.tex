@@ -1,0 +1,234 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BorelSpace}
+\pmcreated{2013-03-22 18:23:02}
+\pmmodified{2013-03-22 18:23:02}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{Borel space}
+\pmrecord{22}{41026}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A10}
+\pmclassification{msc}{28C15}
+\pmclassification{msc}{28A12}
+\pmclassification{msc}{54H05}
+\pmclassification{msc}{28A05}
+\pmsynonym{measurable space}{BorelSpace}
+%\pmkeywords{Borel space}
+%\pmkeywords{Borel set}
+%\pmkeywords{$\sigma$-algebra}
+%\pmkeywords{rigid Borel space}
+\pmrelated{BorelSet}
+\pmrelated{SigmaAlgebra}
+\pmrelated{MeasurableSpace}
+\pmrelated{BorelMeasure}
+\pmrelated{BorelGroupoid}
+\pmrelated{BorelMorphism}
+\pmdefines{rigid Borel space}
+\pmdefines{Borel subset space}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+
+\setlength{\textwidth}{6.5in}
+%\setlength{\textwidth}{16cm}
+\setlength{\textheight}{9.0in}
+%\setlength{\textheight}{24cm}
+
+\hoffset=-.75in     %%ps format
+%\hoffset=-1.0in     %%hp format
+\voffset=-.4in
+
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\med}{\medbreak}
+\newcommand{\medn}{\medbreak \noindent}
+\newcommand{\bign}{\bigbreak \noindent}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+\begin{document}
+\begin{definition}
+A {\em Borel space} $(X; \mathcal{B}(X))$ is defined as a set $X$, together with 
+a Borel \PMlinkname{$\sigma$-algebra}{SigmaAlgebra} $\mathcal{B}(X)$ of subsets of $X$, called Borel sets. The Borel algebra on $X$ is the smallest $\sigma$-algebra containing all open sets (or, equivalently, all closed sets if the  topology on closed sets is selected).
+
+\end{definition}
+
+\begin{remark}
+Borel sets were named after the French mathematician Emile Borel.
+\end{remark}
+
+\begin{remark}
+ A subspace of a Borel space $(X; \mathcal{B} (X))$ is a subset $S \subset X$ endowed with the relative Borel structure, that is the $\sigma$-algebra of all subsets of $S$ of the form $S \bigcap E$, where $E$ is a Borel subset of $X$. 
+\end{remark}
+
+\begin{definition}
+ A \emph{rigid Borel space} $(X_r; \mathcal{B} (X_r))$ is defined as a Borel space whose only automorphism 
+$f: X_r \to X_r$ (that is, with $f$ being a bijection, and also with $f(A) = f^{-1}(A)$ for any $A \in \mathcal{B}(X_r)$) is the identity function $1_{(X_r; \mathcal{B}(X_r))}$ (ref.\cite{BA91}).
+\end{definition}
+
+
+\begin{remark}
+ R. M. Shortt and J. Van Mill provided the first construction of a rigid Borel space on a `set of large cardinality'.
+\end{remark}
+
+
+
+\begin{thebibliography}{9}
+
+\bibitem{MRB2k6}
+M.R. Buneci. 2006., 
+\PMlinkexternal{Groupoid C*-Algebras.}{http://www.utgjiu.ro/math/mbuneci/preprint/p0024.pdf}, 
+{\em Surveys in Mathematics and its Applications}, Volume 1: 71--98.
+
+\bibitem{BA91}
+B. Aniszczyk. 1991. A rigid Borel space., {\em Proceed. AMS.}, 113 (4):1013-1015.,
+\PMlinkexternal{available online}{http://www.jstor.org/pss/2048777}.
+
+\bibitem{AC79}
+A. Connes.1979. Sur la th\'eorie noncommutative de l' integration, {\em Lecture Notes in
+Math.},  Springer-Verlag, Berlin, {\bf 725}: 19-14.
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

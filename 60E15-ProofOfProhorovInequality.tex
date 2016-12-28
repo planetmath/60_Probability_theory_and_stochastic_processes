@@ -1,0 +1,124 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfProhorovInequality}
+\pmcreated{2013-03-22 16:12:58}
+\pmmodified{2013-03-22 16:12:58}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{proof of Prohorov inequality}
+\pmrecord{14}{38313}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\arsinh}{arsinh}
+\begin{document}
+Starting from the basic inequality $\exp \left( -x\right) \geq 1-x$, it's
+easy to derive by elementary algebraic manipulations the two inequalities
+\begin{eqnarray*}
+\exp \left( x\right) -x-1 &\leq &2\left( \cosh \left( x\right) -1\right) \\
+2\left( \cosh \left( x\right) -1\right) &\leq &x\sinh \left( x\right)
+\end{eqnarray*}
+
+By the \PMlinkname{Chernoff-Cram\`{e}r bound}{ChernoffCramerBound}, we have:
+\[
+\Pr\left\{ \sum_{i=1}^{n}\left( X_{i}-E[X_{i}]\right) >\varepsilon \right\}
+\leq \exp \left[ -\sup_{t>0}\left( t\varepsilon -\psi (t)\right) \right] 
+\]
+where
+\[
+\psi (t)=\sum_{i=1}^{n}\left( \ln E\left[ e^{tX_{i}}\right] -tE\left[ X_{i}%
+\right] \right) 
+\]
+Keeping in mind that the condition
+\[
+\Pr\left\{ \left\vert X_{i}\right\vert \leq M\right\} =1\text{ \ }\forall i
+\]
+implies that, for all $i$,
+\[
+E[\left\vert X_{i}\right\vert ^{k}]\leq M^{k} \text{ \ }\forall k\geq 0
+\]
+(see \PMlinkname{here}{RelationBetweenAlmostSurelyAbsolutelyBoundedRandomVariablesAndTheirAbsoluteMoments} for a proof) and since $\ln x\leq x-1$ $\forall x>0$, and%
+\[
+E[\left\vert X\right\vert ^{k}]\leq M^{k}\text{ \ }\Longrightarrow \text{ \ }%
+E\left[ \left\vert X\right\vert ^{k}\right] \leq E\left[ X^{2}\right] M^{k-2}%
+\text{ \ \ \ \ \ \ \ }\forall k\geq 2,k\in N
+\]
+(see \PMlinkname{here}{AbsoluteMomentsBoundingNecessaryAndSufficientCondition} for a proof), one has:
+\begin{eqnarray*}
+\psi (t) &=&\sum_{i=1}^{n}\left( \ln E\left[ e^{tX_{i}}\right] -tE\left[
+X_{i}\right] \right)  \\
+&\leq &\sum_{i=1}^{n}E\left[ e^{tX_{i}}\right] -tE\left[ X_{i}\right] -1 \\
+&=&\sum_{i=1}^{n}E\left[ e^{tX_{i}}-tX_{i}-1\right]  \\
+&\leq &\sum_{i=1}^{n}2E\left[ \cosh \left( tX_{i}\right) -1\right]  \\
+&\leq &\sum_{i=1}^{n}E\left[ tX_{i}\sinh \left( tX_{i}\right) \right]  \\
+&\leq &\sum_{i=1}^{n}E\left[ \left\vert tX_{i}\sinh \left( tX_{i}\right)
+\right\vert \right]  \\
+&=&\sum_{i=1}^{n}tE\left[ \left\vert X_{i}\right\vert \sinh \left(
+t\left\vert X_{i}\right\vert \right) \right]  \\
+&=&\sum_{i=1}^{n}tE\left[ \sum_{k=0}^{\infty }\frac{t^{2k+1}\left\vert
+X_{i}\right\vert ^{2k+2}}{\left( 2k+1\right) !}\right]  \\
+&=&\sum_{i=1}^{n}t\sum_{k=0}^{\infty }\frac{t^{2k+1}E\left[ \left\vert
+X_{i}\right\vert ^{2k+2}\right] }{\left( 2k+1\right) !} \\
+&\leq &\sum_{i=1}^{n}t\sum_{k=0}^{\infty }\frac{t^{2k+1}E\left[ X_{i}^{2}%
+\right] M^{2k}}{\left( 2k+1\right) !} \\
+&=&\frac{t}{M}\sum_{k=0}^{\infty }\frac{t^{2k+1}M^{2k+1}\sum_{i=1}^{n}E\left[
+X_{i}^{2}\right] }{\left( 2k+1\right) !} \\
+&=&\frac{tv^{2}}{M}\sum_{k=0}^{\infty }\frac{\left( tM\right) ^{2k+1}}{%
+\left( 2k+1\right) !} \\
+&=&\frac{tv^{2}}{M}\sinh \left( tM\right) .
+\end{eqnarray*}
+
+One can now write
+\[
+\sup_{t>0}\left( t\varepsilon -\psi (t)\right) \geq \sup_{t>0}\left(
+t\varepsilon -\frac{tv^{2}}{M}\sinh \left( tM\right) \right) =\sup_{t>0}%
+\left[ \frac{v^{2}}{M^{2}}\left( \frac{M^{2}\varepsilon }{v^{2}}t-tM\sinh
+\left( tM\right) \right) \right] 
+\]
+
+Optimizing this expression with respect to $t$ would lead to solving the
+transcendental equation:
+\[
+\frac{M\varepsilon }{v^{2}}=Mt_{opt}\cosh \left( Mt_{opt}\right) +\sinh
+\left( Mt_{opt}\right) 
+\]
+
+which is analytically infeasible. So, one can choose the sup-optimal yet
+manageable solution
+\[
+\widetilde{t}=\frac{1}{M}\arsinh\left( \frac{M\varepsilon }{2v^{2}}\right) 
+\]
+
+which, once plugged into the bound, yields
+\[
+\Pr\left\{ \sum_{i=1}^{n}\left( X_{i}-E[X_{i}]\right) >\varepsilon \right\}
+\leq \exp \left[ -\frac{v^{2}}{M^{2}}\left( \frac{M\varepsilon }{2v^{2}}%
+\arsinh\left( \frac{M\varepsilon }{2v^{2}}\right) \right) \right] 
+\]
+%%%%%
+%%%%%
+\end{document}

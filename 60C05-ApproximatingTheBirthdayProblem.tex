@@ -1,0 +1,162 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ApproximatingTheBirthdayProblem}
+\pmcreated{2013-03-22 16:09:56}
+\pmmodified{2013-03-22 16:09:56}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{approximating the birthday problem}
+\pmrecord{9}{38249}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60C05}
+\pmclassification{msc}{05A10}
+\pmclassification{msc}{60-00}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+\usepackage{url}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+\begin{document}
+A straightforward generalization of the birthday problem can be stated as:
+\begin{quote}
+Given $N$ possible outcomes, how many random samples must be taken so that with a probability of at least $1/2$ there are two equal samples?
+\end{quote}
+\begin{quote}
+Answer: Approximately $1.2\sqrt{N}$ samples must be taken.
+\end{quote}
+
+So in the typical \emph{birthday problem} setting the $N=365$ -- the number of days in the typical year, and the result is that 23 people in a group gives at least a 50\% chance of two people with a common birthday.  This result can be obtained by a concise computation of the probilities for various sizes of the group until the proper value of 23 is found, but this approach does not lend itself to finding the value of 23 efficiently.  
+
+The result however has an easy to compute approximation of $1.2\sqrt{N}$, so in the case of $N=365$, the result is approximated by $1.2\sqrt{365}\approx 23$.  We now validate the estimate.
+
+Recall the probability of selecting a duplicate from $N$ possible outcomes within $k$ choices is
+\[p(N,k)=\binom{N}{k}\frac{1}{N^k}
+=\left(1-\frac{1}{N}\right)\left(1-\frac{2}{N}\right)
+\cdots\left(1-\frac{k-1}{N}\right).\]
+As 
+\[e^x=\lim_{m\rightarrow \infty}\left( 1+ \frac{x}{m}\right)^{m}\]
+we can roughly approximate the formal product above by:
+\[p(N,k)\approx e^{-1/N-2/N-\cdots - k/N}=e^{-\binom{k+1}{2}\frac{1}{N}}.\]
+Now we are after a formula in which given $N$ and the desired probability of $1/2$ we can estimate $k$.  So we solve for $k$ in the equation:
+\[\frac{1}{2}=p(N,k)=e^{-\binom{k}{2}\frac{1}{N}}=e^{-\frac{k(k-1)}{2N}};\]
+\[-2N\ln \frac{1}{2} = k^2-k;\]
+\[\frac{1}{4}+2N\ln 2 = k^2-k+\frac{1}{4}=\left( k-\frac{1}{2}\right)^2;\]
+\begin{equation}\label{eq:2}
+k=\frac{1}{2}+\sqrt{\frac{1}{4}+2N\ln 2}.
+\end{equation}
+
+A less precise but easier to compute approximation comes from simplifying our original estimate further:
+\[p(N,k)\approx e^{-\frac{k(k-1)}{2N}}\approx e^{-k^2/2N}.\]
+Then set $\displaystyle 1/2=e^{-\frac{k(k-1)}{2N}}\approx e^{-k^2/2N}$ and once
+again solve for $k$ to find:
+\[k=\sqrt{2N \ln 2}\approx 1.2\sqrt{N}.\]
+
+We also see that if we wish to have an outcome with probability $\varepsilon>0$ of no matches then we can estimate the sample size by:
+\[\varepsilon=p(N,k)\approx e^{-k^2/2N};\qquad k\approx \sqrt{2N \ln \frac{1}{\varepsilon}}.\]
+So the number of samples required to find a match with probability $\varepsilon>0$ is approximately
+\[k=\sqrt{2N\frac{1}{1-\varepsilon}}.\]
+
+\begin{thebibliography}{9}
+\bibitem{Wikipedia}
+Wikipedia, \emph{Birthday paradox}, 
+\url{http://en.wikipedia.org/w/index.php?title=Birthday_paradox&oldid=69569553}.  Accessed 14 August, 2006.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfKolmogorovsStrongLawForIIDRandomVariables}
+\pmcreated{2013-03-22 18:33:57}
+\pmmodified{2013-03-22 18:33:57}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof of Kolmogorov's strong law for IID random variables}
+\pmrecord{7}{41289}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60F15}
+\pmrelated{KolmogorovsStrongLawOfLargeNumbers}
+\pmrelated{MartingaleProofOfKolmogorovsStrongLawForSquareIntegrableVariables}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+
+
+\begin{document}
+Kolmogorov's strong law for square integrable random variables states that if $X_1,X_2,\ldots$ is a sequence of independent random variables with $\sum_n\operatorname{Var}[X_n]/n^2<\infty$ then $n^{-1}\sum_{k=1}^n(X_k-\mathbb{E}[X_k])$ converges to zero with probability one as $n\rightarrow\infty$ (see martingale proof of Kolmogorov's strong law for square integrable variables).
+We show that the following version of the strong law for IID random variables follows from this.
+
+\begin{theorem*}[Kolmogorov]
+Let $X_1,X_2,\ldots$ be independent and identically distributed random variables with $\mathbb{E}[|X_n|]<\infty$. Then, $n^{-1}\sum_{k=1}^n(X_k-\mathbb{E}[X_k])\rightarrow 0$ as $n\rightarrow\infty$, with probability one.
+\end{theorem*}
+
+Note that here, the random variables $X_n$ are not necessarily square integrable. Let us set $\tilde X_n=X_n-\mathbb{E}[X_n]$, so that $\tilde X_n$ are IID random variables with $\mathbb{E}[\tilde X_n]=0$. Then, set
+\begin{equation*}
+Y_n=\left\{
+\begin{array}{ll}
+\tilde X_n,&\textrm{if }\left|\tilde X_n\right|<n,\\
+0,&\textrm{otherwise}.
+\end{array}
+\right.
+\end{equation*}
+Using the fact that $X_n$ has the same distribution as $X_1$ gives
+\begin{equation}\label{eq:1}\begin{split}
+\sum_n\mathbb{E}[Y_n^2]/n^2
+&= \sum_n\mathbb{E}\left[1_{\{|\tilde X_n|<n\}}n^{-2}\tilde X_n^2\right]\\
+&= \sum_n\mathbb{E}\left[1_{\{|\tilde X_1|<n\}}n^{-2}\tilde X_1^2\right]\\
+&= \mathbb{E}\left[\sum_n1_{\{|\tilde X_1|<n\}}n^{-2}\tilde X_1^2\right].
+\end{split}\end{equation}
+Letting $N$ be the smallest integer greater than $|\tilde X_1|$,
+\begin{equation*}\begin{split}
+\sum_n1_{\{|\tilde X_1|<n\}}n^{-2}&\le\sum_{n=N}^\infty\frac{4}{4n^2-1}=\sum_{n=N}^\infty\left(\frac{2}{2n-1}-\frac{2}{2n+1}\right)\\
+&=\frac{2}{2N-1}\le\frac{2}{N}\le\frac{2}{|\tilde X_1|}.
+\end{split}\end{equation*}
+So, putting this into equation (\ref{eq:1}),
+\begin{equation*}
+\sum_n\operatorname{Var}[Y_n]/n^2\le\sum_n\mathbb{E}[Y_n^2]/n^2\le\mathbb{E}[2|\tilde X_1|]<\infty.
+\end{equation*}
+Therefore, $Y_n$ satisfies the required properties to apply the strong law for square integrable random variables,
+\begin{equation}\label{eq:2}
+n^{-1}\sum_{k=1}^n(Y_k-\mathbb{E}[Y_k])\rightarrow 0
+\end{equation}
+as $n\rightarrow\infty$, with probability one. Also,
+\begin{equation*}
+\mathbb{E}[Y_n]=\mathbb{E}[Y_n-\tilde X_n]=-\mathbb{E}[1_{\{|\tilde X_n|\ge n\}}\tilde X_n]=-\mathbb{E}[1_{\{|\tilde X_1|\ge n\}}\tilde X_1]
+\end{equation*}
+converges to $0$ as $n\rightarrow\infty$ (by the dominated convergence theorem). So, the $\mathbb{E}[Y_k]$ terms in (\ref{eq:2}) vanish in the limit, giving
+\begin{equation}\label{eq:3}
+n^{-1}\sum_{k=1}^nY_k\rightarrow 0
+\end{equation}
+as $n\rightarrow\infty$ with probability one.
+
+We finally note that
+\begin{equation*}
+\mathbb{E}\left[\sum_n1_{\{\tilde X_n\not=Y_n\}}\right]=\mathbb{E}\left[\sum_n1_{\{|\tilde X_1|\ge n\}}\right]\le\mathbb{E}[|\tilde X_1|]<\infty,
+\end{equation*}
+so $\sum_n1_{\{\tilde X_n\not=Y_n\}}<\infty$, and $\tilde X_n=Y_n$ for large $n$ (with probability one). So, $Y_k$ can be replaced by $\tilde X_k$ in (\ref{eq:3}), giving the result.
+
+\begin{thebibliography}{9}
+\bibitem{williams}
+David Williams, \emph{Probability with martingales},
+Cambridge Mathematical Textbooks, Cambridge University Press, 1991.
+\bibitem{kallenberg}
+Olav Kallenberg, \emph{Foundations of modern probability}, Second edition. Probability and its Applications. Springer-Verlag, 2002.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

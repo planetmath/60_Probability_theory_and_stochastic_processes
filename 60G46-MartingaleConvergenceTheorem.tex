@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MartingaleConvergenceTheorem}
+\pmcreated{2013-03-22 18:33:47}
+\pmmodified{2013-03-22 18:33:47}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{martingale convergence theorem}
+\pmrecord{5}{41286}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G46}
+\pmclassification{msc}{60G44}
+\pmclassification{msc}{60G42}
+\pmclassification{msc}{60F15}
+%\pmkeywords{martingale}
+%\pmkeywords{submartingale}
+%\pmkeywords{supermartingale}
+\pmrelated{Martingale}
+\pmrelated{MartingaleProofOfKolmogorovsStrongLawForSquareIntegrableVariables}
+\pmrelated{MartingaleProofOfTheRadonNikodymTheorem}
+\pmrelated{UpcrossingsAndDowncrossings}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+
+
+\begin{document}
+There are several convergence theorems for martingales, which follow from Doob's upcrossing lemma. The following says that any $L^1$-bounded martingale $X_n$ in discrete time converges almost surely.
+Note that almost-sure convergence (i.e. convergence with probability one) is quite strong, implying the weaker property of convergence in probability. Here, a martingale $(X_n)_{n\in\mathbb{N}}$ is understood to be defined with respect to a probability space $(\Omega,\mathcal{F},\mathbb{P})$ and filtration $(\mathcal{F}_n)_{n\in\mathbb{N}}$.
+
+\begin{theorem*}[Doob's Forward Convergence Theorem]
+Let $(X_n)_{n\in\mathbb{N}}$ be a martingale (or submartingale, or supermartingale) such that $\mathbb{E}[|X_n|]$ is bounded over all $n\in\mathbb{N}$. Then, with probability one, the limit $X_\infty=\lim_{n\rightarrow\infty}X_n$ exists and is finite.
+\end{theorem*}
+
+The condition that $X_n$ is $L^1$-bounded is automatically satisfied in many cases. In particular, if $X$ is a non-negative supermartingale then $\mathbb{E}[|X_n|]=\mathbb{E}[X_n]\le\mathbb{E}[X_1]$ for all $n\ge 1$, so $\mathbb{E}[|X_n|]$ is bounded, giving the following corollary.
+
+\begin{corollary*}
+Let $(X_n)_{n\in\mathbb{N}}$ be a non-negative martingale (or supermartingale). Then, with probability one, the limit $X_\infty=\lim_{n\rightarrow\infty}X_n$ exists and is finite.
+\end{corollary*}
+
+As an example application of the martingale convergence theorem, it is easy to show that a standard random walk started started at $0$ will visit every level with probability one.
+
+\begin{corollary*}
+Let $(X_n)_{n\in\mathbb{N}}$ be a standard random walk. That is, $X_1=0$ and
+\begin{equation*}
+\mathbb{P}(X_{n+1}=X_n+1\mid \mathcal{F}_n)=\mathbb{P}(X_{n+1}=X_n-1\mid\mathcal{F}_n) = 1/2.
+\end{equation*}
+Then, for every integer $a$, with probability one $X_n=a$ for some $n$.
+\end{corollary*}
+\begin{proof}
+Without loss of generality, suppose that $a\le 0$. Let $T:\Omega\rightarrow\mathbb{N}\cup\{\infty\}$ be the first time $n$ for which $X_n=a$. It is easy to see that the stopped process $X^T_n$ defined by $X^T_n=X_{\min(n,T)}$ is a martingale and $X^T-a$ is non-negative. Therefore, by the martingale convergence theorem, the limit $X^T_\infty=\lim_{n\rightarrow\infty}X^T_n$ exists and is finite (almost surely). In particular, $|X^T_{n+1}-X^T_n|$ converges to $0$ and must be less than $1$ for large $n$. However, $|X^T_{n+1}-X^T_n|=1$ whenever $n<T$, so we have $T<\infty$ and therefore $X_n=a$ for some $n$.
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

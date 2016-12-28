@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UniformcontinuousRandomVariable}
+\pmcreated{2013-03-22 11:54:18}
+\pmmodified{2013-03-22 11:54:18}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{uniform (continuous) random variable}
+\pmrecord{10}{30525}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60-00}
+\pmsynonym{uniform random variable}{UniformcontinuousRandomVariable}
+\pmsynonym{rectangular distribution}{UniformcontinuousRandomVariable}
+\pmsynonym{uniform distribution}{UniformcontinuousRandomVariable}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%%\usepackage{xypic}
+\begin{document}
+A random variable $X$ is said to be a \emph{\PMlinkescapetext{uniform} (\PMlinkescapetext{continuous}) random variable} with parameters \textbf{$a$ and $b$} if its probability density function is given by
+\begin{align*}
+f_X(x) = \frac{1}{b-a},\quad\quad x \in [a,b],
+\end{align*}
+and is denoted $X\sim U(a,b)$.\\
+
+Notes:
+\begin{enumerate}
+\item They are also called \emph{rectangular distributions}, considers that all points in the interval $[a,b]$ have the same mass.
+\item $E[X] = \frac{a+b}{2}$
+\item $Var[X] = \frac{(b-a)^2}{12}$
+\item $M_X(t) = \frac{e^{bt} - e^{at}}{(b-a)t}$
+
+\end{enumerate}
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

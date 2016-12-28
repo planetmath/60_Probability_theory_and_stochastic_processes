@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DistributionsOfAStochasticProcess}
+\pmcreated{2013-03-22 15:21:35}
+\pmmodified{2013-03-22 15:21:35}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{distributions of a stochastic process}
+\pmrecord{13}{37183}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G07}
+\pmsynonym{finite dimensional probability distributions}{DistributionsOfAStochasticProcess}
+\pmsynonym{ffd}{DistributionsOfAStochasticProcess}
+\pmrelated{StochasticProcess}
+\pmrelated{KolmogorovsContinuityTheorem}
+\pmrelated{ModificationOfAStochasticProcess}
+\pmdefines{finite dimensional distributions}
+\pmdefines{f.f.d.}
+\pmdefines{identically distributed stochastic processes}
+\pmdefines{version of a stochastic process}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{associate}
+\PMlinkescapeword{between}
+\PMlinkescapeword{order}
+\PMlinkescapeword{right}
+\PMlinkescapeword{consistent}
+Just as one can associate a random variable $X$ with its distribution $F_X$, one can associate a stochastic process $\lbrace X(t) \mid t\in T \rbrace$ with some distributions, such that the distributions will more or less describe the process. While the set of distributions $\lbrace F_{X(t)} \mid t\in T \rbrace$ can describe the random variables $X(t)$ individually, it says nothing about the
+relationships between any pair, or more generally, any finite set of random variables $X(t)$'s at different $t$'s.  Another way is to look at the joint probability distribution of all the random variables in a stochastic process.  This way we can derive the probability distribution functions of individual random variables.  However, in most stochastic processes, there are infinitely many random variables involved, and we run into trouble right away.
+
+To resolve this, we enlarge the above set of distribution functions to include all joint probability distributions of finitely many $X(t)$'s, called \emph{the family of finite dimensional probability distributions}.  Specifically, let $n<\infty$ be any positive integer, an \emph{$n$-dimensional probability distribution} of the stochastic process  $\lbrace X(t) \mid t\in T \rbrace$ is a joint probability distribution of $X(t_1),\ldots,X(t_n)$, where $t_i\in T$:
+$$F_{t_1,\ldots,t_n}(x_1,\ldots,x_n):=F_{X(t_1),\ldots,X(t_n)}(x_1,\ldots,x_n)
+=P(\lbrace X(t_1)\leq x_1 \rbrace \cap \cdots \cap \lbrace
+X(t_n)\leq x_n \rbrace).$$  
+The set of \emph{all} $n$-dimensional probability distributions for each $n\in\mathbb{Z}^{+}$ and each set of $t_1,\ldots,t_n\in T$ is called \emph{the} family of finite dimensional probability distributions, or family of finite
+dimensional distributions, abbreviated f.f.d., of the stochastic process $\lbrace X(t)\mid t\in T\rbrace$.
+
+Let $\sigma$ be a permutation on  $\lbrace 1,\ldots, n\rbrace$.  For any $t_1,\ldots,t_n\in T$ and $x_1,\ldots,x_n\in \mathbb{R}$, define $s_i=t_{\sigma(i)}$ and $y_i=x_{\sigma(i)}$.  Then
+\begin{eqnarray*}
+F_{s_1,\ldots,s_n}(y_1,\ldots,y_n) &=& 
+P(\lbrace X(s_1)\leq y_1 \rbrace \cap \cdots \cap \lbrace X(s_n)\leq y_n \rbrace) \\ &=&
+P(\lbrace X(t_1)\leq x_1 \rbrace \cap \cdots \cap \lbrace X(t_n)\leq x_n \rbrace) \\ &=& F_{t_1,\ldots,t_n}(x_1,\ldots,x_n).
+\end{eqnarray*}
+
+We say that the finite probability distributions are \emph{consistent} with one another if, for any $n$, each set of $t_1,\ldots,t_{n+1}\in T$,
+$$F_{t_1,\ldots,t_n}(x_1,\ldots,x_n)=\lim_{x_{n+1}\to\infty}F_{t_1,\ldots,t_n,t_{n+1}}(x_1,\ldots,x_n,x_{n+1}).$$
+
+Two stochastic processes $\lbrace X(t) \mid t\in T \rbrace$ and $\lbrace Y(s) \mid s\in S \rbrace$ are said to be \emph{identically distributed}, or \emph{versions of each other} if
+\begin{enumerate}
+\item $S=T$, and
+\item $\lbrace X(t)\rbrace$ and $\lbrace Y(s)\rbrace$ have the same f.f.d.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

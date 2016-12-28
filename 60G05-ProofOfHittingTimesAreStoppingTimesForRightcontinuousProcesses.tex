@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfHittingTimesAreStoppingTimesForRightcontinuousProcesses}
+\pmcreated{2013-03-22 18:39:12}
+\pmmodified{2013-03-22 18:39:12}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof of hitting times are stopping times for right-continuous processes}
+\pmrecord{5}{41396}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G05}
+\pmclassification{msc}{60G40}
+%\pmkeywords{stopping time}
+%\pmkeywords{adapted process}
+%\pmkeywords{essential supremum}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{represents}
+\PMlinkescapeword{completion}
+\PMlinkescapeword{complete}
+\PMlinkescapeword{properties}
+\PMlinkescapeword{argument}
+\PMlinkescapeword{closed}
+\PMlinkescapeword{implies}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{necessary}
+
+Let $(\mathcal{F})_{t\in\mathbb{T}}$ be a \PMlinkname{filtration}{FiltrationOfSigmaAlgebras} on the measurable space $(\Omega,\mathcal{F})$, It is assumed that $\mathbb{T}$ is a closed subset of $\mathbb{R}$ and that $\mathcal{F}_t$ is universally complete for each $t\in\mathbb{T}$.
+
+Let $X$ be a right-continuous and adapted process taking values in a metric space $E$ and $S\subseteq E$ closed.
+We show that
+\begin{equation*}
+\tau=\inf\left\{t\in\mathbb{T}:X_t\in S\right\}
+\end{equation*}
+is a stopping time. Assuming $S$ is nonempty and defining the continuous function $d_S(x)\equiv\inf\{d(x,y)\colon y\in S\}$, then $\tau$ is the first time at which the right-continuous process $Y_t=d_S(X_t)$ hits $0$.
+
+Let us start by supposing that $\mathbb{T}$ has a minimum element $t_0$.
+
+If $\mathbb{P}$ is a probability measure on $(\Omega,\mathcal{F})$ and $\mathcal{F}^{\mathbb{P}}_t$ represents the \PMlinkname{completion}{CompleteMeasure} of the $\sigma$-algebra $\mathcal{F}_t$ with respect to $\mathbb{P}$, then it is enough to show that $\tau$ is an $(\mathcal{F}^{\mathbb{P}}_t)$-stopping time. By the universal completeness of $\mathcal{F}_t$ it would then follow that
+\begin{equation*}
+\left\{\tau\le t\right\}\in\bigcap_{\mathbb{P}}\mathcal{F}^{\mathbb{P}}_t=\mathcal{F}_t
+\end{equation*}
+for every $t\in\mathbb{T}$ and, therefore, that $\tau$ is a stopping time.
+So, by replacing $\mathcal{F}_t$ by $\mathcal{F}^{\mathbb{P}}_t$ if necessary, we may assume without loss of generality that $\mathcal{F}_t$ is complete with respect to the probability measure $\mathbb{P}$ for each $t$.
+
+Let $\mathcal{T}$ consist of the set of measurable times $\sigma\colon\Omega\rightarrow\mathbb{T}\cup\{\infty\}$ such that $\{\sigma<t\}\in\mathcal{F}_t$ for every $t$ and that $\sigma\le\tau$. Then let $\sigma^*$ be the essential supremum of $\mathcal{T}$.
+That is, $\sigma^*$ is the smallest (up to sets of zero probability) random variable taking values in $\mathbb{R}\cup\{\pm\infty\}$ such that $\sigma^*\ge\sigma$ (almost surely) for all $\sigma\in\mathcal{T}$.
+
+Then, by the properties of the essential supremum, there is a countable sequence $\sigma_n\in\mathcal{T}$ such that $\sigma^*=\sup_n\sigma_n$. It follows that $\sigma^*\in\mathcal{T}$.
+
+For any $n=1,2,\ldots$ set
+\begin{equation*}
+\sigma_1=\inf\left\{t\in\mathbb{T}:t\ge\sigma^*,Y_t< 1/n\right\}.
+\end{equation*}
+Clearly, $\sigma_1\le\tau$ and, choosing any countable dense subset $A$ of $\mathbb{T}$, the right-continuity of $Y$ gives
+\begin{equation*}
+\{\sigma_1<t\}=\bigcup_{\substack{s<t,\\ s\in A}}\{\sigma^*< s,Y_s<1/n\}\in\mathcal{F}_t.
+\end{equation*}
+So, $\sigma_1\in\mathcal{T}$, which implies that $\sigma_1\le\sigma^*$ with probability one.
+However, by the right-continuity of $Y$, $\sigma_1>\sigma^*$ whenever $\sigma^*$ is finite and $Y_{\sigma^*}>1/n$, so
+\begin{equation*}
+\mathbb{P}(\sigma^*<\infty,Y_{\sigma^*}>0)\le\sum_n\mathbb{P}(\sigma^*<\infty,Y_{\sigma^*}>1/n)=0.
+\end{equation*}
+This shows that $Y_{\sigma^*}=0$ and therefore $\sigma^*\ge\tau$ whenever $\sigma^*<\infty$. So, $\sigma^*=\tau$ almost surely and $\tau\in\mathcal{T}$ giving,
+\begin{equation*}
+\left\{\tau\le t\right\}=\{\tau<t\}\cup\{Y_t=0\}\in\mathcal{F}_t.
+\end{equation*}
+So, $\tau$ is a stopping time.
+
+Finally, suppose that $\mathbb{T}$ does not have a minimum element. Choosing a sequence $t_n\rightarrow-\infty$ in $\mathbb{T}$ then the above argument shows that
+\begin{equation*}
+\tau_n=\inf\left\{t\in\mathbb{T}:t\ge t_n, Y_t=0\right\}
+\end{equation*}
+are stopping times so,
+\begin{equation*}
+\left\{\tau\le t\right\}=\bigcup_n\left\{\tau_n\le t\right\}\in\mathcal{F}_t
+\end{equation*}
+as required.
+
+%%%%%
+%%%%%
+\end{document}

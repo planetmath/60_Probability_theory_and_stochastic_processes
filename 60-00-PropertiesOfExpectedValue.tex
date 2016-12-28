@@ -1,0 +1,116 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfExpectedValue}
+\pmcreated{2013-03-22 16:16:05}
+\pmmodified{2013-03-22 16:16:05}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{properties of expected value}
+\pmrecord{6}{38378}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+1) \emph{(normalization) } Let $X$ be almost surely constant random
+variable, i.e. $\Pr \left\{ X=c\right\} =1$; then $E\left[ X\right] =c$.
+
+2) \emph{(linearity) } Let $X$, $Y$ be random variables such that $E\left[
+\left\vert X\right\vert \right] <\infty $ and $E\left[ \left\vert
+Y\right\vert \right] <\infty $ and let $a$, $b$ be real numbers; then $E%
+\left[ \left\vert aX+bY\right\vert \right] <\infty $ and $E\left[ aX+bY%
+\right] =aE\left[ X\right] +bE\left[ Y\right] $.
+
+3) \emph{(monotonicity) } Let $X$, $Y$ be random variables such that 
+$\Pr \left\{ X\leq Y\right\} =1$ and $E\left[ \left\vert X\right\vert \right]
+<\infty $, $E\left[ \left\vert Y\right\vert \right] <\infty $; then $E\left[
+X\right] \leq E\left[ Y\right] $.
+
+\begin{proof}
+
+1) Let's define%
+\[
+F=\left\{ \omega \in \Omega :X\left( \omega \right) =c\right\} ;
+\]
+
+Then by hypothesis 
+\[
+\Pr \left\{ \Omega \backslash F\right\} =0
+\]
+
+and
+\[
+\Pr \left\{ F\right\} =1.
+\]
+
+We have:
+
+\begin{eqnarray*}
+E[X] &=&\int_{\Omega }X\left( \omega \right) dP \\
+&=&\int_{\Omega \backslash F}X\left( \omega \right) dP+\int_{F}X\left(
+\omega \right) dP \\
+&=&\int_{F}X\left( \omega \right) dP \\
+&=&\int_{F}cdP \\
+&=&c\Pr \left\{ F\right\} =c.
+\end{eqnarray*}
+
+
+2) \textit{[to be done]}.
+
+
+3) Let's define%
+\[
+F=\left\{ \omega \in \Omega :X\left( \omega \right) \leq Y\left( \omega
+\right) \right\} ;
+\]
+
+Then by hypothesis 
+\[
+\Pr \left\{ \Omega \backslash F\right\} =0
+\]
+
+and
+\[
+\Pr \left\{ F\right\} =1.
+\]
+
+We have, keeping in mind property 2),
+
+\begin{eqnarray*}
+E[Y]-E[X] &=&E[Y-X] \\
+&=&\int_{\Omega }\left[ Y\left( \omega \right) -X\left( \omega \right) %
+\right] dP \\
+&=&\int_{\Omega \backslash F}\left[ Y\left( \omega \right) -X\left( \omega
+\right) \right] dP+\int_{F}\left[ Y\left( \omega \right) -X\left( \omega
+\right) \right] dP \\
+&=&\int_{F}\left[ Y\left( \omega \right) -X\left( \omega \right) \right]
+dP\geq 0.
+\end{eqnarray*}
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

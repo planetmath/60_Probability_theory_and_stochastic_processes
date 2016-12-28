@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MeanHittingTime}
+\pmcreated{2013-03-22 14:20:12}
+\pmmodified{2013-03-22 14:20:12}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{mean hitting time}
+\pmrecord{24}{35807}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60J10}
+\pmrelated{HittingTime}
+\pmdefines{mean hitting time}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $(X_n)_{n\ge 0}$ be a Markov chain with transition probabilities $p_{ij}$ where $i,j$ are states in an indexing set $I$.  Let $H^A$ be the hitting time of $(X_n)_{n\ge 0}$ for a subset $A\subseteq I$. That is, $H^A$ is the random variable of the time it takes for the \PMlinkescapetext{chain} to first reach a \PMlinkescapetext{state} in $A$.
+
+Define the \emph{mean hitting time} of $A$ given the \PMlinkescapetext{chain} starts in state $i$ to be
+
+\begin{displaymath}
+k_i^A := E(H^A | X_0 = i).
+\end{displaymath}
+
+\begin{prop} The mean hitting times are the minimal non negative solution to:
+\[
+k_i^A = 
+\begin{cases}
+0 &\qquad i\in A\\
+1 + \displaystyle{\sum_{j\in I} p_{ij} k_j^A} &\qquad i \notin A
+\end{cases}
+\] %%%When using amsmath we have "cases" environment handy
+\end{prop}
+
+\textbf{Remark}.  In this case, a solution is minimal if for any non negative solution $\{y_i | i \in I\}$ we have $y_i \ge k_i^A$ for all $i\in I$.
+
+\begin{proof}
+
+If $i\in A$, then $H^A=\inf\lbrace n\ge 0\mid X_n\in A\rbrace \equiv 0$, which means $k_i^A = 0$ (the \PMlinkescapetext{chain} is certain to be in a state in $A$ at step $n=0$).
+
+If $i\notin A$ we condition on the first step:
+
+\begin{align*}
+k_i^A & = E(H^A \mid X_0 = i) \\
+& = \sum_{j \in I} P(X_1 = j | X_0 = i) E(H^A | X_0 = i, X_1 = j) \\
+& = \sum_{j \in I} p_{ij} E(H^A | X_1 = j) \quad \textrm{(by the Markov property)}\\
+& = \sum_{j \in I} p_{ij} (1 + k_j^A)\\
+& = 1 + \sum_{j \in I} p_{ij} k_j^A
+\end{align*}
+
+So the $k_i^A$ satisfy the given equations. 
+
+Now suppose that $\{y_i | y \in I\}$ is any non-negative solution to the equations. Then for $i \in A$ we have $k_i^A = y_i = 0$.  If $i \notin A$, then
+
+\begin{align*}
+y_i & = 1 + \sum_{j \in I} p_{ij}y_j \\
+& = 1 + \sum_{j \notin A} p_{ij}(1 + \sum_{k \notin A} p_{jk} y_k) \\
+& = 1 + \sum_{j \notin A} p_{ij} + \sum_{j \notin A} \sum_{k \notin A} p_{ij} p_{jk} y_k \\
+& = 1 + q_1 + q_2 + \cdots + q_n + \sum \cdots \sum p_{ij} \cdots p_{uv}y_v,
+\end{align*}
+where $q_n = P(X_1 \notin A, X_1 \notin A, \cdots, X_n \notin A | X_0 =i)$ is the probability that the chain $X$ does not enter $A$ in the first $n$ steps after the initial state $i$.
+
+$y_i$ is non negative by assumption, therefore so is the final term, and so
+$$y_i \geq 1 + q_1 + q_2 + \cdots + q_n.$$
+Since $n$ is arbitrary, by taking the limit $n\to \infty$, we have that 
+$$y_i \geq \lim_{n \to \infty} (1 + q_1 + q_2 + \cdots + q_n) \geq k_i^A.$$
+So $y_i \geq k_i^A$ for all $i \in I$ and therefore $\{k_i^A | i \in I \}$ is the minimal solution.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

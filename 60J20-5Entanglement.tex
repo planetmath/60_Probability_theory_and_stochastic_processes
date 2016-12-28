@@ -1,0 +1,301 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{5Entanglement}
+\pmcreated{2014-04-22 23:06:40}
+\pmmodified{2014-04-22 23:06:40}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{5. Entanglement}
+\pmrecord{4}{88089}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Feature}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\DeclareMathOperator{\Hom}{Hom}
+
+\newcommand{\vecify}{{\mathcal V}}
+\newcommand{\Act}{{A}}
+\newcommand{\act}{{a}}
+\newcommand{\Sit}{{S}}
+\newcommand{\occ}{{v}}
+\newcommand{\univ}{{\mathbf D}}
+\newcommand{\uout}{{d_{out}}}
+\newcommand{\uin}{{d_{in}}}
+\newcommand{\mangle}{{\mathbf C}}
+
+\newcommand{\psheaf}{{\mathcal F}}
+\newcommand{\scat}{{\mathtt{Stoch}}}
+\newcommand{\subs}{{\mathtt{Sys}}}
+\newcommand{\mcat}{{\mathtt{Meas}}}
+\newcommand{\eop}{{$\blacksquare$}}
+\newcommand{\eod}{{${}$\\}}
+\newcommand{\bra}{{\langle}}
+\newcommand{\ket}{{\rangle}}
+
+\newcommand{\cN}{{\mathcal N}}
+\newcommand{\bR}{{\mathbb R}}
+\newcommand{\fm}{{\mathfrak m}}
+\newcommand{\cP}{{\mathcal P}}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+
+\theoremstyle{remark}
+\newtheorem{eg}{Example}
+\newtheorem{rem}{Remark}
+\newtheorem{defn}{Definition}
+\setcounter{eg}{3}
+\setcounter{rem}{2}
+\setcounter{defn}{9}
+\setcounter{thm}{8}
+\begin{document}
+The proof of %Theorem~\ref{t:presheaf} 
+\PMlinkname{Theorem~4}{3distributeddynamicalsystems#Thmthm4}
+showed the structure presheaf has non-unique descent, 
+reflecting the fact that measuring devices do not necessarily 
+reduce to products of subdevices. Similarly, as we will see, 
+measurements do not in general decompose into independent 
+submeasurements. Entanglement, $\gamma$, quantifies how far a 
+measurement diverges in bits from the product of its 
+submeasurements. It turns out that $\gamma>0$ is necessary for 
+a system to generate more information than the sum of its 
+components: non-unique descent thus provides ``room at the top''
+to build systems that perform more precise measurements 
+collectively than the sum of their components. 
+
+Entanglement has no direct relation to quantum entanglement. 
+The name was chosen because of a formal resemblance between the 
+two quantities, see Supplementary Information of \cite{bt:09}.
+
+\begin{defn}
+    \label{d:gamma}
+	\emph{Entanglement} over partition $\cP=\{M_1\ldots M_m\}$ 
+    of $src(\fm_\univ)$ is
+	\begin{equation*}
+		\gamma(\fm_\univ,\cP,\uout)
+		=H\left[\fm_\univ^\natural\circ \uout\Big\|
+        \bigotimes_{i=1}^m \pi_j\circ \fm_j^\natural\circ 
+        \uout\right]
+	\end{equation*}
+	where $\pi_j:\vecify \Sit^\univ\rightarrow 
+    \vecify \Sit^{M_j}$ and $\fm_j=\{(k,l)\in 
+    \fm_\univ|k\in M_j\}$.
+\end{defn}
+
+Projecting via $\pi_j$ marginalizes onto the subspace 
+$\vecify\Sit^{M_j}$. Entanglement thus compares the measurement 
+performed by the entire system with submeasurements over the 
+decomposition of the source occasions into partition $\cP$.
+
+\begin{thm}
+	[effective information decomposes additively when 
+    entanglement is zero]
+	\label{t:gamma}
+	\begin{equation*}
+		\gamma(\fm_\univ,\cP,\uout) = 0
+		\,\,\,\,\,\implies\,\,\,\,\,
+		ei(\fm_\univ,\uout)=\sum_{i=1}^m ei(\fm_j,\uout).
+	\end{equation*}
+\end{thm}
+
+\noindent
+Proof: Follows from the observations that (i) 
+$H[p\|p_1\otimes p_2]=0$ if and only if $p=p_1\otimes p_2$; (ii)
+$H[p_1\otimes p_2\| q_1\otimes q_2]=H[p_1\|q_1]+H[p_2\|q_2]$; 
+and (iii) the uniform distribution on $\univ$ is a tensor of 
+uniform distributions on subsystems of $\univ$.
+\eop
+
+The theorem shows the relationship between effective information
+and entanglement. If a system generates more information ``than 
+it should'' (meaning, more than the sum of its subsystems), then
+the measurements it generates are entangled. Alternatively, only
+indecomposable measurements can be more precise than the sum of 
+their submeasurements.
+
+We conclude with some detailed computations for 
+$X\times Y\xrightarrow{g}Z$, %Diagram~\eqref{e:diag}
+\PMlinkname{Diagram~(11)}{4measurement#id2}. 
+Let $\cP=\{X|Y\}$.
+
+\begin{thm}[entanglement and effective information for 
+$g:X\times Y\rightarrow Z$]
+	\label{t:g_ei}
+	\begin{align*}
+		\gamma(\fm_{XY},\cP,\delta_z) & = 
+        \sum_{(x,y)\in g^{-1}(z)}
+		\frac{1}{|g^{-1}(z)|}\log_2\frac{|g^{-1}(z)|}
+        {|g^{-1}_{x\times Y}(z)|\cdot |g^{-1}_{X\times Y}(z)|} \\
+		& = ei(\fm_{XY},\delta_z) - ei(\fm_{X\bullet},\delta_z) 
+        - ei(\fm_{\bullet Y},\delta_z).
+	\end{align*}
+\end{thm}
+
+\noindent
+Proof:
+The first equality follows from Propositions~%\ref{t:classmeas} 
+\PMlinkname{5}{4measurement#Thmthm5}
+and %\ref{t:confmeas}
+\PMlinkname{6}{4measurement#Thmthm6}
+\begin{equation*}
+    \gamma(\fm_{XY},\cP,\delta_z)=\sum_{(x,y)\in g^{-1}(z)}
+	= \sum_{(x,y)\in g^{-1}(z)}\frac{1}{|g^{-1}(z)|}\log_2
+    \left[
+	\frac{1}{|g^{-1}(z)|}\cdot \frac{|g^{-1}(z)|}
+    {|g^{-1}_{x\times Y}(z)|}
+	\frac{|g^{-1}(z)|}{|g^{-1}_{X\times Y}(z)|}\right].
+\end{equation*}
+From the same propositions it follows that 
+$ei(\fm_{XY},\delta_z) - ei(\fm_{X\bullet},\delta_z) - 
+ei(\fm_{\bullet Y},\delta_z)$ equals
+\begin{gather*}
+	 \log_2\frac{|X|\cdot|Y|}{|g^{-1}(x)|}-\sum_{x}
+     \frac{|g^{-1}_{x\times Y}(z)|}{|g^{-1}(z)|}\log_2
+	\frac{|X|\cdot|g^{-1}_{x\times Y}(z)|}{|g^{-1}(z)|}
+	-\sum_y \frac{|g^{-1}_{X\times y}(z)|}{|g^{-1}(z)|}
+    \log_2\frac{|Y|\cdot|g^{-1}_{X\times y}(z)|}{|g^{-1}(z)|}\\
+	= \log_2 \frac{1}{g^{-1}(z)} - \sum_{(x,y)\in g^{-1}(z)}
+    \frac{1}{|g^{-1}(z)|}\cdot
+	\log_2\frac{|g^{-1}_{X\times y}(z)|}{|g^{-1}(z)|}\cdot
+    \frac{|g^{-1}_{x\times Y}(z)|}{|g^{-1}(z)|}.
+\end{gather*}
+Entanglement quantifies how far the size of the pre-image of 
+$g^{-1}(z)$ deviates from the sizes of its $X\times y$ and 
+$x\times Y$ slices as $x$ and $y$ are varied. 
+\eop
+
+By Corollary~%\ref{t:diffmeas} 
+\PMlinkname{8}{4measurement#Thmthm8}
+entanglement also equals $ei(\fm_{X\bullet}\rightarrow 
+\fm_{XY},\delta_z)-ei(\fm_{\bullet Y},\delta_z)$. In 
+Diagram~%\eqref{e:diag} 
+\PMlinkname{(11)}{4measurement#id2}
+entanglement is the vertical arrow minus both arrows at the 
+bottom, or the difference between opposing diagonal arrows. 
+Note that the diagonal arrows from left to right are 
+constructed by adding edge $v_Y\rightarrow v_Z$ to the null 
+system and the subsystem $\fm_{X\bullet}=
+\{v_X\rightarrow v_Z\}$ respectively.  Entanglement is the 
+difference between the information generated by the diagonal 
+arrows. It quantifies the difference between the information 
+$\{v_Y\rightarrow v_Z\}$ generates in two different contexts.
+
+\begin{cor}
+    [characterization of disentangled set-valued functions]
+	\label{t:g0z}
+	Function $X\times Y\xrightarrow{g}Z$ performs a 
+    disentangled measurement when outputting $z$ iff
+	\begin{equation*}
+		g^{-1}(z)=g^{-1}_{x\times Y}(z)\times 
+        g^{-1}_{X\times y}(z)
+	\end{equation*}
+	for any $x,y$ such that $g(x,y)=z$.
+\end{cor}
+
+\noindent
+Proof:
+By Theorem~\ref{t:g_ei} entanglement is zero iff
+\begin{equation*}
+	|g^{-1}(z)|=|g^{-1}_{x\times Y}(z)|\cdot 
+    |g^{-1}_{X\times y}(z)|
+\end{equation*}
+for any $x,y$ such that $g(x,y)=z$. This implies the desired 
+result since $g^{-1}(z)\hookrightarrow g^{-1}_{x\times Y}(z)
+\times g^{-1}_{X\times y}(z)$.
+\eop
+
+Thus, the measurement generated by $g$ is disentangled iff its 
+pre-image $g^{-1}(z)$ satisfies a strong geometric 
+``rectangularity'' constraint: that the pre-image decomposes 
+into the product of its $x\times Y$ and $X\times y$ slices for 
+all pairs of slices intersecting $g^{-1}(z)$. The 
+categorizations performed within a disentangled measuring 
+device have nothing to do with each other, so that the device 
+is best considered as two (or more) distinct devices that 
+happen to have been grouped together for the purposes of 
+performing a computation.
+
+\begin{eg}
+	An XOR-gate $g:X\times Y\rightarrow Z$ outputting 0 
+    generates an entangled measurement. The pre-image is 
+    $g^{-1}(0)=\{00,11\}$ so the XOR-gate generates 1 bit 
+    of information about occasions $v_X$ and $v_Y$. However, 
+    the bit is \emph{not localizable}. The measurement 
+    generates no information about occasion $v_X$ taken singly,
+    since its output could have been 0 or 1 with equal 
+    probability; and similarly for $v_Y$.
+\end{eg}
+
+Finally, and unsurprisingly, a function is completely 
+disentangled across all its measurements iff it is a 
+product of two simpler functions:
+
+\begin{cor}
+	[completely disentangled functions are products]
+	\label{t:g0}
+	If $X\times Y\xrightarrow{g}Z$ is surjective, then\\
+	$\gamma(\fm_{XY},\cP,\delta_z)=0$ for all $z\in Z$ iff $g$ 
+    decomposes into $X\times Y\xrightarrow{g_1\times g_2}
+    Z_1\times Z_2=Z$ for $X\xrightarrow{g_1}Z_1$ and 
+    $Y\xrightarrow{g_2}Z_2$.
+\end{cor}
+
+\noindent
+Proof:
+The reverse implication is trivial.
+In the forward direction, note that $Z=\{g^{-1}(z)|z\in Z\}$ 
+and, by Corollary \ref{t:g0z}, each pre-image has product 
+structure $g^{-1}(z)=g^{-1}_{x\times Y}(Z)\times 
+g^{-1}_{X\times Y}(z)$. Let $Z_1=\{g^{-1}_{X\times y}
+|y\in Y\mbox{ and }z\in Z\}$ and similarly for $Z_2$. Define 
+\begin{equation*}
+	g_1:X\rightarrow Z_1:x\mapsto \mbox{the unique element of 
+    form }g^{-1}_{X\times y}(z)
+	\mbox{ containing it,}
+\end{equation*}
+and similarly for $g_2$.
+
+\begin{thebibliography}{10}
+%\providecommand{\bibitemdeclare}[2]{}
+\providecommand{\urlprefix}{Available at }
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{\texttt{#2}}
+\providecommand{\urlalt}[2]{\href{#1}{#2}}
+\providecommand{\doi}[1]{doi:\urlalt{http://dx.doi.org/#1}{#1}}
+\providecommand{\bibinfo}[2]{#2}
+
+%\bibitemdeclare{article}{bt:09}
+\bibitem{bt:09}
+\bibinfo{author}{David Balduzzi} \& \bibinfo{author}{Giulio Tononi}
+  (\bibinfo{year}{2009}): \emph{\bibinfo{title}{Qualia: the geometry of
+  integrated information}}.
+\newblock {\sl \bibinfo{journal}{PLoS Comput Biol}}
+  \bibinfo{volume}{5}(\bibinfo{number}{8}), p. \bibinfo{pages}{e1000462},
+  \doi{10.1371/journal.pcbi.1000462}.
+  
+\end{thebibliography}
+\end{document}

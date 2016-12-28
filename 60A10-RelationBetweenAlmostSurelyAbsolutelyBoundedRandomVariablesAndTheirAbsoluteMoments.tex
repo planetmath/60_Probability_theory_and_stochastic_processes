@@ -1,0 +1,138 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RelationBetweenAlmostSurelyAbsolutelyBoundedRandomVariablesAndTheirAbsoluteMoments}
+\pmcreated{2013-03-22 16:14:33}
+\pmmodified{2013-03-22 16:14:33}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{relation between almost surely absolutely bounded random variables and their absolute moments}
+\pmrecord{8}{38346}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $\{\Omega ,E,P\}$ a probability space and let $X$ be a random
+variable; then, the following are equivalent:
+
+1) $\Pr \left\{ \left\vert X\right\vert \leq M\right\} =1$ \ i.e. $X$ is
+absolutely bounded almost surely;
+
+2) $E[\left\vert X\right\vert ^{k}]\leq M^{k}$ \ \ \ \ \ \ $\forall k\geq
+1,k\in N$
+
+
+\begin{proof}
+
+1) $\Longrightarrow $ 2)
+
+Let's define%
+\[
+F=\left\{ \omega \in \Omega :\left\vert X\left( \omega \right) \right\vert
+>M\right\} ;
+\]
+
+Then by hypothesis 
+\[
+\Pr \left\{ \Omega \backslash F\right\} =1
+\]
+
+and
+\[
+\Pr \left\{ F\right\} =0.
+\]
+
+We have:
+\begin{eqnarray*}
+E[\left\vert X\right\vert ^{k}] &=&\int_{\Omega }\left\vert X\right\vert
+^{k}dP \\
+&=&\int_{\Omega \backslash F}\left\vert X\right\vert
+^{k}dP+\int_{F}\left\vert X\right\vert ^{k}dP \\
+&=&\int_{\Omega \backslash F}\left\vert X\right\vert ^{k}dP \\
+&\leq &\int_{\Omega \backslash F}M^{k}dP \\
+&=&M^{k}\Pr \left\{ \Omega \backslash F\right\} =M^{k}.
+\end{eqnarray*}
+
+2) $\Longrightarrow $ 1)
+
+Let's define
+\begin{eqnarray*}
+F &=&\left\{ \omega \in \Omega :\left\vert X\left( \omega \right)
+\right\vert >M\right\}  \\
+F_{n} &=&\left\{ \omega \in \Omega :\left\vert X\left( \omega \right)
+\right\vert >M+\frac{1}{n}\right\} \text{ \ }\forall n\geq 1.
+\end{eqnarray*}
+
+Then we have obviously $F_{n}\subseteq F_{n+1}$ (in fact, if $\omega \in
+F_{n}\Longrightarrow \left\vert X\left( \omega \right) \right\vert >M+\frac{1%
+}{n}>M+\frac{1}{n+1}\Longrightarrow \omega \in F_{n+1}$) and $%
+F=\bigcup_{n=1}^{\infty }F_{n}$ (in fact, let $\omega \in F$; let $%
+N=\left\lceil \frac{1}{\left\vert X\left( \omega \right) \right\vert -M}%
+\right\rceil $; then $\left\vert X\left( \omega \right) \right\vert >M+\frac{%
+1}{N}$, that is $\omega \in F_{N}$); this means that%
+\[
+F=\lim_{n\rightarrow \infty }F_{n}
+\]
+
+in the meaning of \PMlinkname{sets sequences convergence}{SequenceOfSetsConvergence}.
+
+So \PMlinkname{the continuity from below property}{PropertiesForMeasure} of probability can be applied:
+\[
+\Pr \left\{ F\right\} =\Pr \left\{ \lim_{n\rightarrow \infty }F_{n}\right\}
+=\lim_{n\rightarrow \infty }\Pr \left\{ F_{n}\right\} .
+\]
+
+Now, for any $k\geq 1$,
+\begin{eqnarray*}
+M^{k} &\geq &E\left[ \left\vert X\right\vert ^{k}\right] \\
+&=&\int_{\Omega }\left\vert X\left( \omega \right) \right\vert ^{k}dP \\
+&=&\int_{\Omega \backslash F_{n}}\left\vert X\left( \omega \right)
+\right\vert ^{k}dP+\int_{F_{n}}\left\vert X\left( \omega \right) \right\vert
+^{k}dP \\
+&\geq &\int_{F_{n}}\left\vert X\left( \omega \right) \right\vert ^{k}dP \\
+&\geq &\int_{F_{n}}\left( M+\frac{1}{n}\right) ^{k}dP \\
+&=&\left( M+\frac{1}{n}\right) ^{k}\Pr \left\{ F_{n}\right\} .
+\end{eqnarray*}
+
+that is%
+\[
+\Pr \left\{ F_{n}\right\} \leq\left( \frac{M}{M+\frac{1}{n}}\right) ^{k}\text{
+\ for any }k\geq 1
+\]
+
+so that the only acceptable value for $\Pr \left\{ F_{n}\right\} $ is
+\[
+\Pr \left\{ F_{n}\right\} =0
+\]
+
+whence the thesis.
+\end{proof}
+
+Acknowledgements: due to helpful discussions with Mathprof.
+%%%%%
+%%%%%
+\end{document}

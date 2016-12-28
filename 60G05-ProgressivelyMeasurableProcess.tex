@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProgressivelyMeasurableProcess}
+\pmcreated{2013-03-22 18:37:31}
+\pmmodified{2013-03-22 18:37:31}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{progressively measurable process}
+\pmrecord{4}{41362}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G05}
+\pmsynonym{progressive process}{ProgressivelyMeasurableProcess}
+%\pmkeywords{stochastic process}
+%\pmkeywords{measurable}
+\pmrelated{PredictableProcess}
+\pmrelated{OptionalProcess}
+\pmdefines{progressive}
+\pmdefines{progressively measurable}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{index set}
+\PMlinkescapeword{property}
+A stochastic process $(X_t)_{t\in\mathbb{Z}_+}$ is said to be adapted to a \PMlinkname{filtration}{FiltrationOfSigmaAlgebras} $(\mathcal{F}_t)$ on the measurable space $(\Omega,\mathcal{F})$ if $X_t$ is an $\mathcal{F}_t$-measurable random variable for each $t=0,1,\ldots$. However, for continuous-time processes, where the time $t$ ranges over an arbitrary index set $\mathbb{T}\subseteq\mathbb{R}$, the property of being adapted is too weak to be helpful in many situations. Instead, considering the process as a map
+\begin{equation*}
+X\colon\mathbb{T}\times\Omega\rightarrow\mathbb{R},\ (t,\omega)\mapsto X_t(\omega)
+\end{equation*}
+it is useful to consider the measurability of $X$.
+
+The process $X$ is \emph{progressive} or \emph{progressively measurable} if, for every $s\in\mathbb{T}$, the stopped process $X^s_t\equiv X_{\min(s,t)}$ is $\mathcal{B}(\mathbb{T})\otimes\mathcal{F}_s$-measurable. In particular, every progressively measurable process will be adapted and jointly measurable. In discrete time, when $\mathbb{T}$ is countable, the converse holds and every adapted process is progressive.
+
+A set $S\subseteq\mathbb{T}\times\Omega$ is said to be progressive if its characteristic function $1_S$ is progressive. Equivalently,
+\begin{equation*}
+S\cap\left( (-\infty,s]\times\Omega\right)\in\mathcal{B}(\mathbb{T})\otimes\mathcal{F}_s
+\end{equation*}
+for every $s\in\mathbb{T}$. The progressively measurable sets form a $\sigma$-algebra, and a stochastic process is progressive if and only if it is measurable with respect to this $\sigma$-algebra.
+
+%%%%%
+%%%%%
+\end{document}

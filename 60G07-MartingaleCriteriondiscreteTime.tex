@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MartingaleCriteriondiscreteTime}
+\pmcreated{2013-03-22 18:34:48}
+\pmmodified{2013-03-22 18:34:48}
+\pmowner{karstenb}{16623}
+\pmmodifier{karstenb}{16623}
+\pmtitle{Martingale criterion (discrete time)}
+\pmrecord{5}{41304}
+\pmprivacy{1}
+\pmauthor{karstenb}{16623}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G07}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage[sort&compress]{natbib}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%\usepackage{xypic}
+
+%theorems
+\theoremstyle{definition}
+\newtheorem{Def}{Definition}
+
+\theoremstyle{plain}
+\newtheorem*{Lem}{Theorem}
+\newtheorem{Lem2}{Lemma}
+\newtheorem{Cor}{Corollary}
+\newtheorem{Rem}{Remark}
+
+% commands
+%\newcommand{\comment}[1]{\small{(\,\textit{#1}\;)}}
+
+
+\begin{document}
+\begin{Lem}
+Let $X = (X_n, \mathcal{F}_n)$ be a local martingale. If there is an $n_0 \in \mathbb{N}$ such that $\forall \ n \geq n_0, n \in \mathbb{N}$ either:
+\begin{align*}
+E X_n^{-} &< \infty
+\end{align*}
+
+or:
+\begin{align*}
+E X_n^{+} &< \infty
+\end{align*}
+
+Then $X$ is a martingale.
+\end{Lem}
+%%%%%
+%%%%%
+\end{document}

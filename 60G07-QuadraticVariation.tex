@@ -1,0 +1,167 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuadraticVariation}
+\pmcreated{2013-03-22 18:41:12}
+\pmmodified{2013-03-22 18:41:12}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{quadratic variation}
+\pmrecord{4}{41438}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G07}
+\pmclassification{msc}{60H10}
+\pmclassification{msc}{60H20}
+%\pmkeywords{stochastic process}
+%\pmkeywords{cadlag}
+%\pmkeywords{convergence in probability}
+\pmrelated{QuadraticVariationOfASemimartingale}
+\pmrelated{QuadraticVariationOfBrownianMotion}
+\pmdefines{quadratic covariation}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{extension}
+\PMlinkescapeword{function}
+\PMlinkescapeword{summing}
+\PMlinkescapeword{sequence}
+\PMlinkescapeword{squares}
+\PMlinkescapeword{applications}
+\PMlinkescapeword{variables}
+\PMlinkescapeword{formulas}
+\PMlinkescapeword{theorem}
+\PMlinkescapeword{well defined}
+\PMlinkescapeword{index}
+\PMlinkescapeword{partition}
+\PMlinkescapeword{way}
+\PMlinkescapeword{running}
+\PMlinkescapeword{terms}
+\PMlinkescapeword{symmetric}
+\PMlinkescapeword{satisfy}
+\PMlinkescapeword{properties}
+\PMlinkescapeword{order}
+\PMlinkescapeword{independent}
+\PMlinkescapeword{bounded intervals}
+\PMlinkescapeword{identities}
+\PMlinkescapeword{reference}
+
+The quadratic variation of a process is an extension of the notion of the total variation of a function, but rather than summing the absolute values of the changes of a function sampled at a sequence of times, the squares are summed.
+This has important applications in stochastic calculus, appearing in the integration by parts and change of variables formulas for stochastic integration. The quadratic variation also has applications to the study of martingales, occuring in the Ito isometry and Burkholder-Davis-Gundy inequalities.
+
+An important example is for a Brownian motion $W$. In this case, the quadratic variation is $[W]_t=t$ and, by L\'evy's theorem, this fact characterizes Brownian motion among all local martingales.
+Quadratic variations are well defined for all cadlag martingales and, more generally, all semimartingales.
+
+In standard, non-stochastic calculus, quadratic variation does not play a large role. This is because it is equal to zero for all continuously differentiable processes and, in fact, for all continuous finite variation processes. Furthermore, it can be shown if any continuous deterministic process has a well defined quadratic variation along all \PMlinkname{partitions}{Partition3}, then it is zero.
+
+In the following definitions, we assume the existence of a probability space $(\Omega,\mathcal{F},\mathbb{P})$.
+
+\section{discrete time processes}
+
+Let $(X_t)$ be a stochastic process, with time ranging over the nonnegative integers $t=0,1,2,\ldots$. Then, the quadratic variation $[X]$ is the process
+\begin{equation*}
+[X]_t=\sum_{s=1}^t(X_{s}-X_{s-1})^2.
+\end{equation*} 
+Similarly, for processes $X,Y$, the \emph{quadratic covariation} $[X,Y]$ is defined by
+\begin{equation*}
+[X,Y]_t=\sum_{s=1}^t(X_{s}-X_{s-1})(Y_{s}-Y_{s-1}).
+\end{equation*}
+Note that $[X,Y]$ is bilinear and symmetric in interchanging $X$ and $Y$. The quadratic variation is alternatively given by $[X]=[X,X]$, and the covariation can be written in terms of the quadratic variation by the polarization identity,
+\begin{equation*}
+[X,Y]=([X+Y]-[X-Y])/4.
+\end{equation*}
+
+\section{quadratic variation on an interval}
+
+Now suppose that $(X_t)$ is a stochastic process with time $t$ running over the interval $[0,T]$, for some $T>0$. If $P$ is a partition of the interval,
+\begin{equation*}
+P=\left\{0=\tau_0\le\tau_1\le\cdots\le\tau_m=T\right\}
+\end{equation*}
+then we can define the quadratic variation and covariation along the partition $P$ by
+\begin{align*}
+&[X]^P\equiv\sum_{k=1}^m(X_{\tau_k}-X_{\tau_{k-1}})^2,\\
+&[X,Y]^P\equiv\sum_{k=1}^m(X_{\tau_k}-X_{\tau_{k-1}})(Y_{\tau_k}-Y_{\tau_{k-1}}).
+\end{align*}
+The \emph{mesh} of the partition is $|P|=\max_k(\tau_k-\tau_{k-1})$. Given a sequence of partitions $P_n$ with mesh going to zero as $n\rightarrow \infty$, the quadratic variation and covariation are defined by
+\begin{equation*}
+[X]_T\equiv\lim_{n\rightarrow\infty}[X]^{P_n},\ [X,Y]_T\equiv\lim_{n\rightarrow\infty}[X,Y]^{P_n}.
+\end{equation*}
+It is only required that these limits exist under convergence in probability, which is much weaker than requiring convergence for all or almost all $\omega\in\Omega$.
+The limits are not guaranteed to exist. If they do, then the quadratic variation and covariation are said to exist along the sequence of partitions $P_n$.
+
+More generally, \emph{random partitions} can be used where the times $\tau_k$ are random variables, usually stopping times. In this case, the processes $X,Y$ are required to satisfy additional properties in order for their values at a random time to make sense, normally that they are right-continuous or cadlag. The mesh of each partition $P_n$ is then a random variable, and is only required to tend to zero in probability as $n\rightarrow\infty$.
+
+If the quadratic variation (respectively, covariation) exists along all such sequences of non-stochastic, or \emph{deterministic}, partitions then it is easily shown to be independent of the sequence of partitions used. In this case, we simply say that the quadratic variation $[X]_T$ (resp. covariation $[X,Y]_T$) exists without referring to the partitions used.
+
+\section{quadratic variation as a process}
+
+Suppose that $(X_t)$ and $(Y_t)$ are stochastic processes with time index running over the nonnegative real numbers, $t\in\mathbb{R}_+$. In this case, the quadratic variation and covariation can be defined as as above over the interval $[0,t]$, for each $t>0$.
+
+However, in continuous-time, defining it in this way does not determine the sample paths of the processes $[X]_t$, $[X,Y]_t$. This is because these random variables are only defined $\mathbb{P}$-almost everywhere at each $t$, which does not say anything about their joint properties at uncountably many times. It is possible to remedy this by requiring that the quadratic variation and covariation be right-continuous. That is, we take a right-continuous version of the processes.
+
+Alternatively, the limits can be taken simultaneously at all times. If $P$ is a partition of $\mathbb{R}_+$,
+\begin{equation*}
+P=\left\{0=\tau_0\le\tau_1\le\tau_2\le\cdots\uparrow\infty\right\}
+\end{equation*}
+then the quadratic variation and covariation along the partition $P$ are the processes
+\begin{align*}
+&[X]^P_t\equiv\sum_{k=1}^\infty\left(X_{\tau_k\wedge t}-X_{\tau_{k-1}\wedge t}\right)^2,\\
+&[X,Y]^P_t\equiv\sum_{k=1}^\infty\left(X_{\tau_k\wedge t}-X_{\tau_{k-1}\wedge t}\right)\left(Y_{\tau_k\wedge t}-Y_{\tau_{k-1}\wedge t}\right).
+\end{align*}
+Since $\tau_k\rightarrow\infty$, all but finitely many terms in these sums will be zero. As above, the partition $P$ may be random, in which case $\tau_k$ are random variables.
+
+Now suppose that $P_n$ is a sequence of such partitions whose mesh over the bounded intervals $[0,t]$, $|P_n^t|\equiv\max_k(\tau_k\wedge t-\tau_{k-1}\wedge t)$ tends to zero in probability as $n\rightarrow\infty$. Then the quadratic variation and covariation along $P_n$ is defined by the limits
+\begin{equation*}
+[X]\equiv \lim_{n\rightarrow\infty}[X]^{P_n},\ [X,Y]\equiv\lim_{n\rightarrow\infty}[X,Y]^{P_n}.
+\end{equation*}
+The limit here is usually required to exist under ucp convergence. As a consequence, quadratic variations of cadlag adapted processes are themselves cadlag and adapted, and quadratic variations of continuous processes are continuous.
+
+If the quadratic variation or covariation exists along all such sequences of deterministic partitions then, as above, they are simply said to exist without making reference to the partitions used.
+
+As squares of real numbers are positive, it follows that the quadratic variation is an increasing process and, by the polarization identity, if $[X],[Y],[X,Y]$ all exist then the quadratic covariation is a difference of increasing functions, and so is a finite variation process.
+
+The quadratic variation and covariation are sometimes written as
+\begin{equation*}
+[X]_t=\int_0^t\,(dX)^2,\ [X,Y]_t=\int_0^t\,dX\,dY,
+\end{equation*}
+and in differential notation,
+\begin{equation*}
+d[X]_t=(dX_t)^2,\ d[X,Y]_t=dX_t\,dY_t.
+\end{equation*}
+
+If we write $\Delta X_t\equiv X_t-X_{t-}$ for the jump of a cadlag process at time $t$ then, as a consequence of ucp convergence,
+\begin{equation*}
+\Delta [X]_t=(\Delta X_t)^2,\ \Delta [X,Y]_t=\Delta X_t \Delta Y_t.
+\end{equation*}
+These identities hold simultaneously for all times $t>0$, with probability one.
+
+
+%%%%%
+%%%%%
+\end{document}

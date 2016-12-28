@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BernoulliRandomVariable}
+\pmcreated{2013-03-22 11:54:01}
+\pmmodified{2013-03-22 11:54:01}
+\pmowner{Riemann}{23}
+\pmmodifier{Riemann}{23}
+\pmtitle{Bernoulli random variable}
+\pmrecord{7}{30517}
+\pmprivacy{1}
+\pmauthor{Riemann}{23}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60-00}
+\pmsynonym{Bernoulli distribution}{BernoulliRandomVariable}
+\pmrelated{BernoulliDistribution2}
+\pmrelated{GeometricDistribution2}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%%\usepackage{xypic}
+
+\begin{document}
+$X$ is a \textbf{Bernoulli random variable} with parameter \textbf{$p$} if\\
+\par
+$f_X(x) = p^x (1-p)^{1-x}$,     $x=\{0,1\}$	\\
+\par
+Parameters:\\
+\par
+\begin{list}{$\star$ }{}
+\item $p \in [0,1]$
+\end{list}
+\par
+Syntax:\\
+\par
+$X\sim Bernoulli(p)$\\
+\par
+Notes:\\
+\par
+\begin{enumerate}
+
+\item $X$ represents the number of successful results in a Bernoulli trial. A Bernoulli trial is an experiment in which only two outcomes are possible: success, with probability $p$, and failure, with probability $1-p$.
+\item $E[X] = p$
+\item $Var[X] = p(1-p)$
+\item $M_X(t) = p e^t + (1-p)$
+
+\end{enumerate}
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

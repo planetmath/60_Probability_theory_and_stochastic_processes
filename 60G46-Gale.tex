@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Gale}
+\pmcreated{2013-03-22 16:43:37}
+\pmmodified{2013-03-22 16:43:37}
+\pmowner{skubeedooo}{5401}
+\pmmodifier{skubeedooo}{5401}
+\pmtitle{gale}
+\pmrecord{5}{38948}
+\pmprivacy{1}
+\pmauthor{skubeedooo}{5401}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G46}
+\pmclassification{msc}{60G44}
+\pmclassification{msc}{60G42}
+%\pmkeywords{gale}
+%\pmkeywords{supergale}
+\pmdefines{supergale}
+\pmdefines{gale}
+\pmdefines{supermartingale}
+\pmdefines{succeed}
+\pmdefines{succeed strongly}
+\pmdefines{success set}
+\pmdefines{strong success set}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $\nu$ be a probability measure on Cantor space $\mathbf{C}$, and let $s\in[0, \infty)$.
+\begin{enumerate}
+\item
+A $\nu$-$s$-{\it supergale} is a function $d:\lbrace 0,1\rbrace ^{*}\rightarrow [0,\infty)$ that satisfies the condition 
+\begin{equation}
+d(w)\nu(w)^{s}\geq d(w0)\nu(w0)^{s}+d(w1)\nu(w1)^{s}
+\end{equation}
+for all $w\in\lbrace 0,1\rbrace^{*}$, the set of all finite strings of $0$'s and $1$'s (including $e$, the empty string).
+\item
+A $\nu$-$s$-{\it gale} is a $\nu$-$s$-{\it supergale} that satisfies the condition with equality for all $w\in\lbrace 0,1\rbrace^{*}$.
+\item
+A $\nu$-{\it supermartingale} is a $\nu$-1-supergale.
+\item
+A $\nu$-{\it martingale} is a $\nu$-1-gale.
+\item
+An $s$-{\it supergale} is a $\mu$-$s$-supergale, where $\mu$ is the uniform probability measure.
+\item
+An $s$-{\it gale} is a $\mu$-$s$-gale.
+\item
+A {\it supermartingale} is a 1-supergale.
+\item
+A {\it martingale} is a 1-gale.
+\end{enumerate}
+
+Put in another way, a martingale is a function $d:\lbrace 0,1 \rbrace^{*}\rightarrow [0,\infty)$ such that, for all $w\in \lbrace 0,1 \rbrace^{*}$, $d(w)=(d(w0)+d(w1))/2$.
+
+Let $d$ be a $\nu$-$s$-{\it supergale}, where $\nu$ is a probability measure on $\mathbf{C}$ and $s\in[0,\infty)$. We say that $d$ {\it succeeds} on a sequence $S\in\mathbf{C}$ if\[\limsup_{n\rightarrow \infty} d(S[0..n-1])=\infty.\]
+The {\it success set} of $d$ is $S^{\infty}[d]=\lbrace S\in\mathbf{C}\bigl | d\text{ succeeds on }S\rbrace$.
+$d$ succeeds on a language $A\subseteq \lbrace 0,1 \rbrace^{*}$ if $d$ succeeds on the characteristic sequence $\chi_A$ of $A$. We say that $d$ {\it succeeds strongly} on a sequence $S\in\mathbf{C}$ if\[\liminf_{n\rightarrow\infty}d(S[0..n-1])=\infty.\]
+The {\it strong success set} of $d$ is $S^{\infty}_{\text{str}}[d]=\lbrace S\in\mathbf{C}\bigl | d\text{ succeeds strongly on }S\rbrace$.
+
+
+Intuitively, a supergale $d$ is a betting strategy that bets on the next bit of a sequence when the previous bits are known. $s$ is the parameter that tunes the fairness of the betting. The smaller $s$ is, the less fair the betting is. If $d$ succeeds on a sequence, then the bonus we can get from applying $d$ as the betting strategy on the sequence is unbounded. If $d$ succeeds strongly on a sequence, then the bonus goes to infinity.
+%%%%%
+%%%%%
+\end{document}

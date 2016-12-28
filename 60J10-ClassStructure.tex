@@ -1,0 +1,36 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ClassStructure}
+\pmcreated{2013-03-22 14:18:21}
+\pmmodified{2013-03-22 14:18:21}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{class structure}
+\pmrecord{12}{35765}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60J10}
+\pmrelated{MarkovChain}
+\pmdefines{communicating class}
+\pmdefines{irreducible chain}
+\pmdefines{closed class}
+\pmdefines{absorbing state}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+\PMlinkescapeword{chain}
+Let $(X_n)_{n\ge 1}$ be a stationary Markov chain and let $i$ and $j$ be states in the indexing set. We say that $i$ leads to $j$ or $j$ is accessible from $i$, and write $i\to j$, if it is possible for the chain to get from state $i$ to state $j$:
+\[i\to j \iff P(X_n = j : X_0 = i) > 0 \quad \textrm{for some} \quad n\ge 0 \]
+
+If $i\to j$ and $j\to i$ we say $i$ communicates with $j$ and write $i\leftrightarrow j$. $\leftrightarrow$ is an equivalence relation (easy to prove).  The equivalence classes of this relation are the \emph{communicating classes} of the chain. If there is just one class, we say the chain is an \emph{irreducible chain}.
+
+A class $C$ is a \emph{closed class} if $i\in C$ and $i\to j$ implies that $j\in C$ ``Once the chain enters a closed class, it cannot leave it''
+
+A state $i$ is an \emph{absorbing state} if $\{i\}$ is a closed class.
+%%%%%
+%%%%%
+\end{document}

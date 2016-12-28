@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UniformdiscreteRandomVariable}
+\pmcreated{2013-03-22 11:54:09}
+\pmmodified{2013-03-22 11:54:09}
+\pmowner{Riemann}{23}
+\pmmodifier{Riemann}{23}
+\pmtitle{uniform (discrete) random variable}
+\pmrecord{7}{30521}
+\pmprivacy{1}
+\pmauthor{Riemann}{23}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60-00}
+\pmclassification{msc}{92B05}
+\pmclassification{msc}{92-01}
+\pmsynonym{uniform random variable}{UniformdiscreteRandomVariable}
+\pmsynonym{discrete uniform distribution}{UniformdiscreteRandomVariable}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%%\usepackage{xypic}
+
+\begin{document}
+$X$ is a \textbf{uniform (discrete) random variable} with parameter \textbf{$N$} if\\
+\par
+$f_X(x) = \frac{1}{N}$,     $x=\{1,2,...,N\}$	\\
+\par
+Parameters:\\
+\par
+\begin{list}{$\star$ }{}
+\item $N \in \{1,2,...\}$
+\end{list}
+\par
+Syntax:\\
+\par
+$X\sim U\{N\}$\\
+\par
+Notes:\\
+\par
+\begin{enumerate}
+
+\item $X$ represents the experiment in which all N outcomes are equally likely to ocurr.
+\item $E[X] = \frac{N+1}{2}$
+\item $Var[X] = \frac{N^2-1}{12}$
+\item $M_X(t) = \sum_{j=1}^{N}{\frac{1}{N} e^{jt}}$
+
+\end{enumerate}
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

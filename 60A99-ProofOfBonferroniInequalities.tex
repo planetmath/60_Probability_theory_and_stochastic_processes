@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBonferroniInequalities}
+\pmcreated{2013-03-22 19:12:44}
+\pmmodified{2013-03-22 19:12:44}
+\pmowner{csguy}{26054}
+\pmmodifier{csguy}{26054}
+\pmtitle{Proof of Bonferroni Inequalities}
+\pmrecord{6}{42131}
+\pmprivacy{1}
+\pmauthor{csguy}{26054}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\newtheorem*{defs}{Definitions and Notation}
+\newtheorem{lem}{Lemma}
+\newtheorem{cor}{Corollary}
+\newtheorem{thm}{Theorem}
+
+\begin{defs}
+A {\em measure space} is a triple $(X,\Sigma,\mu)$, where $X$ is a set, $\Sigma$ is a $\sigma$-algebra over $X$, and $\mu \colon \Sigma \rightarrow [0,\infty]$ is a measure, that is, a non-negative function that is countably additive.  If $A \in \Sigma$, the {\em characteristic function} of $A$ is the function $\chi_A \colon X \rightarrow \mathbb{R}$ defined by $\chi_A(x) = 1$ if $x \in A$, $\chi_A(x) = 0$ if $x \notin A$.  A {\em unimodal sequence} is a sequence of real numbers $a_0,a_1,\ldots,a_n$ for which there is an index $k$ such that $a_{i} \leq a_{i+1}$ for $i < k$ and $a_i \geq a_{i+1}$ for $i \geq k$.
+\end{defs}
+
+The proof of the following easy lemma is left to the reader:
+
+\begin{lem}
+\label{unimodal}
+If $a_0 \leq a_1 \leq \ldots \leq a_k \geq a_{k+1} \geq a_{k+2} \geq \ldots \geq a_n$ is a unimodal sequence of non-negative real numbers with $\sum_{i=0}^{n} (-1)^i a_i = 0$, then $\sum_{i=0}^j (-1)^i a_i \geq 0$ for even $j$ and $\leq 0$ for odd $j$.
+\end{lem}
+
+Since the binomial sequence $(\binom{a}{i})_{0 \leq i \leq n}$ with integer $a > 0$ and integer $n \geq a$ satisfies the hypothesis of Lemma~\ref{unimodal}, we have:
+
+\begin{cor}
+\label{bincor}
+If $a$ is a positive integer, $\sum_{i=0}^j (-1)^i \binom{a}{i} \geq 0$ for even $j$ and $\leq 0$ for odd $j$.
+\end{cor}
+
+\begin{lem}
+\label{combinat}
+Let $(A_i)_{1 \leq i \leq n}$ be a sequence of sets and let $X = \bigcup_{1 \leq i \leq n} A_i$. For $x \in X$, let $I(x)$ be the set of indices $j$ such that $x \in A_j$. If $1 \leq k \leq n$, 
+\begin{equation*}
+\sum_{1 \leq i_1 < i_2 < \ldots < i_k \leq n} \chi_{A_{i_1} \cap A_{i_2} \cap \ldots \cap A_{i_k}} (x) = \binom{|I(x)|}{k}
+\end{equation*}
+for all $x \in X$.
+\end{lem}
+\begin{proof}
+$\chi_{A_{i_1} \cap A_{i_2} \cap \ldots \cap A_{i_k}} (x) = 1$ if $\{i_1, i_2, \ldots, i_k\} \subseteq I(x)$, and $= 0$ otherwise. Therefore the sum equals the number of $k$-subsets of $I(x)$, which is $\binom{|I(x)|}{k}$.
+\end{proof}
+
+\begin{thm}
+Let $(X, \Sigma, \mu)$ be a measure space.  If $(A_i)_{1 \leq i \leq n}$ is a finite sequence of measurable sets all having finite measure, and 
+\begin{equation*}
+S_j = \mu(A_1 \cup A_2 \cup \ldots \cup A_n) + \sum_{k=1}^j (-1)^k \sum_{1 \leq i_1<i_2<\ldots<i_k \leq n} \mu(A_{i_1}\cap A_{i_2} \cap \ldots \cap A_{i_k})
+\end{equation*}
+ then $S_j \geq 0$ for even $j$, and $\leq 0$ for odd $j$.  Moreover, $S_n = 0$ (Principle of Inclusion-Exclusion).
+\end{thm}
+
+\begin{proof}
+Let $Y = \bigcup_{1 \leq i \leq n} A_i$.
+\begin{eqnarray*}
+S_j & = & \int_Y d\mu + \sum_{k=1}^j (-1)^k \sum_{1 \leq i_1<i_2<\ldots <i_k\leq n} \int_Y \chi_{A_{i_1} \cap A_{i_2} \cap \ldots \cap A_{i_k}} d\mu \\
+    & = & \int_Y d\mu +  \sum_{k=1}^j (-1)^k \int_Y (\sum_{1 \leq i_1<i_2<\ldots <i_k\leq n} \chi_{A_{i_1} \cap A_{i_2} \cap \ldots \cap A_{i_k}}) d\mu
+\end{eqnarray*}
+By Lemma~\ref{combinat},
+\begin{eqnarray*}
+S_j & = & \int_Y d\mu + \sum_{k=1}^j (-1)^k \int_Y \binom{|I(x)|}{k} d\mu \\
+    & = &  \sum_{k=0}^j (-1)^k \int_Y \binom{|I(x)|}{k} d\mu \\
+    & = & \int_Y \sum_{k=0}^j (-1)^k \binom{|I(x)|}{k} d\mu
+\end{eqnarray*}
+Since $|I(x)| >0$ for $x \in Y$, it follows from Corollary~\ref{bincor} that, in the last integral, the integrand is $\geq 0$ for even $j$ and $\leq 0$ for odd $j$. Therefore the same is true for the integral itself. In addition, the integrand is identically 0 for $j=n$, hence $S_n = 0$.
+\end{proof}
+
+This proof shows that at the heart of Bonferroni's inequalities lie similar inequalities governing the binomial coefficients.
+
+%%%%%
+%%%%%
+\end{document}

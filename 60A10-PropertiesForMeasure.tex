@@ -1,0 +1,145 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesForMeasure}
+\pmcreated{2013-03-22 13:45:28}
+\pmmodified{2013-03-22 13:45:28}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{properties for measure}
+\pmrecord{8}{34460}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A10}
+\pmclassification{msc}{28A10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+\begin{document}
+\newcommand{\cB}[0]{\mathcal{B}}
+
+{\bf Theorem} \cite{folland, mukherjea, cohn, friedman}
+Let $(E,\cB,\mu)$ be a measure space, i.e., 
+let $E$ be a set, let $\cB$ be a $\sigma$-algebra of sets
+in $E$, and let $\mu$ be a measure on $\cB$. 
+Then the following properties hold:
+\begin{enumerate}
+\item {\bf Monotonicity:} If $A,B\in \cB$, and $A\subset B$, then $\mu(A)\le \mu(B)$.
+\item If $A,B$ in $\cB$,  $A\subset B$, and $\mu(A)< \infty$, then 
+$$\mu(B\setminus A) = \mu(B)-\mu(A).$$
+\item For any  $A,B$ in $\cB$, we have
+$$ \mu(A\cup B)+\mu(A\cap B) = \mu(A) + \mu(B).$$
+\item {\bf Subadditivity:} If $\{A_i\}_{i=1}^\infty$ is a collection of sets from $\cB$, then
+$$\mu\big(\bigcup_{i=1}^\infty A_i\big) \le \sum_{i=1}^\infty \mu(A_i).$$
+\item {\bf Continuity from below:} 
+If $\{A_i\}_{i=1}^\infty$ is a collection of sets from $\cB$ such that
+$ A_i\subset A_{i+1}$ for all $i$, then 
+$$ \mu\big(\bigcup_{i=1}^\infty A_i\big) = \lim_{i\to \infty} \mu(A_i).$$
+\item {\bf Continuity from above:} 
+If $\{A_i\}_{i=1}^\infty$ is a collection of sets from $\cB$ such that
+$\mu(A_1)<\infty$, and $ A_i\supset A_{i+1}$ for all $i$, then 
+$$ \mu\big(\bigcap_{i=1}^\infty A_i\big) = \lim_{i\to \infty}  \mu(A_i).$$
+\end{enumerate}
+
+{\bf Remarks} In (2), the assumption $\mu(A)<\infty$ assures 
+that the right hand side is always well defined, i.e., not of 
+the form $\infty-\infty$. Without the assumption we can prove that
+$\mu(B) = \mu(A) + \mu(B\setminus A)$ (see below).
+In (3), it is tempting to 
+move the term $\mu(A\cap B)$ to the other side for aesthetic reasons. 
+However, this is only possible if the term is finite. 
+
+\emph{Proof.} For (1), suppose $A\subset B$. We can then 
+write $B$ as the disjoint union $B=A\cup (B\setminus A)$, whence
+\begin{eqnarray*}
+\mu(B) = \mu(A\cup (B\setminus A)) = \mu(A) + \mu(B\setminus A).
+\end{eqnarray*}
+Since $\mu(B\setminus A)\ge 0$, the claim follows. 
+Property (2) follows from the above equation; since
+$\mu(A)<\infty$, we can subtract this quantity from both sides. 
+For property (3), we can write
+$A\cup B  =A\cup (B\setminus A)$, whence
+\begin{eqnarray*}
+\mu(A\cup B) &=& \mu(A)+\mu(B\setminus A)\\
+    &\le & \mu(A)+\mu(B).
+\end{eqnarray*}
+If $\mu(A\cup B)$ is infinite, the last inequality must 
+be equality, and either of $\mu(A)$ or $\mu(B)$ must be infinite. 
+Together with (1), we obtain that if any of the quantities 
+$\mu(A), \mu(B), \mu(A\cap B)$ or $\mu(A\cup B)$ is infinite, 
+both sides in the equation are infinite and the claim holds. 
+We can therefore
+  without loss of generality assume that all quantities are finite. 
+  From $A\cup B = B\cup (A\setminus B)$, we have
+$$ \mu(A\cup B) = \mu(B)+\mu(A\setminus B)$$
+and thus
+$$ 2\mu(A\cup B) = \mu(A)+  \mu(B) + \mu(A\setminus B) + \mu(B\setminus A).$$
+For the last two terms we have
+\begin{eqnarray*}
+\mu(A\setminus B) + \mu(B\setminus A) &=& \mu( (A\setminus B) \cup (B\setminus A)) \\
+&=& \mu( (A\cup B) \setminus (A\cap B) ) \\
+&=& \mu(A\cup B) - \mu(A\cap B),
+\end{eqnarray*}
+where, in the second equality we have used properties for the 
+\PMlinkname{symmetric set difference}{SymmetricDifference}, and 
+the last equality follows from 
+property (2). This completes the proof of 
+ property (3).
+For property (4), let us define the sequence $\{D_i\}_{i=1}^\infty$ as
+$$D_1 = A_1, \,\,\,\,\,\,\,\, D_i = A_i \setminus  \bigcup_{k=1}^{i-1} A_k .$$
+Now $D_i\cap D_j=\emptyset$ for $i<j$, so $\{D_i\}$ is a sequence of 
+disjoint sets.
+Since $\cup_{i=1}^\infty D_i =\cup_{i=1}^\infty A_i$,  and since
+$D_i\subset A_i$, we have
+\begin{eqnarray*}
+\mu(\bigcup_{i=1}^\infty A_i) &=& \mu(\bigcup_{i=1}^\infty D_i) \\
+     &=& \sum_{i=1}^\infty \mu(D_i) \\
+     &\le& \sum_{i=1}^\infty \mu(A_i),
+\end{eqnarray*}
+and property (4) follows.
+
+
+{\bf TODO:} proofs for (5)-(6).
+
+\begin{thebibliography}{9}
+\bibitem{folland}
+ G.B. Folland, \emph{Real Analysis: Modern Techniques and Their Applications}, 2nd ed, John Wiley \& Sons, Inc., 1999.
+ \bibitem{mukherjea}
+ A. Mukherjea, K. Pothoven,
+ \emph{Real and Functional analysis},
+ Plenum press, 1978.
+\bibitem{cohn}
+D.L. Cohn, \emph{Measure Theory}, Birkh\"auser, 1980.
+ \bibitem{friedman}
+A. Friedman, 
+ \emph{Foundations of Modern Analysis},
+Dover publications, 1982. 
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,38 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MarginalDistribution}
+\pmcreated{2013-03-22 11:55:00}
+\pmmodified{2013-03-22 11:55:00}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{marginal distribution}
+\pmrecord{10}{30591}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E05}
+\pmsynonym{marginal density function}{MarginalDistribution}
+\pmsynonym{marginal probability function}{MarginalDistribution}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%%\usepackage{xypic}
+\begin{document}
+Given random variables $X_1, X_2, ... , X_n$ and a subset $I \subset \{1,2,...,n\}$, the \textbf{marginal distribution} of the random variables ${X_i : i \in I}$ is the following: \\
+
+\par$f_{\{X_i : i \in I\}}(\mathbf{x}) = \sum_{\{x_i : i \notin I\}}^{}{ f_{X_1,...,X_n}(x_1,...,x_n) }$  or\\
+$f_{\{X_i : i \in I\}}(\mathbf{x}) = \int_{\{x_i : i \notin I\}}^{}{ f_{X_1,...,X_n}(u_1,...,u_n) \prod_{ \{u_i : i \notin I\} }^{} du_i}$, \\
+\par
+summing if the variables are discrete and integrating if the variables are continuous.\\
+\par
+This is, the marginal distribution of a set of random variables $X_1,...,X_n$ can be obtained by summing (or integrating) the joint distribution over all values of the other variables.\\
+\par
+The most common marginal distribution is the individual marginal distribution (ie, the marginal distribution of ONE random variable).
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

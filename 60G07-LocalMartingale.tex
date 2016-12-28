@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LocalMartingale}
+\pmcreated{2013-03-22 15:12:43}
+\pmmodified{2013-03-22 15:12:43}
+\pmowner{skubeedooo}{5401}
+\pmmodifier{skubeedooo}{5401}
+\pmtitle{local martingale}
+\pmrecord{8}{36973}
+\pmprivacy{1}
+\pmauthor{skubeedooo}{5401}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G07}
+\pmclassification{msc}{60G48}
+\pmrelated{Martingale}
+\pmrelated{LocalPropertiesOfProcesses}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{index set}
+\PMlinkescapeword{constant}
+\PMlinkescapeword{localization}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{locally bounded}
+\PMlinkescapeword{satisfy}
+
+Let $(\Omega,\mathcal{F},(\mathcal{F}_t)_{t\in\mathbb{T}},\mathbb{P})$ be a filtered probability space, where the time index set $\mathbb{T}\subseteq\mathbb{R}$ has minimal element $t_0$. The most common cases are discrete-time, with $\mathbb{T}=\mathbb{Z}_+$, and continuous time where $\mathbb{T}=\mathbb{R}_+$, in which case $t_0=0$.
+
+A process $X$ is said to be a \emph{local martingale} if it is \PMlinkname{locally}{LocalPropertiesOfProcesses} a right-continuous martingale. That is, if there is a sequence of stopping times $\tau_n$ almost surely increasing to infinity and such that the stopped processes $1_{\{\tau_n>t_0\}}X^{\tau_n}$ are martingales. Equivalently, $1_{\{\tau_n>t_0\}}X_{\tau_n\wedge t}$ is integrable and
+\begin{equation*}
+1_{\{\tau_n>t_0\}}X_{\tau_n\wedge s}=\mathbb{E}[1_{\{\tau_n>t_0\}}X_{\tau_n\wedge t}\mid\mathcal{F}_s]
+\end{equation*}
+for all $s<t\in\mathbb{T}$.
+In the discrete-time case where $\mathbb{T}=\mathbb{Z}_+$ then it can be shown that a local martingale $X$ is a martingale if and only if $\mathbb{E}[|X_t|]<\infty$ for every $t\in\mathbb{Z}_+$.
+More generally, in continuous-time where $\mathbb{T}$ is an interval of the real numbers, then the stronger property that
+\begin{equation*}
+\left\{X_{\tau}:\tau\le t\textrm{ is a stopping time}\right\}
+\end{equation*}
+is uniformly integrable for every $t\in\mathbb{T}$ gives a necessary and sufficient condition for a local martingale to be a martingale.
+
+Local martingales form a very important class of processes in the theory of stochastic calculus. This is because the local martingale property is preserved by the stochastic integral, but the martingale property is not.
+Examples of local martingales which are not proper martingales are given by solutions to the stochastic differential equation
+\begin{equation*}
+dX = X^{\alpha}\,dW
+\end{equation*}
+where $X$ is a nonnegative process, $W$ is a Brownian motion and $\alpha>1$ is a fixed real number.
+
+An alternative definition of local martingales which is sometimes used requires $X^{\tau_n}$ to be a martingale for each $n$. This definition is slightly more restrictive, and is equivalent to the definition given above together with the condition that $X_{t_0}$ must be integrable.
+
+
+%%%%%
+%%%%%
+\end{document}

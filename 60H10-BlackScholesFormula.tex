@@ -1,0 +1,271 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BlackScholesFormula}
+\pmcreated{2013-03-22 16:29:59}
+\pmmodified{2013-03-22 16:29:59}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{Black-Scholes formula}
+\pmrecord{15}{38675}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60H10}
+\pmclassification{msc}{91B28}
+\pmsynonym{Black-Scholes pricing formula}{BlackScholesFormula}
+\pmrelated{AnalyticSolutionOfBlackScholesPDE}
+\pmrelated{DerivationOfBlackScholesFormulaInMartingaleForm}
+
+% The standard font packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% Including EPS/PDF graphics (\includegraphics)
+%\usepackage{graphicx}
+
+% Making matrix-based graphics
+%%%\usepackage{xypic}
+
+% Enumeration lists with different styles
+%\usepackage{enumerate}
+
+% The standard number systems
+\newcommand{\real}{\mathbb{R}}
+
+% Absolute values and norms
+% Normal, wide, and big versions of the delimeters
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+
+% Differentiation operators
+\providecommand{\od}[2]{\frac{d #1}{d #2}}
+\providecommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\providecommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2}}
+\providecommand{\ipd}[2]{\partial #1 / \partial #2}
+
+% Calligraphic letters
+\newcommand{\sF}{\mathcal{F}}
+
+% Things related to risk-neutral measure
+\newcommand{\EQ}{\mathbb{E}^\mathbb{Q}}
+\newcommand{\PQ}{\mathbb{Q}}
+\newcommand{\PP}{\mathbb{P}}
+
+\newcommand{\Le}{\mathbf{L}}
+
+\begin{document}
+\PMlinkescapeword{real}
+\PMlinkescapeword{unit}
+\PMlinkescapeword{units}
+\PMlinkescapeword{dividends}
+\PMlinkescapeword{thin}
+\PMlinkescapeword{term}
+\PMlinkescapeword{representation}
+\PMlinkescapeword{divisible}
+\PMlinkescapeword{specification}
+\PMlinkescapeword{terminal}
+\PMlinkescapeword{holder}
+
+\tableofcontents
+
+\medskip
+
+The \emph{Black-Scholes formula}
+gives the theoretical ``arbitrage-free'' price of a stock option
+at any time $t$ before the maturity time $T$.
+
+In financial parlance, an ``arbitrage'' is a riskless
+profit.  So the prices being ``arbitrage-free''
+means that it is impossible to construct
+ a strategy\footnote{Strictly speaking, the strategies described here must be construed as the \emph{limiting case}, in continuous time, of no-arbitrage trading
+strategies in discrete time, as the time period between trades become
+small.  Otherwise, it is not even obvious what trading
+in ``continuous time'' means, and how to actually execute such trades.}
+ of trading the stock option and the underlying stock,
+at the prices given,
+that starts with no money at time $0$,
+ends with a balance at time $T$ that
+is non-negative almost surely,
+and is positive 
+with some positive probability.
+
+A stock \emph{call option} is a contract, in which the vendor gives
+the buyer a right to purchase some shares of stock in the future,
+at a fixed \emph{strike price} agreed upon the writing of the contract.
+However, the right need not be exercised by the buyer.
+In fact it would be disadvantageous to do so if the stock price
+evolves below the strike price since the writing of the contract;
+if the buyer still wants the stock, it would be cheaper to just
+buy it from the market.
+
+\subsection{Black-Scholes pricing formula}
+
+Let 
+\begin{itemize}
+\item
+$K$ be the \emph{strike price} of the call option
+\item
+$T$ be the \emph{maturity date} of the call option
+\item
+$r$ be the prevailing \emph{interest rate}, assumed to be constant 
+\item
+$\sigma > 0$ be the volatility of the stock price (per unit square-root time)
+\item
+$X(t)$ be the stochastic process representing the price of the stock itself at time $t$
+\end{itemize}
+
+Then the fair price $V(t)$, at time $t \leq T$, of the 
+call option with the above contract parameters,
+under the Black-Scholes modelling assumptions,
+is given by:
+
+\begin{equation}\label{eq:bs-formula}
+\begin{split}
+V(t) &= x \, \Phi\bigl( d_+( \tau, x ) \bigr)
+- K e^{-r\tau} \, \Phi\bigl( d_-(\tau, x) \bigr)\,, \\
+d_\pm (\tau, x) &= \frac{ \log(x/K) + (r \pm \tfrac12 \sigma^2) \tau }{\sigma \sqrt{\tau} }\,, \quad \tau  = T-t, \quad x = X(t)\,,
+\end{split}
+\end{equation}
+where $\Phi$ is the cumulative distribution function of a standard normal random variable.
+
+
+The result \eqref{eq:bs-formula}
+is commonly referred to as the \emph{Black-Scholes pricing formula}
+or just as the \emph{Black-Scholes formula},
+after Fischer Black and Myron Scholes, who derived it in the 1970s.
+
+F. Black and M. Scholes first arrived at the solution for $V(t)$
+not with our probabilistic calculations,
+but by describing $V(t)$ in terms of a 
+partial differential equation, and solving the PDE analytically.  
+That PDE, now called, appropriately, 
+the \emph{Black-Scholes partial differential equation},
+gives an important alternative formulation of the results here.
+
+\subsection{General representation of option price}
+
+$V(t)$ in equation \eqref{eq:bs-formula} is a stochastic process itself, 
+but it happens to depend on $X(t)$ only
+for its random part.
+
+More generally, for any financial contract, not necessarily
+a call option, that pays an amount $V(T)$,
+the Black-Scholes model shows that its fair price $V(t)$
+at time $t$
+must be given by:
+\begin{align}\label{eq:port-result}
+V(t) = e^{-r(T-t)} \, \EQ\bigl[V(T) \mid \sF_t\bigr]\,.
+\end{align}
+for some probability measure $\PQ$,
+and $\{ \sF_t \}$ is the filtration
+describing the information available about the stock price up to time $t$.
+
+If we set $V(T)= \max(X(T)- K, 0)$, then 
+equation \eqref{eq:bs-formula}
+follows from a straightforward 
+calculation starting with equation \eqref{eq:port-result}.
+
+Intuitively, \eqref{eq:port-result} states that
+the option price at the current time is the expected value
+of the promised pay-off amount at the future time,
+discounted back to the current time at the rate of interest in force.
+
+\subsection{The risk-neutral measure}
+
+The probability measure $\PQ$ appearing in \eqref{eq:port-result},
+is called the \emph{risk-neutral measure}.
+It depends on the underlying risk factors that drive the contract pay-off,
+but it does not depend on the contract itself.
+This probability measure is distinct from the real-world or historical 
+probability measure.
+It does not actually describe ``probabilities'' in the intuitive sense
+of the word, but is a mathematical tool to express the solutions
+to the underlying stochastic differential equations.
+
+Equation \eqref{eq:port-result} is equivalent to
+saying that $V(t) e^{-rt}$ is a martingale under the probability
+measure $\PQ$.
+
+
+
+
+\subsection{Model assumptions}
+The Black-Scholes formula is derived under the following
+model assumptions.
+
+In the real world, of course, all of these simplifying assumptions
+are wrong in one way or another; however,
+the Black-Scholes formula is often used
+to give ballpark figures when quoting option prices.
+
+\subsubsection{Stock price}
+The stock 
+(or any other underlying tradable asset)
+has a price that follows a \emph{geometric Brownian motion
+process} described by the stochastic differential equation:
+\begin{align}\label{eq:stock}
+d X(t) = \mu X(t) \, dt + \sigma X(t) \, dW(t)\,,
+\end{align}
+where
+\begin{itemize}
+\item
+$X(t)$ is the price of the stock at time $t \geq 0$; the quantity $X(t)$ is
+a random variable. 
+
+(That is, for each $t$, $X(t)$ is a function of $\omega$,
+for $\omega$ ranging over the underlying sample space; but the implicit
+notation is more convenient and widely used.)
+\item
+$\mu > 0$ is the growth rate of the stock.  The quantity $\mu$ has units
+of reciprocal time.  
+
+$\mu$ is assumed to be a constant (independent of time and the state
+of the system).
+\item
+$\sigma > 0$ is the volatility of the stock.
+It can be thought as the standard deviation normalized by time;
+$\sigma$ has units of the reciprocal square root of time.
+
+$\sigma$ is assumed to be constant.
+\item
+$W(t)$ is a standard Brownian motion, also called a Wiener process.
+\end{itemize}
+
+The assumption of \emph{geometric} Brownian motion means
+that the \emph{relative} price movements $X(t + \Delta t)/X(t)$
+after time $t$
+are independent of the stock price history before time $t$.
+In general,
+ relative changes in price 
+are more financially significant and useful to model
+(e.g. ``Google stock has gone up 40\% this year'')
+than absolute changes in price.
+
+We also assume that the stock does not pay dividends,
+that there are no \PMlinkescapetext{limits} on the trading of any asset,
+or borrowing or lending of any amount of cash at the risk-free interest rate, 
+and no transaction costs.
+Trading is also assumed to be conducted continuously
+in perfectly divisible amounts,
+at a single price at each point in time.
+
+\subsubsection{Interest on cash}
+
+Moreover, cash in the model economy is assumed to grow
+with time at a \emph{risk-free continuously-compounded interest rate} of $r$,
+and $r$ is constant.  Thus the amount $M(t)$ in the ``money-market account''
+or ``bank account''
+at time $t$,
+with an initial infusion of amount $M(0)$ at time $0$,
+is given by
+\begin{align*}
+M(t) = M(0) \, e^{rt}\,.
+\end{align*}
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompletenessUnderUcpConvergence}
+\pmcreated{2013-03-22 18:40:33}
+\pmmodified{2013-03-22 18:40:33}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{completeness under ucp convergence}
+\pmrecord{5}{41423}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G07}
+\pmclassification{msc}{60G05}
+%\pmkeywords{stochastic process}
+%\pmkeywords{ucp convergence}
+%\pmkeywords{complete metric space}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{complete}
+\PMlinkescapeword{product}
+\PMlinkescapeword{properties}
+\PMlinkescapeword{theorems}
+
+Let $(\Omega,\mathcal{F},(\mathcal{F}_t)_{t\in\mathbb{R}_+},\mathbb{P})$ be a filtered probability space. Then, under the ucp topology, various classes of stochastic processes form \PMlinkname{complete}{Complete} vector spaces.
+
+For a $\sigma$-algebra $\mathcal{M}$ on $\mathbb{R}_+\times\Omega$, we can look at the processes which are $\mathcal{M}$-measurable when regarded as a map from $\mathbb{R}_+\times\Omega$ to $\mathbb{R}$. As the ucp topology is only defined for jointly measurable processes, we restrict attention to sub-$\sigma$-algebras of the product $\mathcal{B}(\mathbb{R}_+)\otimes\mathcal{F}$.
+
+\begin{theorem}\label{measurable}
+Let $\mathcal{M}$ be a sub-$\sigma$-algebra of $\mathcal{B}(\mathbb{R}_+)\otimes\mathcal{F}$. Then, the set of $\mathcal{M}$-measurable processes is complete under ucp convergence.
+\end{theorem}
+
+That is, if $X^n$ is a sequence of $\mathcal{M}$-measurable processes such that $X^n-X^m\xrightarrow{\rm ucp} 0$ as $m,n\rightarrow\infty$ then $X^n\xrightarrow{\rm ucp} X$ for some $\mathcal{M}$-measurable process $X$.
+
+In particular, the spaces of jointly measurable, progressive, optional and predictable processes are each complete under ucp convergence.
+We can also look at the properties of the sample paths of the processes.
+
+\begin{theorem}\label{paths}
+Let $S$ be any set of functions $\mathbb{R}_+\rightarrow\mathbb{R}$ which is \PMlinkname{closed}{Closed} under uniform convergence on compacts (the compact-open topology). Then, the set of jointly measurable processes whose sample paths are almost surely in $S$ is complete under ucp convergence.
+\end{theorem}
+
+So, for example, the continuous, right-continuous, left-continuous and cadlag processes are each complete under the ucp topology. Furthermore, combining theorems \ref{measurable} and \ref{paths}, and using the fact that a cadlag process is adapted if and only if it is jointly measurable (see \PMlinkname{measurability of stochastic processes}{MeasurabilityOfStochasticProcesses}), the following useful result is obtained.
+
+\begin{corollary*}
+The space of cadlag adapted processes is complete under ucp convergence.
+\end{corollary*}
+
+%%%%%
+%%%%%
+\end{document}

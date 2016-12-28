@@ -1,0 +1,137 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HittingTimesAreStoppingTimes}
+\pmcreated{2013-03-22 18:39:06}
+\pmmodified{2013-03-22 18:39:06}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{hitting times are stopping times}
+\pmrecord{7}{41394}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G40}
+\pmclassification{msc}{60G05}
+%\pmkeywords{stopping time}
+%\pmkeywords{adapted process}
+%\pmkeywords{progressive process}
+\pmdefines{hitting time}
+\pmdefines{d\'ebut}
+\pmdefines{debut}
+\pmdefines{d\'ebut theorem}
+\pmdefines{debut theorem}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{filtration}
+\PMlinkescapeword{property}
+\PMlinkescapeword{index set}
+\PMlinkescapeword{state}
+\PMlinkescapeword{even}
+\PMlinkescapeword{analytic sets}
+\PMlinkescapeword{properties}
+\PMlinkescapeword{proof}
+\PMlinkescapeword{necessary}
+\PMlinkescapeword{progressive process}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{closed set}
+\PMlinkescapeword{proofs}
+
+Let $(\mathcal{F}_t)_{t\in\mathbb{T}}$ be a \PMlinkname{filtration}{FiltrationOfSigmaAlgebras} on a measurable space $(\Omega,\mathcal{F})$. If $X$ is an adapted stochastic process taking values in a measurable space $(E,\mathcal{A})$ then the \emph{hitting time} of a set $S\in\mathcal{A}$ is defined as
+\begin{align*}
+&\tau\colon\Omega\rightarrow\mathbb{T}\cup\{\pm\infty\},\\
+&\tau(\omega)=\inf\left\{t\in\mathbb{T}:X_t(\omega)\in S\right\}.
+\end{align*}
+We suppose that $\mathbb{T}$ is a closed subset of $\mathbb{R}$, so the hitting time $\tau$ will indeed lie in $\mathbb{T}$ whenever it is finite. The main cases are discrete-time when $\mathbb{T}=\mathbb{Z}_+$ and continuous-time where $\mathbb{T}=\mathbb{R}_+$. An important property of hitting times is that they are stopping times, as stated below for the different cases.
+
+\subsection*{Discrete-time processes}
+
+For discrete-time processes, hitting times are easily shown to be stopping times.
+
+\begin{theorem*}
+If the index set $\mathbb{T}$ is discrete, then the hitting time $\tau$ is a stopping time.
+\end{theorem*}
+\begin{proof}
+For any $s\le t\in\mathbb{T}$ then $X_s$ will be $\mathcal{F}_t/\mathcal{A}$-measurable, as it is adapted. So, by the fact that the $\sigma$-algebra $\mathcal{F}_t$ is closed under taking countable unions,
+\begin{equation*}
+\left\{\tau\le t\right\}=\bigcup_{\substack{s\in\mathbb{T},\\ s\le t}}X_s^{-1}(S)\in\mathcal{F}_t
+\end{equation*}
+as required.
+\end{proof}
+
+\subsection*{Continuous processes}
+
+For continuous-time processes it is not necessarily true that a hitting time is even measurable, unless further conditions are imposed. Processes with continuous sample paths can be dealt with easily.
+
+\begin{theorem*}
+Suppose that $X$ is a continuous and adapted process taking values in a metric space $E$. Then, the hitting time $\tau$ of any closed subset $S\subseteq E$ is a stopping time.
+\end{theorem*}
+\begin{proof}
+We may suppose that $S$ is nonempty, and define the continuous function $d_S(x)\equiv\inf\{d(x,y)\colon y\in S\}$ on $E$. Then, $\tau$ is the first time at which $Y_t\equiv d_S(X_t)$ hits $0$. Letting $U$ be any countable and dense subset of $\mathbb{T}\cap[0,t]$ then the continuity of the sample paths of $Y$ gives,
+\begin{equation*}
+\left\{\tau\le t\right\}=\left\{\inf_{u\in U}Y_u=0\right\}.
+\end{equation*}
+As the infimum of a countable set of measurable functions is measurable, this shows that $\{\tau\le t\}$ is in $\mathcal{F}_t$.
+\end{proof}
+
+\subsection*{Right-continuous processes}
+
+Right-continuous processes are more difficult to handle than either the discrete-time and continuous sample path situations. The first time at which a right-continuous process hits a given value need not be measurable. However, it can be shown to be universally measurable, and the following result holds.
+
+\begin{theorem*}
+Suppose that $X$ is a right-continuous and adapted process taking values in a metric space $E$, and that the filtration $(\mathcal{F}_t)$ is universally complete. Then, the hitting time $\tau$ of any closed subset $S\subseteq E$ is a stopping time.
+\end{theorem*}
+
+In particular, the hitting time of any closed set $S\subseteq\mathbb{R}$ for an adapted right-continuous and real-valued process is a stopping time.
+
+The proof of this result is rather more involved than the case for continuous processes, and the condition that $\mathcal{F}_t$ is universally complete is necessary.
+
+\subsection*{Progressively measurable processes}
+
+The d\'ebut $D(A)$ of a set $A\subseteq\mathbb{T}\times\Omega$ is defined to be the hitting time of $\{1\}$ for the process $1_A$,
+\begin{equation*}
+D(A)(\omega)=\inf\left\{ t\in\mathbb{T}:(t,\omega)\in A\right\}.
+\end{equation*}
+An important result for continuous-time stochastic processes is the d\'ebut theorem.
+
+\begin{theorem*}[D\'ebut theorem]
+Suppose that the filtration $(\mathcal{F}_t)$ is right-continuous and universally complete. Then, the d\'ebut $D(A)$ of a progressively measurable $A\subseteq\mathbb{T}\times\Omega$ is a stopping time.
+\end{theorem*}
+
+Proofs of this typically rely upon properties of analytic sets, and are therefore much more complicated than the result above for right-continuous processes.
+
+A process $X$ taking values in a measurable space $(E,\mathcal{A})$ is said to be progressive if the set $X^{-1}(S)$ is progressively measurable for every $S\in\mathcal{A}$. In particular, the hitting time of $S$ is equal to the d\'ebut of $X^{-1}(S)$ and the d\'ebut theorem has the following immediate corollary.
+
+\begin{theorem*}
+Suppose that the filtration $(\mathcal{F}_t)$ is right-continuous and universally complete, and that $X$ is a progressive process taking values in a measurable space $(E,\mathcal{A})$. Then, the hitting time $\tau$ of any set $S\in\mathcal{A}$ is a stopping time.
+\end{theorem*}
+
+%%%%%
+%%%%%
+\end{document}

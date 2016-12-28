@@ -1,0 +1,115 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBennettInequality}
+\pmcreated{2013-03-22 16:12:27}
+\pmmodified{2013-03-22 16:12:27}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{proof of Bennett inequality}
+\pmrecord{22}{38303}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+By \PMlinkname{Chernoff-Cram\`{e}r inequality}{ChernoffCramerBound}, we have:
+\[
+\Pr\left\{ \sum_{i=1}^{n}\left( X_{i}-E[X_{i}]\right) >\varepsilon \right\}
+\leq \exp \left[ -\sup_{t\geq 0}\left( t\varepsilon -\psi (t)\right) \right] 
+\]
+where
+\[
+\psi (t)=\sum_{i=1}^{n}\left( \ln E\left[ e^{tX_{i}}\right] -tE\left[ X_{i}%
+\right] \right). 
+\]
+Keeping in mind that the condition
+\[
+\Pr\left\{ \left\vert X_{i}\right\vert \leq M\right\} =1\text{ \ }\forall i
+\]
+implies that, for all $i$,
+\[
+E[\left\vert X_{i}\right\vert ^{k}]\leq M^{k} \text{ \ }\forall k\geq 0
+\]
+(see \PMlinkname{here}{RelationBetweenAlmostSurelyAbsolutelyBoundedRandomVariablesAndTheirAbsoluteMoments} for a proof) and since $\ln x\leq x-1$ $\forall x>0$, and%
+\[
+E[\left\vert X\right\vert ^{k}]\leq M^{k}\text{ \ }\Longrightarrow \text{ \ }%
+E\left[ \left\vert X\right\vert ^{k}\right] \leq E\left[ X^{2}\right] M^{k-2}%
+\text{ \ \ \ \ \ \ \ }\forall k\geq 2,k\in N
+\]
+(see \PMlinkname{here}{AbsoluteMomentsBoundingNecessaryAndSufficientCondition} for a proof), one has:
+\begin{eqnarray*}
+\psi (t) &=&\sum_{i=1}^{n}\left( \ln E\left[ e^{tX_{i}}\right] -tE\left[
+X_{i}\right] \right) \\
+&\leq &\sum_{i=1}^{n}E\left[ e^{tX_{i}}\right] -tE\left[ X_{i}\right] -1 \\
+&=&\sum_{i=1}^{n}E\left[ \sum_{k=0}^{\infty }\frac{\left( tX_{i}\right) ^{k}%
+}{k!}\right] -tE\left[ X_{i}\right] -1 \\
+&=&\sum_{i=1}^{n}\left( \sum_{k=0}^{\infty }\frac{t^{k}E\left[ X_{i}^{k}%
+\right] }{k!}\right) -tE\left[ X_{i}\right] -1 \\
+&=&\sum_{i=1}^{n}\left( \sum_{k=2}^{\infty }\frac{t^{k}E\left[ X_{i}^{k}%
+\right] }{k!}\right)  \\
+&\leq &\sum_{i=1}^{n}\left( \sum_{k=2}^{\infty }\frac{t^{k}E\left[
+\left\vert X_{i}\right\vert ^{k}\right] }{k!}\right)  \\
+&\leq &\sum_{i=1}^{n}\left( \sum_{k=2}^{\infty }\frac{t^{k}E\left[ X_{i}^{2}%
+\right] M^{k-2}}{k!}\right) \\
+&=&\sum_{k=2}^{\infty }\frac{t^{k}M^{k-2}\sum_{i=1}^{n}E\left[ X_{i}^{2}%
+\right] }{k!} \\
+&=&\frac{v^{2}}{M^{2}}\sum_{k=2}^{\infty }\frac{\left( tM\right) ^{k}}{k!} \\
+&=&\frac{v^{2}}{M^{2}}\left[ \exp \left( tM\right) -tM-1\right] 
+\end{eqnarray*}
+
+One can now write
+\[
+\sup_{t\geq 0}\left( t\varepsilon -\psi (t)\right) \geq \sup_{t\geq 0}\left(
+t\varepsilon -\frac{v^{2}}{M^{2}}\left( e^{tM}-tM-1\right) \right)
+=\sup_{t>0}\left[ \frac{v^{2}}{M^{2}}\left( \frac{M^{2}\varepsilon }{v^{2}}%
+t-\left( e^{tM}-tM-1\right) \right) \right]. 
+\]
+
+By elementary calculus, we obtain the value of $t$ that maximizes the
+expression in round brackets:
+\[
+t_{opt}=\frac{1}{M}\ln \left( 1+\frac{M\varepsilon }{v^{2}}\right) 
+\]
+which, once plugged into the bound, yields
+\[
+\Pr\left\{ \sum_{i=1}^{n}\left( X_{i}-E[X_{i}]\right) >\varepsilon \right\}
+\leq \exp \left[ -\frac{v^{2}}{M^{2}}\left( \left( 1+\frac{M\varepsilon }{%
+v^{2}}\right) \ln \left( 1+\frac{M\varepsilon }{v^{2}}\right) -\frac{%
+M\varepsilon }{v^{2}}\right) \right]. 
+\]
+
+Observing that $\left( 1+x\right) \ln \left( 1+x\right) -x\geq \frac{x}{2}%
+\ln \left( 1+x\right) $ $\forall x\geq 0$ (see \PMlinkname{here}{ASimpleMethodForComparingRealFunctions}), one gets the
+sub-optimal yet more easily manageable formula:
+\[
+\Pr\left\{ \sum_{i=1}^{n}\left( X_{i}-E[X_{i}]\right) >\varepsilon \right\}
+\leq \exp \left[ -\frac{\varepsilon }{2M}\ln \left( 1+\frac{\varepsilon M}{%
+v^{2}}\right) \right].
+\]
+%%%%%
+%%%%%
+\end{document}

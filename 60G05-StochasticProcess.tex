@@ -1,0 +1,108 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StochasticProcess}
+\pmcreated{2013-03-22 14:39:10}
+\pmmodified{2013-03-22 14:39:10}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{stochastic process}
+\pmrecord{14}{36244}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G05}
+\pmclassification{msc}{60G60}
+\pmsynonym{random process}{StochasticProcess}
+\pmrelated{DistributionsOfAStochasticProcess}
+\pmdefines{discrete-time process}
+\pmdefines{continuous-time process}
+\pmdefines{state}
+\pmdefines{time series}
+\pmdefines{state space}
+\pmdefines{random function}
+\pmdefines{jointly measurable}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{measurable}
+\PMlinkescapeword{terms}
+Let $(\Omega,\mathcal{F},\textbf{P})$ be a probability space. A
+\emph{stochastic process} is a collection $$\lbrace X_t \mid t\in T
+\rbrace$$ of random variables $X_t$ defined on
+$(\Omega,\mathcal{F},\textbf{P})$, where $T$ is a set, called the
+index set of the process $\lbrace X_t \mid t\in T \rbrace$. $T$ is
+usually (but not always) a subset of $\mathbb{R}$. 
+  $X$ is sometimes known as a \emph{random function}.
+\par
+Given any $t$, the possible values of $X_t$ are called the
+\emph{states} of the process at $t$. The set of all states (for all
+$t$) of a stochastic process is called its \emph{state space}.
+\par
+If $T$ is discrete, then the stochastic process is a
+\emph{discrete-time process}. If $T$ is an interval of $\mathbb{R}$,
+then $\lbrace X_t \mid t\in T \rbrace$ is a \emph{continuous-time
+process}. If $T$ can be linearly ordered, then $t$ is also known as
+the \emph{time}.
+  
+A stochastic process $X$ with state space $S$ can be thought of in either of following three ways.
+
+\begin{itemize}
+\item As a collection of random variables, $X_t$, for each $t$ in the index set $T$.
+\item
+As a function in two variables $t\in T$ and $\omega\in\Omega$,
+\begin{equation*}
+X\colon T\times\Omega\rightarrow S,\ (t,\omega)\mapsto X_t(\omega).
+\end{equation*}
+The process is said to be measurable, or, jointly measurable if it is $\mathcal{B}(T)\otimes\mathcal{F}/\mathcal{B}(S)$-measurable. Here, $\mathcal{B}(T)$ and $\mathcal{B}(S)$ are the Borel $\sigma$-algebras on $T$ and $S$ respectively.
+\item In terms of the sample paths. Each $\omega\in\Omega$ maps to a function
+\begin{equation*}
+T\rightarrow S,\ t\mapsto X_t(\omega).
+\end{equation*}
+Many common examples of stochastic processes have sample paths which are either continuous or cadlag.
+\end{itemize}
+
+\textbf{Examples}. The following list is some of the most common and
+important stochastic processes:
+\begin{enumerate}
+\item a random walk, as well as its limiting case, a Brownian motion, or a Wiener process
+\item Poisson process
+\item Markov process; a Markov chain is a Markov process whose state space is discrete
+\item renewal process
+\end{enumerate}
+
+\textbf{Remarks}.
+\begin{itemize}
+\item Sometimes, a stochastic process is also called a
+\emph{random process}, although a stochastic process is generally
+linked to any ``time'' dependent process.  In a random process, the
+index set may not be linearly ordered, as in the case of a random
+field, where the index set may be, for example, the unit sphere $S^2\subseteq\mathbb{R}^3$.
+\item In statistics, a stochastic process is often known as a
+\emph{time series}, where the index set is a finite (or at most
+countable) ordered sequence of real numbers.
+\end{itemize}
+
+%%%%%
+%%%%%
+\end{document}

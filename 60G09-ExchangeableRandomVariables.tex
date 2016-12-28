@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExchangeableRandomVariables}
+\pmcreated{2013-03-22 16:25:53}
+\pmmodified{2013-03-22 16:25:53}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{exchangeable random variables}
+\pmrecord{5}{38583}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G09}
+\pmsynonym{exchangeable stochastic process}{ExchangeableRandomVariables}
+\pmdefines{exchangeable}
+\pmdefines{exchangeable process}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+A finite set of random variables $\lbrace X_1,\ldots,X_n \rbrace$ defined on a common probablility space $(\Omega, \mathcal{F}, P)$ is said to be \emph{exchangeable} if 
+$$P\big((X_1\in B_1)\cap\cdots\cap(X_n\in B_n)\big)=P\big((X_{\sigma(1)}\in B_1)\cap\cdots\cap(X_{\sigma(n)}\in B_n)\big)$$
+for every set of Borel sets $\lbrace B_1,\ldots, B_n\rbrace$, and every permutation $\sigma\in S_n$.  In other words, $X_1,\ldots,X_n$ are exchangeable if their joint probability distribution function is the same regardless of their order.
+
+A stochastic process $\lbrace X_i\rbrace$ is said to be \emph{exchangeable} if every finite subset of $\lbrace X_i\rbrace$ is exchangeable.
+
+\textbf{Remarks}
+\begin{itemize}
+\item If $S=\lbrace X_1,\ldots,X_n \rbrace$ is exchangeable, then every subset of $S$ is exchangeable (by picking suitable $B_i$ and $\sigma$).  In particular, all $X_i$ are identically distributed, for 
+$$P(X_i\in B)=P\big((X_i\in B)\cap(X_j\in \mathbb{R})\big)=P\big((X_j\in B)\cap(X_i\in \mathbb{R})\big)=P(X_j\in B).$$
+\item If $S=\lbrace X_1,\ldots,X_n\rbrace$ is iid, then $S$ is exchangeable, since the joint distribution of $X_i$ is the product of the distributions of $X_i$: $$P\big((X_1\in B_1)\cap\cdots\cap(X_n\in B_n)\big)=P(X_{\sigma(1)}\in B_1)\big)\cdots P(X_{\sigma(n)}\in B_n)\big).$$
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

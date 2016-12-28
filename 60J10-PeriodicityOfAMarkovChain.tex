@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PeriodicityOfAMarkovChain}
+\pmcreated{2013-03-22 16:24:28}
+\pmmodified{2013-03-22 16:24:28}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{periodicity of a Markov chain}
+\pmrecord{7}{38556}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60J10}
+\pmdefines{period of a state}
+\pmdefines{aperiodic state}
+\pmdefines{aperiodic Markov chain}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Let $\lbrace X_n \rbrace$ be a \PMlinkname{stationary}{StationaryProcess} Markov chain with state space $I$.  Let $P_{ij}^{n}$ be the $n$-step transition probability that the process goes from state $i$ at time $0$ to state $j$ at time $n$:
+$$P_{ij}^{n}=P(X_n=j\mid X_0=i).$$
+
+Given any state $i\in I$, define the set $$N(i):=\lbrace n\ge 1\mid P_{ii}^n>0\rbrace.$$  It is not hard to see that if $n,m\in N(i)$, then $n+m\in N(i)$.  The \emph{period} of $i$, denoted by $d(i)$, is defined as 
+$$
+d(i):=\begin{cases}
+0&\text{if } N(i)=\varnothing,\\
+\gcd (N(i))&\text{otherwise},
+\end{cases}
+$$ 
+where $\gcd(N(i))$ is the greatest common divisor of all positive integers in $N(i)$.
+
+A state $i\in I$ is said to be \emph{aperiodic} if $d(i)=1$.  A Markov chain is called \emph{aperiodic} if every state is aperiodic.
+
+\textbf{Property}. If states $i,j\in I$ \PMlinkname{communicate}{MarkovChainsClassStructure}, then $d(i)=d(j)$.
+
+\begin{proof} We will employ a common inequality involving the $n$-step transition probabilities:
+$$P_{ij}^{m+n}\ge P_{ik}^m P_{kj}^n$$
+for any $i,j,k\in I$ and non-negative integers $m,n$.
+
+Suppose first that $d(i)=0$.  Since $i\leftrightarrow j$, 
+$\displaystyle{ P_{ij}^n>0}$ and $P_{ji}^m>0$ for some $n,m\ge 0$.  This implies that $P_{ii}^{m+n}>0$, which forces $m+n=0$ or $m=n=0$, and hence $j=i$.
+
+Next, assume $d(i)>0$, this means that $N(i)\ne \varnothing$.  Since $i\leftrightarrow j$, there are $r,s\ge 0$ such that $P_{ji}^r>0$ and $P_{ij}^s>0$, and so $P_{jj}^{r+s}>0$, showing $r+s\in N(j)$.  If we pick any $n\in N$, we also have $\displaystyle{ P_{jj}^{r+n+s}\ge P_{ji}^r P_{ii}^n P_{ij}^s>0 }$, or $r+s+n\in N(j)$.  But this means $d(j)$ divides both $r+s$ and $r+s+n$, and so $d(j)$ divides their difference, which is $n$.  Since $n$ is arbitrarily picked, $d(j)\mid d(i)$.  Similarly, $d(i)\mid d(j)$.  Hence $d(i)=d(j)$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

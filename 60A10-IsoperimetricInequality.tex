@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IsoperimetricInequality}
+\pmcreated{2013-03-22 14:02:47}
+\pmmodified{2013-03-22 14:02:47}
+\pmowner{bbukh}{348}
+\pmmodifier{bbukh}{348}
+\pmtitle{isoperimetric inequality}
+\pmrecord{12}{35397}
+\pmprivacy{1}
+\pmauthor{bbukh}{348}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A10}
+\pmclassification{msc}{51M25}
+\pmclassification{msc}{51M16}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+\DeclareMathOperator{\vol}{vol}
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+\PMlinkescapeword{states}
+\PMlinkescapeword{terms}
+The classical isoperimetric inequality says that if a planar
+figure has perimeter $P$ and area $A$, then
+\begin{equation*}
+4\pi A\leq P^2,
+\end{equation*}
+where the equality holds if and only if the figure is a circle.
+That is, the circle is the figure that encloses the largest area
+among all figures of same perimeter.
+
+The analogous statement is true in arbitrary dimension. The
+$d$-dimensional ball has the largest volume among all figures of
+equal surface area.
+
+The isoperimetric inequality can alternatively be stated using the
+$\epsilon$-neighborhoods. An $\epsilon$-neighborhood of a set $S$,
+denoted here by $S_\epsilon$, is the set of all points whose
+distance to $S$ is at most $\epsilon$. The isoperimetric
+inequality in terms of $\epsilon$-neighborhoods states that
+$\vol(S_\epsilon)\geq \vol(B_\epsilon)$ where $B$ is the ball of
+the same volume as $S$. The classical isoperimetric inequality can
+be recovered by taking the limit $\epsilon\to 0$. 
+The advantage of this formulation is that it
+does not depend on the notion of surface area, and so can be
+generalized to arbitrary measure spaces with a metric.
+
+An example when this general formulation proves useful is the
+Talagrand's isoperimetric theory dealing with \PMlinkname{Hamming}{HammingDistance}-like
+distances in product spaces. The theory has proven to be very
+useful in many applications of probability to combinatorics.
+
+\begin{thebibliography}{1}
+
+\bibitem{cite:alon_spencer_probmethod}
+Noga Alon and Joel~H. Spencer.
+\newblock {\em The probabilistic method}.
+\newblock John Wiley \& Sons, Inc., second edition, 2000.
+\newblock \PMlinkexternal{Zbl 0996.05001}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0996.05001}.
+
+\bibitem{cite:matousek_discgeom}
+Ji{\v{r}}{\'\i} Matou{\v{s}}ek.
+\newblock {\em Lectures on Discrete Geometry}, volume 212 of {\em GTM}.
+\newblock Springer, 2002.
+\newblock \PMlinkexternal{Zbl 0999.52006}{http://www.emis.de/cgi-bin/zmen/ZMATH/en/quick.html?type=html&an=0999.52006}.
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

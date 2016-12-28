@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MeasurabilityOfStochasticProcesses}
+\pmcreated{2013-03-22 18:37:29}
+\pmmodified{2013-03-22 18:37:29}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{measurability of stochastic processes}
+\pmrecord{5}{41361}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G05}
+\pmrelated{MeasurabilityOfStoppedProcesses}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{theorem}
+\PMlinkescapeword{properties}
+For a continuous-time stochastic process adapted to a given \PMlinkname{filtration}{FiltrationOfSigmaAlgebras} $(\mathcal{F}_t)_{t\in\mathbb{R}_+}$ on a measurable space $(\Omega,\mathcal{F})$, there are various conditions which can be placed either on its sample paths or on its measurability when considered as a function from $\mathbb{R}_+\times\Omega$ to $\mathbb{R}$. The following theorem lists the dependencies between these properties.
+
+\begin{theorem*}
+Let $(X_t)_{t\in\mathbb{R}_+}$ be a real valued stochastic process.
+Then, $X$ is optional if it is adapted and right-continuous, it is predictable if it is adapted and left-continuous. Furthermore, each of the following properties implies the next.
+\begin{enumerate}
+\item $X$ is predictable.
+\item $X$ is optional.
+\item $X$ is progressive.
+\item $X$ is adapted and jointly measurable.
+\end{enumerate}
+\end{theorem*}
+
+%%%%%
+%%%%%
+\end{document}

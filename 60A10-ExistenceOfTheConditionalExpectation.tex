@@ -1,0 +1,135 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExistenceOfTheConditionalExpectation}
+\pmcreated{2013-03-22 18:39:28}
+\pmmodified{2013-03-22 18:39:28}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{existence of the conditional expectation}
+\pmrecord{5}{41401}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A10}
+%\pmkeywords{probability space}
+%\pmkeywords{conditional expectation}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{satisfy}
+\PMlinkescapeword{orthogonal projection}
+
+Let $(\Omega,\mathcal{F},\mathbb{P})$ be a probability space and $X$ be a random variable. For any $\sigma$-algebra $\mathcal{G}\subseteq\mathcal{F}$, we show the existence of the conditional expectation $\mathbb{E}[X\mid\mathcal{G}]$. Although it is possible to do this using the Radon-Nikodym theorem, a different approach is used here which relies on the completeness of the vector space $L^2$.
+The defining property of the conditional expectation $Y=\mathbb{E}[X\mid\mathcal{G}]$ is
+\begin{equation}\label{cond exp}
+\mathbb{E}[1_GY]=\mathbb{E}[1_GX]
+\end{equation}
+for sets $G\in\mathcal{G}$. We shall prove the existence of the conditional expectation for all nonnegative random variables and, more generally, whenever $\mathbb{E}[|X|\mid\mathcal{G}]$ is almost surely finite.
+
+First, the conditional expectation of every square-integrable random variable exists.
+
+\begin{theorem}\label{square integrable}
+Suppose that $\mathbb{E}[X^2]<\infty$. Then there is a $\mathcal{G}$-measurable random variable $Y$ satisfying $\mathbb{E}[Y^2]<\infty$ and equation (\ref{cond exp}) is satisfied for all $G\in\mathcal{G}$.
+\end{theorem}
+\begin{proof}
+Consider the norm $\Vert Y\Vert_2\equiv\mathbb{E}[Y^2]^{1/2}$ on the vector space $V=L^2(\Omega,\mathcal{F},\mathbb{P})$ of real valued random variables $Y$ satisfying $\mathbb{E}[Y^2]<\infty$ (up to $\mathbb{P}$ almost everywhere equivalence). This is given by the following inner product
+\begin{equation*}
+\langle Y_1,Y_2\rangle\equiv\mathbb{E}[Y_1Y_2].
+\end{equation*}
+As $L^p$-spaces are complete, this makes $V$ into a Hilbert space (see also, \PMlinkname{$L^2$-spaces are Hilbert spaces}{L2SpacesAreHilbertSpaces}). Then, $U\equiv L^2(\Omega,\mathcal{G},\mathbb{P})$ is a complete, and hence closed, subspace of $V$.
+
+By the \PMlinkname{existence of orthogonal projections}{ProjectionsAndClosedSubspaces} onto closed subspaces of Hilbert spaces, there is an orthogonal projection $\pi\colon V\rightarrow U$. In particular, $\langle\pi Y-Y,Z\rangle=0$ for all $Y\in V$ and $Z\in U$. Setting $Y=\pi X$ gives
+\begin{equation*}
+\mathbb{E}[1_GY]-\mathbb{E}[1_GX] = \langle 1_G,\pi X-X\rangle=0
+\end{equation*}
+as required.
+\end{proof}
+
+We can now prove the existence of conditional expectations of nonnegative random variables. Note that here there are no integrability conditions on $X$.
+
+\begin{theorem}\label{nonnegative}
+Let $X$ be a nonnegative random variable taking values in $\mathbb{R}\cup\{\infty\}$. Then, there exists a nonnegative $\mathcal{G}$-measurable random variable $Y$ taking values in $\mathbb{R}\cup\{\infty\}$ and satisfying (\ref{cond exp}) for all $G\in\mathcal{G}$. Furthermore, $Y$ is uniquely defined $\mathbb{P}$-\PMlinkname{almost everywhere}{AlmostSurely}.
+\end{theorem}
+\begin{proof}
+First, let $X_n=\min(n,X)$. As this is bounded, theorem \ref{square integrable} says that the conditional expectations $Y_n=\mathbb{E}[Y_n\mid\mathcal{G}]$ exist. Furthermore, as $X_0=0$, we may take $Y_0=0$.
+For any $n$, setting $G=\{Y_{n+1}<Y_n\}\in\mathcal{G}$ gives
+\begin{equation*}
+\mathbb{E}[1_G(Y_n-Y_{n+1})]=\mathbb{E}[1_G(X_n-X_{n+1})]\le 0.
+\end{equation*}
+So $1_G(Y_n-Y_{n+1})$ is a nonnegative random variable with nonpositive expectation, hence is almost surely equal to zero. Therefore, $Y_{n+1}\ge Y_n$ (almost surely) and, by replacing $Y_n$ with the maximum of $Y_1,\ldots\,Y_n$ we may suppose that $(Y_n)$ is an increasing sequence of random variables. Setting $Y=\sup_nY_n$, the monotone convergence theorem gives
+\begin{equation*}
+\mathbb{E}[1_GY]=\lim_{n\rightarrow\infty}\mathbb{E}[1_GY_n]=\lim_{n\rightarrow\infty}\mathbb{E}[1_GX_n]=\mathbb{E}[1_GX]
+\end{equation*}
+as required.
+
+Finally, suppose that $\tilde Y$ is also a nonnegative $\mathcal{G}$-measurable random variable satisfying (\ref{cond exp}). For any $x\in\mathbb{R}$, setting $G=\{\tilde Y>Y,x>Y\}$ then $1_GY$ is bounded and,
+\begin{equation*}
+\mathbb{E}[1_G(\tilde Y-Y)]=\mathbb{E}[1_GX]-\mathbb{E}[1_GX]=0
+\end{equation*}
+showing that $\mathbb{P}(G)=0$. Letting $x$ increase to infinity gives $\tilde Y\le Y$ (almost surely) and, similarly, $Y\le \tilde Y$ so that $Y=\tilde Y$ almost surely.
+\end{proof}
+
+Finally, we show existence of the conditional expectation of every random variable $X$ satisfying $\mathbb{E}[|X|\mid\mathcal{G}]<\infty$ almost surely. Note, in particular, that this is satisfied whenever $X$ is integrable, as
+\begin{equation*}
+\mathbb{E}[\mathbb{E}[|X|\mid\mathcal{G}]]=\mathbb{E}[|X|]<\infty.
+\end{equation*}
+
+\begin{theorem}
+Let $X$ be a random variable such that $\mathbb{E}[|X|\mid\mathcal{G}]<\infty$ almost surely. Then, there exists a $\mathcal{G}$-measurable random variable $Y$ such that $\mathbb{E}[1_G|Y|]<\infty$ and (\ref{cond exp}) is satisfied for every $G\in\mathcal{G}$ with $\mathbb{E}[1_G|X|]<\infty$.
+
+Furthermore, $Y$ is uniquely defined up to $\mathbb{P}$-a.e. equivalence.
+\end{theorem}
+\begin{proof}
+The positive and negative parts $X_+,X_-$ of $X$ satisfy
+\begin{equation*}
+\mathbb{E}[X_+\mid\mathcal{G}]+\mathbb{E}[X_-\mid\mathcal{G}]=\mathbb{E}[|X|\mid\mathcal{G}]<\infty
+\end{equation*}
+almost surely. We can therefore set $Y_{\pm}\equiv\mathbb{E}[X_\pm\mid\mathcal{G}]$ and $Y=Y_+-Y_-$.
+
+If $G\in\mathcal{G}$ satisfies $\mathbb{E}[1_G|X|]<\infty$ then $\mathbb{E}[1_GY_\pm]=\mathbb{E}[1_GX_\pm]<\infty$, so $\mathbb{E}[1_G|Y|]<\infty$ and,
+\begin{equation*}
+\mathbb{E}[1_GY]=\mathbb{E}[1_GY_+]-\mathbb{E}[1_GY_-]=\mathbb{E}[1_GX_+]-\mathbb{E}[1_GX_-]=\mathbb{E}[1_GX]
+\end{equation*}
+as required.
+
+Finally, suppose that $\tilde Y$ satisfies the same conditions as $Y$. For any $x\ge 0$ set $G=\{Y_++Y_-\le x,\tilde Y> Y\}\in\mathcal{G}$.
+Then,
+\begin{equation*}
+\mathbb{E}[1_G|X|]=\mathbb{E}[1_G(Y_++Y_-)]\le x<\infty.
+\end{equation*}
+So, $\mathbb{E}[1_G|Y|]$ and $\mathbb{E}[1_G|\tilde Y|]$ are finite, hence (\ref{cond exp}) gives
+\begin{equation*}
+\mathbb{E}[1_G(\tilde Y - Y)]=\mathbb{E}[1_GX]-\mathbb{E}[1_GX]=0.
+\end{equation*}
+So $\mathbb{P}(G)=0$ and, letting $x$ increase to infinity, $\tilde Y\le Y$ almost surely. Similarly, $Y\le\tilde Y$ and therefore $\tilde Y=Y$ almost surely.
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

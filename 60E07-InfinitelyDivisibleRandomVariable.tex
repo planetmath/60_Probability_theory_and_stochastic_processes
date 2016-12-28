@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InfinitelyDivisibleRandomVariable}
+\pmcreated{2013-03-22 16:25:58}
+\pmmodified{2013-03-22 16:25:58}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{infinitely divisible random variable}
+\pmrecord{8}{38585}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E07}
+\pmdefines{$n$-decomposable}
+\pmdefines{$n$-divisible}
+\pmdefines{infinitely divisible distribution}
+\pmdefines{infinitely divisible}
+\pmdefines{decomposable random variable}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Let $n$ be a positive integer.  A real random variable $X$ defined on a probability space $(\Omega, \mathcal{F}, P)$ is said to be 
+\begin{enumerate}
+\item \emph{$n$-decomposable} if there exist $n$ independent random variables $X_1,\ldots,X_n$ such that $X$ is identically distributed as the sum $X_1+\cdots+X_n$.  A $2$-decomposable random variable is also called a \emph{decomposable random variable};
+\item \emph{$n$-divisible} if $X$ is $n$-decomposable and the $X_i$'s can be chosen so that they are identically distributed;
+\item \emph{infinitely divisible} if $X$ is $n$-divisible for every positive integer $n$.  In other words, $X$ can be written as the sum of $n$ iid random variables for any $n$.
+\end{enumerate}
+
+A distribution function is said to be \emph{infinitely divisible} if it is the distribution function of an infinitely divisible random variable.
+
+\textbf{Remark}.  Any stable random variable is infinitely divisible.
+
+Some examples of infinitely divisible distribution functions, besides those that are stable, are the gamma distributions, negative binomial distributions, and compound Poisson distributions.
+%%%%%
+%%%%%
+\end{document}

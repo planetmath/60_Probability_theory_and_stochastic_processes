@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Martingale}
+\pmcreated{2013-03-22 13:33:09}
+\pmmodified{2013-03-22 13:33:09}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{martingale}
+\pmrecord{25}{34157}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G46}
+\pmclassification{msc}{60G44}
+\pmclassification{msc}{60G42}
+%\pmkeywords{martingale}
+%\pmkeywords{supermartingale}
+%\pmkeywords{submartingale}
+\pmrelated{LocalMartingale}
+\pmrelated{DoobsOptionalSamplingTheorem}
+\pmrelated{ConditionalExpectationUnderChangeOfMeasure}
+\pmrelated{MartingaleConvergenceTheorem}
+\pmdefines{martingale}
+\pmdefines{supermartingale}
+\pmdefines{submartingale}
+\pmdefines{reverse submartingale}
+\pmdefines{reverse supermartingale}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{verbatim}
+
+% define commands here
+%\newtheorem{defn}{Definition}
+\newtheorem{rem}{Remark}
+\numberwithin{equation}{section}
+\newcommand{\Real}{\mathbb R}
+\newcommand{\Prob}{\mathbb P}
+\newcommand{\F}{\mathcal{F}}
+\begin{document}
+\title{Martingales definition}%
+
+\textbf{Definition}.  Let $(\Omega, \F,(\F_t)_{t\in\mathbb{T}},\Prob)$ be a filtered probability space and $(X_t)$ be a stochastic process such that $X_t$ is \PMlinkname{integrable}{Integral2} for all $t\in\mathbb{T}$. Then, $X=(X_t, \F_t)$ is called a \emph{submartingale} if
+$$\mathbb{E}^{\Prob}[X_t|\F_s] \geq X_s,\, \mbox{for every $s < t$, a.e.[$\Prob$],}$$
+and a \emph{supermartigale} if 
+$$\mathbb{E}^{\Prob}[X_t|\F_s] \leq X_s,\, \mbox{for every $s < t$, a.e.[$\Prob$].}$$
+
+\noindent A submartingale that is also a supermartingale is called a
+\emph{martingale}, i.e., a martingale satisfies
+$$\mathbb{E}^{\Prob}[X_t|\F_s] = X_s,\, \mbox{for
+every $s < t$, a.e.[$\Prob$].}$$
+
+\noindent Similarly, if the $\{\F_t\}$ form a decreasing collection of $\sigma$-subalgebras of $\F$, then $X$ is called a \emph{reverse submartingale} if 
+$$\mathbb{E}^{\Prob}[X_s|\F_t] \geq X_t,\, \mbox{for every $s < t$, a.e.[$\Prob$],}$$
+and a \emph{reverse supermartingale} if 
+$$\mathbb{E}^{\Prob}[X_s|\F_t] \leq X_t,\, \mbox{for every $s < t$, a.e.[$\Prob$].}$$
+
+\medskip
+
+\textbf{Remarks}
+\begin{itemize}
+\item
+The martingale property captures the idea of a fair bet, where the
+expected future value is equal to the current value.
+\item
+The submartingale property is equivalent to $$\int_A X_t \, d\Prob \geq
+\int_A X_s \, d\Prob \,\,\, \mbox{for every $A \in \F_s$ and $s <
+t$}$$ and similarly for the other definitions. This is immediate
+from the definition of conditional expectation.
+\end{itemize}
+
+
+%%%%%
+%%%%%
+\end{document}

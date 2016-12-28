@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FiltrationOfsigmaalgebras}
+\pmcreated{2013-03-22 18:37:13}
+\pmmodified{2013-03-22 18:37:13}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{filtration of $\sigma$-algebras}
+\pmrecord{5}{41355}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G05}
+\pmsynonym{filtration of sigma-algebras}{FiltrationOfsigmaalgebras}
+%\pmkeywords{$\sigma$-algebra}
+%\pmkeywords{measurable space}
+\pmrelated{FilteredProbabilitySpace}
+\pmrelated{Filtration}
+\pmdefines{natural filtration}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{index set}
+\PMlinkescapeword{represents}
+\PMlinkescapeword{clear}
+\PMlinkescapeword{conversely}
+\PMlinkescapeword{generates}
+\PMlinkescapeword{satisfy}
+\PMlinkescapeword{interval}
+\PMlinkescapeword{right limits}
+For an ordered set $T$, a filtration of \PMlinkname{$\sigma$-algebras}{SigmaAlgebra} $(\mathcal{F}_t)_{t\in T}$ is a collection of $\sigma$-algebras on an underlying set $\Omega$, satisfying $\mathcal{F}_s\subseteq\mathcal{F}_t$ for all $s<t$ in $T$. Here, $t$ is understood as the time variable, taking values in the index set $T$, and $\mathcal{F}_t$ represents the collection of all events observable up until time $t$. The index set is usually a subset of the real numbers, with common examples being $T=\mathbb{Z}_+$ for discrete-time and $T=\mathbb{R}_+$ for continuous-time scenarios.
+The collection $(\mathcal{F}_t)_{t\in T}$ is a filtration on a measurable space $(\Omega,\mathcal{F})$ if $\mathcal{F}_t\subseteq\mathcal{F}$ for every $t$. If, furthermore, there is a probability measure defined on the underlying measurable space then this gives a filtered probability space.
+The alternative notation $(\mathcal{F}_t,t\in T)$ is often used for the filtration or, when the index set $T$ is clear from the context, simply $(\mathcal{F}_t)$ or ${\bf F}$.
+
+Filtrations are widely used for studying stochastic processes, where a process $X_t$ with time ranging over the set $T$ is said to be adapted to the filtration if $X_t$ is an $\mathcal{F}_t$-measurable random variable for each time $t$.
+
+Conversely, any stochastic process $(X_t)_{t\in T}$ generates a filtration. Let $\mathcal{F}_t$ be the smallest $\sigma$-algebra with respect to which $X_s$ is measurable for all $s\le t$,
+\begin{equation*}
+\mathcal{F}_t=\sigma\left(X_s:s\le t\right).
+\end{equation*}
+This defines the smallest filtration to which $X$ is adapted, known as the \emph{natural filtration} of $X$.
+
+Given a filtration, there are various limiting $\sigma$-algebras which can be defined. The values at plus and minus infinity are
+\begin{equation*}
+\mathcal{F}_\infty = \sigma\left(\bigcup_t\mathcal{F}_t\right),\
+\mathcal{F}_{-\infty} = \bigcap_t\mathcal{F}_t,
+\end{equation*}
+which satisfy $\mathcal{F}_{-\infty}\subseteq\mathcal{F}_t\subseteq\mathcal{F}_\infty$.
+In continuous-time, when the index set is an interval of the real numbers, the left and right limits can be defined at any time. They are,
+\begin{equation*}
+\mathcal{F}_{t+}=\bigcap_{s>t}\mathcal{F}_s,\ \mathcal{F}_{t-}=\sigma\left(\bigcup_{s<t}\mathcal{F}_s\right),
+\end{equation*}
+except if $t$ is the maximum of $T$ it is often convenient to set $\mathcal{F}_{t+}=\mathcal{F}_t$ or, if $t$ is the minimum, $\mathcal{F}_{t-}=\mathcal{F}_t$. It is easily verified that $\mathcal{F}_s\subseteq\mathcal{F}_{s+}\subseteq\mathcal{F}_{t-}\subseteq\mathcal{F}_t$ for all times $s<t$.
+Furthermore, $(\mathcal{F}_{t+})$ and $(\mathcal{F}_{t-})$ are themselves filtrations.
+
+A filtration is said to be right-continuous if $\mathcal{F}_t=\mathcal{F}_{t+}$ for every $t$ so, in particular, $(\mathcal{F}_{t+})$ is always the smallest right-continuous filtration larger than $(\mathcal{F}_t)$.
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BooleInequalityProofOf}
+\pmcreated{2013-03-22 15:47:18}
+\pmmodified{2013-03-22 15:47:18}
+\pmowner{Bunder}{13010}
+\pmmodifier{Bunder}{13010}
+\pmtitle{Boole inequality, proof of}
+\pmrecord{6}{37748}
+\pmprivacy{1}
+\pmauthor{Bunder}{13010}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\{B_1, B_2, \cdots \}$ be a sequence defined by:
+
+$$ B_i = A_i \setminus \bigcup_{k=1}^{i-1} A_k$$
+
+Clearly $B_i \in \mathcal{F}, \forall i \in \mathbb{N}$, since $\mathcal{F}$ is  $\sigma$-algebra, they are a disjoint family and :
+
+$$ \bigcup_{n=1}^{i} A_n = \bigcup_{n=1}^{i} B_n ,  \forall i \in \mathbb{N}$$
+
+and since $P$ is a measure over $\mathcal{F}$ it follows that :
+
+$$ P(\bigcup_{n=1}^{i} B_n) = \sum_{n=1}^{i} P(B_n) ,  \forall i \in \mathbb{N}$$
+
+% $$ = \sum_{n=1}^{i} P(A_n \setminus \bigcup_{k=1}^{n-1} A_k)$$
+
+Clearly $ B_i \subset A_i$ , then $P(B_i) \leq P(A_i)$ because measures are \PMlinkid{monotonic}{4460}, then it follows that :
+
+$$ P(\bigcup_{n=1}^{i} B_n) \leq \sum_{n=1}^{i} P(A_n),  \forall i \in \mathbb{N} $$
+
+finally taking $n \to \infty$ :
+
+$$ P(\bigcup_{n=1}^{\infty} A_n) = P(\bigcup_{n=1}^{\infty} B_n) \leq \sum_{n=1}^{\infty} P(A_n) $$
+
+the latter is valid because the measure continuity , and is the proof of the theorem
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LindebergsCentralLimitTheorem}
+\pmcreated{2013-03-22 13:14:25}
+\pmmodified{2013-03-22 13:14:25}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Lindeberg's central limit theorem}
+\pmrecord{19}{33713}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60F05}
+\pmsynonym{Lyapunov's central limit theorem}{LindebergsCentralLimitTheorem}
+\pmsynonym{central limit theorem}{LindebergsCentralLimitTheorem}
+\pmsynonym{lyapunov condition}{LindebergsCentralLimitTheorem}
+\pmsynonym{lindeberg condition}{LindebergsCentralLimitTheorem}
+\pmrelated{TightAndRelativelyCompactMeasures}
+\pmdefines{normal convergence}
+\pmdefines{liapunov's central limit theorem}
+\pmdefines{liapunov condition}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\textbf{Theorem (Lindeberg's central limit theorem)}
+
+Let $X_1, X_2,\dots$ be independent random variables with distribution functions $F_1,F_2,\dots$, respectively, such that $EX_n=\mu_n$ and $\operatorname{Var}X_n=\sigma_n^2<\infty$, with at least one $\sigma_n>0$.
+Let \[S_n = X_1+\cdots+X_n\;\mbox{and}\; s_n=\sqrt{\operatorname{Var}(S_n)} =
+\sqrt{\sigma_1^2+\cdots+\sigma_n^2}.\]
+
+Then the normalized partial sums $\frac{S_n - ES_n}{s_n}$ converge 
+\PMlinkname{in distribution}{ConvergenceInDistribution} to a random variable with normal distribution $N(0,1)$ (i.e. the \emph{normal convergence} holds,) if the following \emph{Lindeberg condition} is satisfied:
+
+\[\forall \varepsilon>0,\; \lim_{n\rightarrow\infty} \frac{1}{s_n^2}
+\sum_{k=1}^n \int_{|x-\mu_k|>\varepsilon s_n} (x-\mu_k)^2 dF_k(x) = 0.\]
+
+\textbf{Corollary 1 (Lyapunov's central limit theorem)}
+
+If the Lyapunov condition 
+\[\frac{1}{s_n^{2+\delta}}\sum_{k=1}^n E|X_k-\mu_k|^{2+\delta} 
+\xrightarrow[n\rightarrow\infty]{} 0\]
+is satisfied for some $\delta>0$, the normal convergence holds.
+
+\textbf{Corollary 2} 
+
+If $X_1,X_2,\dots$ are identically distributed random variables, $EX_n=\mu$ and $\operatorname{Var}S_n = \sigma^2$, with $0<\sigma<\infty$, then the normal convergence holds; i.e. $\frac{S_n-n\mu}{\sigma \sqrt{n}}$ converges \PMlinkname{in distribution}{ConvergenceInDistribution} to a random variable with distribution $N(0,1)$.
+
+\textbf{Reciprocal (Feller)} 
+
+The reciprocal of Lindeberg's central limit theorem holds under the following additional assumption:
+\[\max_{1\leq k\leq n} \left(\frac{\sigma_k^2}{s_n^2}\right)\xrightarrow[n\rightarrow\infty]{} 0.\]
+
+\textbf{Historical remark} 
+
+\begin{itshape}
+\PMlinkescapetext{The normal distribution was historically called the law of errors. It was used by Gauss to model errors in astronomical observations, which is why it is usually referred to as the Gaussian distribution. Gauss derived the normal distribution, not as a limit of sums of independent random variables, but from the consideration of certain ``natural'' hypotheses for the distribution of errors; e.g. considering the arithmetic mean of the observations to be the ``most probable'' value of the quantity being observed.}
+
+\PMlinkescapetext{Nowadays, the central limit theorem supports the use of normal distribution as a distribution of errors, since in many real situations it is possible to consider the error of an observation as the result of many independent small errors. There are, too, many situations which are not subject to observational errors, in which the use of the normal distribution can still be justified by the central limit theorem. For example, the distribution of heights of mature men of a certain age can be considered normal, since height can be seen as the sum of many small and independent effects.}
+
+\PMlinkescapetext{The normal distribution did not have its origins with Gauss. It appeared, at least discretely, in the work of De Moivre, who proved the central limit theorem for the case of Bernoulli essays with p=1/2 (e.g. when the n-th random variable is the result of tossing a coin.)}
+\end{itshape}
+%%%%%
+%%%%%
+\end{document}

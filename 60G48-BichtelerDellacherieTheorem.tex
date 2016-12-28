@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BichtelerDellacherieTheorem}
+\pmcreated{2013-03-22 18:36:48}
+\pmmodified{2013-03-22 18:36:48}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{Bichteler-Dellacherie theorem}
+\pmrecord{8}{41347}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G48}
+\pmclassification{msc}{60H05}
+\pmclassification{msc}{60G07}
+\pmsynonym{Dellacherie-Meyer-Mokobodzky theorem}{BichtelerDellacherieTheorem}
+%\pmkeywords{semimartingale}
+%\pmkeywords{local martingale}
+%\pmkeywords{finite variation process}
+%\pmkeywords{simple predictable process}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{calculus}
+\PMlinkescapeword{states}
+\PMlinkescapeword{equivalence}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{theorem}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{sums}
+\PMlinkescapeword{satisfy}
+\PMlinkescapeword{bounded}
+\PMlinkescapeword{decomposition}
+\PMlinkescapeword{property}
+
+The Bichteler-Dellacherie theorem is an important result in stochastic calculus, and states the equivalence of two very different definitions of semimartingales.
+The result also goes under other names, such as the \emph{Dellacherie-Meyer-Mokobodzky theorem}.
+Prior to its discovery, a theory of stochastic integration had been developed for local martingales. As standard Lebesgue-Stieltjes integration can be applied to finite variation processes, this allowed an integral to be defined with respect to sums of local martingales and finite variation processes, known as a semimartingales. The Bichteler-Dellacherie theorem then shows that, as long as we require stochastic integration to satisfy bounded convergence, then semimartingales are actually the most general objects which can be used.
+
+We consider a real valued stochastic process $X$ adapted to a filtered probability space $(\Omega,\mathcal{F},(\mathcal{F}_t)_{t\in\mathbb{R}_+},\mathbb{P})$. Then, the integral $\int_0^t\xi\,dX$ can be written out explicitly for any simple predictable process $\xi$.
+
+\begin{theorem*}[Bichteler-Dellacherie]
+Let $X$ be a cadlag adapted stochastic process. Then, the following are equivalent.
+\begin{enumerate}
+\item\label{bounded} For every $t>0$, the set
+\begin{equation*}
+\left\{\int_0^t\xi\,dX:|\xi|\le 1\textrm{ is simple predictable}\right\}
+\end{equation*}
+is bounded in probability.
+\item\label{decomp} A decomposition $X=M+V$ exists, where $M$ is a local martingale and $V$ is a finite variation process.
+\item\label{strong decomp} A decomposition $X=M+V$ exists, where $M$ is locally a uniformly bounded martingale and $V$ is a finite variation process.
+\end{enumerate}
+\end{theorem*}
+
+Condition \ref{bounded} is equivalent to stating that if $\xi^n$ is a sequence of simple predictable processes converging uniformly to zero, then the integrals $\int_0^t\xi^n\,dX$ tend to zero in probability as $n\rightarrow\infty$, which is a weak form of bounded convergence for stochastic integration.
+
+Conditions \ref{bounded} and \ref{decomp} are the two definitions often used for the process $X$ to be a semimartingale.
+However, condition \ref{strong decomp} gives a stronger decomposition which is often more useful in practise. The property that $M$ is locally a uniformly bounded martingale means that there exists a sequence of stopping times $\tau_n$, almost surely increasing to infinity, such that the stopped processes $M^{\tau_n}$ are uniformly bounded martingales.
+
+\begin{thebibliography}{9}
+\bibitem{protter}
+Philip E. Protter, \emph{Stochastic integration and differential equations.} Second edition. Applications of Mathematics, 21. Stochastic Modelling and Applied Probability. Springer-Verlag, 2004.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ChisquaredRandomVariable}
+\pmcreated{2013-03-22 11:54:49}
+\pmmodified{2013-03-22 11:54:49}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{chi-squared random variable}
+\pmrecord{16}{30551}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60-00}
+\pmclassification{msc}{11-00}
+\pmclassification{msc}{20-01}
+\pmclassification{msc}{20A05}
+\pmsynonym{central chi-squared distribution}{ChisquaredRandomVariable}
+\pmrelated{ChiSquaredStatistic}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+
+\def\N{\mathbb{N}}
+\def\Var{\operatorname{Var}}
+
+
+
+\begin{document}
+\PMlinkescapeword{degrees}
+\PMlinkescapeword{intervals}
+\PMlinkescapeword{represents}
+\PMlinkescapeword{syntax}
+\PMlinkescapeword{sum}
+\PMlinkescapeword{squares}
+
+A \emph{central chi-squared random variable} $X$ with $n>0$ degrees of freedom is given by the probability density function
+\[
+  f_X(x) = \frac{ (\frac{1}{2})^{\frac{n}{2}} } {\Gamma(\frac{n}{2})}
+           x^{\frac{n}{2} - 1} e^{- \frac{1}{2} x} 
+\]
+for $x > 0$, where $\Gamma$ represents the gamma function.
+
+The parameter $n$ is usually, but not always, an integer, in which case the distribution is that of the sum of the squares of a sequence of $n$ independent standard \PMlinkname{normal variables}{NormalRandomVariable} $X_1,X_2,\ldots,X_n$,
+\begin{equation*}
+X=X_1^2+X_2^2+\cdots+X_n^2.
+\end{equation*}
+
+Parameters: $n\in(0,\infty)$.
+
+Syntax: $X\sim \chi_{(n)}^{2}$
+
+\begin{figure}[h]
+\centering
+\includegraphics{chisquared}
+\caption{Densities of the chi-squared distribution for different degrees of freedom.}
+\end{figure}
+
+Notes:
+
+\begin{enumerate}
+
+\item This distribution is very widely used in statistics, such as in hypothesis tests and confidence intervals.
+\item The chi-squared distribution with $n$ degrees of freedom is a result of evaluating the gamma distribution with $\alpha = \frac{n}{2}$ and $\lambda = \frac{1}{2}$.
+\item $E[X] = n$
+\item $\Var[X] = 2n$
+\item The moment generating function is
+\begin{equation*}
+M_X(t) = \left(1 - 2t\right)^{-\frac{n}{2}},
+\end{equation*}
+and is defined for all $t\in\mathbb{C}$ with \PMlinkname{real part}{Complex} less than $1/2$.
+\item The sum of independent $\chi_{(m)}^2$ and $\chi_{(n)}^2$ random variables has the $\chi_{(m+n)}^2$ distribution.
+\end{enumerate}
+
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

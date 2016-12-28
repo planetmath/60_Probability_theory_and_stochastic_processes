@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBorelCantelli2}
+\pmcreated{2013-03-22 14:29:35}
+\pmmodified{2013-03-22 14:29:35}
+\pmowner{kshum}{5987}
+\pmmodifier{kshum}{5987}
+\pmtitle{proof of Borel-Cantelli 2}
+\pmrecord{4}{36028}
+\pmprivacy{1}
+\pmauthor{kshum}{5987}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $E$ denote the set of samples that are in $A_i$ infinitely often. We want to show that the complement of $E$ has probability zero.
+
+As in the proof of Borel-Cantelli 1, we know that
+\[
+ E^c = \bigcup_{k=1}^\infty \bigcap_{i=k}^\infty A_i^c
+\]
+where the superscript $^c$ means set complement. But for each $k$,
+\begin{align*}
+P(\cap_{i=k} A_i^c) &= \prod_{i=k}^\infty P(A_i^c) \\
+&= \prod_{i=k}^\infty (1-P(A_i))
+\end{align*}
+Here we use the assumption that the event $A_i$'s are independent. The inequality $1-a \leq e^{-a}$ and the assumption that the sum of $P(A_i)$ diverges together imply that
+\[
+  P(\cap_{i=k} A_i^c) \leq \exp(-\sum_{i=k}^\infty P(A_i)) = 0
+\]
+Therefore $E^c$ is a union of countable number of events, each of them has probability zero. So $P(E^c)=0$.
+%%%%%
+%%%%%
+\end{document}

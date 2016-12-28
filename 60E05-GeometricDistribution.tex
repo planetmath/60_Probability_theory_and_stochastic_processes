@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeometricDistribution}
+\pmcreated{2013-03-22 13:03:07}
+\pmmodified{2013-03-22 13:03:07}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{geometric distribution}
+\pmrecord{14}{33456}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E05}
+\pmsynonym{geometric random variable}{GeometricDistribution}
+\pmrelated{RandomVariable}
+\pmrelated{DensityFunction}
+\pmrelated{DistributionFunction}
+\pmrelated{Mean}
+\pmrelated{Variance}
+\pmrelated{BernoulliDistribution}
+\pmrelated{ArithmeticMean}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\begin{document}
+Suppose that a random experiment has two possible outcomes, success with probability $p$ and failure with probability $q=1-p$. The experiment is repeated until a success happens. The number of trials before the success is a random variable $X$ with density function 
+$$f(x)=q^{(x-1)}p.$$
+
+The distribution function determined by $f(x)$ is called a \emph{geometric distribution} with parameter $p$ and it is given by
+$$F(x) = \sum_{k\leq x}q^{(k-1)}p.$$
+
+\figura{geomet}
+
+The picture shows the graph for $f(x)$ with $p=1/4$. Notice the quick decreasing. An interpretation is that a long run of failures is very unlikely.
+
+We can use the moment generating function method in order to get the mean and variance. This function is 
+$$G(t)=\sum_{k=1}^\infty e^{tk}q^{(k-1)}p=pe^t\sum_{k=0}^\infty (e^tq)^k.$$
+The last expression can be simplified as
+$$G(t)=\frac{pe^t}{1-e^tq}.$$
+
+The first  derivative is
+$$G'(t)=\frac{e^tp}{(1-e^tq)^2}$$ 
+so the mean is
+$$\mu=E[X]=G'(0)=\frac{1}{p}.$$
+
+In order to find the variance, we use the second derivative and thus
+$$E[X^2]=G''(0)=\frac{2-p}{p^2}$$
+and therefore the variance is
+$$\sigma^2=E[X^2]-E[X]^2 = G''(0) - G'(0)^2 = \frac{q}{p^2}.$$
+%%%%%
+%%%%%
+\end{document}

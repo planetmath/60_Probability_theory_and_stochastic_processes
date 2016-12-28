@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfMeanSquareConvergenceOfTheSampleMeanOfAStationaryProcess}
+\pmcreated{2013-03-22 15:22:19}
+\pmmodified{2013-03-22 15:22:19}
+\pmowner{georgiosl}{7242}
+\pmmodifier{georgiosl}{7242}
+\pmtitle{proof of mean square convergence of the sample mean of a stationary process}
+\pmrecord{6}{37198}
+\pmprivacy{1}
+\pmauthor{georgiosl}{7242}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\def\var{\operatorname{var}}
+\def\cov{\operatorname{cov}}
+\begin{document}
+$$n\var(\bar X_n)=\frac{1}{n}\sum_{i=1}^{n}\sum_{j=1}^{n}\cov(X_i,X_j)\\=
+\sum_{|h|<n}(1-\frac{|h|}{n})\gamma(h)\leq \sum_{|h|<n}|\gamma(h)|$$
+\\If $\gamma(n) \to 0$ as  $n \to \infty$ then $\lim_{n \to \infty }\frac{1}{n}\sum_{|h|<n}|\gamma(h)|=2\lim_{n \to \infty }|\gamma(n)|=0$, whence 
+$\var[\bar X_n] \to 0$.
+\\If $\sum_{h=-\infty}^{\infty}|\gamma(h)|<\infty$ then the dominated Convergence theorem gives 
+$$\lim_{n \to \infty }\sum_{|h|<n}(1-\frac{|h|}{n})\gamma(h)=\sum_{h=-\infty}^{\infty}\gamma(h)$$.
+%%%%%
+%%%%%
+\end{document}

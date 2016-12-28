@@ -1,0 +1,39 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HittingTime}
+\pmcreated{2013-03-22 14:18:18}
+\pmmodified{2013-03-22 14:18:18}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{hitting time}
+\pmrecord{8}{35764}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60J10}
+\pmrelated{MarkovChain}
+\pmrelated{MeanHittingTime}
+\pmdefines{absorption probability}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+\PMlinkescapeword{chain}
+Let $(X_n)_{n\ge 0}$ be a Markov Chain. Then the \emph{hitting time} for a subset $A$ of $I$ (the indexing set) is the random variable:
+\begin{displaymath}
+H^A = \inf \{n\ge 0 : X_n\in A\}
+\end{displaymath}
+(set $\inf \varnothing = \infty$).
+
+This can be thought of as the time before the chain is first in a state that is a member of $A$.
+
+Wite $h_i^A$ for the probability  that, starting from $i\in I$ the chain ever hits the set A:
+\begin{displaymath}
+h_i^A = P(H^A <\infty : X_0 = i)
+\end{displaymath}
+When A is a closed class, $h_i^A$ is the \emph{absorption probability}.
+%%%%%
+%%%%%
+\end{document}

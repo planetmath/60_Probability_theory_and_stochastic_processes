@@ -1,0 +1,119 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfStochasticMatrixOfMapping}
+\pmcreated{2014-04-28 3:33:09}
+\pmmodified{2014-04-28 3:33:09}
+\pmowner{rspuzio}{6075}
+\pmmodifier{PMBookProject}{1000683}
+\pmtitle{Example of stochastic matrix of mapping}
+\pmrecord{21}{88100}
+\pmprivacy{1}
+\pmauthor{rspuzio}{1000683}
+\pmtype{Example}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\vecify}{{\mathcal V}}
+\newcommand{\Act}{{A}}
+\newcommand{\act}{{a}}
+\newcommand{\Sit}{{S}}
+\newcommand{\occ}{{v}}
+\newcommand{\univ}{{\mathbf D}}
+\newcommand{\uout}{{d_{out}}}
+\newcommand{\uin}{{d_{in}}}
+\newcommand{\mangle}{{\mathbf C}}
+
+\newcommand{\psheaf}{{\mathcal F}}
+\newcommand{\scat}{{\mathtt{Stoch}}}
+\newcommand{\subs}{{\mathtt{Sys}}}
+\newcommand{\mcat}{{\mathtt{Meas}}}
+\newcommand{\eop}{{$\blacksquare$}}
+\newcommand{\eod}{{${}$\\}}
+\newcommand{\bra}{{\langle}}
+\newcommand{\ket}{{\rangle}}
+
+\newcommand{\cN}{{\mathcal N}}
+\newcommand{\bR}{{\mathbb R}}
+\newcommand{\fm}{{\mathfrak m}}
+\newcommand{\cP}{{\mathcal P}}
+
+\begin{document}
+In order to understand the notion of stochastic matrix associated
+to a mapping and its dual, we will work through a simple example.
+Let $X = \{a,b,c\}$ and let $Y = \{d,e\}$, and define the mapping
+$f \colon X \to Y$ as follows:
+
+\begin{align*}
+ f(a) &= d \\
+ f(b) &= d \\
+ f(c) &= e
+\end{align*}
+
+Then $\vecify X$ is a 3-dimensional real vector space with basis
+\[
+ \delta_a = \begin{pmatrix} 1 \cr 0 \cr 0 \end{pmatrix}, \qquad
+ \delta_b = \begin{pmatrix} 0 \cr 1 \cr 0 \end{pmatrix}, \qquad
+ \delta_c = \begin{pmatrix} 0 \cr 0 \cr 1 \end{pmatrix}
+\]
+and $\vecify Y$ is a 3-dimensional real vector space with basis
+\[
+ \delta_c = \begin{pmatrix} 1 \cr 0 \end{pmatrix}, \qquad
+ \delta_d = \begin{pmatrix} 0 \cr 1 \end{pmatrix}
+\]
+and
+\[
+ {\vecify f} = \begin{pmatrix} 1 & 1 & 0 \cr 0 & 0 & 1 \end{pmatrix} .
+\]
+
+To form the dual, we first renormalize the rows to sum to unity, 
+then transpose:
+\[
+ \begin{pmatrix} 1 & 1 & 0 \cr 
+                 0 & 0 & 1 \end{pmatrix} \xrightarrow{ren}
+ \begin{pmatrix} \frac{1}{2} & \frac{1}{2} & 0 \cr 
+                 0 & 0 & 1 \end{pmatrix} \xrightarrow{*}
+ \begin{pmatrix} \frac{1}{2} & 0 \cr
+                 \frac{1}{2} & 0 \cr
+                 0 & 1 \end{pmatrix}
+\]
+
+Next, to illustrate inclusions, we shall examine the map $i \colon Y 
+\hookrightarrow X$ defined as follows:
+
+\begin{align*}
+ f(d) &=& a \\
+ f(e) &=& b
+\end{align*}
+
+Following the same procedures as above, for this map we find that
+\[
+ {\vecify i} = \begin{pmatrix} 1 & 0 \\ 0 & 1 \\ 0 & 0 \end{pmatrix}
+\]
+and
+\[
+  ({\vecify i})^\natural = 
+   \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \end{pmatrix}
+\]
+
+\end{document}

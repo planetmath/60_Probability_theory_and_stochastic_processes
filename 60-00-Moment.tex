@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Moment}
+\pmcreated{2013-03-22 11:53:54}
+\pmmodified{2013-03-22 11:53:54}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{moment}
+\pmrecord{11}{30515}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60-00}
+\pmclassification{msc}{62-00}
+\pmclassification{msc}{81-00}
+\pmdefines{central moment}
+\pmdefines{skewness}
+\pmdefines{kurtosis}
+\pmdefines{platykurtic}
+\pmdefines{leptokurtic}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%%\usepackage{xypic}
+\begin{document}
+\textit{Moments}\\
+\par
+Given a random variable $X$, the \textbf{$k$th moment} of $X$ is the value $E[X^k]$, if the expectation exists.\\
+\\
+Note that the expected value is the first moment of a random variable, and the variance is the second moment minus the first moment squared.\\
+\par
+The $k$th moment of $X$ is usually obtained by using the moment generating function.
+\par
+\par
+\textit{Central moments}\\
+\par
+Given a random variable $X$, the \textbf{$k$th central moment} of $X$ is the value $E\big[(X-E[X])^k\big]$, if the expectation exists.  It is denoted by $\mu_k$.\\
+\\
+Note that the $\mu_1=0$ and $\mu_2=Var[X]=\sigma^2$. The third central moment divided by the standard deviation cubed is called the \emph{skewness} $\tau$:  $$\tau=\frac{\mu_3}{\sigma^3}$$  The skewness measures how ``symmetrical'', or rather, how ``skewed'', a distribution is with respect to its mode.  A non-zero $\tau$ means there is some degree of skewness in the distribution.  For example, $\tau>0$ means that the distribution has a longer positive tail.  
+\par
+The fourth central moment divided by the fourth power of the standard deviation is called the \emph{kurtosis} $\kappa$:
+$$\kappa=\frac{\mu_4}{\sigma^4}$$  The kurtosis measures how ``peaked'' a distribution is compared to the standard normal distribution.  The standard normal distribution has $\kappa=3$.  $\kappa<3$ means that the distribution is ``flatter'' than then standard normal distribution, or \emph{platykurtic}.  On the other hand, a distribution with $\kappa>3$ can be characterized as being more ``peaked'' than $N(0,1)$, or \emph{leptokurtic}.
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

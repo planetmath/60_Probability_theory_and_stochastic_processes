@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBorelCantelli1}
+\pmcreated{2013-03-22 14:28:16}
+\pmmodified{2013-03-22 14:28:16}
+\pmowner{kshum}{5987}
+\pmmodifier{kshum}{5987}
+\pmtitle{proof of Borel-Cantelli 1}
+\pmrecord{6}{35992}
+\pmprivacy{1}
+\pmauthor{kshum}{5987}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $B_k$ be the event $\cup_{i=k}^\infty A_i$ for
+$k=1,2,\ldots,$. If $x$ is in the event $A_i$'s i.o., then $x\in
+B_k$ for all $k$. So $x\in \cap_{k=1}^\infty B_k$.
+
+Conversely, if $x\in B_k$ for all $k$, then we can show that $x$
+is in $A_i$'s i.o. Indeed, $x\in B_1 = \cup_{i=1}^\infty A_i$
+means that $x\in A_{j(1)}$ for some $j(1)$. However $x\in
+B_{j(1)+1}$ implies that $x\in A_{j(2)}$ for some $j(2)$ that is
+strictly larger than $j(1)$. Thus we can produce an infinite
+sequence of integer $j(1)<j(2)<j(3)<\ldots$ such that $x\in
+A_{j(i)}$ for all $i$.
+
+Let $E$ be the event $\{x:\, x\in A_i \mbox{ i.o.}\}$. We have
+\[
+ E = \bigcap_{k=1}^\infty \bigcup_{i=k}^\infty A_i.
+\]
+
+From $E\subseteq B_k$ for all $k$, it follows that $P(E)\leq
+P(B_k)$ for all $k$. By union bound, we know that $P(B_k)\leq
+\sum_{i=k}^\infty P(A_i)$. So $P(B_k)\rightarrow 0$, by the
+hypothesis that $\sum_{i=1}^\infty P(A_i)$ is finite. Therefore, $P(E)=0$.
+%%%%%
+%%%%%
+\end{document}

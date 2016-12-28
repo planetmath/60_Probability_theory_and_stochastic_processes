@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GaussianProcess}
+\pmcreated{2013-03-22 15:22:48}
+\pmmodified{2013-03-22 15:22:48}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Gaussian process}
+\pmrecord{5}{37209}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G15}
+\pmclassification{msc}{60G60}
+\pmsynonym{Gaussian random field}{GaussianProcess}
+\pmdefines{normal process}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{gaussian}
+
+A stochastic process $\lbrace X(t)\mid t\in T\rbrace$ is said to be
+a \emph{Gaussian process} if all of the members of its f.f.d.
+(family of finite dimensional distributions) are joint normal
+distributions.  In other words, for any positive integer $n<\infty$,
+and any $t_1,\ldots,t_n\in T$, the joint distribution of random
+variables $X(t_1),\ldots,X(t_n)$ is jointly normal.
+
+As an example, any Wiener process is Gaussian.
+
+\textbf{Remark}.  Sometimes, a Gaussian process is known as a \emph{Gaussian random field} if $T$ is a subset, usually an embedded manifold, of $\mathbb{R}^m$, with $m>1$.
+%%%%%
+%%%%%
+\end{document}

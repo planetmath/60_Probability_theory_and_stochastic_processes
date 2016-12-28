@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BayesTheorem}
+\pmcreated{2013-03-22 12:02:13}
+\pmmodified{2013-03-22 12:02:13}
+\pmowner{akrowne}{2}
+\pmmodifier{akrowne}{2}
+\pmtitle{Bayes' theorem}
+\pmrecord{11}{31051}
+\pmprivacy{1}
+\pmauthor{akrowne}{2}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60-00}
+\pmclassification{msc}{62A01}
+\pmsynonym{Bayes' Rule}{BayesTheorem}
+%\pmkeywords{statistics}
+%\pmkeywords{Bayes}
+\pmrelated{ConditionalProbability}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%\usepackage{xypic}
+\begin{document}
+\PMlinkescapephrase{states}
+
+Let $(A_n)$ be a sequence of mutually exclusive events whose \PMlinkname{union}{Union} is the sample space and let $E$ be any event.  All of the events have nonzero probability ($P(E) > 0$ and $P(A_n) > 0$ for all $n$).  Bayes' Theorem states
+
+$$ P(A_j|E) = \frac{P(A_j)P(E|A_j)}{\sum_i P(A_i)P(E|A_i)} $$
+
+for any $A_j \in (A_n)$.
+
+A simpler formulation is:
+
+$$ P(A|B) = \frac{P(B|A)P(A)}{P(B)} $$
+
+For two events, $A$ and $B$ (also with nonzero probability).  
+
+\begin{thebibliography}{3}
+\bibitem{Milton} Milton, J.S., Arnold, Jesse C., \textsl{Introduction to Probability and Statistics: Principles and Applications for Engineering and the Computing Sciences}, McGraw Hill, 1995.
+\end{thebibliography}
+%%%%%
+%%%%%
+%%%%%
+\end{document}

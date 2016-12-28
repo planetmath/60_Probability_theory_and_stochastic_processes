@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PoissonProcess}
+\pmcreated{2013-03-22 15:01:29}
+\pmmodified{2013-03-22 15:01:29}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Poisson process}
+\pmrecord{8}{36733}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G51}
+\pmsynonym{homogeneous Poisson process}{PoissonProcess}
+\pmdefines{simple Poisson process}
+\pmdefines{intensity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{simple}
+
+A counting process $\lbrace X(t)\mid
+t\in\mathbb{R}^{+}\cup\lbrace0\rbrace\rbrace$ is called a
+\emph{simple Poisson}, or simply a \emph{Poisson process} with
+parameter $\lambda$, also known as the \emph{intensity}, if
+\begin{enumerate}
+\item $X(0)=0$,
+\item $\lbrace X(t)\rbrace$ has stationary independent increments,
+\item $P(X(t)=1)=\lambda t+o(t)$,
+\item $P(X(t)>1)=o(t)$,
+\end{enumerate}
+where $o(t)$ is the O notation.
+
+\textbf{Remarks}.
+\begin{itemize}
+\item The intensity $\lambda$ is assumed to be a constant in terms of $t$.
+\item Condition 3 above says that the \emph{rate} in which the an event occurs once in time interval $t$, as $t$ approaches 0, is $\lambda$. Condition 4 says that the event occurs more than once is very unlikely (the rate approaches zero as the time interval shrinks to zero).
+\item It can be shown that $X(t)$ has a Poisson distribution (hence the name of the stochastic process) with parameter $\lambda t$: $$P(X(t)=n)=e^{-\lambda t}\frac{{(\lambda t)}^n}{n!}.$$
+\item Therefore, $\operatorname{E}[X(t)]=\lambda t$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WaveletRepresentationOfBrownianMotion}
+\pmcreated{2013-03-22 15:12:51}
+\pmmodified{2013-03-22 15:12:51}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{wavelet representation of Brownian motion}
+\pmrecord{7}{36976}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60J65}
+\pmsynonym{construction of Brownian motion}{WaveletRepresentationOfBrownianMotion}
+%\pmkeywords{Brownian motion}
+%\pmkeywords{Wiener process}
+%\pmkeywords{wavelet}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+First we define the function
+\begin{equation}
+H(t) =
+  \begin{cases}
+    1 & \text{for } 0 \leq t < \tfrac{1}{2} \\
+    -1 & \text{for } \tfrac{1}{2} \leq t \leq 1 \\
+    0 & \text{otherwise.}
+  \end{cases}
+\end{equation}
+and the sequence of functions
+\begin{equation}
+H_n(t) = 2^{j/2}H(2^j t - k) \end{equation} for $n=2^j+k$ where $j>0$ and $0\leq k \leq 2^j$.  We also set $H_0(t)=1$.
+\newtheorem*{thm}{Wavelet Representation of Brownian Motion}
+\begin{thm}
+If $\{Z_n:0\leq n < \infty \}$ is a sequence of independent Gaussian random variables with mean
+$0$ and variance $1$, then the series defined by
+\begin{equation}
+X_t = \sum^{\infty}_{n=0} \left(Z_n \int_0^t H_n(s)\;ds\right)
+\end{equation}
+converges uniformly on $[0,1]$ with probability one.  Moreover, the process $\{X_t\}$ defined by
+the limit is a \emph{Brownian motion} for $0 \leq t \leq 1$.
+\end{thm}
+%%%%%
+%%%%%
+\end{document}

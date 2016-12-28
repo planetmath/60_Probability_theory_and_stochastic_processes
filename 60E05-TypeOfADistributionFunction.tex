@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TypeOfADistributionFunction}
+\pmcreated{2013-03-22 16:25:48}
+\pmmodified{2013-03-22 16:25:48}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{type of a distribution function}
+\pmrecord{13}{38582}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E05}
+\pmclassification{msc}{62E10}
+\pmsynonym{centering factor}{TypeOfADistributionFunction}
+\pmsynonym{scale parameter}{TypeOfADistributionFunction}
+\pmsynonym{location parameter}{TypeOfADistributionFunction}
+\pmdefines{type}
+\pmdefines{scale factor}
+\pmdefines{location factor}
+\pmdefines{standard distribution function}
+\pmdefines{location family}
+\pmdefines{scale family}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+Two distribution functions $F,G:\mathbb{R}\to [0,1]$ are said to of the same \emph{type} if there exist $a,b\in\mathbb{R}$ such that $G(x)=F(ax+b)$. $a$ is called the \emph{scale parameter}, and $b$ the \emph{location parameter} or \emph{centering parameter}.  Let's write $F\stackrel{t}{=}G$ to denote that $F$ and $G$ are of the same type.
+
+\textbf{Remarks}.
+\begin{itemize}
+\item Necessarily $a>0$, for otherwise at least one of $G(-\infty)=0$ or $G(\infty)=1$ would be violated.
+\item If $G(x)=F(x+b)$, then the graph of $G$ is \emph{shifted} to the right from the graph of $F$ by $b$ units, if $b>0$ and to the left if $b<0$.
+\item If $G(x)=F(ax)$, then the graph of $G$ is \emph{stretched} from the graph of $F$ by $a$ units if $a>1$, and \emph{compressed} if $a<1$.
+\item If $X$ and $Y$ are random variables whose distribution functions are of the same type, say, $F$ and $G$ respectively, and related by $G(x)=F(ax+b)$, then $X$ and $aY+b$ are identically distributed, since $$P(X\le z)=F(z)=G(\frac{z-b}{a})=P(Y \le \frac{z-b}{a})=P(aY+b \le z).$$  When $X$ and $aY+b$ are identically distributed, we write $X \stackrel{t}{=} Y$.
+\item Again, suppose $X$ and $Y$ correspond to $F$ and $G$, two distribution functions of the same type related by $G(x)=F(ax+b)$.  Then it is easy to see that $E[X]<\infty$ iff $E[Y]<\infty$.  In fact, if the expectation exists for one, then $E[X]=aE[Y]+b$.  Furthermore, $Var[X]$ is finite iff $Var[Y]$ is.  And in this case, $Var[X]=a^2Var[Y]$.  In general, convergence of moments is a ``typical'' property.
+\item We can partition the set of distribution functions into disjoint subsets of functions belonging to the same types, since the binary relation $\stackrel{t}{=}$ is an equivalence relation.
+\item By the same token, we can classify all real random variables defined on a fixed probability space according to their distribution functions, so that if $X$ and $Y$ are of the same type $\tau$ iff their corresponding distribution functions $F$ and $G$ are of type $\tau$.
+\item Given an equivalence class of distribution functions belonging to a certain type $\tau$, such that a random variable $Y$ of type $\tau$ exists with finite expectation and variance, then there is one distribution function $F$ of type $\tau$ corresponding to a random variable $X$ such that $E[X]=0$ and $Var[X]=1$.  $F$ is called the \emph{standard distribution function} for type $\tau$.  For example, the standard (cumulative) normal distribution is the standard distribution function for the type consisting of all normal distribution functions.
+\item Within each type $\tau$, we can further classify the distribution functions: if $G(x)=F(x+b)$, then we say that $G$ and $F$ belong to the same \emph{location family} under $\tau$; and if $G(x)=F(ax)$, then we say that $G$ and $F$ belong to the same \emph{scale family} (under $\tau$).
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

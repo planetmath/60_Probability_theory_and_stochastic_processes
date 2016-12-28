@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProbabilityTransitionFunction}
+\pmcreated{2013-03-22 16:12:37}
+\pmmodified{2013-03-22 16:12:37}
+\pmowner{mcarlisle}{7591}
+\pmmodifier{mcarlisle}{7591}
+\pmtitle{probability transition function}
+\pmrecord{8}{38306}
+\pmprivacy{1}
+\pmauthor{mcarlisle}{7591}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60J35}
+%\pmkeywords{random stochastic process transition function semigroup probability}
+\pmdefines{probability transition function}
+\pmdefines{homogeneous probability transition function}
+\pmdefines{Chapman-Kolmogorov equation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+A \emph{probability transition function} (p.t.f., or just t.f. in context) on a measurable space $(\Omega, \mathcal{F})$ is a family $P_{s,t}$, $0 \leq s < t$ of transition probabilities on $(\Omega, \mathcal{F})$ such that for every three real numbers $s < t < v$, the family \PMlinkescapetext{satisfies} the \emph{Chapman-Kolmogorov equation} 
+\[\int P_{s,t}(x, dy)P_{t,v}(y, A) = P_{s,v}(x, A)\]
+for every $x \in \Omega$ and $A \in \mathcal{F}$.  The t.f. is said to be  \PMlinkescapetext{\emph{homogeneous}} if $P_{s,t}$ depends on $s$ and $t$ only through their \PMlinkescapetext{difference} $t-s$.  In this case, we write $P_{t,0} = P_t$ and the family $\{P_t, t \geq 0\}$ is a semigroup, and the Chapman-Kolmogorov equation reads 
+\[P_{t+s}(x, A) = \int P_s(x, dy) P_t(y, A).\]
+
+\begin{thebibliography}{1}
+\bibitem{RY} D. Revuz \& M. Yor, \emph{Continuous Martingales and Brownian Motion}, Third Edition Corrected. Volume 293, Grundlehren der mathematischen Wissenschaften. Springer, Berlin, 2005.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

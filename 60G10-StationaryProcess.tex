@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StationaryProcess}
+\pmcreated{2013-03-22 15:22:42}
+\pmmodified{2013-03-22 15:22:42}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{stationary process}
+\pmrecord{6}{37207}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G10}
+\pmdefines{strictly stationary process}
+\pmdefines{covariance stationary process}
+\pmdefines{evolutionary process}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+Let $\lbrace X(t)\mid t\in T\rbrace$ be a stochastic process where
+$T\subseteq\mathbb{R}$ and has the property that $s+t\in T$ whenever
+$s,t\in T$.  Then $\lbrace X(t)\rbrace$ is said to be a
+\emph{strictly stationary process of order n} if for a given
+positive integer $n<\infty$, any $t_1,\ldots,t_n$ and $s\in T$, the
+random vectors 
+\begin{quote}
+$(X(t_1),\ldots,X(t_n))$ and $(X(t_1+s),\ldots,X(t_n+s))$ have identical joint distributions.
+\end{quote}
+$\lbrace X(t) \rbrace$ is said to be a \emph{strictly stationary
+process} if it is a strictly stationary process of order $n$ for all
+positive integers $n$.  Alternatively, $\lbrace X(t)\mid t\in
+T\rbrace$ is strictly stationary if $\lbrace X(t)\rbrace$ and
+$\lbrace X(t+s)\rbrace$ are identically distributed stochastic
+processes for all $s\in T$.
+
+A weaker form of the above is the concept of a \emph{covariance
+stationary process}, or simply, a \emph{stationary process} $\lbrace
+X(t)\rbrace$.  Formally, a stochastic process $\lbrace X(t)\mid t\in
+T\rbrace$ is stationary if, for any positive integer $n<\infty$, any
+$t_1,\ldots,t_n$ and $s\in T$, the joint distributions of the random
+vectors 
+\begin{quote}
+$(X(t_1),\ldots,X(t_n))$ and $(X(t_1+s),\ldots,X(t_n+s))$
+have identical means (mean vectors) and identical covariance matrices.  
+\end{quote}
+So a strictly stationary process is a stationary process.  A non-stationary process is sometimes called an \emph{evolutionary process}.
+%%%%%
+%%%%%
+\end{document}

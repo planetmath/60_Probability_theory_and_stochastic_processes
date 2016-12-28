@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TightAndRelativelyCompactMeasures}
+\pmcreated{2013-03-22 17:19:37}
+\pmmodified{2013-03-22 17:19:37}
+\pmowner{fernsanz}{8869}
+\pmmodifier{fernsanz}{8869}
+\pmtitle{tight and relatively compact measures}
+\pmrecord{6}{39679}
+\pmprivacy{1}
+\pmauthor{fernsanz}{8869}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60F05}
+%\pmkeywords{tight measures}
+%\pmkeywords{weak convergence measures}
+%\pmkeywords{Helly's theoerem}
+%\pmkeywords{Levy's theorem}
+%\pmkeywords{Prokhorov  theorem}
+\pmrelated{LindebergsCentralLimitTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% define commands here
+\newtheorem*{thm}{Theorem}
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\M}{\mathcal{M}}
+\begin{document}
+\title{Tight and relatively compact measures}%
+\author{Fernando Sanz}%
+
+\begin{defn}
+Let $\M=\{\mu_i,i \in I \}$ be a family of finite measures on the
+Borel subsets of a metric space $\Omega$. We say that $\M$ is tight
+iff for each $\epsilon>0$ there is a compact set $K$ such that
+$\mu_i(\Omega-K)<\epsilon$ for all $i$. We say that $\M$ is
+relatively compact iff each sequence in $\M$ has a subsequence
+converging weakly to a finite measure on $\B(\Omega)$.
+
+If $\{F_i,i \in I \}$ is a family of distribution functions,
+relative compactness or tightness of $\{F_i\}$ refers to relative
+compactness or tightness of the corresponding measures.
+\end{defn}
+
+\medskip
+
+\begin{thm}
+Let $\{F_i,i \in I \}$ be a family of distribution functions with
+$F_i(\infty)-F_i(-\infty)<M<\infty$ for all  $i$. The family is
+tight iff it is relatively compact.
+\end{thm}
+
+\begin{proof}
+Coming soon...(needs other theorems before)
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

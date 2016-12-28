@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CumulativeDistributionFunction}
+\pmcreated{2013-03-22 11:53:38}
+\pmmodified{2013-03-22 11:53:38}
+\pmowner{bbukh}{348}
+\pmmodifier{bbukh}{348}
+\pmtitle{cumulative distribution function}
+\pmrecord{10}{30504}
+\pmprivacy{1}
+\pmauthor{bbukh}{348}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A99}
+\pmclassification{msc}{46L05}
+\pmclassification{msc}{82-00}
+\pmclassification{msc}{83-00}
+\pmclassification{msc}{81-00}
+%\pmkeywords{probability}
+\pmrelated{DistributionFunction}
+\pmrelated{DensityFunction}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{graphicx}
+%%%%%\usepackage{xypic}
+\DeclareMathOperator{\Prb}{Pr}
+\begin{document}
+Let $X$ be a random variable. Define $F_X\colon R \to [0,1] $ as
+$F_X(x) = \Prb[X \leq x]$
+for all $x$. The function $F_X(x)$ is called the \emph{cumulative distribution function} of $X$.
+
+Every cumulative distribution function satisfies the following properties:
+\begin{enumerate}
+\item $\lim_{x \to -\infty}{F_X(x)}=0$  and  $\lim_{x \to +\infty}{F_X(x)}=1$,
+\item $F_X$ is a monotonically nondecreasing function,
+\item $F_X$ is continuous from the right,
+\item $\Prb[a < X \leq b] = F_X(b) - F_X(a)$.
+\end{enumerate}
+
+If $X$ is a discrete random variable, then the cumulative distribution can be expressed as
+$F_X(x) = \sum_{k\leq x} \Prb[X = k]$.
+
+Similarly, if $X$ is a continuous random variable, then
+$F_X(x) = \int_{-\infty}^{x} f_X(y) dy$ where $f_X$ is the density distribution function.
+
+
+% THIS IS RATHER USELESS STUFF THAT WAS IN THE ENTRY BEFORE I ADOPTED IT
+%Please note that $P[a <  X \leq b] = F_X(b) - F_X(a)$    for    $a<b$. Other %inequality cases are obtained from the right continuous property. These are: \\
+%
+%$P[a <  X < b] = \lim_{n \to \infty }{F_X(b-\frac{1}{n})} - F_X(a)$ \\
+%$P[a \leq  X \leq b] = F_X(b) - lim_{n \to \infty }{F_X(a-\frac{1}{n})} $ \\
+%$P[a \leq  X < b] = \lim_{n \to \infty }{F_X(b-\frac{1}{n})} - lim_{n \to \infty %}{F_X(a-\frac{1}{n})} $ \\
+%
+%\par
+%\par
+%
+%Note that if $X$ is a continous random variable then $F_X(x)$ must be continous. %This implies that\\
+%$P[X=x] = P[ x \leq X \leq x ] = F_X(x) - lim_{n \to \infty %}{F_X(x-\frac{1}{n})} = F_X(x) - F_X(x) = 0$   for ALL x.
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StrongLawOfLargeNumbers}
+\pmcreated{2013-03-22 13:13:10}
+\pmmodified{2013-03-22 13:13:10}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{strong law of large numbers}
+\pmrecord{11}{33685}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60F15}
+\pmrelated{MartingaleProofOfKolmogorovsStrongLawForSquareIntegrableVariables}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A sequence of random variables $X_1, X_2,\dots$ with finite expectations
+in a probability space is said to satisfiy the \textit{strong law of large numbers} if
+
+$$ \frac{1}{n}\sum_{k=1}^n (X_k -\operatorname{E}[X_k]) \xrightarrow[]{a.s.} 0, $$
+
+where $a.s.$ stands for convergence almost surely.
+
+When the random variables are identically distributed, with expectation $\mu$,
+the law becomes:
+
+$$ \frac{1}{n}\sum_{k=1}^n X_k\xrightarrow[]{a.s.} \mu.$$
+
+Kolmogorov's strong law of large numbers theorems give conditions on the random variables under which the law is satisfied.
+%%%%%
+%%%%%
+\end{document}

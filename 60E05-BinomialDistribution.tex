@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BinomialDistribution}
+\pmcreated{2013-03-22 13:03:01}
+\pmmodified{2013-03-22 13:03:01}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{binomial distribution}
+\pmrecord{17}{33454}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E05}
+\pmsynonym{Bernoulli distribution}{BinomialDistribution}
+\pmsynonym{binomial random variable}{BinomialDistribution}
+\pmsynonym{binomial probability function}{BinomialDistribution}
+\pmsynonym{Bernoulli random variable}{BinomialDistribution}
+\pmrelated{BinomialCoefficient}
+\pmrelated{BinomialTheorem}
+\pmrelated{BernoulliRandomVariable}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\begin{document}
+Consider an experiment with two possible outcomes (success and failure), which happen randomly. Let $p$ be the probability of success. If the experiment is repeated $n$ times, the probability of having exactly $x$ successes is
+$$f(x)=\left({n\atop x}\right)p^x(1-p)^{(n-x)}.$$
+
+The distribution function determined by the probability function $f(x)$ is called a \emph{Bernoulli distribution} or \emph{binomial distribution}.
+
+Here are some plots for $f(x)$ with $n=20$ and $p=0.3$, $p=0.5$.
+\figuraex{binom10p3}{scale=0.75}
+\figuraex{binom10p5}{scale=0.75}
+
+The corresponding distribution function is
+$$F(x)=\sum_{k\leq x}\left({n\atop k}\right)p^k q^{n-k}$$
+where $q=1-p$. Notice that if we calculate $F(n)$ we get the binomial expansion for $(p+q)^n$, and this is the reason for the distribution being called binomial.
+
+We will use the moment generating function to calculate the mean and variance for the distribution. The mentioned function is
+$$G(t)=\sum_{x=0}^n e^{tx}\left({n\atop x}\right)p^x q^{n-x}$$
+which simplifies to
+$$G(t)=(pe^t+q)^n.$$
+Differentiating gives us 
+$$G'(t)=n(pe^t+q)^{n-1}pe^t$$
+and therefore the mean is
+$$\mu = E[X]=G'(0)=np.$$
+
+Now for the variance we need the second derivative
+$$G''(t)=n(n-1)(pe^t+q)^{n-2} + n(pe^t+q)^{n-1}pe^t$$
+so we get $$E[X^2]=G''(0)=n(n-1)p^2 + np$$
+and finally the variance (recall $q=1-p$):
+$$\sigma^2 = E[X^2] - E[X]^2 = npq.$$
+
+
+For large values of $n$, the binomial coefficients are hard to compute, however in this cases we can use either the Poisson distribution or the normal distribution to approximate the probabilities.
+%%%%%
+%%%%%
+\end{document}

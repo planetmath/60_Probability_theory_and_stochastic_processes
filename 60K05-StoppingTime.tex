@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StoppingTime}
+\pmcreated{2013-03-22 14:41:13}
+\pmmodified{2013-03-22 14:41:13}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{stopping time}
+\pmrecord{11}{36294}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60K05}
+\pmclassification{msc}{60G40}
+\pmrelated{DoobsOptionalSamplingTheorem}
+\pmrelated{PredictableStoppingTime}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{cover}
+\PMlinkescapeword{inclusion}
+\PMlinkescapeword{interval}
+\PMlinkescapeword{equivalent}
+Let $( \mathcal{F}_t)_{t\in\mathbb{T}}$ be a \PMlinkname{filtration}{FiltrationOfSigmaAlgebras} on a set $\Omega$.
+A  random variable $\tau$ taking values in $\mathbb{T}\cup\{\infty\}$ is a \emph{stopping time} for the filtration $(\mathcal{F}_t)$ if the event $\lbrace \tau\le t \rbrace \in \mathcal{F}_t$ for every $t\in\mathbb{T}$. 
+\\\\ 
+\textbf{Remarks} 
+\begin{itemize}
+\item The set $\mathbb{T}$ is the index set for the time variable $t$, and the $\sigma$-algebra $\mathcal{F}_t$ is the collection of all events which are observable up to and including time $t$. Then, the condition that $\tau$ is a stopping time means that the outcome of the event $\{\tau\le t\}$ is known at time $t$.
+
+\item In discrete time situations, where $\mathbb{T}=\{0,1,2,\ldots\}$, the condition that $\{\tau\le t\}\in\mathcal{F}_t$ is equivalent to requiring that $\{\tau=t\}\in\mathcal{F}_t$. This is not true for continuous time cases where $\mathbb{T}$ is an interval of the real numbers and hence uncountable, due to the fact that $\sigma$-algebras are not in general closed under taking uncountable unions of events.
+
+\item A random time $\tau$ is a stopping time for a stochastic process $(X_t)$ if it is a stopping time for the natural filtration of $X$. That is, $\{\tau\le t\}\in\sigma(X_s:s\le t)$.
+
+\item The first time that an adapted process $X_t$ hits a given value or set of values is a stopping time. The inclusion of $\infty$ into the range of $\tau$ is to cover the case where $X_t$ never hits the given values.
+
+\item Stopping time is often used in gambling, when a gambler stops the betting process when he reaches a certain goal.  The time it takes to reach this goal is generally not a deterministic one.  Rather, it is a random variable depending on the current result of the bet, as well as the combined information from all previous bets.  
+\end{itemize}
+\par
+\textbf{Examples.}
+A gambler has \$1,000 and plays the slot machine at \$1 per play.
+\begin{enumerate}
+\item The gambler stops playing when his capital is depleted.  The number $\tau=n_1$ of plays that it takes the gambler to stop is a stopping time.
+\item The gambler stops playing when his capital reaches \$2,000.  The number $\tau=n_2$ of plays that it takes the gambler to stop is a stopping time.
+\item The gambler stops playing when his capital either reaches \$2,000, or is depleted, which ever comes first.  The number $\tau=\operatorname{min}(n_1,n_2)$ of plays that it takes the gambler to stop is a stopping time.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

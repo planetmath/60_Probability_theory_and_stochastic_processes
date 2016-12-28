@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Semimartingale}
+\pmcreated{2013-03-22 18:36:38}
+\pmmodified{2013-03-22 18:36:38}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{semimartingale}
+\pmrecord{8}{41344}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G07}
+\pmclassification{msc}{60G48}
+\pmclassification{msc}{60H05}
+%\pmkeywords{stochastic process}
+%\pmkeywords{adapted}
+%\pmkeywords{cadlag}
+%\pmkeywords{local martingale}
+%\pmkeywords{finite variation process}
+%\pmkeywords{simple predictable process}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{continuous}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{decomposition}
+\PMlinkescapeword{integral}
+\PMlinkescapeword{property}
+\PMlinkescapeword{development}
+\PMlinkescapeword{equivalence}
+Semimartingales are adapted stochastic processes which can be used as integrators in the general theory of stochastic integration. Examples of semimartingales include Brownian motion, all local martingales, finite variation processes and Levy processes.
+
+Given a filtered probability space $(\Omega,\mathcal{F},(\mathcal{F}_t)_{t\in\mathbb{R}_+},\mathbb{P})$, we consider real-valued stochastic processes $X_t$ with time index $t$ ranging over the nonnegative real numbers.
+Then, semimartingales have historically been defined as follows.
+
+\begin{definition*}
+A semimartingale $X$ is a cadlag adapted process having the decomposition $X=M+V$ for a local martingale $M$ and a finite variation process $V$.
+\end{definition*}
+
+More recently, the following alternative definition has also become common.
+For simple predictable integrands $\xi$, the stochastic integral $\int\xi\,dX$ is easily defined for any process $X$. The following definition characterizes semimartingales as processes for which this integral is well behaved.
+
+\begin{definition*}
+A semimartingale $X$ is a cadlag adapted process such that
+\begin{equation*}
+\left\{\int_0^t\xi\,dX:|\xi|\le 1\textrm{ is simple predictable}\right\}
+\end{equation*}
+is bounded in probability for each $t\in\mathbb{R}_+$.
+\end{definition*}
+
+Writing $\Vert\xi\Vert$ for the supremum norm of a process $\xi$, this definition characterizes semimartingales as processes for which
+\begin{equation*}
+\int_0^t\xi^n\,dX\rightarrow 0
+\end{equation*}
+in probability as $n\rightarrow\infty$ for each $t>0$, where $\xi^n$ is any sequence of simple predictable processes satisfying $\Vert\xi^n\Vert\rightarrow 0$. This property is necessary and, as it turns out, sufficient for the development of a theory of stochastic integration for which results such as bounded convergence holds.
+
+The equivalence of these two definitions of semimartingales is stated by the Bichteler-Dellacherie theorem.
+
+A stochastic process $X_t=(X^1_t,X^2_t,\ldots,X^n_t)$ taking values in $\mathbb{R}^n$ is said to be a semimartingale if $X^k_t$ is a semimartingale for each $k=1,2,\ldots,n$.
+
+%%%%%
+%%%%%
+\end{document}

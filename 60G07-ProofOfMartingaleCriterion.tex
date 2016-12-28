@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfMartingaleCriterion}
+\pmcreated{2013-03-22 18:34:51}
+\pmmodified{2013-03-22 18:34:51}
+\pmowner{karstenb}{16623}
+\pmmodifier{karstenb}{16623}
+\pmtitle{proof of Martingale criterion}
+\pmrecord{5}{41305}
+\pmprivacy{1}
+\pmauthor{karstenb}{16623}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G07}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage[sort&compress]{natbib}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%\usepackage{xypic}
+
+
+% commands
+%\newcommand{\comment}[1]{\small{(\,\textit{#1}\;)}}
+
+
+\begin{document}
+Let $(\tau_k)_{k \geq 1}$ be a localizing sequence of stopping times for $X$. Then: 
+\begin{align*}
+\Lambda_{\{\tau_k \geq n\}} &\uparrow \Lambda_{\Omega} \ \text{a.s.} \ k \to \infty, \forall n \in \mathbb{N}
+\end{align*}
+
+since $\{\tau_k \geq n\} \uparrow_k \bigcup_{1}^{\infty} \{\tau_k \geq n\} \forall \ n \in \mathbb{N}$.
+\begin{align*}
+\bigcup_{k=1}^{\infty} \{ \tau_k \geq n \} &= \Omega \ \text{a.s., since} \ \tau_k \to \infty, \ \text{a.s.}
+\end{align*}
+
+Now assume $E X_n^{-} < \infty, \forall n \geq n_0$ (the case $E X_n^{+} < \infty$ being analogous).
+
+\emph{1)} We have $E X_n^{-} < \infty \ \forall n \in \mathbb{N}$.
+
+We proceed by (backward) induction. For $n = n_0$ the statement holds.
+
+$n \mapsto n-1$:
+\begin{align*}
+(X^{\tau_k})^{-} &= (X_{\tau_k \wedge n}^{-})_{n \in \mathbb{N}} \ \text{submartingale}
+\end{align*}
+
+We have:
+\begin{align*}
+\int_{ \{\tau_k \geq n\} } X_{n-1}^{-} \,dP &= \int_{\{\tau_k \geq n\}} X_{\tau_k \wedge (n-1)}^{-} \,dP \\
+&\leq \int_{\{\tau_k \geq n\}} X_{\tau_k \wedge n}^{-} \,dP = \int_{\{\tau_k \geq n\}} X_n^{-}\,dP \\
+&\leq \int X_n^{-} \,dP < \infty 
+\end{align*}
+
+Where the first to second line is the submartingale property and the last line follows by induction hypothesis.
+
+Using Fatou we get:
+\begin{align*}
+\int X_{n-1}^{-} \,dP &= \int \lim_{k \to \infty} X_{n-1}^{-} \Lambda_{\{ \tau_k \geq n\} } \,dP \\
+&\leq \liminf_{k \to \infty} \int X_{n-1}^{-} \Lambda_{\{\tau_k \geq n \} } \,dP \\
+&\leq \int X_n^{-} \,dP < \infty
+\end{align*}
+
+\emph{2)} We have $X_n \in \mathscr{L}^1 (n \in \mathbb{N})$.
+
+We have $X_{\tau_k \wedge n}^{+} \to X_n^{+}$ a.s., $k \to \infty, \forall n \in \mathbb{N}$. With Fatou we get:
+\begin{align*}
+E X_n^{+} &\leq \liminf_{k \to \infty} E X_{\tau_k \wedge n}^{+} \\
+&= E X_0 + \liminf_{k \to \infty} E X_{\tau_k \wedge n}^{-} \\
+&= E X_0 + \liminf_{k \to \infty} E \left(\sum_{j=0}^{n-1} X_j^{-} \Lambda_{ \{\tau_k = j\}} + X_n^{-} \Lambda_{\{\tau_k \geq n\}}\right) \\
+&\leq E X_0 + \sum_{j=0}^n E X_j^{-} < \infty 
+\end{align*}
+
+With \emph{1)} $X_n \in \mathscr{L}^1$ follows.
+
+\emph{3)} 
+
+$X$ is a martingale, because $X_n^{\tau_k} \to X_n$ a.s. $k \to \infty$ and:
+\begin{align*}
+|X_n^{\tau_k}| &\leq \sum_{j=0}^n |X_j| \in \mathscr{L}^1 \ \text{(} \ \mathscr{L}^1 \ \text{-bound)}
+\end{align*}
+
+Thus $X_n^{\tau_k} \stackrel{\substack{L^1}}{\longrightarrow} X_n, k \to \infty \ \forall n \in \mathbb{N}$ by bounded convergence theorem. 
+Hence $X$ must be martingale and we are done. \qed
+
+
+%%%%%
+%%%%%
+\end{document}

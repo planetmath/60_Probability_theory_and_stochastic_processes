@@ -1,0 +1,405 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{4Measurement}
+\pmcreated{2014-04-22 19:36:22}
+\pmmodified{2014-04-22 19:36:22}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{4. Measurement}
+\pmrecord{6}{88088}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Feature}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\DeclareMathOperator{\Hom}{Hom}
+
+\newcommand{\vecify}{{\mathcal V}}
+\newcommand{\Act}{{A}}
+\newcommand{\act}{{a}}
+\newcommand{\Sit}{{S}}
+\newcommand{\occ}{{v}}
+\newcommand{\univ}{{\mathbf D}}
+\newcommand{\uout}{{d_{out}}}
+\newcommand{\uin}{{d_{in}}}
+\newcommand{\mangle}{{\mathbf C}}
+
+\newcommand{\psheaf}{{\mathcal F}}
+\newcommand{\scat}{{\mathtt{Stoch}}}
+\newcommand{\subs}{{\mathtt{Sys}}}
+\newcommand{\mcat}{{\mathtt{Meas}}}
+\newcommand{\eop}{{$\blacksquare$}}
+\newcommand{\eod}{{${}$\\}}
+\newcommand{\bra}{{\langle}}
+\newcommand{\ket}{{\rangle}}
+
+\newcommand{\cN}{{\mathcal N}}
+\newcommand{\bR}{{\mathbb R}}
+\newcommand{\fm}{{\mathfrak m}}
+\newcommand{\cP}{{\mathcal P}}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+
+\theoremstyle{remark}
+\newtheorem{eg}{Example}
+\newtheorem{rem}{Remark}
+\newtheorem{defn}{Definition}
+\setcounter{eg}{1}
+\setcounter{rem}{2}
+\setcounter{defn}{7}
+\setcounter{thm}{4}
+\begin{document}
+This section adapts %Definition~\ref{d:cmeasure}
+\PMlinkname{Definition~1}{1introduction#Thmdefn1}
+to distributed 
+stochastic systems. The first step is to replace elements of 
+state space $X$ with stochastic maps $\uin:\bR\rightarrow 
+\vecify\Sit^\univ$, or equivalently probability distributions 
+on $\Sit^\univ$, which are the system's inputs. Individual 
+elements of $\Sit^\univ$ correspond to Dirac distributions. 
+
+Second, replace function $f:X\rightarrow \bR$ with mechanism 
+$\fm_\univ:\vecify\Sit^\univ\rightarrow \vecify\Act^\univ$. 
+Since we are interested in the compositional structure of 
+measurements we also consider submechanisms $\fm_\mangle$. 
+However, comparing mechanisms requires that they have the same 
+domain and range, so we extend $\fm_\mangle$ to the entire 
+system as follows
+\begin{equation}
+    \label{e:extension}
+	\fm_\mangle = \vecify \Sit^\univ\xrightarrow{\pi}
+    \vecify\Sit^\mangle\xrightarrow{\fm_\mangle}
+    \vecify \Act^\mangle\xrightarrow{\pi^\natural}
+    \vecify \Act^\univ.
+\end{equation}
+
+We refer to the extension as $\fm_\mangle$ by abuse of notation.
+We extend mechanisms implicitly whenever necessary without 
+further comment. Extending mechanisms in this way maps the 
+quale into a cloud of points in $\Hom(\vecify \Act^\univ,
+\vecify\Sit^\univ)$ labeled by objects in $\subs_\univ$.
+
+In the special case of the initial object $\bot_\univ$, define 
+\begin{equation*}
+		\label{e:null-extension}
+	\fm_\bot = \vecify \Sit^\univ\xrightarrow{\omega}
+    \bR\xrightarrow{\omega^\natural}\vecify \Act^\univ.
+\end{equation*}
+\begin{rem}
+	\label{r:same-point}
+	Subsystems differing by non-existent edges (%Remark~\ref{r:subsystems}
+    \PMlinkname{Remark~2}{3distributeddynamicalsystems#Thmrem2}) 
+    are mapped to the same mechanism by this construction, thus 
+    making the fact that the edges do not exist explicit within 
+    the formalism.
+\end{rem}
+
+Composing an input with a submechanism yields an output 
+$\uout:=\fm_\mangle\circ \uin: \bR\rightarrow 
+\vecify \Act^\univ$, which is a probability distribution on 
+$\Act^\univ$. We are now in a position to define
+
+\begin{defn}
+	\label{d:stochmeas}
+	A \emph{measuring device} is the dual $\fm^\natural_\mangle$
+    to the mechanism of a subsystem. An \emph{output} is a 
+    stochastic map $\uout:\bR\rightarrow \vecify\Act^\univ$. A 
+    \emph{measurement} is a composition $\fm^\natural_\mangle
+    \circ \uout:\bR\rightarrow \vecify\Sit^\univ$.
+\end{defn}
+
+%We switch freely between the three terms subsystem $\mangle$, mechanism $\fm_\mangle$ and measuring device $\fm_\mangle^\natural$ when no confusion is likely to arise.
+
+Recall that stochastic maps of the form $\bR\rightarrow \vecify 
+X$ correspond to probability distributions on $X$. Outputs as 
+defined above are thus probability distributions on 
+$\Act^\univ$, the output alphabet of $\univ$. Individual 
+elements of $\Act^\univ$ are recovered as Dirac vectors: 
+$\bR\xrightarrow{\delta_\act}\vecify\Act^\univ$.
+
+\begin{defn}
+	\label{d:ei}
+	The \emph{effective information} generated by $\mangle_1$ 
+    in the \emph{context} of subsystem $\mangle_2\subset 
+    \mangle_1$ is
+\begin{equation}
+	\label{e:rel_ei}
+	ei(\fm_{\mangle_2}\rightarrow \fm_{\mangle_1}, \uout) := 
+	H\left[\fm_{\mangle_1}^\natural\circ \uout\Big\|
+    \fm_{\mangle_2}^\natural\circ \uout\right].
+\end{equation}
+The \emph{null context}, corresponding to the empty subsystem 
+$\bot=\emptyset\subset V_\univ\times V_\univ$, is a special 
+case where $\fm_\mangle^\natural\circ \uout$ is replaced by the 
+uniform distribution $\omega_\univ^\natural$ on $\Sit^\univ$. 
+To simplify notation define
+\begin{equation*}
+	ei(\fm_\mangle,\uout):=ei(\fm_\bot\rightarrow\fm_\mangle,
+    \uout).
+\end{equation*}
+\end{defn}
+
+Here, $H[p\|q]=\sum_{i}p_i\log_2\frac{p_i}{q_i}$ is the 
+Kullback-Leibler divergence or relative entropy 
+\cite{jaynes:81}. Eq.~\eqref{e:rel_ei} expands as
+\begin{equation}
+    ei(\fm_{\mangle_2}\rightarrow \fm_{\mangle_1},\uout) 
+	 = \sum_{s\in \Sit^\univ} \left\langle
+     \fm^\natural_{\mangle_1}\circ \uout\Big|
+     \delta_s\right\rangle
+	\cdot \log_2 \frac{\left\langle\fm^\natural_{\mangle_1}
+    \circ \uout\Big|\delta_s\right\rangle}
+	{\left\langle\fm^\natural_{\mangle_2}\circ \uout\Big|
+    \delta_s\right\rangle}.
+\end{equation}
+When $d_{out}=\delta_\act$ for some $\act\in \Act^\univ$ we 
+have
+\begin{equation}
+	ei(\fm_{\mangle_2}\rightarrow \fm_{\mangle_1},\delta_\act)
+	= \sum_{s\in\Sit^\univ} p_{\fm_{\mangle_1}}(s|\act)\cdot
+    \log_2
+	\frac{p_{\fm_{\mangle_1}}(s|\act)}{p_{\fm_{\mangle_2}}
+    (s|\act)}.
+\end{equation}
+
+Definition~\ref{d:stochmeas} requires some unpacking. To relate
+it to the classical notion of measurement, %Definition~\ref{d:cmeasure}
+\PMlinkname{Definition~1}{1introduction#Thmdefn1}, 
+we consider system $\univ=\left\{v_X\xrightarrow{f}v_Y\right\}$
+where the alphabets of $v_X$ and $v_Y$ are the sets 
+$\Act_{v_X}=X$ and $\Act_{v_Y}=Y$ respectively, and the 
+mechanism of $v_Y$ is $\fm_Y=\vecify f$. In other words, 
+system $\univ$ corresponds to a single deterministic function 
+$f:X\rightarrow Y$.
+
+\begin{prop}
+	[classical measurement]
+	\label{t:classmeas}
+	The measurement $(\vecify f)^\natural\circ \delta_y$ 
+    performed when deterministic function $f:X\rightarrow Y$ 
+    outputs $y$ is equivalent to the preimage $f^{-1}(y)$. 
+    Effective information is $ei(\vecify f,\delta_y)=
+    \log_2\frac{|X|}{|f^{-1}(y)|}$.
+\end{prop}
+
+\noindent
+Proof:
+By %Corollary~\ref{t:preimage} 
+\PMlinkname{Corollary~2}{2stochasticmaps#Thmthm2}
+measurement $(\vecify f)^\natural\circ \delta_y$ is conditional
+distribution
+\begin{equation*}
+	p_{\vecify f}(x|y) = \left\{\begin{matrix}
+		\frac{1}{|f^{-1}(y)|} & \mbox{if } f(x)=y\\
+		0 &\mbox{else}.
+	\end{matrix}\right.
+\end{equation*}
+which generalizes the preimage. Effective information follows 
+immediately.
+\eop
+
+Effective information can be interpreted as quantifying a 
+measurement's precision. It is high if few inputs cause $f$ 
+to output $y$ out of many  -- i.e. $f^{-1}(y)$ has few 
+elements relative to $|X|$  -- and conversely is low if many 
+inputs cause $f$ to output $y$ -- i.e. if the output is 
+relatively insensitive to changes in the input. Precise 
+measurements say a lot about what the input could have been 
+and conversely for vague measurements with low $ei$.
+
+The point of this paper is to develop techniques for studying 
+measurements constructed out of two or more functions. We 
+therefore present computations for the simplest case, 
+distributed system $X\times Y\xrightarrow{g}Z$, in considerable
+detail. Let $\univ$ be the graph
+\begin{figure}
+ \centering
+ \includegraphics{information-theoretic-distributed-measurement-4.1.png}
+\end{figure}
+%\begin{equation*}
+%    \xymatrix{
+%	v_X\ar[dr] & & v_Y\ar[dl]\\
+%	& v_Z
+%	}
+%\end{equation*}
+with obvious assignments of alphabets and the mechanism of 
+$v_Z$ as $\fm_Z=\vecify g$. To make the formulas more readable 
+let $\fm_{XY}=\vecify g$, $\fm_{X\bullet}=
+\vecify g\circ\pi^\natural_{XY,X}$ and  $\fm_{\bullet Y}=
+\vecify g\circ\pi^\natural_{XY,Y}$. We then obtain lattice 
+\begin{figure}
+ \centering
+ \includegraphics{information-theoretic-distributed-measurement-4.2.png}
+\end{figure}
+%\begin{equation}
+%	\label{e:diag}
+%	\xymatrix{
+%		& \top=\fm_{XY} \\
+%		\fm_{X\bullet}\ar[ur]^{ei(\fm_{X\bullet}\rightarrow\fm_{XY})} & & \fm_{\bullet Y}\ar[ul]_{ei(\fm_{\bullet Y}\rightarrow \fm_{XY})} \\
+%		& \fm_\bot\ar[ul]^{ei(\fm_{X\bullet})}\ar[ur]_{ei(\fm_{\bullet Y})}\ar[uu]^{ei(\fm_{XY})}
+%	}
+%\end{equation}
+The remainder of this section and most of the next analyzes 
+measurements in the lattice.
+
+\begin{prop}
+	[partial measurement]
+	\label{t:confmeas}
+	The measurement performed on $X$ when $g:X\times Y
+    \rightarrow Z$  outputs $z$, treating $Y$ as extrinsic 
+    noise, is conditional distribution
+	\begin{equation}
+		\label{e:conf-preimage}
+		p(x|z) = \left\{\begin{matrix}
+			\frac{|g_{x\times Y}^{-1}(z)|}{|g^{-1}(z)|} &
+			\mbox{if } g(x,y)=z\mbox{ for some }y\in Y\\
+			0 & \mbox{else,}
+		\end{matrix}\right.
+	\end{equation}
+	where $g^{-1}_{x\times Y}(z):= pr_Y(g^{-1}(z)\cap \{x\}
+    \times Y)$. The effective information generated by the
+    partial measurement is
+	\begin{equation}
+		\label{e:conf-ei}
+		ei\big(\fm_{X\bullet}^\natural,\delta_z\big) 		
+		= \log_2|X|+\sum_{x\in X}p(x|z)\cdot
+		\log_2 p(x|z).
+%		ei\big((\vecify g\circ \pi_{XY,X}^\natural)^\natural,
+\delta_z\big) 		
+%		= \log_2|X|+\sum_{x\in X}\frac{|g^{-1}_{x\times Y}(z)|}
+{|g^{-1}(z)|}\cdot
+%		\log_2\frac{|g^{-1}_{x\times Y}(z)|}{|g^{-1}(z)|}.
+	\end{equation}
+\end{prop}
+
+\noindent
+Proof: Treating $Y$ as a source of extrinsic noise yields 
+$\vecify X\xrightarrow{\pi^\natural}\vecify X\otimes 
+\vecify Y\xrightarrow{\vecify g}\vecify Z$ which takes 
+$\delta_x\mapsto \frac{1}{|Y|}\sum_{y\in Y}\delta_{g(x,y)}$. 
+The dual is
+\begin{equation*}
+    \fm_{X\bullet}^\natural=\pi_{XY,X}\circ 
+    (\vecify g)^\natural:\delta_z\mapsto \sum_{x\in X}
+    \frac{|g^{-1}_{x\times Y}(z)|}{|g^{-1}(z)|}\cdot\delta_x.
+\end{equation*}	
+The computation of effective information follows immediately. 
+\eop
+
+A partial measurement is precise if the preimage $g^{-1}(z)$ 
+has small or empty intersection with $\{x\}\times Y$ for most 
+$x$, and large intersection for few $x$.
+
+Propositions~\ref{t:classmeas} and \ref{t:confmeas} compute 
+effective information of a measurement relative to the null 
+context provided by complete ignorance (the uniform 
+distribution). We can also compute the effective information 
+generated by a measurement in the context of a submeasurement:
+
+\begin{prop}
+	[relative measurement]
+	\label{t:relmeas}
+	The information generated by measurement $X\times Y\xrightarrow{g}Z$ in the context of the partial measurement where $Y$ is unobserved noise, is
+	\begin{equation}
+		\label{e:relmeas}
+		ei(\fm_{X\bullet}\rightarrow \fm_{XY},\delta_z)=
+		\sum_{x\in X} \frac{g^{-1}_{x\times Y}(z)}{g^{-1}(z)}\log_2
+		\frac{|Y|}{g^{-1}_{x\times Y}(z)}.
+	\end{equation}
+\end{prop}
+
+\noindent
+Proof: Applying Propositions~\ref{t:classmeas} and 
+\ref{t:confmeas} obtains
+\begin{equation*}
+	ei(\fm_{X\bullet}\rightarrow \fm_{XY},\delta_z)=
+	\sum_{(x,y)\in g^{-1}(z)}\frac{1}{|g^{-1}(z)|}
+    \log_2\left[
+	\frac{1}{|g^{-1}(z)|}\cdot\frac{|g^{-1}(z)|\cdot|Y|}
+    {|g^{-1}_{x\times Y}(z)|}
+	\right]
+\end{equation*}
+which simplifies to the desired expression. 
+\eop
+
+To interpret the result decompose $X\times Y\xrightarrow{g} Z$ 
+into a family of functions $\mathcal{R}=
+\left\{Y\xrightarrow{g_{x\times Y}}Z\big|x\in X\right\}$ 
+labeled by elements of $X$, where $g_{x\times Y}(y):=g(x,y)$. 
+The precision of the measurement performed by $g_{x\times Y}$ 
+s $\log_2\frac{|Y|}{g^{-1}_{x\times Y}(z)}$. It follows that 
+the precision of the relative measurement, 
+Eq.~\eqref{e:relmeas}, is the expected precision of the 
+measurements performed by family $\mathcal{R}$ taken with 
+respect to the probability distribution 
+$p(x|z)=\frac{g^{-1}_{x\times Y}(z)}{g^{-1}(z)}$ generated by
+the noisy measurement.
+
+In the special case of $g:X\times Y\rightarrow Z$ relative 
+precision is simply the difference of the precision of the 
+larger and smaller subsystems:
+
+\begin{cor}[comparing measurements]
+	\label{t:diffmeas}
+	\begin{equation*}
+		ei(\fm_{X\bullet}\rightarrow \fm_{XY},\delta_z) = 
+        ei(\fm_{XY},\delta_z) -ei(\fm_{X\bullet},\delta_z)
+	\end{equation*}
+\end{cor}
+
+\noindent
+Proof: Applying Propositions~\ref{t:classmeas}, 
+\ref{t:confmeas}, \ref{t:relmeas} and simplifying obtains
+\begin{align*}
+    ei(\fm_{XY},\delta_z) -ei(\fm_{X\bullet},\delta_z) 
+	& = \log_2\frac{|X|\cdot|Y|}{|g^{-1}(z)|}
+	-\sum_x \frac{|g^{-1}_{x\times Y}(z)|}{|g^{-1}(z)|}\log_2\frac{|X|\cdot |g^{-1}_{x\times Y}(z)|}{|g^{-1}(z)|}\\
+	& = \log_2 \frac{|Y|}{|g^{-1}(z)|}+\sum_{(x,y)\in g^{-1}(z)}\frac{1}{|g^{-1}(z)|}
+	\log_2 \frac{|g^{-1}(z)|}{|g^{-1}_{x\times Y}(z)|} \\
+	& = ei(\fm_{X\bullet}\rightarrow \fm_{XY},\delta_z).
+	\,\,\blacksquare
+\end{align*}
+
+\begin{thebibliography}{10}
+\providecommand{\bibitemdeclare}[2]{}
+\providecommand{\urlprefix}{Available at }
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{\texttt{#2}}
+\providecommand{\urlalt}[2]{\href{#1}{#2}}
+\providecommand{\doi}[1]{doi:\urlalt{http://dx.doi.org/#1}{#1}}
+\providecommand{\bibinfo}[2]{#2}
+
+%\bibitemdeclare{inproceedings}{jaynes:81}
+\bibitem{jaynes:81}
+\bibinfo{author}{E~T Jaynes} (\bibinfo{year}{1985}):
+  \emph{\bibinfo{title}{Entropy and {S}earch {T}heory}}.
+\newblock In \bibinfo{editor}{CR~Smith} \& \bibinfo{editor}{WT~Grandy},
+  editors: {\sl \bibinfo{booktitle}{Maximum-entropy and {B}ayesian {M}ethods in
+  {I}nverse {P}roblems}}, \bibinfo{publisher}{Springer}.
+
+\end{thebibliography}
+\end{document}

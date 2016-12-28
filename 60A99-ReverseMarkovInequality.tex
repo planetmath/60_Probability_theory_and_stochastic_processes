@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ReverseMarkovInequality}
+\pmcreated{2013-03-22 17:48:08}
+\pmmodified{2013-03-22 17:48:08}
+\pmowner{kshum}{5987}
+\pmmodifier{kshum}{5987}
+\pmtitle{reverse Markov inequality}
+\pmrecord{6}{40264}
+\pmprivacy{1}
+\pmauthor{kshum}{5987}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A99}
+\pmrelated{MarkovsInequality}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $X$ be a random variable that satisfies $\Pr(X \leq a) = 1$ for some constant $a$.
+Then, for $d < E[X]$,
+\[
+\Pr( X > d) \geq \frac{E[X] - d}{a - d}
+\]
+
+
+
+{\em Proof:}
+Apply the Markov's inequality to the random variable $\tilde{X} = a-X$,
+\[\Pr(X\leq d) = \Pr(\tilde{X}\geq a-d) 
+\leq \frac{E[\tilde{X}]}{a-d} 
+= \frac{a-E[X]}{a-d}.
+\]
+
+Hence
+\[
+\Pr(X> d) \geq 1 - \frac{a-E[X]}{a-d} = \frac{E[X]-d}{a-d}.
+\]
+%%%%%
+%%%%%
+\end{document}

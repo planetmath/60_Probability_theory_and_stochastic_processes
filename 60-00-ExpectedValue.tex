@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExpectedValue}
+\pmcreated{2013-03-22 11:53:42}
+\pmmodified{2013-03-22 11:53:42}
+\pmowner{mathwizard}{128}
+\pmmodifier{mathwizard}{128}
+\pmtitle{expected value}
+\pmrecord{21}{30505}
+\pmprivacy{1}
+\pmauthor{mathwizard}{128}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60-00}
+\pmclassification{msc}{46L05}
+\pmclassification{msc}{82-00}
+\pmclassification{msc}{83-00}
+\pmclassification{msc}{81-00}
+\pmsynonym{mean}{ExpectedValue}
+\pmsynonym{expectation value}{ExpectedValue}
+\pmsynonym{expectation}{ExpectedValue}
+\pmrelated{AverageValueOfFunction}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%%\usepackage{xypic}
+\begin{document}
+Let us first consider a discrete random variable $X$ with values in $\mathbb{R}$. Then $X$ has values in an at most countable set $\mathcal{X}$. For $x\in\mathcal{X}$ denote the probability that $X=x$ by $P_x$. If
+$$\sum_{x\in\mathcal{X}}|x|P_x$$
+converges, the sum
+$$\sum_{x\in\mathcal{X}}xP_x$$
+is well-defined. Its value is called the \emph{expected value}, \emph{expectation} or \emph{mean} of $X$. It is usually denoted by $E(X)$.
+
+Taking this idea further, we can easily generalize to a continuous random variable $X$ with probability density $\varrho$ by setting
+$$E(X)=\int_{-\infty}^\infty x\varrho(x)dx,$$
+if this integral exists.
+
+From the above definition it is clear that the expectation is a linear function, i.e. for two random variables $X, Y$ we have
+$$E(aX+bY)=aE(X)+bE(Y)$$
+for $a,b\in\mathbb{R}$. 
+
+Note that the expectation does not always exist (if the corresponding sum or integral does not converge, the expectation does not exist. One example of this situation is the Cauchy random variable).
+
+Using the measure theoretical formulation of stochastics, we can give a more formal definition. Let $(\Omega, \mathcal{A}, P)$ be a probability space and $X:\Omega\to\mathbb{R}$ a random variable. We now define
+$$E(X)=\int_{\Omega} XdP,$$
+where the integral is understood as the Lebesgue-integral with respect to the measure $P$. 
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

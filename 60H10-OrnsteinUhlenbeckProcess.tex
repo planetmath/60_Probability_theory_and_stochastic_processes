@@ -1,0 +1,191 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrnsteinUhlenbeckProcess}
+\pmcreated{2013-03-22 17:19:26}
+\pmmodified{2013-03-22 17:19:26}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{Ornstein-Uhlenbeck process}
+\pmrecord{4}{39675}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60H10}
+\pmclassification{msc}{60-00}
+\pmsynonym{Ornstein-Uhlenbeck equation}{OrnsteinUhlenbeckProcess}
+%\pmkeywords{mean-reverting}
+
+% The standard font packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% For neatly defining theorems and definitions
+%\usepackage{amsthm}
+
+% Including EPS/PDF graphics (\includegraphics)
+%\usepackage{graphicx}
+
+% Making matrix-based graphics
+%%%\usepackage{xypic}
+
+% Enumeration lists with different styles
+%\usepackage{enumerate}
+
+% Set up the theorem environments
+%\newtheorem{thm}{Theorem}
+%\newtheorem*{thm*}{Theorem}
+
+\providecommand{\defnterm}[1]{\emph{#1}}
+
+% The standard number systems
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\rat}{\mathbb{Q}}
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\intset}{\mathbb{Z}}
+
+% Absolute values and norms
+% Normal, wide, and big versions of the delimeters
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\absW}[1]{\left\lvert#1\right\rvert}
+\providecommand{\absB}[1]{\Bigl\lvert#1\Bigr\rvert}
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\normW}[1]{\left\lVert#1\right\rVert}
+\providecommand{\normB}[1]{\Bigl\lVert#1\Bigr\rVert}
+
+% Differentiation operators
+\providecommand{\od}[2]{\frac{d #1}{d #2}}
+\providecommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\providecommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2}}
+\providecommand{\ipd}[2]{\partial #1 / \partial #2}
+
+% Differentials on integrals
+\newcommand{\dx}{\, dx}
+\newcommand{\dt}{\, dt}
+\newcommand{\dmu}{\, d\mu}
+
+% Inner products
+\providecommand{\ip}[2]{\langle {#1}, {#2} \rangle}
+
+% Calligraphic letters
+\newcommand{\sF}{\mathcal{F}}
+\newcommand{\sD}{\mathcal{D}}
+
+% Standard spaces
+\newcommand{\Hilb}{\mathcal{H}}
+\newcommand{\Le}{\mathbf{L}}
+
+% Operators and functions occassionally used in my articles
+\DeclareMathOperator{\D}{D}
+\DeclareMathOperator{\linspan}{span}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\lindim}{dim}
+\DeclareMathOperator{\sinc}{sinc}
+
+% Probability stuff
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+
+\begin{document}
+\subsection*{Definition}
+
+The \emph{Ornstein-Uhlenbeck} process is a stochastic process
+that satisfies the following stochastic differential equation:
+\begin{align}\label{eq:sde}
+dX_t = \kappa ( \theta - X_t) \, dt + \sigma \, dW_t\,,
+\end{align}
+where $W_t$ is a standard Brownian motion on $t \in [0, \infty)$.
+
+The constant parameters are:
+\begin{itemize}
+\item
+$\kappa > 0$ is the rate of mean reversion;
+\item
+$\theta$ is the long-term mean of the process;
+\item
+$\sigma>0$ is the volatility or average magnitude, per square-root time,
+of the random fluctuations that are modelled as Brownian motions.
+\end{itemize}
+
+
+
+\subsection*{Mean-reverting property}
+
+If we ignore the random fluctuations in the process
+due to $dW_t$, then we see that $X_t$ has an overall drift
+towards a mean value $\theta$.
+The process $X_t$ reverts to this mean exponentially, at rate $\kappa$,
+with a magnitude in direct proportion to the distance
+between the current value of $X_t$ and $\theta$.
+
+This can be seen by looking at the solution to the 
+ordinary differential equation $dx_t = \kappa (\theta - x) dt$
+which is
+\begin{align}\label{eq:ode}
+\frac{\theta - x_t}{\theta-x_0} = e^{-\kappa(t-t_0) } \,,
+\quad \text{ or } 
+x_t = \theta + (x_0 - \theta) e^{-\kappa(t-t_0) }\,. 
+\end{align}
+
+For this reason, the Ornstein-Uhlenbeck process
+is also called a \emph{mean-reverting process},
+although the latter name applies to other types
+of stochastic processes exhibiting the same property as well.
+
+
+\subsection*{Solution}
+
+The solution to the stochastic differential equation \eqref{eq:sde}
+defining the Ornstein-Uhlenbeck process is, for any $0 \leq s \leq t$, is
+\[
+X_t = \theta + (X_s - \theta) e^{-\kappa (t-s)}
++ \sigma \int_s^t e^{-\kappa(t-u)} \, dW_u\,.
+\]
+where the integral on the right is the It\^o integral.
+
+For any fixed $s$ and $t$, the random variable $X_t$, conditional
+upon $X_s$, is normally distributed with 
+\[
+\text{mean} = \theta + (X_s - \theta) e^{-\kappa(t-s)}
+\,,
+\quad
+\text{variance} = \frac{\sigma^2}{2\kappa} (1 - e^{-2\kappa (t-s)})\,.
+\]
+Observe that the mean of $X_t$ is exactly
+the value derived heuristically
+in the solution \eqref{eq:ode} of the ODE.
+
+The Ornstein-Uhlenbeck process is a time-homogeneous It\^o diffusion.
+
+\subsection*{Applications}
+
+The Ornstein-Uhlenbeck process is widely used for modelling
+biological processes such as neuronal response,
+and in mathematical finance,
+the modelling of the dynamics of interest rates
+and volatilities of asset prices.
+
+\begin{thebibliography}{6}
+\bibitem{Jacobsen}
+Martin Jacobsen. ``Laplace and the Origin of the Ornstein-Uhlenbeck Process''.
+Bernoulli, Vol. 2, No. 3. (Sept. 1996), pp. 271 -- 286.
+\bibitem{Oksendal}
+Bernt \O{}ksendal.
+\emph{Stochastic Differential Equations,
+An Introduction with Applications}, 5th edition. Springer, 1998.
+\bibitem{Shreve}
+Steven E. Shreve. \emph{Stochastic Calculus for Finance II: 
+Continuous-Time Models}. Springer, 2004.
+\bibitem{Jaimungal}
+Sebastian Jaimungal. Lecture notes for \emph{Pricing Theory}.
+University of Toronto.
+\bibitem{Rubisov}
+Dmitri Rubisov. Lecture notes for \emph{Risk Management}.
+University of Toronto.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

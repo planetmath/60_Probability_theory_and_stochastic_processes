@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FellerProcess}
+\pmcreated{2013-03-22 16:12:40}
+\pmmodified{2013-03-22 16:12:40}
+\pmowner{mcarlisle}{7591}
+\pmmodifier{mcarlisle}{7591}
+\pmtitle{Feller process}
+\pmrecord{6}{38307}
+\pmprivacy{1}
+\pmauthor{mcarlisle}{7591}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60J35}
+%\pmkeywords{Feller Markov random stochastic process semigroup}
+\pmdefines{Feller semigroup}
+\pmdefines{Feller transition function}
+\pmdefines{Feller process}
+\pmdefines{LCCB}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $E$ be a LCCB space (locally compact with a countable base; usually a subset of $\mathbb{R}^n$ for some $n \in \mathbb{N}$) and $C_0(E) = C_0(E, \mathbb{R})$ be the space of continuous functions on $E$ that vanish at infinity.  (We may write $C_0$ as shorthand.)  A \emph{Feller semigroup} on $C_0(E)$ is a family of positive linear operators $T_t, t \geq 0$, on $C_0(E)$ such that 
+
+\begin{itemize}
+\item $T_0 = Id$ and $||T_t|| \leq 1$ for every $t \in T$, \emph{i.e.} $\{T_t\}_{t \in T}$ is a family of contracting maps; 
+\item $T_{t+s} = T_t \circ T_s$ (the semigroup property); 
+\item $\lim_{t \downarrow 0} ||T_tf - f|| = 0$ for every $f \in C_0(E)$.
+\end{itemize}
+
+A probability transition function associated with a Feller semigroup is called a \emph{Feller transition function}.  A Markov process having a Feller transition function is called a \emph{Feller process}.
+
+\begin{thebibliography}{1}
+\bibitem{RY} D. Revuz \& M. Yor, \emph{Continuous Martingales and Brownian Motion}, Third Edition Corrected.  Volume 293, Grundlehren der mathematischen Wissenschaften.  Springer, Berlin, 2005.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

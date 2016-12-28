@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ChernoffCramerBound}
+\pmcreated{2013-03-22 16:09:02}
+\pmmodified{2013-03-22 16:09:02}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{Chernoff-Cramer bound}
+\pmrecord{46}{38230}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E15}
+\pmrelated{HoeffdingInequalityForBoundedIndependentRandomVariables}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The Chernoff-Cram\`{e}r inequality is a very general and powerful way of bounding random variables. Compared with the famous Chebyshev bound, which implies inverse polynomial decay inequalities, the Chernoff-Cram\`{e}r method yields exponential decay inequalities, at the cost of  needing a few more
+hypotheses on random variables' \PMlinkescapetext{behaviour}.
+
+
+Theorem: (Chernoff-Cram\`{e}r inequality)
+
+Let $\{X_{i}\}_{i=1}^{n}$ be a collection of independent random
+variables such that $E[\exp \left( tX_{i}\right) ]<+\infty $ \ $\forall i$ in a right neighborhood of $t=0$, i.e. for any $t\in(0,c)$ (Cram\`{e}r condition).
+
+Then a zero-valued for $x=0$, positive, strictly increasing, strictly convex function $\Psi (x):[0,\infty )\mapsto R^{+}$ exists
+such that: \\
+\[
+\Pr\left\{ \sum_{i=1}^{n}\left( X_{i}-E[X_{i}]\right) >\varepsilon \right\}
+\leq \exp \left( -\Psi (\varepsilon )\right) \ \forall \varepsilon \geq 0
+\]
+
+Namely, one has:
+\begin{eqnarray*}
+\Psi (x) &=&\sup_{0 < t < c}\left( tx -\psi (t)\right)  \\
+\psi (t) &=&\sum_{i=1}^{n}\ln E\left[ e^{t\left( X_{i}-EX_{i}\right) }\right]
+=\sum_{i=1}^{n}\left(\ln E\left[ e^{tX_{i}}\right] -tE\left[ X_{i}\right]\right)
+\end{eqnarray*}
+
+that is, $\Psi (x)$ is the Legendre \PMlinkescapetext{transform} of the cumulant generating function of the $\sum_{i=1}^{n}\left( X_{i}-E[X_{i}]\right)$ random variable.
+
+Remarks:
+
+1) Besides its importance for theoretical questions, the Chernoff-Cram\'{e}r bound is also the starting point to derive many deviation
+or concentration inequalities, among which \PMlinkname{Bernstein}{BernsteinInequality}, Kolmogorov, \PMlinkname{Prohorov}{ProhorovInequality}, \PMlinkname{Bennett}{BennettInequality},
+Hoeffding and Chernoff ones are worth mentioning. All of these
+inequalities are obtained imposing various further conditions on $X_{i}$ random variables, which turn out to affect the general form of the cumulant generating function $\psi(t)$. \\
+2) Sometimes, instead of bounding the sum of n independent random variables, one needs to estimate they '\PMlinkescapetext{mean}' i.e. the quantity $\frac{1}{n}\sum_{i=1}^{n}X_i$; in \PMlinkescapetext{order} to reuse Chernoff-Cram\'{e}r bound, it's enough to note that
+\[
+\Pr\left\{\frac{1}{n}\sum_{i=1}^{n}\left( X_{i}-E[X_{i}]\right) >\varepsilon^{\prime}\right\}=\Pr\left\{\sum_{i=1}^{n}\left( X_{i}-E[X_{i}]\right) >n\varepsilon^{\prime}\right\}
+\]
+so that one has only to replace, in the above stated inequality, $\varepsilon$ with $n\varepsilon^{\prime}$.
+\\
+3) It turns out that the Chernoff-Cramer bound is asymptotically sharp, as CramÃ¨r \PMlinkescapetext{limit} theorem shows.
+%%%%%
+%%%%%
+\end{document}

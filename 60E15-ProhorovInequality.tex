@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProhorovInequality}
+\pmcreated{2013-03-22 16:12:56}
+\pmmodified{2013-03-22 16:12:56}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{Prohorov inequality}
+\pmrecord{17}{38312}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E15}
+\pmsynonym{Prokhorov inequality}{ProhorovInequality}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\arsinh}{arsinh}
+
+\begin{document}
+Theorem (Prohorov inequality, 1959):
+
+Let $\{X_{i}\}_{i=1}^{n}$ be a collection of independent random
+variables satisfying the conditions:
+
+a) $E[X_{i}^{2}]<\infty $ $\forall i$, so that one can write $%
+\sum_{i=1}^{n}E[X_{i}^{2}]=v^{2}$ \\
+b) $\Pr\left\{\left\vert X_{i}\right\vert \leq M\right\} =1$ \ $\forall i$.
+
+Then, for any $\varepsilon \geq 0$,
+\begin{eqnarray*}
+\Pr\left\{ \sum_{i=1}^{n}\left( X_{i}-E[X_{i}]\right) >\varepsilon \right\}
+&\leq &\exp \left[ -\frac{\varepsilon }{2M}\arsinh\left( \frac{\varepsilon
+M}{2v^{2}}\right) \right] \\
+\Pr\left\{ \left\vert \sum_{i=1}^{n}\left( X_{i}-E[X_{i}]\right) \right\vert
+>\varepsilon \right\} &\leq &2\exp \left[ -\frac{\varepsilon }{2M}\arsinh\left( \frac{\varepsilon M}{2v^{2}}\right) \right]
+\end{eqnarray*}
+
+(See \PMlinkname{here}{AreaFunctions} for the meaning of $\arsinh(x)$)
+%%%%%
+%%%%%
+\end{document}

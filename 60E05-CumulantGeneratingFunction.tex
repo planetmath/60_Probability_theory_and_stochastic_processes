@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CumulantGeneratingFunction}
+\pmcreated{2013-03-22 16:16:24}
+\pmmodified{2013-03-22 16:16:24}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{cumulant generating function}
+\pmrecord{17}{38384}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E05}
+\pmrelated{MomentGeneratingFunction}
+\pmrelated{CharacteristicFunction2}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Given a random variable $X$, the \emph{cumulant generating function} of $X$ is the following function:\\
+\[
+H_X(t) = \ln E[e^{tX}]
+\]
+for all $t \in R$ in which the expectation converges.
+
+In other \PMlinkescapetext{words}, the cumulant generating function is just the logarithm of the moment generating function.
+
+The cumulant generating function of $X$ is defined on a (possibly degenerate) interval containing $t=0$; one has $H_X(0)=0$; moreover, $H_X(t)$ is a \PMlinkname{convex function}{ConvexFunction}. (Indeed, the moment generating function is defined on a possibly degenerate interval containing $t=0$, which image is a positive interval containing $t=1$; so the logarithm is defined on the same interval on which is defined the moment generating function.)
+
+The $k$th-derivative of the cumulant generating function evaluated at zero is the $k$th cumulant of $X$.
+
+%%%%%
+%%%%%
+\end{document}

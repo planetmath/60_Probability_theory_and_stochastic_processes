@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GumbelRandomVariable}
+\pmcreated{2013-03-22 15:55:40}
+\pmmodified{2013-03-22 15:55:40}
+\pmowner{georgiosl}{7242}
+\pmmodifier{georgiosl}{7242}
+\pmtitle{Gumbel random variable}
+\pmrecord{4}{37935}
+\pmprivacy{1}
+\pmauthor{georgiosl}{7242}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+$X$ is a \emph{Gumbel random variable} if it has a probability density function, given by
+$$f_X(x)=\frac{1}{\sigma}\exp(\frac{x-\mu}{\sigma})S(x)$$
+where $-\infty <x<\infty $, $\mu$ is the \emph{location parameter}, $\sigma$ is the \emph{scale parameter}, and $S(x)$ is the survivor function, 
+$S(x)=\exp[-\exp(\frac{x-\mu}{\sigma})]$ .
+
+Notation for $X$ having a Gumbel distribution is $X\sim \mbox{Gum}(\mu,\sigma)$.
+
+\textbf{\PMlinkescapetext{Properties}}:
+Given a Gumbel distribution $X\sim \mbox{Gum}(\mu,\sigma)$:
+\begin{enumerate}
+\item
+E[X]=$\mu-\gamma\sigma$, where $\gamma$ is the Euler's constant
+\item
+Var[X]=$\frac{\pi^2}{6}\sigma^2$
+\end{enumerate}
+
+\textbf{Remark.}
+Nevertheless the interval $(-\infty,\infty)$ in which is defined, the Gumbel distribution is often used to model reliability or lifetime of products.
+
+%%%%%
+%%%%%
+\end{document}

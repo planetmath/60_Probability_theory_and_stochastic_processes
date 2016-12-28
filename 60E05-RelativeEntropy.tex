@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RelativeEntropy}
+\pmcreated{2013-03-22 12:19:32}
+\pmmodified{2013-03-22 12:19:32}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{relative entropy}
+\pmrecord{10}{31945}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E05}
+\pmclassification{msc}{94A17}
+\pmsynonym{Kullback-Leibler distance}{RelativeEntropy}
+\pmrelated{Metric}
+\pmrelated{ConditionalEntropy}
+\pmrelated{MutualInformation}
+\pmrelated{ProofOfGaussianMaximizesEntropyForGivenCovariance}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\mv}[1]{\mathbf{#1}}	% matrix or vector
+\newcommand{\var}{\mathrm{var}}
+\newcommand{\cov}{\mathrm{cov}}
+\newcommand{\corr}{\mathrm{corr}}
+\newcommand{\mvt}[1]{\mv{#1}^{\mathrm{T}}}
+\newcommand{\mvi}[1]{\mv{#1}^{-1}}
+\newcommand{\mpderiv}[1]{\frac{\partial}{\partial {#1}}} 
+\newcommand{\defined}{:=}
+\begin{document}
+Let $p$ and $q$ be probability distributions with supports $\mathcal{X}$ and $\mathcal{Y}$ respectively, where  $ \mathcal{X} \subset \mathcal{Y}$.  The \emph{relative entropy} or \emph{Kullback-Leibler} distance between two probability distributions $p$ and $q$ is defined as
+
+\begin{equation}
+D(p||q) \defined \sum_{x \in \mathcal{X}} p(x) \log \frac{p(x)}{q(x)}.
+\end{equation}
+
+While $D(p||q)$ is often called a distance, it is not a true metric because it is not symmetric and does not satisfy the triangle inequality.  However, we do have $D(p||q) \ge 0$ with equality iff $p = q$.
+
+\begin{align}
+-D(p||q) &= -\sum_{x \in \mathcal{X}} p(x) \log \frac{p(x)}{q(x)}\\
+ &= \sum_{x \in \mathcal{X}} p(x) \log \frac{q(x)}{p(x)}\\
+ &\le \log \left(\sum_{x \in \mathcal{X}} p(x) \frac{q(x)}{p(x)} \right)\\
+ &= \log \left(\sum_{x \in \mathcal{X}} q(x) \right)\\
+ &\le \log \left(\sum_{x \in \mathcal{Y}} q(x) \right)\\
+ &= 0
+\end{align}
+where the first inequality follows from the concavity of $\log(x)$ and the second from expanding the sum over the support of $q$ rather than $p$.
+
+Relative entropy also comes in a continuous version which looks just as one might expect.  For continuous distributions $f$ and $g$, $\mathcal{S}$ the support of $f$, we have
+
+\begin{equation}
+D(f||g) \defined \int_{\mathcal{S}} f \log \frac{f}{g}.
+\end{equation}
+%%%%%
+%%%%%
+\end{document}

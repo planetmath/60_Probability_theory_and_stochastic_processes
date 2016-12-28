@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Measure}
+\pmcreated{2013-03-22 11:57:33}
+\pmmodified{2013-03-22 11:57:33}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{measure}
+\pmrecord{19}{30756}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A10}
+\pmclassification{msc}{28A10}
+\pmrelated{LpSpace}
+\pmrelated{SigmaFinite}
+\pmrelated{Integral2}
+\pmrelated{Distribution}
+\pmrelated{LebesgueMeasure}
+\pmdefines{measure space}
+\pmdefines{probability space}
+\pmdefines{probability measure}
+\pmdefines{countably additive}
+\pmdefines{finitely additive}
+\pmdefines{$\sigma$-additive}
+\pmdefines{positive measure}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%\usepackage{xypic}
+\newcommand{\union}{\cup}
+\begin{document}
+Let $(E, \mathcal{B}(E))$ be a measurable space. A \emph{measure} on $(E,\mathcal{B}(E))$ is a function $\mu\colon \mathcal{B}(E) \to \mathbb{R} \union \{\infty\}$ with values in the extended real numbers such that:
+\begin{enumerate}
+\item $\mu(A) \geq 0$ for $A \in \mathcal{B}(E)$, with equality if $A = \emptyset$
+\item $\mu(\bigcup_{i=0}^\infty A_i) = \sum_{i=0}^\infty \mu(A_i)$ for any sequence of pairwise disjoint sets $A_i \in \mathcal{B}(E)$.
+\end{enumerate}
+
+Occasionally, the term \emph{positive measure} is used to distinguish measures as defined here from more general notions of measure which are not necessarily restricted to the non-negative extended reals.
+
+The second property above is called countable additivity, or $\sigma$-additivity.  A \emph{finitely additive measure} $\mu$ has the same definition except that $\mathcal{B}(E)$ is only required to be an algebra and the second property above is only required to hold for finite unions.  Note the slight abuse of terminology: a finitely additive measure is not necessarily a measure.
+
+The triple $(E, \mathcal{B}(E), \mu)$ is called a \emph{measure space}. If $\mu(E) = 1$, then it is called a \emph{probability space}, and the measure $\mu$ is called a \emph{probability measure}.
+
+Lebesgue measure on $\mathbb{R}^n$ is one important example of a measure.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

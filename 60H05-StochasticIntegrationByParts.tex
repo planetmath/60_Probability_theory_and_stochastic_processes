@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StochasticIntegrationByParts}
+\pmcreated{2013-03-22 18:41:35}
+\pmmodified{2013-03-22 18:41:35}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{stochastic integration by parts}
+\pmrecord{4}{41453}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60H05}
+\pmclassification{msc}{60G07}
+\pmclassification{msc}{60H10}
+%\pmkeywords{stochastic integral}
+%\pmkeywords{quadratic covariation}
+%\pmkeywords{semimartingale}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{satisfies}
+\PMlinkescapeword{formula}
+\PMlinkescapeword{integral}
+\PMlinkescapeword{difference}
+\PMlinkescapeword{term}
+\PMlinkescapeword{size}
+\PMlinkescapeword{product}
+\PMlinkescapeword{simple}
+\PMlinkescapeword{calculus}
+\PMlinkescapeword{even}
+\PMlinkescapeword{order}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{variation}
+\PMlinkescapeword{identity}
+
+The stochastic integral satisfies a version of the classical integration by parts formula, which is just the integral version of the product rule. The only difference here is the existence of a quadratic covariation term.
+
+\begin{theorem*}
+Let $X,Y$ be semimartingales. Then,
+\begin{equation}\label{eq:1}
+X_tY_t = X_0Y_0+\int_0^t X_{s-}\,dY_s+\int_0^tY_{s-}\,dX_s + [X,Y]_t.
+\end{equation}
+\end{theorem*}
+
+Alternatively, in differential notation, this reads
+\begin{equation*}
+d(X_tY_t)=X_{t-}dY_t + Y_{t-}dX_t + d[X,Y]_t.
+\end{equation*}
+The existence of the quadratic covariation term $[X,Y]$ in the integration by parts formula, and also in It\^o's lemma, is an important difference between standard calculus and stochastic calculus. To see the need for this term, consider the following. Choosing any $h>0$, write the increment of a process over a time step of size $h$ as $\delta X_t\equiv X_{t+h}-X_t$. The increment of a product of processes satisfies the following simple identity,
+\begin{equation}\label{eq:2}
+\delta (XY)_t = X_t\delta Y_t + Y_t\delta X_t + \delta X_t\delta Y_t. 
+\end{equation}
+As we let $h$ tend to zero, for differentiable processes the final term of (\ref{eq:2}) is of \PMlinkname{order}{LandauNotation} $O(h^2)$, so can be neglected in the limit. However, when $X$ and $Y$ are semimartingales, such as Brownian motion, the final term will be of order $h$, and needs to be retained even in the limit.
+
+The proof of equation (\ref{eq:1}) is given by the proof of the \PMlinkname{existence of the quadratic variation of semimartingales}{QuadraticVariationOfASemimartingale} and, in particular, is just a rearrangement of the formula given for the quadratic covariation of semimartingales. Whenever either of $X$ or $Y$ is a continuous finite variation process, the quadratic covariation term $[X,Y]$ is zero, so (\ref{eq:1}) becomes the standard integration by parts formula. More generally, for noncontinuous processes we have the following.
+
+\begin{corollary*}
+Let $X$ be a semimartingale and $Y$ be an adapted finite variation process. Then,
+\begin{equation}\label{eq:3}
+X_tY_t = X_0Y_0 + \int_0^t X_s\,dY_s + \int_0^t Y_{s-}\,dX_s.
+\end{equation}
+\end{corollary*}
+
+As $Y$ is a finite variation process, the first integral on the right hand side of (\ref{eq:3}) makes sense as a Lebesgue-Stieltjes integral.
+Equation (\ref{eq:3}) follows from the integration by parts formula by first substituting the following formula for the covariation whenever $Y$ has finite variation into (\ref{eq:1})
+\begin{equation*}
+[X,Y]_t=\sum_{s\le t}\Delta X_s\Delta Y_s
+\end{equation*}
+and then using the following identity
+\begin{equation*}
+\begin{split}
+\int_0^t X_s\,dY_s - \int_0^t X_{s-}\,dY_s
+&=\int_0^t \Delta X_s\,dY_s
+=\int_0^t \sum_{u}\Delta X_u 1_{\{u=s\}}\,dY_s\\
+&= \sum_{u\le t}\Delta X_u\Delta Y_u.
+\end{split}\end{equation*}
+
+%%%%%
+%%%%%
+\end{document}

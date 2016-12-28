@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DiracMeasure}
+\pmcreated{2013-03-22 17:19:40}
+\pmmodified{2013-03-22 17:19:40}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{Dirac measure}
+\pmrecord{18}{39680}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A10}
+\pmclassification{msc}{26A42}
+\pmclassification{msc}{28A25}
+\pmclassification{msc}{28A12}
+\pmclassification{msc}{28A10}
+\pmrelated{Measure}
+\pmrelated{Integral2}
+\pmrelated{DiracDeltaFunction}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+\PMlinkescapeword{words}
+
+Let $X$ be a nonempty set.  Let $\mathcal{P}(X)$ denote the power set of $X$.  Then $(X,\mathcal{P}(X))$ is a measurable space.
+
+Let $x\in X$.  The \emph{Dirac measure} concentrated at $x$ is $\delta_x \colon \mathcal{P}(X) \to \{0,1\}$ defined by
+\[
+\delta_x(E)=\begin{cases}
+1 & \text{if } x\in E \\
+0 & \text{if } x\notin E. \end{cases}
+\]
+
+Note that the Dirac measure $\delta_x$ is indeed a measure:
+
+\begin{enumerate}
+\item Since $x \notin \emptyset$, we have $\delta_x(\emptyset)=0$.
+\item If $\{A_n\}_{n\in\mathbb{N}}$ is a sequence of pairwise disjoint subsets of $X$, then one of the following must happen:
+\begin{itemize}
+\item $\displaystyle x \notin \bigcup_{n\in\mathbb{N}} A_n$, in which case $\displaystyle \delta_x\left( \bigcup_{n\in\mathbb{N}} A_n\right)=0$ and $\delta_x(A_n)=0$ for every $n\in\mathbb{N}$;
+\item $\displaystyle x \in \bigcup_{n\in\mathbb{N}} A_n$, in which case $x\in A_{n_0}$ for exactly one $n_0\in\mathbb{N}$, causing $\displaystyle \delta_x\left( \bigcup_{n\in\mathbb{N}} A_n\right)=1$, $\delta_x(A_{n_0})=1$, and $\delta_x(A_n)=0$ for every $n\in\mathbb{N}$ with $n\neq n_0$.
+\end{itemize}
+\end{enumerate}
+
+Also note that $(X,\mathcal{P}(X),\delta_x)$ is a probability space.
+
+Let $\overline{\mathbb{R}}$ denote the extended real numbers.  Then for any function $f \colon X \to \overline{\mathbb{R}}$, the integral of $f$ with respect to the Dirac measure $\delta_x$ is
+\[
+\int\limits_X f \, d\delta_x =f(x).
+\]
+In other words, integration with respect to the Dirac measure $\delta_x$ amounts to evaluating the function at $x$.
+
+If $X=\mathbb{R}$, $m$ denotes Lebesgue measure, $A$ is a Lebesgue measurable subset of $\mathbb{R}$, and $\delta$ (no \PMlinkescapetext{subscript}) denotes the Dirac delta function, then for any measurable function $f \colon \mathbb{R} \to \mathbb{R}$, we have
+\[
+\int\limits_A \delta(t-x)f(t) \, dm(t)=\int\limits_A f \, d\delta_x=f(x)\delta_x(A).
+\]
+Moreover, if $f$ is defined so that $f(t)=1$ for all $t\in A$, the above \PMlinkescapetext{equation} becomes
+\[
+\int\limits_A \delta(t-x) \, dm(t)=\int\limits_A d\delta_x=\delta_x(A).
+\]
+In other words, the function $\delta(t-x)$ (with $x\in\mathbb{R}$ fixed and $t$ a real variable) behaves like a Radon-Nikodym derivative of $\delta_x$ with respect to $m$.  
+
+Note that, just as the Dirac delta function is a misnomer (it is not really a function), there is not really a Radon-Nikodym derivative of $\delta_x$ with respect to $m$, since $\delta_x$ is not absolutely continuous with respect to $m$.
+%%%%%
+%%%%%
+\end{document}

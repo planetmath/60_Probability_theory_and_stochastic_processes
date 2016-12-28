@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RegularConditionalProbability}
+\pmcreated{2013-03-22 16:25:24}
+\pmmodified{2013-03-22 16:25:24}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{regular conditional probability}
+\pmrecord{8}{38574}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A99}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+
+\begin{document}
+\subsubsection*{Introduction}
+Suppose $(\Omega, \mathcal{F}, P)$ is a probability space and $B\in\mathcal{F}$ be an event with $P(B)>0$.  It is easy to see that $P_B:\mathcal{F}\to [0,1]$ defined by $$P_B(A):=P(A |B),$$ the conditional probability of event $A$ given $B$, is a probability measure defined on $\mathcal{F}$, since:
+\begin{enumerate}
+\item $P_B$ is clearly non-negative;
+\item $P_B(\Omega)=\displaystyle{\frac{P(\Omega\cap B)}{P(B)}=\frac{P(B)}{P(B)}=1}$;
+\item $P_B$ is countably additive: for if $\lbrace A_1,A_2,\ldots\rbrace$ is a countable collection of pairwise disjoint events in $\mathcal{F}$, then $$P_B(\bigcup_{i=1}^{\infty} A_i)=\frac{P\big(B\cap (\bigcup A_i)\big)}{P(B)} =\frac{P\big(\bigcup (B\cap A_i)\big)}{P(B)} = \frac{\sum P(B\cap A_i)}{P(B)} = \sum_{i=1}^{\infty}P_B(A_i),$$ as $\lbrace B\cap A_1,B\cap A_2,\ldots\rbrace$ is a collection of pairwise disjoint events also.
+\end{enumerate}
+\subsubsection*{Regular Conditional Probability}
+Can we extend the definition above to $P_{\mathcal{G}}$, where $\mathcal{G}$ is a sub sigma algebra of $\mathcal{F}$ instead of an event?  First, we need to be careful what we mean by $P_{\mathcal{G}}$, since, given any event $A\in\mathcal{F}$, $P(A|\mathcal{G})$ is not a real number.  And strictly speaking, it is not even a random variable, but an equivalence class of random variables (each pair differing by a null event in $\mathcal{G}$).
+
+With this in mind, we start with a probability measure $P$ defined on $\mathcal{F}$ and a sub sigma algebra $\mathcal{G}$ of $\mathcal{F}$.  A function $P_{\mathcal{G}}:\mathcal{G}\times\Omega\to [0,1]$ is a called a \emph{regular conditional probability} if it has the following properties:
+\begin{enumerate}
+\item for each event $A\in\mathcal{G}$, $P_{\mathcal{G}}(A,\cdot):\Omega\to [0,1]$ is a \PMlinkname{conditional probability}{ProbabilityConditioningOnASigmaAlgebra} (as a random variable) of $A$ given $\mathcal{G}$; that is, 
+\begin{enumerate}
+\item $P_{\mathcal{G}}(A,\cdot)$ is \PMlinkname{$\mathcal{G}$-measurable}{MathcalFMeasurableFunction} and 
+\item for every $B\in\mathcal{G}$, we have $\displaystyle \int_B P_{\mathcal{G}}(A,\cdot) dP =P(A\cap B).$
+\end{enumerate}
+\item for every outcome $\omega\in \Omega$, $P_{\mathcal{G}}(\cdot,\omega): \mathcal{G}\to [0,1]$ is a probability measure.
+\end{enumerate}
+
+There are probability spaces where no regular conditional probabilities can be defined.  However, when a regular conditional probability function does exist on a space $\Omega$, then by condition 2 of the definition, we can define a ``conditional'' probability measure on $\Omega$ for each outcome in the sense of the first two paragraphs.
+%%%%%
+%%%%%
+\end{document}

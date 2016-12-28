@@ -1,0 +1,175 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConditionalExpectationUnderChangeOfMeasure}
+\pmcreated{2013-03-22 16:54:21}
+\pmmodified{2013-03-22 16:54:21}
+\pmowner{stevecheng}{10074}
+\pmmodifier{stevecheng}{10074}
+\pmtitle{conditional expectation under change of measure}
+\pmrecord{9}{39165}
+\pmprivacy{1}
+\pmauthor{stevecheng}{10074}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A10}
+\pmclassification{msc}{60-00}
+\pmrelated{Martingale}
+\pmrelated{ConditionalExpectation}
+
+% The standard font packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% For neatly defining theorems and definitions
+\usepackage{amsthm}
+
+% Including EPS/PDF graphics (\includegraphics)
+%\usepackage{graphicx}
+
+% Making matrix-based graphics
+%%%\usepackage{xypic}
+
+% Enumeration lists with different styles
+%\usepackage{enumerate}
+
+% Set up the theorem environments
+\newtheorem{thm}{Theorem}
+%\newtheorem*{thm*}{Theorem}
+
+\providecommand{\defnterm}[1]{\emph{#1}}
+
+% Probability stuff
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\EQ}{\mathbb{E}^\mathbb{Q}}
+\newcommand{\PQ}{\mathbb{Q}}
+\newcommand{\sF}{\mathcal{F}}
+\newcommand{\sG}{\mathcal{G}}
+
+\begin{document}
+
+Let $\PP$ be a given probability measure
+on some $\sigma$-algebra $\sF$.
+Suppose a new probability measure $\PQ$ is defined
+by $d\PQ = Z \, d\PP$, using some $\sF$-measurable 
+random variable $Z$
+as the Radon-Nikodym derivative. 
+(Necessarily we must have $Z \geq 0$ almost surely, and $\E Z = 1$.)
+
+We denote with $\E$ the expectation with respect to the measure $\PP$,
+and with $\EQ$ the expectation with respect to the measure $\PQ$.
+
+\begin{thm}
+If $\PQ$ is restricted to a sub-$\sigma$-algebra
+$\sG \subseteq \sF$,
+then the restriction has the conditional expectation
+$\E[Z \mid \sG]$ as its Radon-Nikodym derivative:
+$d \PQ_{\mid\sG} = \E[ Z \mid \sG ] \, d\PP_{\mid \sG}$.
+
+In other words,
+\[
+\frac{d\PQ_{\mid \sG}}{d\PP_{\mid \sG}} = \left( \frac{d\PQ}{d\PP}  \right)_{\mid \sG}\,.
+\]
+
+
+\begin{proof}
+It is required to prove that, for all $B \in \sG$,
+\[
+\PQ(B) = \E \bigl[ \E [ Z \mid \sG] \, 1_B  \bigr]\,.
+\]
+But this follows at once from the law of iterated conditional expectations:
+\[
+\E \bigl [ \E [ Z \mid \sG ] \, 1_B \bigr]
+= 
+\E \bigl [ \E [ Z 1_B \mid \sG ] \bigr]
+= \E [Z 1_B] = \PQ(B) \,. \qedhere
+\]
+\end{proof}
+\end{thm}
+
+
+\begin{thm}
+Let $\sG \subseteq \sF$ be any sub-$\sigma$-algebra.
+For any $\sF$-measurable random variable $X$,
+\[
+\E [ Z \mid \sG ] \, \EQ [ X \mid \sG]
+= \E[ ZX \mid \sG]\,.
+\]
+That is,
+\[
+\left(\frac{d\PQ}{d\PP}\right)_{\mid \sG} \,
+\EQ [ X \mid \sG ] = 
+\E \left[ \frac{d\PQ}{d\PP} \, X \mid \sG \right]\,.
+\]
+
+\begin{proof}
+Let $Y = \E[Z \mid \sG]$, and 
+$B \in \sG$.  We find:
+\begin{align*}
+\EQ \bigl[ 1_B \, \E[ZX \mid \sG] \bigr] &=
+\E \bigl[ Y 1_B \, \E [ ZX \mid \sG] \bigr]
+& \text{(since $d \PQ_{\mid \sG} = Y \, d \PP_{\mid \sG}$)} \\
+&= \E \bigl[ \E[ Y 1_B \, ZX \mid \sG] \bigr] \\
+&= \E [Y 1_B \, ZX ] \\
+&= \EQ [ Y 1_B \, X ] & \text{(since $d\PQ = Z \, d\PP$)} \\
+&= \EQ \bigl[  1_B \, \EQ[ Y X \mid \sG] \bigr]\,.
+\end{align*}
+Since $B \in \sG$ is arbitrary, we can equate the $\sG$-measurable integrands:
+\[
+\E [ ZX \mid \sG ] = \EQ [ YX \mid \sG] = Y \EQ [X \mid \sG]\,.
+\qedhere
+\]
+\end{proof}
+\end{thm}
+
+Observe that if $d \PQ / d \PP > 0$ almost surely,
+then
+\[
+\EQ[X \mid \sG] = \E\left [ \frac{d\PQ}{d\PP} X \mid \sG \right]
+\Big/ \left( \frac{d\PQ}{d\PP} \right)_{\mid \sG}\,.
+\]
+
+\begin{thm}
+If $X_t$ is a martingale with respect to $\PQ$ and some
+filtration $\{ \sF_t \}$,
+then $X_t Z_t$ is a martingale with respect to $\PP$ and $\{ \sF_t\}$,
+where $Z_t = \E [ Z \mid \sF_t]$.
+
+\begin{proof}
+First observe that $X_t Z_t$ is indeed $\sF_t$-measurable.
+Then, we can apply Theorem 2,
+with $X$ in the statement of that theorem replaced by
+$X_t$, 
+$Z$ replaced by $Z_t$, 
+$\sF$ replaced by $\sF_t$, and $\sG$ replaced by $\sF_s$ ($s \leq t$),
+to obtain:
+\[
+\E[ X_t Z_t \mid \sF_s ] = Z_s \, \EQ[ X_t \mid \sF_s]
+= Z_s X_s\,,
+\]
+thus proving that $X_t Z_t$ is a martingale under $\PP$
+and $\{ \sF_t \}$.
+\end{proof}
+\end{thm}
+
+Sometimes the random variables $Z_t$ in Theorem 3
+are written as $\left( \frac{d\PQ}{d\PP} \right)_t$.
+(This is a Radon-Nikodym derivative \emph{process};
+note that $Z_t$ defined as $Z_t = \E[Z \mid \sF_t]$
+ is always a martingale
+under $\PP$ and $\{ \sF_t \}$.)
+
+Under the hypothesis $Z_t > 0$, 
+there is an alternate restatement of Theorem 3
+that may be more easily remembered:
+
+\begin{thm}
+Let $Z_t = ( d\PQ / d\PP )_t > 0$ almost surely.
+Then $X_t$ is a martingale with respect to $\PP$,
+if and only if $X_t / Z_t$ is a martingale with respect to $\PQ$.
+\end{thm}
+
+%%%%%
+%%%%%
+\end{document}

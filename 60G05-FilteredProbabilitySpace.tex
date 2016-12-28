@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FilteredProbabilitySpace}
+\pmcreated{2013-03-22 18:36:51}
+\pmmodified{2013-03-22 18:36:51}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{filtered probability space}
+\pmrecord{5}{41348}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G05}
+%\pmkeywords{probability space}
+%\pmkeywords{filtration}
+\pmrelated{FiltrationOfSigmaAlgebras}
+\pmdefines{stochastic basis}
+\pmdefines{usual conditions}
+\pmdefines{usual hypotheses}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{index set}
+\PMlinkescapeword{index}
+\PMlinkescapeword{satisfy}
+\PMlinkescapeword{complete}
+\PMlinkescapeword{completion}
+\PMlinkescapeword{types}
+\PMlinkescapeword{necessary}
+\PMlinkescapeword{decomposition}
+\PMlinkescapeword{theorems}
+\PMlinkescapeword{weaker}
+\PMlinkescapeword{strong}
+\PMlinkescapeword{section}
+\PMlinkescapeword{filtration}
+A filtered probability space, or \emph{stochastic basis}, $(\Omega,\mathcal{F},(\mathcal{F}_t)_{t\in T},\mathbb{P})$ consists of a probability space $(\Omega,\mathcal{F},\mathbb{P})$ and a \PMlinkname{filtration}{FiltrationOfSigmaAlgebras} $(\mathcal{F}_t)_{t\in T}$ contained in $\mathcal{F}$. Here, $T$ is the time index set, and is an ordered set  --- usually a subset of the real numbers --- such that $\mathcal{F}_s\subseteq\mathcal{F}_t$ for all $s<t$ in $T$.
+
+Filtered probability spaces form the setting for defining and studying stochastic processes. A process $X_t$ with time index $t$ ranging over $T$ is said to be adapted if $X_t$ is an $\mathcal{F}_t$-measurable random variable for every $t$.
+
+When the index set $T$ is an \PMlinkname{interval}{Interval} of the real numbers (i.e., continuous-time), it is often convenient to impose further conditions. In this case, the filtered probability space is said to satisfy the \emph{usual conditions} or \emph{usual hypotheses} if the following conditions are met.
+\begin{itemize}
+\item The probability space $(\Omega,\mathcal{F},\mathbb{P})$ is \PMlinkname{complete}{CompleteMeasure}.
+\item The $\sigma$-algebras $\mathcal{F}_t$ contain all the sets in $\mathcal{F}$ of zero probability.
+\item The filtration $\mathcal{F}_t$ is right-continuous. That is, for every non-maximal $t\in T$, the $\sigma$-algebra $\mathcal{F}_{t+}\equiv\bigcap_{s>t}\mathcal{F}_s$ is equal to $\mathcal{F}_t$.
+\end{itemize}
+Given any filtered probability space, it can always be enlarged by passing to the completion of the probability space, adding zero probability sets to $\mathcal{F}_t$, and by replacing $\mathcal{F}_t$ by $\mathcal{F}_{t+}$. This will then satisfy the usual conditions.
+In fact, for many types of processes defined on a complete probability space, their natural filtration will already be right-continuous and the usual conditions met.
+However, the process of completing the probability space depends on the specific probability measure $\mathbb{P}$ and in many situations, such as the study of Markov processes, it is necessary to study many different measures on the same space. A much weaker condition which can be used is that the $\sigma$-algebras $\mathcal{F}_t$ are universally complete, which is still strong enough to apply much of the `heavy machinery' of stochastic processes, such as the Doob-Meyer decomposition, section theorems, etc.
+
+%%%%%
+%%%%%
+\end{document}

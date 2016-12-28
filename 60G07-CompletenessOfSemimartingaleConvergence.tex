@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompletenessOfSemimartingaleConvergence}
+\pmcreated{2013-03-22 18:40:47}
+\pmmodified{2013-03-22 18:40:47}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{completeness of semimartingale convergence}
+\pmrecord{4}{41430}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G07}
+\pmclassification{msc}{60G48}
+\pmclassification{msc}{60H05}
+%\pmkeywords{semimartingale}
+%\pmkeywords{semimartingale topology}
+%\pmkeywords{complete}
+%\pmkeywords{topological vector space}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{sequence}
+
+\begin{theorem*}
+Let $(\Omega,\mathcal{F},(\mathcal{F}_t)_{t\in\mathbb{R}_+},\mathbb{P})$ be a filtered probability space. Then, the space of semimartingales $\mathcal{S}$ forms a \PMlinkname{complete}{Complete} topological vector space under the semimartingale topology.
+\end{theorem*}
+
+That is, semimartingale convergence is a \PMlinkname{vector topology}{TopologicalVectorSpace} and, for any sequence $X^n\in\mathcal{S}$ such that $X^n-X^m\rightarrow 0$ as $m,n\rightarrow\infty$ then there exists an $X\in\mathcal{S}$ with $X^n\rightarrow X$.
+
+%%%%%
+%%%%%
+\end{document}

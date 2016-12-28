@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MultinomialDistribution}
+\pmcreated{2013-03-22 14:33:35}
+\pmmodified{2013-03-22 14:33:35}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{multinomial distribution}
+\pmrecord{7}{36113}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\textbf{X}=(X_1,\ldots,X_n)$ be a random vector such that 
+\begin{enumerate}
+\item $X_i\geq 0$ and $X_i\in\mathbb{Z}$
+\item $X_1+\cdots+X_n=N$, where $N$ is a fixed integer
+\end{enumerate}
+Then $\textbf{X}$ has a \emph{multinomial distribution} if there exists a parameter vector $\boldsymbol{\pi}=(\pi_1,\ldots,\pi_n)$ such that 
+\begin{enumerate}
+\item $\pi_i\geq 0$ and $\pi_i\in\mathbb{R}$
+\item $\pi_1+\cdots+\pi_n=1$
+\item $\textbf{X}$ has a discrete probability distribution function $f_{\textbf{X}}(\boldsymbol{x})$ in the form:
+$$f_{\textbf{X}}(\boldsymbol{x})=\frac{N!}{x_1!\cdots x_n!}\prod_{i=1}^{n}\pi_i^{x_i}$$
+\end{enumerate}
+\par
+\textbf{Remarks}
+\begin{itemize}
+\item $\operatorname{E}[\textbf{X}]=N\boldsymbol{\pi}$
+\item $\operatorname{Var}[\textbf{X}]=(v_{ij})$, where 
+$$
+v_{ij}= 
+\begin{cases}
+N\pi_i(1-\pi_i) & \text{if $i=j$;}\\
+-N\pi_i\pi_j & \text{if $i\neq j$.}
+\end{cases}
+$$
+\item When $n=2$, the multinomial distribution is the same as the binomial distribution
+\item If $X_1,\ldots,X_n$ are mutually independent Poisson random variables with parameters $\lambda_1,\ldots,\lambda_n$ 
+respectively, then the conditional joint distribution of $X_1,\ldots,X_n$ given that $X_1+\cdots+X_n=N$ is 
+multinomial with parameters $\lambda_i/\lambda$, where $\lambda=\sum\lambda_i$.
+\par
+\textbf{Sketch of proof.}
+Each $X_i$ is distributed as:  $$f_{X_i}(x_i) = \frac{e^{-\lambda_i} \lambda_i^{x_i}}{x_i!}$$
+The mutual independence of the $X_i$'s shows that the joint probability distribution of the $X_i$'s is given by  
+$$f_{\textbf{X}}(\boldsymbol{x})=\prod_{i=1}^{n}\frac{e^{-\lambda_i} \lambda_i^{x_i}}{x_i!}=
+e^{-\lambda}\prod_{i=1}^{n}\frac{\lambda_i^{x_i}}{x_i!},$$ where $\textbf{X}=(X_1,\ldots,X_n)$, $\boldsymbol{x}=
+(x_1,\ldots,x_n)$ and $\lambda=\lambda_1+\cdots+\lambda_n$.
+Next, let $X=X_1+\cdots+X_n$.  Then $X$ is Poisson distributed with parameter $\lambda$ (which can be shown by using induction and the mutual independence of the $X_i$'s):  $$f_X(x)=\frac{e^{-\lambda} \lambda^{x}}{x!}.$$  The conditional probability distribution of $\textbf{X}$ given that $X=N$ is thus given by:
+$$f_{\textbf{X}}(\boldsymbol{x}\mid X=N)=\frac{f_{\textbf{X}}(\boldsymbol{x})}{f_X(N)}=(e^{-\lambda}\prod_{i=1}^{n}\frac{\lambda_i^{x_i}}{x_i!})/(\frac{e^{-\lambda} \lambda^{N}}{N!})=\frac{N!}{x_1!\cdots x_n!}\prod_{i=1}^{n}(\frac{\lambda_i}{\lambda})^{x_i},$$
+where $\sum x_i=N$ and that $\sum \lambda_i/\lambda=1$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,41 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Independent}
+\pmcreated{2013-03-22 12:02:15}
+\pmmodified{2013-03-22 12:02:15}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{independent}
+\pmrecord{11}{31053}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A05}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%\usepackage{xypic}
+\begin{document}
+In a probability space, we say that the random events $A_1,\dots,A_n$ are 
+\emph{independent} if
+$$ P(A_{i_1}\cap A_{i_2}\cap\dots\cap A_{i_k}) = P(A_{i_1})\dots P(A_{i_k}) $$
+for all $i_1,\dots,i_k$ such that $1\leq i_1<i_2<\cdots<i_k\leq n$.
+
+An arbitrary family of random events is independent if every finite subfamily is independent.
+
+The random variables $X_1,\dots,X_n$ are independent if, given any Borel sets $B_1,\dots,B_n$, the random events $[X_1\in B_1],\dots,[X_n\in B_n]$ are independent. This is equivalent to saying that 
+
+\[F_{X_1,\dots,X_n} = F_{X_1}\dots F_{X_n}\]
+
+where $F_{X_1},\dots, F_{X_n}$ are the distribution functions of $X_1,\dots, X_n$, respectively, and $F_{X_1,\dots,X_n}$ is the joint distribution function. When the density functions $f_{X_1},\dots,f_{X_n}$ and $f_{X_1,\dots,X_n}$ exist, an equivalent condition for independence is that
+
+\[f_{X_1,\dots,X_n} = f_{X_1}\dots f_{X_n}.\]
+
+An arbitrary family of random variables is independent if every finite subfamily is independent.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

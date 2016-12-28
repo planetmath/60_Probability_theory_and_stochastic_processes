@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BernsteinInequalities}
+\pmcreated{2013-03-22 16:09:08}
+\pmmodified{2013-03-22 16:09:08}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{Bernstein inequalities}
+\pmrecord{21}{38233}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+1) Let $\{X_{i}\}_{i=1}^{n}$ be a collection of independent random
+variables satisfying the conditions: \\
+a) $E[X_{i}^{2}]<\infty$ $\forall i$, so that one can write $\sum_{i=1}^{n}E[X_{i}^{2}]=v^2$\\
+b) $\exists c\in\mathbb{R}:\sum_{i=1}^{n}E[\left\vert X_{i}\right\vert ^{k}]\leq 
+\frac{1}{2}k!v^2c^{k-2}$ for all integers $k\geq 3$
+
+Then, for any $\varepsilon \geq 0$,
+\[
+\Pr\left\{ \sum_{i=1}^{n}\left( X_{i}-E[X_{i}]\right) >\varepsilon \right\}
+\leq \exp \left[-\frac{v^2}{c^{2}}\left( 1+\frac{c\varepsilon }{v^2}-\sqrt{1+2%
+\frac{c\varepsilon }{v^2}}\right) \right] \leq \exp \left( -\frac{\varepsilon
+^{2}}{2\left( v^2+c\varepsilon \right) }\right) 
+\]
+\[
+\Pr\left\{ \left\vert \sum_{i=1}^{n}\left( X_{i}-E[X_{i}]\right) \right\vert
+>\varepsilon \right\} \leq 2\exp \left[-\frac{v^2}{c^{2}}\left( 1+\frac{%
+c\varepsilon }{v^2}-\sqrt{1+2\frac{c\varepsilon }{v^2}}\right) \right] \leq
+2\exp \left( -\frac{\varepsilon ^{2}}{2\left( v^2+c\varepsilon \right) }%
+\right) 
+\]
+
+2) Let $\{X_{i}\}_{i=1}^{n}$ be a collection of independent, \PMlinkname{almost
+surely absolutely bounded}{AlmostSurelyBoundedRandomVariable} random variables, that is $\Pr\left\{\left\vert X_{i}\right\vert \leq M\right\} =1\text{ \ }\forall i$. \\
+Then, for any $\varepsilon \geq 0$,
+\[
+\Pr\left\{ \sum_{i=1}^{n}\left( X_{i}-E[X_{i}]\right) >\varepsilon \right\}
+\leq \exp \left[-\frac{9v^2}{M^{2}}\left( 1+\frac{M\varepsilon }{3v^2}-\sqrt{1+2
+\frac{M\varepsilon }{3v^2}}\right) \right] \leq \exp \left( -\frac{\varepsilon
+^{2}}{2\left( v^2+\frac{M}{3}\varepsilon \right) }\right) 
+\]
+\[
+\Pr\left\{ \left\vert \sum_{i=1}^{n}\left( X_{i}-E[X_{i}]\right) \right\vert
+>\varepsilon \right\} \leq 2\exp \left[-\frac{9v^2}{M^{2}}\left( 1+\frac{
+M\varepsilon }{3v^2}-\sqrt{1+2\frac{M\varepsilon }{3v^2}}\right) \right] \leq
+2\exp \left( -\frac{\varepsilon ^{2}}{2\left( v^2+\frac{M}{3}\varepsilon
+\right) }\right) 
+\]
+%%%%%
+%%%%%
+\end{document}

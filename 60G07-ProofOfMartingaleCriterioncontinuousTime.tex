@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfMartingaleCriterioncontinuousTime}
+\pmcreated{2013-03-22 18:54:28}
+\pmmodified{2013-03-22 18:54:28}
+\pmowner{karstenb}{16623}
+\pmmodifier{karstenb}{16623}
+\pmtitle{proof of Martingale criterion (continuous time)}
+\pmrecord{4}{41756}
+\pmprivacy{1}
+\pmauthor{karstenb}{16623}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G07}
+\pmclassification{msc}{60G48}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage[sort&compress]{natbib}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%\usepackage{xypic}
+
+%theorems
+\theoremstyle{definition}
+\newtheorem{Def}{Definition}
+
+\theoremstyle{plain}
+\newtheorem{Lem}{Theorem}
+\newtheorem{Lem2}{Lemma}
+\newtheorem{Cor}{Corollary}
+\newtheorem{Rem}{Remark}
+
+
+% commands
+%\newcommand{\comment}[1]{\small{(\,\textit{#1}\;)}}
+
+
+\begin{document}
+\begin{proof}
+\emph{1.} Let $X$ be a martingale. By the optional sampling theorem we have $E(X_c|\mathcal{F}_{\tau}) = X_{c \wedge \tau} = X_{\tau} \forall \tau \leq c$. Since conditional expectations are uniformly integrable the first direction follows.
+
+\emph{2.} Let $(\tau_k)_{k \geq 1}$ be a local sequence of stopping times (i.e. $\tau_k \uparrow \infty$ a.s. and $X^{\tau_k}$ martingale $\forall k \in \mathbb{N}$).
+For each $t \in \mathbb{R}_{+}$ we have $X_{\tau_k \wedge t} \to X_t, k \to \infty$ almost surely.
+The set
+\begin{align*}
+\{X_{\tau_k \wedge t} : k \in \mathbb{N}\} &\subset \{X_{\tau} : \tau \ \text{stopping time}, \tau \leq c\}
+\end{align*}
+
+is uniformly integrable (take $c = t$). It follows that $X_t^{\tau_k} \stackrel{\substack{\mathscr{L}^1}}{\longrightarrow} X_t, k \to \infty$. Since the martingale property is stable under $\mathscr{L}^1$ convergence, $X$ is a martingale. 
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

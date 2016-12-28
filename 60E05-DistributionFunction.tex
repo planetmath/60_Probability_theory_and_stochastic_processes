@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DistributionFunction}
+\pmcreated{2013-03-22 13:02:51}
+\pmmodified{2013-03-22 13:02:51}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{distribution function}
+\pmrecord{16}{33451}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60E05}
+\pmsynonym{cumulative distribution function}{DistributionFunction}
+\pmsynonym{distribution}{DistributionFunction}
+\pmrelated{DensityFunction}
+\pmrelated{CumulativeDistributionFunction}
+\pmrelated{RandomVariable}
+\pmrelated{Distribution}
+\pmrelated{GeometricDistribution2}
+\pmdefines{law of a random variable}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\begin{document}
+[this entry is currently being revised, so hold off on corrections until
+this line is removed]\\
+
+Let $F: \mathbb{R}\to \mathbb{R}$. Then $F$ is a \emph{distribution function} if
+\begin{enumerate}
+\item
+$F$ is nondecreasing,
+\item
+$F$ is continuous from the right,
+\item
+$\lim_{x \rightarrow -\infty} F(x) = 0$, and $\lim_{x \rightarrow \infty} F(x) = 1$.
+\end{enumerate}
+
+As an example, suppose that $\Omega = \mathbb{R}$ and that $\mathcal{B}$
+is the $\sigma$-algebra of Borel subsets of $\mathbb{R}$. 
+Let $P$ be a probability measure on $(\Omega, \mathcal{B})$. 
+Define $F$ by
+$$
+F(x) = P((-\infty, x]).
+$$
+This particular $F$ is called the \emph{distribution function} of $P$. It is
+easy to verify that 1,2, and 3 hold for this $F$.
+
+In fact, every distribution function is the distribution function of some
+probability measure on the Borel subsets of $\mathbb{R}$. To see this, 
+suppose that $F$ is a distribution function. We can define $P$ on a single half-open 
+interval by 
+$$
+P((a,b]) = F(b) - F(a)
+$$
+and extend  $P$ to unions of disjoint intervals by 
+$$
+P( \cup_{i=1}^\infty (a_i, b_i])= \sum_{i=1}^\infty P((a_i, b_i]).
+$$
+and then further extend $P$ to all the Borel subsets of $\mathbb{R}$.
+It is clear that the distribution function of $P$ is $F$.
+
+\subsection{Random Variables}
+
+Suppose that $(\Omega, \mathcal{B}, P)$ is a probability space and
+$X: \Omega \to \mathbb{R}$ is a random variable. Then there is an
+\emph{induced} probability measure $P_X$ on $\mathbb{R}$ defined as 
+follows: \\
+$$
+P_X(E) = P(X^{-1}(E))
+$$
+for every Borel subset $E$ of $\mathbb{R}$. $P_X$ is called the
+\emph{distribution} of $X$. The \emph{distribution function}
+of $X$ is 
+$$
+F_X(x) = P(\omega | X(\omega) \leq x).
+$$
+The distribution function of $X$ is also known as the law of $X$.
+Claim: $F_X$ = the distribution function of $P_X$.
+
+
+\begin{eqnarray*}
+F_X(x) &=& P(\omega | X(\omega) \leq x) \\
+&=& P(X^{-1}((-\infty, x]) \\
+&=& P_X((-\infty, x]) \\
+&=& F(x).
+\end{eqnarray*}
+
+
+
+\subsection{Density Functions}
+
+Suppose that $f: \mathbb{R} \to \mathbb{R}$ is a nonnegative  function
+such that
+$$
+\int_{-\infty}^\infty f(t)dt=1.
+$$
+Then one can define $F: \mathbb{R} \to \mathbb{R}$ by
+$$
+F(x) = \int_{-\infty}^x f(t)dt.
+$$
+Then it is clear that $F$ satisfies the conditions 1,2,and 3 so $F$ 
+is a distribution function. The function $f$ is called a density function
+for the distribution $F$.
+
+If $X$ is a discrete random variable with density function $f$ and distribution 
+function $F$ then
+
+$$F(x)=\sum_{x_j\leq x} f(x_j).$$
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

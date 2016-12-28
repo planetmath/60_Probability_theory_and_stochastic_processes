@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EigenvaluesOfStochasticMatrix}
+\pmcreated{2013-03-22 16:18:02}
+\pmmodified{2013-03-22 16:18:02}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{eigenvalues of stochastic matrix}
+\pmrecord{7}{38421}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G99}
+\pmclassification{msc}{15A51}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Theorem:
+The spectrum of a stochastic matrix is contained in the unit disc in the complex plane.
+
+\begin{proof}
+Let $A$ be a stochastic matrix and let $m$ be an eigenvalue of $A$, with $v$ eigenvector; then, for any self-consistent matrix norm $\left\Vert .\right\Vert $, we have:
+\[
+\left|m\right|\left\Vert v\right\Vert =\left\Vert mv\right\Vert =\left\Vert Av\right\Vert \leq\left\Vert A\right\Vert \left\Vert v\right\Vert ,
+\]
+that is, since $v$ is nonzero,
+\[
+\left|m\right|\leq\left\Vert A\right\Vert .
+\]
+Now, for a (doubly) stochastic matrix,
+\[
+\left\Vert A\right\Vert _1 = \max_j \left(\sum_i \left|a_{ij}\right|\right)=1
+\]
+whence the conclusion.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

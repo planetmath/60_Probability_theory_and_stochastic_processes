@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCompletenessUnderUcpConvergence}
+\pmcreated{2013-03-22 18:40:35}
+\pmmodified{2013-03-22 18:40:35}
+\pmowner{gel}{22282}
+\pmmodifier{gel}{22282}
+\pmtitle{proof of completeness under ucp convergence}
+\pmrecord{5}{41424}
+\pmprivacy{1}
+\pmauthor{gel}{22282}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G07}
+\pmclassification{msc}{60G05}
+%\pmkeywords{stochastic process}
+%\pmkeywords{ucp convergence}
+%\pmkeywords{uniform convergence on compacts}
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{definition*}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\PMlinkescapeword{real}
+\PMlinkescapeword{functions}
+\PMlinkescapeword{complete}
+\PMlinkescapeword{generating}
+\PMlinkescapeword{bounded intervals}
+\PMlinkescapeword{positive}
+\PMlinkescapeword{integers}
+\PMlinkescapeword{convergent}
+\PMlinkescapeword{infinity}
+\PMlinkescapeword{bounded}
+
+Let $(\Omega,\mathcal{F},(\mathcal{F}_t)_{t\in\mathbb{R}_+},\mathbb{P})$ be a filtered probability space, $\mathcal{M}$ be a sub-$\sigma$-algebra of $\mathcal{B}(\mathbb{R}_+)\otimes\mathcal{F}$, and $S$ be a set of real valued functions on $\mathbb{R}_+$ which is \PMlinkname{closed}{Closed} under uniform convergence on compacts. We show that both the set of $\mathcal{M}$-measurable processes and the set of jointly measurable processes with sample paths almost surely in $S$ are \PMlinkname{complete}{Complete} under ucp convergence. The method used will be to show that we can pass to a subsequence which almost surely converges uniformly on compacts.
+
+We start by writing out the metric generating the topology of uniform convergence on compacts (compact-open topology) for functions $\mathbb{R}_+\rightarrow\mathbb{R}$. This is the same as uniform convergence on each of the bounded intervals $[0,n)$ for positive integers $n$,
+\begin{equation*}
+d(X)\equiv\sum_{n=1}^\infty 2^{-n}\min\left(1,\sup_{t<n}|X_t|\right).
+\end{equation*}
+Then, the metric is $(X,Y)\mapsto d(X-Y)$.  Convergence under the ucp topology is given by
+\begin{equation*}
+D^{\rm ucp}(X)=\mathbb{E}[d(X)]
+\end{equation*}
+for any jointly measurable stochastic process $X$, with the (pseudo)metric being $(X,Y)\mapsto D^{\rm ucp}(X-Y)$.
+
+Now, suppose that $X^n$ is a sequence of jointly measurable processes such that $X^n-X^m\xrightarrow{\rm ucp} 0$ as $m,n\rightarrow\infty$. Then, $D^{\rm ucp}(X^n-X^m)\rightarrow 0$ and we may pass to a subsequence $X^{n_k}$ satisfying $D^{\rm ucp}(X^{n_j}-X^{n_k})\le 2^{-j}$ whenever $k>j$. So,
+\begin{equation*}
+\mathbb{E}\left[\sum_k d(X^{n_k}-X^{n_{k+1}})\right]=\sum_kD^{\rm ucp}(X^{n_k}-X^{n_{k+1}})\le\sum_k2^{-k}=1.
+\end{equation*}
+In particular, this shows that $\sum_k d(X^{n_{k}}-X^{n_{k+1}})$ is almost surely finite and, therefore,
+\begin{equation*}
+d(X^{n_j}-X^{n_k})\le \sum_{i=j}^{k-1}d(X^{n_i}-X^{n_{i+1}})\rightarrow 0
+\end{equation*}
+as $k>j\rightarrow \infty$, with probability one.
+
+So, the sequence $X^{n_k}$ is almost surely \PMlinkname{Cauchy}{CauchySequence}, under the topology of uniform convergence on compacts. We set
+\begin{equation*}
+X_t(\omega)\equiv\left\{
+\begin{array}{ll}
+\lim_{k\rightarrow\infty}X^{n_k}_t(\omega),&\textrm{if the limit exists},\\
+0,&\textrm{otherwise}.
+\end{array}
+\right.
+\end{equation*}
+As measurability of real valued functions is preserved under pointwise convergence, it follows that if $X^n$ are $\mathcal{M}$-measurable, then so is $X$. In particular, $X$ is a jointly measurable process.
+Furthermore, since convergence is almost surely uniform on compacts, if $X^n$ have sample paths in $S$ with probability one then so does $X$.
+
+It only remains to show that $X^n\xrightarrow{\rm ucp}X$. However, we have already shown that $d(X^{n_k}-X)\rightarrow 0$ with probability one, hence $D^{\rm ucp}(X^{n_k}-X)\rightarrow 0$.
+\begin{equation*}
+D^{\rm ucp}(X^n-X)\le D^{\rm ucp}(X^n-X^{n_{k}})+D^{\rm ucp}(X^{n_k}-X).
+\end{equation*}
+Letting $k$ go to infinity, this is bounded by $\sup_{m>n}D^{\rm ucp}(X^n-X^m)$, which goes to zero as $n\rightarrow\infty$.
+
+%%%%%
+%%%%%
+\end{document}

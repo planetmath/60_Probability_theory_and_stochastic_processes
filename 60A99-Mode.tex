@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Mode}
+\pmcreated{2013-03-22 14:23:33}
+\pmmodified{2013-03-22 14:23:33}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{mode}
+\pmrecord{4}{35889}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Given a probability distribution (density) function $f_X(x)$ with random variable $X$ and $x\in \mathbb{R}$, a \emph{mode} of $f_X(x)$ is a real number $\alpha$ such that:
+
+\begin{enumerate}
+\item
+$f_X(\alpha)\neq \operatorname{min}(f_X(x))$,
+\item
+$f_X(\alpha)\geq f_X(z)$ for all $z\in \mathbb{R}$.
+\end{enumerate}
+
+\emph{The} mode of $f_X$ is the set of all modes of $f_X$ (It is also customary to say denote the mode of $f_X$ to be elements within the mode of $f_X$).  If the mode contains one element, then we say that $f_X$ is \emph{unimodal}.  If it has two elements, then $f_X$ is called \emph{bimodal}.  When $f_X$ has more than two modes, it is called \emph{multimodal}.
+
+\begin{itemize}
+\item
+if $\Omega=\lbrace 0,1,2,2,3,4,4,4,5,5,6,7,8 \rbrace$ is the sample space for the random variable $X$, then the mode of the distribution function $f_X$ is 4.
+\item
+if $\Omega=\lbrace 0,2,4,5,6,6,7,9,11,11,14,18 \rbrace$ is the sample space for $X$, then the modes of $f_X$ are 6 and 11 and $f_X$ is bimodal.
+\item
+For a binomial distribution with mean $np$ and variance $np(1-p)$, the mode is $$\lbrace \alpha \mid p(n+1)-1\leq \alpha \leq p(n+1) \rbrace.$$
+\item
+For a Poisson distribution with integral sample space and mean $\lambda$, if $\lambda$ is non-integral, then the mode is the largest integer less than or equal to $\lambda$; if $\lambda$ is an integer, then both $\lambda$ and $\lambda-1$ are modes.
+\item
+For a normal distribution with mean $\mu$ and standard deviation $\sigma$, the mode is $\mu$.
+\item
+For a gamma distribution with the shape parameter $\gamma$, location parameter $\mu$, and scale parameter $\beta$, the mode is $\gamma-1$ if $\gamma>1$.
+\item
+Both the Pareto and the exponential distributions have mode = 0.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

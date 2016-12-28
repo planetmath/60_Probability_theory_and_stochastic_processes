@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AutoregressiveModel}
+\pmcreated{2013-03-22 18:33:37}
+\pmmodified{2013-03-22 18:33:37}
+\pmowner{camillio}{22337}
+\pmmodifier{camillio}{22337}
+\pmtitle{autoregressive model}
+\pmrecord{5}{41283}
+\pmprivacy{1}
+\pmauthor{camillio}{22337}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{60G10}
+\pmclassification{msc}{62J05}
+\pmsynonym{AR}{AutoregressiveModel}
+%\pmkeywords{regression}
+%\pmkeywords{autoregression}
+%\pmkeywords{autoregression model}
+%\pmkeywords{model}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The {\it autoregressive model} of order $p$, denoted {\it AR}($p$), is a random process model described by
+\begin{equation}
+  y_{t} = \sum_{i=1}^{p} a_{i} y_{t-i} + c + e_{t}, \qquad t = 1, 2,\ldots
+\end{equation}
+where $a_i$ are model parameters, $y_{t}$ is the model output in discrete time instant $t$. Term $c$ is an absolute term (constant) and $e_{t}$ denotes discrete white noise.
+
+A first-order autoregression model {\it AR}(1) in the form $y_{t} = a y_{t-1} + c +e _{t}$ is one major example.
+%%%%%
+%%%%%
+\end{document}
