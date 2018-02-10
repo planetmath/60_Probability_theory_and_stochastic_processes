@@ -1,0 +1,154 @@
+<!DOCTYPE html><html>
+<head>
+<title>stochastic integration as a limit of Riemann sums</title>
+<!--Generated on Sat Feb 10 11:59:59 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">stochastic integration as a limit of Riemann sums</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">As with the Riemann (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/RiemannIntegral</span>) and Riemann-Stieltjes integrals, the stochastic integral can be calculated as a limit of approximations computed on partitions (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Partition3</span>), called Riemann sums.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Let <math id="p3.m1" class="ltx_Math" alttext="P_{n}" display="inline"><msub><mi>P</mi><mi>n</mi></msub></math> be a sequence of partitions of <math id="p3.m2" class="ltx_Math" alttext="\mathbb{R}_{+}" display="inline"><msub><mi>ℝ</mi><mo>+</mo></msub></math>,</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="P_{n}=\left\{0=\tau^{n}_{0}\leq\tau^{n}_{1}\leq\cdots\uparrow\infty\right\}" display="block"><mrow><msub><mi>P</mi><mi>n</mi></msub><mo>=</mo><mrow><mo>{</mo><mn>0</mn><mo>=</mo><msubsup><mi>τ</mi><mn>0</mn><mi>n</mi></msubsup><mo>≤</mo><msubsup><mi>τ</mi><mn>1</mn><mi>n</mi></msubsup><mo>≤</mo><mi mathvariant="normal">⋯</mi><mo>↑</mo><mi mathvariant="normal">∞</mi><mo>}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where, <math id="p3.m3" class="ltx_Math" alttext="\tau^{n}_{k}" display="inline"><msubsup><mi>τ</mi><mi>k</mi><mi>n</mi></msubsup></math> can, in general, be stopping times. Suppose that the mesh <math id="p3.m4" class="ltx_Math" alttext="|P_{n}^{t}|=\sup_{k}(\tau^{n}_{k}\wedge t-\tau^{n}_{k-1}\wedge t)" display="inline"><mrow><mrow><mo stretchy="false">|</mo><msubsup><mi>P</mi><mi>n</mi><mi>t</mi></msubsup><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><msub><mo>sup</mo><mi>k</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><msubsup><mi>τ</mi><mi>k</mi><mi>n</mi></msubsup><mo>∧</mo><mi>t</mi></mrow><mo>-</mo><msubsup><mi>τ</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow><mi>n</mi></msubsup></mrow><mo>∧</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> tends to zero in probability (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ConvergenceInProbability</span>) as <math id="p3.m5" class="ltx_Math" alttext="n\rightarrow\infty" display="inline"><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>, for each time <math id="p3.m6" class="ltx_Math" alttext="t&gt;0" display="inline"><mrow><mi>t</mi><mo>&gt;</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">The stochastic integral of a process <math id="p4.m1" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> with respect to <math id="p4.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> can be defined on each of the partitions,</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="I^{n}_{t}(Y,X)\equiv\sum_{k}Y_{\tau^{n}_{k-1}}(X_{\tau^{n}_{k}\wedge t}-X_{%
+\tau^{n}_{k-1}\wedge t})." display="block"><mrow><mrow><mrow><msubsup><mi>I</mi><mi>t</mi><mi>n</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≡</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>k</mi></munder><mrow><msub><mi>Y</mi><msubsup><mi>τ</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow><mi>n</mi></msubsup></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>X</mi><mrow><msubsup><mi>τ</mi><mi>k</mi><mi>n</mi></msubsup><mo>∧</mo><mi>t</mi></mrow></msub><mo>-</mo><msub><mi>X</mi><mrow><msubsup><mi>τ</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mo>∧</mo><mi>t</mi></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since the times <math id="p4.m3" class="ltx_Math" alttext="\tau^{n}_{k}" display="inline"><msubsup><mi>τ</mi><mi>k</mi><mi>n</mi></msubsup></math> tend to infinity as <math id="p4.m4" class="ltx_Math" alttext="k\rightarrow\infty" display="inline"><mrow><mi>k</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>, all but finitely many terms are zero.
+Note that here, the process <math id="p4.m5" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> is sampled at <math id="p4.m6" class="ltx_Math" alttext="\tau^{n}_{k-1}" display="inline"><msubsup><mi>τ</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow><mi>n</mi></msubsup></math>, which are the left hand points of the intervals. For this reason, the stochastic integral is sometimes called the forward integral. Alternatively, the backward integral can be computed by sampling <math id="p4.m7" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> at time <math id="p4.m8" class="ltx_Math" alttext="t_{k}" display="inline"><msub><mi>t</mi><mi>k</mi></msub></math> and the Stratonovich integral takes the average of <math id="p4.m9" class="ltx_Math" alttext="Y_{t_{k-1}}" display="inline"><msub><mi>Y</mi><msub><mi>t</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msub></msub></math> and <math id="p4.m10" class="ltx_Math" alttext="Y_{t_{k}}" display="inline"><msub><mi>Y</mi><msub><mi>t</mi><mi>k</mi></msub></msub></math>. However, these alternative integrals are less general and may not exist even when <math id="p4.m11" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> is a continuous and adapted process.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">For left-continuous integrands, the approximations do indeed converge to the stochastic integral.</p>
+</div>
+<div id="Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 1</span>.</h6>
+<div id="Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose that <math id="Thmtheorem1.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a semimartingale and <math id="Thmtheorem1.p1.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> is an adapted, left-continuous and locally bounded process. Then,</span></p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="I^{n}_{t}(Y,X)\rightarrow\int_{0}^{t}Y\,dX" display="block"><mrow><mrow><msubsup><mi>I</mi><mi>t</mi><mi>n</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><mpadded width="+1.7pt"><mi>Y</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>X</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">in probability as <math id="Thmtheorem1.p1.m3" class="ltx_Math" alttext="n\rightarrow\infty" display="inline"><mrow><mi>n</mi><mo mathvariant="normal">→</mo><mi mathvariant="normal">∞</mi></mrow></math>. Furthermore, this converges ucp and in the semimartingale topology.</span></p>
+</div>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Similarly, convergence is also obtained for cadlag integrands. However, in this case, it is necessary to use the left limit <math id="p6.m1" class="ltx_Math" alttext="Y_{s-}" display="inline"><msub><mi>Y</mi><mrow><mi>s</mi><mo>-</mo></mrow></msub></math> in the integral. The integral of <math id="p6.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> does not even exist when it is a general cadlag adapted process, as it might not be predictable.</p>
+</div>
+<div id="Thmtheorem2" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 2</span>.</h6>
+<div id="Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose that <math id="Thmtheorem2.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a semimartingale and <math id="Thmtheorem2.p1.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> is a cadlag adapted process. Then,</span></p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="I^{n}_{t}(Y,X)\rightarrow\int_{0}^{t}Y_{s-}\,dX_{s}" display="block"><mrow><mrow><msubsup><mi>I</mi><mi>t</mi><mi>n</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><mpadded width="+1.7pt"><msub><mi>Y</mi><mrow><mi>s</mi><mo>-</mo></mrow></msub></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><msub><mi>X</mi><mi>s</mi></msub></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">in probability as <math id="Thmtheorem2.p1.m3" class="ltx_Math" alttext="n\rightarrow\infty" display="inline"><mrow><mi>n</mi><mo mathvariant="normal">→</mo><mi mathvariant="normal">∞</mi></mrow></math>. Furthermore, this converges ucp and in the semimartingale topology.</span></p>
+</div>
+</div>
+<div id="p7" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">stochastic integration as a limit of Riemann sums</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">StochasticIntegrationAsALimitOfRiemannSums</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:41:33</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:41:33</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60H05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60G07</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60H10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">StochasticIntegration</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:59:59 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

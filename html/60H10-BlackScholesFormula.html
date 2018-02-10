@@ -1,0 +1,397 @@
+<!DOCTYPE html><html>
+<head>
+<title>Black-Scholes formula</title>
+<!--Generated on Sat Feb 10 12:00:11 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Black-Scholes formula</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div class="ltx_TOC ltx_role_contents">
+<h6>Contents:</h6>
+<ul class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#S0.SS1" title="0.1 Black-Scholes pricing formula ‣ Black-Scholes formula" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">0.1 </span>Black-Scholes pricing formula</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#S0.SS2" title="0.2 General representation of option price ‣ Black-Scholes formula" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">0.2 </span>General representation of option price</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#S0.SS3" title="0.3 The risk-neutral measure ‣ Black-Scholes formula" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">0.3 </span>The risk-neutral measure</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="#S0.SS4" title="0.4 Model assumptions ‣ Black-Scholes formula" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">0.4 </span>Model assumptions</span></a>
+<ul class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#S0.SS4.SSS1" title="0.4.1 Stock price ‣ 0.4 Model assumptions ‣ Black-Scholes formula" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">0.4.1 </span>Stock price</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#S0.SS4.SSS2" title="0.4.2 Interest on cash ‣ 0.4 Model assumptions ‣ Black-Scholes formula" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">0.4.2 </span>Interest on cash</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">Black-Scholes formula</em>
+gives the theoretical “arbitrage-free” price of a stock option
+at any time <math id="p2.m1" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> before the maturity time <math id="p2.m2" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">In financial parlance, an “arbitrage” is a riskless
+profit. So the prices being “arbitrage-free”
+means that it is impossible to construct
+a strategy<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>Strictly speaking, the strategies described here must be construed as the <em class="ltx_emph ltx_font_italic">limiting case</em>, in continuous time, of no-arbitrage trading
+strategies in discrete time, as the time period between trades become
+small. Otherwise, it is not even obvious what trading
+in “continuous time” means, and how to actually execute such trades.</span></span></span>
+of trading the stock option and the underlying stock,
+at the prices given,
+that starts with no money at time <math id="p3.m1" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>,
+ends with a balance at time <math id="p3.m2" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> that
+is non-negative almost surely,
+and is positive
+with some positive probability.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">A stock <em class="ltx_emph ltx_font_italic">call option</em> is a contract, in which the vendor gives
+the buyer a right to purchase some shares of stock in the future,
+at a fixed <em class="ltx_emph ltx_font_italic">strike price</em> agreed upon the writing of the contract.
+However, the right need not be exercised by the buyer.
+In fact it would be disadvantageous to do so if the stock price
+evolves below the strike price since the writing of the contract;
+if the buyer still wants the stock, it would be cheaper to just
+buy it from the market.</p>
+</div>
+<section id="S0.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.1 </span>Black-Scholes pricing formula</h2>
+
+<div id="S0.SS1.p1" class="ltx_para">
+<p class="ltx_p">Let</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> be the <em class="ltx_emph ltx_font_italic">strike price</em> of the call option</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> be the <em class="ltx_emph ltx_font_italic">maturity date</em> of the call option</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> be the prevailing <em class="ltx_emph ltx_font_italic">interest rate</em>, assumed to be constant</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i4.p1.m1" class="ltx_Math" alttext="\sigma&gt;0" display="inline"><mrow><mi>σ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> be the volatility of the stock price (per unit square-root time)</p>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i5.p1.m1" class="ltx_Math" alttext="X(t)" display="inline"><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the stochastic process representing the price of the stock itself at time <math id="I1.i5.p1.m2" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math></p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S0.SS1.p2" class="ltx_para">
+<p class="ltx_p">Then the fair price <math id="S0.SS1.p2.m1" class="ltx_Math" alttext="V(t)" display="inline"><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>, at time <math id="S0.SS1.p2.m2" class="ltx_Math" alttext="t\leq T" display="inline"><mrow><mi>t</mi><mo>≤</mo><mi>T</mi></mrow></math>, of the
+call option with the above contract parameters,
+under the Black-Scholes modelling assumptions,
+is given by:</p>
+</div>
+<div id="S0.SS1.p3" class="ltx_para">
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="\begin{split}\displaystyle V(t)&amp;\displaystyle=x\,\Phi\bigl{(}d_{+}(\tau,x)%
+\bigr{)}-Ke^{-r\tau}\,\Phi\bigl{(}d_{-}(\tau,x)\bigr{)}\,,\\
+\displaystyle d_{\pm}(\tau,x)&amp;\displaystyle=\frac{\log(x/K)+(r\pm\tfrac{1}{2}%
+\sigma^{2})\tau}{\sigma\sqrt{\tau}}\,,\quad\tau=T-t,\quad x=X(t)\,,\end{split}" display="block"><mtable columnspacing="0pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="left"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mpadded width="+1.7pt"><mi>x</mi></mpadded><mo>⁢</mo><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><msub><mi>d</mi><mo>+</mo></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>τ</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow><mo>-</mo><mrow><mi>K</mi><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>r</mi><mo>⁢</mo><mi>τ</mi></mrow></mrow></msup></mpadded><mo>⁢</mo><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><msub><mi>d</mi><mo>-</mo></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>τ</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="120%" minsize="120%" rspace="4.2pt">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><msub><mi>d</mi><mo>±</mo></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>τ</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="left"><mrow><mrow><mrow><mi></mi><mo>=</mo><mpadded width="+1.7pt"><mfrac><mrow><mrow><mi>log</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>/</mo><mi>K</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>r</mi><mo>±</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>τ</mi></mrow></mrow><mrow><mi>σ</mi><mo>⁢</mo><msqrt><mi>τ</mi></msqrt></mrow></mfrac></mpadded></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mi>τ</mi><mo>=</mo><mrow><mi>T</mi><mo>-</mo><mi>t</mi></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>x</mi><mo>=</mo><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S0.SS1.p3.m1" class="ltx_Math" alttext="\Phi" display="inline"><mi mathvariant="normal">Φ</mi></math> is the cumulative distribution function of a standard normal random variable.</p>
+</div>
+<div id="S0.SS1.p4" class="ltx_para">
+<p class="ltx_p">The result (<a href="#S0.E1" title="(1) ‣ 0.1 Black-Scholes pricing formula ‣ Black-Scholes formula" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>)
+is commonly referred to as the <em class="ltx_emph ltx_font_italic">Black-Scholes pricing formula</em>
+or just as the <em class="ltx_emph ltx_font_italic">Black-Scholes formula</em>,
+after Fischer Black and Myron Scholes, who derived it in the 1970s.</p>
+</div>
+<div id="S0.SS1.p5" class="ltx_para">
+<p class="ltx_p">F. Black and M. Scholes first arrived at the solution for <math id="S0.SS1.p5.m1" class="ltx_Math" alttext="V(t)" display="inline"><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+not with our probabilistic calculations,
+but by describing <math id="S0.SS1.p5.m2" class="ltx_Math" alttext="V(t)" display="inline"><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> in terms of a
+partial differential equation, and solving the PDE analytically.
+That PDE, now called, appropriately,
+the <em class="ltx_emph ltx_font_italic">Black-Scholes partial differential equation</em>,
+gives an important alternative formulation of the results here.</p>
+</div>
+</section>
+<section id="S0.SS2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.2 </span>General representation of option price</h2>
+
+<div id="S0.SS2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.SS2.p1.m1" class="ltx_Math" alttext="V(t)" display="inline"><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> in equation (<a href="#S0.E1" title="(1) ‣ 0.1 Black-Scholes pricing formula ‣ Black-Scholes formula" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) is a stochastic process itself,
+but it happens to depend on <math id="S0.SS2.p1.m2" class="ltx_Math" alttext="X(t)" display="inline"><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> only
+for its random part.</p>
+</div>
+<div id="S0.SS2.p2" class="ltx_para">
+<p class="ltx_p">More generally, for any financial contract, not necessarily
+a call option, that pays an amount <math id="S0.SS2.p2.m1" class="ltx_Math" alttext="V(T)" display="inline"><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></math>,
+the Black-Scholes model shows that its fair price <math id="S0.SS2.p2.m2" class="ltx_Math" alttext="V(t)" display="inline"><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+at time <math id="S0.SS2.p2.m3" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>
+must be given by:</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle V(t)=e^{-r(T-t)}\,\mathbb{E}^{\mathbb{Q}}\bigl{[}V(T)\mid%
+\mathcal{F}_{t}\bigr{]}\,." display="inline"><mrow><mi>V</mi><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></msup></mpadded><msup><mi>𝔼</mi><mi>ℚ</mi></msup><mrow><mo maxsize="120%" minsize="120%">[</mo><mi>V</mi><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow><mo>∣</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub><mo maxsize="120%" minsize="120%" rspace="4.2pt">]</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">for some probability measure <math id="S0.SS2.p2.m4" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math>,
+and <math id="S0.SS2.p2.m5" class="ltx_Math" alttext="\{\mathcal{F}_{t}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub><mo stretchy="false">}</mo></mrow></math> is the filtration
+describing the information available about the stock price up to time <math id="S0.SS2.p2.m6" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>.</p>
+</div>
+<div id="S0.SS2.p3" class="ltx_para">
+<p class="ltx_p">If we set <math id="S0.SS2.p3.m1" class="ltx_Math" alttext="V(T)=\max(X(T)-K,0)" display="inline"><mrow><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mi>K</mi></mrow><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then
+equation (<a href="#S0.E1" title="(1) ‣ 0.1 Black-Scholes pricing formula ‣ Black-Scholes formula" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>)
+follows from a straightforward
+calculation starting with equation (<a href="#S0.E2" title="(2) ‣ 0.2 General representation of option price ‣ Black-Scholes formula" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>).</p>
+</div>
+<div id="S0.SS2.p4" class="ltx_para">
+<p class="ltx_p">Intuitively, (<a href="#S0.E2" title="(2) ‣ 0.2 General representation of option price ‣ Black-Scholes formula" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) states that
+the option price at the current time is the expected value
+of the promised pay-off amount at the future time,
+discounted back to the current time at the rate of interest in force.</p>
+</div>
+</section>
+<section id="S0.SS3" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.3 </span>The risk-neutral measure</h2>
+
+<div id="S0.SS3.p1" class="ltx_para">
+<p class="ltx_p">The probability measure <math id="S0.SS3.p1.m1" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math> appearing in (<a href="#S0.E2" title="(2) ‣ 0.2 General representation of option price ‣ Black-Scholes formula" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>),
+is called the <em class="ltx_emph ltx_font_italic">risk-neutral measure</em>.
+It depends on the underlying risk factors that drive the contract pay-off,
+but it does not depend on the contract itself.
+This probability measure is distinct from the real-world or historical
+probability measure.
+It does not actually describe “probabilities” in the intuitive sense
+of the word, but is a mathematical tool to express the solutions
+to the underlying stochastic differential equations.</p>
+</div>
+<div id="S0.SS3.p2" class="ltx_para">
+<p class="ltx_p">Equation (<a href="#S0.E2" title="(2) ‣ 0.2 General representation of option price ‣ Black-Scholes formula" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) is equivalent to
+saying that <math id="S0.SS3.p2.m1" class="ltx_Math" alttext="V(t)e^{-rt}" display="inline"><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>r</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></msup></mrow></math> is a martingale under the probability
+measure <math id="S0.SS3.p2.m2" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math>.</p>
+</div>
+</section>
+<section id="S0.SS4" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.4 </span>Model assumptions</h2>
+
+<div id="S0.SS4.p1" class="ltx_para">
+<p class="ltx_p">The Black-Scholes formula is derived under the following
+model assumptions.
+</p>
+</div>
+<div id="S0.SS4.p2" class="ltx_para">
+<p class="ltx_p">In the real world, of course, all of these simplifying assumptions
+are wrong in one way or another; however,
+the Black-Scholes formula is often used
+to give ballpark figures when quoting option prices.</p>
+</div>
+<section id="S0.SS4.SSS1" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">0.4.1 </span>Stock price</h3>
+
+<div id="S0.SS4.SSS1.p1" class="ltx_para">
+<p class="ltx_p">The stock
+(or any other underlying tradable asset)
+has a price that follows a <em class="ltx_emph ltx_font_italic">geometric Brownian motion
+process</em> described by the stochastic differential equation:</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E3.m1" class="ltx_Math" alttext="\displaystyle dX(t)=\mu X(t)\,dt+\sigma X(t)\,dW(t)\,," display="inline"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>μ</mi><mo>⁢</mo><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mrow><mi>σ</mi><mo>⁢</mo><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>W</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p1.m1" class="ltx_Math" alttext="X(t)" display="inline"><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the price of the stock at time <math id="I2.i1.p1.m2" class="ltx_Math" alttext="t\geq 0" display="inline"><mrow><mi>t</mi><mo>≥</mo><mn>0</mn></mrow></math>; the quantity <math id="I2.i1.p1.m3" class="ltx_Math" alttext="X(t)" display="inline"><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> is
+a random variable.</p>
+</div>
+<div id="I2.i1.p2" class="ltx_para">
+<p class="ltx_p">(That is, for each <math id="I2.i1.p2.m1" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>, <math id="I2.i1.p2.m2" class="ltx_Math" alttext="X(t)" display="inline"><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a function of <math id="I2.i1.p2.m3" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>,
+for <math id="I2.i1.p2.m4" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> ranging over the underlying sample space; but the implicit
+notation is more convenient and widely used.)</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i2.p1.m1" class="ltx_Math" alttext="\mu&gt;0" display="inline"><mrow><mi>μ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> is the growth rate of the stock. The quantity <math id="I2.i2.p1.m2" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> has units
+of reciprocal time.</p>
+</div>
+<div id="I2.i2.p2" class="ltx_para">
+<p class="ltx_p"><math id="I2.i2.p2.m1" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> is assumed to be a constant (independent of time and the state
+of the system).</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i3.p1.m1" class="ltx_Math" alttext="\sigma&gt;0" display="inline"><mrow><mi>σ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> is the volatility of the stock.
+It can be thought as the standard deviation normalized by time;
+<math id="I2.i3.p1.m2" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> has units of the reciprocal square root of time.</p>
+</div>
+<div id="I2.i3.p2" class="ltx_para">
+<p class="ltx_p"><math id="I2.i3.p2.m1" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> is assumed to be constant.</p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i4.p1.m1" class="ltx_Math" alttext="W(t)" display="inline"><mrow><mi>W</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a standard Brownian motion, also called a Wiener process.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="S0.SS4.SSS1.p2" class="ltx_para">
+<p class="ltx_p">The assumption of <em class="ltx_emph ltx_font_italic">geometric</em> Brownian motion means
+that the <em class="ltx_emph ltx_font_italic">relative</em> price movements <math id="S0.SS4.SSS1.p2.m1" class="ltx_Math" alttext="X(t+\Delta t)/X(t)" display="inline"><mrow><mrow><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mi>X</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+after time <math id="S0.SS4.SSS1.p2.m2" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>
+are independent of the stock price history before time <math id="S0.SS4.SSS1.p2.m3" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>.
+In general,
+relative changes in price
+are more financially significant and useful to model
+(e.g. “Google stock has gone up 40% this year”)
+than absolute changes in price.</p>
+</div>
+<div id="S0.SS4.SSS1.p3" class="ltx_para">
+<p class="ltx_p">We also assume that the stock does not pay dividends,
+that there are no  on the trading of any asset,
+or borrowing or lending of any amount of cash at the risk-free interest rate,
+and no transaction costs.
+Trading is also assumed to be conducted continuously
+in perfectly divisible amounts,
+at a single price at each point in time.</p>
+</div>
+</section>
+<section id="S0.SS4.SSS2" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">0.4.2 </span>Interest on cash</h3>
+
+<div id="S0.SS4.SSS2.p1" class="ltx_para">
+<p class="ltx_p">Moreover, cash in the model economy is assumed to grow
+with time at a <em class="ltx_emph ltx_font_italic">risk-free continuously-compounded interest rate</em> of <math id="S0.SS4.SSS2.p1.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>,
+and <math id="S0.SS4.SSS2.p1.m2" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is constant. Thus the amount <math id="S0.SS4.SSS2.p1.m3" class="ltx_Math" alttext="M(t)" display="inline"><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> in the “money-market account”
+or “bank account”
+at time <math id="S0.SS4.SSS2.p1.m4" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>,
+with an initial infusion of amount <math id="S0.SS4.SSS2.p1.m5" class="ltx_Math" alttext="M(0)" display="inline"><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math> at time <math id="S0.SS4.SSS2.p1.m6" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>,
+is given by</p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle M(t)=M(0)\,e^{rt}\,." display="inline"><mrow><mrow><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>M</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mi>r</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS4.SSS2.p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Black-Scholes formula</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">BlackScholesFormula</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:29:59</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:29:59</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60H10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 91B28</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Black-Scholes pricing formula</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">AnalyticSolutionOfBlackScholesPDE</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">DerivationOfBlackScholesFormulaInMartingaleForm</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 12:00:11 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

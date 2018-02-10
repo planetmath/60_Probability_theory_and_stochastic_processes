@@ -1,0 +1,338 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of Bernstein inequalities</title>
+<!--Generated on Sat Feb 10 11:56:28 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of Bernstein inequalities</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">1) By Chernoff-Cramèr bound (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ChernoffCramerBound</span>), we have:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\Pr\left\{\sum_{i=1}^{n}\left(X_{i}-E[X_{i}]\right)&gt;\varepsilon\right\}\leq%
+\exp\left[-\sup_{t&gt;0}\left(t\varepsilon-\psi(t)\right)\right]" display="block"><mrow><mrow><mi>Pr</mi><mo>⁡</mo><mrow><mo>{</mo><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mo>(</mo><mrow><msub><mi>X</mi><mi>i</mi></msub><mo>-</mo><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>X</mi><mi>i</mi></msub><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow><mo>&gt;</mo><mi>ε</mi></mrow><mo>}</mo></mrow></mrow><mo>≤</mo><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo>[</mo><mrow><mo>-</mo><mrow><munder><mo movablelimits="false">sup</mo><mrow><mi>t</mi><mo>&gt;</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mi>t</mi><mo>⁢</mo><mi>ε</mi></mrow><mo>-</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\psi(t)=\sum_{i=1}^{n}\left(\ln E\left[e^{tX_{i}}\right]-tE\left[X_{i}\right]\right)" display="block"><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mo>(</mo><mrow><mrow><mrow><mi>ln</mi><mo>⁡</mo><mi>E</mi></mrow><mo>⁢</mo><mrow><mo>[</mo><msup><mi>e</mi><mrow><mi>t</mi><mo>⁢</mo><msub><mi>X</mi><mi>i</mi></msub></mrow></msup><mo>]</mo></mrow></mrow><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>E</mi><mo>⁢</mo><mrow><mo>[</mo><msub><mi>X</mi><mi>i</mi></msub><mo>]</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Since <math id="p2.m1" class="ltx_Math" alttext="\ln x\leq x-1" display="inline"><mrow><mrow><mi>ln</mi><mo>⁡</mo><mi>x</mi></mrow><mo>≤</mo><mrow><mi>x</mi><mo>-</mo><mn>1</mn></mrow></mrow></math> <math id="p2.m2" class="ltx_Math" alttext="\forall x\geq 0" display="inline"><mrow><mrow><mo>∀</mo><mi>x</mi></mrow><mo>≥</mo><mn>0</mn></mrow></math>,</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle\psi(t)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m3" class="ltx_Math" alttext="\displaystyle\sum_{i=1}^{n}\left(\ln E\left[e^{tX_{i}}\right]-tE\left[X_{i}%
+\right]\right)" display="inline"><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mo>(</mo><mrow><mrow><mrow><mi>ln</mi><mo>⁡</mo><mi>E</mi></mrow><mo>⁢</mo><mrow><mo>[</mo><msup><mi>e</mi><mrow><mi>t</mi><mo>⁢</mo><msub><mi>X</mi><mi>i</mi></msub></mrow></msup><mo>]</mo></mrow></mrow><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>E</mi><mo>⁢</mo><mrow><mo>[</mo><msub><mi>X</mi><mi>i</mi></msub><mo>]</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m3" class="ltx_Math" alttext="\displaystyle\sum_{i=1}^{n}E\left[e^{tX_{i}}\right]-tE\left[X_{i}\right]-1" display="inline"><mrow><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mi>E</mi><mo>⁢</mo><mrow><mo>[</mo><msup><mi>e</mi><mrow><mi>t</mi><mo>⁢</mo><msub><mi>X</mi><mi>i</mi></msub></mrow></msup><mo>]</mo></mrow></mrow></mrow><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>E</mi><mo>⁢</mo><mrow><mo>[</mo><msub><mi>X</mi><mi>i</mi></msub><mo>]</mo></mrow></mrow><mo>-</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m3" class="ltx_Math" alttext="\displaystyle\sum_{i=1}^{n}E\left[1+tX_{i}+\frac{1}{2}t^{2}X_{i}^{2}+\sum_{k=3%
+}^{+\infty}\frac{t^{k}X_{i}^{k}}{k!}\right]-tE\left[X_{i}\right]-1" display="inline"><mrow><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mi>E</mi><mo>⁢</mo><mrow><mo>[</mo><mrow><mn>1</mn><mo>+</mo><mrow><mi>t</mi><mo>⁢</mo><msub><mi>X</mi><mi>i</mi></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup><mo>⁢</mo><msubsup><mi>X</mi><mi>i</mi><mn>2</mn></msubsup></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>3</mn></mrow><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></munderover></mstyle><mstyle displaystyle="true"><mfrac><mrow><msup><mi>t</mi><mi>k</mi></msup><mo>⁢</mo><msubsup><mi>X</mi><mi>i</mi><mi>k</mi></msubsup></mrow><mrow><mi>k</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle></mrow></mrow><mo>]</mo></mrow></mrow></mrow><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>E</mi><mo>⁢</mo><mrow><mo>[</mo><msub><mi>X</mi><mi>i</mi></msub><mo>]</mo></mrow></mrow><mo>-</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m3" class="ltx_Math" alttext="\displaystyle\sum_{i=1}^{n}\left(\frac{1}{2}t^{2}E\left[X_{i}^{2}\right]+\sum_%
+{k=3}^{+\infty}\frac{t^{k}E\left[X_{i}^{k}\right]}{k!}\right)" display="inline"><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mo>(</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup><mo>⁢</mo><mi>E</mi><mo>⁢</mo><mrow><mo>[</mo><msubsup><mi>X</mi><mi>i</mi><mn>2</mn></msubsup><mo>]</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>3</mn></mrow><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></munderover></mstyle><mstyle displaystyle="true"><mfrac><mrow><msup><mi>t</mi><mi>k</mi></msup><mo>⁢</mo><mi>E</mi><mo>⁢</mo><mrow><mo>[</mo><msubsup><mi>X</mi><mi>i</mi><mi>k</mi></msubsup><mo>]</mo></mrow></mrow><mrow><mi>k</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle></mrow></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{2}t^{2}\sum_{i=1}^{n}E\left[X_{i}^{2}\right]+\sum_{k=3}^%
+{+\infty}\frac{t^{k}\sum_{i=1}^{n}E\left[X_{i}^{k}\right]}{k!}" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mi>E</mi><mo>⁢</mo><mrow><mo>[</mo><msubsup><mi>X</mi><mi>i</mi><mn>2</mn></msubsup><mo>]</mo></mrow></mrow></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>3</mn></mrow><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></munderover></mstyle><mstyle displaystyle="true"><mfrac><mrow><msup><mi>t</mi><mi>k</mi></msup><mo>⁢</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><mi>E</mi><mo>⁢</mo><mrow><mo>[</mo><msubsup><mi>X</mi><mi>i</mi><mi>k</mi></msubsup><mo>]</mo></mrow></mrow></mrow></mrow><mrow><mi>k</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{2}t^{2}\sum_{i=1}^{n}E\left[X_{i}^{2}\right]+\sum_{k=3}^%
+{+\infty}\frac{t^{k}\sum_{i=1}^{n}E\left[\left|X_{i}\right|^{k}\right]}{k!}," display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mi>E</mi><mo>⁢</mo><mrow><mo>[</mo><msubsup><mi>X</mi><mi>i</mi><mn>2</mn></msubsup><mo>]</mo></mrow></mrow></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>3</mn></mrow><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></munderover></mstyle><mstyle displaystyle="true"><mfrac><mrow><msup><mi>t</mi><mi>k</mi></msup><mo>⁢</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><mi>E</mi><mo>⁢</mo><mrow><mo>[</mo><msup><mrow><mo>|</mo><msub><mi>X</mi><mi>i</mi></msub><mo>|</mo></mrow><mi>k</mi></msup><mo>]</mo></mrow></mrow></mrow></mrow><mrow><mi>k</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mstyle></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and, keeping in mind hypotheses a) and b),</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\displaystyle\psi(t)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex9.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex9.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{2}t^{2}v^{2}+\sum_{k=3}^{+\infty}\frac{t^{k}}{2}v^{2}c^{%
+k-2}=\frac{1}{2}t^{2}v^{2}+\frac{1}{2}t^{3}v^{2}c\sum_{k=0}^{+\infty}\left(tc%
+\right)^{k}" display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>v</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>3</mn></mrow><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></munderover></mstyle><mrow><mstyle displaystyle="true"><mfrac><msup><mi>t</mi><mi>k</mi></msup><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>v</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>c</mi><mrow><mi>k</mi><mo>-</mo><mn>2</mn></mrow></msup></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>v</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>t</mi><mn>3</mn></msup><mo>⁢</mo><msup><mi>v</mi><mn>2</mn></msup><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></munderover></mstyle><msup><mrow><mo>(</mo><mrow><mi>t</mi><mo>⁢</mo><mi>c</mi></mrow><mo>)</mo></mrow><mi>k</mi></msup></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Now, if <math id="p3.m1" class="ltx_Math" alttext="tc&lt;1" display="inline"><mrow><mrow><mi>t</mi><mo>⁢</mo><mi>c</mi></mrow><mo>&lt;</mo><mn>1</mn></mrow></math>, we obtain</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\psi(t)\leq\frac{1}{2}t^{2}v^{2}\left(1+\frac{tc}{1-tc}\right)=\frac{v^{2}t^{2%
+}}{2\left(1-tc\right)}" display="block"><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>v</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mfrac><mrow><mi>t</mi><mo>⁢</mo><mi>c</mi></mrow><mrow><mn>1</mn><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>c</mi></mrow></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><msup><mi>v</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>c</mi></mrow></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">whence</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="\sup_{t&gt;0}\left(t\varepsilon-\psi(t)\right)\geq\sup_{0&lt;t&lt;\frac{1}{c}}\left(t%
+\varepsilon-\frac{v^{2}t^{2}}{2\left(1-tc\right)}\right)" display="block"><mrow><mrow><munder><mo movablelimits="false">sup</mo><mrow><mi>t</mi><mo>&gt;</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mi>t</mi><mo>⁢</mo><mi>ε</mi></mrow><mo>-</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow><mo>≥</mo><mrow><munder><mo movablelimits="false">sup</mo><mrow><mn>0</mn><mo>&lt;</mo><mi>t</mi><mo>&lt;</mo><mfrac><mn>1</mn><mi>c</mi></mfrac></mrow></munder><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><mi>t</mi><mo>⁢</mo><mi>ε</mi></mrow><mo>-</mo><mfrac><mrow><msup><mi>v</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>c</mi></mrow></mrow><mo>)</mo></mrow></mrow></mfrac></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">By elementary calculus, we obtain the value of <math id="p4.m1" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> that maximizes the
+expression in brackets (out of the two roots of the second degree polynomial equation, we choose the one which is <math id="p4.m2" class="ltx_Math" alttext="&lt;\frac{1}{c}" display="inline"><mrow><mi></mi><mo>&lt;</mo><mfrac><mn>1</mn><mi>c</mi></mfrac></mrow></math>):</p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="t_{opt}=\frac{v^{2}+2c\varepsilon-v^{2}\sqrt{1+\frac{2c\varepsilon}{v^{2}}}}{c%
+\left(v^{2}+2c\varepsilon\right)}=\frac{1}{c}\left(1-\frac{1}{\sqrt{1+\frac{2c%
+\varepsilon}{v^{2}}}}\right)" display="block"><mrow><msub><mi>t</mi><mrow><mi>o</mi><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mi>t</mi></mrow></msub><mo>=</mo><mfrac><mrow><mrow><msup><mi>v</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>ε</mi></mrow></mrow><mo>-</mo><mrow><msup><mi>v</mi><mn>2</mn></msup><mo>⁢</mo><msqrt><mrow><mn>1</mn><mo>+</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>ε</mi></mrow><msup><mi>v</mi><mn>2</mn></msup></mfrac></mrow></msqrt></mrow></mrow><mrow><mi>c</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>v</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>ε</mi></mrow></mrow><mo>)</mo></mrow></mrow></mfrac><mo>=</mo><mrow><mfrac><mn>1</mn><mi>c</mi></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>-</mo><mfrac><mn>1</mn><msqrt><mrow><mn>1</mn><mo>+</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>ε</mi></mrow><msup><mi>v</mi><mn>2</mn></msup></mfrac></mrow></msqrt></mfrac></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which, once plugged into the bounds, yields</p>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="\Pr\left\{\sum_{i=1}^{n}\left(X_{i}-E[X_{i}]\right)&gt;\varepsilon\right\}\leq%
+\exp\left[-\frac{v^{2}}{c^{2}}\left(1+\frac{c\varepsilon}{v^{2}}-\sqrt{1+2%
+\frac{c\varepsilon}{v^{2}}}\right)\right]" display="block"><mrow><mrow><mi>Pr</mi><mo>⁡</mo><mrow><mo>{</mo><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mo>(</mo><mrow><msub><mi>X</mi><mi>i</mi></msub><mo>-</mo><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>X</mi><mi>i</mi></msub><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow><mo>&gt;</mo><mi>ε</mi></mrow><mo>}</mo></mrow></mrow><mo>≤</mo><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo>[</mo><mrow><mo>-</mo><mrow><mfrac><msup><mi>v</mi><mn>2</mn></msup><msup><mi>c</mi><mn>2</mn></msup></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mn>1</mn><mo>+</mo><mfrac><mrow><mi>c</mi><mo>⁢</mo><mi>ε</mi></mrow><msup><mi>v</mi><mn>2</mn></msup></mfrac></mrow><mo>-</mo><msqrt><mrow><mn>1</mn><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mfrac><mrow><mi>c</mi><mo>⁢</mo><mi>ε</mi></mrow><msup><mi>v</mi><mn>2</mn></msup></mfrac></mrow></mrow></msqrt></mrow><mo>)</mo></mrow></mrow></mrow><mo>]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Observing that <math id="p5.m1" class="ltx_Math" alttext="\sqrt{1+x}\leq 1+\frac{1}{2}x" display="inline"><mrow><msqrt><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow></msqrt><mo>≤</mo><mrow><mn>1</mn><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></math>, one gets:</p>
+<table id="S0.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex14.m1" class="ltx_Math" alttext="t_{opt}=\frac{1}{c}\left(1-\frac{1}{\sqrt{1+\frac{2c\varepsilon}{v^{2}}}}%
+\right)\leq\frac{1}{c}\left(1-\frac{1}{1+\frac{c\varepsilon}{v^{2}}}\right)=%
+\frac{\varepsilon}{v^{2}+c\varepsilon}=t^{{}^{\prime}}&lt;\frac{1}{c}" display="block"><mrow><msub><mi>t</mi><mrow><mi>o</mi><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mi>t</mi></mrow></msub><mo>=</mo><mrow><mfrac><mn>1</mn><mi>c</mi></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>-</mo><mfrac><mn>1</mn><msqrt><mrow><mn>1</mn><mo>+</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>ε</mi></mrow><msup><mi>v</mi><mn>2</mn></msup></mfrac></mrow></msqrt></mfrac></mrow><mo>)</mo></mrow></mrow><mo>≤</mo><mrow><mfrac><mn>1</mn><mi>c</mi></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>-</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mfrac><mrow><mi>c</mi><mo>⁢</mo><mi>ε</mi></mrow><msup><mi>v</mi><mn>2</mn></msup></mfrac></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mfrac><mi>ε</mi><mrow><msup><mi>v</mi><mn>2</mn></msup><mo>+</mo><mrow><mi>c</mi><mo>⁢</mo><mi>ε</mi></mrow></mrow></mfrac><mo>=</mo><msup><mi>t</mi><msup><mi></mi><mo>′</mo></msup></msup><mo>&lt;</mo><mfrac><mn>1</mn><mi>c</mi></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Plugging <math id="p5.m2" class="ltx_Math" alttext="t^{\prime}" display="inline"><msup><mi>t</mi><mo>′</mo></msup></math> in the bound expression, the sub-optimal yet more
+easily manageable formula is obtained:</p>
+<table id="S0.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex15.m1" class="ltx_Math" alttext="\Pr\left\{\sum_{i=1}^{n}\left(X_{i}-E[X_{i}]\right)&gt;\varepsilon\right\}\leq%
+\exp\left(-\frac{\varepsilon^{2}}{2\left(v^{2}+c\varepsilon\right)}\right)" display="block"><mrow><mrow><mi>Pr</mi><mo>⁡</mo><mrow><mo>{</mo><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mo>(</mo><mrow><msub><mi>X</mi><mi>i</mi></msub><mo>-</mo><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mi>X</mi><mi>i</mi></msub><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow><mo>&gt;</mo><mi>ε</mi></mrow><mo>}</mo></mrow></mrow><mo>≤</mo><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mo>-</mo><mfrac><msup><mi>ε</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>v</mi><mn>2</mn></msup><mo>+</mo><mrow><mi>c</mi><mo>⁢</mo><mi>ε</mi></mrow></mrow><mo>)</mo></mrow></mrow></mfrac></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which is obviously a worse bound than the preceeding one, since <math id="p5.m3" class="ltx_Math" alttext="t^{\prime}\neq t_{opt}" display="inline"><mrow><msup><mi>t</mi><mo>′</mo></msup><mo>≠</mo><msub><mi>t</mi><mrow><mi>o</mi><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mi>t</mi></mrow></msub></mrow></math>. One can also verify the consistency of this inequality
+directly proving that, for any <math id="p5.m4" class="ltx_Math" alttext="x\geq 0" display="inline"><mrow><mi>x</mi><mo>≥</mo><mn>0</mn></mrow></math>,</p>
+<table id="S0.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex16.m1" class="ltx_Math" alttext="1+x-\sqrt{1+2x}\geq\frac{x^{2}}{2\left(1+x\right)}" display="block"><mrow><mrow><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mo>-</mo><msqrt><mrow><mn>1</mn><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></mrow></msqrt></mrow><mo>≥</mo><mfrac><msup><mi>x</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mi>x</mi></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(see here (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ASimpleMethodForComparingRealFunctions</span>) for an easy way, which can be used with <math id="p5.m5" class="ltx_Math" alttext="x_{0}=0" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>=</mo><mn>0</mn></mrow></math>)</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">2) To prove this more specialized statement let’s recall that the condition</p>
+<table id="S0.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex17.m1" class="ltx_Math" alttext="\Pr\left\{\left|X_{i}\right|\leq M\right\}=1\text{ \ }\forall i" display="block"><mrow><mrow><mi>Pr</mi><mo>⁡</mo><mrow><mo>{</mo><mrow><mrow><mo>|</mo><msub><mi>X</mi><mi>i</mi></msub><mo>|</mo></mrow><mo>≤</mo><mi>M</mi></mrow><mo>}</mo></mrow></mrow><mo>=</mo><mrow><mn>1</mn><mo>⁢</mo><mtext> </mtext><mo>⁢</mo><mrow><mo>∀</mo><mi>i</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">implies that, for all <math id="p6.m1" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>,</p>
+<table id="S0.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex18.m1" class="ltx_Math" alttext="E[\left|X_{i}\right|^{k}]\leq M^{k}\text{ \ }\forall k\geq 0" display="block"><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msup><mrow><mo>|</mo><msub><mi>X</mi><mi>i</mi></msub><mo>|</mo></mrow><mi>k</mi></msup><mo stretchy="false">]</mo></mrow></mrow><mo>≤</mo><mrow><msup><mi>M</mi><mi>k</mi></msup><mo>⁢</mo><mtext> </mtext><mo>⁢</mo><mrow><mo>∀</mo><mi>k</mi></mrow></mrow><mo>≥</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(See here (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/RelationBetweenAlmostSurelyAbsolutelyBoundedRandomVariablesAndTheirAbsoluteMoments</span>) for a proof.)</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Now, it’s enough to verify that the condition</p>
+<table id="S0.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex19.m1" class="ltx_Math" alttext="E[\left|X_{i}\right|^{k}]\leq M^{k}" display="block"><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msup><mrow><mo>|</mo><msub><mi>X</mi><mi>i</mi></msub><mo>|</mo></mrow><mi>k</mi></msup><mo stretchy="false">]</mo></mrow></mrow><mo>≤</mo><msup><mi>M</mi><mi>k</mi></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">imply both conditions a) and b) in part 1).</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Indeed, part a) is obvious, while for part b) one happens to have:</p>
+<table id="S0.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex20.m1" class="ltx_Math" alttext="E[\left|X_{i}\right|^{k}]\leq E\left[X_{i}^{2}\right]M^{k-2}" display="block"><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msup><mrow><mo>|</mo><msub><mi>X</mi><mi>i</mi></msub><mo>|</mo></mrow><mi>k</mi></msup><mo stretchy="false">]</mo></mrow></mrow><mo>≤</mo><mrow><mi>E</mi><mo>⁢</mo><mrow><mo>[</mo><msubsup><mi>X</mi><mi>i</mi><mn>2</mn></msubsup><mo>]</mo></mrow><mo>⁢</mo><msup><mi>M</mi><mrow><mi>k</mi><mo>-</mo><mn>2</mn></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(see here (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/AbsoluteMomentsBoundingNecessaryAndSufficientCondition</span>) for a proof).</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">So</p>
+<table id="S0.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex21.m1" class="ltx_Math" alttext="\sum_{i=1}^{n}E[\left|X_{i}\right|^{k}]\leq\sum_{i=1}^{n}E\left[X_{i}^{2}%
+\right]M^{k-2}=v^{2}M^{k-2}" display="block"><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msup><mrow><mo>|</mo><msub><mi>X</mi><mi>i</mi></msub><mo>|</mo></mrow><mi>k</mi></msup><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>≤</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mi>E</mi><mo>⁢</mo><mrow><mo>[</mo><msubsup><mi>X</mi><mi>i</mi><mn>2</mn></msubsup><mo>]</mo></mrow><mo>⁢</mo><msup><mi>M</mi><mrow><mi>k</mi><mo>-</mo><mn>2</mn></mrow></msup></mrow></mrow><mo>=</mo><mrow><msup><mi>v</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>M</mi><mrow><mi>k</mi><mo>-</mo><mn>2</mn></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">Let’s find a value for <math id="p10.m1" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> such that <math id="p10.m2" class="ltx_Math" alttext="v^{2}M^{k-2}\leq\frac{k!}{2}v^{2}c^{k-2}" display="inline"><mrow><mrow><msup><mi>v</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>M</mi><mrow><mi>k</mi><mo>-</mo><mn>2</mn></mrow></msup></mrow><mo>≤</mo><mrow><mfrac><mrow><mi>k</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>v</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>c</mi><mrow><mi>k</mi><mo>-</mo><mn>2</mn></mrow></msup></mrow></mrow></math>,
+thus satisfying part b) of the hypotheses.</p>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">After simplifying, we have to study the inequality</p>
+<table id="S0.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex22.m1" class="ltx_Math" alttext="k!c^{k-2}\geq 2\cdot M^{k-2}" display="block"><mrow><mrow><mrow><mi>k</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>⁢</mo><msup><mi>c</mi><mrow><mi>k</mi><mo>-</mo><mn>2</mn></mrow></msup></mrow><mo>≥</mo><mrow><mn>2</mn><mo>⋅</mo><msup><mi>M</mi><mrow><mi>k</mi><mo>-</mo><mn>2</mn></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for any <math id="p11.m1" class="ltx_Math" alttext="k\geq 3" display="inline"><mrow><mi>k</mi><mo>≥</mo><mn>3</mn></mrow></math>. Let’s proceed by induction. For <math id="p11.m2" class="ltx_Math" alttext="k=3" display="inline"><mrow><mi>k</mi><mo>=</mo><mn>3</mn></mrow></math>, we have</p>
+<table id="S0.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex23.m1" class="ltx_Math" alttext="6c\geq 2M" display="block"><mrow><mrow><mn>6</mn><mo>⁢</mo><mi>c</mi></mrow><mo>≥</mo><mrow><mn>2</mn><mo>⁢</mo><mi>M</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which suggests <math id="p11.m3" class="ltx_Math" alttext="c=\frac{M}{3}" display="inline"><mrow><mi>c</mi><mo>=</mo><mfrac><mi>M</mi><mn>3</mn></mfrac></mrow></math>. Let’s now verify if this position is
+consistent with the inductive hypothesis:</p>
+<table id="S0.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex24.m1" class="ltx_Math" alttext="\left(k+1\right)!=\left(k+1\right)k!\geq\left(k+1\right)\cdot 2\cdot 3^{k-2}%
+\geq 3\cdot 2\cdot 3^{k-2}=2\cdot 3^{(k+1)-2}" display="block"><mrow><mrow><mrow><mo>(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>⁢</mo><mrow><mi>k</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow><mo>≥</mo><mrow><mrow><mo>(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>⋅</mo><mn>2</mn><mo>⋅</mo><msup><mn>3</mn><mrow><mi>k</mi><mo>-</mo><mn>2</mn></mrow></msup></mrow><mo>≥</mo><mrow><mn>3</mn><mo>⋅</mo><mn>2</mn><mo>⋅</mo><msup><mn>3</mn><mrow><mi>k</mi><mo>-</mo><mn>2</mn></mrow></msup></mrow><mo>=</mo><mrow><mn>2</mn><mo>⋅</mo><msup><mn>3</mn><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>-</mo><mn>2</mn></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which confirms the validity of the choice <math id="p11.m4" class="ltx_Math" alttext="c=\frac{M}{3}" display="inline"><mrow><mi>c</mi><mo>=</mo><mfrac><mi>M</mi><mn>3</mn></mfrac></mrow></math>, which has to be
+plugged into the former bound to obtain the new one.</p>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">[to be continued…]
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of Bernstein inequalities</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfBernsteinInequalities</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:09:32</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:09:32</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Andrea Ambrosio (7332)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Andrea Ambrosio (7332)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">32</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Andrea Ambrosio (7332)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 60E15</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:56:28 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

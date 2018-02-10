@@ -1,0 +1,186 @@
+<!DOCTYPE html><html>
+<head>
+<title>Levy process</title>
+<!--Generated on Sat Feb 10 11:58:59 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Levy process</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="(\Omega,\Psi,P,({\cal F})_{0\leq t&lt;\infty})" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><mi mathvariant="normal">Ψ</mi><mo>,</mo><mi>P</mi><mo>,</mo><msub><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo stretchy="false">)</mo></mrow><mrow><mn>0</mn><mo>≤</mo><mi>t</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo stretchy="false">)</mo></mrow></math> be a filtered
+probability space. A Lèvy process on that space is an stochastic
+process <math id="p1.m2" class="ltx_Math" alttext="L\colon[0,\infty)\times\Omega\rightarrow\Re^{n}" display="inline"><mrow><mi>L</mi><mo>:</mo><mrow><mrow><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow><mo>×</mo><mi mathvariant="normal">Ω</mi></mrow><mo>→</mo><msup><mi mathvariant="normal">ℜ</mi><mi>n</mi></msup></mrow></mrow></math> that has the
+following properties:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> has increments independent of the past: for any <math id="I1.i1.p1.m2" class="ltx_Math" alttext="t\geq 0" display="inline"><mrow><mi>t</mi><mo>≥</mo><mn>0</mn></mrow></math> and for all <math id="I1.i1.p1.m3" class="ltx_Math" alttext="s\geq 0" display="inline"><mrow><mi>s</mi><mo>≥</mo><mn>0</mn></mrow></math>, <math id="I1.i1.p1.m4" class="ltx_Math" alttext="L_{t+s}-L_{t}" display="inline"><mrow><msub><mi>L</mi><mrow><mi>t</mi><mo>+</mo><mi>s</mi></mrow></msub><mo>-</mo><msub><mi>L</mi><mi>t</mi></msub></mrow></math> in independent of <math id="I1.i1.p1.m5" class="ltx_Math" alttext="{\cal F}_{t}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub></math>
+</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> has stationary increments: if <math id="I1.i2.p1.m2" class="ltx_Math" alttext="t\geq s\geq 0" display="inline"><mrow><mi>t</mi><mo>≥</mo><mi>s</mi><mo>≥</mo><mn>0</mn></mrow></math> then <math id="I1.i2.p1.m3" class="ltx_Math" alttext="L_{t}-L_{s}" display="inline"><mrow><msub><mi>L</mi><mi>t</mi></msub><mo>-</mo><msub><mi>L</mi><mi>s</mi></msub></mrow></math> and <math id="I1.i2.p1.m4" class="ltx_Math" alttext="L_{t-s}" display="inline"><msub><mi>L</mi><mrow><mi>t</mi><mo>-</mo><mi>s</mi></mrow></msub></math> have the same distribution. This particulary implies that <math id="I1.i2.p1.m5" class="ltx_Math" alttext="L_{t+s}-L_{t}" display="inline"><mrow><msub><mi>L</mi><mrow><mi>t</mi><mo>+</mo><mi>s</mi></mrow></msub><mo>-</mo><msub><mi>L</mi><mi>t</mi></msub></mrow></math> and <math id="I1.i2.p1.m6" class="ltx_Math" alttext="L_{s}" display="inline"><msub><mi>L</mi><mi>s</mi></msub></math> have the same distribution.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is continous in probability: for any <math id="I1.i3.p1.m2" class="ltx_Math" alttext="t,s\in[0,\infty)" display="inline"><mrow><mrow><mi>t</mi><mo>,</mo><mi>s</mi></mrow><mo>∈</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow></math>, <math id="I1.i3.p1.m3" class="ltx_Math" alttext="\lim_{t\rightarrow s}=X_{s}" display="inline"><mrow><msub><mo>lim</mo><mrow><mi>t</mi><mo>→</mo><mi>s</mi></mrow></msub><mo>=</mo><msub><mi>X</mi><mi>s</mi></msub></mrow></math>, the limit taken in probability.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Some important properties of any Lèvy processes <math id="p2.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> are:</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">There exist a modification of <math id="I2.i1.p1.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> that has càdlàg paths a.s. (càdlàg paths means that the paths are continuous from the right and that the left limits exist for any <math id="I2.i1.p1.m2" class="ltx_Math" alttext="t\geq 0" display="inline"><mrow><mi>t</mi><mo>≥</mo><mn>0</mn></mrow></math>).</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i2.p1.m1" class="ltx_Math" alttext="L_{t}" display="inline"><msub><mi>L</mi><mi>t</mi></msub></math> is an infinite divisible random variable for all <math id="I2.i2.p1.m2" class="ltx_Math" alttext="t\in[0,\infty)" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Lèvy -Itô decomposition</span>: <math id="I2.i3.p1.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> can be written as the sum of a diffusion, a continuous Martingale and a pure jump process; i.e:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="L_{t}=\alpha t+\sigma B_{t}+\int_{|x|&lt;1}x\,d\tilde{N}_{t}(\cdot,dx)+\int_{|x|%
+\geq 1}x\,dN_{t}(\cdot,dx)\quad\hbox{for all $t\geq 0$}" display="block"><mrow><msub><mi>L</mi><mi>t</mi></msub><mo>=</mo><mrow><mrow><mrow><mi>α</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mrow><mi>σ</mi><mo>⁢</mo><msub><mi>B</mi><mi>t</mi></msub></mrow><mo>+</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow></msub><mrow><mpadded width="+1.7pt"><mi>x</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><msub><mover accent="true"><mi>N</mi><mo stretchy="false">~</mo></mover><mi>t</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⋅</mo><mo>,</mo><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>≥</mo><mn>1</mn></mrow></msub><mrow><mpadded width="+1.7pt"><mi>x</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><msub><mi>N</mi><mi>t</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⋅</mo><mo>,</mo><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mtext>for all </mtext><mrow><mi>t</mi><mo>≥</mo><mn>0</mn></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="I2.i3.p1.m2" class="ltx_Math" alttext="\alpha\in\Re" display="inline"><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">ℜ</mi></mrow></math>, <math id="I2.i3.p1.m3" class="ltx_Math" alttext="B_{t}" display="inline"><msub><mi>B</mi><mi>t</mi></msub></math> is a standard brownian motion. <math id="I2.i3.p1.m4" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> is defined to be the Poisson random measure of the Lèvy process (the process that counts the jumps): for any Borel <math id="I2.i3.p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> in <math id="I2.i3.p1.m6" class="ltx_Math" alttext="\Re^{n}" display="inline"><msup><mi mathvariant="normal">ℜ</mi><mi>n</mi></msup></math> such that <math id="I2.i3.p1.m7" class="ltx_Math" alttext="0\notin cl(A)" display="inline"><mrow><mn>0</mn><mo>∉</mo><mrow><mi>c</mi><mo>⁢</mo><mi>l</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> then <math id="I2.i3.p1.m8" class="ltx_Math" alttext="N_{t}(\cdot,A)\colon=\sum_{0&lt;s\leq t}1_{A}(\Delta L_{s})" display="inline"><mrow><mrow><msub><mi>N</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⋅</mo><mo>,</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><msub><mo largeop="true" symmetric="true">∑</mo><mrow><mn>0</mn><mo>&lt;</mo><mi>s</mi><mo>≤</mo><mi>t</mi></mrow></msub><mrow><msub><mn>1</mn><mi>A</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msub><mi>L</mi><mi>s</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, where <math id="I2.i3.p1.m9" class="ltx_Math" alttext="\Delta L_{s}\colon=L_{s}-L_{s-}" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msub><mi>L</mi><mi>s</mi></msub></mrow><mo>:=</mo><mrow><msub><mi>L</mi><mi>s</mi></msub><mo>-</mo><msub><mi>L</mi><mrow><mi>s</mi><mo>-</mo></mrow></msub></mrow></mrow></math>; and <math id="I2.i3.p1.m10" class="ltx_Math" alttext="\tilde{N}_{t}(\cdot,A)=N_{t}(\cdot,A)-tE[N_{1}(\cdot,A)]" display="inline"><mrow><mrow><msub><mover accent="true"><mi>N</mi><mo stretchy="false">~</mo></mover><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⋅</mo><mo>,</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>N</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⋅</mo><mo>,</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><msub><mi>N</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⋅</mo><mo>,</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow></mrow></math> is the compensated jump process, which is a martingale.</p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Lèvy -Khintchine formula</span>: from the previous property it can be shown that for any <math id="I2.i4.p1.m1" class="ltx_Math" alttext="t\geq 0" display="inline"><mrow><mi>t</mi><mo>≥</mo><mn>0</mn></mrow></math> one has that</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="E[e^{iuL_{t}}]=e^{-t\psi(u)}" display="block"><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><msub><mi>L</mi><mi>t</mi></msub></mrow></msup><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\psi(u)=-i\alpha u+{\sigma^{2}\over 2}u^{2}+\int_{|x|\geq 1}(1-e^{iux})\,d\nu(%
+x)+\int_{|x|&lt;1}(1-e^{iux}+iux)\,d\nu(x)" display="block"><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mi>α</mi><mo>⁢</mo><mi>u</mi></mrow></mrow><mo>+</mo><mrow><mfrac><msup><mi>σ</mi><mn>2</mn></msup><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>u</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>≥</mo><mn>1</mn></mrow></msub><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>x</mi></mrow></msup></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>ν</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow></msub><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>1</mn><mo>-</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>x</mi></mrow></msup></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>ν</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">with <math id="I2.i4.p1.m2" class="ltx_Math" alttext="\alpha\in\Re" display="inline"><mrow><mi>α</mi><mo>∈</mo><mi mathvariant="normal">ℜ</mi></mrow></math>, <math id="I2.i4.p1.m3" class="ltx_Math" alttext="\sigma\in[0,\infty)" display="inline"><mrow><mi>σ</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="I2.i4.p1.m4" class="ltx_Math" alttext="\nu" display="inline"><mi>ν</mi></math> is a positive, borel, <math id="I2.i4.p1.m5" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-finite measure called <span class="ltx_text ltx_font_italic">Lèvy measure</span>. (Actually <math id="I2.i4.p1.m6" class="ltx_Math" alttext="\nu(\cdot)=E[N_{1}(\cdot,A)]" display="inline"><mrow><mrow><mi>ν</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⋅</mo><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><msub><mi>N</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⋅</mo><mo>,</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow></math>). The second formula is usually called the Lèvy exponent or Lèvy symbol of the process.</p>
+</div>
+</li>
+<li id="I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">5.</span> 
+<div id="I2.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i5.p1.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is a semimartingale (in the classical sense of being a sum of a finite variation process and a local martingale), so it is a <span class="ltx_text ltx_font_italic">good</span> integrator, in the stochastic sense.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Some important examples of Lèvy processes include: the Poisson
+Process, the Compound Poisson process, Brownian Motion, Stable Processes,
+Subordinators, etc.</p>
+</div>
+<div id="p4" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Bibliography</span></p>
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">Protter, Phillip (1992). Stochastic Integration and Differential Equations. A New Approach. Springer-Verlag, Berlin, Germany.</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p">Applebaum David (2004). Lèvy Procesess and Stochastic Calculus. Cambridge University Press, Cambrigde, UK.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p5" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Levy process</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">LevyProcess1</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:58:09</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:58:09</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">juansba (18789)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">juansba (18789)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">juansba (18789)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 60G20</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:58:59 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

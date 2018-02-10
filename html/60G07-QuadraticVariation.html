@@ -1,0 +1,284 @@
+<!DOCTYPE html><html>
+<head>
+<title>quadratic variation</title>
+<!--Generated on Sat Feb 10 11:58:21 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">quadratic variation</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The quadratic variation of a process is an extension of the notion of the total variation of a function, but rather than summing the absolute values of the changes of a function sampled at a sequence of times, the squares are summed.
+This has important applications in stochastic calculus, appearing in the integration by parts and change of variables formulas for stochastic integration. The quadratic variation also has applications to the study of martingales, occuring in the Ito isometry and Burkholder-Davis-Gundy inequalities.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">An important example is for a Brownian motion <math id="p3.m1" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math>. In this case, the quadratic variation is <math id="p3.m2" class="ltx_Math" alttext="[W]_{t}=t" display="inline"><mrow><msub><mrow><mo stretchy="false">[</mo><mi>W</mi><mo stretchy="false">]</mo></mrow><mi>t</mi></msub><mo>=</mo><mi>t</mi></mrow></math> and, by Lévy’s theorem, this fact characterizes Brownian motion among all local martingales.
+Quadratic variations are well defined for all cadlag martingales and, more generally, all semimartingales.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">In standard, non-stochastic calculus, quadratic variation does not play a large role. This is because it is equal to zero for all continuously differentiable processes and, in fact, for all continuous finite variation processes. Furthermore, it can be shown if any continuous deterministic process has a well defined quadratic variation along all partitions (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Partition3</span>), then it is zero.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">In the following definitions, we assume the existence of a probability space <math id="p5.m1" class="ltx_Math" alttext="(\Omega,\mathcal{F},\mathbb{P})" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>,</mo><mi>ℙ</mi><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>discrete time processes</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.p1.m1" class="ltx_Math" alttext="(X_{t})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow></math> be a stochastic process, with time ranging over the nonnegative integers <math id="S1.p1.m2" class="ltx_Math" alttext="t=0,1,2,\ldots" display="inline"><mrow><mi>t</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math>. Then, the quadratic variation <math id="S1.p1.m3" class="ltx_Math" alttext="[X]" display="inline"><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></math> is the process</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="[X]_{t}=\sum_{s=1}^{t}(X_{s}-X_{s-1})^{2}." display="block"><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow><mi>t</mi></msub><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>s</mi><mo>=</mo><mn>1</mn></mrow><mi>t</mi></munderover><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>X</mi><mi>s</mi></msub><mo>-</mo><msub><mi>X</mi><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Similarly, for processes <math id="S1.p1.m4" class="ltx_Math" alttext="X,Y" display="inline"><mrow><mi>X</mi><mo>,</mo><mi>Y</mi></mrow></math>, the <em class="ltx_emph ltx_font_italic">quadratic covariation</em> <math id="S1.p1.m5" class="ltx_Math" alttext="[X,Y]" display="inline"><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></math> is defined by</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="[X,Y]_{t}=\sum_{s=1}^{t}(X_{s}-X_{s-1})(Y_{s}-Y_{s-1})." display="block"><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><mi>t</mi></msub><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>s</mi><mo>=</mo><mn>1</mn></mrow><mi>t</mi></munderover><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>X</mi><mi>s</mi></msub><mo>-</mo><msub><mi>X</mi><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>Y</mi><mi>s</mi></msub><mo>-</mo><msub><mi>Y</mi><mrow><mi>s</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Note that <math id="S1.p1.m6" class="ltx_Math" alttext="[X,Y]" display="inline"><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></math> is bilinear and symmetric in interchanging <math id="S1.p1.m7" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and <math id="S1.p1.m8" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>. The quadratic variation is alternatively given by <math id="S1.p1.m9" class="ltx_Math" alttext="[X]=[X,X]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow></math>, and the covariation can be written in terms of the quadratic variation by the polarization identity,</p>
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex3.m1" class="ltx_Math" alttext="[X,Y]=([X+Y]-[X-Y])/4." display="block"><mrow><mrow><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">[</mo><mrow><mi>X</mi><mo>+</mo><mi>Y</mi></mrow><mo stretchy="false">]</mo></mrow><mo>-</mo><mrow><mo stretchy="false">[</mo><mrow><mi>X</mi><mo>-</mo><mi>Y</mi></mrow><mo stretchy="false">]</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>/</mo><mn>4</mn></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>quadratic variation on an interval</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">Now suppose that <math id="S2.p1.m1" class="ltx_Math" alttext="(X_{t})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow></math> is a stochastic process with time <math id="S2.p1.m2" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> running over the interval <math id="S2.p1.m3" class="ltx_Math" alttext="[0,T]" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi>T</mi><mo stretchy="false">]</mo></mrow></math>, for some <math id="S2.p1.m4" class="ltx_Math" alttext="T&gt;0" display="inline"><mrow><mi>T</mi><mo>&gt;</mo><mn>0</mn></mrow></math>. If <math id="S2.p1.m5" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is a partition of the interval,</p>
+<table id="S2.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex4.m1" class="ltx_Math" alttext="P=\left\{0=\tau_{0}\leq\tau_{1}\leq\cdots\leq\tau_{m}=T\right\}" display="block"><mrow><mi>P</mi><mo>=</mo><mrow><mo>{</mo><mn>0</mn><mo>=</mo><msub><mi>τ</mi><mn>0</mn></msub><mo>≤</mo><msub><mi>τ</mi><mn>1</mn></msub><mo>≤</mo><mi mathvariant="normal">⋯</mi><mo>≤</mo><msub><mi>τ</mi><mi>m</mi></msub><mo>=</mo><mi>T</mi><mo>}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then we can define the quadratic variation and covariation along the partition <math id="S2.p1.m6" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> by</p>
+<table id="S3.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S2.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex5.m1" class="ltx_Math" alttext="\displaystyle[X]^{P}\equiv\sum_{k=1}^{m}(X_{\tau_{k}}-X_{\tau_{k-1}})^{2}," display="inline"><mrow><mrow><msup><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow><mi>P</mi></msup><mo>≡</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover></mstyle><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>X</mi><msub><mi>τ</mi><mi>k</mi></msub></msub><mo>-</mo><msub><mi>X</mi><msub><mi>τ</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msub></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S2.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex6.m1" class="ltx_Math" alttext="\displaystyle[X,Y]^{P}\equiv\sum_{k=1}^{m}(X_{\tau_{k}}-X_{\tau_{k-1}})(Y_{%
+\tau_{k}}-Y_{\tau_{k-1}})." display="inline"><mrow><mrow><msup><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><mi>P</mi></msup><mo>≡</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover></mstyle><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>X</mi><msub><mi>τ</mi><mi>k</mi></msub></msub><mo>-</mo><msub><mi>X</mi><msub><mi>τ</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msub></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>Y</mi><msub><mi>τ</mi><mi>k</mi></msub></msub><mo>-</mo><msub><mi>Y</mi><msub><mi>τ</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msub></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">mesh</em> of the partition is <math id="S2.p1.m7" class="ltx_Math" alttext="|P|=\max_{k}(\tau_{k}-\tau_{k-1})" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>P</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><msub><mi>max</mi><mi>k</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>τ</mi><mi>k</mi></msub><mo>-</mo><msub><mi>τ</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Given a sequence of partitions <math id="S2.p1.m8" class="ltx_Math" alttext="P_{n}" display="inline"><msub><mi>P</mi><mi>n</mi></msub></math> with mesh going to zero as <math id="S2.p1.m9" class="ltx_Math" alttext="n\rightarrow\infty" display="inline"><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>, the quadratic variation and covariation are defined by</p>
+<table id="S2.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex7.m1" class="ltx_Math" alttext="[X]_{T}\equiv\lim_{n\rightarrow\infty}[X]^{P_{n}},\ [X,Y]_{T}\equiv\lim_{n%
+\rightarrow\infty}[X,Y]^{P_{n}}." display="block"><mrow><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow><mi>T</mi></msub><mo>≡</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><msup><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow><msub><mi>P</mi><mi>n</mi></msub></msup></mrow></mrow><mo rspace="7.5pt">,</mo><mrow><msub><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><mi>T</mi></msub><mo>≡</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><msup><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><msub><mi>P</mi><mi>n</mi></msub></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It is only required that these limits exist under convergence in probability, which is much weaker than requiring convergence for all or almost all <math id="S2.p1.m10" class="ltx_Math" alttext="\omega\in\Omega" display="inline"><mrow><mi>ω</mi><mo>∈</mo><mi mathvariant="normal">Ω</mi></mrow></math>.
+The limits are not guaranteed to exist. If they do, then the quadratic variation and covariation are said to exist along the sequence of partitions <math id="S2.p1.m11" class="ltx_Math" alttext="P_{n}" display="inline"><msub><mi>P</mi><mi>n</mi></msub></math>.</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">More generally, <em class="ltx_emph ltx_font_italic">random partitions</em> can be used where the times <math id="S2.p2.m1" class="ltx_Math" alttext="\tau_{k}" display="inline"><msub><mi>τ</mi><mi>k</mi></msub></math> are random variables, usually stopping times. In this case, the processes <math id="S2.p2.m2" class="ltx_Math" alttext="X,Y" display="inline"><mrow><mi>X</mi><mo>,</mo><mi>Y</mi></mrow></math> are required to satisfy additional properties in order for their values at a random time to make sense, normally that they are right-continuous or cadlag. The mesh of each partition <math id="S2.p2.m3" class="ltx_Math" alttext="P_{n}" display="inline"><msub><mi>P</mi><mi>n</mi></msub></math> is then a random variable, and is only required to tend to zero in probability as <math id="S2.p2.m4" class="ltx_Math" alttext="n\rightarrow\infty" display="inline"><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>.</p>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">If the quadratic variation (respectively, covariation) exists along all such sequences of non-stochastic, or <em class="ltx_emph ltx_font_italic">deterministic</em>, partitions then it is easily shown to be independent of the sequence of partitions used. In this case, we simply say that the quadratic variation <math id="S2.p3.m1" class="ltx_Math" alttext="[X]_{T}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow><mi>T</mi></msub></math> (resp. covariation <math id="S2.p3.m2" class="ltx_Math" alttext="[X,Y]_{T}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><mi>T</mi></msub></math>) exists without referring to the partitions used.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>quadratic variation as a process</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">Suppose that <math id="S3.p1.m1" class="ltx_Math" alttext="(X_{t})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow></math> and <math id="S3.p1.m2" class="ltx_Math" alttext="(Y_{t})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>Y</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow></math> are stochastic processes with time index running over the nonnegative real numbers, <math id="S3.p1.m3" class="ltx_Math" alttext="t\in\mathbb{R}_{+}" display="inline"><mrow><mi>t</mi><mo>∈</mo><msub><mi>ℝ</mi><mo>+</mo></msub></mrow></math>. In this case, the quadratic variation and covariation can be defined as as above over the interval <math id="S3.p1.m4" class="ltx_Math" alttext="[0,t]" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi>t</mi><mo stretchy="false">]</mo></mrow></math>, for each <math id="S3.p1.m5" class="ltx_Math" alttext="t&gt;0" display="inline"><mrow><mi>t</mi><mo>&gt;</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">However, in continuous-time, defining it in this way does not determine the sample paths of the processes <math id="S3.p2.m1" class="ltx_Math" alttext="[X]_{t}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow><mi>t</mi></msub></math>, <math id="S3.p2.m2" class="ltx_Math" alttext="[X,Y]_{t}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><mi>t</mi></msub></math>. This is because these random variables are only defined <math id="S3.p2.m3" class="ltx_Math" alttext="\mathbb{P}" display="inline"><mi>ℙ</mi></math>-almost everywhere at each <math id="S3.p2.m4" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>, which does not say anything about their joint properties at uncountably many times. It is possible to remedy this by requiring that the quadratic variation and covariation be right-continuous. That is, we take a right-continuous version of the processes.</p>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">Alternatively, the limits can be taken simultaneously at all times. If <math id="S3.p3.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is a partition of <math id="S3.p3.m2" class="ltx_Math" alttext="\mathbb{R}_{+}" display="inline"><msub><mi>ℝ</mi><mo>+</mo></msub></math>,</p>
+<table id="S3.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex8.m1" class="ltx_Math" alttext="P=\left\{0=\tau_{0}\leq\tau_{1}\leq\tau_{2}\leq\cdots\uparrow\infty\right\}" display="block"><mrow><mi>P</mi><mo>=</mo><mrow><mo>{</mo><mn>0</mn><mo>=</mo><msub><mi>τ</mi><mn>0</mn></msub><mo>≤</mo><msub><mi>τ</mi><mn>1</mn></msub><mo>≤</mo><msub><mi>τ</mi><mn>2</mn></msub><mo>≤</mo><mi mathvariant="normal">⋯</mi><mo>↑</mo><mi mathvariant="normal">∞</mi><mo>}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then the quadratic variation and covariation along the partition <math id="S3.p3.m3" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> are the processes</p>
+<table id="S3.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S3.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex9.m1" class="ltx_Math" alttext="\displaystyle[X]^{P}_{t}\equiv\sum_{k=1}^{\infty}\left(X_{\tau_{k}\wedge t}-X_%
+{\tau_{k-1}\wedge t}\right)^{2}," display="inline"><mrow><mrow><msubsup><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow><mi>t</mi><mi>P</mi></msubsup><mo>≡</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><msup><mrow><mo>(</mo><mrow><msub><mi>X</mi><mrow><msub><mi>τ</mi><mi>k</mi></msub><mo>∧</mo><mi>t</mi></mrow></msub><mo>-</mo><msub><mi>X</mi><mrow><msub><mi>τ</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>∧</mo><mi>t</mi></mrow></msub></mrow><mo>)</mo></mrow><mn>2</mn></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S3.Ex10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex10.m1" class="ltx_Math" alttext="\displaystyle[X,Y]^{P}_{t}\equiv\sum_{k=1}^{\infty}\left(X_{\tau_{k}\wedge t}-%
+X_{\tau_{k-1}\wedge t}\right)\left(Y_{\tau_{k}\wedge t}-Y_{\tau_{k-1}\wedge t}%
+\right)." display="inline"><mrow><mrow><msubsup><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><mi>t</mi><mi>P</mi></msubsup><mo>≡</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mrow><mo>(</mo><mrow><msub><mi>X</mi><mrow><msub><mi>τ</mi><mi>k</mi></msub><mo>∧</mo><mi>t</mi></mrow></msub><mo>-</mo><msub><mi>X</mi><mrow><msub><mi>τ</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>∧</mo><mi>t</mi></mrow></msub></mrow><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><msub><mi>Y</mi><mrow><msub><mi>τ</mi><mi>k</mi></msub><mo>∧</mo><mi>t</mi></mrow></msub><mo>-</mo><msub><mi>Y</mi><mrow><msub><mi>τ</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>∧</mo><mi>t</mi></mrow></msub></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since <math id="S3.p3.m4" class="ltx_Math" alttext="\tau_{k}\rightarrow\infty" display="inline"><mrow><msub><mi>τ</mi><mi>k</mi></msub><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>, all but finitely many terms in these sums will be zero. As above, the partition <math id="S3.p3.m5" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> may be random, in which case <math id="S3.p3.m6" class="ltx_Math" alttext="\tau_{k}" display="inline"><msub><mi>τ</mi><mi>k</mi></msub></math> are random variables.</p>
+</div>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">Now suppose that <math id="S3.p4.m1" class="ltx_Math" alttext="P_{n}" display="inline"><msub><mi>P</mi><mi>n</mi></msub></math> is a sequence of such partitions whose mesh over the bounded intervals <math id="S3.p4.m2" class="ltx_Math" alttext="[0,t]" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi>t</mi><mo stretchy="false">]</mo></mrow></math>, <math id="S3.p4.m3" class="ltx_Math" alttext="|P_{n}^{t}|\equiv\max_{k}(\tau_{k}\wedge t-\tau_{k-1}\wedge t)" display="inline"><mrow><mrow><mo stretchy="false">|</mo><msubsup><mi>P</mi><mi>n</mi><mi>t</mi></msubsup><mo stretchy="false">|</mo></mrow><mo>≡</mo><mrow><msub><mi>max</mi><mi>k</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><msub><mi>τ</mi><mi>k</mi></msub><mo>∧</mo><mi>t</mi></mrow><mo>-</mo><msub><mi>τ</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo>∧</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> tends to zero in probability as <math id="S3.p4.m4" class="ltx_Math" alttext="n\rightarrow\infty" display="inline"><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>. Then the quadratic variation and covariation along <math id="S3.p4.m5" class="ltx_Math" alttext="P_{n}" display="inline"><msub><mi>P</mi><mi>n</mi></msub></math> is defined by the limits</p>
+<table id="S3.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex11.m1" class="ltx_Math" alttext="[X]\equiv\lim_{n\rightarrow\infty}[X]^{P_{n}},\ [X,Y]\equiv\lim_{n\rightarrow%
+\infty}[X,Y]^{P_{n}}." display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow><mo>≡</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><msup><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow><msub><mi>P</mi><mi>n</mi></msub></msup></mrow></mrow><mo rspace="7.5pt">,</mo><mrow><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><mo>≡</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><msup><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><msub><mi>P</mi><mi>n</mi></msub></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The limit here is usually required to exist under ucp convergence. As a consequence, quadratic variations of cadlag adapted processes are themselves cadlag and adapted, and quadratic variations of continuous processes are continuous.</p>
+</div>
+<div id="S3.p5" class="ltx_para">
+<p class="ltx_p">If the quadratic variation or covariation exists along all such sequences of deterministic partitions then, as above, they are simply said to exist without making reference to the partitions used.</p>
+</div>
+<div id="S3.p6" class="ltx_para">
+<p class="ltx_p">As squares of real numbers are positive, it follows that the quadratic variation is an increasing process and, by the polarization identity, if <math id="S3.p6.m1" class="ltx_Math" alttext="[X],[Y],[X,Y]" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow><mo>,</mo><mrow><mo stretchy="false">[</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><mo>,</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow></mrow></math> all exist then the quadratic covariation is a difference of increasing functions, and so is a finite variation process.
+</p>
+</div>
+<div id="S3.p7" class="ltx_para">
+<p class="ltx_p">The quadratic variation and covariation are sometimes written as</p>
+<table id="S3.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex12.m1" class="ltx_Math" alttext="[X]_{t}=\int_{0}^{t}\,(dX)^{2},\ [X,Y]_{t}=\int_{0}^{t}\,dX\,dY," display="block"><mrow><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow><mi>t</mi></msub><mo>=</mo><mrow><mpadded width="+1.7pt"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup></mpadded><msup><mrow><mo stretchy="false">(</mo><mrow><mi>d</mi><mo>⁢</mo><mi>X</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow><mo rspace="7.5pt">,</mo><mrow><msub><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><mi>t</mi></msub><mo>=</mo><mrow><mpadded width="+1.7pt"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup></mpadded><mrow><mrow><mo>𝑑</mo><mpadded width="+1.7pt"><mi>X</mi></mpadded></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>Y</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and in differential notation,</p>
+<table id="S3.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex13.m1" class="ltx_Math" alttext="d[X]_{t}=(dX_{t})^{2},\ d[X,Y]_{t}=dX_{t}\,dY_{t}." display="block"><mrow><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><msub><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow><mi>t</mi></msub></mrow><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>d</mi><mo>⁢</mo><msub><mi>X</mi><mi>t</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo rspace="7.5pt">,</mo><mrow><mrow><mi>d</mi><mo>⁢</mo><msub><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><mi>t</mi></msub></mrow><mo>=</mo><mrow><mi>d</mi><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>X</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msub><mi>Y</mi><mi>t</mi></msub></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.p8" class="ltx_para">
+<p class="ltx_p">If we write <math id="S3.p8.m1" class="ltx_Math" alttext="\Delta X_{t}\equiv X_{t}-X_{t-}" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msub><mi>X</mi><mi>t</mi></msub></mrow><mo>≡</mo><mrow><msub><mi>X</mi><mi>t</mi></msub><mo>-</mo><msub><mi>X</mi><mrow><mi>t</mi><mo>-</mo></mrow></msub></mrow></mrow></math> for the jump of a cadlag process at time <math id="S3.p8.m2" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> then, as a consequence of ucp convergence,</p>
+<table id="S3.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex14.m1" class="ltx_Math" alttext="\Delta[X]_{t}=(\Delta X_{t})^{2},\ \Delta[X,Y]_{t}=\Delta X_{t}\Delta Y_{t}." display="block"><mrow><mrow><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msub><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow><mi>t</mi></msub></mrow><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msub><mi>X</mi><mi>t</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo rspace="7.5pt">,</mo><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msub><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">]</mo></mrow><mi>t</mi></msub></mrow><mo>=</mo><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msub><mi>X</mi><mi>t</mi></msub><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msub><mi>Y</mi><mi>t</mi></msub></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">These identities hold simultaneously for all times <math id="S3.p8.m3" class="ltx_Math" alttext="t&gt;0" display="inline"><mrow><mi>t</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, with probability one.</p>
+</div>
+<div id="S3.p9" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">quadratic variation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">QuadraticVariation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:41:12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:41:12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60G07</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60H10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60H20</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">QuadraticVariationOfASemimartingale</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">QuadraticVariationOfBrownianMotion</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">quadratic covariation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:58:21 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html><html>
+<head>
+<title>conditional expectation</title>
+<!--Generated on Sat Feb 10 11:51:53 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">conditional expectation</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="(\Omega,\mathcal{F},P)" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>,</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></math> be a probability space and <math id="p1.m2" class="ltx_Math" alttext="X\colon\Omega\to\mathbb{R}" display="inline"><mrow><mi>X</mi><mo>:</mo><mrow><mi mathvariant="normal">Ω</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> a real random variable with <math id="p1.m3" class="ltx_Math" alttext="E[|X|]&lt;\infty" display="inline"><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mo stretchy="false">|</mo><mi>X</mi><mo stretchy="false">|</mo></mrow><mo stretchy="false">]</mo></mrow></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>.</p>
+</div>
+<section id="S0.SS0.SSSx1" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">Conditional Expectation Given an Event</h2>
+
+<div id="S0.SS0.SSSx1.p1" class="ltx_para">
+<p class="ltx_p">Given an event <math id="S0.SS0.SSSx1.p1.m1" class="ltx_Math" alttext="B\in\mathcal{F}" display="inline"><mrow><mi>B</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi></mrow></math> such that <math id="S0.SS0.SSSx1.p1.m2" class="ltx_Math" alttext="P(B)&gt;0" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>, then we define the <em class="ltx_emph ltx_font_italic">conditional expectation of <math id="S0.SS0.SSSx1.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> given <math id="S0.SS0.SSSx1.p1.m4" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math></em>, denoted by <math id="S0.SS0.SSSx1.p1.m5" class="ltx_Math" alttext="E[X|B]" display="inline"><mrow><mi>E</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">|</mo><mi>B</mi><mo stretchy="false">]</mo></mrow></mrow></math> to be</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="E[X|B]:=\frac{1}{P(B)}\int_{B}XdP." display="block"><mrow><mi>E</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">|</mo><mi>B</mi><mo stretchy="false">]</mo></mrow><mo>:=</mo><mfrac><mn>1</mn><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><msub><mo largeop="true" symmetric="true">∫</mo><mi>B</mi></msub><mi>X</mi><mi>d</mi><mi>P</mi><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS0.SSSx1.p2" class="ltx_para">
+<p class="ltx_p">When <math id="S0.SS0.SSSx1.p2.m1" class="ltx_Math" alttext="P(B)=0" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, <math id="S0.SS0.SSSx1.p2.m2" class="ltx_Math" alttext="E[X|B]" display="inline"><mrow><mi>E</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">|</mo><mi>B</mi><mo stretchy="false">]</mo></mrow></mrow></math> is sometimes defaulted to <math id="S0.SS0.SSSx1.p2.m3" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>.</p>
+</div>
+<div id="S0.SS0.SSSx1.p3" class="ltx_para">
+<p class="ltx_p">If <math id="S0.SS0.SSSx1.p3.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is discrete, then we can write <math id="S0.SS0.SSSx1.p3.m2" class="ltx_Math" alttext="X=\sum_{i=1}^{\infty}w_{i}1_{B_{i}}" display="inline"><mrow><mi>X</mi><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msub><mi>w</mi><mi>i</mi></msub><mo>⁢</mo><msub><mn>1</mn><msub><mi>B</mi><mi>i</mi></msub></msub></mrow></mrow></mrow></math>, where <math id="S0.SS0.SSSx1.p3.m3" class="ltx_Math" alttext="1_{B_{i}}" display="inline"><msub><mn>1</mn><msub><mi>B</mi><mi>i</mi></msub></msub></math> are the indicator functions, <math id="S0.SS0.SSSx1.p3.m4" class="ltx_Math" alttext="B_{i}=X^{-1}(\{w_{i}\})" display="inline"><mrow><msub><mi>B</mi><mi>i</mi></msub><mo>=</mo><mrow><msup><mi>X</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">{</mo><msub><mi>w</mi><mi>i</mi></msub><mo stretchy="false">}</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S0.SS0.SSSx1.p3.m5" class="ltx_Math" alttext="w_{i}\in\mathbb{R}" display="inline"><mrow><msub><mi>w</mi><mi>i</mi></msub><mo>∈</mo><mi>ℝ</mi></mrow></math>, then conditional expectation of <math id="S0.SS0.SSSx1.p3.m6" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> given <math id="S0.SS0.SSSx1.p3.m7" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> becomes</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle E[X|B]" display="inline"><mrow><mi>E</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">|</mo><mi>B</mi><mo stretchy="false">]</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{P(B)}\int_{B}\Big{(}\sum_{i=1}^{\infty}w_{i}1_{B_{i}}%
+\Big{)}dP=\frac{1}{P(B)}\Big{(}\sum_{i=1}^{\infty}w_{i}\int_{B}1_{B_{i}}dP\Big%
+{)}" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>B</mi></msub></mstyle><mrow><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><msub><mi>w</mi><mi>i</mi></msub><mo>⁢</mo><msub><mn>1</mn><msub><mi>B</mi><mi>i</mi></msub></msub></mrow></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>P</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><msub><mi>w</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>B</mi></msub></mstyle><mrow><msub><mn>1</mn><msub><mi>B</mi><mi>i</mi></msub></msub><mo>⁢</mo><mrow><mo>𝑑</mo><mi>P</mi></mrow></mrow></mrow></mrow></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{P(B)}\Big{(}\sum_{i=1}^{\infty}w_{i}P(B_{i}\cap B)\Big{)%
+}=\sum_{i=1}^{\infty}w_{i}P(B_{i}|B)," display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle><mrow><mo maxsize="160%" minsize="160%">(</mo><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><msub><mi>w</mi><mi>i</mi></msub><mi>P</mi><mrow><mo stretchy="false">(</mo><msub><mi>B</mi><mi>i</mi></msub><mo>∩</mo><mi>B</mi><mo stretchy="false">)</mo></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow><mo>=</mo><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><msub><mi>w</mi><mi>i</mi></msub><mi>P</mi><mrow><mo stretchy="false">(</mo><msub><mi>B</mi><mi>i</mi></msub><mo stretchy="false">|</mo><mi>B</mi><mo stretchy="false">)</mo></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S0.SS0.SSSx1.p3.m8" class="ltx_Math" alttext="P(B_{i}|B)" display="inline"><mrow><mi>P</mi><mrow><mo stretchy="false">(</mo><msub><mi>B</mi><mi>i</mi></msub><mo stretchy="false">|</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the conditional probability of <math id="S0.SS0.SSSx1.p3.m9" class="ltx_Math" alttext="B_{i}" display="inline"><msub><mi>B</mi><mi>i</mi></msub></math> given <math id="S0.SS0.SSSx1.p3.m10" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>.</p>
+</div>
+</section>
+<section id="S0.SS0.SSSx2" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">Conditional Expectation Given a Sigma Algebra</h2>
+
+<div id="S0.SS0.SSSx2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S0.SS0.SSSx2.p1.m1" class="ltx_Math" alttext="\mathcal{D}\subset\mathcal{F}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo>⊂</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi></mrow></math> is a sub <math id="S0.SS0.SSSx2.p1.m2" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra, then the <em class="ltx_emph ltx_font_italic">conditional expectation of <math id="S0.SS0.SSSx2.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> given <math id="S0.SS0.SSSx2.p1.m4" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">D</mi></math></em>, denoted by <math id="S0.SS0.SSSx2.p1.m5" class="ltx_Math" alttext="E[X|\mathcal{D}]" display="inline"><mrow><mi>E</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">|</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo stretchy="false">]</mo></mrow></mrow></math> is defined as follows<math id="S0.SS0.SSSx2.p1.m6" class="ltx_Math" alttext="\colon" display="inline"><mo>:</mo></math></p>
+</div>
+<section id="S0.SS0.SSSx2.Px1" class="ltx_paragraph">
+<h3 class="ltx_title ltx_title_paragraph">Definition</h3>
+
+<div id="S0.SS0.SSSx2.Px1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.SS0.SSSx2.Px1.p1.m1" class="ltx_Math" alttext="E[X|\mathcal{D}]" display="inline"><mrow><mi>E</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">|</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo stretchy="false">]</mo></mrow></mrow></math> is the function from <math id="S0.SS0.SSSx2.Px1.p1.m2" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> to <math id="S0.SS0.SSSx2.Px1.p1.m3" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>
+satisfying <math id="S0.SS0.SSSx2.Px1.p1.m4" class="ltx_Math" alttext="\colon" display="inline"><mo>:</mo></math></p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="E[X|\mathcal{D}]" display="inline"><mrow><mi>E</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">|</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo stretchy="false">]</mo></mrow></mrow></math> is <math id="I1.i1.p1.m2" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒟</mi></math>-measurable</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="\displaystyle\int_{A}E[X|\mathcal{D}]dP=\int_{A}XdP" display="inline"><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>A</mi></msub></mstyle><mi>E</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">|</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo stretchy="false">]</mo></mrow><mi>d</mi><mi>P</mi><mo>=</mo><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>A</mi></msub></mstyle><mi>X</mi><mi>d</mi><mi>P</mi></mrow></math> , for  all  <math id="I1.i2.p1.m2" class="ltx_Math" alttext="A\in\mathcal{D}" display="inline"><mrow><mi>A</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">It can be shown, via Radon-Nikodym Theorem, that <math id="S0.SS0.SSSx2.Px1.p1.m5" class="ltx_Math" alttext="E[X|\mathcal{D}]" display="inline"><mrow><mi>E</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">|</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo stretchy="false">]</mo></mrow></mrow></math> always exists and is unique almost everywhere: any two <math id="S0.SS0.SSSx2.Px1.p1.m6" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒟</mi></math>-measurable random variables <math id="S0.SS0.SSSx2.Px1.p1.m7" class="ltx_Math" alttext="Y,Z" display="inline"><mrow><mi>Y</mi><mo>,</mo><mi>Z</mi></mrow></math> with</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle\int_{A}YdP=\int_{A}ZdP=\int_{A}XdP" display="block"><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>A</mi></msub><mrow><mi>Y</mi><mo>⁢</mo><mrow><mo>𝑑</mo><mi>P</mi></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>A</mi></msub><mrow><mi>Z</mi><mo>⁢</mo><mrow><mo>𝑑</mo><mi>P</mi></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>A</mi></msub><mrow><mi>X</mi><mo>⁢</mo><mrow><mo>𝑑</mo><mi>P</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">differ by a null event in <math id="S0.SS0.SSSx2.Px1.p1.m8" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒟</mi></math>. We can in fact set up an equivalence relation on the set of all integrable <math id="S0.SS0.SSSx2.Px1.p1.m9" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒟</mi></math>-measurable functions satisfying condition 2 above. In this sense, <math id="S0.SS0.SSSx2.Px1.p1.m10" class="ltx_Math" alttext="E[X|\mathcal{D}]" display="inline"><mrow><mi>E</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">|</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo stretchy="false">]</mo></mrow></mrow></math> is an equivalence class of random variables, and any two members in <math id="S0.SS0.SSSx2.Px1.p1.m11" class="ltx_Math" alttext="E[X|\mathcal{D}]" display="inline"><mrow><mi>E</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">|</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo stretchy="false">]</mo></mrow></mrow></math> may qualify as conditional expectations of <math id="S0.SS0.SSSx2.Px1.p1.m12" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> given <math id="S0.SS0.SSSx2.Px1.p1.m13" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒟</mi></math> (they are often called <em class="ltx_emph ltx_font_italic">versions</em> of the conditional expectation). In practice, however, we often think of <math id="S0.SS0.SSSx2.Px1.p1.m14" class="ltx_Math" alttext="E[X|\mathcal{D}]" display="inline"><mrow><mi>E</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">|</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo stretchy="false">]</mo></mrow></mrow></math> as a function rather than a set of functions. As long as we realize that any two such functions are equal almost surely, we may blur such differences and abuse the language.</p>
+</div>
+<div id="S0.SS0.SSSx2.Px1.p2" class="ltx_para">
+<p class="ltx_p">Suppose <math id="S0.SS0.SSSx2.Px1.p2.m1" class="ltx_Math" alttext="Y\colon\Omega\to\mathbb{R}" display="inline"><mrow><mi>Y</mi><mo>:</mo><mrow><mi mathvariant="normal">Ω</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> is another random variable with <math id="S0.SS0.SSSx2.Px1.p2.m2" class="ltx_Math" alttext="E[|Y|]&lt;\infty" display="inline"><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mo stretchy="false">|</mo><mi>Y</mi><mo stretchy="false">|</mo></mrow><mo stretchy="false">]</mo></mrow></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>
+and let <math id="S0.SS0.SSSx2.Px1.p2.m3" class="ltx_Math" alttext="\alpha,\beta\in\mathbb{R}" display="inline"><mrow><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math>. Then</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p1.m1" class="ltx_Math" alttext="E[\alpha X+\beta Y|\mathcal{D}]=\alpha E[X|\mathcal{D}]+\beta E[X|\mathcal{D}]" display="inline"><mrow><mi>E</mi><mrow><mo stretchy="false">[</mo><mi>α</mi><mi>X</mi><mo>+</mo><mi>β</mi><mi>Y</mi><mo stretchy="false">|</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mi>α</mi><mi>E</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">|</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo stretchy="false">]</mo></mrow><mo>+</mo><mi>β</mi><mi>E</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">|</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo stretchy="false">]</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i2.p1.m1" class="ltx_Math" alttext="E[E[X|\mathcal{D}]]=E[X]" display="inline"><mrow><mi>E</mi><mrow><mo stretchy="false">[</mo><mi>E</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">|</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo stretchy="false">]</mo></mrow><mo stretchy="false">]</mo></mrow><mo>=</mo><mi>E</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i3.p1.m1" class="ltx_Math" alttext="E[X|\mathcal{D}]=X" display="inline"><mrow><mi>E</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">|</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mi>X</mi></mrow></math> if <math id="I2.i3.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is <math id="I2.i3.p1.m3" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒟</mi></math>-measurable
+</p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i4.p1.m1" class="ltx_Math" alttext="E[X|\mathcal{D}]=E[X]" display="inline"><mrow><mi>E</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">|</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mi>E</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow></math> if <math id="I2.i4.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is independent (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/IndependentSigmaAlgebras</span>) of <math id="I2.i4.p1.m3" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒟</mi></math></p>
+</div>
+</li>
+<li id="I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">5.</span> 
+<div id="I2.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i5.p1.m1" class="ltx_Math" alttext="E[YX|\mathcal{D}]=YE[X|\mathcal{D}]" display="inline"><mrow><mi>E</mi><mrow><mo stretchy="false">[</mo><mi>Y</mi><mi>X</mi><mo stretchy="false">|</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mi>Y</mi><mi>E</mi><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">|</mo><mi class="ltx_font_mathcaligraphic">𝒟</mi><mo stretchy="false">]</mo></mrow></mrow></math> if <math id="I2.i5.p1.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> is <math id="I2.i5.p1.m3" class="ltx_Math" alttext="\mathcal{D}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒟</mi></math>-measurable</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+</section>
+<section id="S0.SS0.SSSx3" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">Conditional Expectation Given a Random Variable</h2>
+
+<div id="S0.SS0.SSSx3.p1" class="ltx_para">
+<p class="ltx_p">Given any real random variable <math id="S0.SS0.SSSx3.p1.m1" class="ltx_Math" alttext="Y:\Omega\to\mathbb{R}" display="inline"><mrow><mi>Y</mi><mo>:</mo><mrow><mi mathvariant="normal">Ω</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math>, we define the <em class="ltx_emph ltx_font_italic">conditional expectation of <math id="S0.SS0.SSSx3.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> given <math id="S0.SS0.SSSx3.p1.m3" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math></em> to be the conditional expectation of <math id="S0.SS0.SSSx3.p1.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> given <math id="S0.SS0.SSSx3.p1.m5" class="ltx_Math" alttext="\mathcal{F}_{Y}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>Y</mi></msub></math>, the sigma algebra generated by <math id="S0.SS0.SSSx3.p1.m6" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/MathcalFMeasurableFunction</span>).
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">conditional expectation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ConditionalExpectation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:43:45</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:43:45</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">georgiosl (7242)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">georgiosl (7242)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">13</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">georgiosl (7242)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60-00</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60A10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ConditionalProbability</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ConditionalExpectationUnderChangeOfMeasure</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">ConditionalExpectationsAreUniformlyIntegrable</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:51:53 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html><html>
+<head>
+<title>regular conditional probability</title>
+<!--Generated on Sat Feb 10 11:54:23 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">regular conditional probability</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SS0.SSSx1" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">Introduction</h2>
+
+<div id="S0.SS0.SSSx1.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="S0.SS0.SSSx1.p1.m1" class="ltx_Math" alttext="(\Omega,\mathcal{F},P)" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>,</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></math> is a probability space and <math id="S0.SS0.SSSx1.p1.m2" class="ltx_Math" alttext="B\in\mathcal{F}" display="inline"><mrow><mi>B</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi></mrow></math> be an event with <math id="S0.SS0.SSSx1.p1.m3" class="ltx_Math" alttext="P(B)&gt;0" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>. It is easy to see that <math id="S0.SS0.SSSx1.p1.m4" class="ltx_Math" alttext="P_{B}:\mathcal{F}\to[0,1]" display="inline"><mrow><msub><mi>P</mi><mi>B</mi></msub><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>→</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></mrow></math> defined by</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="P_{B}(A):=P(A|B)," display="block"><mrow><msub><mi>P</mi><mi>B</mi></msub><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><mo>:=</mo><mi>P</mi><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">|</mo><mi>B</mi><mo stretchy="false">)</mo></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">the conditional probability of event <math id="S0.SS0.SSSx1.p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> given <math id="S0.SS0.SSSx1.p1.m6" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, is a probability measure defined on <math id="S0.SS0.SSSx1.p1.m7" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>, since:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="P_{B}" display="inline"><msub><mi>P</mi><mi>B</mi></msub></math> is clearly non-negative;</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="P_{B}(\Omega)=\displaystyle{\frac{P(\Omega\cap B)}{P(B)}=\frac{P(B)}{P(B)}=1}" display="inline"><mrow><mrow><msub><mi>P</mi><mi>B</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Ω</mi><mo>∩</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle><mo>=</mo><mn>1</mn></mrow></math>;</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="P_{B}" display="inline"><msub><mi>P</mi><mi>B</mi></msub></math> is countably additive: for if <math id="I1.i3.p1.m2" class="ltx_Math" alttext="\{A_{1},A_{2},\ldots\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>A</mi><mn>1</mn></msub><mo>,</mo><msub><mi>A</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">}</mo></mrow></math> is a countable collection of pairwise disjoint events in <math id="I1.i3.p1.m3" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>, then</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="P_{B}(\bigcup_{i=1}^{\infty}A_{i})=\frac{P\big{(}B\cap(\bigcup A_{i})\big{)}}{%
+P(B)}=\frac{P\big{(}\bigcup(B\cap A_{i})\big{)}}{P(B)}=\frac{\sum P(B\cap A_{i%
+})}{P(B)}=\sum_{i=1}^{\infty}P_{B}(A_{i})," display="block"><mrow><mrow><mrow><msub><mi>P</mi><mi>B</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><munderover><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋃</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><msub><mi>A</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mi>P</mi><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mi>B</mi><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋃</mo><msub><mi>A</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>P</mi><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋃</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∩</mo><msub><mi>A</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>=</mo><mfrac><mrow><mo largeop="true" symmetric="true">∑</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>B</mi><mo>∩</mo><msub><mi>A</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msub><mi>P</mi><mi>B</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">as <math id="I1.i3.p1.m4" class="ltx_Math" alttext="\{B\cap A_{1},B\cap A_{2},\ldots\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mi>B</mi><mo>∩</mo><msub><mi>A</mi><mn>1</mn></msub></mrow><mo>,</mo><mrow><mi>B</mi><mo>∩</mo><msub><mi>A</mi><mn>2</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">}</mo></mrow></math> is a collection of pairwise disjoint events also.</p>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S0.SS0.SSSx2" class="ltx_subsubsection">
+<h2 class="ltx_title ltx_title_subsubsection">Regular Conditional Probability</h2>
+
+<div id="S0.SS0.SSSx2.p1" class="ltx_para">
+<p class="ltx_p">Can we extend the definition above to <math id="S0.SS0.SSSx2.p1.m1" class="ltx_Math" alttext="P_{\mathcal{G}}" display="inline"><msub><mi>P</mi><mi class="ltx_font_mathcaligraphic">𝒢</mi></msub></math>, where <math id="S0.SS0.SSSx2.p1.m2" class="ltx_Math" alttext="\mathcal{G}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒢</mi></math> is a sub sigma algebra of <math id="S0.SS0.SSSx2.p1.m3" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math> instead of an event? First, we need to be careful what we mean by <math id="S0.SS0.SSSx2.p1.m4" class="ltx_Math" alttext="P_{\mathcal{G}}" display="inline"><msub><mi>P</mi><mi class="ltx_font_mathcaligraphic">𝒢</mi></msub></math>, since, given any event <math id="S0.SS0.SSSx2.p1.m5" class="ltx_Math" alttext="A\in\mathcal{F}" display="inline"><mrow><mi>A</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi></mrow></math>, <math id="S0.SS0.SSSx2.p1.m6" class="ltx_Math" alttext="P(A|\mathcal{G})" display="inline"><mrow><mi>P</mi><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">|</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo stretchy="false">)</mo></mrow></mrow></math> is not a real number. And strictly speaking, it is not even a random variable, but an equivalence class of random variables (each pair differing by a null event in <math id="S0.SS0.SSSx2.p1.m7" class="ltx_Math" alttext="\mathcal{G}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒢</mi></math>).</p>
+</div>
+<div id="S0.SS0.SSSx2.p2" class="ltx_para">
+<p class="ltx_p">With this in mind, we start with a probability measure <math id="S0.SS0.SSSx2.p2.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> defined on <math id="S0.SS0.SSSx2.p2.m2" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math> and a sub sigma algebra <math id="S0.SS0.SSSx2.p2.m3" class="ltx_Math" alttext="\mathcal{G}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒢</mi></math> of <math id="S0.SS0.SSSx2.p2.m4" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>. A function <math id="S0.SS0.SSSx2.p2.m5" class="ltx_Math" alttext="P_{\mathcal{G}}:\mathcal{G}\times\Omega\to[0,1]" display="inline"><mrow><msub><mi>P</mi><mi class="ltx_font_mathcaligraphic">𝒢</mi></msub><mo>:</mo><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo>×</mo><mi mathvariant="normal">Ω</mi></mrow><mo>→</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></mrow></math> is a called a <em class="ltx_emph ltx_font_italic">regular conditional probability</em> if it has the following properties:</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">for each event <math id="I2.i1.p1.m1" class="ltx_Math" alttext="A\in\mathcal{G}" display="inline"><mrow><mi>A</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi></mrow></math>, <math id="I2.i1.p1.m2" class="ltx_Math" alttext="P_{\mathcal{G}}(A,\cdot):\Omega\to[0,1]" display="inline"><mrow><mrow><msub><mi>P</mi><mi class="ltx_font_mathcaligraphic">𝒢</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mo>⋅</mo><mo stretchy="false">)</mo></mrow></mrow><mo>:</mo><mrow><mi mathvariant="normal">Ω</mi><mo>→</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></mrow></math> is a conditional probability (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ProbabilityConditioningOnASigmaAlgebra</span>) (as a random variable) of <math id="I2.i1.p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> given <math id="I2.i1.p1.m4" class="ltx_Math" alttext="\mathcal{G}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒢</mi></math>; that is,</p>
+<ol id="I2.I1" class="ltx_enumerate">
+<li id="I2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(a)</span> 
+<div id="I2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.I1.i1.p1.m1" class="ltx_Math" alttext="P_{\mathcal{G}}(A,\cdot)" display="inline"><mrow><msub><mi>P</mi><mi class="ltx_font_mathcaligraphic">𝒢</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mo>⋅</mo><mo stretchy="false">)</mo></mrow></mrow></math> is <math id="I2.I1.i1.p1.m2" class="ltx_Math" alttext="\mathcal{G}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒢</mi></math>-measurable (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/MathcalFMeasurableFunction</span>) and</p>
+</div>
+</li>
+<li id="I2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">(b)</span> 
+<div id="I2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">for every <math id="I2.I1.i2.p1.m1" class="ltx_Math" alttext="B\in\mathcal{G}" display="inline"><mrow><mi>B</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi></mrow></math>, we have <math id="I2.I1.i2.p1.m2" class="ltx_Math" alttext="\displaystyle\int_{B}P_{\mathcal{G}}(A,\cdot)dP=P(A\cap B)." display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>B</mi></msub></mstyle><mrow><msub><mi>P</mi><mi class="ltx_font_mathcaligraphic">𝒢</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mo>⋅</mo><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>P</mi></mrow></mrow></mrow><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>∩</mo><mi>B</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">for every outcome <math id="I2.i2.p1.m1" class="ltx_Math" alttext="\omega\in\Omega" display="inline"><mrow><mi>ω</mi><mo>∈</mo><mi mathvariant="normal">Ω</mi></mrow></math>, <math id="I2.i2.p1.m2" class="ltx_Math" alttext="P_{\mathcal{G}}(\cdot,\omega):\mathcal{G}\to[0,1]" display="inline"><mrow><mrow><msub><mi>P</mi><mi class="ltx_font_mathcaligraphic">𝒢</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mo>⋅</mo><mo>,</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo>→</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></mrow></math> is a probability measure.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S0.SS0.SSSx2.p3" class="ltx_para">
+<p class="ltx_p">There are probability spaces where no regular conditional probabilities can be defined. However, when a regular conditional probability function does exist on a space <math id="S0.SS0.SSSx2.p3.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>, then by condition 2 of the definition, we can define a “conditional” probability measure on <math id="S0.SS0.SSSx2.p3.m2" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> for each outcome in the sense of the first two paragraphs.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">regular conditional probability</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">RegularConditionalProbability</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:25:24</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:25:24</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 60A99</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p ltx_align_right"></p>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:54:23 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

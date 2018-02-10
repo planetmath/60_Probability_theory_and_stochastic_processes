@@ -1,0 +1,172 @@
+<!DOCTYPE html><html>
+<head>
+<title>semimartingale topology</title>
+<!--Generated on Sat Feb 10 11:59:40 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">semimartingale topology</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="(\Omega,\mathcal{F},(\mathcal{F}_{t})_{t\in\mathbb{R}_{+}}),\mathbb{P})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>,</mo><msub><mrow><mo stretchy="false">(</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>t</mi><mo>∈</mo><msub><mi>ℝ</mi><mo>+</mo></msub></mrow></msub><mo stretchy="false">)</mo></mrow><mo>,</mo><mi>ℙ</mi><mo stretchy="false">)</mo></mrow></math> be a filtered probability space and <math id="p2.m2" class="ltx_Math" alttext="(X^{n}_{t})" display="inline"><mrow><mo stretchy="false">(</mo><msubsup><mi>X</mi><mi>t</mi><mi>n</mi></msubsup><mo stretchy="false">)</mo></mrow></math>, <math id="p2.m3" class="ltx_Math" alttext="(X_{t})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow></math> be cadlag adapted processes.
+Then, <math id="p2.m4" class="ltx_Math" alttext="X^{n}" display="inline"><msup><mi>X</mi><mi>n</mi></msup></math> is said to converge to <math id="p2.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> in the <em class="ltx_emph ltx_font_italic">semimartingale topology</em> if <math id="p2.m6" class="ltx_Math" alttext="X^{n}_{0}\rightarrow X_{0}" display="inline"><mrow><msubsup><mi>X</mi><mn>0</mn><mi>n</mi></msubsup><mo>→</mo><msub><mi>X</mi><mn>0</mn></msub></mrow></math> in probability and</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\int_{0}^{t}\xi^{n}\,dX^{n}-\int_{0}^{t}\xi^{n}\,dX\rightarrow 0" display="block"><mrow><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><mpadded width="+1.7pt"><msup><mi>ξ</mi><mi>n</mi></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><msup><mi>X</mi><mi>n</mi></msup></mrow></mrow></mrow><mo>-</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><mpadded width="+1.7pt"><msup><mi>ξ</mi><mi>n</mi></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>X</mi></mrow></mrow></mrow></mrow><mo>→</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">in probability as <math id="p2.m7" class="ltx_Math" alttext="n\rightarrow\infty" display="inline"><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>, for every <math id="p2.m8" class="ltx_Math" alttext="t&gt;0" display="inline"><mrow><mi>t</mi><mo>&gt;</mo><mn>0</mn></mrow></math> and sequence of simple predictable processes <math id="p2.m9" class="ltx_Math" alttext="|\xi^{n}|\leq 1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><msup><mi>ξ</mi><mi>n</mi></msup><mo stretchy="false">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">This topology occurs with stochastic calculus where, according to the dominated convergence theorem (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/DominatedConvergenceForStochasticIntegration</span>), stochastic integrals converge in the semimartingale topology.
+Furthermore, stochastic integration with respect to any locally bounded (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/LocalPropertiesOfProcesses</span>) predictable process <math id="p3.m1" class="ltx_Math" alttext="\xi" display="inline"><mi>ξ</mi></math> is continuous under the semimartingale topology. That is, if <math id="p3.m2" class="ltx_Math" alttext="X^{n}" display="inline"><msup><mi>X</mi><mi>n</mi></msup></math> are semimartingales converging to <math id="p3.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> then <math id="p3.m4" class="ltx_Math" alttext="\int\xi\,dX^{n}" display="inline"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mi>ξ</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><msup><mi>X</mi><mi>n</mi></msup></mrow></mrow></mrow></math> converges to <math id="p3.m5" class="ltx_Math" alttext="\int\xi\,dX" display="inline"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mi>ξ</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>X</mi></mrow></mrow></mrow></math>, a fact which does not hold under weaker topologies such as ucp convergence.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Also, for cadlag martingales, <math id="p4.m1" class="ltx_Math" alttext="L^{1}" display="inline"><msup><mi>L</mi><mn>1</mn></msup></math> convergence implies semimartingale convergence.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">It can be shown that semimartingale convergence implies ucp convergence. Consequently, <math id="p5.m1" class="ltx_Math" alttext="X^{n}" display="inline"><msup><mi>X</mi><mi>n</mi></msup></math> converges to <math id="p5.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> in the semimartingale topology if and only if</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="X^{n}_{0}-X_{0}+\int\xi^{n}\,dX^{n}-\int\xi^{n}\,dX\xrightarrow{\rm ucp}0" display="block"><mrow><mrow><mrow><mrow><msubsup><mi>X</mi><mn>0</mn><mi>n</mi></msubsup><mo>-</mo><msub><mi>X</mi><mn>0</mn></msub></mrow><mo>+</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><msup><mi>ξ</mi><mi>n</mi></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><msup><mi>X</mi><mi>n</mi></msup></mrow></mrow></mrow></mrow><mo>-</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><msup><mi>ξ</mi><mi>n</mi></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>X</mi></mrow></mrow></mrow></mrow><mover accent="true"><mo>→</mo><mo>ucp</mo></mover><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for all sequences of simple predictable processes <math id="p5.m3" class="ltx_Math" alttext="|\xi^{n}|\leq 1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><msup><mi>ξ</mi><mi>n</mi></msup><mo stretchy="false">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">The topology is described by a metric as follows. First, let <math id="p6.m1" class="ltx_Math" alttext="D^{\rm ucp}(X-Y)" display="inline"><mrow><msup><mi>D</mi><mi>ucp</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> be a metric defining the ucp topology. For example,</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="D^{\rm ucp}(X)=\sum_{n=1}^{\infty}2^{-n}\mathbb{E}\left[\min\left(1,\sup_{t&lt;n}%
+|X_{t}|\right)\right]." display="block"><mrow><mrow><mrow><msup><mi>D</mi><mi>ucp</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msup><mn>2</mn><mrow><mo>-</mo><mi>n</mi></mrow></msup><mo>⁢</mo><mi>𝔼</mi><mo>⁢</mo><mrow><mo>[</mo><mrow><mi>min</mi><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>,</mo><mrow><munder><mo movablelimits="false">sup</mo><mrow><mi>t</mi><mo>&lt;</mo><mi>n</mi></mrow></munder><mo>⁡</mo><mrow><mo stretchy="false">|</mo><msub><mi>X</mi><mi>t</mi></msub><mo stretchy="false">|</mo></mrow></mrow><mo>)</mo></mrow></mrow><mo>]</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then, a metric <math id="p6.m2" class="ltx_Math" alttext="D^{\rm s}(X-Y)" display="inline"><mrow><msup><mi>D</mi><mi mathvariant="normal">s</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> for semimartingale convergence is given by</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="D^{\rm s}(X)=\sup\left\{D^{\rm ucp}(X_{0}+\xi\cdot X):|\xi|\leq 1\textrm{ is %
+simple previsible}\right\}" display="block"><mrow><mrow><msup><mi>D</mi><mi mathvariant="normal">s</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo movablelimits="false">sup</mo><mo>⁡</mo><mrow><mo>{</mo><mrow><msup><mi>D</mi><mi>ucp</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>X</mi><mn>0</mn></msub><mo>+</mo><mrow><mi>ξ</mi><mo>⋅</mo><mi>X</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>:</mo><mrow><mrow><mo stretchy="false">|</mo><mi>ξ</mi><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mn>1</mn><mo>⁢</mo><mtext> is simple previsible</mtext></mrow></mrow><mo>}</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(<math id="p6.m3" class="ltx_Math" alttext="\xi\cdot X" display="inline"><mrow><mi>ξ</mi><mo>⋅</mo><mi>X</mi></mrow></math> denotes the integral <math id="p6.m4" class="ltx_Math" alttext="\int\xi\,dX" display="inline"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mi>ξ</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>X</mi></mrow></mrow></mrow></math>). This is a proper metric under identification of processes with almost surely equivalent sample paths, otherwise it is a pseudometric.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">If <math id="p7.m1" class="ltx_Math" alttext="\lambda_{n}\not=0" display="inline"><mrow><msub><mi>λ</mi><mi>n</mi></msub><mo>≠</mo><mn>0</mn></mrow></math> is a sequence of real numbers converging to zero and <math id="p7.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a cadlag adapted process then <math id="p7.m3" class="ltx_Math" alttext="\lambda_{n}X\rightarrow 0" display="inline"><mrow><mrow><msub><mi>λ</mi><mi>n</mi></msub><mo>⁢</mo><mi>X</mi></mrow><mo>→</mo><mn>0</mn></mrow></math> in the semimartingale topology if and only if</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\lambda_{n}\int_{0}^{t}\xi^{n}\,dX\rightarrow 0" display="block"><mrow><mrow><msub><mi>λ</mi><mi>n</mi></msub><mo>⁢</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><mpadded width="+1.7pt"><msup><mi>ξ</mi><mi>n</mi></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>X</mi></mrow></mrow></mrow></mrow><mo>→</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">in probability, for every <math id="p7.m4" class="ltx_Math" alttext="t&gt;0" display="inline"><mrow><mi>t</mi><mo>&gt;</mo><mn>0</mn></mrow></math> and simple predictable processes <math id="p7.m5" class="ltx_Math" alttext="|\xi^{n}|\leq 1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><msup><mi>ξ</mi><mi>n</mi></msup><mo stretchy="false">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow></math>.
+By the sequential characterization of boundedness (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/SequentialCharacterizationOfBoundedness</span>), this is equivalent to the statement that</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\left\{\int_{0}^{t}\xi\,dX:|\xi|\leq 1\textrm{ is simple predictable}\right\}" display="block"><mrow><mo>{</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><mpadded width="+1.7pt"><mi>ξ</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>X</mi></mrow></mrow></mrow><mo>:</mo><mrow><mrow><mo stretchy="false">|</mo><mi>ξ</mi><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mn>1</mn><mo>⁢</mo><mtext> is simple predictable</mtext></mrow></mrow><mo>}</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is bounded in probability for every <math id="p7.m6" class="ltx_Math" alttext="t&gt;0" display="inline"><mrow><mi>t</mi><mo>&gt;</mo><mn>0</mn></mrow></math>.
+So, <math id="p7.m7" class="ltx_Math" alttext="\lambda_{n}X\rightarrow 0" display="inline"><mrow><mrow><msub><mi>λ</mi><mi>n</mi></msub><mo>⁢</mo><mi>X</mi></mrow><mo>→</mo><mn>0</mn></mrow></math> in the semimartingale topology if and only if <math id="p7.m8" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a semimartingale. It follows that semimartingale convergence only becomes a vector topology (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/TopologicalVectorSpace</span>) when restricted to the space of semimartingales. Then, it can be shown that the set of semimartingales is a complete topological vector space (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CompletenessOfSemimartingaleConvergence</span>).
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">semimartingale topology</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">SemimartingaleTopology</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:40:41</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:40:41</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">6</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60G48</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60G07</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60H05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">semimartingale convergence</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">UcpConvergence</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">UcpConvergenceOfProcesses</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:59:40 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

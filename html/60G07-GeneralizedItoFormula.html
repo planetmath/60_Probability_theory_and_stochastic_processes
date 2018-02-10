@@ -1,0 +1,197 @@
+<!DOCTYPE html><html>
+<head>
+<title>generalized Ito formula</title>
+<!--Generated on Sat Feb 10 11:57:48 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">generalized Ito formula</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The generalized Itô formula, or <em class="ltx_emph ltx_font_italic">generalized Itô’s lemma</em>, is an extension of Itô’s lemma (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ItosLemma2</span>) that applies also to discontinuous processes. For a cadlag process <math id="p2.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, we write <math id="p2.m2" class="ltx_Math" alttext="\Delta X_{t}\equiv X_{t}-X_{t-}" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msub><mi>X</mi><mi>t</mi></msub></mrow><mo>≡</mo><mrow><msub><mi>X</mi><mi>t</mi></msub><mo>-</mo><msub><mi>X</mi><mrow><mi>t</mi><mo>-</mo></mrow></msub></mrow></mrow></math> for its jump at time <math id="p2.m3" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>.</p>
+</div>
+<div id="Thmtheoremx1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem</span>.</h6>
+<div id="Thmtheoremx1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose that <math id="Thmtheoremx1.p1.m1" class="ltx_Math" alttext="X=(X^{1},\ldots,X^{n})" display="inline"><mrow><mi>X</mi><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msup><mi>X</mi><mn mathvariant="normal">1</mn></msup><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msup><mi>X</mi><mi>n</mi></msup><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> is a semimartingale taking values in an open subset <math id="Thmtheoremx1.p1.m2" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> of <math id="Thmtheoremx1.p1.m3" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi mathvariant="normal">R</mi><mi>n</mi></msup></math> and <math id="Thmtheoremx1.p1.m4" class="ltx_Math" alttext="f\colon U\rightarrow\mathbb{R}" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">:</mo><mrow><mi>U</mi><mo mathvariant="normal">→</mo><mi mathvariant="normal">R</mi></mrow></mrow></math> is twice continuously differentiable. Then,</span></p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="\begin{split}\displaystyle df(X_{s})=&amp;\displaystyle\sum_{i=1}^{n}f_{,i}(X_{t-}%
+)\,dX^{i}_{t}+\frac{1}{2}\sum_{i,j=1}^{n}f_{,ij}(X_{t-})\,d[X^{i},X^{j}]^{c}_{%
+t}\\
+&amp;\displaystyle+\left(\Delta f(X_{t})-\sum_{i=1}^{n}f_{,i}(X_{t-})\,\Delta X^{i%
+}_{t}\right).\end{split}" display="block"><mtable columnspacing="0pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>s</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi></mi></mrow></mtd><mtd columnalign="left"><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>f</mi><mrow><mo>,</mo><mi>i</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mrow><mi>t</mi><mo>-</mo></mrow></msub><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msubsup><mi>X</mi><mi>t</mi><mi>i</mi></msubsup></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>f</mi><mrow><mo>,</mo><mi>i</mi><mi>j</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mrow><mi>t</mi><mo>-</mo></mrow></msub><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msubsup><mrow><mo stretchy="false">[</mo><msup><mi>X</mi><mi>i</mi></msup><mo>,</mo><msup><mi>X</mi><mi>j</mi></msup><mo stretchy="false">]</mo></mrow><mi>t</mi><mi>c</mi></msubsup></mrow></mrow></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mrow><mo>+</mo><mrow><mo>(</mo><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>f</mi><mrow><mo>,</mo><mi>i</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mrow><mi>t</mi><mo>-</mo></mrow></msub><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msubsup><mi>X</mi><mi>t</mi><mi>i</mi></msubsup></mrow></mrow></mrow><mo>)</mo></mrow></mrow><mo>.</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Here, <math id="p3.m1" class="ltx_Math" alttext="[X^{i},X^{j}]^{c}" display="inline"><msup><mrow><mo stretchy="false">[</mo><msup><mi>X</mi><mi>i</mi></msup><mo>,</mo><msup><mi>X</mi><mi>j</mi></msup><mo stretchy="false">]</mo></mrow><mi>c</mi></msup></math> represents the continuous part of the quadratic covariation,</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="[X^{i},X^{j}]^{c}_{t}=[X^{i},X^{j}]_{t}-\sum_{s\leq t}\Delta X^{i}_{s}\Delta X%
+^{j}_{s}" display="block"><mrow><msubsup><mrow><mo stretchy="false">[</mo><msup><mi>X</mi><mi>i</mi></msup><mo>,</mo><msup><mi>X</mi><mi>j</mi></msup><mo stretchy="false">]</mo></mrow><mi>t</mi><mi>c</mi></msubsup><mo>=</mo><mrow><msub><mrow><mo stretchy="false">[</mo><msup><mi>X</mi><mi>i</mi></msup><mo>,</mo><msup><mi>X</mi><mi>j</mi></msup><mo stretchy="false">]</mo></mrow><mi>t</mi></msub><mo>-</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>s</mi><mo>≤</mo><mi>t</mi></mrow></munder><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msubsup><mi>X</mi><mi>s</mi><mi>i</mi></msubsup><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msubsup><mi>X</mi><mi>s</mi><mi>j</mi></msubsup></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which is a continuous finite variation process.
+The final term on the right hand side of (<a href="#S0.E1" title="(1) ‣ Theorem. ‣ generalized Ito formula" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) involving the jumps of <math id="p3.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> represents the differential <math id="p3.m3" class="ltx_Math" alttext="dZ" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>Z</mi></mrow></math> of the process</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="Z_{t}=\sum_{s\leq t}\left(\Delta f(X_{s})-\sum_{i=1}^{n}f_{,i}(X_{s-})\,\Delta
+X%
+^{i}_{s}\right)." display="block"><mrow><mrow><msub><mi>Z</mi><mi>t</mi></msub><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>s</mi><mo>≤</mo><mi>t</mi></mrow></munder><mrow><mo>(</mo><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>s</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>f</mi><mrow><mo>,</mo><mi>i</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mrow><mi>s</mi><mo>-</mo></mrow></msub><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msubsup><mi>X</mi><mi>s</mi><mi>i</mi></msubsup></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This is indeed a well defined finite variation process, as the sum of the absolute values</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\sum_{s\leq t}\left|\Delta f(X_{s})-\sum_{i=1}^{n}f_{,i}(X_{s-})\,\Delta X^{i}%
+_{s}\right|\leq K\sum_{s\leq t}\|\Delta X_{s}\|^{2}\leq K\sum_{i=1}^{n}[X^{i}]%
+_{t}" display="block"><mrow><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>s</mi><mo>≤</mo><mi>t</mi></mrow></munder><mrow><mo>|</mo><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>s</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>f</mi><mrow><mo>,</mo><mi>i</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mrow><mi>s</mi><mo>-</mo></mrow></msub><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msubsup><mi>X</mi><mi>s</mi><mi>i</mi></msubsup></mrow></mrow></mrow><mo>|</mo></mrow></mrow><mo>≤</mo><mrow><mi>K</mi><mo>⁢</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>s</mi><mo>≤</mo><mi>t</mi></mrow></munder><msup><mrow><mo>∥</mo><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msub><mi>X</mi><mi>s</mi></msub></mrow><mo>∥</mo></mrow><mn>2</mn></msup></mrow></mrow><mo>≤</mo><mrow><mi>K</mi><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mrow><mo stretchy="false">[</mo><msup><mi>X</mi><mi>i</mi></msup><mo stretchy="false">]</mo></mrow><mi>t</mi></msub></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is finite. Here, <math id="p3.m4" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is a finite random variable, and this bound follows from expanding <math id="p3.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> as a Taylor series to second order.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">The reason for using differential notation and writing the formula in terms of the continuous part of the quadratic covariation should be clear when it is considered that writing out the expression in full gives the following rather messy formula.</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\begin{split}&amp;\displaystyle f(X_{t})=f(X_{0})+\sum_{i=1}^{n}\int_{0}^{t}f_{,i}%
+(X_{s-})\,dX^{i}_{s}+\frac{1}{2}\sum_{i,j=1}^{n}\int_{0}^{t}f_{,ij}(X_{s-})\,d%
+[X^{i},X^{j}]_{s}\\
+&amp;\displaystyle\ +\sum_{s\leq t}\left(\Delta f(X_{s})-\sum_{i=1}^{n}f_{,i}(X_{s%
+-})\,\Delta X^{i}_{s}-\frac{1}{2}\sum_{i,j=1}^{n}\int_{0}^{t}f_{,ij}(X_{s-})\,%
+\Delta X^{i}_{s}\Delta X^{j}_{s}\right).\end{split}" display="block"><mtable columnspacing="0pt" displaystyle="true" rowspacing="0pt"><mtr><mtd></mtd><mtd columnalign="left"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><msub><mi>f</mi><mrow><mo>,</mo><mi>i</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mrow><mi>s</mi><mo>-</mo></mrow></msub><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><msubsup><mi>X</mi><mi>s</mi><mi>i</mi></msubsup></mrow></mrow></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><msub><mi>f</mi><mrow><mo>,</mo><mi>i</mi><mi>j</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mrow><mi>s</mi><mo>-</mo></mrow></msub><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msub><mrow><mo stretchy="false">[</mo><msup><mi>X</mi><mi>i</mi></msup><mo>,</mo><msup><mi>X</mi><mi>j</mi></msup><mo stretchy="false">]</mo></mrow><mi>s</mi></msub></mrow></mrow></mrow></mrow></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mrow><mo lspace="7.5pt">+</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>s</mi><mo>≤</mo><mi>t</mi></mrow></munder><mrow><mo>(</mo><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>s</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>f</mi><mrow><mo>,</mo><mi>i</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mrow><mi>s</mi><mo>-</mo></mrow></msub><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msubsup><mi>X</mi><mi>s</mi><mi>i</mi></msubsup></mrow></mrow><mo>-</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><msub><mi>f</mi><mrow><mo>,</mo><mi>i</mi><mi>j</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mrow><mi>s</mi><mo>-</mo></mrow></msub><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msubsup><mi>X</mi><mi>s</mi><mi>i</mi></msubsup><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msubsup><mi>X</mi><mi>s</mi><mi>j</mi></msubsup></mrow></mrow></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>.</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This formula may be understood as Itô’s formula (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ItosLemma2</span>) for continuous processes together with an additional term to ensure that the jumps of the right hand side are equal to <math id="p4.m1" class="ltx_Math" alttext="\Delta f(X_{t})" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math>. The need for this adjustment term comes from the fact that Itô’s formula for continuous processes is essentially a Taylor expansion to second order, which only applies when the increments <math id="p4.m2" class="ltx_Math" alttext="\delta X_{t}=X_{t+\delta t}-X_{t}" display="inline"><mrow><mrow><mi>δ</mi><mo>⁢</mo><msub><mi>X</mi><mi>t</mi></msub></mrow><mo>=</mo><mrow><msub><mi>X</mi><mrow><mi>t</mi><mo>+</mo><mrow><mi>δ</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></msub><mo>-</mo><msub><mi>X</mi><mi>t</mi></msub></mrow></mrow></math> vanish in the limit of small <math id="p4.m3" class="ltx_Math" alttext="\delta t" display="inline"><mrow><mi>δ</mi><mo>⁢</mo><mi>t</mi></mrow></math>. This needs adjusting whenever the process jumps.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">The first term on the right hand side of (<a href="#S0.E1" title="(1) ‣ Theorem. ‣ generalized Ito formula" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) is a stochastic integral and, hence, is a semimartingale. As the remaining terms are finite variation processes, the following consequence is obtained.</p>
+</div>
+<div id="Thmcorollaryx1" class="ltx_theorem ltx_theorem_corollary">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Corollary</span>.</h6>
+<div id="Thmcorollaryx1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose that <math id="Thmcorollaryx1.p1.m1" class="ltx_Math" alttext="X=(X^{1},\ldots,X^{n})" display="inline"><mrow><mi>X</mi><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msup><mi>X</mi><mn mathvariant="normal">1</mn></msup><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><msup><mi>X</mi><mi>n</mi></msup><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> is a semimartingale taking values in an open subset <math id="Thmcorollaryx1.p1.m2" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> of <math id="Thmcorollaryx1.p1.m3" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi mathvariant="normal">R</mi><mi>n</mi></msup></math> and <math id="Thmcorollaryx1.p1.m4" class="ltx_Math" alttext="f\colon U\rightarrow\mathbb{R}" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">:</mo><mrow><mi>U</mi><mo mathvariant="normal">→</mo><mi mathvariant="normal">R</mi></mrow></mrow></math> is twice continuously differentiable. Then <math id="Thmcorollaryx1.p1.m5" class="ltx_Math" alttext="f(X)" display="inline"><mrow><mi>f</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>X</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> is a semimartingale.</span></p>
+</div>
+</div>
+<div id="p6" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">generalized Ito formula</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GeneralizedItoFormula</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:41:47</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:41:47</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">6</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60G07</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60H05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60H10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">generalized Itô formula</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">generalized Itö formula</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">generalized Ito’s lemma</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">generalized Itô’s lemma</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">generalized Itö’s lemma</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ItosLemma2</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">ItosFormula</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:57:48 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html><html>
+<head>
+<title>conditional expectation under change of measure</title>
+<!--Generated on Sat Feb 10 11:52:54 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">conditional expectation under change of measure</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="\mathbb{P}" display="inline"><mi>ℙ</mi></math> be a given probability measure
+on some <math id="p2.m2" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra <math id="p2.m3" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>.
+Suppose a new probability measure <math id="p2.m4" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math> is defined
+by <math id="p2.m5" class="ltx_Math" alttext="d\mathbb{Q}=Z\,d\mathbb{P}" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>ℚ</mi></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><mi>Z</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>ℙ</mi></mrow></mrow></math>, using some <math id="p2.m6" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>-measurable
+random variable <math id="p2.m7" class="ltx_Math" alttext="Z" display="inline"><mi>Z</mi></math>
+as the Radon-Nikodym derivative.
+(Necessarily we must have <math id="p2.m8" class="ltx_Math" alttext="Z\geq 0" display="inline"><mrow><mi>Z</mi><mo>≥</mo><mn>0</mn></mrow></math> almost surely, and <math id="p2.m9" class="ltx_Math" alttext="\mathbb{E}Z=1" display="inline"><mrow><mrow><mi>𝔼</mi><mo>⁢</mo><mi>Z</mi></mrow><mo>=</mo><mn>1</mn></mrow></math>.)</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">We denote with <math id="p3.m1" class="ltx_Math" alttext="\mathbb{E}" display="inline"><mi>𝔼</mi></math> the expectation with respect to the measure <math id="p3.m2" class="ltx_Math" alttext="\mathbb{P}" display="inline"><mi>ℙ</mi></math>,
+and with <math id="p3.m3" class="ltx_Math" alttext="\mathbb{E}^{\mathbb{Q}}" display="inline"><msup><mi>𝔼</mi><mi>ℚ</mi></msup></math> the expectation with respect to the measure <math id="p3.m4" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math>.</p>
+</div>
+<div id="Thmthm1" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 1</span>.</h6>
+<div id="Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmthm1.p1.m1" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi mathvariant="normal">Q</mi></math> is restricted to a sub-<math id="Thmthm1.p1.m2" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra
+<math id="Thmthm1.p1.m3" class="ltx_Math" alttext="\mathcal{G}\subseteq\mathcal{F}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic" mathvariant="normal">G</mi><mo mathvariant="normal">⊆</mo><mi class="ltx_font_mathcaligraphic" mathvariant="normal">F</mi></mrow></math>,
+then the restriction has the conditional expectation
+<math id="Thmthm1.p1.m4" class="ltx_Math" alttext="\mathbb{E}[Z\mid\mathcal{G}]" display="inline"><mrow><mi mathvariant="normal">E</mi><mrow><mo mathvariant="normal" stretchy="false">[</mo><mi>Z</mi><mo mathvariant="normal">∣</mo><mi class="ltx_font_mathcaligraphic" mathvariant="normal">G</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow></math> as its Radon-Nikodym derivative:
+<math id="Thmthm1.p1.m5" class="ltx_Math" alttext="d\mathbb{Q}_{\mid\mathcal{G}}=\mathbb{E}[Z\mid\mathcal{G}]\,d\mathbb{P}_{\mid%
+\mathcal{G}}" display="inline"><mrow><mi>d</mi><msub><mi mathvariant="normal">Q</mi><mrow><mo mathvariant="normal">∣</mo><mi class="ltx_font_mathcaligraphic" mathvariant="normal">G</mi></mrow></msub><mo mathvariant="normal">=</mo><mi mathvariant="normal">E</mi><mrow><mo mathvariant="normal" stretchy="false">[</mo><mi>Z</mi><mo mathvariant="normal">∣</mo><mi class="ltx_font_mathcaligraphic" mathvariant="normal">G</mi><mo mathvariant="normal" rspace="4.2pt" stretchy="false">]</mo></mrow><mi>d</mi><msub><mi mathvariant="normal">P</mi><mrow><mo mathvariant="normal">∣</mo><mi class="ltx_font_mathcaligraphic" mathvariant="normal">G</mi></mrow></msub></mrow></math>.</span></p>
+</div>
+<div id="Thmthm1.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">In other words,</span></p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\frac{d\mathbb{Q}_{\mid\mathcal{G}}}{d\mathbb{P}_{\mid\mathcal{G}}}=\left(%
+\frac{d\mathbb{Q}}{d\mathbb{P}}\right)_{\mid\mathcal{G}}\,." display="block"><mrow><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><msub><mi>ℚ</mi><mrow><mo>∣</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi></mrow></msub></mrow><mrow><mi>d</mi><mo>⁢</mo><msub><mi>ℙ</mi><mrow><mo>∣</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi></mrow></msub></mrow></mfrac><mo>=</mo><mpadded width="+1.7pt"><msub><mrow><mo>(</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>ℚ</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>ℙ</mi></mrow></mfrac><mo>)</mo></mrow><mrow><mo>∣</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi></mrow></msub></mpadded></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="Thmthm1.p3" class="ltx_para">
+<p class="ltx_p">It is required to prove that, for all <math id="Thmthm1.p3.m1" class="ltx_Math" alttext="B\in\mathcal{G}" display="inline"><mrow><mi>B</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi></mrow></math>,</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\mathbb{Q}(B)=\mathbb{E}\bigl{[}\mathbb{E}[Z\mid\mathcal{G}]\,1_{B}\bigr{]}\,." display="block"><mrow><mi>ℚ</mi><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>𝔼</mi><mrow><mo maxsize="120%" minsize="120%">[</mo><mi>𝔼</mi><mrow><mo stretchy="false">[</mo><mi>Z</mi><mo>∣</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo stretchy="false">]</mo></mrow><msub><mn> 1</mn><mi>B</mi></msub><mo maxsize="120%" minsize="120%" rspace="4.2pt">]</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">But this follows at once from the law of iterated conditional expectations:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\mathbb{E}\bigl{[}\mathbb{E}[Z\mid\mathcal{G}]\,1_{B}\bigr{]}=\mathbb{E}\bigl{%
+[}\mathbb{E}[Z1_{B}\mid\mathcal{G}]\bigr{]}=\mathbb{E}[Z1_{B}]=\mathbb{Q}(B)\,.\qed" display="block"><mrow><mi>𝔼</mi><mrow><mo maxsize="120%" minsize="120%">[</mo><mi>𝔼</mi><mrow><mo stretchy="false">[</mo><mi>Z</mi><mo>∣</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo stretchy="false">]</mo></mrow><msub><mn> 1</mn><mi>B</mi></msub><mo maxsize="120%" minsize="120%">]</mo></mrow><mo>=</mo><mi>𝔼</mi><mrow><mo maxsize="120%" minsize="120%">[</mo><mi>𝔼</mi><mrow><mo stretchy="false">[</mo><mi>Z</mi><msub><mn>1</mn><mi>B</mi></msub><mo>∣</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo stretchy="false">]</mo></mrow><mo maxsize="120%" minsize="120%">]</mo></mrow><mo>=</mo><mi>𝔼</mi><mrow><mo stretchy="false">[</mo><mi>Z</mi><msub><mn>1</mn><mi>B</mi></msub><mo stretchy="false">]</mo></mrow><mo>=</mo><mi>ℚ</mi><mrow><mo stretchy="false">(</mo><mi>B</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>.</mo><mo mathvariant="italic" separator="true">∎</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div id="Thmthm2" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 2</span>.</h6>
+<div id="Thmthm2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmthm2.p1.m1" class="ltx_Math" alttext="\mathcal{G}\subseteq\mathcal{F}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic" mathvariant="normal">G</mi><mo mathvariant="normal">⊆</mo><mi class="ltx_font_mathcaligraphic" mathvariant="normal">F</mi></mrow></math> be any sub-<math id="Thmthm2.p1.m2" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra.
+For any <math id="Thmthm2.p1.m3" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">F</mi></math>-measurable random variable <math id="Thmthm2.p1.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>,</span></p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\mathbb{E}[Z\mid\mathcal{G}]\,\mathbb{E}^{\mathbb{Q}}[X\mid\mathcal{G}]=%
+\mathbb{E}[ZX\mid\mathcal{G}]\,." display="block"><mrow><mi>𝔼</mi><mrow><mo stretchy="false">[</mo><mi>Z</mi><mo>∣</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo rspace="4.2pt" stretchy="false">]</mo></mrow><msup><mi>𝔼</mi><mi>ℚ</mi></msup><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>∣</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mi>𝔼</mi><mrow><mo stretchy="false">[</mo><mi>Z</mi><mi>X</mi><mo>∣</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo rspace="4.2pt" stretchy="false">]</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">That is,</span></p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\left(\frac{d\mathbb{Q}}{d\mathbb{P}}\right)_{\mid\mathcal{G}}\,\mathbb{E}^{%
+\mathbb{Q}}[X\mid\mathcal{G}]=\mathbb{E}\left[\frac{d\mathbb{Q}}{d\mathbb{P}}%
+\,X\mid\mathcal{G}\right]\,." display="block"><mrow><mpadded width="+1.7pt"><msub><mrow><mo>(</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>ℚ</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>ℙ</mi></mrow></mfrac><mo>)</mo></mrow><mrow><mo>∣</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi></mrow></msub></mpadded><msup><mi>𝔼</mi><mi>ℚ</mi></msup><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>∣</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mi>𝔼</mi><mrow><mo>[</mo><mpadded width="+1.7pt"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>ℚ</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>ℙ</mi></mrow></mfrac></mpadded><mi>X</mi><mo>∣</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo rspace="4.2pt">]</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="Thmthm2.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="Thmthm2.p2.m1" class="ltx_Math" alttext="Y=\mathbb{E}[Z\mid\mathcal{G}]" display="inline"><mrow><mi>Y</mi><mo>=</mo><mi>𝔼</mi><mrow><mo stretchy="false">[</mo><mi>Z</mi><mo>∣</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo stretchy="false">]</mo></mrow></mrow></math>, and
+<math id="Thmthm2.p2.m2" class="ltx_Math" alttext="B\in\mathcal{G}" display="inline"><mrow><mi>B</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi></mrow></math>. We find:</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\displaystyle\mathbb{E}^{\mathbb{Q}}\bigl{[}1_{B}\,\mathbb{E}[ZX\mid\mathcal{G%
+}]\bigr{]}" display="inline"><mrow><msup><mi>𝔼</mi><mi>ℚ</mi></msup><mrow><mo maxsize="120%" minsize="120%">[</mo><mpadded width="+1.7pt"><msub><mn>1</mn><mi>B</mi></msub></mpadded><mi>𝔼</mi><mrow><mo stretchy="false">[</mo><mi>Z</mi><mi>X</mi><mo>∣</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo stretchy="false">]</mo></mrow><mo maxsize="120%" minsize="120%">]</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle=\mathbb{E}\bigl{[}Y1_{B}\,\mathbb{E}[ZX\mid\mathcal{G}]\bigr{]}" display="inline"><mrow><mo>=</mo><mi>𝔼</mi><mrow><mo maxsize="120%" minsize="120%">[</mo><mi>Y</mi><mpadded width="+1.7pt"><msub><mn>1</mn><mi>B</mi></msub></mpadded><mi>𝔼</mi><mrow><mo stretchy="false">[</mo><mi>Z</mi><mi>X</mi><mo>∣</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo stretchy="false">]</mo></mrow><mo maxsize="120%" minsize="120%">]</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">(since <math id="S0.Ex6.m3.m1" class="ltx_Math" alttext="d\mathbb{Q}_{\mid\mathcal{G}}=Y\,d\mathbb{P}_{\mid\mathcal{G}}" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><msub><mi>ℚ</mi><mrow><mo>∣</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi></mrow></msub></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><mi>Y</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msub><mi>ℙ</mi><mrow><mo>∣</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi></mrow></msub></mrow></mrow></math>)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle=\mathbb{E}\bigl{[}\mathbb{E}[Y1_{B}\,ZX\mid\mathcal{G}]\bigr{]}" display="inline"><mrow><mo>=</mo><mi>𝔼</mi><mrow><mo maxsize="120%" minsize="120%">[</mo><mi>𝔼</mi><mrow><mo stretchy="false">[</mo><mi>Y</mi><mpadded width="+1.7pt"><msub><mn>1</mn><mi>B</mi></msub></mpadded><mi>Z</mi><mi>X</mi><mo>∣</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo stretchy="false">]</mo></mrow><mo maxsize="120%" minsize="120%">]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle=\mathbb{E}[Y1_{B}\,ZX]" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>𝔼</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mi>Y</mi><mo>⁢</mo><mpadded width="+1.7pt"><msub><mn>1</mn><mi>B</mi></msub></mpadded><mo>⁢</mo><mi>Z</mi><mo>⁢</mo><mi>X</mi></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex9.m2" class="ltx_Math" alttext="\displaystyle=\mathbb{E}^{\mathbb{Q}}[Y1_{B}\,X]" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msup><mi>𝔼</mi><mi>ℚ</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mi>Y</mi><mo>⁢</mo><mpadded width="+1.7pt"><msub><mn>1</mn><mi>B</mi></msub></mpadded><mo>⁢</mo><mi>X</mi></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">(since <math id="S0.Ex9.m3.m1" class="ltx_Math" alttext="d\mathbb{Q}=Z\,d\mathbb{P}" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>ℚ</mi></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><mi>Z</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>ℙ</mi></mrow></mrow></math>)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex10.m2" class="ltx_Math" alttext="\displaystyle=\mathbb{E}^{\mathbb{Q}}\bigl{[}1_{B}\,\mathbb{E}^{\mathbb{Q}}[YX%
+\mid\mathcal{G}]\bigr{]}\,." display="inline"><mrow><mo>=</mo><msup><mi>𝔼</mi><mi>ℚ</mi></msup><mrow><mo maxsize="120%" minsize="120%">[</mo><mpadded width="+1.7pt"><msub><mn>1</mn><mi>B</mi></msub></mpadded><msup><mi>𝔼</mi><mi>ℚ</mi></msup><mrow><mo stretchy="false">[</mo><mi>Y</mi><mi>X</mi><mo>∣</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo stretchy="false">]</mo></mrow><mo maxsize="120%" minsize="120%" rspace="4.2pt">]</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since <math id="Thmthm2.p2.m3" class="ltx_Math" alttext="B\in\mathcal{G}" display="inline"><mrow><mi>B</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi></mrow></math> is arbitrary, we can equate the <math id="Thmthm2.p2.m4" class="ltx_Math" alttext="\mathcal{G}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒢</mi></math>-measurable integrands:</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="\mathbb{E}[ZX\mid\mathcal{G}]=\mathbb{E}^{\mathbb{Q}}[YX\mid\mathcal{G}]=Y%
+\mathbb{E}^{\mathbb{Q}}[X\mid\mathcal{G}]\,.\qed" display="block"><mrow><mi>𝔼</mi><mrow><mo stretchy="false">[</mo><mi>Z</mi><mi>X</mi><mo>∣</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><msup><mi>𝔼</mi><mi>ℚ</mi></msup><mrow><mo stretchy="false">[</mo><mi>Y</mi><mi>X</mi><mo>∣</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mi>Y</mi><msup><mi>𝔼</mi><mi>ℚ</mi></msup><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>∣</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo rspace="4.2pt" stretchy="false">]</mo></mrow><mo>.</mo><mo mathvariant="italic" separator="true">∎</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Observe that if <math id="p4.m1" class="ltx_Math" alttext="d\mathbb{Q}/d\mathbb{P}&gt;0" display="inline"><mrow><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>ℚ</mi></mrow><mo>/</mo><mi>d</mi></mrow><mo>⁢</mo><mi>ℙ</mi></mrow><mo>&gt;</mo><mn>0</mn></mrow></math> almost surely,
+then</p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="\mathbb{E}^{\mathbb{Q}}[X\mid\mathcal{G}]=\mathbb{E}\left[\frac{d\mathbb{Q}}{d%
+\mathbb{P}}X\mid\mathcal{G}\right]\Big{/}\left(\frac{d\mathbb{Q}}{d\mathbb{P}}%
+\right)_{\mid\mathcal{G}}\,." display="block"><mrow><msup><mi>𝔼</mi><mi>ℚ</mi></msup><mrow><mo stretchy="false">[</mo><mi>X</mi><mo>∣</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mi>𝔼</mi><mrow><mo>[</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>ℚ</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>ℙ</mi></mrow></mfrac><mi>X</mi><mo>∣</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo>]</mo></mrow><mo mathsize="160%" stretchy="false">/</mo><mpadded width="+1.7pt"><msub><mrow><mo>(</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>ℚ</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>ℙ</mi></mrow></mfrac><mo>)</mo></mrow><mrow><mo>∣</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi></mrow></msub></mpadded><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmthm3" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 3</span>.</h6>
+<div id="Thmthm3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmthm3.p1.m1" class="ltx_Math" alttext="X_{t}" display="inline"><msub><mi>X</mi><mi>t</mi></msub></math> is a martingale with respect to <math id="Thmthm3.p1.m2" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi mathvariant="normal">Q</mi></math> and some
+filtration <math id="Thmthm3.p1.m3" class="ltx_Math" alttext="\{\mathcal{F}_{t}\}" display="inline"><mrow><mo mathvariant="normal" stretchy="false">{</mo><msub><mi class="ltx_font_mathcaligraphic" mathvariant="normal">F</mi><mi>t</mi></msub><mo mathvariant="normal" stretchy="false">}</mo></mrow></math>,
+then <math id="Thmthm3.p1.m4" class="ltx_Math" alttext="X_{t}Z_{t}" display="inline"><mrow><msub><mi>X</mi><mi>t</mi></msub><mo mathvariant="italic">⁢</mo><msub><mi>Z</mi><mi>t</mi></msub></mrow></math> is a martingale with respect to <math id="Thmthm3.p1.m5" class="ltx_Math" alttext="\mathbb{P}" display="inline"><mi mathvariant="normal">P</mi></math> and <math id="Thmthm3.p1.m6" class="ltx_Math" alttext="\{\mathcal{F}_{t}\}" display="inline"><mrow><mo mathvariant="normal" stretchy="false">{</mo><msub><mi class="ltx_font_mathcaligraphic" mathvariant="normal">F</mi><mi>t</mi></msub><mo mathvariant="normal" stretchy="false">}</mo></mrow></math>,
+where <math id="Thmthm3.p1.m7" class="ltx_Math" alttext="Z_{t}=\mathbb{E}[Z\mid\mathcal{F}_{t}]" display="inline"><mrow><msub><mi>Z</mi><mi>t</mi></msub><mo mathvariant="normal">=</mo><mi mathvariant="normal">E</mi><mrow><mo mathvariant="normal" stretchy="false">[</mo><mi>Z</mi><mo mathvariant="normal">∣</mo><msub><mi class="ltx_font_mathcaligraphic" mathvariant="normal">F</mi><mi>t</mi></msub><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow></math>.</span></p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="Thmthm3.p2" class="ltx_para">
+<p class="ltx_p">First observe that <math id="Thmthm3.p2.m1" class="ltx_Math" alttext="X_{t}Z_{t}" display="inline"><mrow><msub><mi>X</mi><mi>t</mi></msub><mo>⁢</mo><msub><mi>Z</mi><mi>t</mi></msub></mrow></math> is indeed <math id="Thmthm3.p2.m2" class="ltx_Math" alttext="\mathcal{F}_{t}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub></math>-measurable.
+Then, we can apply Theorem 2,
+with <math id="Thmthm3.p2.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> in the statement of that theorem replaced by
+<math id="Thmthm3.p2.m4" class="ltx_Math" alttext="X_{t}" display="inline"><msub><mi>X</mi><mi>t</mi></msub></math>,
+<math id="Thmthm3.p2.m5" class="ltx_Math" alttext="Z" display="inline"><mi>Z</mi></math> replaced by <math id="Thmthm3.p2.m6" class="ltx_Math" alttext="Z_{t}" display="inline"><msub><mi>Z</mi><mi>t</mi></msub></math>,
+<math id="Thmthm3.p2.m7" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math> replaced by <math id="Thmthm3.p2.m8" class="ltx_Math" alttext="\mathcal{F}_{t}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub></math>, and <math id="Thmthm3.p2.m9" class="ltx_Math" alttext="\mathcal{G}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒢</mi></math> replaced by <math id="Thmthm3.p2.m10" class="ltx_Math" alttext="\mathcal{F}_{s}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>s</mi></msub></math> (<math id="Thmthm3.p2.m11" class="ltx_Math" alttext="s\leq t" display="inline"><mrow><mi>s</mi><mo>≤</mo><mi>t</mi></mrow></math>),
+to obtain:</p>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="\mathbb{E}[X_{t}Z_{t}\mid\mathcal{F}_{s}]=Z_{s}\,\mathbb{E}^{\mathbb{Q}}[X_{t}%
+\mid\mathcal{F}_{s}]=Z_{s}X_{s}\,," display="block"><mrow><mi>𝔼</mi><mrow><mo stretchy="false">[</mo><msub><mi>X</mi><mi>t</mi></msub><msub><mi>Z</mi><mi>t</mi></msub><mo>∣</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>s</mi></msub><mo stretchy="false">]</mo></mrow><mo>=</mo><mpadded width="+1.7pt"><msub><mi>Z</mi><mi>s</mi></msub></mpadded><msup><mi>𝔼</mi><mi>ℚ</mi></msup><mrow><mo stretchy="false">[</mo><msub><mi>X</mi><mi>t</mi></msub><mo>∣</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>s</mi></msub><mo stretchy="false">]</mo></mrow><mo>=</mo><msub><mi>Z</mi><mi>s</mi></msub><mpadded width="+1.7pt"><msub><mi>X</mi><mi>s</mi></msub></mpadded><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">thus proving that <math id="Thmthm3.p2.m12" class="ltx_Math" alttext="X_{t}Z_{t}" display="inline"><mrow><msub><mi>X</mi><mi>t</mi></msub><mo>⁢</mo><msub><mi>Z</mi><mi>t</mi></msub></mrow></math> is a martingale under <math id="Thmthm3.p2.m13" class="ltx_Math" alttext="\mathbb{P}" display="inline"><mi>ℙ</mi></math>
+and <math id="Thmthm3.p2.m14" class="ltx_Math" alttext="\{\mathcal{F}_{t}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub><mo stretchy="false">}</mo></mrow></math>.
+∎</p>
+</div>
+</div>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Sometimes the random variables <math id="p5.m1" class="ltx_Math" alttext="Z_{t}" display="inline"><msub><mi>Z</mi><mi>t</mi></msub></math> in Theorem 3
+are written as <math id="p5.m2" class="ltx_Math" alttext="\left(\frac{d\mathbb{Q}}{d\mathbb{P}}\right)_{t}" display="inline"><msub><mrow><mo>(</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>ℚ</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>ℙ</mi></mrow></mfrac><mo>)</mo></mrow><mi>t</mi></msub></math>.
+(This is a Radon-Nikodym derivative <em class="ltx_emph ltx_font_italic">process</em>;
+note that <math id="p5.m3" class="ltx_Math" alttext="Z_{t}" display="inline"><msub><mi>Z</mi><mi>t</mi></msub></math> defined as <math id="p5.m4" class="ltx_Math" alttext="Z_{t}=\mathbb{E}[Z\mid\mathcal{F}_{t}]" display="inline"><mrow><msub><mi>Z</mi><mi>t</mi></msub><mo>=</mo><mi>𝔼</mi><mrow><mo stretchy="false">[</mo><mi>Z</mi><mo>∣</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub><mo stretchy="false">]</mo></mrow></mrow></math>
+is always a martingale
+under <math id="p5.m5" class="ltx_Math" alttext="\mathbb{P}" display="inline"><mi>ℙ</mi></math> and <math id="p5.m6" class="ltx_Math" alttext="\{\mathcal{F}_{t}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub><mo stretchy="false">}</mo></mrow></math>.)</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Under the hypothesis <math id="p6.m1" class="ltx_Math" alttext="Z_{t}&gt;0" display="inline"><mrow><msub><mi>Z</mi><mi>t</mi></msub><mo>&gt;</mo><mn>0</mn></mrow></math>,
+there is an alternate restatement of Theorem 3
+that may be more easily remembered:</p>
+</div>
+<div id="Thmthm4" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 4</span>.</h6>
+<div id="Thmthm4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmthm4.p1.m1" class="ltx_Math" alttext="Z_{t}=(d\mathbb{Q}/d\mathbb{P})_{t}&gt;0" display="inline"><mrow><msub><mi>Z</mi><mi>t</mi></msub><mo mathvariant="normal">=</mo><msub><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mrow><mrow><mi>d</mi><mo mathvariant="italic">⁢</mo><mi mathvariant="normal">Q</mi></mrow><mo mathvariant="normal">/</mo><mi>d</mi></mrow><mo mathvariant="italic">⁢</mo><mi mathvariant="normal">P</mi></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow><mi>t</mi></msub><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">0</mn></mrow></math> almost surely.
+Then <math id="Thmthm4.p1.m2" class="ltx_Math" alttext="X_{t}" display="inline"><msub><mi>X</mi><mi>t</mi></msub></math> is a martingale with respect to <math id="Thmthm4.p1.m3" class="ltx_Math" alttext="\mathbb{P}" display="inline"><mi mathvariant="normal">P</mi></math>,
+if and only if <math id="Thmthm4.p1.m4" class="ltx_Math" alttext="X_{t}/Z_{t}" display="inline"><mrow><msub><mi>X</mi><mi>t</mi></msub><mo mathvariant="normal">/</mo><msub><mi>Z</mi><mi>t</mi></msub></mrow></math> is a martingale with respect to <math id="Thmthm4.p1.m5" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi mathvariant="normal">Q</mi></math>.</span></p>
+</div>
+</div>
+<div id="p7" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">conditional expectation under change of measure</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ConditionalExpectationUnderChangeOfMeasure</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:54:21</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:54:21</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">9</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Derivation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60A10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60-00</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Martingale</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">ConditionalExpectation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:52:54 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

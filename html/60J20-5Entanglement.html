@@ -1,0 +1,346 @@
+<!DOCTYPE html><html>
+<head>
+<title>5. Entanglement</title>
+<!--Generated on Sat Feb 10 12:01:34 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">5. Entanglement</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">The proof of Theorem 4 (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/3distributeddynamicalsystems#Thmthm4</span>)
+showed the structure presheaf has non-unique descent,
+reflecting the fact that measuring devices do not necessarily
+reduce to products of subdevices. Similarly, as we will see,
+measurements do not in general decompose into independent
+submeasurements. Entanglement, <math id="p1.m1" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math>, quantifies how far a
+measurement diverges in bits from the product of its
+submeasurements. It turns out that <math id="p1.m2" class="ltx_Math" alttext="\gamma&gt;0" display="inline"><mrow><mi>γ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> is necessary for
+a system to generate more information than the sum of its
+components: non-unique descent thus provides “room at the top”
+to build systems that perform more precise measurements
+collectively than the sum of their components.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Entanglement has no direct relation to quantum entanglement.
+The name was chosen because of a formal resemblance between the
+two quantities, see Supplementary Information of <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="" class="ltx_ref">1</a>]</cite>.</p>
+</div>
+<div id="Thmdefn10" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 10</span>.</h6>
+<div id="Thmdefn10.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Entanglement</em> over partition <math id="Thmdefn10.p1.m1" class="ltx_Math" alttext="{\mathcal{P}}=\{M_{1}\ldots M_{m}\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><msub><mi>M</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>M</mi><mi>m</mi></msub></mrow><mo stretchy="false">}</mo></mrow></mrow></math>
+of <math id="Thmdefn10.p1.m2" class="ltx_Math" alttext="src({\mathfrak{m}}_{\mathbf{D}})" display="inline"><mrow><mi>s</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>𝔪</mi><mi>𝐃</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> is
+</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\gamma({\mathfrak{m}}_{\mathbf{D}},{\mathcal{P}},{d_{out}})=H\left[{\mathfrak{%
+m}}_{\mathbf{D}}^{\natural}\circ{d_{out}}\Big{\|}\bigotimes_{i=1}^{m}\pi_{j}%
+\circ{\mathfrak{m}}_{j}^{\natural}\circ{d_{out}}\right]" display="block"><mrow><mi>γ</mi><mrow><mo stretchy="false">(</mo><msub><mi>𝔪</mi><mi>𝐃</mi></msub><mo>,</mo><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>,</mo><msub><mi>d</mi><mrow><mi>o</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>t</mi></mrow></msub><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>H</mi><mrow><mo>[</mo><msubsup><mi>𝔪</mi><mi>𝐃</mi><mi mathvariant="normal">♮</mi></msubsup><mo>∘</mo><msub><mi>d</mi><mrow><mi>o</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>t</mi></mrow></msub><mo maxsize="160%" minsize="160%">∥</mo><munderover><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⊗</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><msub><mi>π</mi><mi>j</mi></msub><mo>∘</mo><msubsup><mi>𝔪</mi><mi>j</mi><mi mathvariant="normal">♮</mi></msubsup><mo>∘</mo><msub><mi>d</mi><mrow><mi>o</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>t</mi></mrow></msub><mo>]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="Thmdefn10.p1.m3" class="ltx_Math" alttext="\pi_{j}:{\mathcal{V}}{S}^{\mathbf{D}}\rightarrow{\mathcal{V}}{S}^{M_{j}}" display="inline"><mrow><msub><mi>π</mi><mi>j</mi></msub><mo>:</mo><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒱</mi><mo>⁢</mo><msup><mi>S</mi><mi>𝐃</mi></msup></mrow><mo>→</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒱</mi><mo>⁢</mo><msup><mi>S</mi><msub><mi>M</mi><mi>j</mi></msub></msup></mrow></mrow></mrow></math> and <math id="Thmdefn10.p1.m4" class="ltx_Math" alttext="{\mathfrak{m}}_{j}=\{(k,l)\in{\mathfrak{m}}_{\mathbf{D}}|k\in M_{j}\}" display="inline"><mrow><msub><mi>𝔪</mi><mi>j</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>k</mi><mo>,</mo><mi>l</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><msub><mi>𝔪</mi><mi>𝐃</mi></msub></mrow><mo stretchy="false">|</mo><mrow><mi>k</mi><mo>∈</mo><msub><mi>M</mi><mi>j</mi></msub></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Projecting via <math id="p3.m1" class="ltx_Math" alttext="\pi_{j}" display="inline"><msub><mi>π</mi><mi>j</mi></msub></math> marginalizes onto the subspace
+<math id="p3.m2" class="ltx_Math" alttext="{\mathcal{V}}{S}^{M_{j}}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒱</mi><mo>⁢</mo><msup><mi>S</mi><msub><mi>M</mi><mi>j</mi></msub></msup></mrow></math>. Entanglement thus compares the measurement
+performed by the entire system with submeasurements over the
+decomposition of the source occasions into partition <math id="p3.m3" class="ltx_Math" alttext="{\mathcal{P}}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒫</mi></math>.</p>
+</div>
+<div id="Thmthm9" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 9</span> (effective information decomposes additively when
+entanglement is zero).</h6>
+<div id="Thmthm9.p1" class="ltx_para">
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\gamma({\mathfrak{m}}_{\mathbf{D}},{\mathcal{P}},{d_{out}})=0\,\,\,\,\,%
+\implies\,\,\,\,\,ei({\mathfrak{m}}_{\mathbf{D}},{d_{out}})=\sum_{i=1}^{m}ei({%
+\mathfrak{m}}_{j},{d_{out}})." display="block"><mrow><mrow><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>𝔪</mi><mi>𝐃</mi></msub><mo>,</mo><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>,</mo><msub><mi>d</mi><mrow><mi>o</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>t</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mpadded width="+8.3pt"><mn>0</mn></mpadded><mo rspace="10.8pt">⟹</mo><mrow><mi>e</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>𝔪</mi><mi>𝐃</mi></msub><mo>,</mo><msub><mi>d</mi><mrow><mi>o</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>t</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><mrow><mi>e</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>𝔪</mi><mi>j</mi></msub><mo>,</mo><msub><mi>d</mi><mrow><mi>o</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mi>t</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="p4" class="ltx_para ltx_noindent">
+<p class="ltx_p">Proof: Follows from the observations that (i)
+<math id="p4.m1" class="ltx_Math" alttext="H[p\|p_{1}\otimes p_{2}]=0" display="inline"><mrow><mi>H</mi><mrow><mo stretchy="false">[</mo><mi>p</mi><mo>∥</mo><msub><mi>p</mi><mn>1</mn></msub><mo>⊗</mo><msub><mi>p</mi><mn>2</mn></msub><mo stretchy="false">]</mo></mrow><mo>=</mo><mn>0</mn></mrow></math> if and only if <math id="p4.m2" class="ltx_Math" alttext="p=p_{1}\otimes p_{2}" display="inline"><mrow><mi>p</mi><mo>=</mo><mrow><msub><mi>p</mi><mn>1</mn></msub><mo>⊗</mo><msub><mi>p</mi><mn>2</mn></msub></mrow></mrow></math>; (ii)
+<math id="p4.m3" class="ltx_Math" alttext="H[p_{1}\otimes p_{2}\|q_{1}\otimes q_{2}]=H[p_{1}\|q_{1}]+H[p_{2}\|q_{2}]" display="inline"><mrow><mi>H</mi><mrow><mo stretchy="false">[</mo><msub><mi>p</mi><mn>1</mn></msub><mo>⊗</mo><msub><mi>p</mi><mn>2</mn></msub><mo>∥</mo><msub><mi>q</mi><mn>1</mn></msub><mo>⊗</mo><msub><mi>q</mi><mn>2</mn></msub><mo stretchy="false">]</mo></mrow><mo>=</mo><mi>H</mi><mrow><mo stretchy="false">[</mo><msub><mi>p</mi><mn>1</mn></msub><mo>∥</mo><msub><mi>q</mi><mn>1</mn></msub><mo stretchy="false">]</mo></mrow><mo>+</mo><mi>H</mi><mrow><mo stretchy="false">[</mo><msub><mi>p</mi><mn>2</mn></msub><mo>∥</mo><msub><mi>q</mi><mn>2</mn></msub><mo stretchy="false">]</mo></mrow></mrow></math>;
+and (iii) the uniform distribution on <math id="p4.m4" class="ltx_Math" alttext="{\mathbf{D}}" display="inline"><mi>𝐃</mi></math> is a tensor of
+uniform distributions on subsystems of <math id="p4.m5" class="ltx_Math" alttext="{\mathbf{D}}" display="inline"><mi>𝐃</mi></math>.
+<math id="p4.m6" class="ltx_Math" alttext="\blacksquare" display="inline"><mi mathvariant="normal">■</mi></math></p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">The theorem shows the relationship between effective information
+and entanglement. If a system generates more information “than
+it should” (meaning, more than the sum of its subsystems), then
+the measurements it generates are entangled. Alternatively, only
+indecomposable measurements can be more precise than the sum of
+their submeasurements.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">We conclude with some detailed computations for
+<math id="p6.m1" class="ltx_Math" alttext="X\times Y\xrightarrow{g}Z" display="inline"><mrow><mrow><mi>X</mi><mo>×</mo><mi>Y</mi></mrow><mover accent="true"><mo>→</mo><mo>𝑔</mo></mover><mi>Z</mi></mrow></math>, Diagram (11) (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/4measurement#id2</span>).
+Let <math id="p6.m2" class="ltx_Math" alttext="{\mathcal{P}}=\{X|Y\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>X</mi><mo stretchy="false">|</mo><mi>Y</mi><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+<div id="Thmthm10" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 10</span> (entanglement and effective information for
+<math id="Thmthm10.m1" class="ltx_Math" alttext="g:X\times Y\rightarrow Z" display="inline"><mrow><mi>g</mi><mo mathvariant="normal">:</mo><mrow><mrow><mi>X</mi><mo mathvariant="normal">×</mo><mi>Y</mi></mrow><mo mathvariant="normal">→</mo><mi>Z</mi></mrow></mrow></math>).</h6>
+<div id="Thmthm10.p1" class="ltx_para">
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle\gamma({\mathfrak{m}}_{XY},{\mathcal{P}},\delta_{z})" display="inline"><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>𝔪</mi><mrow><mi>X</mi><mo>⁢</mo><mi>Y</mi></mrow></msub><mo>,</mo><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>,</mo><msub><mi>δ</mi><mi>z</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=\sum_{(x,y)\in g^{-1}(z)}\frac{1}{|g^{-1}(z)|}\log_{2}\frac{|g^{%
+-1}(z)|}{|g^{-1}_{x\times Y}(z)|\cdot|g^{-1}_{X\times Y}(z)|}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></munder></mstyle><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mo stretchy="false">|</mo><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mfrac></mstyle><mo>⁢</mo><mrow><msub><mi>log</mi><mn>2</mn></msub><mo>⁡</mo><mstyle displaystyle="true"><mfrac><mrow><mo stretchy="false">|</mo><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><msubsup><mi>g</mi><mrow><mi>x</mi><mo>×</mo><mi>Y</mi></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>⋅</mo><mrow><mo stretchy="false">|</mo><mrow><msubsup><mi>g</mi><mrow><mi>X</mi><mo>×</mo><mi>Y</mi></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow></mfrac></mstyle></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=ei({\mathfrak{m}}_{XY},\delta_{z})-ei({\mathfrak{m}}_{X\bullet},%
+\delta_{z})-ei({\mathfrak{m}}_{\bullet Y},\delta_{z})." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>e</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>𝔪</mi><mrow><mi>X</mi><mo>⁢</mo><mi>Y</mi></mrow></msub><mo>,</mo><msub><mi>δ</mi><mi>z</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>e</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>𝔪</mi><mrow><mi>X</mi><mo>⁣</mo><mo>∙</mo></mrow></msub><mo>,</mo><msub><mi>δ</mi><mi>z</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>e</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>𝔪</mi><mrow><mi></mi><mo>∙</mo><mi>Y</mi></mrow></msub><mo>,</mo><msub><mi>δ</mi><mi>z</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="p7" class="ltx_para ltx_noindent">
+<p class="ltx_p">Proof:
+The first equality follows from Propositions 5 (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/4measurement#Thmthm5</span>)
+and 6 (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/4measurement#Thmthm6</span>)</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\gamma({\mathfrak{m}}_{XY},{\mathcal{P}},\delta_{z})=\sum_{(x,y)\in g^{-1}(z)}%
+=\sum_{(x,y)\in g^{-1}(z)}\frac{1}{|g^{-1}(z)|}\log_{2}\left[\frac{1}{|g^{-1}(%
+z)|}\cdot\frac{|g^{-1}(z)|}{|g^{-1}_{x\times Y}(z)|}\frac{|g^{-1}(z)|}{|g^{-1}%
+_{X\times Y}(z)|}\right]." display="block"><mrow><mrow><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>𝔪</mi><mrow><mi>X</mi><mo>⁢</mo><mi>Y</mi></mrow></msub><mo>,</mo><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>,</mo><msub><mi>δ</mi><mi>z</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></munder><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></munder><mrow><mfrac><mn>1</mn><mrow><mo stretchy="false">|</mo><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mfrac><mo>⁢</mo><mrow><msub><mi>log</mi><mn>2</mn></msub><mo>⁡</mo><mrow><mo>[</mo><mrow><mrow><mfrac><mn>1</mn><mrow><mo stretchy="false">|</mo><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mfrac><mo>⋅</mo><mfrac><mrow><mo stretchy="false">|</mo><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mrow><mo stretchy="false">|</mo><mrow><msubsup><mi>g</mi><mrow><mi>x</mi><mo>×</mo><mi>Y</mi></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mfrac></mrow><mo>⁢</mo><mfrac><mrow><mo stretchy="false">|</mo><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mrow><mo stretchy="false">|</mo><mrow><msubsup><mi>g</mi><mrow><mi>X</mi><mo>×</mo><mi>Y</mi></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mfrac></mrow><mo>]</mo></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">From the same propositions it follows that
+<math id="p7.m1" class="ltx_Math" alttext="ei({\mathfrak{m}}_{XY},\delta_{z})-ei({\mathfrak{m}}_{X\bullet},\delta_{z})-ei%
+({\mathfrak{m}}_{\bullet Y},\delta_{z})" display="inline"><mrow><mrow><mi>e</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>𝔪</mi><mrow><mi>X</mi><mo>⁢</mo><mi>Y</mi></mrow></msub><mo>,</mo><msub><mi>δ</mi><mi>z</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>e</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>𝔪</mi><mrow><mi>X</mi><mo>⁣</mo><mo>∙</mo></mrow></msub><mo>,</mo><msub><mi>δ</mi><mi>z</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>e</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>𝔪</mi><mrow><mi></mi><mo>∙</mo><mi>Y</mi></mrow></msub><mo>,</mo><msub><mi>δ</mi><mi>z</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math> equals</p>
+<table id="A0.EGx2" class="ltx_equationgroup ltx_eqn_gather ltx_eqn_table">
+
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\displaystyle\log_{2}\frac{|X|\cdot|Y|}{|g^{-1}(x)|}-\sum_{x}\frac{|g^{-1}_{x%
+\times Y}(z)|}{|g^{-1}(z)|}\log_{2}\frac{|X|\cdot|g^{-1}_{x\times Y}(z)|}{|g^{%
+-1}(z)|}-\sum_{y}\frac{|g^{-1}_{X\times y}(z)|}{|g^{-1}(z)|}\log_{2}\frac{|Y|%
+\cdot|g^{-1}_{X\times y}(z)|}{|g^{-1}(z)|}" display="block"><mrow><mrow><msub><mi>log</mi><mn>2</mn></msub><mo>⁡</mo><mfrac><mrow><mrow><mo stretchy="false">|</mo><mi>X</mi><mo stretchy="false">|</mo></mrow><mo>⋅</mo><mrow><mo stretchy="false">|</mo><mi>Y</mi><mo stretchy="false">|</mo></mrow></mrow><mrow><mo stretchy="false">|</mo><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mfrac></mrow><mo>-</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>x</mi></munder><mrow><mfrac><mrow><mo stretchy="false">|</mo><mrow><msubsup><mi>g</mi><mrow><mi>x</mi><mo>×</mo><mi>Y</mi></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mrow><mo stretchy="false">|</mo><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mfrac><mo>⁢</mo><mrow><msub><mi>log</mi><mn>2</mn></msub><mo>⁡</mo><mfrac><mrow><mrow><mo stretchy="false">|</mo><mi>X</mi><mo stretchy="false">|</mo></mrow><mo>⋅</mo><mrow><mo stretchy="false">|</mo><mrow><msubsup><mi>g</mi><mrow><mi>x</mi><mo>×</mo><mi>Y</mi></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow><mrow><mo stretchy="false">|</mo><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mfrac></mrow></mrow></mrow><mo>-</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>y</mi></munder><mrow><mfrac><mrow><mo stretchy="false">|</mo><mrow><msubsup><mi>g</mi><mrow><mi>X</mi><mo>×</mo><mi>y</mi></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mrow><mo stretchy="false">|</mo><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mfrac><mo>⁢</mo><mrow><msub><mi>log</mi><mn>2</mn></msub><mo>⁡</mo><mfrac><mrow><mrow><mo stretchy="false">|</mo><mi>Y</mi><mo stretchy="false">|</mo></mrow><mo>⋅</mo><mrow><mo stretchy="false">|</mo><mrow><msubsup><mi>g</mi><mrow><mi>X</mi><mo>×</mo><mi>y</mi></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow><mrow><mo stretchy="false">|</mo><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mfrac></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\displaystyle=\log_{2}\frac{1}{g^{-1}(z)}-\sum_{(x,y)\in g^{-1}(z)}\frac{1}{|g%
+^{-1}(z)|}\cdot\log_{2}\frac{|g^{-1}_{X\times y}(z)|}{|g^{-1}(z)|}\cdot\frac{|%
+g^{-1}_{x\times Y}(z)|}{|g^{-1}(z)|}." display="block"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><msub><mi>log</mi><mn>2</mn></msub><mo>⁡</mo><mfrac><mn>1</mn><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow><mo>-</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></munder><mrow><mfrac><mn>1</mn><mrow><mo stretchy="false">|</mo><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mfrac><mo>⋅</mo><mrow><msub><mi>log</mi><mn>2</mn></msub><mo>⁡</mo><mrow><mfrac><mrow><mo stretchy="false">|</mo><mrow><msubsup><mi>g</mi><mrow><mi>X</mi><mo>×</mo><mi>y</mi></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mrow><mo stretchy="false">|</mo><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mfrac><mo>⋅</mo><mfrac><mrow><mo stretchy="false">|</mo><mrow><msubsup><mi>g</mi><mrow><mi>x</mi><mo>×</mo><mi>Y</mi></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mrow><mo stretchy="false">|</mo><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mfrac></mrow></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Entanglement quantifies how far the size of the pre-image of
+<math id="p7.m2" class="ltx_Math" alttext="g^{-1}(z)" display="inline"><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> deviates from the sizes of its <math id="p7.m3" class="ltx_Math" alttext="X\times y" display="inline"><mrow><mi>X</mi><mo>×</mo><mi>y</mi></mrow></math> and
+<math id="p7.m4" class="ltx_Math" alttext="x\times Y" display="inline"><mrow><mi>x</mi><mo>×</mo><mi>Y</mi></mrow></math> slices as <math id="p7.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="p7.m6" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> are varied.
+<math id="p7.m7" class="ltx_Math" alttext="\blacksquare" display="inline"><mi mathvariant="normal">■</mi></math></p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">By Corollary 8 (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/4measurement#Thmthm8</span>)
+entanglement also equals <math id="p8.m1" class="ltx_Math" alttext="ei({\mathfrak{m}}_{X\bullet}\rightarrow{\mathfrak{m}}_{XY},\delta_{z})-ei({%
+\mathfrak{m}}_{\bullet Y},\delta_{z})" display="inline"><mrow><mi>e</mi><mi>i</mi><mrow><mo stretchy="false">(</mo><msub><mi>𝔪</mi><mrow><mi>X</mi><mo>⁣</mo><mo>∙</mo></mrow></msub><mo>→</mo><msub><mi>𝔪</mi><mrow><mi>X</mi><mo>⁢</mo><mi>Y</mi></mrow></msub><mo>,</mo><msub><mi>δ</mi><mi>z</mi></msub><mo stretchy="false">)</mo></mrow><mo>-</mo><mi>e</mi><mi>i</mi><mrow><mo stretchy="false">(</mo><msub><mi>𝔪</mi><mrow><mi></mi><mo>∙</mo><mi>Y</mi></mrow></msub><mo>,</mo><msub><mi>δ</mi><mi>z</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math>. In
+Diagram (11) (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/4measurement#id2</span>)
+entanglement is the vertical arrow minus both arrows at the
+bottom, or the difference between opposing diagonal arrows.
+Note that the diagonal arrows from left to right are
+constructed by adding edge <math id="p8.m2" class="ltx_Math" alttext="v_{Y}\rightarrow v_{Z}" display="inline"><mrow><msub><mi>v</mi><mi>Y</mi></msub><mo>→</mo><msub><mi>v</mi><mi>Z</mi></msub></mrow></math> to the null
+system and the subsystem <math id="p8.m3" class="ltx_Math" alttext="{\mathfrak{m}}_{X\bullet}=\{v_{X}\rightarrow v_{Z}\}" display="inline"><mrow><msub><mi>𝔪</mi><mrow><mi>X</mi><mo>⁣</mo><mo>∙</mo></mrow></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>v</mi><mi>X</mi></msub><mo>→</mo><msub><mi>v</mi><mi>Z</mi></msub><mo stretchy="false">}</mo></mrow></mrow></math> respectively. Entanglement is the
+difference between the information generated by the diagonal
+arrows. It quantifies the difference between the information
+<math id="p8.m4" class="ltx_Math" alttext="\{v_{Y}\rightarrow v_{Z}\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><msub><mi>v</mi><mi>Y</mi></msub><mo>→</mo><msub><mi>v</mi><mi>Z</mi></msub></mrow><mo stretchy="false">}</mo></mrow></math> generates in two different contexts.</p>
+</div>
+<div id="Thmthm11" class="ltx_theorem ltx_theorem_cor">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Corollary 11</span> (characterization of disentangled set-valued functions).</h6>
+<div id="Thmthm11.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Function <math id="Thmthm11.p1.m1" class="ltx_Math" alttext="X\times Y\xrightarrow{g}Z" display="inline"><mrow><mrow><mi>X</mi><mo mathvariant="normal">×</mo><mi>Y</mi></mrow><mover accent="true"><mo mathvariant="normal">→</mo><mo>𝑔</mo></mover><mi>Z</mi></mrow></math> performs a
+disentangled measurement when outputting <math id="Thmthm11.p1.m2" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> iff</span></p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="g^{-1}(z)=g^{-1}_{x\times Y}(z)\times g^{-1}_{X\times y}(z)" display="block"><mrow><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><msubsup><mi>g</mi><mrow><mi>x</mi><mo>×</mo><mi>Y</mi></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>×</mo><msubsup><mi>g</mi><mrow><mi>X</mi><mo>×</mo><mi>y</mi></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">for any <math id="Thmthm11.p1.m3" class="ltx_Math" alttext="x,y" display="inline"><mrow><mi>x</mi><mo mathvariant="normal">,</mo><mi>y</mi></mrow></math> such that <math id="Thmthm11.p1.m4" class="ltx_Math" alttext="g(x,y)=z" display="inline"><mrow><mrow><mi>g</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>x</mi><mo mathvariant="normal">,</mo><mi>y</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mi>z</mi></mrow></math>.</span></p>
+</div>
+</div>
+<div id="p9" class="ltx_para ltx_noindent">
+<p class="ltx_p">Proof:
+By Theorem <a href="#Thmthm10" title="Theorem 10 (entanglement and effective information for : g → × X Y Z ). ‣ 5. Entanglement" class="ltx_ref"><span class="ltx_text ltx_ref_tag">10</span></a> entanglement is zero iff</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="|g^{-1}(z)|=|g^{-1}_{x\times Y}(z)|\cdot|g^{-1}_{X\times y}(z)|" display="block"><mrow><mrow><mo stretchy="false">|</mo><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mrow><msubsup><mi>g</mi><mrow><mi>x</mi><mo>×</mo><mi>Y</mi></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>⋅</mo><mrow><mo stretchy="false">|</mo><mrow><msubsup><mi>g</mi><mrow><mi>X</mi><mo>×</mo><mi>y</mi></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for any <math id="p9.m1" class="ltx_Math" alttext="x,y" display="inline"><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow></math> such that <math id="p9.m2" class="ltx_Math" alttext="g(x,y)=z" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>z</mi></mrow></math>. This implies the desired
+result since <math id="p9.m3" class="ltx_Math" alttext="g^{-1}(z)\hookrightarrow g^{-1}_{x\times Y}(z)\times g^{-1}_{X\times y}(z)" display="inline"><mrow><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>↪</mo><mrow><mrow><mrow><msubsup><mi>g</mi><mrow><mi>x</mi><mo>×</mo><mi>Y</mi></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>×</mo><msubsup><mi>g</mi><mrow><mi>X</mi><mo>×</mo><mi>y</mi></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+<math id="p9.m4" class="ltx_Math" alttext="\blacksquare" display="inline"><mi mathvariant="normal">■</mi></math></p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">Thus, the measurement generated by <math id="p10.m1" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is disentangled iff its
+pre-image <math id="p10.m2" class="ltx_Math" alttext="g^{-1}(z)" display="inline"><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> satisfies a strong geometric
+“rectangularity” constraint: that the pre-image decomposes
+into the product of its <math id="p10.m3" class="ltx_Math" alttext="x\times Y" display="inline"><mrow><mi>x</mi><mo>×</mo><mi>Y</mi></mrow></math> and <math id="p10.m4" class="ltx_Math" alttext="X\times y" display="inline"><mrow><mi>X</mi><mo>×</mo><mi>y</mi></mrow></math> slices for
+all pairs of slices intersecting <math id="p10.m5" class="ltx_Math" alttext="g^{-1}(z)" display="inline"><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math>. The
+categorizations performed within a disentangled measuring
+device have nothing to do with each other, so that the device
+is best considered as two (or more) distinct devices that
+happen to have been grouped together for the purposes of
+performing a computation.</p>
+</div>
+<div id="Thmeg4" class="ltx_theorem ltx_theorem_eg">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 4</span>.</h6>
+<div id="Thmeg4.p1" class="ltx_para">
+<p class="ltx_p">An XOR-gate <math id="Thmeg4.p1.m1" class="ltx_Math" alttext="g:X\times Y\rightarrow Z" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mrow><mi>X</mi><mo>×</mo><mi>Y</mi></mrow><mo>→</mo><mi>Z</mi></mrow></mrow></math> outputting 0
+generates an entangled measurement. The pre-image is
+<math id="Thmeg4.p1.m2" class="ltx_Math" alttext="g^{-1}(0)=\{00,11\}" display="inline"><mrow><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>00</mn><mo>,</mo><mn>11</mn><mo stretchy="false">}</mo></mrow></mrow></math> so the XOR-gate generates 1 bit
+of information about occasions <math id="Thmeg4.p1.m3" class="ltx_Math" alttext="v_{X}" display="inline"><msub><mi>v</mi><mi>X</mi></msub></math> and <math id="Thmeg4.p1.m4" class="ltx_Math" alttext="v_{Y}" display="inline"><msub><mi>v</mi><mi>Y</mi></msub></math>. However,
+the bit is <em class="ltx_emph ltx_font_italic">not localizable</em>. The measurement
+generates no information about occasion <math id="Thmeg4.p1.m5" class="ltx_Math" alttext="v_{X}" display="inline"><msub><mi>v</mi><mi>X</mi></msub></math> taken singly,
+since its output could have been 0 or 1 with equal
+probability; and similarly for <math id="Thmeg4.p1.m6" class="ltx_Math" alttext="v_{Y}" display="inline"><msub><mi>v</mi><mi>Y</mi></msub></math>.</p>
+</div>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">Finally, and unsurprisingly, a function is completely
+disentangled across all its measurements iff it is a
+product of two simpler functions:</p>
+</div>
+<div id="Thmthm12" class="ltx_theorem ltx_theorem_cor">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Corollary 12</span> (completely disentangled functions are products).</h6>
+<div id="Thmthm12.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmthm12.p1.m1" class="ltx_Math" alttext="X\times Y\xrightarrow{g}Z" display="inline"><mrow><mrow><mi>X</mi><mo mathvariant="normal">×</mo><mi>Y</mi></mrow><mover accent="true"><mo mathvariant="normal">→</mo><mo>𝑔</mo></mover><mi>Z</mi></mrow></math> is surjective, then
+<br class="ltx_break"><math id="Thmthm12.p1.m2" class="ltx_Math" alttext="\gamma({\mathfrak{m}}_{XY},{\mathcal{P}},\delta_{z})=0" display="inline"><mrow><mrow><mi>γ</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi mathvariant="normal">m</mi><mrow><mi>X</mi><mo mathvariant="italic">⁢</mo><mi>Y</mi></mrow></msub><mo mathvariant="normal">,</mo><mi class="ltx_font_mathcaligraphic" mathvariant="normal">P</mi><mo mathvariant="normal">,</mo><msub><mi>δ</mi><mi>z</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mn mathvariant="normal">0</mn></mrow></math> for all <math id="Thmthm12.p1.m3" class="ltx_Math" alttext="z\in Z" display="inline"><mrow><mi>z</mi><mo mathvariant="normal">∈</mo><mi>Z</mi></mrow></math> iff <math id="Thmthm12.p1.m4" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>
+decomposes into <math id="Thmthm12.p1.m5" class="ltx_Math" alttext="X\times Y\xrightarrow{g_{1}\times g_{2}}Z_{1}\times Z_{2}=Z" display="inline"><mrow><mrow><mi>X</mi><mo mathvariant="normal">×</mo><mi>Y</mi></mrow><mover accent="true"><mo mathvariant="normal">→</mo><mrow><msub><mi>g</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">×</mo><msub><mi>g</mi><mn mathvariant="normal">2</mn></msub></mrow></mover><mrow><msub><mi>Z</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">×</mo><msub><mi>Z</mi><mn mathvariant="normal">2</mn></msub></mrow><mo mathvariant="normal">=</mo><mi>Z</mi></mrow></math> for <math id="Thmthm12.p1.m6" class="ltx_Math" alttext="X\xrightarrow{g_{1}}Z_{1}" display="inline"><mrow><mi>X</mi><mover accent="true"><mo mathvariant="normal">→</mo><msub><mi>g</mi><mn mathvariant="normal">1</mn></msub></mover><msub><mi>Z</mi><mn mathvariant="normal">1</mn></msub></mrow></math> and
+<math id="Thmthm12.p1.m7" class="ltx_Math" alttext="Y\xrightarrow{g_{2}}Z_{2}" display="inline"><mrow><mi>Y</mi><mover accent="true"><mo mathvariant="normal">→</mo><msub><mi>g</mi><mn mathvariant="normal">2</mn></msub></mover><msub><mi>Z</mi><mn mathvariant="normal">2</mn></msub></mrow></math>.</span></p>
+</div>
+</div>
+<div id="p12" class="ltx_para ltx_noindent">
+<p class="ltx_p">Proof:
+The reverse implication is trivial.
+In the forward direction, note that <math id="p12.m1" class="ltx_Math" alttext="Z=\{g^{-1}(z)|z\in Z\}" display="inline"><mrow><mi>Z</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo><mrow><mi>z</mi><mo>∈</mo><mi>Z</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>
+and, by Corollary <a href="#Thmthm11" title="Corollary 11 (characterization of disentangled set-valued functions). ‣ 5. Entanglement" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11</span></a>, each pre-image has product
+structure <math id="p12.m2" class="ltx_Math" alttext="g^{-1}(z)=g^{-1}_{x\times Y}(Z)\times g^{-1}_{X\times Y}(z)" display="inline"><mrow><mrow><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><msubsup><mi>g</mi><mrow><mi>x</mi><mo>×</mo><mi>Y</mi></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>×</mo><msubsup><mi>g</mi><mrow><mi>X</mi><mo>×</mo><mi>Y</mi></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Let <math id="p12.m3" class="ltx_Math" alttext="Z_{1}=\{g^{-1}_{X\times y}|y\in Y\mbox{ and }z\in Z\}" display="inline"><mrow><msub><mi>Z</mi><mn>1</mn></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><msubsup><mi>g</mi><mrow><mi>X</mi><mo>×</mo><mi>y</mi></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo stretchy="false">|</mo><mrow><mi>y</mi><mo>∈</mo><mrow><mi>Y</mi><mo>⁢</mo><mtext> and </mtext><mo>⁢</mo><mi>z</mi></mrow><mo>∈</mo><mi>Z</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math> and similarly for <math id="p12.m4" class="ltx_Math" alttext="Z_{2}" display="inline"><msub><mi>Z</mi><mn>2</mn></msub></math>. Define</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="g_{1}:X\rightarrow Z_{1}:x\mapsto\mbox{the unique element of
+form }g^{-1}_{X\times y}(z)\mbox{ containing it,}" display="block"><mrow><msub><mi>g</mi><mn>1</mn></msub><mo>:</mo><mrow><mi>X</mi><mo>→</mo><msub><mi>Z</mi><mn>1</mn></msub></mrow><mo>:</mo><mrow><mi>x</mi><mo>↦</mo><mrow><mtext>the unique element of
+form </mtext><mo>⁢</mo><msubsup><mi>g</mi><mrow><mi>X</mi><mo>×</mo><mi>y</mi></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mtext> containing it,</mtext></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and similarly for <math id="p12.m5" class="ltx_Math" alttext="g_{2}" display="inline"><msub><mi>g</mi><mn>2</mn></msub></math>.</p>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+David Balduzzi &amp; Giulio Tononi
+(2009): <em class="ltx_emph ltx_font_italic">Qualia: the geometry of
+integrated information</em>.
+
+</span>
+        
+<span class="ltx_bibblock"><span class="ltx_text ltx_font_slanted">PLoS Comput Biol</span>
+5(8), p. e1000462,
+doi:<span class="ltx_text ltx_font_typewriter">10.1371/journal.pcbi.1000462</span>.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p13" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">5. Entanglement</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5Entanglement</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2014-04-22 23:06:40</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2014-04-22 23:06:40</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Feature</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 12:01:34 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

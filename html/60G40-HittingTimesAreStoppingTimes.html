@@ -1,0 +1,233 @@
+<!DOCTYPE html><html>
+<head>
+<title>hitting times are stopping times</title>
+<!--Generated on Sat Feb 10 11:59:01 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">hitting times are stopping times</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="(\mathcal{F}_{t})_{t\in\mathbb{T}}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>t</mi><mo>∈</mo><mi>𝕋</mi></mrow></msub></math> be a filtration (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/FiltrationOfSigmaAlgebras</span>) on a measurable space <math id="p2.m2" class="ltx_Math" alttext="(\Omega,\mathcal{F})" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo stretchy="false">)</mo></mrow></math>. If <math id="p2.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is an adapted stochastic process taking values in a measurable space <math id="p2.m4" class="ltx_Math" alttext="(E,\mathcal{A})" display="inline"><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo stretchy="false">)</mo></mrow></math> then the <em class="ltx_emph ltx_font_italic">hitting time</em> of a set <math id="p2.m5" class="ltx_Math" alttext="S\in\mathcal{A}" display="inline"><mrow><mi>S</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow></math> is defined as</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle\tau\colon\Omega\rightarrow\mathbb{T}\cup\{\pm\infty\}," display="inline"><mrow><mrow><mi>τ</mi><mo>:</mo><mrow><mi mathvariant="normal">Ω</mi><mo>→</mo><mrow><mi>𝕋</mi><mo>∪</mo><mrow><mo stretchy="false">{</mo><mrow><mo>±</mo><mi mathvariant="normal">∞</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle\tau(\omega)=\inf\left\{t\in\mathbb{T}:X_{t}(\omega)\in S\right\}." display="inline"><mrow><mrow><mrow><mi>τ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo movablelimits="false">inf</mo><mo>⁡</mo><mrow><mo>{</mo><mrow><mi>t</mi><mo>∈</mo><mi>𝕋</mi></mrow><mo>:</mo><mrow><mrow><msub><mi>X</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mi>S</mi></mrow><mo>}</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We suppose that <math id="p2.m6" class="ltx_Math" alttext="\mathbb{T}" display="inline"><mi>𝕋</mi></math> is a closed subset of <math id="p2.m7" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>, so the hitting time <math id="p2.m8" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math> will indeed lie in <math id="p2.m9" class="ltx_Math" alttext="\mathbb{T}" display="inline"><mi>𝕋</mi></math> whenever it is finite. The main cases are discrete-time when <math id="p2.m10" class="ltx_Math" alttext="\mathbb{T}=\mathbb{Z}_{+}" display="inline"><mrow><mi>𝕋</mi><mo>=</mo><msub><mi>ℤ</mi><mo>+</mo></msub></mrow></math> and continuous-time where <math id="p2.m11" class="ltx_Math" alttext="\mathbb{T}=\mathbb{R}_{+}" display="inline"><mrow><mi>𝕋</mi><mo>=</mo><msub><mi>ℝ</mi><mo>+</mo></msub></mrow></math>. An important property of hitting times is that they are stopping times, as stated below for the different cases.</p>
+</div>
+<section id="S0.SSx1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Discrete-time processes</h2>
+
+<div id="S0.SSx1.p1" class="ltx_para">
+<p class="ltx_p">For discrete-time processes, hitting times are easily shown to be stopping times.</p>
+</div>
+<div id="Thmtheoremx1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem</span>.</h6>
+<div id="Thmtheoremx1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If the index set <math id="Thmtheoremx1.p1.m1" class="ltx_Math" alttext="\mathbb{T}" display="inline"><mi mathvariant="normal">T</mi></math> is discrete, then the hitting time <math id="Thmtheoremx1.p1.m2" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math> is a stopping time.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S0.SSx1.p2" class="ltx_para">
+<p class="ltx_p">For any <math id="S0.SSx1.p2.m1" class="ltx_Math" alttext="s\leq t\in\mathbb{T}" display="inline"><mrow><mi>s</mi><mo>≤</mo><mi>t</mi><mo>∈</mo><mi>𝕋</mi></mrow></math> then <math id="S0.SSx1.p2.m2" class="ltx_Math" alttext="X_{s}" display="inline"><msub><mi>X</mi><mi>s</mi></msub></math> will be <math id="S0.SSx1.p2.m3" class="ltx_Math" alttext="\mathcal{F}_{t}/\mathcal{A}" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub><mo>/</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow></math>-measurable, as it is adapted. So, by the fact that the <math id="S0.SSx1.p2.m4" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra <math id="S0.SSx1.p2.m5" class="ltx_Math" alttext="\mathcal{F}_{t}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub></math> is closed under taking countable unions,</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\left\{\tau\leq t\right\}=\bigcup_{\begin{subarray}{c}s\in\mathbb{T},\\
+s\leq t\end{subarray}}X_{s}^{-1}(S)\in\mathcal{F}_{t}" display="block"><mrow><mrow><mo>{</mo><mi>τ</mi><mo>≤</mo><mi>t</mi><mo>}</mo></mrow><mo>=</mo><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋃</mo><mtable class="ltx_align_c" rowspacing="0.0pt"><mtr><mtd><mrow><mi>s</mi><mo>∈</mo><mi>𝕋</mi><mo>,</mo></mrow></mtd></mtr><mtr><mtd><mrow><mi>s</mi><mo>≤</mo><mi>t</mi></mrow></mtd></mtr></mtable></munder><msubsup><mi>X</mi><mi>s</mi><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">as required.
+∎</p>
+</div>
+</div>
+</section>
+<section id="S0.SSx2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Continuous processes</h2>
+
+<div id="S0.SSx2.p1" class="ltx_para">
+<p class="ltx_p">For continuous-time processes it is not necessarily true that a hitting time is even measurable, unless further conditions are imposed. Processes with continuous sample paths can be dealt with easily.</p>
+</div>
+<div id="Thmtheoremx2" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem</span>.</h6>
+<div id="Thmtheoremx2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose that <math id="Thmtheoremx2.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a continuous and adapted process taking values in a metric space <math id="Thmtheoremx2.p1.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>. Then, the hitting time <math id="Thmtheoremx2.p1.m3" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math> of any closed subset <math id="Thmtheoremx2.p1.m4" class="ltx_Math" alttext="S\subseteq E" display="inline"><mrow><mi>S</mi><mo mathvariant="normal">⊆</mo><mi>E</mi></mrow></math> is a stopping time.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S0.SSx2.p2" class="ltx_para">
+<p class="ltx_p">We may suppose that <math id="S0.SSx2.p2.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is nonempty, and define the continuous function <math id="S0.SSx2.p2.m2" class="ltx_Math" alttext="d_{S}(x)\equiv\inf\{d(x,y)\colon y\in S\}" display="inline"><mrow><mrow><msub><mi>d</mi><mi>S</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≡</mo><mrow><mo>inf</mo><mo>⁡</mo><mrow><mo stretchy="false">{</mo><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:</mo><mrow><mi>y</mi><mo>∈</mo><mi>S</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow></math> on <math id="S0.SSx2.p2.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>. Then, <math id="S0.SSx2.p2.m4" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math> is the first time at which <math id="S0.SSx2.p2.m5" class="ltx_Math" alttext="Y_{t}\equiv d_{S}(X_{t})" display="inline"><mrow><msub><mi>Y</mi><mi>t</mi></msub><mo>≡</mo><mrow><msub><mi>d</mi><mi>S</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math> hits <math id="S0.SSx2.p2.m6" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>. Letting <math id="S0.SSx2.p2.m7" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> be any countable and dense subset of <math id="S0.SSx2.p2.m8" class="ltx_Math" alttext="\mathbb{T}\cap[0,t]" display="inline"><mrow><mi>𝕋</mi><mo>∩</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi>t</mi><mo stretchy="false">]</mo></mrow></mrow></math> then the continuity of the sample paths of <math id="S0.SSx2.p2.m9" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> gives,</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\left\{\tau\leq t\right\}=\left\{\inf_{u\in U}Y_{u}=0\right\}." display="block"><mrow><mrow><mo>{</mo><mi>τ</mi><mo>≤</mo><mi>t</mi><mo>}</mo></mrow><mo>=</mo><mrow><mo>{</mo><munder><mo movablelimits="false">inf</mo><mrow><mi>u</mi><mo>∈</mo><mi>U</mi></mrow></munder><msub><mi>Y</mi><mi>u</mi></msub><mo>=</mo><mn>0</mn><mo>}</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As the infimum of a countable set of measurable functions is measurable, this shows that <math id="S0.SSx2.p2.m10" class="ltx_Math" alttext="\{\tau\leq t\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mi>τ</mi><mo>≤</mo><mi>t</mi></mrow><mo stretchy="false">}</mo></mrow></math> is in <math id="S0.SSx2.p2.m11" class="ltx_Math" alttext="\mathcal{F}_{t}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub></math>.
+∎</p>
+</div>
+</div>
+</section>
+<section id="S0.SSx3" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Right-continuous processes</h2>
+
+<div id="S0.SSx3.p1" class="ltx_para">
+<p class="ltx_p">Right-continuous processes are more difficult to handle than either the discrete-time and continuous sample path situations. The first time at which a right-continuous process hits a given value need not be measurable. However, it can be shown to be universally measurable, and the following result holds.</p>
+</div>
+<div id="Thmtheoremx3" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem</span>.</h6>
+<div id="Thmtheoremx3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose that <math id="Thmtheoremx3.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a right-continuous and adapted process taking values in a metric space <math id="Thmtheoremx3.p1.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>, and that the filtration <math id="Thmtheoremx3.p1.m3" class="ltx_Math" alttext="(\mathcal{F}_{t})" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi class="ltx_font_mathcaligraphic" mathvariant="normal">F</mi><mi>t</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> is universally complete. Then, the hitting time <math id="Thmtheoremx3.p1.m4" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math> of any closed subset <math id="Thmtheoremx3.p1.m5" class="ltx_Math" alttext="S\subseteq E" display="inline"><mrow><mi>S</mi><mo mathvariant="normal">⊆</mo><mi>E</mi></mrow></math> is a stopping time.</span></p>
+</div>
+</div>
+<div id="S0.SSx3.p2" class="ltx_para">
+<p class="ltx_p">In particular, the hitting time of any closed set <math id="S0.SSx3.p2.m1" class="ltx_Math" alttext="S\subseteq\mathbb{R}" display="inline"><mrow><mi>S</mi><mo>⊆</mo><mi>ℝ</mi></mrow></math> for an adapted right-continuous and real-valued process is a stopping time.</p>
+</div>
+<div id="S0.SSx3.p3" class="ltx_para">
+<p class="ltx_p">The proof of this result is rather more involved than the case for continuous processes, and the condition that <math id="S0.SSx3.p3.m1" class="ltx_Math" alttext="\mathcal{F}_{t}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub></math> is universally complete is necessary.</p>
+</div>
+</section>
+<section id="S0.SSx4" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Progressively measurable processes</h2>
+
+<div id="S0.SSx4.p1" class="ltx_para">
+<p class="ltx_p">The début <math id="S0.SSx4.p1.m1" class="ltx_Math" alttext="D(A)" display="inline"><mrow><mi>D</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math> of a set <math id="S0.SSx4.p1.m2" class="ltx_Math" alttext="A\subseteq\mathbb{T}\times\Omega" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mrow><mi>𝕋</mi><mo>×</mo><mi mathvariant="normal">Ω</mi></mrow></mrow></math> is defined to be the hitting time of <math id="S0.SSx4.p1.m3" class="ltx_Math" alttext="\{1\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>1</mn><mo stretchy="false">}</mo></mrow></math> for the process <math id="S0.SSx4.p1.m4" class="ltx_Math" alttext="1_{A}" display="inline"><msub><mn>1</mn><mi>A</mi></msub></math>,</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="D(A)(\omega)=\inf\left\{t\in\mathbb{T}:(t,\omega)\in A\right\}." display="block"><mrow><mrow><mrow><mi>D</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo movablelimits="false">inf</mo><mo>⁡</mo><mrow><mo>{</mo><mrow><mi>t</mi><mo>∈</mo><mi>𝕋</mi></mrow><mo>:</mo><mrow><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>A</mi></mrow><mo>}</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">An important result for continuous-time stochastic processes is the début theorem.</p>
+</div>
+<div id="Thmtheoremx4" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem</span> (Début theorem).</h6>
+<div id="Thmtheoremx4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose that the filtration <math id="Thmtheoremx4.p1.m1" class="ltx_Math" alttext="(\mathcal{F}_{t})" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi class="ltx_font_mathcaligraphic" mathvariant="normal">F</mi><mi>t</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> is right-continuous and universally complete. Then, the début <math id="Thmtheoremx4.p1.m2" class="ltx_Math" alttext="D(A)" display="inline"><mrow><mi>D</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>A</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> of a progressively measurable <math id="Thmtheoremx4.p1.m3" class="ltx_Math" alttext="A\subseteq\mathbb{T}\times\Omega" display="inline"><mrow><mi>A</mi><mo mathvariant="normal">⊆</mo><mrow><mi mathvariant="normal">T</mi><mo mathvariant="normal">×</mo><mi mathvariant="normal">Ω</mi></mrow></mrow></math> is a stopping time.</span></p>
+</div>
+</div>
+<div id="S0.SSx4.p2" class="ltx_para">
+<p class="ltx_p">Proofs of this typically rely upon properties of analytic sets, and are therefore much more complicated than the result above for right-continuous processes.</p>
+</div>
+<div id="S0.SSx4.p3" class="ltx_para">
+<p class="ltx_p">A process <math id="S0.SSx4.p3.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> taking values in a measurable space <math id="S0.SSx4.p3.m2" class="ltx_Math" alttext="(E,\mathcal{A})" display="inline"><mrow><mo stretchy="false">(</mo><mi>E</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo stretchy="false">)</mo></mrow></math> is said to be progressive if the set <math id="S0.SSx4.p3.m3" class="ltx_Math" alttext="X^{-1}(S)" display="inline"><mrow><msup><mi>X</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></math> is progressively measurable for every <math id="S0.SSx4.p3.m4" class="ltx_Math" alttext="S\in\mathcal{A}" display="inline"><mrow><mi>S</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒜</mi></mrow></math>. In particular, the hitting time of <math id="S0.SSx4.p3.m5" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is equal to the début of <math id="S0.SSx4.p3.m6" class="ltx_Math" alttext="X^{-1}(S)" display="inline"><mrow><msup><mi>X</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></math> and the début theorem has the following immediate corollary.</p>
+</div>
+<div id="Thmtheoremx5" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem</span>.</h6>
+<div id="Thmtheoremx5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose that the filtration <math id="Thmtheoremx5.p1.m1" class="ltx_Math" alttext="(\mathcal{F}_{t})" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi class="ltx_font_mathcaligraphic" mathvariant="normal">F</mi><mi>t</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> is right-continuous and universally complete, and that <math id="Thmtheoremx5.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a progressive process taking values in a measurable space <math id="Thmtheoremx5.p1.m3" class="ltx_Math" alttext="(E,\mathcal{A})" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>E</mi><mo mathvariant="normal">,</mo><mi class="ltx_font_mathcaligraphic" mathvariant="normal">A</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></math>. Then, the hitting time <math id="Thmtheoremx5.p1.m4" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math> of any set <math id="Thmtheoremx5.p1.m5" class="ltx_Math" alttext="S\in\mathcal{A}" display="inline"><mrow><mi>S</mi><mo mathvariant="normal">∈</mo><mi class="ltx_font_mathcaligraphic" mathvariant="normal">A</mi></mrow></math> is a stopping time.</span></p>
+</div>
+</div>
+<div id="S0.SSx4.p4" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">hitting times are stopping times</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">HittingTimesAreStoppingTimes</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:39:06</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:39:06</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60G40</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60G05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">hitting time</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">début</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">debut</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">début theorem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">debut theorem</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:59:01 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

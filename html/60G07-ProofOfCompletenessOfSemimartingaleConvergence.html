@@ -1,0 +1,152 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of completeness of semimartingale convergence</title>
+<!--Generated on Sat Feb 10 11:58:08 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of completeness of semimartingale convergence</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">We start by showing that semimartingale convergence is a vector topology (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/TopologicalVectorSpace</span>) on the space of semimartingales. That is, addition of processes and multiplication by real numbers are continuous (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Continuous</span>) operations.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The continuity of addition follows immediately from the fact that the topology is given by a translation-invariant metric <math id="p2.m1" class="ltx_Math" alttext="D^{\rm s}" display="inline"><msup><mi>D</mi><mi mathvariant="normal">s</mi></msup></math>; if <math id="p2.m2" class="ltx_Math" alttext="X^{n}\rightarrow X" display="inline"><mrow><msup><mi>X</mi><mi>n</mi></msup><mo>→</mo><mi>X</mi></mrow></math> and <math id="p2.m3" class="ltx_Math" alttext="Y^{n}\rightarrow Y" display="inline"><mrow><msup><mi>Y</mi><mi>n</mi></msup><mo>→</mo><mi>Y</mi></mrow></math> then</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="D^{\rm s}(X^{n}+Y^{n}-X-Y)\leq D^{\rm s}(X^{n}-X)+D^{\rm s}(Y^{n}-Y)\rightarrow
+0" display="block"><mrow><mrow><msup><mi>D</mi><mi mathvariant="normal">s</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mi>X</mi><mi>n</mi></msup><mo>+</mo><msup><mi>Y</mi><mi>n</mi></msup></mrow><mo>-</mo><mi>X</mi><mo>-</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mrow><msup><mi>D</mi><mi mathvariant="normal">s</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>X</mi><mi>n</mi></msup><mo>-</mo><mi>X</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msup><mi>D</mi><mi mathvariant="normal">s</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>Y</mi><mi>n</mi></msup><mo>-</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>→</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so <math id="p2.m4" class="ltx_Math" alttext="X^{n}+Y^{n}\rightarrow X+Y" display="inline"><mrow><mrow><msup><mi>X</mi><mi>n</mi></msup><mo>+</mo><msup><mi>Y</mi><mi>n</mi></msup></mrow><mo>→</mo><mrow><mi>X</mi><mo>+</mo><mi>Y</mi></mrow></mrow></math>.
+Also, suppose that <math id="p2.m5" class="ltx_Math" alttext="\lambda_{n}" display="inline"><msub><mi>λ</mi><mi>n</mi></msub></math> are real numbers converging to <math id="p2.m6" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math>. Then, it is easily shown that <math id="p2.m7" class="ltx_Math" alttext="D^{\rm s}(\lambda_{n}Y)\leq\max(|\lambda_{n}|,1)D^{\rm s}(Y)" display="inline"><mrow><mrow><msup><mi>D</mi><mi mathvariant="normal">s</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>λ</mi><mi>n</mi></msub><mo>⁢</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">|</mo><msub><mi>λ</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msup><mi>D</mi><mi mathvariant="normal">s</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all processes <math id="p2.m8" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> and, therefore,</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\begin{split}\displaystyle D^{\rm s}(\lambda_{n}X^{n}-\lambda X)&amp;\displaystyle%
+\leq D^{\rm s}(\lambda_{n}(X^{n}-X))+D^{\rm s}((\lambda_{n}-\lambda)X)\\
+&amp;\displaystyle\leq\max(|\lambda_{n}|,1)D^{\rm s}(X^{n}-X)+D^{\rm s}((\lambda_{%
+n}-\lambda)X).\end{split}" display="block"><mtable columnspacing="0pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="right"><mrow><msup><mi>D</mi><mi mathvariant="normal">s</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>λ</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>X</mi><mi>n</mi></msup></mrow><mo>-</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>X</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="left"><mrow><mi></mi><mo>≤</mo><mrow><mrow><msup><mi>D</mi><mi mathvariant="normal">s</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>λ</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>X</mi><mi>n</mi></msup><mo>-</mo><mi>X</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msup><mi>D</mi><mi mathvariant="normal">s</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>λ</mi><mi>n</mi></msub><mo>-</mo><mi>λ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>X</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd columnalign="left"><mrow><mrow><mi></mi><mo>≤</mo><mrow><mrow><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">|</mo><msub><mi>λ</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msup><mi>D</mi><mi mathvariant="normal">s</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>X</mi><mi>n</mi></msup><mo>-</mo><mi>X</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msup><mi>D</mi><mi mathvariant="normal">s</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>λ</mi><mi>n</mi></msub><mo>-</mo><mi>λ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>X</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As was noted (in semimartingale convergence (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/SemimartingaleConvergence</span>)), the statement that <math id="p2.m9" class="ltx_Math" alttext="D((\lambda_{n}-\lambda)X)\rightarrow 0" display="inline"><mrow><mrow><mi>D</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>λ</mi><mi>n</mi></msub><mo>-</mo><mi>λ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>X</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mn>0</mn></mrow></math> whenever <math id="p2.m10" class="ltx_Math" alttext="\lambda_{n}\rightarrow\lambda" display="inline"><mrow><msub><mi>λ</mi><mi>n</mi></msub><mo>→</mo><mi>λ</mi></mrow></math> is equivalent to the statement that <math id="p2.m11" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a semimartingale, so <math id="p2.m12" class="ltx_Math" alttext="\lambda_{n}X_{n}\rightarrow\lambda X" display="inline"><mrow><mrow><msub><mi>λ</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>X</mi><mi>n</mi></msub></mrow><mo>→</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>X</mi></mrow></mrow></math> and <math id="p2.m13" class="ltx_Math" alttext="D^{\rm s}" display="inline"><msup><mi>D</mi><mi mathvariant="normal">s</mi></msup></math> does indeed generate a vector topology.
+</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">It only remains to show that the topology is complete.
+So, suppose that <math id="p3.m1" class="ltx_Math" alttext="X^{n}-X^{m}\rightarrow 0" display="inline"><mrow><mrow><msup><mi>X</mi><mi>n</mi></msup><mo>-</mo><msup><mi>X</mi><mi>m</mi></msup></mrow><mo>→</mo><mn>0</mn></mrow></math> under the semimartingale topology. Then, we also have ucp convergence (see semimartingale convergence implies ucp convergence) and, <math id="p3.m2" class="ltx_Math" alttext="X^{n}\xrightarrow{\rm ucp}X" display="inline"><mrow><msup><mi>X</mi><mi>n</mi></msup><mover accent="true"><mo>→</mo><mo>ucp</mo></mover><mi mathvariant="normal">X</mi></mrow></math> for a cadlag adapted process <math id="p3.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> (see completeness under ucp convergence). We need to show that this also converges under the semimartingale topology.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">For any simple predictable process <math id="p4.m1" class="ltx_Math" alttext="\xi" display="inline"><mi>ξ</mi></math>, <math id="p4.m2" class="ltx_Math" alttext="\int_{0}^{t}\xi\,dX^{n}\rightarrow\int_{0}^{t}\xi\,dX" display="inline"><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><mpadded width="+1.7pt"><mi>ξ</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><msup><mi>X</mi><mi>n</mi></msup></mrow></mrow></mrow><mo>→</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><mpadded width="+1.7pt"><mi>ξ</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>X</mi></mrow></mrow></mrow></mrow></math> in probability. Therefore, for any sequence of simple predictable processes <math id="p4.m3" class="ltx_Math" alttext="\xi^{n}" display="inline"><msup><mi>ξ</mi><mi>n</mi></msup></math>,</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\int_{0}^{t}\xi^{n}\,dX^{n}-\int_{0}^{t}\xi^{n}\,dX=\lim_{m\rightarrow\infty}%
+\left(\int_{0}^{t}\xi^{n}\,dX^{n}-\int_{0}^{t}\xi^{n}\,dX^{m}\right)" display="block"><mrow><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><mpadded width="+1.7pt"><msup><mi>ξ</mi><mi>n</mi></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><msup><mi>X</mi><mi>n</mi></msup></mrow></mrow></mrow><mo>-</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><mpadded width="+1.7pt"><msup><mi>ξ</mi><mi>n</mi></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>X</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>m</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><mo>(</mo><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><mpadded width="+1.7pt"><msup><mi>ξ</mi><mi>n</mi></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><msup><mi>X</mi><mi>n</mi></msup></mrow></mrow></mrow><mo>-</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><mpadded width="+1.7pt"><msup><mi>ξ</mi><mi>n</mi></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><msup><mi>X</mi><mi>m</mi></msup></mrow></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the limit is taken in probability. If <math id="p4.m4" class="ltx_Math" alttext="|\xi^{n}|\leq 1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><msup><mi>ξ</mi><mi>n</mi></msup><mo stretchy="false">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow></math> then the condition that <math id="p4.m5" class="ltx_Math" alttext="X^{n}-X^{m}" display="inline"><mrow><msup><mi>X</mi><mi>n</mi></msup><mo>-</mo><msup><mi>X</mi><mi>m</mi></msup></mrow></math> goes to zero in the semimartingale topology implies that the right hand side tends to zero in probability as <math id="p4.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> goes to infinity and, <math id="p4.m7" class="ltx_Math" alttext="X^{n}\rightarrow X" display="inline"><mrow><msup><mi>X</mi><mi>n</mi></msup><mo>→</mo><mi>X</mi></mrow></math> in the semimartingale topology.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">This shows that semimartingale convergence is complete on the space of cadlag adapted processes. To show that it is complete on the set of semimartingales, we just need to show that the process <math id="p5.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> above is a semimartingale whenever <math id="p5.m2" class="ltx_Math" alttext="X^{n}" display="inline"><msup><mi>X</mi><mi>n</mi></msup></math> are.
+However, for any sequence of real numbers <math id="p5.m3" class="ltx_Math" alttext="\lambda_{n}\rightarrow 0" display="inline"><mrow><msub><mi>λ</mi><mi>n</mi></msub><mo>→</mo><mn>0</mn></mrow></math> then,</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="D^{\rm s}(\lambda_{n}X)\leq D^{\rm s}(\lambda_{n}X^{m})+\max(|\lambda_{n}|,1)D%
+^{\rm s}(X-X^{m})." display="block"><mrow><mrow><mrow><msup><mi>D</mi><mi mathvariant="normal">s</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>λ</mi><mi>n</mi></msub><mo>⁢</mo><mi>X</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mrow><msup><mi>D</mi><mi mathvariant="normal">s</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>λ</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>X</mi><mi>m</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">|</mo><msub><mi>λ</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msup><mi>D</mi><mi mathvariant="normal">s</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><msup><mi>X</mi><mi>m</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As noted previously, the condition that <math id="p5.m4" class="ltx_Math" alttext="X^{m}" display="inline"><msup><mi>X</mi><mi>m</mi></msup></math> are semimartingales gives <math id="p5.m5" class="ltx_Math" alttext="\lambda_{n}X^{m}\rightarrow 0" display="inline"><mrow><mrow><msub><mi>λ</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>X</mi><mi>m</mi></msup></mrow><mo>→</mo><mn>0</mn></mrow></math> as <math id="p5.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> tends to infinity.</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\limsup_{n\rightarrow\infty}D^{\rm s}(\lambda_{n}X)\leq\sup_{n}\max(|\lambda_{%
+n}|,1)D^{\rm s}(X-X^{m})." display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim sup</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><msup><mi>D</mi><mi mathvariant="normal">s</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>λ</mi><mi>n</mi></msub><mo>⁢</mo><mi>X</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>≤</mo><mrow><munder><mo movablelimits="false">sup</mo><mi>n</mi></munder><mo>⁡</mo><mrow><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">|</mo><msub><mi>λ</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msup><mi>D</mi><mi mathvariant="normal">s</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><msup><mi>X</mi><mi>m</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Taking the limit <math id="p5.m7" class="ltx_Math" alttext="m\rightarrow\infty" display="inline"><mrow><mi>m</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math> shows that <math id="p5.m8" class="ltx_Math" alttext="\lambda_{n}X" display="inline"><mrow><msub><mi>λ</mi><mi>n</mi></msub><mo>⁢</mo><mi>X</mi></mrow></math> tends to zero in the semimartingale topology and, consequently, <math id="p5.m9" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a semimartingale.</p>
+</div>
+<div id="p6" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of completeness of semimartingale convergence</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfCompletenessOfSemimartingaleConvergence</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:40:54</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:40:54</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60G07</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60G48</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 60H05</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:58:08 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

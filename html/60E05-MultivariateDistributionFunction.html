@@ -1,0 +1,153 @@
+<!DOCTYPE html><html>
+<head>
+<title>multivariate distribution function</title>
+<!--Generated on Sat Feb 10 11:55:21 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">multivariate distribution function</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">A function <math id="p1.m1" class="ltx_Math" alttext="F:\mathbb{R}^{n}\to[0,1]" display="inline"><mrow><mi>F</mi><mo>:</mo><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></mrow></math> is said to be a <em class="ltx_emph ltx_font_italic">multivariate distribution function</em> if</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> is non-decreasing in each of its arguments; i.e., for any <math id="I1.i1.p1.m2" class="ltx_Math" alttext="1\leq i\leq n" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>n</mi></mrow></math>, the function <math id="I1.i1.p1.m3" class="ltx_Math" alttext="G_{i}:\mathbb{R}\to[0,1]" display="inline"><mrow><msub><mi>G</mi><mi>i</mi></msub><mo>:</mo><mrow><mi>ℝ</mi><mo>→</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow></mrow></mrow></math> given by <math id="I1.i1.p1.m4" class="ltx_Math" alttext="G_{i}(x):=F(a_{1},\ldots,a_{i-1},x,a_{i+1},\ldots,a_{n})" display="inline"><mrow><mrow><msub><mi>G</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><mi>x</mi><mo>,</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is non-decreasing for any set of <math id="I1.i1.p1.m5" class="ltx_Math" alttext="a_{j}\in\mathbb{R}" display="inline"><mrow><msub><mi>a</mi><mi>j</mi></msub><mo>∈</mo><mi>ℝ</mi></mrow></math> such that <math id="I1.i1.p1.m6" class="ltx_Math" alttext="j\neq i" display="inline"><mrow><mi>j</mi><mo>≠</mo><mi>i</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="G_{i}(-\infty)=0" display="inline"><mrow><mrow><msub><mi>G</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, where <math id="I1.i2.p1.m2" class="ltx_Math" alttext="G_{i}" display="inline"><msub><mi>G</mi><mi>i</mi></msub></math> is defined as above; i.e., the limit of <math id="I1.i2.p1.m3" class="ltx_Math" alttext="G_{i}" display="inline"><msub><mi>G</mi><mi>i</mi></msub></math> as <math id="I1.i2.p1.m4" class="ltx_Math" alttext="x\to-\infty" display="inline"><mrow><mi>x</mi><mo>→</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math> is <math id="I1.i2.p1.m5" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math></p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="F(\infty,\ldots,\infty)=1" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">∞</mi><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>; i.e. the limit of <math id="I1.i3.p1.m2" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> as each of its arguments approaches infinity, is 1.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Generally, right-continuty of <math id="p2.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> in each of its arguments is added as one of the conditions, but it is not assumed here.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">If, in the second condition above, we set <math id="p3.m1" class="ltx_Math" alttext="a_{j}=\infty" display="inline"><mrow><msub><mi>a</mi><mi>j</mi></msub><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math> for <math id="p3.m2" class="ltx_Math" alttext="j\neq i" display="inline"><mrow><mi>j</mi><mo>≠</mo><mi>i</mi></mrow></math>, then <math id="p3.m3" class="ltx_Math" alttext="G_{i}(x)" display="inline"><mrow><msub><mi>G</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is called a (one-dimensional) <em class="ltx_emph ltx_font_italic">margin</em> of <math id="p3.m4" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math>. Similarly, one defines an <math id="p3.m5" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>-dimensional (<math id="p3.m6" class="ltx_Math" alttext="m&lt;n" display="inline"><mrow><mi>m</mi><mo>&lt;</mo><mi>n</mi></mrow></math>) <em class="ltx_emph ltx_font_italic">margin</em> of <math id="p3.m7" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> by setting <math id="p3.m8" class="ltx_Math" alttext="n-m" display="inline"><mrow><mi>n</mi><mo>-</mo><mi>m</mi></mrow></math> of the arguments in <math id="p3.m9" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> to <math id="p3.m10" class="ltx_Math" alttext="\infty" display="inline"><mi mathvariant="normal">∞</mi></math>. For each <math id="p3.m11" class="ltx_Math" alttext="m&lt;n" display="inline"><mrow><mi>m</mi><mo>&lt;</mo><mi>n</mi></mrow></math>, there are <math id="p3.m12" class="ltx_Math" alttext="\binom{n}{m}" display="inline"><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>n</mi><mi>m</mi></mfrac><mo>)</mo></mrow></math> <math id="p3.m13" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>-dimensional margins of <math id="p3.m14" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math>. Each <math id="p3.m15" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>-dimensional margin of a multivariate distribution function is itself a multivariate distribution function. A one-dimensional margin is a distribution function.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Multivariate distribution functions are typically found in probability theory, and especially in statistics. An example of a commonly used multivariate distribution function is the multivariate Gaussian distribution function. In <math id="p4.m1" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math>, the standard bivariate Gaussian distribution function (with zero mean vector, and the identity matrix as its covariance matrix) is given by</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="F(x,y)=\frac{1}{2\pi}\int_{-\infty}^{x}\int_{-\infty}^{y}\operatorname{exp}%
+\big{(}{-\frac{s^{2}+t^{2}}{2}}\big{)}dsdt" display="block"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi>x</mi></msubsup><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi>y</mi></msubsup><mrow><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mo>-</mo><mfrac><mrow><msup><mi>s</mi><mn>2</mn></msup><mo>+</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mn>2</mn></mfrac></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>s</mi></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>t</mi></mrow></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">B. Schweizer and A. Sklar have generalized the above definition to include a wider class of functions. The generalization has to do with the weakening of the coordinate-wise non-decreasing condition (first condition above). The attempt here is to study a class of functions that can be used as models for distributions of distances between points in a “probabilistic metric space”.</p>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"> B. Schweizer and A. Sklar, <span class="ltx_text ltx_font_italic">Probabilistic Metric Spaces</span>, Dover Publications, (2005).
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p6" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">multivariate distribution function</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">MultivariateDistributionFunction</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:33:50</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:33:50</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60E05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 62E10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Copula</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">multivariate cumulative distribution function</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">joint distribution function</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">margin</td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p"></p>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:55:21 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html><html>
+<head>
+<title>multinomial distribution</title>
+<!--Generated on Sat Feb 10 11:55:11 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">multinomial distribution</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="\textbf{X}=(X_{1},\ldots,X_{n})" display="inline"><mrow><mtext>𝐗</mtext><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> be a random vector such that</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="X_{i}\geq 0" display="inline"><mrow><msub><mi>X</mi><mi>i</mi></msub><mo>≥</mo><mn>0</mn></mrow></math> and <math id="I1.i1.p1.m2" class="ltx_Math" alttext="X_{i}\in\mathbb{Z}" display="inline"><mrow><msub><mi>X</mi><mi>i</mi></msub><mo>∈</mo><mi>ℤ</mi></mrow></math></p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="X_{1}+\cdots+X_{n}=N" display="inline"><mrow><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>X</mi><mi>n</mi></msub></mrow><mo>=</mo><mi>N</mi></mrow></math>, where <math id="I1.i2.p1.m2" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> is a fixed integer</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">Then <span class="ltx_text ltx_markedasmath ltx_font_bold">X</span> has a <em class="ltx_emph ltx_font_italic">multinomial distribution</em> if there exists a parameter vector <math id="p1.m3" class="ltx_Math" alttext="\boldsymbol{\pi}=(\pi_{1},\ldots,\pi_{n})" display="inline"><mrow><mi>𝝅</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>π</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>π</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> such that</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p1.m1" class="ltx_Math" alttext="\pi_{i}\geq 0" display="inline"><mrow><msub><mi>π</mi><mi>i</mi></msub><mo>≥</mo><mn>0</mn></mrow></math> and <math id="I2.i1.p1.m2" class="ltx_Math" alttext="\pi_{i}\in\mathbb{R}" display="inline"><mrow><msub><mi>π</mi><mi>i</mi></msub><mo>∈</mo><mi>ℝ</mi></mrow></math></p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i2.p1.m1" class="ltx_Math" alttext="\pi_{1}+\cdots+\pi_{n}=1" display="inline"><mrow><mrow><msub><mi>π</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>π</mi><mi>n</mi></msub></mrow><mo>=</mo><mn>1</mn></mrow></math></p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_markedasmath ltx_font_bold">X</span> has a discrete probability distribution function <math id="I2.i3.p1.m2" class="ltx_Math" alttext="f_{\textbf{X}}(\boldsymbol{x})" display="inline"><mrow><msub><mi>f</mi><mtext>𝐗</mtext></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝒙</mi><mo stretchy="false">)</mo></mrow></mrow></math> in the form:
+</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="f_{\textbf{X}}(\boldsymbol{x})=\frac{N!}{x_{1}!\cdots x_{n}!}\prod_{i=1}^{n}%
+\pi_{i}^{x_{i}}" display="block"><mrow><mrow><msub><mi>f</mi><mtext>𝐗</mtext></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝒙</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mrow><mi>N</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mrow><mrow><msub><mi>x</mi><mn>1</mn></msub><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><msub><mi>x</mi><mi>n</mi></msub><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msubsup><mi>π</mi><mi>i</mi><msub><mi>x</mi><mi>i</mi></msub></msubsup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remarks</span></p>
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i1.p1.m1" class="ltx_Math" alttext="\operatorname{E}[\textbf{X}]=N\boldsymbol{\pi}" display="inline"><mrow><mrow><mi mathvariant="normal">E</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mtext>𝐗</mtext><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mi>N</mi><mo>⁢</mo><mi>𝝅</mi></mrow></mrow></math></p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i2.p1.m1" class="ltx_Math" alttext="\operatorname{Var}[\textbf{X}]=(v_{ij})" display="inline"><mrow><mrow><mi>Var</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mtext>𝐗</mtext><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></math>, where</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="v_{ij}=\begin{cases}N\pi_{i}(1-\pi_{i})&amp;\text{if $i=j$;}\\
+-N\pi_{i}\pi_{j}&amp;\text{if $i\neq j$.}\end{cases}" display="block"><mrow><msub><mi>v</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mi>N</mi><mo>⁢</mo><msub><mi>π</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msub><mi>π</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="left"><mrow><mtext>if </mtext><mrow><mi>i</mi><mo>=</mo><mi>j</mi></mrow><mtext>;</mtext></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><mo>-</mo><mrow><mi>N</mi><mo>⁢</mo><msub><mi>π</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>π</mi><mi>j</mi></msub></mrow></mrow></mtd><mtd columnalign="left"><mrow><mtext>if </mtext><mrow><mi>i</mi><mo>≠</mo><mi>j</mi></mrow><mtext>.</mtext></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p">When <math id="I3.i3.p1.m1" class="ltx_Math" alttext="n=2" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>2</mn></mrow></math>, the multinomial distribution is the same as the binomial distribution</p>
+</div>
+</li>
+<li id="I3.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i4.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I3.i4.p1.m1" class="ltx_Math" alttext="X_{1},\ldots,X_{n}" display="inline"><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub></mrow></math> are mutually independent Poisson random variables with parameters <math id="I3.i4.p1.m2" class="ltx_Math" alttext="\lambda_{1},\ldots,\lambda_{n}" display="inline"><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>λ</mi><mi>n</mi></msub></mrow></math>
+respectively, then the conditional joint distribution of <math id="I3.i4.p1.m3" class="ltx_Math" alttext="X_{1},\ldots,X_{n}" display="inline"><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub></mrow></math> given that <math id="I3.i4.p1.m4" class="ltx_Math" alttext="X_{1}+\cdots+X_{n}=N" display="inline"><mrow><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>X</mi><mi>n</mi></msub></mrow><mo>=</mo><mi>N</mi></mrow></math> is
+multinomial with parameters <math id="I3.i4.p1.m5" class="ltx_Math" alttext="\lambda_{i}/\lambda" display="inline"><mrow><msub><mi>λ</mi><mi>i</mi></msub><mo>/</mo><mi>λ</mi></mrow></math>, where <math id="I3.i4.p1.m6" class="ltx_Math" alttext="\lambda=\sum\lambda_{i}" display="inline"><mrow><mi>λ</mi><mo>=</mo><mrow><mo largeop="true" symmetric="true">∑</mo><msub><mi>λ</mi><mi>i</mi></msub></mrow></mrow></math>.</p>
+</div>
+<div id="I3.i4.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Sketch of proof.</span>
+Each <math id="I3.i4.p2.m1" class="ltx_Math" alttext="X_{i}" display="inline"><msub><mi>X</mi><mi>i</mi></msub></math> is distributed as:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="f_{X_{i}}(x_{i})=\frac{e^{-\lambda_{i}}\lambda_{i}^{x_{i}}}{x_{i}!}" display="block"><mrow><mrow><msub><mi>f</mi><msub><mi>X</mi><mi>i</mi></msub></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mrow><mo>-</mo><msub><mi>λ</mi><mi>i</mi></msub></mrow></msup><mo>⁢</mo><msubsup><mi>λ</mi><mi>i</mi><msub><mi>x</mi><mi>i</mi></msub></msubsup></mrow><mrow><msub><mi>x</mi><mi>i</mi></msub><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The mutual independence of the <math id="I3.i4.p2.m2" class="ltx_Math" alttext="X_{i}" display="inline"><msub><mi>X</mi><mi>i</mi></msub></math>’s shows that the joint probability distribution of the <math id="I3.i4.p2.m3" class="ltx_Math" alttext="X_{i}" display="inline"><msub><mi>X</mi><mi>i</mi></msub></math>’s is given by</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="f_{\textbf{X}}(\boldsymbol{x})=\prod_{i=1}^{n}\frac{e^{-\lambda_{i}}\lambda_{i%
+}^{x_{i}}}{x_{i}!}=e^{-\lambda}\prod_{i=1}^{n}\frac{\lambda_{i}^{x_{i}}}{x_{i}%
+!}," display="block"><mrow><mrow><mrow><msub><mi>f</mi><mtext>𝐗</mtext></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝒙</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mfrac><mrow><msup><mi>e</mi><mrow><mo>-</mo><msub><mi>λ</mi><mi>i</mi></msub></mrow></msup><mo>⁢</mo><msubsup><mi>λ</mi><mi>i</mi><msub><mi>x</mi><mi>i</mi></msub></msubsup></mrow><mrow><msub><mi>x</mi><mi>i</mi></msub><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mrow><mo>=</mo><mrow><msup><mi>e</mi><mrow><mo>-</mo><mi>λ</mi></mrow></msup><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mfrac><msubsup><mi>λ</mi><mi>i</mi><msub><mi>x</mi><mi>i</mi></msub></msubsup><mrow><msub><mi>x</mi><mi>i</mi></msub><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="I3.i4.p2.m4" class="ltx_Math" alttext="\textbf{X}=(X_{1},\ldots,X_{n})" display="inline"><mrow><mtext>𝐗</mtext><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math>, <math id="I3.i4.p2.m5" class="ltx_Math" alttext="\boldsymbol{x}=(x_{1},\ldots,x_{n})" display="inline"><mrow><mi>𝒙</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="I3.i4.p2.m6" class="ltx_Math" alttext="\lambda=\lambda_{1}+\cdots+\lambda_{n}" display="inline"><mrow><mi>λ</mi><mo>=</mo><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>λ</mi><mi>n</mi></msub></mrow></mrow></math>.
+Next, let <math id="I3.i4.p2.m7" class="ltx_Math" alttext="X=X_{1}+\cdots+X_{n}" display="inline"><mrow><mi>X</mi><mo>=</mo><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>X</mi><mi>n</mi></msub></mrow></mrow></math>. Then <math id="I3.i4.p2.m8" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is Poisson distributed with parameter <math id="I3.i4.p2.m9" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> (which can be shown by using induction and the mutual independence of the <math id="I3.i4.p2.m10" class="ltx_Math" alttext="X_{i}" display="inline"><msub><mi>X</mi><mi>i</mi></msub></math>’s):</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="f_{X}(x)=\frac{e^{-\lambda}\lambda^{x}}{x!}." display="block"><mrow><mrow><mrow><msub><mi>f</mi><mi>X</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mrow><mo>-</mo><mi>λ</mi></mrow></msup><mo>⁢</mo><msup><mi>λ</mi><mi>x</mi></msup></mrow><mrow><mi>x</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The conditional probability distribution of <span class="ltx_text ltx_markedasmath ltx_font_bold">X</span> given that <math id="I3.i4.p2.m12" class="ltx_Math" alttext="X=N" display="inline"><mrow><mi>X</mi><mo>=</mo><mi>N</mi></mrow></math> is thus given by:</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="f_{\textbf{X}}(\boldsymbol{x}\mid X=N)=\frac{f_{\textbf{X}}(\boldsymbol{x})}{f%
+_{X}(N)}=(e^{-\lambda}\prod_{i=1}^{n}\frac{\lambda_{i}^{x_{i}}}{x_{i}!})/(%
+\frac{e^{-\lambda}\lambda^{N}}{N!})=\frac{N!}{x_{1}!\cdots x_{n}!}\prod_{i=1}^%
+{n}(\frac{\lambda_{i}}{\lambda})^{x_{i}}," display="block"><mrow><msub><mi>f</mi><mtext>𝐗</mtext></msub><mrow><mo stretchy="false">(</mo><mi>𝒙</mi><mo>∣</mo><mi>X</mi><mo>=</mo><mi>N</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mrow><msub><mi>f</mi><mtext>𝐗</mtext></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝒙</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><msub><mi>f</mi><mi>X</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>=</mo><mrow><mo stretchy="false">(</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>λ</mi></mrow></msup><munderover><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mfrac><msubsup><mi>λ</mi><mi>i</mi><msub><mi>x</mi><mi>i</mi></msub></msubsup><mrow><msub><mi>x</mi><mi>i</mi></msub><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><mo stretchy="false">)</mo></mrow><mo>/</mo><mrow><mo stretchy="false">(</mo><mfrac><mrow><msup><mi>e</mi><mrow><mo>-</mo><mi>λ</mi></mrow></msup><mo>⁢</mo><msup><mi>λ</mi><mi>N</mi></msup></mrow><mrow><mi>N</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac><mo stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mrow><mi>N</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mrow><mrow><msub><mi>x</mi><mn>1</mn></msub><mo lspace="0pt" rspace="3.5pt">!</mo></mrow><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><mrow><msub><mi>x</mi><mi>n</mi></msub><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mrow></mfrac><munderover><mo largeop="true" movablelimits="false" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msup><mrow><mo stretchy="false">(</mo><mfrac><msub><mi>λ</mi><mi>i</mi></msub><mi>λ</mi></mfrac><mo stretchy="false">)</mo></mrow><msub><mi>x</mi><mi>i</mi></msub></msup><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="I3.i4.p2.m13" class="ltx_Math" alttext="\sum x_{i}=N" display="inline"><mrow><mrow><mo largeop="true" symmetric="true">∑</mo><msub><mi>x</mi><mi>i</mi></msub></mrow><mo>=</mo><mi>N</mi></mrow></math> and that <math id="I3.i4.p2.m14" class="ltx_Math" alttext="\sum\lambda_{i}/\lambda=1" display="inline"><mrow><mrow><mo largeop="true" symmetric="true">∑</mo><mrow><msub><mi>λ</mi><mi>i</mi></msub><mo>/</mo><mi>λ</mi></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>.</p>
+</div>
+</li>
+</ul>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">multinomial distribution</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">MultinomialDistribution</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:33:35</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:33:35</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 60E05</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:55:11 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

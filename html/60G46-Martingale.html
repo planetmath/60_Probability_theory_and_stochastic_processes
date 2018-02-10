@@ -1,0 +1,207 @@
+<!DOCTYPE html><html>
+<head>
+<title>martingale</title>
+<!--Generated on Sat Feb 10 11:59:30 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">martingale</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Martingales definition</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Definition</span>. Let <math id="p2.m1" class="ltx_Math" alttext="(\Omega,\mathcal{F},(\mathcal{F}_{t})_{t\in\mathbb{T}},\mathbb{P})" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>,</mo><msub><mrow><mo stretchy="false">(</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>t</mi><mo>∈</mo><mi>𝕋</mi></mrow></msub><mo>,</mo><mi>ℙ</mi><mo stretchy="false">)</mo></mrow></math> be a filtered probability space and <math id="p2.m2" class="ltx_Math" alttext="(X_{t})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow></math> be a stochastic process such that <math id="p2.m3" class="ltx_Math" alttext="X_{t}" display="inline"><msub><mi>X</mi><mi>t</mi></msub></math> is integrable (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Integral2</span>) for all <math id="p2.m4" class="ltx_Math" alttext="t\in\mathbb{T}" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>𝕋</mi></mrow></math>. Then, <math id="p2.m5" class="ltx_Math" alttext="X=(X_{t},\mathcal{F}_{t})" display="inline"><mrow><mi>X</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>t</mi></msub><mo>,</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> is called a <em class="ltx_emph ltx_font_italic">submartingale</em> if</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\mathbb{E}^{\mathbb{P}}[X_{t}|\mathcal{F}_{s}]\geq X_{s},\,\mbox{for every $s&lt;%
+t$, a.e.[$\mathbb{P}$],}" display="block"><mrow><msup><mi>𝔼</mi><mi>ℙ</mi></msup><mrow><mo stretchy="false">[</mo><msub><mi>X</mi><mi>t</mi></msub><mo stretchy="false">|</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>s</mi></msub><mo stretchy="false">]</mo></mrow><mo>≥</mo><msub><mi>X</mi><mi>s</mi></msub><mo rspace="4.2pt">,</mo><mrow><mtext>for every </mtext><mrow><mi>s</mi><mo>&lt;</mo><mi>t</mi></mrow><mtext>, a.e.[</mtext><mi>ℙ</mi><mtext>],</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and a <em class="ltx_emph ltx_font_italic">supermartigale</em> if</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\mathbb{E}^{\mathbb{P}}[X_{t}|\mathcal{F}_{s}]\leq X_{s},\,\mbox{for every $s&lt;%
+t$, a.e.[$\mathbb{P}$].}" display="block"><mrow><msup><mi>𝔼</mi><mi>ℙ</mi></msup><mrow><mo stretchy="false">[</mo><msub><mi>X</mi><mi>t</mi></msub><mo stretchy="false">|</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>s</mi></msub><mo stretchy="false">]</mo></mrow><mo>≤</mo><msub><mi>X</mi><mi>s</mi></msub><mo rspace="4.2pt">,</mo><mrow><mtext>for every </mtext><mrow><mi>s</mi><mo>&lt;</mo><mi>t</mi></mrow><mtext>, a.e.[</mtext><mi>ℙ</mi><mtext>].</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">A submartingale that is also a supermartingale is called a
+<em class="ltx_emph ltx_font_italic">martingale</em>, i.e., a martingale satisfies</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\mathbb{E}^{\mathbb{P}}[X_{t}|\mathcal{F}_{s}]=X_{s},\,\mbox{for
+every $s&lt;t$, a.e.[$\mathbb{P}$].}" display="block"><mrow><msup><mi>𝔼</mi><mi>ℙ</mi></msup><mrow><mo stretchy="false">[</mo><msub><mi>X</mi><mi>t</mi></msub><mo stretchy="false">|</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>s</mi></msub><mo stretchy="false">]</mo></mrow><mo>=</mo><msub><mi>X</mi><mi>s</mi></msub><mo rspace="4.2pt">,</mo><mrow><mtext>for
+every </mtext><mrow><mi>s</mi><mo>&lt;</mo><mi>t</mi></mrow><mtext>, a.e.[</mtext><mi>ℙ</mi><mtext>].</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para ltx_noindent">
+<p class="ltx_p">Similarly, if the <math id="p4.m1" class="ltx_Math" alttext="\{\mathcal{F}_{t}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub><mo stretchy="false">}</mo></mrow></math> form a decreasing collection of <math id="p4.m2" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-subalgebras of <math id="p4.m3" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>, then <math id="p4.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is called a <em class="ltx_emph ltx_font_italic">reverse submartingale</em> if</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\mathbb{E}^{\mathbb{P}}[X_{s}|\mathcal{F}_{t}]\geq X_{t},\,\mbox{for every $s&lt;%
+t$, a.e.[$\mathbb{P}$],}" display="block"><mrow><msup><mi>𝔼</mi><mi>ℙ</mi></msup><mrow><mo stretchy="false">[</mo><msub><mi>X</mi><mi>s</mi></msub><mo stretchy="false">|</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub><mo stretchy="false">]</mo></mrow><mo>≥</mo><msub><mi>X</mi><mi>t</mi></msub><mo rspace="4.2pt">,</mo><mrow><mtext>for every </mtext><mrow><mi>s</mi><mo>&lt;</mo><mi>t</mi></mrow><mtext>, a.e.[</mtext><mi>ℙ</mi><mtext>],</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and a <em class="ltx_emph ltx_font_italic">reverse supermartingale</em> if</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\mathbb{E}^{\mathbb{P}}[X_{s}|\mathcal{F}_{t}]\leq X_{t},\,\mbox{for every $s&lt;%
+t$, a.e.[$\mathbb{P}$].}" display="block"><mrow><msup><mi>𝔼</mi><mi>ℙ</mi></msup><mrow><mo stretchy="false">[</mo><msub><mi>X</mi><mi>s</mi></msub><mo stretchy="false">|</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub><mo stretchy="false">]</mo></mrow><mo>≤</mo><msub><mi>X</mi><mi>t</mi></msub><mo rspace="4.2pt">,</mo><mrow><mtext>for every </mtext><mrow><mi>s</mi><mo>&lt;</mo><mi>t</mi></mrow><mtext>, a.e.[</mtext><mi>ℙ</mi><mtext>].</mtext></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remarks</span></p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">The martingale property captures the idea of a fair bet, where the
+expected future value is equal to the current value.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">The submartingale property is equivalent to</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\int_{A}X_{t}\,d\mathbb{P}\geq\int_{A}X_{s}\,d\mathbb{P}\,\,\,\mbox{for every %
+$A\in\mathcal{F}_{s}$ and $s&lt;t$}" display="block"><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>A</mi></msub><mrow><mpadded width="+1.7pt"><msub><mi>X</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>ℙ</mi></mrow></mrow></mrow><mo>≥</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>A</mi></msub><mrow><mpadded width="+1.7pt"><msub><mi>X</mi><mi>s</mi></msub></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+5pt"><mi>ℙ</mi></mpadded></mrow><mo>⁢</mo><mrow><mtext>for every </mtext><mrow><mi>A</mi><mo>∈</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>s</mi></msub></mrow><mtext> and </mtext><mrow><mi>s</mi><mo>&lt;</mo><mi>t</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and similarly for the other definitions. This is immediate
+from the definition of conditional expectation.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p6" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">martingale</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Martingale</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:33:09</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:33:09</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">25</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60G46</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60G44</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60G42</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">LocalMartingale</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DoobsOptionalSamplingTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ConditionalExpectationUnderChangeOfMeasure</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">MartingaleConvergenceTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">martingale</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">supermartingale</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">submartingale</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">reverse submartingale</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">reverse supermartingale</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:59:30 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html><html>
+<head>
+<title>stochastic process</title>
+<!--Generated on Sat Feb 10 11:57:31 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">stochastic process</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="(\Omega,\mathcal{F},\textbf{P})" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>,</mo><mtext>𝐏</mtext><mo stretchy="false">)</mo></mrow></math> be a probability space. A
+<em class="ltx_emph ltx_font_italic">stochastic process</em> is a collection</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\{X_{t}\mid t\in T\}" display="block"><mrow><mo stretchy="false">{</mo><msub><mi>X</mi><mi>t</mi></msub><mo>∣</mo><mrow><mi>t</mi><mo>∈</mo><mi>T</mi></mrow><mo stretchy="false">}</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">of random variables <math id="p1.m2" class="ltx_Math" alttext="X_{t}" display="inline"><msub><mi>X</mi><mi>t</mi></msub></math> defined on
+<math id="p1.m3" class="ltx_Math" alttext="(\Omega,\mathcal{F},\textbf{P})" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>,</mo><mtext>𝐏</mtext><mo stretchy="false">)</mo></mrow></math>, where <math id="p1.m4" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> is a set, called the
+index set of the process <math id="p1.m5" class="ltx_Math" alttext="\{X_{t}\mid t\in T\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>X</mi><mi>t</mi></msub><mo>∣</mo><mrow><mi>t</mi><mo>∈</mo><mi>T</mi></mrow><mo stretchy="false">}</mo></mrow></math>. <math id="p1.m6" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> is
+usually (but not always) a subset of <math id="p1.m7" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>.
+<math id="p1.m8" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is sometimes known as a <em class="ltx_emph ltx_font_italic">random function</em>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Given any <math id="p2.m1" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>, the possible values of <math id="p2.m2" class="ltx_Math" alttext="X_{t}" display="inline"><msub><mi>X</mi><mi>t</mi></msub></math> are called the
+<em class="ltx_emph ltx_font_italic">states</em> of the process at <math id="p2.m3" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>. The set of all states (for all
+<math id="p2.m4" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>) of a stochastic process is called its <em class="ltx_emph ltx_font_italic">state space</em>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">If <math id="p3.m1" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> is discrete, then the stochastic process is a
+<em class="ltx_emph ltx_font_italic">discrete-time process</em>. If <math id="p3.m2" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> is an interval of <math id="p3.m3" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>,
+then <math id="p3.m4" class="ltx_Math" alttext="\{X_{t}\mid t\in T\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>X</mi><mi>t</mi></msub><mo>∣</mo><mrow><mi>t</mi><mo>∈</mo><mi>T</mi></mrow><mo stretchy="false">}</mo></mrow></math> is a <em class="ltx_emph ltx_font_italic">continuous-time
+process</em>. If <math id="p3.m5" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> can be linearly ordered, then <math id="p3.m6" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> is also known as
+the <em class="ltx_emph ltx_font_italic">time</em>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">A stochastic process <math id="p4.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> with state space <math id="p4.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> can be thought of in either of following three ways.</p>
+</div>
+<div id="p5" class="ltx_para">
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">As a collection of random variables, <math id="I1.i1.p1.m1" class="ltx_Math" alttext="X_{t}" display="inline"><msub><mi>X</mi><mi>t</mi></msub></math>, for each <math id="I1.i1.p1.m2" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> in the index set <math id="I1.i1.p1.m3" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">As a function in two variables <math id="I1.i2.p1.m1" class="ltx_Math" alttext="t\in T" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>T</mi></mrow></math> and <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\omega\in\Omega" display="inline"><mrow><mi>ω</mi><mo>∈</mo><mi mathvariant="normal">Ω</mi></mrow></math>,</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="X\colon T\times\Omega\rightarrow S,\ (t,\omega)\mapsto X_{t}(\omega)." display="block"><mrow><mrow><mi>X</mi><mo>:</mo><mrow><mrow><mrow><mi>T</mi><mo>×</mo><mi mathvariant="normal">Ω</mi></mrow><mo>→</mo><mi>S</mi></mrow><mo rspace="7.5pt">,</mo><mrow><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow><mo>↦</mo><mrow><msub><mi>X</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The process is said to be measurable, or, jointly measurable if it is <math id="I1.i2.p1.m3" class="ltx_Math" alttext="\mathcal{B}(T)\otimes\mathcal{F}/\mathcal{B}(S)" display="inline"><mrow><mrow><mrow><mrow><mi class="ltx_font_mathcaligraphic">ℬ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊗</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi></mrow><mo>/</mo><mi class="ltx_font_mathcaligraphic">ℬ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></math>-measurable. Here, <math id="I1.i2.p1.m4" class="ltx_Math" alttext="\mathcal{B}(T)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℬ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="I1.i2.p1.m5" class="ltx_Math" alttext="\mathcal{B}(S)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">ℬ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></math> are the Borel <math id="I1.i2.p1.m6" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebras on <math id="I1.i2.p1.m7" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> and <math id="I1.i2.p1.m8" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> respectively.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">In terms of the sample paths. Each <math id="I1.i3.p1.m1" class="ltx_Math" alttext="\omega\in\Omega" display="inline"><mrow><mi>ω</mi><mo>∈</mo><mi mathvariant="normal">Ω</mi></mrow></math> maps to a function</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="T\rightarrow S,\ t\mapsto X_{t}(\omega)." display="block"><mrow><mrow><mrow><mi>T</mi><mo>→</mo><mi>S</mi></mrow><mo rspace="7.5pt">,</mo><mrow><mi>t</mi><mo>↦</mo><mrow><msub><mi>X</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Many common examples of stochastic processes have sample paths which are either continuous or cadlag.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Examples</span>. The following list is some of the most common and
+important stochastic processes:</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">a random walk, as well as its limiting case, a Brownian motion, or a Wiener process</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Poisson process</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">Markov process; a Markov chain is a Markov process whose state space is discrete</p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p">renewal process</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Remarks</span>.</p>
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p">Sometimes, a stochastic process is also called a
+<em class="ltx_emph ltx_font_italic">random process</em>, although a stochastic process is generally
+linked to any “time” dependent process. In a random process, the
+index set may not be linearly ordered, as in the case of a random
+field, where the index set may be, for example, the unit sphere <math id="I3.i1.p1.m1" class="ltx_Math" alttext="S^{2}\subseteq\mathbb{R}^{3}" display="inline"><mrow><msup><mi>S</mi><mn>2</mn></msup><mo>⊆</mo><msup><mi>ℝ</mi><mn>3</mn></msup></mrow></math>.</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p">In statistics, a stochastic process is often known as a
+<em class="ltx_emph ltx_font_italic">time series</em>, where the index set is a finite (or at most
+countable) ordered sequence of real numbers.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p8" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">stochastic process</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">StochasticProcess</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:39:10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:39:10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">14</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60G05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60G60</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">random process</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DistributionsOfAStochasticProcess</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">discrete-time process</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">continuous-time process</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">state</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">time series</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">state space</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">random function</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">jointly measurable</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:57:31 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

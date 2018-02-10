@@ -1,0 +1,201 @@
+<!DOCTYPE html><html>
+<head>
+<title>Doob’s inequalities</title>
+<!--Generated on Sat Feb 10 11:59:25 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Doob’s inequalities</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Doob’s inequalities place bounds on the maximum value attained by a martingale in terms of the terminal value.
+We consider a process <math id="p2.m1" class="ltx_Math" alttext="(X_{t})_{t\in\mathbb{T}}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>t</mi><mo>∈</mo><mi>𝕋</mi></mrow></msub></math> defined on the filtered probability space <math id="p2.m2" class="ltx_Math" alttext="(\Omega,\mathcal{F},(\mathcal{F})_{t\in\mathbb{T}},\mathbb{P})" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>,</mo><msub><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo stretchy="false">)</mo></mrow><mrow><mi>t</mi><mo>∈</mo><mi>𝕋</mi></mrow></msub><mo>,</mo><mi>ℙ</mi><mo stretchy="false">)</mo></mrow></math>. The associated maximum process <math id="p2.m3" class="ltx_Math" alttext="(X^{*}_{t})" display="inline"><mrow><mo stretchy="false">(</mo><msubsup><mi>X</mi><mi>t</mi><mo>*</mo></msubsup><mo stretchy="false">)</mo></mrow></math> is</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="X^{*}_{t}\equiv\sup_{s\leq t}|X_{s}|." display="block"><mrow><mrow><msubsup><mi>X</mi><mi>t</mi><mo>*</mo></msubsup><mo>≡</mo><mrow><munder><mo movablelimits="false">sup</mo><mrow><mi>s</mi><mo>≤</mo><mi>t</mi></mrow></munder><mo>⁡</mo><mrow><mo stretchy="false">|</mo><msub><mi>X</mi><mi>s</mi></msub><mo stretchy="false">|</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The notation <math id="p2.m4" class="ltx_Math" alttext="\|\cdot\|_{p}" display="inline"><mrow><mo>∥</mo><mo>⋅</mo><msub><mo>∥</mo><mi>p</mi></msub></mrow></math> for the <math id="p2.m5" class="ltx_Math" alttext="L^{p}" display="inline"><msup><mi>L</mi><mi>p</mi></msup></math>-norm (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/LpSpace</span>) of a random variable will be used.
+In discrete-time or, more generally whenever the index set <math id="p2.m6" class="ltx_Math" alttext="\mathbb{T}" display="inline"><mi>𝕋</mi></math> is countable, then Doob’s inequalities are as follows.</p>
+</div>
+<div id="Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 1</span> (Doob).</h6>
+<div id="Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheorem1.p1.m1" class="ltx_Math" alttext="(X_{t})_{t\in\mathbb{T}}" display="inline"><msub><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi>X</mi><mi>t</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow><mrow><mi>t</mi><mo mathvariant="normal">∈</mo><mi mathvariant="normal">T</mi></mrow></msub></math> be a submartingale with countable index set <math id="Thmtheorem1.p1.m2" class="ltx_Math" alttext="\mathbb{T}" display="inline"><mi mathvariant="normal">T</mi></math>. Then,</span></p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="\mathbb{P}\left(\sup_{s\leq t}X_{s}\geq K\right)\leq K^{-1}\mathbb{E}[(X_{t})_%
+{+}]" display="block"><mrow><mi>ℙ</mi><mrow><mo>(</mo><munder><mo movablelimits="false">sup</mo><mrow><mi>s</mi><mo>≤</mo><mi>t</mi></mrow></munder><msub><mi>X</mi><mi>s</mi></msub><mo>≥</mo><mi>K</mi><mo>)</mo></mrow><mo>≤</mo><msup><mi>K</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mi>𝔼</mi><mrow><mo stretchy="false">[</mo><msub><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow><mo>+</mo></msub><mo stretchy="false">]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem1.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is either a martingale or nonnegative submartingale then,</span></p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_gather ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle\mathbb{P}(X^{*}_{t}\geq K)\leq K^{-1}\mathbb{E}[|X_{t}|]," display="block"><mrow><mi>ℙ</mi><mrow><mo stretchy="false">(</mo><msubsup><mi>X</mi><mi>t</mi><mo>*</mo></msubsup><mo>≥</mo><mi>K</mi><mo stretchy="false">)</mo></mrow><mo>≤</mo><msup><mi>K</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mi>𝔼</mi><mrow><mo stretchy="false">[</mo><mo stretchy="false">|</mo><msub><mi>X</mi><mi>t</mi></msub><mo stretchy="false">|</mo><mo stretchy="false">]</mo></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E3.m1" class="ltx_Math" alttext="\displaystyle\|X^{*}_{t}\|_{p}\leq\frac{p}{p-1}\|X_{t}\|_{p}." display="block"><mrow><mrow><msub><mrow><mo>∥</mo><msubsup><mi>X</mi><mi>t</mi><mo>*</mo></msubsup><mo>∥</mo></mrow><mi>p</mi></msub><mo>≤</mo><mrow><mfrac><mi>p</mi><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></mfrac><mo>⁢</mo><msub><mrow><mo>∥</mo><msub><mi>X</mi><mi>t</mi></msub><mo>∥</mo></mrow><mi>p</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">for every <math id="Thmtheorem1.p1.m4" class="ltx_Math" alttext="K&gt;0" display="inline"><mrow><mi>K</mi><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">0</mn></mrow></math> and <math id="Thmtheorem1.p1.m5" class="ltx_Math" alttext="p&gt;1" display="inline"><mrow><mi>p</mi><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">1</mn></mrow></math>.</span></p>
+</div>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">In particular, (<a href="#S0.E3" title="(3) ‣ Theorem 1 (Doob). ‣ Doob’s inequalities" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>) shows that the maximum of any <math id="p3.m1" class="ltx_Math" alttext="L^{p}" display="inline"><msup><mi>L</mi><mi>p</mi></msup></math>-bounded martingale is itself <math id="p3.m2" class="ltx_Math" alttext="L^{p}" display="inline"><msup><mi>L</mi><mi>p</mi></msup></math>-bounded and, martingales <math id="p3.m3" class="ltx_Math" alttext="X^{n}" display="inline"><msup><mi>X</mi><mi>n</mi></msup></math> converge to <math id="p3.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> in the <math id="p3.m5" class="ltx_Math" alttext="L^{p}" display="inline"><msup><mi>L</mi><mi>p</mi></msup></math>-norm if and only if <math id="p3.m6" class="ltx_Math" alttext="(X^{n}-X)^{*}\rightarrow 0" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>X</mi><mi>n</mi></msup><mo>-</mo><mi>X</mi></mrow><mo stretchy="false">)</mo></mrow><mo>*</mo></msup><mo>→</mo><mn>0</mn></mrow></math> in the <math id="p3.m7" class="ltx_Math" alttext="L^{p}" display="inline"><msup><mi>L</mi><mi>p</mi></msup></math>-norm. The special case where <math id="p3.m8" class="ltx_Math" alttext="p=2" display="inline"><mrow><mi>p</mi><mo>=</mo><mn>2</mn></mrow></math> gives</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\mathbb{E}[(X^{*}_{t})^{2}]\leq 4\mathbb{E}[X_{t}^{2}]" display="block"><mrow><mrow><mi>𝔼</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msup><mrow><mo stretchy="false">(</mo><msubsup><mi>X</mi><mi>t</mi><mo>*</mo></msubsup><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo stretchy="false">]</mo></mrow></mrow><mo>≤</mo><mrow><mn>4</mn><mo>⁢</mo><mi>𝔼</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msubsup><mi>X</mi><mi>t</mi><mn>2</mn></msubsup><mo stretchy="false">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which is known as <em class="ltx_emph ltx_font_italic">Doob’s maximal quadratic inequality</em>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Similarly, (<a href="#S0.E2" title="(2) ‣ Theorem 1 (Doob). ‣ Doob’s inequalities" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) shows that any <math id="p4.m1" class="ltx_Math" alttext="L^{1}" display="inline"><msup><mi>L</mi><mn>1</mn></msup></math>-bounded martingale is almost surely bounded and that convergence in the <math id="p4.m2" class="ltx_Math" alttext="L^{1}" display="inline"><msup><mi>L</mi><mn>1</mn></msup></math>-norm implies ucp convergence. Inequality (<a href="#S0.E1" title="(1) ‣ Theorem 1 (Doob). ‣ Doob’s inequalities" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) is also known as Kolmogorov’s submartingale inequality.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Doob’s inequalities are often applied to continuous-time processes, where <math id="p5.m1" class="ltx_Math" alttext="\mathbb{T}=\mathbb{R}_{+}" display="inline"><mrow><mi>𝕋</mi><mo>=</mo><msub><mi>ℝ</mi><mo>+</mo></msub></mrow></math>. In this case, <math id="p5.m2" class="ltx_Math" alttext="X^{*}_{t}=\sup_{s\leq t}|X_{s}|" display="inline"><mrow><msubsup><mi>X</mi><mi>t</mi><mo>*</mo></msubsup><mo>=</mo><mrow><msub><mo>sup</mo><mrow><mi>s</mi><mo>≤</mo><mi>t</mi></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">|</mo><msub><mi>X</mi><mi>s</mi></msub><mo stretchy="false">|</mo></mrow></mrow></mrow></math> is a supremum of uncountably many random variables, and need not be measurable. Instead, it is typically assumed that the processes are right-continuous, in which case, for any <math id="p5.m3" class="ltx_Math" alttext="t&gt;0" display="inline"><mrow><mi>t</mi><mo>&gt;</mo><mn>0</mn></mrow></math> the supremum may be restricted to the countable set</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\mathbb{T}^{\prime}=\{s\in\mathbb{R}_{+}:s/t\in\mathbb{Q}\}." display="block"><mrow><mrow><msup><mi>𝕋</mi><mo>′</mo></msup><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>s</mi><mo>∈</mo><msub><mi>ℝ</mi><mo>+</mo></msub></mrow><mo>:</mo><mrow><mrow><mi>s</mi><mo>/</mo><mi>t</mi></mrow><mo>∈</mo><mi>ℚ</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Putting this into Theorem <a href="#Thmtheorem1" title="Theorem 1 (Doob). ‣ Doob’s inequalities" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a> gives the following continuous-time version of the inequalities.</p>
+</div>
+<div id="Thmtheorem2" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 2</span> (Doob).</h6>
+<div id="Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheorem2.p1.m1" class="ltx_Math" alttext="(X_{t})_{t\in\mathbb{R}_{+}}" display="inline"><msub><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi>X</mi><mi>t</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow><mrow><mi>t</mi><mo mathvariant="normal">∈</mo><msub><mi mathvariant="normal">R</mi><mo mathvariant="normal">+</mo></msub></mrow></msub></math> be a right-continuous submartingale. Then,</span></p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\mathbb{P}\left(\sup_{s\leq t}X_{s}\geq K\right)\leq K^{-1}\mathbb{E}[(X_{t})]" display="block"><mrow><mi>ℙ</mi><mrow><mo>(</mo><munder><mo movablelimits="false">sup</mo><mrow><mi>s</mi><mo>≤</mo><mi>t</mi></mrow></munder><msub><mi>X</mi><mi>s</mi></msub><mo>≥</mo><mi>K</mi><mo>)</mo></mrow><mo>≤</mo><msup><mi>K</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mi>𝔼</mi><mrow><mo stretchy="false">[</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">for every <math id="Thmtheorem2.p1.m2" class="ltx_Math" alttext="K&gt;0" display="inline"><mrow><mi>K</mi><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">0</mn></mrow></math>.
+If <math id="Thmtheorem2.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is right-continuous and either a martingale or nonnegative submartingale then,</span></p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_gather ltx_eqn_table">
+
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\displaystyle\mathbb{P}(X^{*}_{t}\geq K)\leq K^{-1}\mathbb{E}[|X_{t}|]," display="block"><mrow><mi>ℙ</mi><mrow><mo stretchy="false">(</mo><msubsup><mi>X</mi><mi>t</mi><mo>*</mo></msubsup><mo>≥</mo><mi>K</mi><mo stretchy="false">)</mo></mrow><mo>≤</mo><msup><mi>K</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mi>𝔼</mi><mrow><mo stretchy="false">[</mo><mo stretchy="false">|</mo><msub><mi>X</mi><mi>t</mi></msub><mo stretchy="false">|</mo><mo stretchy="false">]</mo></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\displaystyle\|X^{*}_{t}\|_{p}\leq\frac{p}{p-1}\|X_{t}\|_{p}." display="block"><mrow><mrow><msub><mrow><mo>∥</mo><msubsup><mi>X</mi><mi>t</mi><mo>*</mo></msubsup><mo>∥</mo></mrow><mi>p</mi></msub><mo>≤</mo><mrow><mfrac><mi>p</mi><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></mfrac><mo>⁢</mo><msub><mrow><mo>∥</mo><msub><mi>X</mi><mi>t</mi></msub><mo>∥</mo></mrow><mi>p</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">for every <math id="Thmtheorem2.p1.m4" class="ltx_Math" alttext="K&gt;0" display="inline"><mrow><mi>K</mi><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">0</mn></mrow></math> and <math id="Thmtheorem2.p1.m5" class="ltx_Math" alttext="p&gt;1" display="inline"><mrow><mi>p</mi><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">1</mn></mrow></math>.</span></p>
+</div>
+</div>
+<div id="p6" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Doob’s inequalities</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">DoobsInequalities</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:39:52</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:39:52</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60G46</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60G44</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60G42</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Doob’s inequality</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">KolmogorovsMartingaleInequality</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Doob’s maximal quadratic inequality</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:59:25 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html><html>
+<head>
+<title>Kolmogorov’s martingale inequality</title>
+<!--Generated on Sat Feb 10 11:59:23 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Kolmogorov’s martingale inequality</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="Thmthmx1" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem</span> (Kolmogorov’s martingale inequality).</h6>
+<div id="Thmthmx1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmthmx1.p1.m1" class="ltx_Math" alttext="X(t)" display="inline"><mrow><mi>X</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>t</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math>, for <math id="Thmthmx1.p1.m2" class="ltx_Math" alttext="0\leq t\leq T" display="inline"><mrow><mn mathvariant="normal">0</mn><mo mathvariant="normal">≤</mo><mi>t</mi><mo mathvariant="normal">≤</mo><mi>T</mi></mrow></math>, be a submartingale
+with continuous sample paths.
+Then for any constant <math id="Thmthmx1.p1.m3" class="ltx_Math" alttext="\alpha&gt;0" display="inline"><mrow><mi>α</mi><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">0</mn></mrow></math>,</span></p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\mathbb{P}\Bigl{(}\max_{0\leq t\leq T}X(t)\geq\alpha\Bigr{)}\leq\frac{\mathbb{%
+E}[X(T)^{+}]}{\alpha}\,." display="block"><mrow><mi>ℙ</mi><mrow><mo maxsize="160%" minsize="160%">(</mo><munder><mi>max</mi><mrow><mn>0</mn><mo>≤</mo><mi>t</mi><mo>≤</mo><mi>T</mi></mrow></munder><mi>X</mi><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>≥</mo><mi>α</mi><mo maxsize="160%" minsize="160%">)</mo></mrow><mo>≤</mo><mpadded width="+1.7pt"><mfrac><mrow><mi>𝔼</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mi>X</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow><mo>+</mo></msup></mrow><mo stretchy="false">]</mo></mrow></mrow><mi>α</mi></mfrac></mpadded><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">(The notation <math id="p2.m1" class="ltx_Math" alttext="X(T)^{+}" display="inline"><mrow><mi>X</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow><mo>+</mo></msup></mrow></math> means <math id="p2.m2" class="ltx_Math" alttext="\max(X(T),0)" display="inline"><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math>, the positive part of <math id="p2.m3" class="ltx_Math" alttext="X(T)" display="inline"><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow></math>.)</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Notice the analogy with Markov’s inequality.
+Of course, the conclusion is much stronger than Markov’s inequality,
+as the probabilistic bound applies to an uncountable number
+of random variables. The continuity and submartingale hypotheses
+are used to establish the stronger bound.</p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Let <math id="p4.m1" class="ltx_Math" alttext="\{t_{i}\}_{i=1}^{n}" display="inline"><msubsup><mrow><mo stretchy="false">{</mo><msub><mi>t</mi><mi>i</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup></math> be a partition of the interval <math id="p4.m2" class="ltx_Math" alttext="[0,T]" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi>T</mi><mo stretchy="false">]</mo></mrow></math>.
+Let</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="B=\Bigl{\{}\max_{1\leq i\leq n}X(t_{i})\geq\alpha\Bigr{\}}" display="block"><mrow><mi>B</mi><mo>=</mo><mrow><mo maxsize="160%" minsize="160%">{</mo><munder><mi>max</mi><mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>n</mi></mrow></munder><mi>X</mi><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo>≥</mo><mi>α</mi><mo maxsize="160%" minsize="160%">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and split <math id="p4.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> into disjoint parts <math id="p4.m4" class="ltx_Math" alttext="B_{i}" display="inline"><msub><mi>B</mi><mi>i</mi></msub></math>,
+defined by</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="B_{i}=\Bigl{\{}X(t_{j})&lt;\alpha\text{ for all }j&lt;i\text{ but }X(t_{i})\geq%
+\alpha\Bigr{\}}\,." display="block"><mrow><msub><mi>B</mi><mi>i</mi></msub><mo>=</mo><mrow><mo maxsize="160%" minsize="160%">{</mo><mi>X</mi><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow><mo>&lt;</mo><mi>α</mi><mtext> for all </mtext><mi>j</mi><mo>&lt;</mo><mi>i</mi><mtext> but </mtext><mi>X</mi><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo>≥</mo><mi>α</mi><mo maxsize="160%" minsize="160%" rspace="4.2pt">}</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Also let <math id="p4.m5" class="ltx_Math" alttext="\{\mathcal{F}_{t}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub><mo stretchy="false">}</mo></mrow></math> be the filtration under which <math id="p4.m6" class="ltx_Math" alttext="X(t)" display="inline"><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+is a submartingale.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Then</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle\mathbb{P}(B)" display="inline"><mrow><mi>ℙ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=\sum_{i=1}^{n}\mathbb{E}\bigl{[}1(B_{i})\bigr{]}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mi>𝔼</mi><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">[</mo><mrow><mn>1</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>B</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="120%" minsize="120%">]</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle\leq\sum_{i=1}^{n}\mathbb{E}\left[\frac{X(t_{i})}{\alpha}\,%
+\mathbf{1}(B_{i})\right]" display="inline"><mrow><mi></mi><mo>≤</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mi>𝔼</mi><mo>⁢</mo><mrow><mo>[</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mi>α</mi></mfrac></mstyle><mo>⁢</mo><mn mathvariant="bold"> 1</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>B</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>]</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">definition of <math id="S0.Ex5.m3.m1" class="ltx_Math" alttext="B_{i}" display="inline"><msub><mi>B</mi><mi>i</mi></msub></math></span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle\leq\frac{1}{\alpha}\sum_{i=1}^{n}\mathbb{E}\Bigl{[}\mathbb{E}%
+\bigl{[}X(T)\mid\mathcal{F}_{t_{i}}\bigr{]}\,\mathbf{1}(B_{i})\Bigr{]}" display="inline"><mrow><mo>≤</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>α</mi></mfrac></mstyle><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mi>𝔼</mi><mrow><mo maxsize="160%" minsize="160%">[</mo><mi>𝔼</mi><mrow><mo maxsize="120%" minsize="120%">[</mo><mi>X</mi><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow><mo>∣</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><msub><mi>t</mi><mi>i</mi></msub></msub><mo maxsize="120%" minsize="120%">]</mo></mrow><mn mathvariant="bold"> 1</mn><mrow><mo stretchy="false">(</mo><msub><mi>B</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo maxsize="160%" minsize="160%">]</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath"><math id="S0.Ex6.m3.m1" class="ltx_Math" alttext="X(t)" display="inline"><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> is submartingale</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{\alpha}\sum_{i=1}^{n}\mathbb{E}\Bigl{[}\mathbb{E}\bigl{%
+[}X(T)\,\mathbf{1}(B_{i})\mid\mathcal{F}_{t_{i}}\bigr{]}\Bigr{]}" display="inline"><mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>α</mi></mfrac></mstyle><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mi>𝔼</mi><mrow><mo maxsize="160%" minsize="160%">[</mo><mi>𝔼</mi><mrow><mo maxsize="120%" minsize="120%">[</mo><mi>X</mi><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow><mn mathvariant="bold"> 1</mn><mrow><mo stretchy="false">(</mo><msub><mi>B</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mo>∣</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><msub><mi>t</mi><mi>i</mi></msub></msub><mo maxsize="120%" minsize="120%">]</mo></mrow><mo maxsize="160%" minsize="160%">]</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath"><math id="S0.Ex7.m3.m1" class="ltx_Math" alttext="B_{i}" display="inline"><msub><mi>B</mi><mi>i</mi></msub></math> is <math id="S0.Ex7.m3.m2" class="ltx_Math" alttext="\mathcal{F}_{t_{i}}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><msub><mi>t</mi><mi>i</mi></msub></msub></math>-measurable</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{\alpha}\sum_{i=1}^{n}\mathbb{E}\bigl{[}X(T)\,\mathbf{1}%
+(B_{i})\bigr{]}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>α</mi></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><mi>𝔼</mi><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">[</mo><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mn mathvariant="bold"> 1</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>B</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="120%" minsize="120%">]</mo></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">iterated expectation</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex9.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{\alpha}\mathbb{E}\bigl{[}X(T)\,\mathbf{1}(B)\bigr{]}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>α</mi></mfrac></mstyle><mo>⁢</mo><mi>𝔼</mi><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">[</mo><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mn mathvariant="bold"> 1</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="120%" minsize="120%">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex10.m2" class="ltx_Math" alttext="\displaystyle\leq\frac{1}{\alpha}\mathbb{E}\bigl{[}X(T)^{+}\,\mathbf{1}(B)%
+\bigr{]}" display="inline"><mrow><mi></mi><mo>≤</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>α</mi></mfrac></mstyle><mo>⁢</mo><mi>𝔼</mi><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">[</mo><mrow><mi>X</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow><mo>+</mo></msup><mo>⁢</mo><mn mathvariant="bold"> 1</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="120%" minsize="120%">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex11" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex11.m2" class="ltx_Math" alttext="\displaystyle\leq\frac{1}{\alpha}\mathbb{E}\bigl{[}X(T)^{+}\bigr{]}" display="inline"><mrow><mi></mi><mo>≤</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>α</mi></mfrac></mstyle><mo>⁢</mo><mi>𝔼</mi><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">[</mo><mrow><mi>X</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow><mo>+</mo></msup></mrow><mo maxsize="120%" minsize="120%">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">monotonicity.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Since the sample paths are continuous by hypothesis,
+the event</p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="A=\Bigl{\{}\max_{0\leq t\leq T}X(t)\geq\alpha\Bigr{\}}" display="block"><mrow><mi>A</mi><mo>=</mo><mrow><mo maxsize="160%" minsize="160%">{</mo><munder><mi>max</mi><mrow><mn>0</mn><mo>≤</mo><mi>t</mi><mo>≤</mo><mi>T</mi></mrow></munder><mi>X</mi><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>≥</mo><mi>α</mi><mo maxsize="160%" minsize="160%">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">can be expressed as an countably infinite intersection
+of events of the form <math id="p6.m1" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> with finer and finer partitions <math id="p6.m2" class="ltx_Math" alttext="\{t_{i}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>t</mi><mi>i</mi></msub><mo stretchy="false">}</mo></mrow></math>
+of the time interval <math id="p6.m3" class="ltx_Math" alttext="[0,T]" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi>T</mi><mo stretchy="false">]</mo></mrow></math>.
+By taking limits, it follows
+<math id="p6.m4" class="ltx_Math" alttext="\mathbb{P}(A)" display="inline"><mrow><mi>ℙ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+has the same bound as the probabilities <math id="p6.m5" class="ltx_Math" alttext="\mathbb{P}(B)" display="inline"><mrow><mi>ℙ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="Thmcorx1" class="ltx_theorem ltx_theorem_cor">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Corollary</span>.</h6>
+<div id="Thmcorx1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmcorx1.p1.m1" class="ltx_Math" alttext="X(t)" display="inline"><mrow><mi>X</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>t</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math>, for <math id="Thmcorx1.p1.m2" class="ltx_Math" alttext="0\leq t\leq T" display="inline"><mrow><mn mathvariant="normal">0</mn><mo mathvariant="normal">≤</mo><mi>t</mi><mo mathvariant="normal">≤</mo><mi>T</mi></mrow></math>, be a square-integrable martingale
+possessing continuous sample paths, whose
+unconditional mean is <math id="Thmcorx1.p1.m3" class="ltx_Math" alttext="m=\mathbb{E}[X(0)]" display="inline"><mrow><mi>m</mi><mo mathvariant="normal">=</mo><mrow><mi mathvariant="normal">E</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">[</mo><mrow><mi>X</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mn mathvariant="normal">0</mn><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow></mrow></math>.
+For any constant <math id="Thmcorx1.p1.m4" class="ltx_Math" alttext="\alpha&gt;0" display="inline"><mrow><mi>α</mi><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">0</mn></mrow></math>,</span></p>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="\mathbb{P}\Bigl{(}\max_{0\leq t\leq T}\lvert X(t)-m\rvert\geq\alpha\Bigr{)}%
+\leq\frac{\operatorname{Var}[X(T)]}{\alpha^{2}}\,." display="block"><mrow><mi>ℙ</mi><mrow><mo maxsize="160%" minsize="160%">(</mo><munder><mi>max</mi><mrow><mn>0</mn><mo>≤</mo><mi>t</mi><mo>≤</mo><mi>T</mi></mrow></munder><mrow><mo fence="true" stretchy="false">|</mo><mi>X</mi><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>-</mo><mi>m</mi><mo fence="true" stretchy="false">|</mo></mrow><mo>≥</mo><mi>α</mi><mo maxsize="160%" minsize="160%">)</mo></mrow><mo>≤</mo><mpadded width="+1.7pt"><mfrac><mrow><mi>Var</mi><mo>⁡</mo><mrow><mo stretchy="false">[</mo><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">]</mo></mrow></mrow><msup><mi>α</mi><mn>2</mn></msup></mfrac></mpadded><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="Thmcorx1.p2" class="ltx_para">
+<p class="ltx_p">Apply Kolmogorov’s martingale inequality to <math id="Thmcorx1.p2.m1" class="ltx_Math" alttext="(X(t)-m)^{2}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mi>m</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></math>,
+which is a submartingale by Jensen’s inequality.
+∎</p>
+</div>
+</div>
+</div>
+<div id="p7" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Kolmogorov’s martingale inequality</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">KolmogorovsMartingaleInequality</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:20:22</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:20:22</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60G44</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60G07</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Kolmogorov’s submartingale inequality</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">MarkovsInequality</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">DoobsInequalities</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:59:23 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

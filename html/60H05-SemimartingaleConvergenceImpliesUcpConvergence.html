@@ -1,0 +1,131 @@
+<!DOCTYPE html><html>
+<head>
+<title>semimartingale convergence implies ucp convergence</title>
+<!--Generated on Sat Feb 10 11:59:57 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">semimartingale convergence implies ucp convergence</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="(\Omega,\mathcal{F},(\mathcal{F}_{t})_{t\in\mathbb{F}},\mathbb{P})" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>,</mo><msub><mrow><mo stretchy="false">(</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>t</mi><mo>∈</mo><mi>𝔽</mi></mrow></msub><mo>,</mo><mi>ℙ</mi><mo stretchy="false">)</mo></mrow></math> be a filtered probability space. On the space of cadlag adapted processes, the semimartingale topology is stronger than ucp convergence.</p>
+</div>
+<div id="Thmtheoremx1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem</span>.</h6>
+<div id="Thmtheoremx1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheoremx1.p1.m1" class="ltx_Math" alttext="X^{n}" display="inline"><msup><mi>X</mi><mi>n</mi></msup></math> be a sequence of cadlag adapted processes converging to <math id="Thmtheoremx1.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> in the semimartingale topology. Then, <math id="Thmtheoremx1.p1.m3" class="ltx_Math" alttext="X^{n}" display="inline"><msup><mi>X</mi><mi>n</mi></msup></math> converges ucp to <math id="Thmtheoremx1.p1.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>.</span></p>
+</div>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">To show this, suppose that <math id="p3.m1" class="ltx_Math" alttext="X^{n}\rightarrow X" display="inline"><mrow><msup><mi>X</mi><mi>n</mi></msup><mo>→</mo><mi>X</mi></mrow></math> in the semimartingale topology, and define the stopping times <math id="p3.m2" class="ltx_Math" alttext="\tau_{n}" display="inline"><msub><mi>τ</mi><mi>n</mi></msub></math> by</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="\tau_{n}=\inf\left\{t\geq 0:|X^{n}_{t}-X_{t}|\geq\epsilon\right\}" display="block"><mrow><msub><mi>τ</mi><mi>n</mi></msub><mo>=</mo><mrow><mo movablelimits="false">inf</mo><mo>⁡</mo><mrow><mo>{</mo><mrow><mi>t</mi><mo>≥</mo><mn>0</mn></mrow><mo>:</mo><mrow><mrow><mo stretchy="false">|</mo><mrow><msubsup><mi>X</mi><mi>t</mi><mi>n</mi></msubsup><mo>-</mo><msub><mi>X</mi><mi>t</mi></msub></mrow><mo stretchy="false">|</mo></mrow><mo>≥</mo><mi>ϵ</mi></mrow><mo>}</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">(hitting times are stopping times).
+Then, letting <math id="p3.m3" class="ltx_Math" alttext="\xi^{n}_{t}" display="inline"><msubsup><mi>ξ</mi><mi>t</mi><mi>n</mi></msubsup></math> be the simple predictable process <math id="p3.m4" class="ltx_Math" alttext="1_{\{t\leq\tau_{n}\}}" display="inline"><msub><mn>1</mn><mrow><mo stretchy="false">{</mo><mi>t</mi><mo>≤</mo><msub><mi>τ</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></msub></math>,</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="X^{n}_{\tau_{n}\wedge t}-X_{\tau_{n}\wedge t}=X^{n}_{0}-X_{0}+\int_{0}^{t}\xi^%
+{n}\,dX^{n}-\int_{0}^{t}\xi^{n}\,dX\rightarrow 0" display="block"><mrow><mrow><msubsup><mi>X</mi><mrow><msub><mi>τ</mi><mi>n</mi></msub><mo>∧</mo><mi>t</mi></mrow><mi>n</mi></msubsup><mo>-</mo><msub><mi>X</mi><mrow><msub><mi>τ</mi><mi>n</mi></msub><mo>∧</mo><mi>t</mi></mrow></msub></mrow><mo>=</mo><mrow><mrow><mrow><msubsup><mi>X</mi><mn>0</mn><mi>n</mi></msubsup><mo>-</mo><msub><mi>X</mi><mn>0</mn></msub></mrow><mo>+</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><mpadded width="+1.7pt"><msup><mi>ξ</mi><mi>n</mi></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><msup><mi>X</mi><mi>n</mi></msup></mrow></mrow></mrow></mrow><mo>-</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><mpadded width="+1.7pt"><msup><mi>ξ</mi><mi>n</mi></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>X</mi></mrow></mrow></mrow></mrow><mo>→</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">in probability as <math id="p3.m5" class="ltx_Math" alttext="n\rightarrow\infty" display="inline"><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>. However, note that whenever <math id="p3.m6" class="ltx_Math" alttext="|X^{n}_{s}-X_{s}|&gt;\epsilon" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><msubsup><mi>X</mi><mi>s</mi><mi>n</mi></msubsup><mo>-</mo><msub><mi>X</mi><mi>s</mi></msub></mrow><mo stretchy="false">|</mo></mrow><mo>&gt;</mo><mi>ϵ</mi></mrow></math> for some <math id="p3.m7" class="ltx_Math" alttext="s&lt;t" display="inline"><mrow><mi>s</mi><mo>&lt;</mo><mi>t</mi></mrow></math> then <math id="p3.m8" class="ltx_Math" alttext="\tau\leq s&lt;t" display="inline"><mrow><mi>τ</mi><mo>≤</mo><mi>s</mi><mo>&lt;</mo><mi>t</mi></mrow></math> and <math id="p3.m9" class="ltx_Math" alttext="|X^{n}_{\tau_{n}}-X_{\tau_{n}}|\geq\epsilon" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><msubsup><mi>X</mi><msub><mi>τ</mi><mi>n</mi></msub><mi>n</mi></msubsup><mo>-</mo><msub><mi>X</mi><msub><mi>τ</mi><mi>n</mi></msub></msub></mrow><mo stretchy="false">|</mo></mrow><mo>≥</mo><mi>ϵ</mi></mrow></math>. So</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\mathbb{P}\left(\sup_{s&lt;t}|X^{n}_{s}-X_{s}|&gt;\epsilon\right)\leq\mathbb{P}(\tau%
+_{n}\leq t)\leq\mathbb{P}\left(|X^{n}_{\tau_{n}\wedge t}-X_{\tau_{n}\wedge t}|%
+\geq\epsilon\right)\rightarrow 0" display="block"><mrow><mi>ℙ</mi><mrow><mo>(</mo><munder><mo movablelimits="false">sup</mo><mrow><mi>s</mi><mo>&lt;</mo><mi>t</mi></mrow></munder><mo stretchy="false">|</mo><msubsup><mi>X</mi><mi>s</mi><mi>n</mi></msubsup><mo>-</mo><msub><mi>X</mi><mi>s</mi></msub><mo stretchy="false">|</mo><mo>&gt;</mo><mi>ϵ</mi><mo>)</mo></mrow><mo>≤</mo><mi>ℙ</mi><mrow><mo stretchy="false">(</mo><msub><mi>τ</mi><mi>n</mi></msub><mo>≤</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>≤</mo><mi>ℙ</mi><mrow><mo>(</mo><mo stretchy="false">|</mo><msubsup><mi>X</mi><mrow><msub><mi>τ</mi><mi>n</mi></msub><mo>∧</mo><mi>t</mi></mrow><mi>n</mi></msubsup><mo>-</mo><msub><mi>X</mi><mrow><msub><mi>τ</mi><mi>n</mi></msub><mo>∧</mo><mi>t</mi></mrow></msub><mo stretchy="false">|</mo><mo>≥</mo><mi>ϵ</mi><mo>)</mo></mrow><mo>→</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">as <math id="p3.m10" class="ltx_Math" alttext="n\rightarrow\infty" display="inline"><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>, proving ucp convergence.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">As a minor technical point, note that the result that the hitting times <math id="p4.m1" class="ltx_Math" alttext="\tau_{n}" display="inline"><msub><mi>τ</mi><mi>n</mi></msub></math> are stopping times requires the filtration to be at least universally complete. However, this condition is not needed. It is easily shown that semimartingale convergence is not affected by passing to the completion (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CompleteMeasure</span>) of the filtered probability space or, alternatively, it is enough to define the stopping times in (<a href="#S0.E1" title="(1) ‣ semimartingale convergence implies ucp convergence" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) by restricting <math id="p4.m2" class="ltx_Math" alttext="\tau_{n}" display="inline"><msub><mi>τ</mi><mi>n</mi></msub></math> to finite but suitably dense subsets of <math id="p4.m3" class="ltx_Math" alttext="[0,t]" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi>t</mi><mo stretchy="false">]</mo></mrow></math> and using the right-continuity of the processes.</p>
+</div>
+<div id="p5" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">semimartingale convergence implies ucp convergence</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">SemimartingaleConvergenceImpliesUcpConvergence</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:40:44</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:40:44</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60H05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60G48</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 60G07</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:59:57 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

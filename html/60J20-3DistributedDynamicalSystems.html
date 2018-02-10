@@ -1,0 +1,497 @@
+<!DOCTYPE html><html>
+<head>
+<title>3. Distributed dynamical systems</title>
+<!--Generated on Sat Feb 10 12:01:23 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">3. Distributed dynamical systems</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Probabilistic cellular automata provide useful toy models of a
+wide range of physical and biological systems. A cellular
+automaton consists of a collection of cells, each equipped with
+neighbors. Two important important examples are</p>
+</div>
+<div id="Thmeg2" class="ltx_theorem ltx_theorem_eg">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 2</span> (Conway’s game of life).</h6>
+<div id="Thmeg2.p1" class="ltx_para">
+<p class="ltx_p">The cellular automaton is a grid of deterministic cells
+with outputs <math id="Thmeg2.p1.m1" class="ltx_Math" alttext="\{0,1\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">}</mo></mrow></math>. A cell outputs 1 at time <math id="Thmeg2.p1.m2" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> iff:
+(i) three of its neighbors outputted 1s at time <math id="Thmeg2.p1.m3" class="ltx_Math" alttext="t-1" display="inline"><mrow><mi>t</mi><mo>-</mo><mn>1</mn></mrow></math> or
+(ii) it and two neighbors outputted 1s at <math id="Thmeg2.p1.m4" class="ltx_Math" alttext="t-1" display="inline"><mrow><mi>t</mi><mo>-</mo><mn>1</mn></mrow></math>. Remarkably,
+a sufficiently large game of life grid can implement any
+deterministic computation <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib3" title="" class="ltx_ref">3</a>]</cite>.</p>
+</div>
+</div>
+<div id="Thmeg3" class="ltx_theorem ltx_theorem_eg">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Example 3</span> (Hopfield networks).</h6>
+<div id="Thmeg3.p1" class="ltx_para">
+<p class="ltx_p">These are probabilistic cellular automata <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib4" title="" class="ltx_ref">4</a>, <a href="#bib.bib1" title="" class="ltx_ref">1</a>]</cite>, again with outputs <math id="Thmeg3.p1.m1" class="ltx_Math" alttext="\{0,1\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">}</mo></mrow></math>. Cell <math id="Thmeg3.p1.m2" class="ltx_Math" alttext="n_{k}" display="inline"><msub><mi>n</mi><mi>k</mi></msub></math> fires with probability proportional to</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="p(n_{k,t}=1|n_{\bullet,t-1})\propto\exp\left[\frac{1}{T}\sum_{j\rightarrow k}%
+\alpha_{jk}\cdot n_{j,{t-1}}\right]." display="block"><mrow><mi>p</mi><mrow><mo stretchy="false">(</mo><msub><mi>n</mi><mrow><mi>k</mi><mo>,</mo><mi>t</mi></mrow></msub><mo>=</mo><mn>1</mn><mo stretchy="false">|</mo><msub><mi>n</mi><mrow><mo>∙</mo><mo>,</mo><mrow><mi>t</mi><mo>-</mo><mn>1</mn></mrow></mrow></msub><mo stretchy="false">)</mo></mrow><mo>∝</mo><mi>exp</mi><mrow><mo>[</mo><mfrac><mn>1</mn><mi>T</mi></mfrac><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>→</mo><mi>k</mi></mrow></munder><msub><mi>α</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>⋅</mo><msub><mi>n</mi><mrow><mi>j</mi><mo>,</mo><mrow><mi>t</mi><mo>-</mo><mn>1</mn></mrow></mrow></msub><mo>]</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Temperature <math id="Thmeg3.p1.m3" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> controls network stochasticity. Attractors
+<math id="Thmeg3.p1.m4" class="ltx_Math" alttext="\{\xi^{1},\ldots,\xi^{N}\}" display="inline"><mrow><mo stretchy="false">{</mo><msup><mi>ξ</mi><mn>1</mn></msup><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msup><mi>ξ</mi><mi>N</mi></msup><mo stretchy="false">}</mo></mrow></math> are embedded into a network by setting
+the connectivity matrix as <math id="Thmeg3.p1.m5" class="ltx_Math" alttext="\alpha_{jk}=\sum_{\mu=1}^{N}(2\xi_{j}^{\mu}-1)(2\xi_{k}^{\mu}-1)" display="inline"><mrow><msub><mi>α</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msub><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>μ</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></msubsup><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><msubsup><mi>ξ</mi><mi>j</mi><mi>μ</mi></msubsup></mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><msubsup><mi>ξ</mi><mi>k</mi><mi>μ</mi></msubsup></mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.</p>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">It is useful to take a finer perspective on cellular automata
+by decomposing them into spacetime coordinates or occasions
+<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="" class="ltx_ref">2</a>]</cite>. An occasion <math id="p2.m1" class="ltx_Math" alttext="{v}_{l}=n_{i,t}" display="inline"><mrow><msub><mi>v</mi><mi>l</mi></msub><mo>=</mo><msub><mi>n</mi><mrow><mi>i</mi><mo>,</mo><mi>t</mi></mrow></msub></mrow></math> is a cell
+<math id="p2.m2" class="ltx_Math" alttext="n_{i}" display="inline"><msub><mi>n</mi><mi>i</mi></msub></math> at a time point <math id="p2.m3" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>. Two occasions are linked <math id="p2.m4" class="ltx_Math" alttext="{v}_{k}\rightarrow{v}_{l}" display="inline"><mrow><msub><mi>v</mi><mi>k</mi></msub><mo>→</mo><msub><mi>v</mi><mi>l</mi></msub></mrow></math> if there is a connection from <math id="p2.m5" class="ltx_Math" alttext="{v}_{k}" display="inline"><msub><mi>v</mi><mi>k</mi></msub></math>’s
+cell to <math id="p2.m6" class="ltx_Math" alttext="{v}_{l}" display="inline"><msub><mi>v</mi><mi>l</mi></msub></math>’s (because they are neighbors or the same cell)
+and their time coordinates are <math id="p2.m7" class="ltx_Math" alttext="t-1" display="inline"><mrow><mi>t</mi><mo>-</mo><mn>1</mn></mrow></math> and <math id="p2.m8" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> respectively for
+some <math id="p2.m9" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>, so occasions form a directed graph. More generally:</p>
+</div>
+<div id="Thmdefn4" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 4</span>.</h6>
+<div id="Thmdefn4.p1" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">distributed dynamical system</em> <math id="Thmdefn4.p1.m1" class="ltx_Math" alttext="{\mathbf{D}}" display="inline"><mi>𝐃</mi></math> consists of
+the following data:</p>
+</div>
+</div>
+<div id="p3" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><math id="I1.i1.m1" class="ltx_Math" alttext="{\mathbf{D}}" display="inline"><mi>𝐃</mi></math>1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Directed graph</em>.
+A graph <math id="I1.i1.p1.m1" class="ltx_Math" alttext="G_{\mathbf{D}}=(V_{\mathbf{D}},E_{\mathbf{D}})" display="inline"><mrow><msub><mi>G</mi><mi>𝐃</mi></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>V</mi><mi>𝐃</mi></msub><mo>,</mo><msub><mi>E</mi><mi>𝐃</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> with a finite set of
+vertices or occasions <math id="I1.i1.p1.m2" class="ltx_Math" alttext="V_{\mathbf{D}}=\{{v}_{1}\ldots{v}_{n}\}" display="inline"><mrow><msub><mi>V</mi><mi>𝐃</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>v</mi><mi>n</mi></msub></mrow><mo stretchy="false">}</mo></mrow></mrow></math> and
+edges <math id="I1.i1.p1.m3" class="ltx_Math" alttext="E_{\mathbf{D}}\subset V_{\mathbf{D}}\times V_{\mathbf{D}}" display="inline"><mrow><msub><mi>E</mi><mi>𝐃</mi></msub><mo>⊂</mo><mrow><msub><mi>V</mi><mi>𝐃</mi></msub><mo>×</mo><msub><mi>V</mi><mi>𝐃</mi></msub></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><math id="I1.i2.m1" class="ltx_Math" alttext="{\mathbf{D}}" display="inline"><mi>𝐃</mi></math>2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Alphabets.</em>
+Each vertex <math id="I1.i2.p1.m1" class="ltx_Math" alttext="{v}_{l}\in V_{\mathbf{D}}" display="inline"><mrow><msub><mi>v</mi><mi>l</mi></msub><mo>∈</mo><msub><mi>V</mi><mi>𝐃</mi></msub></mrow></math> has finite alphabet
+<math id="I1.i2.p1.m2" class="ltx_Math" alttext="{A}_{l}" display="inline"><msub><mi>A</mi><mi>l</mi></msub></math> of outputs and finite alphabet <math id="I1.i2.p1.m3" class="ltx_Math" alttext="{S}_{l}:=\prod_{k\in src(l)}A_{k}" display="inline"><mrow><msub><mi>S</mi><mi>l</mi></msub><mo>:=</mo><mrow><msub><mo largeop="true" symmetric="true">∏</mo><mrow><mi>k</mi><mo>∈</mo><mrow><mi>s</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>l</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></msub><msub><mi>A</mi><mi>k</mi></msub></mrow></mrow></math> of inputs, where <math id="I1.i2.p1.m4" class="ltx_Math" alttext="src(l)=\{{v}_{k}|{v}_{k}\rightarrow{v}_{l}\}" display="inline"><mrow><mrow><mi>s</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>l</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>v</mi><mi>k</mi></msub><mo stretchy="false">|</mo><mrow><msub><mi>v</mi><mi>k</mi></msub><mo>→</mo><msub><mi>v</mi><mi>l</mi></msub></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate"><math id="I1.i3.m1" class="ltx_Math" alttext="{\mathbf{D}}" display="inline"><mi>𝐃</mi></math>3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Mechanisms.</em>
+Each vertex <math id="I1.i3.p1.m1" class="ltx_Math" alttext="{v}_{l}" display="inline"><msub><mi>v</mi><mi>l</mi></msub></math> is equipped with stochastic map
+<math id="I1.i3.p1.m2" class="ltx_Math" alttext="{\mathfrak{m}}_{l}:{\mathcal{V}}{S}_{l}\rightarrow{\mathcal{V}}{A}_{l}" display="inline"><mrow><msub><mi>𝔪</mi><mi>l</mi></msub><mo>:</mo><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒱</mi><mo>⁢</mo><msub><mi>S</mi><mi>l</mi></msub></mrow><mo>→</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒱</mi><mo>⁢</mo><msub><mi>A</mi><mi>l</mi></msub></mrow></mrow></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<figure id="S0.F1" class="ltx_figure"><img src="dds.png" id="S0.F1.g1" class="ltx_graphics ltx_centering" alt="">
+<figcaption class="ltx_caption ltx_centering"><span class="ltx_tag ltx_tag_figure">Figure 1: </span>Mapping a cellular automaton to a distributed
+dynamical system.
+</figcaption>
+</figure>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Taking any cellular automaton over a finite time interval
+<math id="p4.m1" class="ltx_Math" alttext="[t_{\alpha},t_{\omega}]" display="inline"><mrow><mo stretchy="false">[</mo><msub><mi>t</mi><mi>α</mi></msub><mo>,</mo><msub><mi>t</mi><mi>ω</mi></msub><mo stretchy="false">]</mo></mrow></math> initializing the mechanisms at time
+<math id="p4.m2" class="ltx_Math" alttext="t_{\alpha}" display="inline"><msub><mi>t</mi><mi>α</mi></msub></math> with fixed values (initial conditions) or
+probability distributions (noise sources) yields a distributed
+dynamical system, see Fig. <a href="#S0.F1" title="Figure 1 ‣ 3. Distributed dynamical systems" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>. Each cell of the
+original automaton corresponds to a series of occasions in
+the distributed dynamical system, one per time step.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Cells with memory – i.e. whose outputs depend on their
+neighbors outputs over multiple time steps – receive inputs
+from occasions more than one time step in the past. If a cell’s
+mechanism changes (learns) over time then different mechanisms
+are assigned to the cell’s occasions at different time points.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">The sections below investigate the compositional structure of
+measurements: how they are built out of submeasurements.
+Technology for tracking subsystems and submeasurements is
+therefore necessary. We introduce two closely related
+categories:</p>
+</div>
+<div id="Thmdefn5" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 5</span>.</h6>
+<div id="Thmdefn5.p1" class="ltx_para">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">category of subsystems</em> <math id="Thmdefn5.p1.m1" class="ltx_Math" alttext="{\mathtt{Sys}}_{\mathbf{D}}" display="inline"><msub><mi>𝚂𝚢𝚜</mi><mi>𝐃</mi></msub></math> of <math id="Thmdefn5.p1.m2" class="ltx_Math" alttext="{\mathbf{D}}" display="inline"><mi>𝐃</mi></math>
+is a Boolean lattice with objects given by sets of ordered
+pairs of vertices <math id="Thmdefn5.p1.m3" class="ltx_Math" alttext="{\mathbf{C}}\in\underline{2}^{V_{\mathbf{D}}\times V_{\mathbf{D}}}" display="inline"><mrow><mi>𝐂</mi><mo>∈</mo><msup><munder accentunder="true"><mn>2</mn><mo>¯</mo></munder><mrow><msub><mi>V</mi><mi>𝐃</mi></msub><mo>×</mo><msub><mi>V</mi><mi>𝐃</mi></msub></mrow></msup></mrow></math> and arrows given by inclusions <math id="Thmdefn5.p1.m4" class="ltx_Math" alttext="i_{12}:{\mathbf{C}}_{1}\hookrightarrow{\mathbf{C}}_{2}" display="inline"><mrow><msub><mi>i</mi><mn>12</mn></msub><mo>:</mo><mrow><msub><mi>𝐂</mi><mn>1</mn></msub><mo>↪</mo><msub><mi>𝐂</mi><mn>2</mn></msub></mrow></mrow></math>. The initial and terminal
+objects are <math id="Thmdefn5.p1.m5" class="ltx_Math" alttext="\bot_{\mathbf{D}}=\emptyset" display="inline"><mrow><msub><mo>⊥</mo><mi>𝐃</mi></msub><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math> and <math id="Thmdefn5.p1.m6" class="ltx_Math" alttext="\top_{\mathbf{D}}=V_{\mathbf{D}}\times V_{\mathbf{D}}" display="inline"><mrow><msub><mo>⊤</mo><mi>𝐃</mi></msub><mo>=</mo><msub><mi>V</mi><mi>𝐃</mi></msub><mo>×</mo><msub><mi>V</mi><mi>𝐃</mi></msub></mrow></math>.</p>
+</div>
+</div>
+<div id="Thmrem2" class="ltx_theorem ltx_theorem_rem">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Remark 2</span>.</h6>
+<div id="Thmrem2.p1" class="ltx_para">
+<p class="ltx_p">Subsystems are defined as ordered pairs of vertices,
+rather than subgraphs of the directed graph of <math id="Thmrem2.p1.m1" class="ltx_Math" alttext="{\mathbf{D}}" display="inline"><mi>𝐃</mi></math>.
+Pairs of occasions that are not connected by edges are
+<em class="ltx_emph ltx_font_italic">ineffective</em>; they do not contribute to the
+information-processing performed by the system. We include
+them in the formalism precisely to make their lack of
+contribution explicit, see Remark 3 (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/4measurement#Thmrem3</span>).</p>
+</div>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Let <math id="p7.m1" class="ltx_Math" alttext="src({\mathbf{C}})=\{{v}_{k}|({v}_{k},{v}_{l})\in{\mathbf{C}}\}" display="inline"><mrow><mrow><mi>s</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐂</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>v</mi><mi>k</mi></msub><mo stretchy="false">|</mo><mrow><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mi>k</mi></msub><mo>,</mo><msub><mi>v</mi><mi>l</mi></msub><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>𝐂</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math> and similarly for <math id="p7.m2" class="ltx_Math" alttext="trg({\mathbf{C}})" display="inline"><mrow><mi>t</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐂</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Set the input alphabet of <math id="p7.m3" class="ltx_Math" alttext="{\mathbf{C}}" display="inline"><mi>𝐂</mi></math> as the product of the output alphabets of its source occasions <math id="p7.m4" class="ltx_Math" alttext="{S}^{\mathbf{C}}=\prod_{src({\mathbf{C}})}A_{k}" display="inline"><mrow><msup><mi>S</mi><mi>𝐂</mi></msup><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∏</mo><mrow><mi>s</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐂</mi><mo stretchy="false">)</mo></mrow></mrow></msub><msub><mi>A</mi><mi>k</mi></msub></mrow></mrow></math> and similarly the output alphabet of <math id="p7.m5" class="ltx_Math" alttext="{\mathbf{C}}" display="inline"><mi>𝐂</mi></math> as the product of the output alphabets of its target occasions <math id="p7.m6" class="ltx_Math" alttext="{A}^{\mathbf{C}}=\prod_{trg({\mathbf{C}})}A_{l}" display="inline"><mrow><msup><mi>A</mi><mi>𝐂</mi></msup><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∏</mo><mrow><mi>t</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐂</mi><mo stretchy="false">)</mo></mrow></mrow></msub><msub><mi>A</mi><mi>l</mi></msub></mrow></mrow></math>.</p>
+</div>
+<div id="Thmdefn6" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 6</span>.</h6>
+<div id="Thmdefn6.p1" class="ltx_para">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">category of measuring devices</em> <math id="Thmdefn6.p1.m1" class="ltx_Math" alttext="{\mathtt{Meas}}_{\mathbf{D}}" display="inline"><msub><mi>𝙼𝚎𝚊𝚜</mi><mi>𝐃</mi></msub></math> on <math id="Thmdefn6.p1.m2" class="ltx_Math" alttext="{\mathbf{D}}" display="inline"><mi>𝐃</mi></math> has objects <math id="Thmdefn6.p1.m3" class="ltx_Math" alttext="\operatorname{Hom}_{\mathtt{Stoch}}({\mathcal{V}}{A}^{\mathbf{C}},{\mathcal{V}%
+}{S}^{\mathbf{C}})" display="inline"><mrow><msub><mi>Hom</mi><mi>𝚂𝚝𝚘𝚌𝚑</mi></msub><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒱</mi><mo>⁢</mo><msup><mi>A</mi><mi>𝐂</mi></msup></mrow><mo>,</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒱</mi><mo>⁢</mo><msup><mi>S</mi><mi>𝐂</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></math> for <math id="Thmdefn6.p1.m4" class="ltx_Math" alttext="{\mathbf{C}}\in\underline{2}^{V_{\mathbf{D}}\times V_{\mathbf{D}}}" display="inline"><mrow><mi>𝐂</mi><mo>∈</mo><msup><munder accentunder="true"><mn>2</mn><mo>¯</mo></munder><mrow><msub><mi>V</mi><mi>𝐃</mi></msub><mo>×</mo><msub><mi>V</mi><mi>𝐃</mi></msub></mrow></msup></mrow></math>. For <math id="Thmdefn6.p1.m5" class="ltx_Math" alttext="{\mathbf{C}}_{1}\hookrightarrow{\mathbf{C}}_{2}" display="inline"><mrow><msub><mi>𝐂</mi><mn>1</mn></msub><mo>↪</mo><msub><mi>𝐂</mi><mn>2</mn></msub></mrow></math> define arrow</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle r_{21}:\operatorname{Hom}\left({\mathcal{V}}{A}^{{\mathbf{C}}_{2%
+}},{\mathcal{V}}{S}^{{\mathbf{C}}_{2}}\right)" display="inline"><mrow><msub><mi>r</mi><mn>21</mn></msub><mo>:</mo><mrow><mi>Hom</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒱</mi><mo>⁢</mo><msup><mi>A</mi><msub><mi>𝐂</mi><mn>2</mn></msub></msup></mrow><mo>,</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒱</mi><mo>⁢</mo><msup><mi>S</mi><msub><mi>𝐂</mi><mn>2</mn></msub></msup></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle\rightarrow\operatorname{Hom}\left({\mathcal{V}}{A}^{{\mathbf{C}}%
+_{1}},{\mathcal{V}}{S}^{{\mathbf{C}}_{1}}\right)" display="inline"><mrow><mi></mi><mo>→</mo><mrow><mi>Hom</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒱</mi><mo>⁢</mo><msup><mi>A</mi><msub><mi>𝐂</mi><mn>1</mn></msub></msup></mrow><mo>,</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒱</mi><mo>⁢</mo><msup><mi>S</mi><msub><mi>𝐂</mi><mn>1</mn></msub></msup></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle\left[{\mathcal{V}}{A}^{{\mathbf{C}}_{2}}\xrightarrow{T}{\mathcal%
+{V}}{S}^{{\mathbf{C}}_{2}}\right]" display="inline"><mrow><mo>[</mo><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒱</mi><mo>⁢</mo><msup><mi>A</mi><msub><mi>𝐂</mi><mn>2</mn></msub></msup></mrow><mover accent="true"><mo>→</mo><mo>𝑇</mo></mover><mrow><mi class="ltx_font_mathcaligraphic">𝒱</mi><mo>⁢</mo><msup><mi>S</mi><msub><mi>𝐂</mi><mn>2</mn></msub></msup></mrow></mrow><mo>]</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle\mapsto\left[{\mathcal{V}}{A}^{{\mathbf{C}}_{1}}\xrightarrow{\pi^%
+{\natural}_{A}}{\mathcal{V}}{A}^{{\mathbf{C}}_{2}}\xrightarrow{T}{\mathcal{V}}%
+{S}^{{\mathbf{C}}_{2}}\xrightarrow{\pi_{S}}{\mathcal{V}}{S}^{{\mathbf{C}}_{1}}%
+\right]," display="inline"><mrow><mo>↦</mo><mrow><mo>[</mo><mi class="ltx_font_mathcaligraphic">𝒱</mi><msup><mi>A</mi><msub><mi>𝐂</mi><mn>1</mn></msub></msup><mover accent="true"><mo>→</mo><msubsup><mi>π</mi><mi>A</mi><mi mathvariant="normal">♮</mi></msubsup></mover><mi class="ltx_font_mathcaligraphic">𝒱</mi><msup><mi>A</mi><msub><mi>𝐂</mi><mn>2</mn></msub></msup><mover accent="true"><mo>→</mo><mo>𝑇</mo></mover><mi class="ltx_font_mathcaligraphic">𝒱</mi><msup><mi>S</mi><msub><mi>𝐂</mi><mn>2</mn></msub></msup><mover accent="true"><mo>→</mo><msub><mi>π</mi><mi>S</mi></msub></mover><mi class="ltx_font_mathcaligraphic">𝒱</mi><msup><mi>S</mi><msub><mi>𝐂</mi><mn>1</mn></msub></msup><mo>]</mo></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="Thmdefn6.p1.m6" class="ltx_Math" alttext="\pi_{A}" display="inline"><msub><mi>π</mi><mi>A</mi></msub></math> and <math id="Thmdefn6.p1.m7" class="ltx_Math" alttext="\pi_{S}" display="inline"><msub><mi>π</mi><mi>S</mi></msub></math> are shorthands for projections
+as in Example 1 (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/2stochasticmaps#Thmeg1</span>)</p>
+</div>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">The reason for naming <math id="p8.m1" class="ltx_Math" alttext="{\mathtt{Meas}}_{\mathbf{D}}" display="inline"><msub><mi>𝙼𝚎𝚊𝚜</mi><mi>𝐃</mi></msub></math> the category of measuring
+devices will become clear in §4 (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/4measurement</span>)
+below. The two categories are connected by contravariant
+functor <math id="p8.m2" class="ltx_Math" alttext="{\mathcal{F}}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>:</p>
+</div>
+<div id="Thmthm4" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 4</span> (structure presheaf).</h6>
+<div id="Thmthm4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The <em class="ltx_emph ltx_font_upright">structure presheaf</em> <math id="Thmthm4.p1.m1" class="ltx_Math" alttext="{\mathcal{F}}" display="inline"><mi class="ltx_font_mathcaligraphic" mathvariant="normal">F</mi></math> taking</span></p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="{\mathcal{F}}_{\mathbf{D}}:{\mathtt{Sys}}_{\mathbf{D}}^{\mathtt{op}}%
+\rightarrow{\mathtt{Meas}}_{\mathbf{D}}:{\mathbf{C}}\mapsto\operatorname{Hom}%
+\left({\mathcal{V}}{A}^{\mathbf{C}},{\mathcal{V}}{S}^{\mathbf{C}}\right)\mbox{%
+ and }i_{12}\mapsto r_{21}" display="block"><mrow><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>𝐃</mi></msub><mo>:</mo><mrow><msubsup><mi>𝚂𝚢𝚜</mi><mi>𝐃</mi><mi>𝚘𝚙</mi></msubsup><mo>→</mo><msub><mi>𝙼𝚎𝚊𝚜</mi><mi>𝐃</mi></msub></mrow><mo>:</mo><mrow><mi>𝐂</mi><mo>↦</mo><mrow><mrow><mi>Hom</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒱</mi><mo>⁢</mo><msup><mi>A</mi><mi>𝐂</mi></msup></mrow><mo>,</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒱</mi><mo>⁢</mo><msup><mi>S</mi><mi>𝐂</mi></msup></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><mtext mathvariant="italic"> and </mtext><mo>⁢</mo><msub><mi>i</mi><mn>12</mn></msub></mrow><mo>↦</mo><msub><mi>r</mi><mn>21</mn></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">satisfies the gluing axiom but has non-unique descent.</span></p>
+</div>
+</div>
+<div id="p9" class="ltx_para ltx_noindent">
+<p class="ltx_p">Proof: Functor <math id="p9.m1" class="ltx_Math" alttext="{\mathcal{F}}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math> is trivially a presheaf since it is
+contravariant. It is an <em class="ltx_emph ltx_font_italic">interesting</em> presheaf because
+the gluing axiom holds.</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">For gluing we need to show that for any collection
+<math id="p10.m1" class="ltx_Math" alttext="\{{\mathbf{C}}_{j}\}_{j=1}^{l}" display="inline"><msubsup><mrow><mo stretchy="false">{</mo><msub><mi>𝐂</mi><mi>j</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>l</mi></msubsup></math> of subsystems and sections
+<math id="p10.m2" class="ltx_Math" alttext="{\mathfrak{m}}_{j}^{\natural}\in{\mathcal{F}}_{\mathbf{D}}({\mathbf{C}}_{j})" display="inline"><mrow><msubsup><mi>𝔪</mi><mi>j</mi><mi mathvariant="normal">♮</mi></msubsup><mo>∈</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>𝐃</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>𝐂</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math> such that
+<math id="p10.m3" class="ltx_Math" alttext="r_{j,ji}({\mathfrak{m}}_{j}^{\natural})=r_{i,ji}({\mathfrak{m}}_{i}^{\natural})" display="inline"><mrow><mrow><msub><mi>r</mi><mrow><mi>j</mi><mo>,</mo><mrow><mi>j</mi><mo>⁢</mo><mi>i</mi></mrow></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msubsup><mi>𝔪</mi><mi>j</mi><mi mathvariant="normal">♮</mi></msubsup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>r</mi><mrow><mi>i</mi><mo>,</mo><mrow><mi>j</mi><mo>⁢</mo><mi>i</mi></mrow></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msubsup><mi>𝔪</mi><mi>i</mi><mi mathvariant="normal">♮</mi></msubsup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>
+for all <math id="p10.m4" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>, <math id="p10.m5" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math> there exists section <math id="p10.m6" class="ltx_Math" alttext="{\mathfrak{m}}^{\natural}\in{\mathcal{F}}_{\mathbf{D}}\left(\bigcup_{j=1}^{l}{%
+\mathbf{C}}_{j}\right)" display="inline"><mrow><msup><mi>𝔪</mi><mi mathvariant="normal">♮</mi></msup><mo>∈</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>𝐃</mi></msub><mo>⁢</mo><mrow><mo>(</mo><mrow><msubsup><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋃</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>l</mi></msubsup><msub><mi>𝐂</mi><mi>j</mi></msub></mrow><mo>)</mo></mrow></mrow></mrow></math> such that
+<math id="p10.m7" class="ltx_Math" alttext="r_{i}({\mathfrak{m}}^{\natural})={\mathfrak{m}}^{\natural}_{i}" display="inline"><mrow><mrow><msub><mi>r</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>𝔪</mi><mi mathvariant="normal">♮</mi></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msubsup><mi>𝔪</mi><mi>i</mi><mi mathvariant="normal">♮</mi></msubsup></mrow></math> for all <math id="p10.m8" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>. This reduces
+to finding a conditional distribution that causes diagram</p>
+</div>
+<figure id="fig1" class="ltx_figure"><img src="information-theoretic-distributed-measurement-3.1.png" id="g1" class="ltx_graphics ltx_centering" alt="">
+</figure>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">in <math id="p11.m1" class="ltx_Math" alttext="{\mathtt{Meas}}_{\mathbf{D}}" display="inline"><msub><mi>𝙼𝚎𝚊𝚜</mi><mi>𝐃</mi></msub></math> to commute. The vertices are conditional distributions and the arrows are marginalizations, so rewrite as</p>
+</div>
+<figure id="fig2" class="ltx_figure"><img src="information-theoretic-distributed-measurement-3.2.png" id="g2" class="ltx_graphics ltx_centering" alt="">
+</figure>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">where <math id="p12.m1" class="ltx_Math" alttext="p(x|w)=\sum_{v,z}p(x,z|v,w)p^{maxH}(v)" display="inline"><mrow><mi>p</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">|</mo><mi>w</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><msub><mo largeop="true" symmetric="true">∑</mo><mrow><mi>v</mi><mo>,</mo><mi>z</mi></mrow></msub><mi>p</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>z</mi><mo stretchy="false">|</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow><msup><mi>p</mi><mrow><mi>m</mi><mo>⁢</mo><mi>a</mi><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>H</mi></mrow></msup><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></math> and similarly
+for the vertical arrow. It is easy to see that</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="p(x,y,z|u,v,w):=\frac{p(x,y|u,w)p(x,z|v,w)}{p(x|w)}" display="block"><mrow><mi>p</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">|</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow><mo>:=</mo><mfrac><mrow><mi>p</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">|</mo><mi>u</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow><mi>p</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>z</mi><mo stretchy="false">|</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>p</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">|</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">satisfies the requirement.</p>
+</div>
+<div id="p13" class="ltx_para">
+<p class="ltx_p">For <math id="p13.m1" class="ltx_Math" alttext="{\mathcal{F}}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math> to be a sheaf it would also have to satisfy
+unique descent: the section satisfying the gluing axiom must
+not only <em class="ltx_emph ltx_font_italic">exist</em> for any collection
+<math id="p13.m2" class="ltx_Math" alttext="\{{\mathbf{C}}_{j}\}_{j=1}^{l}" display="inline"><msubsup><mrow><mo stretchy="false">{</mo><msub><mi>𝐂</mi><mi>j</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>l</mi></msubsup></math> with compatible restrictions but must
+also be <em class="ltx_emph ltx_font_italic">unique</em>. Descent in <math id="p13.m3" class="ltx_Math" alttext="{\mathcal{F}}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math> is not unique
+because there are many distributions satisfying the requirement
+above: strictly speaking <math id="p13.m4" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is a marginalization operator
+rather than restriction. For example, there are many
+distributions <math id="p13.m5" class="ltx_Math" alttext="p(y,z)" display="inline"><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> that marginalize to give <math id="p13.m6" class="ltx_Math" alttext="p(y)" display="inline"><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math> and
+<math id="p13.m7" class="ltx_Math" alttext="p(z)" display="inline"><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> besides the product distribution <math id="p13.m8" class="ltx_Math" alttext="p(y)p(z)" display="inline"><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+<math id="p13.m9" class="ltx_Math" alttext="\blacksquare" display="inline"><mi mathvariant="normal">■</mi></math></p>
+</div>
+<div id="p14" class="ltx_para">
+<p class="ltx_p">The structure presheaf <math id="p14.m1" class="ltx_Math" alttext="{\mathcal{F}}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math> depends on the graph
+structure and alphabets; mechanisms play no role. We now
+construct a family of sections of <math id="p14.m2" class="ltx_Math" alttext="{\mathcal{F}}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math> using the
+mechanisms of <math id="p14.m3" class="ltx_Math" alttext="{\mathbf{D}}" display="inline"><mi>𝐃</mi></math>’s occasions. Specifically, given a
+subsystem <math id="p14.m4" class="ltx_Math" alttext="{\mathbf{C}}\in{\mathtt{Sys}}_{\mathbf{D}}" display="inline"><mrow><mi>𝐂</mi><mo>∈</mo><msub><mi>𝚂𝚢𝚜</mi><mi>𝐃</mi></msub></mrow></math>, we show how to glue its
+occasions’ mechanisms together to form joint mechanism
+<math id="p14.m5" class="ltx_Math" alttext="{\mathfrak{m}}_{\mathbf{C}}" display="inline"><msub><mi>𝔪</mi><mi>𝐂</mi></msub></math>. The mechanism <math id="p14.m6" class="ltx_Math" alttext="{\mathfrak{m}}_{\mathbf{D}}={\mathfrak{m}}_{\top}" display="inline"><mrow><msub><mi>𝔪</mi><mi>𝐃</mi></msub><mo>=</mo><msub><mi>𝔪</mi><mo>⊤</mo></msub></mrow></math> of the
+entire system <math id="p14.m7" class="ltx_Math" alttext="{\mathbf{D}}" display="inline"><mi>𝐃</mi></math> is recovered as a special case.</p>
+</div>
+<div id="p15" class="ltx_para">
+<p class="ltx_p">In general, subsystem <math id="p15.m1" class="ltx_Math" alttext="{\mathbf{C}}" display="inline"><mi>𝐂</mi></math> is not isolated: it receives
+inputs along edges contained in <math id="p15.m2" class="ltx_Math" alttext="{\mathbf{D}}" display="inline"><mi>𝐃</mi></math> but <em class="ltx_emph ltx_font_italic">not</em> in
+<math id="p15.m3" class="ltx_Math" alttext="{\mathbf{C}}" display="inline"><mi>𝐂</mi></math>. Inputs along these edges cannot be assigned a fixed
+value since in general there is no preferred element of
+<math id="p15.m4" class="ltx_Math" alttext="{A}_{l}" display="inline"><msub><mi>A</mi><mi>l</mi></msub></math>. They also cannot be ignored since <math id="p15.m5" class="ltx_Math" alttext="{\mathfrak{m}}_{l}" display="inline"><msub><mi>𝔪</mi><mi>l</mi></msub></math> is defined
+as receiving inputs from all its sources. Nevertheless, the
+mechanism of <math id="p15.m6" class="ltx_Math" alttext="{\mathbf{C}}" display="inline"><mi>𝐂</mi></math> should depend on <math id="p15.m7" class="ltx_Math" alttext="{\mathbf{C}}" display="inline"><mi>𝐂</mi></math> alone. We
+therefore treat edges not in <math id="p15.m8" class="ltx_Math" alttext="{\mathbf{C}}" display="inline"><mi>𝐂</mi></math> as sources of extrinsic
+noise by marginalizing with respect to the uniform distribution
+as in Corollary 3 (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/2stochasticmaps#Thmthm3</span>).</p>
+</div>
+<div id="p16" class="ltx_para">
+<p class="ltx_p">For each vertex <math id="p16.m1" class="ltx_Math" alttext="{v}_{l}\in trg({\mathbf{C}})" display="inline"><mrow><msub><mi>v</mi><mi>l</mi></msub><mo>∈</mo><mrow><mi>t</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐂</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> let <math id="p16.m2" class="ltx_Math" alttext="{S}^{\mathbf{C}}_{l}=\prod_{k\in src(l)\cap src(C)}{A}_{k}" display="inline"><mrow><msubsup><mi>S</mi><mi>l</mi><mi>𝐂</mi></msubsup><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∏</mo><mrow><mi>k</mi><mo>∈</mo><mrow><mrow><mi>s</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>l</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><mrow><mi>s</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></msub><msub><mi>A</mi><mi>k</mi></msub></mrow></mrow></math>. We then have projection
+<math id="p16.m3" class="ltx_Math" alttext="\pi_{l}:{\mathcal{V}}{S}_{l}\rightarrow{\mathcal{V}}{S}^{\mathbf{C}}_{l}" display="inline"><mrow><msub><mi>π</mi><mi>l</mi></msub><mo>:</mo><mrow><mrow><mi class="ltx_font_mathcaligraphic">𝒱</mi><mo>⁢</mo><msub><mi>S</mi><mi>l</mi></msub></mrow><mo>→</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒱</mi><mo>⁢</mo><msubsup><mi>S</mi><mi>l</mi><mi>𝐂</mi></msubsup></mrow></mrow></mrow></math>.
+Define</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="{\mathfrak{m}}^{\mathbf{C}}_{l}:=\left[{\mathcal{V}}{S}^{\mathbf{C}}_{l}%
+\xrightarrow{\pi_{l}^{\natural}}{\mathcal{V}}{S}_{l}\xrightarrow{{\mathfrak{m}%
+}_{l}}{\mathcal{V}}{A}_{l}\right]." display="block"><mrow><msubsup><mi>𝔪</mi><mi>l</mi><mi>𝐂</mi></msubsup><mo>:=</mo><mrow><mo>[</mo><mi class="ltx_font_mathcaligraphic">𝒱</mi><msubsup><mi>S</mi><mi>l</mi><mi>𝐂</mi></msubsup><mover accent="true"><mo>→</mo><msubsup><mi>π</mi><mi>l</mi><mi mathvariant="normal">♮</mi></msubsup></mover><mi class="ltx_font_mathcaligraphic">𝒱</mi><msub><mi>S</mi><mi>l</mi></msub><mover accent="true"><mo>→</mo><msub><mi>𝔪</mi><mi>l</mi></msub></mover><mi class="ltx_font_mathcaligraphic">𝒱</mi><msub><mi>A</mi><mi>l</mi></msub><mo>]</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">It follows immediately that <math id="p16.m4" class="ltx_Math" alttext="{\mathbf{C}}" display="inline"><mi>𝐂</mi></math> is itself a distributed
+dynamical system defined by its graph, whose alphabets are
+inherited from <math id="p16.m5" class="ltx_Math" alttext="{\mathbf{D}}" display="inline"><mi>𝐃</mi></math> and whose mechanisms are constructed
+by marginalizing.</p>
+</div>
+<div id="p17" class="ltx_para">
+<p class="ltx_p">Next, we tensor the mechanisms of individual occasions and glue
+them together using the diagonal map <math id="p17.m1" class="ltx_Math" alttext="\Delta:{S}^{\mathbf{C}}\rightarrow\prod_{v_{l}\in trg({\mathbf{C}})}{S}^{%
+\mathbf{C}}_{l}" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>:</mo><mrow><msup><mi>S</mi><mi>𝐂</mi></msup><mo>→</mo><mrow><msub><mo largeop="true" symmetric="true">∏</mo><mrow><msub><mi>v</mi><mi>l</mi></msub><mo>∈</mo><mrow><mi>t</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐂</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></msub><msubsup><mi>S</mi><mi>l</mi><mi>𝐂</mi></msubsup></mrow></mrow></mrow></math>. The
+diagonal map used here<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>which is surjective in the
+sense that all rows contain non-zero entries</span></span></span> generalizes
+<math id="p17.m2" class="ltx_Math" alttext="X\xrightarrow{\Delta}X\times X" display="inline"><mrow><mi>X</mi><mover accent="true"><mo>→</mo><mo>Δ</mo></mover><mrow><mi>X</mi><mo>×</mo><mi>X</mi></mrow></mrow></math> and removes redundancies in
+<math id="p17.m3" class="ltx_Math" alttext="\prod_{l}{S}^{\mathbf{C}}_{l}" display="inline"><mrow><msub><mo largeop="true" symmetric="true">∏</mo><mi>l</mi></msub><msubsup><mi>S</mi><mi>l</mi><mi>𝐂</mi></msubsup></mrow></math>, which may, for example, include the
+same source alphabets many times in different factors.</p>
+</div>
+<div id="p18" class="ltx_para">
+<p class="ltx_p">Let mechanism <math id="p18.m1" class="ltx_Math" alttext="{\mathfrak{m}}_{\mathbf{C}}" display="inline"><msub><mi>𝔪</mi><mi>𝐂</mi></msub></math> be</p>
+<table id="S0.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E2.m1" class="ltx_Math" alttext="{\mathfrak{m}}_{\mathbf{C}}:=\left[{\mathcal{V}}{S}^{\mathbf{C}}\xrightarrow{%
+\iota_{\Delta}}\bigotimes_{{v}_{l}\in trg({\mathbf{C}})}{\mathcal{V}}{S}^{%
+\mathbf{C}}_{l}\xrightarrow{\otimes_{{v}_{l}\in trg({\mathbf{C}})}{\mathfrak{m%
+}}^{\mathbf{C}}_{l}}{\mathcal{V}}{A}^{\mathbf{C}}\right]." display="block"><mrow><msub><mi>𝔪</mi><mi>𝐂</mi></msub><mo>:=</mo><mrow><mo>[</mo><mi class="ltx_font_mathcaligraphic">𝒱</mi><msup><mi>S</mi><mi>𝐂</mi></msup><mover accent="true"><mo>→</mo><msub><mi>ι</mi><mi mathvariant="normal">Δ</mi></msub></mover><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⊗</mo><mrow><msub><mi>v</mi><mi>l</mi></msub><mo>∈</mo><mrow><mi>t</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐂</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></munder><mi class="ltx_font_mathcaligraphic">𝒱</mi><msubsup><mi>S</mi><mi>l</mi><mi>𝐂</mi></msubsup><mover accent="true"><mo>→</mo><mrow><mi></mi><msub><mo>⊗</mo><mrow><msub><mi>v</mi><mi>l</mi></msub><mo>∈</mo><mrow><mi>t</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐂</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></msub><msubsup><mi>𝔪</mi><mi>l</mi><mi>𝐂</mi></msubsup></mrow></mover><mi class="ltx_font_mathcaligraphic">𝒱</mi><msup><mi>A</mi><mi>𝐂</mi></msup><mo>]</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">The dual of <math id="p18.m2" class="ltx_Math" alttext="{\mathfrak{m}}_{\mathbf{C}}" display="inline"><msub><mi>𝔪</mi><mi>𝐂</mi></msub></math> is</p>
+<table id="S0.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E3.m1" class="ltx_Math" alttext="{\mathfrak{m}}_{\mathbf{C}}^{\natural}:=\left[{\mathcal{V}}{A}^{\mathbf{C}}%
+\rightarrow{\mathcal{V}}{S}^{\mathbf{C}}\right]." display="block"><mrow><msubsup><mi>𝔪</mi><mi>𝐂</mi><mi mathvariant="normal">♮</mi></msubsup><mo>:=</mo><mrow><mo>[</mo><mi class="ltx_font_mathcaligraphic">𝒱</mi><msup><mi>A</mi><mi>𝐂</mi></msup><mo>→</mo><mi class="ltx_font_mathcaligraphic">𝒱</mi><msup><mi>S</mi><mi>𝐂</mi></msup><mo>]</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr>
+</table>
+</div>
+<div id="p19" class="ltx_para">
+<p class="ltx_p">Finally, we find that we have constructed a family of sections
+of <math id="p19.m1" class="ltx_Math" alttext="{\mathcal{F}}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>:</p>
+</div>
+<div id="Thmdefn7" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 7</span>.</h6>
+<div id="Thmdefn7.p1" class="ltx_para">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">quale</em> <math id="Thmdefn7.p1.m1" class="ltx_Math" alttext="\mathbf{q}_{\mathbf{D}}" display="inline"><msub><mi>𝐪</mi><mi>𝐃</mi></msub></math> is the family of
+sections of <math id="Thmdefn7.p1.m2" class="ltx_Math" alttext="{\mathcal{F}}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math> constructed in
+Eqs. (<a href="#S0.E1" title="(1) ‣ 3. Distributed dynamical systems" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>), (<a href="#S0.E2" title="(2) ‣ 3. Distributed dynamical systems" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) and
+(<a href="#S0.E3" title="(3) ‣ 3. Distributed dynamical systems" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>)</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\mathbf{q}_{\mathbf{D}}:=\left\{{\mathfrak{m}}^{\natural}_{\mathbf{C}}\in{%
+\mathcal{F}}({\mathbf{C}})=\operatorname{Hom}\left({\mathcal{V}}{A}^{\mathbf{C%
+}},{\mathcal{V}}{S}^{\mathbf{C}}\right)\Big{|}{\mathbf{C}}\in{\mathtt{Sys}}_{%
+\mathbf{D}}\right\}." display="block"><mrow><mrow><msub><mi>𝐪</mi><mi>𝐃</mi></msub><mo>:=</mo><mrow><mo>{</mo><mrow><msubsup><mi>𝔪</mi><mi>𝐂</mi><mi mathvariant="normal">♮</mi></msubsup><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝐂</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>Hom</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒱</mi><mo>⁢</mo><msup><mi>A</mi><mi>𝐂</mi></msup></mrow><mo>,</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒱</mi><mo>⁢</mo><msup><mi>S</mi><mi>𝐂</mi></msup></mrow><mo>)</mo></mrow></mrow></mrow><mo maxsize="160%" minsize="160%">|</mo><mrow><mi>𝐂</mi><mo>∈</mo><msub><mi>𝚂𝚢𝚜</mi><mi>𝐃</mi></msub></mrow><mo>}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="p20" class="ltx_para">
+<p class="ltx_p">The construction used to glue together the mechanism of the
+entire system can also be used to construct the mechanism of
+any subsystem, which provides a window – the quale – into
+the compositional structure of distributed processes.</p>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+DJ Amit (1989):
+<em class="ltx_emph ltx_font_italic">Modelling brain function: the world of attractor neural
+networks</em>.
+
+</span>
+        
+<span class="ltx_bibblock">Cambridge University Press.
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+David Balduzzi (2011):
+<em class="ltx_emph ltx_font_italic">Detecting emergent processes in cellular automata with
+excess information</em>.
+
+</span>
+        
+<span class="ltx_bibblock"><span class="ltx_text ltx_font_slanted">preprint</span> .
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock">
+ER Berlekamp, JC Conway &amp;
+RK Guy (1982):
+<em class="ltx_emph ltx_font_italic">Winning Ways for your Mathematical Plays</em>.
+
+</span>
+        
+<span class="ltx_bibblock">2, Academic Press.
+
+</span>
+      </li>
+      
+<li id="bib.bib4" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">4</span>
+        
+<span class="ltx_bibblock">
+JJ Hopfield (1982):
+<em class="ltx_emph ltx_font_italic">Neural networks and physical systems with emergent
+computational properties</em>.
+
+</span>
+        
+<span class="ltx_bibblock"><span class="ltx_text ltx_font_slanted">Proc. Nat. Acad. Sci.</span> 79,
+pp. 2554–2558.
+
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">3. Distributed dynamical systems</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">3DistributedDynamicalSystems</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2014-04-30 18:41:46</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2014-04-30 18:41:46</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Feature</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60J20</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 81P15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 18F20</td>
+</tr>
+</tbody>
+</table>
+</span>
+      </li>
+    
+</ul>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 12:01:23 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

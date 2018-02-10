@@ -1,0 +1,139 @@
+<!DOCTYPE html><html>
+<head>
+<title>Markov chain</title>
+<!--Generated on Sat Feb 10 12:00:45 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Markov chain</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SS0.SSS0.Px1" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Definition</h2>
+
+<div id="S0.SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">We begin with a probability space <math id="S0.SS0.SSS0.Px1.p1.m1" class="ltx_Math" alttext="(\Omega,\mathcal{F},\mathbb{P})" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>,</mo><mi>ℙ</mi><mo stretchy="false">)</mo></mrow></math>. Let <math id="S0.SS0.SSS0.Px1.p1.m2" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> be a countable set, <math id="S0.SS0.SSS0.Px1.p1.m3" class="ltx_Math" alttext="(X_{n}:n\in\mathbb{Z})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><msub><mi>X</mi><mi>n</mi></msub><mo>:</mo><mrow><mi>n</mi><mo>∈</mo><mi>ℤ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></math> be a collection of random variables taking values in <math id="S0.SS0.SSS0.Px1.p1.m4" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>, <math id="S0.SS0.SSS0.Px1.p1.m5" class="ltx_Math" alttext="\mathbf{T}=(t_{ij}:i,j\in I)" display="inline"><mrow><mi>𝐓</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>:</mo><mi>i</mi><mo>,</mo><mi>j</mi><mo>∈</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></mrow></math> be a stochastic matrix, and <math id="S0.SS0.SSS0.Px1.p1.m6" class="ltx_Math" alttext="\mathbf{\lambda}" display="inline"><mi>λ</mi></math> be a distribution. We call <math id="S0.SS0.SSS0.Px1.p1.m7" class="ltx_Math" alttext="(X_{n})_{n\geq 0}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>≥</mo><mn>0</mn></mrow></msub></math> a <em class="ltx_emph ltx_font_italic">Markov chain</em> with initial distribution <math id="S0.SS0.SSS0.Px1.p1.m8" class="ltx_Math" alttext="\mathbf{\lambda}" display="inline"><mi>λ</mi></math> and <em class="ltx_emph ltx_font_italic">transition matrix</em> <math id="S0.SS0.SSS0.Px1.p1.m9" class="ltx_Math" alttext="\mathbf{T}" display="inline"><mi>𝐓</mi></math> if:</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p2" class="ltx_para">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="X_{0}" display="inline"><msub><mi>X</mi><mn>0</mn></msub></math> has distribution <math id="I1.i1.p1.m2" class="ltx_Math" alttext="\mathbf{\lambda}" display="inline"><mi>λ</mi></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">For <math id="I1.i2.p1.m1" class="ltx_Math" alttext="n\geq 0" display="inline"><mrow><mi>n</mi><mo>≥</mo><mn>0</mn></mrow></math>, <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\mathbb{P}(X_{n+1}=i_{n+1}|X_{0}=i_{0},\ldots,X_{n}=i_{n})=t_{i_{n}i_{n+1}}" display="inline"><mrow><mi>ℙ</mi><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><msub><mi>i</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">|</mo><msub><mi>X</mi><mn>0</mn></msub><mo>=</mo><msub><mi>i</mi><mn>0</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>X</mi><mi>n</mi></msub><mo>=</mo><msub><mi>i</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mo>=</mo><msub><mi>t</mi><mrow><msub><mi>i</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>i</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></msub></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="S0.SS0.SSS0.Px1.p3" class="ltx_para">
+<p class="ltx_p">That is, the next value of the chain depends only on the current value, not any previous values. This is often summed up in the pithy phrase, “Markov chains have no memory.”</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p4" class="ltx_para">
+<p class="ltx_p">As a special case of (2) we have that <math id="S0.SS0.SSS0.Px1.p4.m1" class="ltx_Math" alttext="\mathbb{P}(X_{n+1}=i|X_{n}=j)=t_{ij}" display="inline"><mrow><mi>ℙ</mi><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mi>i</mi><mo stretchy="false">|</mo><msub><mi>X</mi><mi>n</mi></msub><mo>=</mo><mi>j</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><msub><mi>t</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mrow></math> whenever <math id="S0.SS0.SSS0.Px1.p4.m2" class="ltx_Math" alttext="i,j\in I" display="inline"><mrow><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow><mo>∈</mo><mi>I</mi></mrow></math>. The values <math id="S0.SS0.SSS0.Px1.p4.m3" class="ltx_Math" alttext="t_{ij}" display="inline"><msub><mi>t</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math> are therefore called
+<em class="ltx_emph ltx_font_italic">transition probabilities</em> for the Markov chain.</p>
+</div>
+</section>
+<section id="S0.SS0.SSS0.Px2" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Discussion</h2>
+
+<div id="S0.SS0.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">Markov chains are arguably the simplest examples of random processes. They come in discrete and continuous versions; the discrete version is presented above.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Markov chain</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">MarkovChain</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:37:32</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:37:32</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60J10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">HittingTime</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">MarkovChainsClassStructure</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">MemorylessRandomVariable</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">LeslieModel</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Markov chain</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">transition matrix</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">transition probability</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 12:00:45 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

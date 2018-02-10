@@ -1,0 +1,264 @@
+<!DOCTYPE html><html>
+<head>
+<title>Ornstein-Uhlenbeck process</title>
+<!--Generated on Sat Feb 10 12:00:31 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Ornstein-Uhlenbeck process</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S0.SSx1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Definition</h2>
+
+<div id="S0.SSx1.p1" class="ltx_para">
+<p class="ltx_p">The <em class="ltx_emph ltx_font_italic">Ornstein-Uhlenbeck</em> process is a stochastic process
+that satisfies the following stochastic differential equation:</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle dX_{t}=\kappa(\theta-X_{t})\,dt+\sigma\,dW_{t}\,," display="inline"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><msub><mi>X</mi><mi>t</mi></msub></mrow><mo>=</mo><mrow><mrow><mi>κ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>θ</mi><mo>-</mo><msub><mi>X</mi><mi>t</mi></msub></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><mi>σ</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>W</mi><mi>t</mi></msub></mpadded></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <math id="S0.SSx1.p1.m1" class="ltx_Math" alttext="W_{t}" display="inline"><msub><mi>W</mi><mi>t</mi></msub></math> is a standard Brownian motion on <math id="S0.SSx1.p1.m2" class="ltx_Math" alttext="t\in[0,\infty)" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S0.SSx1.p2" class="ltx_para">
+<p class="ltx_p">The constant parameters are:</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="\kappa&gt;0" display="inline"><mrow><mi>κ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> is the rate of mean reversion;</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> is the long-term mean of the process;</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="\sigma&gt;0" display="inline"><mrow><mi>σ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> is the volatility or average magnitude, per square-root time,
+of the random fluctuations that are modelled as Brownian motions.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S0.SSx2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Mean-reverting property</h2>
+
+<div id="S0.SSx2.p1" class="ltx_para">
+<p class="ltx_p">If we ignore the random fluctuations in the process
+due to <math id="S0.SSx2.p1.m1" class="ltx_Math" alttext="dW_{t}" display="inline"><mrow><mi>d</mi><mo>⁢</mo><msub><mi>W</mi><mi>t</mi></msub></mrow></math>, then we see that <math id="S0.SSx2.p1.m2" class="ltx_Math" alttext="X_{t}" display="inline"><msub><mi>X</mi><mi>t</mi></msub></math> has an overall drift
+towards a mean value <math id="S0.SSx2.p1.m3" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>.
+The process <math id="S0.SSx2.p1.m4" class="ltx_Math" alttext="X_{t}" display="inline"><msub><mi>X</mi><mi>t</mi></msub></math> reverts to this mean exponentially, at rate <math id="S0.SSx2.p1.m5" class="ltx_Math" alttext="\kappa" display="inline"><mi>κ</mi></math>,
+with a magnitude in direct proportion to the distance
+between the current value of <math id="S0.SSx2.p1.m6" class="ltx_Math" alttext="X_{t}" display="inline"><msub><mi>X</mi><mi>t</mi></msub></math> and <math id="S0.SSx2.p1.m7" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>.</p>
+</div>
+<div id="S0.SSx2.p2" class="ltx_para">
+<p class="ltx_p">This can be seen by looking at the solution to the
+ordinary differential equation <math id="S0.SSx2.p2.m1" class="ltx_Math" alttext="dx_{t}=\kappa(\theta-x)dt" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><msub><mi>x</mi><mi>t</mi></msub></mrow><mo>=</mo><mrow><mi>κ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>θ</mi><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></math>
+which is</p>
+<table id="A0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle\frac{\theta-x_{t}}{\theta-x_{0}}=e^{-\kappa(t-t_{0})}\,,\quad%
+\text{ or }x_{t}=\theta+(x_{0}-\theta)e^{-\kappa(t-t_{0})}\,." display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>θ</mi><mo>-</mo><msub><mi>x</mi><mi>t</mi></msub></mrow><mrow><mi>θ</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mfrac></mstyle><mo>=</mo><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>κ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>-</mo><msub><mi>t</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></msup></mpadded></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mtext> or </mtext><mo>⁢</mo><msub><mi>x</mi><mi>t</mi></msub></mrow><mo>=</mo><mrow><mi>θ</mi><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>-</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>κ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>-</mo><msub><mi>t</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></msup></mpadded></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S0.SSx2.p3" class="ltx_para">
+<p class="ltx_p">For this reason, the Ornstein-Uhlenbeck process
+is also called a <em class="ltx_emph ltx_font_italic">mean-reverting process</em>,
+although the latter name applies to other types
+of stochastic processes exhibiting the same property as well.</p>
+</div>
+</section>
+<section id="S0.SSx3" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Solution</h2>
+
+<div id="S0.SSx3.p1" class="ltx_para">
+<p class="ltx_p">The solution to the stochastic differential equation (<a href="#S0.E1" title="(1) ‣ Definition ‣ Ornstein-Uhlenbeck process" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>)
+defining the Ornstein-Uhlenbeck process is, for any <math id="S0.SSx3.p1.m1" class="ltx_Math" alttext="0\leq s\leq t" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>s</mi><mo>≤</mo><mi>t</mi></mrow></math>, is</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="X_{t}=\theta+(X_{s}-\theta)e^{-\kappa(t-s)}+\sigma\int_{s}^{t}e^{-\kappa(t-u)}%
+\,dW_{u}\,." display="block"><mrow><mrow><msub><mi>X</mi><mi>t</mi></msub><mo>=</mo><mrow><mi>θ</mi><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>X</mi><mi>s</mi></msub><mo>-</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>κ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>-</mo><mi>s</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></msup></mrow><mo>+</mo><mrow><mi>σ</mi><mo>⁢</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>s</mi><mi>t</mi></msubsup><mrow><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>κ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>-</mo><mi>u</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+1.7pt"><msub><mi>W</mi><mi>u</mi></msub></mpadded></mrow></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the integral on the right is the Itô integral.</p>
+</div>
+<div id="S0.SSx3.p2" class="ltx_para">
+<p class="ltx_p">For any fixed <math id="S0.SSx3.p2.m1" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> and <math id="S0.SSx3.p2.m2" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>, the random variable <math id="S0.SSx3.p2.m3" class="ltx_Math" alttext="X_{t}" display="inline"><msub><mi>X</mi><mi>t</mi></msub></math>, conditional
+upon <math id="S0.SSx3.p2.m4" class="ltx_Math" alttext="X_{s}" display="inline"><msub><mi>X</mi><mi>s</mi></msub></math>, is normally distributed with</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\text{mean}=\theta+(X_{s}-\theta)e^{-\kappa(t-s)}\,,\quad\text{variance}=\frac%
+{\sigma^{2}}{2\kappa}(1-e^{-2\kappa(t-s)})\,." display="block"><mrow><mrow><mrow><mtext>mean</mtext><mo>=</mo><mrow><mi>θ</mi><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>X</mi><mi>s</mi></msub><mo>-</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>κ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>-</mo><mi>s</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></msup></mpadded></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mtext>variance</mtext><mo>=</mo><mrow><mfrac><msup><mi>σ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>κ</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>κ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>-</mo><mi>s</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></msup></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Observe that the mean of <math id="S0.SSx3.p2.m5" class="ltx_Math" alttext="X_{t}" display="inline"><msub><mi>X</mi><mi>t</mi></msub></math> is exactly
+the value derived heuristically
+in the solution (<a href="#S0.E2" title="(2) ‣ Mean-reverting property ‣ Ornstein-Uhlenbeck process" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) of the ODE.</p>
+</div>
+<div id="S0.SSx3.p3" class="ltx_para">
+<p class="ltx_p">The Ornstein-Uhlenbeck process is a time-homogeneous Itô diffusion.</p>
+</div>
+</section>
+<section id="S0.SSx4" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">Applications</h2>
+
+<div id="S0.SSx4.p1" class="ltx_para">
+<p class="ltx_p">The Ornstein-Uhlenbeck process is widely used for modelling
+biological processes such as neuronal response,
+and in mathematical finance,
+the modelling of the dynamics of interest rates
+and volatilities of asset prices.</p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+Martin Jacobsen. “Laplace and the Origin of the Ornstein-Uhlenbeck Process”.
+Bernoulli, Vol. 2, No. 3. (Sept. 1996), pp. 271 – 286.
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+Bernt Øksendal.
+<em class="ltx_emph ltx_font_italic">Stochastic Differential Equations,
+An Introduction with Applications</em>, 5th edition. Springer, 1998.
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock">
+Steven E. Shreve. <em class="ltx_emph ltx_font_italic">Stochastic Calculus for Finance II:
+Continuous-Time Models</em>. Springer, 2004.
+
+</span>
+      </li>
+      
+<li id="bib.bib4" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">4</span>
+        
+<span class="ltx_bibblock">
+Sebastian Jaimungal. Lecture notes for <em class="ltx_emph ltx_font_italic">Pricing Theory</em>.
+University of Toronto.
+
+</span>
+      </li>
+      
+<li id="bib.bib5" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">5</span>
+        
+<span class="ltx_bibblock">
+Dmitri Rubisov. Lecture notes for <em class="ltx_emph ltx_font_italic">Risk Management</em>.
+University of Toronto.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Ornstein-Uhlenbeck process</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">OrnsteinUhlenbeckProcess</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:19:26</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:19:26</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60H10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60-00</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">Ornstein-Uhlenbeck equation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 12:00:31 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

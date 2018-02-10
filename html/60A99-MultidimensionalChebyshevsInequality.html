@@ -1,0 +1,168 @@
+<!DOCTYPE html><html>
+<head>
+<title>Multidimensional Chebyshev’s inequality</title>
+<!--Generated on Sat Feb 10 11:53:52 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Multidimensional Chebyshev’s inequality</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be an N-dimensional random variable with mean <math id="p1.m2" class="ltx_Math" alttext="\mu=\mathbb{E}[X]" display="inline"><mrow><mi>μ</mi><mo>=</mo><mrow><mi>𝔼</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math> and covariance matrix <math id="p1.m3" class="ltx_Math" alttext="V=\mathbb{E}\left[\left(X-\mu\right)\,\left(X-\mu\right)^{T}\right]" display="inline"><mrow><mi>V</mi><mo>=</mo><mrow><mi>𝔼</mi><mo>⁢</mo><mrow><mo>[</mo><mrow><mrow><mo>(</mo><mrow><mi>X</mi><mo>-</mo><mi>μ</mi></mrow><mo rspace="4.2pt">)</mo></mrow><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mi>X</mi><mo>-</mo><mi>μ</mi></mrow><mo>)</mo></mrow><mi>T</mi></msup></mrow><mo>]</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">If <math id="p2.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is invertible (i.e., strictly positive), for any <math id="p2.m2" class="ltx_Math" alttext="t&gt;0" display="inline"><mrow><mi>t</mi><mo>&gt;</mo><mn>0</mn></mrow></math>:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\Pr\left(\sqrt{\left(X-\mu\right)^{T}\,V^{-1}\,\left(X-\mu\right)}&gt;t\right)%
+\leq\frac{N}{t^{2}}" display="block"><mrow><mrow><mi>Pr</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><msqrt><mrow><mpadded width="+1.7pt"><msup><mrow><mo>(</mo><mrow><mi>X</mi><mo>-</mo><mi>μ</mi></mrow><mo>)</mo></mrow><mi>T</mi></msup></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>V</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mpadded><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>X</mi><mo>-</mo><mi>μ</mi></mrow><mo>)</mo></mrow></mrow></msqrt><mo>&gt;</mo><mi>t</mi></mrow><mo>)</mo></mrow></mrow><mo>≤</mo><mfrac><mi>N</mi><msup><mi>t</mi><mn>2</mn></msup></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof:</span>
+<math id="p3.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is positive, so <math id="p3.m2" class="ltx_Math" alttext="V^{-1}" display="inline"><msup><mi>V</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></math> is.
+Define the random variable</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="y=\left(X-\mu\right)^{T}\,V^{-1}\,\left(X-\mu\right)" display="block"><mrow><mi>y</mi><mo>=</mo><mrow><mpadded width="+1.7pt"><msup><mrow><mo>(</mo><mrow><mi>X</mi><mo>-</mo><mi>μ</mi></mrow><mo>)</mo></mrow><mi>T</mi></msup></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>V</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mpadded><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>X</mi><mo>-</mo><mi>μ</mi></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><math id="p3.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> is positive, then Markov’s inequality holds:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\Pr\left(\sqrt{\left(X-\mu\right)^{T}\,V^{-1}\,\left(X-\mu\right)}&gt;t\right)=%
+\Pr\left(\sqrt{y}&gt;t\right)=\Pr\left(y&gt;t^{2}\right)\leq\frac{\mathbb{E}[y]}{t^{%
+2}}" display="block"><mrow><mrow><mi>Pr</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><msqrt><mrow><mpadded width="+1.7pt"><msup><mrow><mo>(</mo><mrow><mi>X</mi><mo>-</mo><mi>μ</mi></mrow><mo>)</mo></mrow><mi>T</mi></msup></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>V</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mpadded><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>X</mi><mo>-</mo><mi>μ</mi></mrow><mo>)</mo></mrow></mrow></msqrt><mo>&gt;</mo><mi>t</mi></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mi>Pr</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><msqrt><mi>y</mi></msqrt><mo>&gt;</mo><mi>t</mi></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mi>Pr</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mi>y</mi><mo>&gt;</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow><mo>≤</mo><mfrac><mrow><mi>𝔼</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>y</mi><mo stretchy="false">]</mo></mrow></mrow><msup><mi>t</mi><mn>2</mn></msup></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Since <math id="p4.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is symmetric, a rotation <math id="p4.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> (i.e., <math id="p4.m3" class="ltx_Math" alttext="R\,R^{T}=R^{T}\,R=I" display="inline"><mrow><mrow><mpadded width="+1.7pt"><mi>R</mi></mpadded><mo>⁢</mo><msup><mi>R</mi><mi>T</mi></msup></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><msup><mi>R</mi><mi>T</mi></msup></mpadded><mo>⁢</mo><mi>R</mi></mrow><mo>=</mo><mi>I</mi></mrow></math>) and a diagonal matrix <math id="p4.m4" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> (i.e., <math id="p4.m5" class="ltx_Math" alttext="i\neq j\,\Rightarrow\,D_{i,j}=0" display="inline"><mrow><mi>i</mi><mo>≠</mo><mpadded width="+1.7pt"><mi>j</mi></mpadded><mo rspace="4.2pt">⇒</mo><msub><mi>D</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></msub><mo>=</mo><mn>0</mn></mrow></math>) exist such that</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="V=R^{T}\,D\,R" display="block"><mrow><mi>V</mi><mo>=</mo><mrow><mpadded width="+1.7pt"><msup><mi>R</mi><mi>T</mi></msup></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mi>D</mi></mpadded><mo>⁢</mo><mi>R</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since <math id="p4.m6" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is positive <math id="p4.m7" class="ltx_Math" alttext="D_{ii}&gt;0" display="inline"><mrow><msub><mi>D</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub><mo>&gt;</mo><mn>0</mn></mrow></math>.
+Besides</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="V^{-1}=R^{-1}\,D^{-1}\,(R^{T})^{-1}=R^{T}\,D^{-1}\,R" display="block"><mrow><msup><mi>V</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>=</mo><mrow><mpadded width="+1.7pt"><msup><mi>R</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>D</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mpadded><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><msup><mi>R</mi><mi>T</mi></msup><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><msup><mi>R</mi><mi>T</mi></msup></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>D</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mpadded><mo>⁢</mo><mi>R</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">clearly <math id="p4.m8" class="ltx_Math" alttext="\left[D^{-1}\right]_{ii}=\frac{1}{D_{ii}}" display="inline"><mrow><msub><mrow><mo>[</mo><msup><mi>D</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>]</mo></mrow><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub><mo>=</mo><mfrac><mn>1</mn><msub><mi>D</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mfrac></mrow></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Define <math id="p5.m1" class="ltx_Math" alttext="Z=R\,\left(X-\mu\right)" display="inline"><mrow><mi>Z</mi><mo>=</mo><mrow><mpadded width="+1.7pt"><mi>R</mi></mpadded><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>X</mi><mo>-</mo><mi>μ</mi></mrow><mo>)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">The following identities hold:</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\mathbb{E}\left[Z\,Z^{T}\right]=R\,\mathbb{E}\left[\left(X-\mu\right)\,\left(X%
+-\mu\right)^{T}\right]\,R^{T}=R\,R^{T}\,D\,R\,R^{T}=D\quad\Rightarrow\quad%
+\forall i\quad\mathbb{E}\left[Z_{i}^{2}\right]=D_{ii}" display="block"><mrow><mrow><mrow><mi>𝔼</mi><mo>⁢</mo><mrow><mo>[</mo><mrow><mpadded width="+1.7pt"><mi>Z</mi></mpadded><mo>⁢</mo><msup><mi>Z</mi><mi>T</mi></msup></mrow><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><mi>R</mi></mpadded><mo>⁢</mo><mi>𝔼</mi><mo>⁢</mo><mrow><mo>[</mo><mrow><mrow><mo>(</mo><mrow><mi>X</mi><mo>-</mo><mi>μ</mi></mrow><mo rspace="4.2pt">)</mo></mrow><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mi>X</mi><mo>-</mo><mi>μ</mi></mrow><mo>)</mo></mrow><mi>T</mi></msup></mrow><mo rspace="4.2pt">]</mo></mrow><mo>⁢</mo><msup><mi>R</mi><mi>T</mi></msup></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><mi>R</mi></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>R</mi><mi>T</mi></msup></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mi>D</mi></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mi>R</mi></mpadded><mo>⁢</mo><msup><mi>R</mi><mi>T</mi></msup></mrow><mo>=</mo><mi>D</mi></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mrow><mo>⇒</mo><mo mathvariant="italic" separator="true"> </mo><mrow><mo>∀</mo><mi>i</mi></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mi>𝔼</mi><mo>⁢</mo><mrow><mo>[</mo><msubsup><mi>Z</mi><mi>i</mi><mn>2</mn></msubsup><mo>]</mo></mrow></mrow></mrow><mo>=</mo><msub><mi>D</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="y=Z^{T}\,R\,V^{-1}\,R^{T}\,Z=Z^{T}\,D^{-1}\,Z=\sum\limits_{i=1}^{N}\frac{Z_{i}%
+^{2}}{D_{ii}}" display="block"><mrow><mi>y</mi><mo>=</mo><mrow><mpadded width="+1.7pt"><msup><mi>Z</mi><mi>T</mi></msup></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mi>R</mi></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>V</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>R</mi><mi>T</mi></msup></mpadded><mo>⁢</mo><mi>Z</mi></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><msup><mi>Z</mi><mi>T</mi></msup></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>D</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mpadded><mo>⁢</mo><mi>Z</mi></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mfrac><msubsup><mi>Z</mi><mi>i</mi><mn>2</mn></msubsup><msub><mi>D</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\mathbb{E}[y]=\sum\limits_{i=1}^{N}\frac{\mathbb{E}\left[Z_{i}^{2}\right]}{D_{%
+ii}}=N" display="block"><mrow><mrow><mi>𝔼</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>y</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></munderover><mfrac><mrow><mi>𝔼</mi><mo>⁢</mo><mrow><mo>[</mo><msubsup><mi>Z</mi><mi>i</mi><mn>2</mn></msubsup><mo>]</mo></mrow></mrow><msub><mi>D</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mfrac></mrow><mo>=</mo><mi>N</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Multidimensional Chebyshev’s inequality</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">MultidimensionalChebyshevsInequality</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:17:55</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:17:55</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">daniWk (21206)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">daniWk (21206)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">daniWk (21206)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 60A99</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:53:52 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

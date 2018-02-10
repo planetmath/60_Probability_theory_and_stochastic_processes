@@ -1,0 +1,337 @@
+<!DOCTYPE html><html>
+<head>
+<title>analytic solution of Black-Scholes PDE</title>
+<!--Generated on Sat Feb 10 12:00:05 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">analytic solution of Black-Scholes PDE</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Here we present
+an analytical
+solution for the <em class="ltx_emph ltx_font_italic">Black-Scholes partial differential equation</em>,</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle rf=\frac{\partial f}{\partial t}+rx\,\frac{\partial f}{\partial x%
+}+\frac{1}{2}\sigma^{2}x^{2}\,\frac{\partial^{2}f}{\partial x^{2}}\,,\quad f=f%
+(t,x)\,," display="inline"><mrow><mrow><mrow><mrow><mi>r</mi><mo>⁢</mo><mi>f</mi></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>x</mi></mpadded><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>x</mi><mn>2</mn></msup></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mpadded></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>f</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mi>x</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">over the domain <math id="p2.m1" class="ltx_Math" alttext="0&lt;x&lt;\infty,\&gt;0\leq t\leq T" display="inline"><mrow><mrow><mn>0</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mrow><mn> 0</mn><mo>≤</mo><mi>t</mi><mo>≤</mo><mi>T</mi></mrow></mrow></math>,
+with terminal condition <math id="p2.m2" class="ltx_Math" alttext="f(T,x)=\psi(x)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>T</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,
+by reducing this parabolic PDE to
+the heat equation of physics.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">We begin by making the substitution:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="u=e^{-rt}\,f\,," display="block"><mrow><mrow><mi>u</mi><mo>=</mo><mrow><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>r</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></msup></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mi>f</mi></mpadded></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which is motivated by the fact that it is the portfolio value
+<em class="ltx_emph ltx_font_italic">discounted by the interest rate <math id="p3.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math></em> (see the derivation of the
+Black-Scholes formula)
+that is a martingale.
+Using the product rule on <math id="p3.m2" class="ltx_Math" alttext="f=e^{rt}\,u" display="inline"><mrow><mi>f</mi><mo>=</mo><mrow><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mi>r</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mpadded><mo>⁢</mo><mi>u</mi></mrow></mrow></math>,
+we derive the PDE that the function <math id="p3.m3" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> must satisfy:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="rf=re^{rt}\,u=re^{rt}\,u+e^{rt}\frac{\partial u}{\partial t}+rxe^{rt}\frac{%
+\partial u}{\partial x}+\frac{1}{2}\sigma^{2}x^{2}e^{rt}\frac{\partial^{2}u}{%
+\partial x^{2}}\,;" display="block"><mrow><mrow><mrow><mi>r</mi><mo>⁢</mo><mi>f</mi></mrow><mo>=</mo><mrow><mi>r</mi><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mi>r</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mpadded><mo>⁢</mo><mi>u</mi></mrow><mo>=</mo><mrow><mrow><mi>r</mi><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mi>r</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mpadded><mo>⁢</mo><mi>u</mi></mrow><mo>+</mo><mrow><msup><mi>e</mi><mrow><mi>r</mi><mo>⁢</mo><mi>t</mi></mrow></msup><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mi>x</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>r</mi><mo>⁢</mo><mi>t</mi></mrow></msup><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mi>r</mi><mo>⁢</mo><mi>t</mi></mrow></msup><mo>⁢</mo><mpadded width="+1.7pt"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mpadded></mrow></mrow></mrow><mo>;</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">or simply,</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle 0=\frac{\partial u}{\partial t}+rx\frac{\partial u}{\partial x}+%
+\frac{1}{2}\sigma^{2}x^{2}\frac{\partial^{2}u}{\partial x^{2}}\,." display="inline"><mrow><mrow><mn>0</mn><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup><mo>⁢</mo><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Next, we make the substitutions:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="y=\log x\,,\quad s=T-t\,." display="block"><mrow><mrow><mrow><mi>y</mi><mo>=</mo><mrow><mi>log</mi><mo>⁡</mo><mpadded width="+1.7pt"><mi>x</mi></mpadded></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>s</mi><mo>=</mo><mrow><mi>T</mi><mo>-</mo><mpadded width="+1.7pt"><mi>t</mi></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">These changes of variables can be motivated
+by observing that:</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">The underlying process described by the variable <math id="I1.i1.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>
+is a geometric Brownian motion
+(as explained in the derivation of the Black-Scholes formula itself),
+so that <math id="I1.i1.p1.m2" class="ltx_Math" alttext="\log x" display="inline"><mrow><mi>log</mi><mo>⁡</mo><mi>x</mi></mrow></math> describes a Brownian motion, possibly
+with a drift.
+Then <math id="I1.i1.p1.m3" class="ltx_Math" alttext="\log x" display="inline"><mrow><mi>log</mi><mo>⁡</mo><mi>x</mi></mrow></math> should satisfy some sort of diffusion equation
+(well-known in physics).</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">The evolution of the system
+is backwards from the terminal state of the system. Indeed,
+the boundary condition is given as a terminal state,
+and the coefficient of <math id="I1.i2.p1.m1" class="ltx_Math" alttext="\partial u/\partial t" display="inline"><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mo>/</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mrow></math> is positive in equation (<a href="#S0.E2" title="(2) ‣ analytic solution of Black-Scholes PDE" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>).
+(Compare with the standard heat equation,
+<math id="I1.i2.p1.m2" class="ltx_Math" alttext="0=-\partial u/\partial t+\partial u/\partial x" display="inline"><mrow><mn>0</mn><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mo>/</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mrow></mrow><mo>+</mo><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mo>/</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></mrow></math>, which describes a
+temperature  evolving forwards in time.)
+So to get to the heat equation,
+we have to use a substitution to reverse time.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Since</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\frac{\partial u}{\partial s}=-\frac{\partial u}{\partial t}\,,\quad\frac{%
+\partial u}{\partial x}=\frac{\partial u}{\partial y}\,\frac{dy}{dx}=\frac{1}{%
+x}\,\frac{\partial u}{\partial y}\,," display="block"><mrow><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>s</mi></mrow></mfrac><mo>=</mo><mrow><mo>-</mo><mpadded width="+1.7pt"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mpadded></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac><mo>=</mo><mrow><mpadded width="+1.7pt"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac></mpadded><mo>⁢</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><mfrac><mn>1</mn><mi>x</mi></mfrac></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac></mpadded></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\frac{\partial^{2}u}{\partial x^{2}}=\frac{\partial}{\partial x}\left(\frac{1}%
+{x}\frac{\partial u}{\partial y}\right)=-\frac{1}{x^{2}}\,\frac{\partial u}{%
+\partial y}+\frac{1}{x^{2}}\frac{\partial^{2}u}{\partial y^{2}}\,," display="block"><mrow><mrow><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mrow><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>x</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mi>x</mi></mfrac><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mpadded width="+1.7pt"><mfrac><mn>1</mn><msup><mi>x</mi><mn>2</mn></msup></mfrac></mpadded><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><msup><mi>x</mi><mn>2</mn></msup></mfrac><mo>⁢</mo><mpadded width="+1.7pt"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac></mpadded></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">substituting in equation (<a href="#S0.E2" title="(2) ‣ analytic solution of Black-Scholes PDE" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>),
+we find:</p>
+<table id="S0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E3.m1" class="ltx_Math" alttext="\displaystyle 0=-\frac{\partial u}{\partial s}+(r-\tfrac{1}{2}\sigma^{2})\frac%
+{\partial u}{\partial y}+\frac{1}{2}\sigma^{2}\,\frac{\partial^{2}u}{\partial y%
+^{2}}\,." display="inline"><mrow><mrow><mn>0</mn><mo>=</mo><mrow><mrow><mo>-</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>s</mi></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>r</mi><mo>-</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>σ</mi><mn>2</mn></msup></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The first partial derivative with respect to <math id="p5.m1" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>
+does not cancel (unless <math id="p5.m2" class="ltx_Math" alttext="r=\tfrac{1}{2}\sigma^{2}" display="inline"><mrow><mi>r</mi><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup></mrow></mrow></math>)
+because we have not take into account
+the drift of the Brownian motion.
+To cancel the drift (which is linear in time),
+we make the substitutions:</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="z=y+(r-\tfrac{1}{2}\sigma^{2})\tau\,,\quad\tau=s\,." display="block"><mrow><mrow><mrow><mi>z</mi><mo>=</mo><mrow><mi>y</mi><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>r</mi><mo>-</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mpadded width="+1.7pt"><mi>τ</mi></mpadded></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>τ</mi><mo>=</mo><mpadded width="+1.7pt"><mi>s</mi></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Under the new coordinate system <math id="p5.m3" class="ltx_Math" alttext="(z,\tau)" display="inline"><mrow><mo stretchy="false">(</mo><mi>z</mi><mo>,</mo><mi>τ</mi><mo stretchy="false">)</mo></mrow></math>, we have the relations
+amongst vector fields:</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\frac{\partial}{\partial z}=\frac{\partial}{\partial y}\,,\quad\frac{\partial}%
+{\partial\tau}=-(r-\tfrac{1}{2}\sigma^{2})\frac{\partial}{\partial y}+\frac{%
+\partial}{\partial s}\,," display="block"><mrow><mrow><mrow><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow></mfrac><mo>=</mo><mpadded width="+1.7pt"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac></mpadded></mrow><mo rspace="12.5pt">,</mo><mrow><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>τ</mi></mrow></mfrac><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>r</mi><mo>-</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>y</mi></mrow></mfrac></mrow></mrow><mo>+</mo><mpadded width="+1.7pt"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>s</mi></mrow></mfrac></mpadded></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">leading to the following 
+of equation (<a href="#S0.E3" title="(3) ‣ analytic solution of Black-Scholes PDE" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>):</p>
+<table id="S0.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\displaystyle 0=-\frac{\partial u}{\partial\tau}-(r-\tfrac{1}{2}\sigma^{2})%
+\frac{\partial u}{\partial z}+(r-\tfrac{1}{2}\sigma^{2})\frac{\partial u}{%
+\partial z}+\frac{1}{2}\sigma^{2}\frac{\partial^{2}u}{\partial z^{2}}\,;" display="inline"><mrow><mrow><mn>0</mn><mo>=</mo><mrow><mrow><mrow><mo>-</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>τ</mi></mrow></mfrac></mstyle></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>r</mi><mo>-</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow></mfrac></mstyle></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>r</mi><mo>-</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>z</mi></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup><mo>⁢</mo><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mpadded></mrow></mrow></mrow><mo>;</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">or:</p>
+<table id="S0.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E4.m1" class="ltx_Math" alttext="\displaystyle\frac{\partial u}{\partial\tau}=\frac{1}{2}\sigma^{2}\frac{%
+\partial^{2}u}{\partial z^{2}}\,,\quad u=u(\tau,z)\,," display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>τ</mi></mrow></mfrac></mstyle><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup><mo>⁢</mo><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>u</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mpadded></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>u</mi><mo>=</mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>τ</mi><mo>,</mo><mi>z</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">which is one form of the diffusion equation.
+The domain is on
+<math id="p5.m4" class="ltx_Math" alttext="-\infty&lt;z&lt;\infty" display="inline"><mrow><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>&lt;</mo><mi>z</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>
+and <math id="p5.m5" class="ltx_Math" alttext="0\leq\tau\leq T" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>τ</mi><mo>≤</mo><mi>T</mi></mrow></math>;
+the initial condition is to be:</p>
+<table id="S0.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\displaystyle u(0,z)=e^{-rT}\,\psi(e^{z}):=u_{0}(z)\,." display="inline"><mrow><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>r</mi><mo>⁢</mo><mi>T</mi></mrow></mrow></msup></mpadded><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>e</mi><mi>z</mi></msup><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><msub><mi>u</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo rspace="4.2pt" stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The original function <math id="p5.m6" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> can be recovered
+by</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="f(t,x)=e^{rt}\,u\Bigl{(}T-t,\&gt;\log x+(r-\tfrac{1}{2}\sigma^{2})\tau\Bigr{)}\,." display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mi>r</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mpadded><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><mi>T</mi><mo>-</mo><mi>t</mi></mrow><mo rspace="4.7pt">,</mo><mrow><mrow><mi>log</mi><mo>⁡</mo><mi>x</mi></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>r</mi><mo>-</mo><mrow><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>τ</mi></mrow></mrow><mo maxsize="160%" minsize="160%" rspace="4.2pt">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">The fundamental solution of the PDE (<a href="#S0.E4" title="(4) ‣ analytic solution of Black-Scholes PDE" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>)
+is known to be:</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="G_{\tau}(z)=\frac{1}{\sqrt{2\pi\sigma^{2}\tau}}\exp\Bigl{(}-\frac{z}{2\sigma^{%
+2}\tau}\Bigr{)}" display="block"><mrow><mrow><msub><mi>G</mi><mi>τ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup><mo>⁢</mo><mi>τ</mi></mrow></msqrt></mfrac><mo>⁢</mo><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><mo>-</mo><mfrac><mi>z</mi><mrow><mn>2</mn><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup><mo>⁢</mo><mi>τ</mi></mrow></mfrac></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(derived using the Fourier transform);
+and the solution <math id="p6.m1" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> with initial condition <math id="p6.m2" class="ltx_Math" alttext="u_{0}" display="inline"><msub><mi>u</mi><mn>0</mn></msub></math>
+is given by the convolution:</p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="u(\tau,z)=u_{0}*G_{\tau}(z)=\frac{e^{-rT}}{\sqrt{2\pi\sigma^{2}\tau}}\,\int_{-%
+\infty}^{\infty}\psi(e^{\zeta})\,\exp\Bigl{(}-\frac{(z-\zeta)^{2}}{2\sigma^{2}%
+\tau}\Bigr{)}\,d\zeta\,." display="block"><mrow><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>τ</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>u</mi><mn>0</mn></msub><mo>*</mo><msub><mi>G</mi><mi>τ</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><mfrac><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>r</mi><mo>⁢</mo><mi>T</mi></mrow></mrow></msup><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup><mo>⁢</mo><mi>τ</mi></mrow></msqrt></mfrac></mpadded><mo>⁢</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>e</mi><mi>ζ</mi></msup><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><mo>-</mo><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>-</mo><mi>ζ</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup><mo>⁢</mo><mi>τ</mi></mrow></mfrac></mrow><mo maxsize="160%" minsize="160%" rspace="4.2pt">)</mo></mrow></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+1.7pt"><mi>ζ</mi></mpadded></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In terms of the original function <math id="p6.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>:</p>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="f(t,x)=\frac{e^{-r\tau}}{\sqrt{2\pi\sigma^{2}\tau}}\int_{-\infty}^{\infty}\psi%
+(e^{\zeta})\,\exp\Bigl{(}-\frac{\bigl{(}\log x+(r-\frac{1}{2}\sigma^{2})\tau-%
+\zeta\bigr{)}^{2}}{2\sigma^{2}\tau}\Bigr{)}\,d\zeta\,," display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>r</mi><mo>⁢</mo><mi>τ</mi></mrow></mrow></msup><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup><mo>⁢</mo><mi>τ</mi></mrow></msqrt></mfrac><mo>⁢</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>e</mi><mi>ζ</mi></msup><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><mo>-</mo><mfrac><msup><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mrow><mrow><mi>log</mi><mo>⁡</mo><mi>x</mi></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>r</mi><mo>-</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>τ</mi></mrow></mrow><mo>-</mo><mi>ζ</mi></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup><mo>⁢</mo><mi>τ</mi></mrow></mfrac></mrow><mo maxsize="160%" minsize="160%" rspace="4.2pt">)</mo></mrow></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+1.7pt"><mi>ζ</mi></mpadded></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(<math id="p6.m4" class="ltx_Math" alttext="\tau=T-t" display="inline"><mrow><mi>τ</mi><mo>=</mo><mrow><mi>T</mi><mo>-</mo><mi>t</mi></mrow></mrow></math>) which agrees with the result derived using probabilistic methods (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/BlackScholesFormula</span>).</p>
+</div>
+<div id="p7" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">analytic solution of Black-Scholes PDE</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">AnalyticSolutionOfBlackScholesPDE</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:31:34</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:31:34</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">6</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Derivation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60H10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 91B28</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ExampleOfSolvingTheHeatEquation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">BlackScholesPDE</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">BlackScholesFormula</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 12:00:05 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

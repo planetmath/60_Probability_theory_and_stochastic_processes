@@ -1,0 +1,622 @@
+<!DOCTYPE html><html>
+<head>
+<title>derivation of Black-Scholes formula in martingale form</title>
+<!--Generated on Sat Feb 10 12:00:16 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">derivation of Black-Scholes formula in martingale form</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div class="ltx_TOC ltx_role_contents">
+<h6>Contents:</h6>
+<ul class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="#S0.SS1" title="0.1 Assumptions ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">0.1 </span>Assumptions</span></a>
+<ul class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#S0.SS1.SSS1" title="0.1.1 Asset price ‣ 0.1 Assumptions ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">0.1.1 </span>Asset price</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#S0.SS1.SSS2" title="0.1.2 Money-market account ‣ 0.1 Assumptions ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">0.1.2 </span>Money-market account</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#S0.SS1.SSS3" title="0.1.3 Portfolio process ‣ 0.1 Assumptions ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">0.1.3 </span>Portfolio process</span></a></li>
+</ul>
+</li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="#S0.SS2" title="0.2 Derivation ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">0.2 </span>Derivation</span></a>
+<ul class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#S0.SS2.SSS1" title="0.2.1 Change of probability measure ‣ 0.2 Derivation ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">0.2.1 </span>Change of probability measure</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#S0.SS2.SSS2" title="0.2.2 Discounted portfolio process is a martingale ‣ 0.2 Derivation ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">0.2.2 </span>Discounted portfolio process is a martingale</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#S0.SS2.SSS3" title="0.2.3 Portfolio process as a conditional expectation ‣ 0.2 Derivation ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">0.2.3 </span>Portfolio process as a conditional expectation</span></a></li>
+</ul>
+</li>
+<li class="ltx_tocentry ltx_tocentry_subsection">
+<a href="#S0.SS3" title="0.3 Existence of solutions ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">0.3 </span>Existence of solutions</span></a>
+<ul class="ltx_toclist ltx_toclist_subsection">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#S0.SS3.SSS1" title="0.3.1 Proposed construction ‣ 0.3 Existence of solutions ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">0.3.1 </span>Proposed construction</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a href="#S0.SS3.SSS2" title="0.3.2 Verification ‣ 0.3 Existence of solutions ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">0.3.2 </span>Verification</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">This entry derives the Black-Scholes formula in martingale form.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">The portfolio process <math id="p3.m1" class="ltx_Math" alttext="V_{t}" display="inline"><msub><mi>V</mi><mi>t</mi></msub></math> representing a stock option
+will be shown to satisfy:</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle V_{t}=e^{-r(T-t)}\,\mathbb{E}^{\mathbb{Q}}\bigl{[}V_{T}\mid%
+\mathcal{F}_{t}\bigr{]}\,." display="inline"><mrow><msub><mi>V</mi><mi>t</mi></msub><mo>=</mo><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></msup></mpadded><msup><mi>𝔼</mi><mi>ℚ</mi></msup><mrow><mo maxsize="120%" minsize="120%">[</mo><msub><mi>V</mi><mi>T</mi></msub><mo>∣</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub><mo maxsize="120%" minsize="120%" rspace="4.2pt">]</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">(The quantities appearing here are defined precisely,
+in the section on “Assumptions” below.)</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Equation (<a href="#S0.E1" title="(1) ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>)
+can be used in practice to calculate <math id="p4.m1" class="ltx_Math" alttext="V_{t}" display="inline"><msub><mi>V</mi><mi>t</mi></msub></math> for all times <math id="p4.m2" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>,
+because from the specification of a financial contract,
+the value of the portfolio at time <math id="p4.m3" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>,
+or in other words, its pay-off at time <math id="p4.m4" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math>,
+will be a known function.
+Mathematically speaking, <math id="p4.m5" class="ltx_Math" alttext="V_{T}" display="inline"><msub><mi>V</mi><mi>T</mi></msub></math> gives the <em class="ltx_emph ltx_font_italic">terminal condition</em>
+for the solution of a stochastic differential equation.</p>
+</div>
+<section id="S0.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.1 </span>Assumptions</h2>
+
+<section id="S0.SS1.SSS1" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">0.1.1 </span>Asset price</h3>
+
+<div id="S0.SS1.SSS1.p1" class="ltx_para">
+<p class="ltx_p">The asset or stock price <math id="S0.SS1.SSS1.p1.m1" class="ltx_Math" alttext="X_{t}" display="inline"><msub><mi>X</mi><mi>t</mi></msub></math> is to be modelled by the stochastic
+differential equation:</p>
+<table id="A0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle dX_{t}=\mu X_{t}\,dt+\sigma X_{t}\,dW_{t}\,," display="inline"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><msub><mi>X</mi><mi>t</mi></msub></mrow><mo>=</mo><mrow><mrow><mi>μ</mi><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>X</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mrow><mi>σ</mi><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>X</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>W</mi><mi>t</mi></msub></mpadded></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <math id="S0.SS1.SSS1.p1.m2" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> and <math id="S0.SS1.SSS1.p1.m3" class="ltx_Math" alttext="\sigma&gt;0" display="inline"><mrow><mi>σ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> are constants.</p>
+</div>
+<div id="S0.SS1.SSS1.p2" class="ltx_para">
+<p class="ltx_p">The stochastic process <math id="S0.SS1.SSS1.p2.m1" class="ltx_Math" alttext="W_{t}" display="inline"><msub><mi>W</mi><mi>t</mi></msub></math> is a standard Brownian motion
+adapted to the filtration <math id="S0.SS1.SSS1.p2.m2" class="ltx_Math" alttext="\{\mathcal{F}_{t}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub><mo stretchy="false">}</mo></mrow></math>.</p>
+</div>
+<div id="S0.SS1.SSS1.p3" class="ltx_para">
+<p class="ltx_p">See the main article
+on the Black-Scholes formula (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/BlackScholesFormula</span>)
+for an explanation and justification of this modelling assumption.</p>
+</div>
+</section>
+<section id="S0.SS1.SSS2" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">0.1.2 </span>Money-market account</h3>
+
+<div id="S0.SS1.SSS2.p1" class="ltx_para">
+<p class="ltx_p">The money-market account accumulates interest compounded continuously
+at a rate of <math id="S0.SS1.SSS2.p1.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>.
+It satisfies the stochastic differential equation:</p>
+<table id="A0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E3.m1" class="ltx_Math" alttext="\displaystyle dM_{t}=rM_{t}\,dt\,." display="inline"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><msub><mi>M</mi><mi>t</mi></msub></mrow><mo>=</mo><mrow><mi>r</mi><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>M</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>t</mi></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S0.SS1.SSS2.p2" class="ltx_para">
+<p class="ltx_p">This happens to take the same form as an ordinary differential equation,
+for the process <math id="S0.SS1.SSS2.p2.m1" class="ltx_Math" alttext="M_{t}" display="inline"><msub><mi>M</mi><mi>t</mi></msub></math> has no randomness in it at all,
+under the assumption of a fixed interest rate <math id="S0.SS1.SSS2.p2.m2" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>.</p>
+</div>
+<div id="S0.SS1.SSS2.p3" class="ltx_para">
+<p class="ltx_p">The solution is to equation (<a href="#S0.E3" title="(3) ‣ 0.1.2 Money-market account ‣ 0.1 Assumptions ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>) with initial condition
+<math id="S0.SS1.SSS2.p3.m1" class="ltx_Math" alttext="M_{0}" display="inline"><msub><mi>M</mi><mn>0</mn></msub></math> is <math id="S0.SS1.SSS2.p3.m2" class="ltx_Math" alttext="M_{t}=M_{0}\,e^{rt}" display="inline"><mrow><msub><mi>M</mi><mi>t</mi></msub><mo>=</mo><mrow><mpadded width="+1.7pt"><msub><mi>M</mi><mn>0</mn></msub></mpadded><mo>⁢</mo><msup><mi>e</mi><mrow><mi>r</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow></mrow></math>.</p>
+</div>
+</section>
+<section id="S0.SS1.SSS3" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">0.1.3 </span>Portfolio process</h3>
+
+<div id="S0.SS1.SSS3.p1" class="ltx_para">
+<p class="ltx_p">The price of the option is derived by following a <em class="ltx_emph ltx_font_italic">replicating portfolio</em>
+consisting of <math id="S0.SS1.SSS3.p1.m1" class="ltx_Math" alttext="\Delta_{t}" display="inline"><msub><mi mathvariant="normal">Δ</mi><mi>t</mi></msub></math> units of the stock <math id="S0.SS1.SSS3.p1.m2" class="ltx_Math" alttext="X_{t}" display="inline"><msub><mi>X</mi><mi>t</mi></msub></math>
+and <math id="S0.SS1.SSS3.p1.m3" class="ltx_Math" alttext="\Theta_{t}" display="inline"><msub><mi mathvariant="normal">Θ</mi><mi>t</mi></msub></math> units of the money-market
+account. If <math id="S0.SS1.SSS3.p1.m4" class="ltx_Math" alttext="V_{t}" display="inline"><msub><mi>V</mi><mi>t</mi></msub></math> denotes the value of this portfolio at time <math id="S0.SS1.SSS3.p1.m5" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>,
+then</p>
+<table id="A0.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E4.m1" class="ltx_Math" alttext="\displaystyle V_{t}=\Delta_{t}\,X_{t}+\Theta_{t}\,M_{t}\,." display="inline"><mrow><mrow><msub><mi>V</mi><mi>t</mi></msub><mo>=</mo><mrow><mrow><mpadded width="+1.7pt"><msub><mi mathvariant="normal">Δ</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><msub><mi>X</mi><mi>t</mi></msub></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><msub><mi mathvariant="normal">Θ</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>M</mi><mi>t</mi></msub></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">A certain “self-financing condition” on the portfolio requires that
+<math id="S0.SS1.SSS3.p1.m6" class="ltx_Math" alttext="V_{t}" display="inline"><msub><mi>V</mi><mi>t</mi></msub></math> also satisfy the stochastic differential equation:</p>
+<table id="A0.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E5.m1" class="ltx_Math" alttext="\displaystyle dV_{t}=\Delta_{t}\,dX_{t}+\Theta_{t}\,dM_{t}\,." display="inline"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><msub><mi>V</mi><mi>t</mi></msub></mrow><mo>=</mo><mrow><mrow><mpadded width="+1.7pt"><msub><mi mathvariant="normal">Δ</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msub><mi>X</mi><mi>t</mi></msub></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><msub><mi mathvariant="normal">Θ</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>M</mi><mi>t</mi></msub></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">This condition essentially says that we cannot input extra amounts
+of money out of thin air into our portfolio; we must start with what we have.</p>
+</div>
+<div id="S0.SS1.SSS3.p2" class="ltx_para">
+<p class="ltx_p">Equation (<a href="#S0.E5" title="(5) ‣ 0.1.3 Portfolio process ‣ 0.1 Assumptions ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a>) is not a mathematically proven statement,
+but another modelling assumption, justified by an analogous equation
+governing trading in discretized time periods.</p>
+</div>
+</section>
+</section>
+<section id="S0.SS2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.2 </span>Derivation</h2>
+
+<div id="S0.SS2.p1" class="ltx_para">
+<p class="ltx_p">We first manipulate the
+stochastic differential equation (<a href="#S0.E4" title="(4) ‣ 0.1.3 Portfolio process ‣ 0.1 Assumptions ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>)
+for the portfolio process <math id="S0.SS2.p1.m1" class="ltx_Math" alttext="V_{t}" display="inline"><msub><mi>V</mi><mi>t</mi></msub></math>,
+to express it in terms of the Brownian motion <math id="S0.SS2.p1.m2" class="ltx_Math" alttext="W_{t}" display="inline"><msub><mi>W</mi><mi>t</mi></msub></math>.</p>
+<table id="A0.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle dV_{t}" display="inline"><mrow><mi>d</mi><mo>⁢</mo><msub><mi>V</mi><mi>t</mi></msub></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle=\Delta_{t}\,dX_{t}+\Theta_{t}\,rM_{t}\,dt" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mpadded width="+1.7pt"><msub><mi mathvariant="normal">Δ</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msub><mi>X</mi><mi>t</mi></msub></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><msub><mi mathvariant="normal">Θ</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>M</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">from eq. (<a href="#S0.E5" title="(5) ‣ 0.1.3 Portfolio process ‣ 0.1 Assumptions ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a>) and (<a href="#S0.E3" title="(3) ‣ 0.1.2 Money-market account ‣ 0.1 Assumptions ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle=\Delta_{t}\,dX_{t}+r\bigl{(}V_{t}-\Delta_{t}X_{t}\bigr{)}\,dt" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mpadded width="+1.7pt"><msub><mi mathvariant="normal">Δ</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msub><mi>X</mi><mi>t</mi></msub></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><msub><mi>V</mi><mi>t</mi></msub><mo>-</mo><mrow><msub><mi mathvariant="normal">Δ</mi><mi>t</mi></msub><mo>⁢</mo><msub><mi>X</mi><mi>t</mi></msub></mrow></mrow><mo maxsize="120%" minsize="120%" rspace="4.2pt">)</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">from eq. (<a href="#S0.E4" title="(4) ‣ 0.1.3 Portfolio process ‣ 0.1 Assumptions ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=\Delta_{t}\,\bigl{(}\mu X_{t}\,dt+\sigma X_{t}\,dW_{t}\bigr{)}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mpadded width="+1.7pt"><msub><mi mathvariant="normal">Δ</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mrow><mi>μ</mi><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>X</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mrow><mi>σ</mi><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>X</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msub><mi>W</mi><mi>t</mi></msub></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle\qquad+r\bigl{(}V_{t}-\Delta_{t}X_{t}\bigr{)}\,dt" display="inline"><mrow><mi>  </mi><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><msub><mi>V</mi><mi>t</mi></msub><mo>-</mo><mrow><msub><mi mathvariant="normal">Δ</mi><mi>t</mi></msub><mo>⁢</mo><msub><mi>X</mi><mi>t</mi></msub></mrow></mrow><mo maxsize="120%" minsize="120%" rspace="4.2pt">)</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">from eq. (<a href="#S0.E2" title="(2) ‣ 0.1.1 Asset price ‣ 0.1 Assumptions ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle=rV_{t}\,dt+\Delta_{t}X_{t}\,\bigl{(}(\mu-r)\,dt+\sigma\,dW_{t}%
+\bigr{)}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>r</mi><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>V</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mrow><msub><mi mathvariant="normal">Δ</mi><mi>t</mi></msub><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>X</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>μ</mi><mo>-</mo><mi>r</mi></mrow><mo rspace="4.2pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><mi>σ</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msub><mi>W</mi><mi>t</mi></msub></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">rearrangement</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<section id="S0.SS2.SSS1" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">0.2.1 </span>Change of probability measure</h3>
+
+<div id="S0.SS2.SSS1.p1" class="ltx_para">
+<p class="ltx_p">Define the Brownian motion with drift <math id="S0.SS2.SSS1.p1.m1" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math>:</p>
+<table id="A0.EGx7" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E6.m1" class="ltx_Math" alttext="\displaystyle\widetilde{W}_{t}=\lambda t+W_{t}\,,\quad\lambda=\frac{\mu-r}{%
+\sigma}\,;" display="inline"><mrow><mrow><mrow><msub><mover accent="true"><mi>W</mi><mo>~</mo></mover><mi>t</mi></msub><mo>=</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mpadded width="+1.7pt"><msub><mi>W</mi><mi>t</mi></msub></mpadded></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>λ</mi><mo>=</mo><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><mrow><mi>μ</mi><mo>-</mo><mi>r</mi></mrow><mi>σ</mi></mfrac></mstyle></mpadded></mrow></mrow><mo>;</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">so that <math id="S0.SS2.SSS1.p1.m2" class="ltx_Math" alttext="d\widetilde{W}_{t}=\lambda\,dt+dW_{t}" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><msub><mover accent="true"><mi>W</mi><mo>~</mo></mover><mi>t</mi></msub></mrow><mo>=</mo><mrow><mrow><mpadded width="+1.7pt"><mi>λ</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mrow><mi>d</mi><mo>⁢</mo><msub><mi>W</mi><mi>t</mi></msub></mrow></mrow></mrow></math>, and</p>
+<table id="A0.EGx8" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E7.m1" class="ltx_Math" alttext="\displaystyle dV_{t}=rV_{t}\,dt+\sigma\,\Delta_{t}X_{t}\,d\widetilde{W}_{t}\,." display="inline"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><msub><mi>V</mi><mi>t</mi></msub></mrow><mo>=</mo><mrow><mrow><mi>r</mi><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>V</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><mi>σ</mi></mpadded><mo>⁢</mo><msub><mi mathvariant="normal">Δ</mi><mi>t</mi></msub><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>X</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mpadded width="+1.7pt"><msub><mover accent="true"><mi>W</mi><mo>~</mo></mover><mi>t</mi></msub></mpadded></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S0.SS2.SSS1.p2" class="ltx_para">
+<p class="ltx_p">The introduction of the process <math id="S0.SS2.SSS1.p2.m1" class="ltx_Math" alttext="\widetilde{W}_{t}" display="inline"><msub><mover accent="true"><mi>W</mi><mo>~</mo></mover><mi>t</mi></msub></math>
+is not merely for notational convenience but is mathematically
+meaningful. If the probability space we are working in
+is <math id="S0.SS2.SSS1.p2.m2" class="ltx_Math" alttext="(\Omega,\mathcal{F}_{T},\mathbb{P})" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>T</mi></msub><mo>,</mo><mi>ℙ</mi><mo stretchy="false">)</mo></mrow></math>,
+and <math id="S0.SS2.SSS1.p2.m3" class="ltx_Math" alttext="W_{t}" display="inline"><msub><mi>W</mi><mi>t</mi></msub></math>, for <math id="S0.SS2.SSS1.p2.m4" class="ltx_Math" alttext="0\leq t\leq T" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>t</mi><mo>≤</mo><mi>T</mi></mrow></math>, is a
+standard Wiener process on <math id="S0.SS2.SSS1.p2.m5" class="ltx_Math" alttext="(\Omega,\mathcal{F}_{T},\mathbb{P})" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>T</mi></msub><mo>,</mo><mi>ℙ</mi><mo stretchy="false">)</mo></mrow></math>,
+then <math id="S0.SS2.SSS1.p2.m6" class="ltx_Math" alttext="\widetilde{W}_{t}" display="inline"><msub><mover accent="true"><mi>W</mi><mo>~</mo></mover><mi>t</mi></msub></math> will not be a standard Wiener process
+on <math id="S0.SS2.SSS1.p2.m7" class="ltx_Math" alttext="(\Omega,\mathcal{F}_{T},\mathbb{P})" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>T</mi></msub><mo>,</mo><mi>ℙ</mi><mo stretchy="false">)</mo></mrow></math>, but it <em class="ltx_emph ltx_font_italic">will</em> be a standard Wiener process
+under <math id="S0.SS2.SSS1.p2.m8" class="ltx_Math" alttext="(\Omega,\mathcal{F}_{T},\mathbb{Q})" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>T</mi></msub><mo>,</mo><mi>ℚ</mi><mo stretchy="false">)</mo></mrow></math> <em class="ltx_emph ltx_font_italic">with a different probability measure</em>
+<math id="S0.SS2.SSS1.p2.m9" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math>.</p>
+</div>
+<div id="S0.SS2.SSS1.p3" class="ltx_para">
+<p class="ltx_p">The probability measure <math id="S0.SS2.SSS1.p3.m1" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math> is obtained by Girsanov’s theorem.
+The exact form for <math id="S0.SS2.SSS1.p3.m2" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math> can be calculated,
+but it will not be needed in this derivation.</p>
+</div>
+<div id="S0.SS2.SSS1.p4" class="ltx_para">
+<p class="ltx_p">In finance, <math id="S0.SS2.SSS1.p4.m1" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math> is known as the <em class="ltx_emph ltx_font_italic">risk-neutral measure</em>,
+and the quantity <math id="S0.SS2.SSS1.p4.m2" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> is the <em class="ltx_emph ltx_font_italic">market price of risk</em>.</p>
+</div>
+</section>
+<section id="S0.SS2.SSS2" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">0.2.2 </span>Discounted portfolio process is a martingale</h3>
+
+<div id="S0.SS2.SSS2.p1" class="ltx_para">
+<p class="ltx_p">From equation (<a href="#S0.E7" title="(7) ‣ 0.2.1 Change of probability measure ‣ 0.2 Derivation ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7</span></a>),
+we see that the value of the portfolio grows at the risk-free
+interest rate of <math id="S0.SS2.SSS2.p1.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>,
+apart from the randomness associated due to the stochastic
+differential <math id="S0.SS2.SSS2.p1.m2" class="ltx_Math" alttext="d\widetilde{W}_{t}" display="inline"><mrow><mi>d</mi><mo>⁢</mo><msub><mover accent="true"><mi>W</mi><mo>~</mo></mover><mi>t</mi></msub></mrow></math>.
+</p>
+</div>
+<div id="S0.SS2.SSS2.p2" class="ltx_para">
+<p class="ltx_p">It is thus reasonable to expect that,
+if we normalize the portfolio value amount
+by the amount that cash grows due to accumulation of risk-free
+interest,
+the resulting process, <math id="S0.SS2.SSS2.p2.m1" class="ltx_Math" alttext="V_{t}/M_{t}" display="inline"><mrow><msub><mi>V</mi><mi>t</mi></msub><mo>/</mo><msub><mi>M</mi><mi>t</mi></msub></mrow></math>, should have a zero growth rate.
+That this is indeed the case can be verified
+by a computation with Itô’s formula
+— more specifically, the
+ for Itô integrals:</p>
+<table id="A0.EGx9" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\displaystyle d\left(\frac{V_{t}}{M_{t}}\right)" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><msub><mi>V</mi><mi>t</mi></msub><msub><mi>M</mi><mi>t</mi></msub></mfrac></mstyle><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle=d\left(V_{t}\cdot\frac{1}{M_{t}}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>d</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><msub><mi>V</mi><mi>t</mi></msub><mo>⋅</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><msub><mi>M</mi><mi>t</mi></msub></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle=\bigl{(}dV_{t}\bigr{)}\,\frac{1}{M_{t}}+V_{t}\,d\left(\frac{1}{M%
+_{t}}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mi>d</mi><mo>⁢</mo><msub><mi>V</mi><mi>t</mi></msub></mrow><mo maxsize="120%" minsize="120%" rspace="4.2pt">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><msub><mi>M</mi><mi>t</mi></msub></mfrac></mstyle></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><msub><mi>V</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><msub><mi>M</mi><mi>t</mi></msub></mfrac></mstyle><mo>)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle=r\frac{V_{t}}{M_{t}}\,dt+\sigma\Delta_{t}\frac{X_{t}}{M_{t}}\,d%
+\widetilde{W}_{t}+V_{t}\,d\left(\frac{1}{M_{t}}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>r</mi><mo>⁢</mo><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><msub><mi>V</mi><mi>t</mi></msub><msub><mi>M</mi><mi>t</mi></msub></mfrac></mstyle></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mrow><mi>σ</mi><mo>⁢</mo><msub><mi mathvariant="normal">Δ</mi><mi>t</mi></msub><mo>⁢</mo><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><msub><mi>X</mi><mi>t</mi></msub><msub><mi>M</mi><mi>t</mi></msub></mfrac></mstyle></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msub><mover accent="true"><mi>W</mi><mo>~</mo></mover><mi>t</mi></msub></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><msub><mi>V</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><msub><mi>M</mi><mi>t</mi></msub></mfrac></mstyle><mo>)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">from eq. (<a href="#S0.E7" title="(7) ‣ 0.2.1 Change of probability measure ‣ 0.2 Derivation ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7</span></a>)</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex9.m2" class="ltx_Math" alttext="\displaystyle=r\frac{V_{t}}{M_{t}}\,dt+\sigma\Delta_{t}\frac{X_{t}}{M_{t}}\,d%
+\widetilde{W}_{t}+\frac{V_{t}}{M_{t}}\,dt" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>r</mi><mo>⁢</mo><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><msub><mi>V</mi><mi>t</mi></msub><msub><mi>M</mi><mi>t</mi></msub></mfrac></mstyle></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mrow><mi>σ</mi><mo>⁢</mo><msub><mi mathvariant="normal">Δ</mi><mi>t</mi></msub><mo>⁢</mo><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><msub><mi>X</mi><mi>t</mi></msub><msub><mi>M</mi><mi>t</mi></msub></mfrac></mstyle></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msub><mover accent="true"><mi>W</mi><mo>~</mo></mover><mi>t</mi></msub></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><msub><mi>V</mi><mi>t</mi></msub><msub><mi>M</mi><mi>t</mi></msub></mfrac></mstyle></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">from <math id="S0.Ex9.m3.m1" class="ltx_Math" alttext="\frac{1}{M_{t}}=\frac{e^{-rt}}{M_{0}}" display="inline"><mrow><mfrac><mn>1</mn><msub><mi>M</mi><mi>t</mi></msub></mfrac><mo>=</mo><mfrac><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>r</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><msub><mi>M</mi><mn>0</mn></msub></mfrac></mrow></math>.</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS2.SSS2.p3" class="ltx_para">
+<p class="ltx_p">Thus,
+</p>
+<table id="A0.EGx10" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex10" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\displaystyle d\left(\frac{V_{t}}{M_{t}}\right)=\sigma\Delta_{t}\,\frac{X_{t}}%
+{M_{t}}\,d\widetilde{W}_{t}\,." display="inline"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><msub><mi>V</mi><mi>t</mi></msub><msub><mi>M</mi><mi>t</mi></msub></mfrac></mstyle><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mi>σ</mi><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi mathvariant="normal">Δ</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><msub><mi>X</mi><mi>t</mi></msub><msub><mi>M</mi><mi>t</mi></msub></mfrac></mstyle></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mpadded width="+1.7pt"><msub><mover accent="true"><mi>W</mi><mo>~</mo></mover><mi>t</mi></msub></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Or, in integral form:</p>
+<table id="A0.EGx11" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E8.m1" class="ltx_Math" alttext="\displaystyle\frac{V_{t_{1}}}{M_{t_{1}}}=\frac{V_{t_{0}}}{M_{t_{0}}}+\int_{t_{%
+0}}^{t_{1}}\,\sigma\Delta_{t}\,\frac{X_{t}}{M_{t}}\,d\widetilde{W}_{t}\,,\quad
+0%
+\leq t_{0}\leq t_{1}\leq T\,." display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><msub><mi>V</mi><msub><mi>t</mi><mn>1</mn></msub></msub><msub><mi>M</mi><msub><mi>t</mi><mn>1</mn></msub></msub></mfrac></mstyle><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><msub><mi>V</mi><msub><mi>t</mi><mn>0</mn></msub></msub><msub><mi>M</mi><msub><mi>t</mi><mn>0</mn></msub></msub></mfrac></mstyle><mo>+</mo><mrow><mpadded width="+1.7pt"><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><msub><mi>t</mi><mn>0</mn></msub><msub><mi>t</mi><mn>1</mn></msub></msubsup></mstyle></mpadded><mrow><mi>σ</mi><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi mathvariant="normal">Δ</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mstyle displaystyle="true"><mfrac><msub><mi>X</mi><mi>t</mi></msub><msub><mi>M</mi><mi>t</mi></msub></mfrac></mstyle></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+1.7pt"><msub><mover accent="true"><mi>W</mi><mo>~</mo></mover><mi>t</mi></msub></mpadded></mrow></mrow></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mn>0</mn><mo>≤</mo><msub><mi>t</mi><mn>0</mn></msub><mo>≤</mo><msub><mi>t</mi><mn>1</mn></msub><mo>≤</mo><mpadded width="+1.7pt"><mi>T</mi></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Assuming <math id="S0.SS2.SSS2.p3.m1" class="ltx_Math" alttext="\Delta_{t}" display="inline"><msub><mi mathvariant="normal">Δ</mi><mi>t</mi></msub></math> is a <math id="S0.SS2.SSS2.p3.m2" class="ltx_Math" alttext="\mathcal{F}_{t}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub></math>-adapted process
+— where <math id="S0.SS2.SSS2.p3.m3" class="ltx_Math" alttext="\{\mathcal{F}_{t}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub><mo stretchy="false">}</mo></mrow></math> is the filtration generated by the Brownian
+motion <math id="S0.SS2.SSS2.p3.m4" class="ltx_Math" alttext="W_{t}" display="inline"><msub><mi>W</mi><mi>t</mi></msub></math> (or equivalently <math id="S0.SS2.SSS2.p3.m5" class="ltx_Math" alttext="\widetilde{W}_{t}" display="inline"><msub><mover accent="true"><mi>W</mi><mo>~</mo></mover><mi>t</mi></msub></math>) —
+the Itô integral in equation (<a href="#S0.E8" title="(8) ‣ 0.2.2 Discounted portfolio process is a martingale ‣ 0.2 Derivation ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8</span></a>)
+is a martingle under the probability space <math id="S0.SS2.SSS2.p3.m6" class="ltx_Math" alttext="(\Omega,\mathcal{F}_{T},\mathbb{Q})" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>T</mi></msub><mo>,</mo><mi>ℚ</mi><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+</section>
+<section id="S0.SS2.SSS3" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">0.2.3 </span>Portfolio process as a conditional expectation</h3>
+
+<div id="S0.SS2.SSS3.p1" class="ltx_para">
+<p class="ltx_p">Then by the definition of a martingale,
+we have</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="\frac{V_{t_{0}}}{M_{t_{0}}}=\mathbb{E}^{\mathbb{Q}}\left[\frac{V_{t_{1}}}{M_{t%
+_{1}}}\mid\mathcal{F}_{t_{0}}\right]\,,\quad 0\leq t_{0}\leq t_{1}\leq T\,," display="block"><mrow><mfrac><msub><mi>V</mi><msub><mi>t</mi><mn>0</mn></msub></msub><msub><mi>M</mi><msub><mi>t</mi><mn>0</mn></msub></msub></mfrac><mo>=</mo><msup><mi>𝔼</mi><mi>ℚ</mi></msup><mrow><mo>[</mo><mfrac><msub><mi>V</mi><msub><mi>t</mi><mn>1</mn></msub></msub><msub><mi>M</mi><msub><mi>t</mi><mn>1</mn></msub></msub></mfrac><mo>∣</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><msub><mi>t</mi><mn>0</mn></msub></msub><mo rspace="4.2pt">]</mo></mrow><mo rspace="12.5pt">,</mo><mn>0</mn><mo>≤</mo><msub><mi>t</mi><mn>0</mn></msub><mo>≤</mo><msub><mi>t</mi><mn>1</mn></msub><mo>≤</mo><mpadded width="+1.7pt"><mi>T</mi></mpadded><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S0.SS2.SSS3.p1.m1" class="ltx_Math" alttext="\mathbb{E}^{\mathbb{Q}}[\cdot\mid\mathcal{F}_{t}]" display="inline"><mrow><msup><mi>𝔼</mi><mi>ℚ</mi></msup><mrow><mo stretchy="false">[</mo><mo>⋅</mo><mo>∣</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub><mo stretchy="false">]</mo></mrow></mrow></math> denotes the conditional
+expectation, of a random variable
+on the measurable space <math id="S0.SS2.SSS3.p1.m2" class="ltx_Math" alttext="(\Omega,\mathcal{F}_{T})" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>T</mi></msub><mo stretchy="false">)</mo></mrow></math>,
+under
+the probability measure <math id="S0.SS2.SSS3.p1.m3" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math>.
+</p>
+</div>
+<div id="S0.SS2.SSS3.p2" class="ltx_para">
+<p class="ltx_p">In particular, setting <math id="S0.SS2.SSS3.p2.m1" class="ltx_Math" alttext="t_{0}=t\leq T" display="inline"><mrow><msub><mi>t</mi><mn>0</mn></msub><mo>=</mo><mi>t</mi><mo>≤</mo><mi>T</mi></mrow></math> and <math id="S0.SS2.SSS3.p2.m2" class="ltx_Math" alttext="t_{1}=T" display="inline"><mrow><msub><mi>t</mi><mn>1</mn></msub><mo>=</mo><mi>T</mi></mrow></math>,
+and rearranging the factors of <math id="S0.SS2.SSS3.p2.m3" class="ltx_Math" alttext="M_{t}=e^{rt}" display="inline"><mrow><msub><mi>M</mi><mi>t</mi></msub><mo>=</mo><msup><mi>e</mi><mrow><mi>r</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow></math>,
+we obtain the desired result, equation (<a href="#S0.E1" title="(1) ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>).</p>
+</div>
+</section>
+</section>
+<section id="S0.SS3" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.3 </span>Existence of solutions</h2>
+
+<div id="S0.SS3.p1" class="ltx_para">
+<p class="ltx_p">So far,
+we have derived the form of the solution for the portfolio value process
+<math id="S0.SS3.p1.m1" class="ltx_Math" alttext="V_{t}" display="inline"><msub><mi>V</mi><mi>t</mi></msub></math> ,
+<em class="ltx_emph ltx_font_italic">assuming that it exists</em>.
+Actually, if we were to take only
+equations (<a href="#S0.E4" title="(4) ‣ 0.1.3 Portfolio process ‣ 0.1 Assumptions ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>) and (<a href="#S0.E5" title="(5) ‣ 0.1.3 Portfolio process ‣ 0.1 Assumptions ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a>)
+as the problem to solve mathematically,
+without any reference to the financial motivations,
+it is possible to work backwards and deduce the existence
+of the solution.</p>
+</div>
+<section id="S0.SS3.SSS1" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">0.3.1 </span>Proposed construction</h3>
+
+<div id="S0.SS3.SSS1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S0.SS3.SSS1.p1.m1" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math> be the risk-neutral probability measure,
+and let <math id="S0.SS3.SSS1.p1.m2" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> be any given <math id="S0.SS3.SSS1.p1.m3" class="ltx_Math" alttext="\mathbf{L}^{1}(\Omega,\mathcal{F}_{T},\mathbb{Q})" display="inline"><mrow><msup><mi>𝐋</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>T</mi></msub><mo>,</mo><mi>ℚ</mi><mo stretchy="false">)</mo></mrow></mrow></math> random variable,
+representing the <em class="ltx_emph ltx_font_italic">terminal condition</em>.
+Define the family of random variables dependent on time,</p>
+<table id="A0.EGx12" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E9"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E9.m1" class="ltx_Math" alttext="\displaystyle V_{t}=e^{-r(T-t)}\,\mathbb{E}^{\mathbb{Q}}[U\mid\mathcal{F}_{t}]%
+\,,\quad 0\leq t\leq T\,." display="inline"><mrow><msub><mi>V</mi><mi>t</mi></msub><mo>=</mo><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></msup></mpadded><msup><mi>𝔼</mi><mi>ℚ</mi></msup><mrow><mo stretchy="false">[</mo><mi>U</mi><mo>∣</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub><mo rspace="4.2pt" stretchy="false">]</mo></mrow><mo rspace="12.5pt">,</mo><mn>0</mn><mo>≤</mo><mi>t</mi><mo>≤</mo><mpadded width="+1.7pt"><mi>T</mi></mpadded><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">It is easy to verify that, for any <math id="S0.SS3.SSS1.p1.m4" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>,
+the process <math id="S0.SS3.SSS1.p1.m5" class="ltx_Math" alttext="V_{t}\,e^{-rt}" display="inline"><mrow><mpadded width="+1.7pt"><msub><mi>V</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>r</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></msup></mrow></math> is a martingale
+with respect to <math id="S0.SS3.SSS1.p1.m6" class="ltx_Math" alttext="\mathcal{F}_{t}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub></math>, the filtration generated
+by the Wiener process <math id="S0.SS3.SSS1.p1.m7" class="ltx_Math" alttext="\widetilde{W}_{t}" display="inline"><msub><mover accent="true"><mi>W</mi><mo>~</mo></mover><mi>t</mi></msub></math> under the probability
+measure <math id="S0.SS3.SSS1.p1.m8" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math>.</p>
+</div>
+</section>
+<section id="S0.SS3.SSS2" class="ltx_subsubsection">
+<h3 class="ltx_title ltx_title_subsubsection">
+<span class="ltx_tag ltx_tag_subsubsection">0.3.2 </span>Verification</h3>
+
+<div id="S0.SS3.SSS2.p1" class="ltx_para">
+<p class="ltx_p">We now invoke the martingale representation theorem for Itô processes:
+for any martingale <math id="S0.SS3.SSS2.p1.m1" class="ltx_Math" alttext="Z_{t}" display="inline"><msub><mi>Z</mi><mi>t</mi></msub></math>, with respect to <math id="S0.SS3.SSS2.p1.m2" class="ltx_Math" alttext="\mathcal{F}_{t}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub></math> under
+the probability measure <math id="S0.SS3.SSS2.p1.m3" class="ltx_Math" alttext="\mathbb{Q}" display="inline"><mi>ℚ</mi></math>,
+there exists a <math id="S0.SS3.SSS2.p1.m4" class="ltx_Math" alttext="\mathcal{F}_{t}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub></math>-adapted process <math id="S0.SS3.SSS2.p1.m5" class="ltx_Math" alttext="G_{t}" display="inline"><msub><mi>G</mi><mi>t</mi></msub></math>
+such that <math id="S0.SS3.SSS2.p1.m6" class="ltx_Math" alttext="Z_{t}" display="inline"><msub><mi>Z</mi><mi>t</mi></msub></math> has the representation:</p>
+<table id="A0.EGx13" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex12" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex12.m1" class="ltx_Math" alttext="\displaystyle Z_{t_{1}}-Z_{t_{0}}=\int_{t_{0}}^{t_{1}}G_{t}\,d\widetilde{W}_{t%
+}\,." display="inline"><mrow><mrow><mrow><msub><mi>Z</mi><msub><mi>t</mi><mn>1</mn></msub></msub><mo>-</mo><msub><mi>Z</mi><msub><mi>t</mi><mn>0</mn></msub></msub></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><msub><mi>t</mi><mn>0</mn></msub><msub><mi>t</mi><mn>1</mn></msub></msubsup></mstyle><mrow><mpadded width="+1.7pt"><msub><mi>G</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mpadded width="+1.7pt"><msub><mover accent="true"><mi>W</mi><mo>~</mo></mover><mi>t</mi></msub></mpadded></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS3.SSS2.p2" class="ltx_para">
+<p class="ltx_p">Letting <math id="S0.SS3.SSS2.p2.m1" class="ltx_Math" alttext="Z_{t}=V_{t}\,e^{-rt}" display="inline"><mrow><msub><mi>Z</mi><mi>t</mi></msub><mo>=</mo><mrow><mpadded width="+1.7pt"><msub><mi>V</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>r</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></msup></mrow></mrow></math> and
+comparing with equations (<a href="#S0.E8" title="(8) ‣ 0.2.2 Discounted portfolio process is a martingale ‣ 0.2 Derivation ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8</span></a>)
+and (<a href="#S0.E4" title="(4) ‣ 0.1.3 Portfolio process ‣ 0.1 Assumptions ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>),
+we are motivated to <em class="ltx_emph ltx_font_italic">define</em>
+the <math id="S0.SS3.SSS2.p2.m2" class="ltx_Math" alttext="\mathcal{F}_{t}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub></math>-adapted processes:</p>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="\Delta_{t}=\frac{G_{t}\,e^{rt}}{\sigma X_{t}}\,,\quad\Theta_{t}=\frac{V_{t}-%
+\Delta_{t}X_{t}}{M_{t}}=\frac{Z_{t}-G_{t}/\sigma}{M_{0}}\,." display="block"><mrow><mrow><mrow><msub><mi mathvariant="normal">Δ</mi><mi>t</mi></msub><mo>=</mo><mpadded width="+1.7pt"><mfrac><mrow><mpadded width="+1.7pt"><msub><mi>G</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><msup><mi>e</mi><mrow><mi>r</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mrow><mi>σ</mi><mo>⁢</mo><msub><mi>X</mi><mi>t</mi></msub></mrow></mfrac></mpadded></mrow><mo rspace="12.5pt">,</mo><mrow><msub><mi mathvariant="normal">Θ</mi><mi>t</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>V</mi><mi>t</mi></msub><mo>-</mo><mrow><msub><mi mathvariant="normal">Δ</mi><mi>t</mi></msub><mo>⁢</mo><msub><mi>X</mi><mi>t</mi></msub></mrow></mrow><msub><mi>M</mi><mi>t</mi></msub></mfrac><mo>=</mo><mpadded width="+1.7pt"><mfrac><mrow><msub><mi>Z</mi><mi>t</mi></msub><mo>-</mo><mrow><msub><mi>G</mi><mi>t</mi></msub><mo>/</mo><mi>σ</mi></mrow></mrow><msub><mi>M</mi><mn>0</mn></msub></mfrac></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then the process <math id="S0.SS3.SSS2.p2.m3" class="ltx_Math" alttext="V_{t}" display="inline"><msub><mi>V</mi><mi>t</mi></msub></math> constructed
+by equation (<a href="#S0.E9" title="(9) ‣ 0.3.1 Proposed construction ‣ 0.3 Existence of solutions ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9</span></a>)
+trivially satisfies equation (<a href="#S0.E4" title="(4) ‣ 0.1.3 Portfolio process ‣ 0.1 Assumptions ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>).
+And it is a simple matter to check that
+equation (<a href="#S0.E5" title="(5) ‣ 0.1.3 Portfolio process ‣ 0.1 Assumptions ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a>) holds as well:</p>
+<table id="A0.EGx14" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex14" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex14.m1" class="ltx_Math" alttext="\displaystyle dV_{t}=d\bigl{(}Z_{t}\,e^{rt}\bigr{)}" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><msub><mi>V</mi><mi>t</mi></msub></mrow><mo>=</mo><mrow><mi>d</mi><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mpadded width="+1.7pt"><msub><mi>Z</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><msup><mi>e</mi><mrow><mi>r</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex14.m2" class="ltx_Math" alttext="\displaystyle=e^{rt}\,dZ_{t}+re^{rt}\,Z_{t}\,dt" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mi>r</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msub><mi>Z</mi><mi>t</mi></msub></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mi>r</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>Z</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">Itô’s product rule</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex15" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex15.m2" class="ltx_Math" alttext="\displaystyle=e^{rt}\,G_{t}\,d\widetilde{W}_{t}+rV_{t}\,dt" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mpadded width="+1.7pt"><msup><mi>e</mi><mrow><mi>r</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>G</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msub><mover accent="true"><mi>W</mi><mo>~</mo></mover><mi>t</mi></msub></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>V</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex16" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex16.m2" class="ltx_Math" alttext="\displaystyle=\sigma\Delta_{t}X_{t}\,d\widetilde{W}_{t}+rV_{t}\,dt" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>σ</mi><mo>⁢</mo><msub><mi mathvariant="normal">Δ</mi><mi>t</mi></msub><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>X</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msub><mover accent="true"><mi>W</mi><mo>~</mo></mover><mi>t</mi></msub></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>V</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex17" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex17.m2" class="ltx_Math" alttext="\displaystyle=\Delta_{t}\,X_{t}(r\,dt+\sigma d\widetilde{W}_{t})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mpadded width="+1.7pt"><msub><mi mathvariant="normal">Δ</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><msub><mi>X</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mpadded width="+1.7pt"><mi>r</mi></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mrow><mi>σ</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msub><mover accent="true"><mi>W</mi><mo>~</mo></mover><mi>t</mi></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">add and subtract</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex18" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex18.m2" class="ltx_Math" alttext="\displaystyle\qquad+r\bigl{(}V_{t}-\Delta_{t}X_{t}\bigr{)}" display="inline"><mrow><mi>  </mi><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><msub><mi>V</mi><mi>t</mi></msub><mo>-</mo><mrow><msub><mi mathvariant="normal">Δ</mi><mi>t</mi></msub><mo>⁢</mo><msub><mi>X</mi><mi>t</mi></msub></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><span class="ltx_text ltx_markedasmath">the <math id="S0.Ex18.m3.m1" class="ltx_Math" alttext="dt" display="inline"><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></math> term</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex19" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex19.m2" class="ltx_Math" alttext="\displaystyle=\Delta_{t}\,dX_{t}+r\,\Theta_{t}\,M_{t}\,dt\,," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mpadded width="+1.7pt"><msub><mi mathvariant="normal">Δ</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msub><mi>X</mi><mi>t</mi></msub></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><mi>r</mi></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi mathvariant="normal">Θ</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>M</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mpadded width="+1.7pt"><mi>t</mi></mpadded></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where in the last equality we have used the SDE for <math id="S0.SS3.SSS2.p2.m4" class="ltx_Math" alttext="X_{t}" display="inline"><msub><mi>X</mi><mi>t</mi></msub></math>
+in terms of <math id="S0.SS3.SSS2.p2.m5" class="ltx_Math" alttext="d\widetilde{W}_{t}" display="inline"><mrow><mi>d</mi><mo>⁢</mo><msub><mover accent="true"><mi>W</mi><mo>~</mo></mover><mi>t</mi></msub></mrow></math> in place of <math id="S0.SS3.SSS2.p2.m6" class="ltx_Math" alttext="dW_{t}" display="inline"><mrow><mi>d</mi><mo>⁢</mo><msub><mi>W</mi><mi>t</mi></msub></mrow></math>:</p>
+<table id="A0.EGx15" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex20" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex20.m1" class="ltx_Math" alttext="\displaystyle dX_{t}=rX_{t}\,dt+\sigma X_{t}\,d\widetilde{W}_{t}\,," display="inline"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><msub><mi>X</mi><mi>t</mi></msub></mrow><mo>=</mo><mrow><mrow><mi>r</mi><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>X</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mrow><mi>σ</mi><mo>⁢</mo><mpadded width="+1.7pt"><msub><mi>X</mi><mi>t</mi></msub></mpadded><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mpadded width="+1.7pt"><msub><mover accent="true"><mi>W</mi><mo>~</mo></mover><mi>t</mi></msub></mpadded></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">obtained by substituting
+in equation (<a href="#S0.E2" title="(2) ‣ 0.1.1 Asset price ‣ 0.1 Assumptions ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>),
+the differential of equation (<a href="#S0.E6" title="(6) ‣ 0.2.1 Change of probability measure ‣ 0.2 Derivation ‣ derivation of Black-Scholes formula in martingale form" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>).</p>
+</div>
+</section>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock">
+Bernt Øksendal.
+<em class="ltx_emph ltx_font_italic">Stochastic Differential Equations,
+An Introduction with Applications</em>, 5th edition. Springer, 1998.
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock">
+Steven E. Shreve. <em class="ltx_emph ltx_font_italic">Stochastic Calculus for Finance II:
+Continuous-Time Models</em>. Springer, 2004.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p5" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">derivation of Black-Scholes formula in martingale form</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">DerivationOfBlackScholesFormulaInMartingaleForm</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:20:37</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:20:37</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">stevecheng (10074)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Derivation</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60H10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 91B28</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">BlackScholesFormula</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 12:00:16 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html><html>
+<head>
+<title>probability distribution function</title>
+<!--Generated on Sat Feb 10 11:56:44 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">probability distribution function</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Definition</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.p1.m1" class="ltx_Math" alttext="(\Omega,\mathfrak{B},\mu)" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><mi>𝔅</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></math> be a measure space. A <span class="ltx_text ltx_font_italic">probability distribution function</span> on <math id="S1.p1.m2" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> is a function <math id="S1.p1.m3" class="ltx_Math" alttext="f:\Omega\longrightarrow\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi mathvariant="normal">Ω</mi><mo>⟶</mo><mi>ℝ</mi></mrow></mrow></math> such that:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is <math id="I1.i1.p1.m2" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math>-measurable</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is nonnegative <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math>-almost everywhere.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> satisfies the equation</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="\int_{\Omega}f(x)\ d\mu=1" display="block"><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi mathvariant="normal">Ω</mi></msub><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="7.5pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">The main feature of a probability distribution function is that it induces a probability measure <math id="S1.p2.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> on the measure space <math id="S1.p2.m2" class="ltx_Math" alttext="(\Omega,\mathfrak{B})" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><mi>𝔅</mi><mo stretchy="false">)</mo></mrow></math>, given by</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="P(A):=\int_{A}f(x)\ d\mu=\int_{\Omega}1_{A}f(x)\ d\mu," display="block"><mrow><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>A</mi></msub><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="7.5pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi mathvariant="normal">Ω</mi></msub><mrow><msub><mn>1</mn><mi>A</mi></msub><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="7.5pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for all <math id="S1.p2.m3" class="ltx_Math" alttext="A\in\mathfrak{B}" display="inline"><mrow><mi>A</mi><mo>∈</mo><mi>𝔅</mi></mrow></math>. The measure <math id="S1.p2.m4" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is called the <span class="ltx_text ltx_font_italic">associated probability measure</span> of <math id="S1.p2.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>. Note that <math id="S1.p2.m6" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> and <math id="S1.p2.m7" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> are different measures,  though they both share the same underlying measurable space <math id="S1.p2.m8" class="ltx_Math" alttext="(\Omega,\mathfrak{B})" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><mi>𝔅</mi><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Examples</h2>
+
+<section id="S2.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.1 </span>Discrete case</h3>
+
+<div id="S2.SS1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.SS1.p1.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> be a countable set, and impose the counting measure on <math id="S2.SS1.p1.m2" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> (<math id="S2.SS1.p1.m3" class="ltx_Math" alttext="\mu(A):=|A|" display="inline"><mrow><mrow><mi>μ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mo stretchy="false">|</mo><mi>A</mi><mo stretchy="false">|</mo></mrow></mrow></math>, the cardinality of <math id="S2.SS1.p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, for any subset <math id="S2.SS1.p1.m5" class="ltx_Math" alttext="A\subset I" display="inline"><mrow><mi>A</mi><mo>⊂</mo><mi>I</mi></mrow></math>). A probability distribution function on <math id="S2.SS1.p1.m6" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is then a nonnegative function <math id="S2.SS1.p1.m7" class="ltx_Math" alttext="f:I\longrightarrow\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>I</mi><mo>⟶</mo><mi>ℝ</mi></mrow></mrow></math> satisfying the equation</p>
+<table id="S2.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex3.m1" class="ltx_Math" alttext="\sum_{i\in I}f(i)=1." display="block"><mrow><mrow><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></munder><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>1</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.SS1.p2" class="ltx_para">
+<p class="ltx_p">One example is the Poisson distribution <math id="S2.SS1.p2.m1" class="ltx_Math" alttext="P_{r}" display="inline"><msub><mi>P</mi><mi>r</mi></msub></math> on <math id="S2.SS1.p2.m2" class="ltx_Math" alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math> (for any real number <math id="S2.SS1.p2.m3" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>), which is given by</p>
+<table id="S2.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex4.m1" class="ltx_Math" alttext="P_{r}(i):=e^{-r}\frac{r^{i}}{i!}" display="block"><mrow><mrow><msub><mi>P</mi><mi>r</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><msup><mi>e</mi><mrow><mo>-</mo><mi>r</mi></mrow></msup><mo>⁢</mo><mfrac><msup><mi>r</mi><mi>i</mi></msup><mrow><mi>i</mi><mo lspace="0pt" rspace="3.5pt">!</mo></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for any <math id="S2.SS1.p2.m4" class="ltx_Math" alttext="i\in\mathbb{N}" display="inline"><mrow><mi>i</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>.</p>
+</div>
+<div id="S2.SS1.p3" class="ltx_para">
+<p class="ltx_p">Given any probability space <math id="S2.SS1.p3.m1" class="ltx_Math" alttext="(\Omega,\mathfrak{B},\mu)" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><mi>𝔅</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></math> and any random variable <math id="S2.SS1.p3.m2" class="ltx_Math" alttext="X:\Omega\longrightarrow I" display="inline"><mrow><mi>X</mi><mo>:</mo><mrow><mi mathvariant="normal">Ω</mi><mo>⟶</mo><mi>I</mi></mrow></mrow></math>, we can form a distribution function on <math id="S2.SS1.p3.m3" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> by taking <math id="S2.SS1.p3.m4" class="ltx_Math" alttext="f(i):=\mu(\{X=i\})" display="inline"><mrow><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow><mo>:=</mo><mi>μ</mi><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">{</mo><mi>X</mi><mo>=</mo><mi>i</mi><mo stretchy="false">}</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. The resulting function is called the distribution of <math id="S2.SS1.p3.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> on <math id="S2.SS1.p3.m6" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>.</p>
+</div>
+</section>
+<section id="S2.SS2" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.2 </span>Continuous case</h3>
+
+<div id="S2.SS2.p1" class="ltx_para">
+<p class="ltx_p">Suppose <math id="S2.SS2.p1.m1" class="ltx_Math" alttext="(\Omega,\mathfrak{B},\mu)" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><mi>𝔅</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></math> equals <math id="S2.SS2.p1.m2" class="ltx_Math" alttext="(\mathbb{R},\mathfrak{B}_{\lambda},\lambda)" display="inline"><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo>,</mo><msub><mi>𝔅</mi><mi>λ</mi></msub><mo>,</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></math>, the real numbers equipped with Lebesgue measure. Then a probability distribution function <math id="S2.SS2.p1.m3" class="ltx_Math" alttext="f:\mathbb{R}\longrightarrow\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>ℝ</mi><mo>⟶</mo><mi>ℝ</mi></mrow></mrow></math> is simply a measurable, nonnegative almost everywhere function such that</p>
+<table id="S2.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex5.m1" class="ltx_Math" alttext="\int_{-\infty}^{\infty}f(x)\ dx=1." display="block"><mrow><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="7.5pt" stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mn>1</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The associated measure has Radon–Nikodym derivative (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/RadonNikodymTheorem</span>) with respect to <math id="S2.SS2.p1.m4" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> equal to <math id="S2.SS2.p1.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>:</p>
+<table id="S2.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex6.m1" class="ltx_Math" alttext="\frac{dP}{d\lambda}=f." display="block"><mrow><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>P</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>λ</mi></mrow></mfrac><mo>=</mo><mi>f</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">One defines the <span class="ltx_text ltx_font_italic">cumulative distribution function</span> <math id="S2.SS2.p1.m6" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> of <math id="S2.SS2.p1.m7" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> by the formula</p>
+<table id="S2.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex7.m1" class="ltx_Math" alttext="F(x):=P(\{X\leq x\})=\int_{-\infty}^{x}f(t)\ dt," display="block"><mrow><mi>F</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>:=</mo><mi>P</mi><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">{</mo><mi>X</mi><mo>≤</mo><mi>x</mi><mo stretchy="false">}</mo></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mi>x</mi></msubsup><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>t</mi><mo rspace="7.5pt" stretchy="false">)</mo></mrow><mi>d</mi><mi>t</mi><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for all <math id="S2.SS2.p1.m8" class="ltx_Math" alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>. A well known example of a probability distribution function on <math id="S2.SS2.p1.m9" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> is the Gaussian distribution, or normal distribution
+</p>
+<table id="S2.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex8.m1" class="ltx_Math" alttext="f(x):=\frac{1}{\sigma\sqrt{2\pi}}e^{-(x-m)^{2}/2\sigma^{2}}." display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:=</mo><mrow><mfrac><mn>1</mn><mrow><mi>σ</mi><mo>⁢</mo><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msqrt></mrow></mfrac><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>m</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>/</mo><mn>2</mn></mrow><mo>⁢</mo><msup><mi>σ</mi><mn>2</mn></msup></mrow></mrow></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">probability distribution function</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ProbabilityDistributionFunction</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:37:25</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:37:25</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">11</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Mathprof (13753)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60E99</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">probability density function</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">distribution</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Measure</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Stochastic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DiscreteDensityFunction</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DistributionFunction</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DensityFunction</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">AreaUnderGaussianCurve</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">cumulative distribution function</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:56:44 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

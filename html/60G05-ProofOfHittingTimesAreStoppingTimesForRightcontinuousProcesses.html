@@ -1,0 +1,184 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of hitting times are stopping times for right-continuous processes</title>
+<!--Generated on Sat Feb 10 11:57:27 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of hitting times are stopping times for right-continuous processes</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="(\mathcal{F})_{t\in\mathbb{T}}" display="inline"><msub><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo stretchy="false">)</mo></mrow><mrow><mi>t</mi><mo>∈</mo><mi>𝕋</mi></mrow></msub></math> be a filtration (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/FiltrationOfSigmaAlgebras</span>) on the measurable space <math id="p2.m2" class="ltx_Math" alttext="(\Omega,\mathcal{F})" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo stretchy="false">)</mo></mrow></math>, It is assumed that <math id="p2.m3" class="ltx_Math" alttext="\mathbb{T}" display="inline"><mi>𝕋</mi></math> is a closed subset of <math id="p2.m4" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> and that <math id="p2.m5" class="ltx_Math" alttext="\mathcal{F}_{t}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub></math> is universally complete for each <math id="p2.m6" class="ltx_Math" alttext="t\in\mathbb{T}" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>𝕋</mi></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Let <math id="p3.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a right-continuous and adapted process taking values in a metric space <math id="p3.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> and <math id="p3.m3" class="ltx_Math" alttext="S\subseteq E" display="inline"><mrow><mi>S</mi><mo>⊆</mo><mi>E</mi></mrow></math> closed.
+We show that</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\tau=\inf\left\{t\in\mathbb{T}:X_{t}\in S\right\}" display="block"><mrow><mi>τ</mi><mo>=</mo><mrow><mo movablelimits="false">inf</mo><mo>⁡</mo><mrow><mo>{</mo><mrow><mi>t</mi><mo>∈</mo><mi>𝕋</mi></mrow><mo>:</mo><mrow><msub><mi>X</mi><mi>t</mi></msub><mo>∈</mo><mi>S</mi></mrow><mo>}</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is a stopping time. Assuming <math id="p3.m4" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> is nonempty and defining the continuous function <math id="p3.m5" class="ltx_Math" alttext="d_{S}(x)\equiv\inf\{d(x,y)\colon y\in S\}" display="inline"><mrow><mrow><msub><mi>d</mi><mi>S</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≡</mo><mrow><mo>inf</mo><mo>⁡</mo><mrow><mo stretchy="false">{</mo><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:</mo><mrow><mi>y</mi><mo>∈</mo><mi>S</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow></math>, then <math id="p3.m6" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math> is the first time at which the right-continuous process <math id="p3.m7" class="ltx_Math" alttext="Y_{t}=d_{S}(X_{t})" display="inline"><mrow><msub><mi>Y</mi><mi>t</mi></msub><mo>=</mo><mrow><msub><mi>d</mi><mi>S</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>X</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math> hits <math id="p3.m8" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Let us start by supposing that <math id="p4.m1" class="ltx_Math" alttext="\mathbb{T}" display="inline"><mi>𝕋</mi></math> has a minimum element <math id="p4.m2" class="ltx_Math" alttext="t_{0}" display="inline"><msub><mi>t</mi><mn>0</mn></msub></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">If <math id="p5.m1" class="ltx_Math" alttext="\mathbb{P}" display="inline"><mi>ℙ</mi></math> is a probability measure on <math id="p5.m2" class="ltx_Math" alttext="(\Omega,\mathcal{F})" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo stretchy="false">)</mo></mrow></math> and <math id="p5.m3" class="ltx_Math" alttext="\mathcal{F}^{\mathbb{P}}_{t}" display="inline"><msubsup><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi><mi>ℙ</mi></msubsup></math> represents the completion (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CompleteMeasure</span>) of the <math id="p5.m4" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra <math id="p5.m5" class="ltx_Math" alttext="\mathcal{F}_{t}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub></math> with respect to <math id="p5.m6" class="ltx_Math" alttext="\mathbb{P}" display="inline"><mi>ℙ</mi></math>, then it is enough to show that <math id="p5.m7" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math> is an <math id="p5.m8" class="ltx_Math" alttext="(\mathcal{F}^{\mathbb{P}}_{t})" display="inline"><mrow><mo stretchy="false">(</mo><msubsup><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi><mi>ℙ</mi></msubsup><mo stretchy="false">)</mo></mrow></math>-stopping time. By the universal completeness of <math id="p5.m9" class="ltx_Math" alttext="\mathcal{F}_{t}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub></math> it would then follow that</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\left\{\tau\leq t\right\}\in\bigcap_{\mathbb{P}}\mathcal{F}^{\mathbb{P}}_{t}=%
+\mathcal{F}_{t}" display="block"><mrow><mrow><mo>{</mo><mi>τ</mi><mo>≤</mo><mi>t</mi><mo>}</mo></mrow><mo>∈</mo><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋂</mo><mi>ℙ</mi></munder><msubsup><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi><mi>ℙ</mi></msubsup><mo>=</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for every <math id="p5.m10" class="ltx_Math" alttext="t\in\mathbb{T}" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>𝕋</mi></mrow></math> and, therefore, that <math id="p5.m11" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math> is a stopping time.
+So, by replacing <math id="p5.m12" class="ltx_Math" alttext="\mathcal{F}_{t}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub></math> by <math id="p5.m13" class="ltx_Math" alttext="\mathcal{F}^{\mathbb{P}}_{t}" display="inline"><msubsup><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi><mi>ℙ</mi></msubsup></math> if necessary, we may assume without loss of generality that <math id="p5.m14" class="ltx_Math" alttext="\mathcal{F}_{t}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub></math> is complete with respect to the probability measure <math id="p5.m15" class="ltx_Math" alttext="\mathbb{P}" display="inline"><mi>ℙ</mi></math> for each <math id="p5.m16" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Let <math id="p6.m1" class="ltx_Math" alttext="\mathcal{T}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒯</mi></math> consist of the set of measurable times <math id="p6.m2" class="ltx_Math" alttext="\sigma\colon\Omega\rightarrow\mathbb{T}\cup\{\infty\}" display="inline"><mrow><mi>σ</mi><mo>:</mo><mrow><mi mathvariant="normal">Ω</mi><mo>→</mo><mrow><mi>𝕋</mi><mo>∪</mo><mrow><mo stretchy="false">{</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">}</mo></mrow></mrow></mrow></mrow></math> such that <math id="p6.m3" class="ltx_Math" alttext="\{\sigma&lt;t\}\in\mathcal{F}_{t}" display="inline"><mrow><mrow><mo stretchy="false">{</mo><mi>σ</mi><mo>&lt;</mo><mi>t</mi><mo stretchy="false">}</mo></mrow><mo>∈</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub></mrow></math> for every <math id="p6.m4" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> and that <math id="p6.m5" class="ltx_Math" alttext="\sigma\leq\tau" display="inline"><mrow><mi>σ</mi><mo>≤</mo><mi>τ</mi></mrow></math>. Then let <math id="p6.m6" class="ltx_Math" alttext="\sigma^{*}" display="inline"><msup><mi>σ</mi><mo>*</mo></msup></math> be the essential supremum of <math id="p6.m7" class="ltx_Math" alttext="\mathcal{T}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒯</mi></math>.
+That is, <math id="p6.m8" class="ltx_Math" alttext="\sigma^{*}" display="inline"><msup><mi>σ</mi><mo>*</mo></msup></math> is the smallest (up to sets of zero probability) random variable taking values in <math id="p6.m9" class="ltx_Math" alttext="\mathbb{R}\cup\{\pm\infty\}" display="inline"><mrow><mi>ℝ</mi><mo>∪</mo><mrow><mo stretchy="false">{</mo><mrow><mo>±</mo><mi mathvariant="normal">∞</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math> such that <math id="p6.m10" class="ltx_Math" alttext="\sigma^{*}\geq\sigma" display="inline"><mrow><msup><mi>σ</mi><mo>*</mo></msup><mo>≥</mo><mi>σ</mi></mrow></math> (almost surely) for all <math id="p6.m11" class="ltx_Math" alttext="\sigma\in\mathcal{T}" display="inline"><mrow><mi>σ</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒯</mi></mrow></math>.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Then, by the properties of the essential supremum, there is a countable sequence <math id="p7.m1" class="ltx_Math" alttext="\sigma_{n}\in\mathcal{T}" display="inline"><mrow><msub><mi>σ</mi><mi>n</mi></msub><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒯</mi></mrow></math> such that <math id="p7.m2" class="ltx_Math" alttext="\sigma^{*}=\sup_{n}\sigma_{n}" display="inline"><mrow><msup><mi>σ</mi><mo>*</mo></msup><mo>=</mo><mrow><msub><mo>sup</mo><mi>n</mi></msub><mo>⁡</mo><msub><mi>σ</mi><mi>n</mi></msub></mrow></mrow></math>. It follows that <math id="p7.m3" class="ltx_Math" alttext="\sigma^{*}\in\mathcal{T}" display="inline"><mrow><msup><mi>σ</mi><mo>*</mo></msup><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒯</mi></mrow></math>.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">For any <math id="p8.m1" class="ltx_Math" alttext="n=1,2,\ldots" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math> set</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\sigma_{1}=\inf\left\{t\in\mathbb{T}:t\geq\sigma^{*},Y_{t}&lt;1/n\right\}." display="block"><mrow><mrow><msub><mi>σ</mi><mn>1</mn></msub><mo>=</mo><mrow><mo movablelimits="false">inf</mo><mo>⁡</mo><mrow><mo>{</mo><mrow><mi>t</mi><mo>∈</mo><mi>𝕋</mi></mrow><mo>:</mo><mrow><mrow><mi>t</mi><mo>≥</mo><msup><mi>σ</mi><mo>*</mo></msup></mrow><mo>,</mo><mrow><msub><mi>Y</mi><mi>t</mi></msub><mo>&lt;</mo><mrow><mn>1</mn><mo>/</mo><mi>n</mi></mrow></mrow></mrow><mo>}</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Clearly, <math id="p8.m2" class="ltx_Math" alttext="\sigma_{1}\leq\tau" display="inline"><mrow><msub><mi>σ</mi><mn>1</mn></msub><mo>≤</mo><mi>τ</mi></mrow></math> and, choosing any countable dense subset <math id="p8.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> of <math id="p8.m4" class="ltx_Math" alttext="\mathbb{T}" display="inline"><mi>𝕋</mi></math>, the right-continuity of <math id="p8.m5" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> gives</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\{\sigma_{1}&lt;t\}=\bigcup_{\begin{subarray}{c}s&lt;t,\\
+s\in A\end{subarray}}\{\sigma^{*}&lt;s,Y_{s}&lt;1/n\}\in\mathcal{F}_{t}." display="block"><mrow><mrow><mo stretchy="false">{</mo><msub><mi>σ</mi><mn>1</mn></msub><mo>&lt;</mo><mi>t</mi><mo stretchy="false">}</mo></mrow><mo>=</mo><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋃</mo><mtable class="ltx_align_c" rowspacing="0.0pt"><mtr><mtd><mrow><mi>s</mi><mo>&lt;</mo><mi>t</mi><mo>,</mo></mrow></mtd></mtr><mtr><mtd><mrow><mi>s</mi><mo>∈</mo><mi>A</mi></mrow></mtd></mtr></mtable></munder><mrow><mo stretchy="false">{</mo><msup><mi>σ</mi><mo>*</mo></msup><mo>&lt;</mo><mi>s</mi><mo>,</mo><msub><mi>Y</mi><mi>s</mi></msub><mo>&lt;</mo><mn>1</mn><mo>/</mo><mi>n</mi><mo stretchy="false">}</mo></mrow><mo>∈</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">So, <math id="p8.m6" class="ltx_Math" alttext="\sigma_{1}\in\mathcal{T}" display="inline"><mrow><msub><mi>σ</mi><mn>1</mn></msub><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒯</mi></mrow></math>, which implies that <math id="p8.m7" class="ltx_Math" alttext="\sigma_{1}\leq\sigma^{*}" display="inline"><mrow><msub><mi>σ</mi><mn>1</mn></msub><mo>≤</mo><msup><mi>σ</mi><mo>*</mo></msup></mrow></math> with probability one.
+However, by the right-continuity of <math id="p8.m8" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>, <math id="p8.m9" class="ltx_Math" alttext="\sigma_{1}&gt;\sigma^{*}" display="inline"><mrow><msub><mi>σ</mi><mn>1</mn></msub><mo>&gt;</mo><msup><mi>σ</mi><mo>*</mo></msup></mrow></math> whenever <math id="p8.m10" class="ltx_Math" alttext="\sigma^{*}" display="inline"><msup><mi>σ</mi><mo>*</mo></msup></math> is finite and <math id="p8.m11" class="ltx_Math" alttext="Y_{\sigma^{*}}&gt;1/n" display="inline"><mrow><msub><mi>Y</mi><msup><mi>σ</mi><mo>*</mo></msup></msub><mo>&gt;</mo><mrow><mn>1</mn><mo>/</mo><mi>n</mi></mrow></mrow></math>, so</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\mathbb{P}(\sigma^{*}&lt;\infty,Y_{\sigma^{*}}&gt;0)\leq\sum_{n}\mathbb{P}(\sigma^{*%
+}&lt;\infty,Y_{\sigma^{*}}&gt;1/n)=0." display="block"><mrow><mi>ℙ</mi><mrow><mo stretchy="false">(</mo><msup><mi>σ</mi><mo>*</mo></msup><mo>&lt;</mo><mi mathvariant="normal">∞</mi><mo>,</mo><msub><mi>Y</mi><msup><mi>σ</mi><mo>*</mo></msup></msub><mo>&gt;</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>≤</mo><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>n</mi></munder><mi>ℙ</mi><mrow><mo stretchy="false">(</mo><msup><mi>σ</mi><mo>*</mo></msup><mo>&lt;</mo><mi mathvariant="normal">∞</mi><mo>,</mo><msub><mi>Y</mi><msup><mi>σ</mi><mo>*</mo></msup></msub><mo>&gt;</mo><mn>1</mn><mo>/</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mn>0</mn><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This shows that <math id="p8.m12" class="ltx_Math" alttext="Y_{\sigma^{*}}=0" display="inline"><mrow><msub><mi>Y</mi><msup><mi>σ</mi><mo>*</mo></msup></msub><mo>=</mo><mn>0</mn></mrow></math> and therefore <math id="p8.m13" class="ltx_Math" alttext="\sigma^{*}\geq\tau" display="inline"><mrow><msup><mi>σ</mi><mo>*</mo></msup><mo>≥</mo><mi>τ</mi></mrow></math> whenever <math id="p8.m14" class="ltx_Math" alttext="\sigma^{*}&lt;\infty" display="inline"><mrow><msup><mi>σ</mi><mo>*</mo></msup><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>. So, <math id="p8.m15" class="ltx_Math" alttext="\sigma^{*}=\tau" display="inline"><mrow><msup><mi>σ</mi><mo>*</mo></msup><mo>=</mo><mi>τ</mi></mrow></math> almost surely and <math id="p8.m16" class="ltx_Math" alttext="\tau\in\mathcal{T}" display="inline"><mrow><mi>τ</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒯</mi></mrow></math> giving,</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\left\{\tau\leq t\right\}=\{\tau&lt;t\}\cup\{Y_{t}=0\}\in\mathcal{F}_{t}." display="block"><mrow><mrow><mo>{</mo><mi>τ</mi><mo>≤</mo><mi>t</mi><mo>}</mo></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>τ</mi><mo>&lt;</mo><mi>t</mi><mo stretchy="false">}</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">{</mo><msub><mi>Y</mi><mi>t</mi></msub><mo>=</mo><mn>0</mn><mo stretchy="false">}</mo></mrow><mo>∈</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">So, <math id="p8.m17" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math> is a stopping time.
+</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Finally, suppose that <math id="p9.m1" class="ltx_Math" alttext="\mathbb{T}" display="inline"><mi>𝕋</mi></math> does not have a minimum element. Choosing a sequence <math id="p9.m2" class="ltx_Math" alttext="t_{n}\rightarrow-\infty" display="inline"><mrow><msub><mi>t</mi><mi>n</mi></msub><mo>→</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math> in <math id="p9.m3" class="ltx_Math" alttext="\mathbb{T}" display="inline"><mi>𝕋</mi></math> then the above argument shows that</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\tau_{n}=\inf\left\{t\in\mathbb{T}:t\geq t_{n},Y_{t}=0\right\}" display="block"><mrow><msub><mi>τ</mi><mi>n</mi></msub><mo>=</mo><mrow><mo movablelimits="false">inf</mo><mo>⁡</mo><mrow><mo>{</mo><mrow><mi>t</mi><mo>∈</mo><mi>𝕋</mi></mrow><mo>:</mo><mrow><mrow><mi>t</mi><mo>≥</mo><msub><mi>t</mi><mi>n</mi></msub></mrow><mo>,</mo><mrow><msub><mi>Y</mi><mi>t</mi></msub><mo>=</mo><mn>0</mn></mrow></mrow><mo>}</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">are stopping times so,</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\left\{\tau\leq t\right\}=\bigcup_{n}\left\{\tau_{n}\leq t\right\}\in\mathcal{%
+F}_{t}" display="block"><mrow><mrow><mo>{</mo><mi>τ</mi><mo>≤</mo><mi>t</mi><mo>}</mo></mrow><mo>=</mo><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋃</mo><mi>n</mi></munder><mrow><mo>{</mo><msub><mi>τ</mi><mi>n</mi></msub><mo>≤</mo><mi>t</mi><mo>}</mo></mrow><mo>∈</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">as required.</p>
+</div>
+<div id="p10" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of hitting times are stopping times for right-continuous processes</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfHittingTimesAreStoppingTimesForRightcontinuousProcesses</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:39:12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:39:12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60G05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 60G40</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:57:27 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

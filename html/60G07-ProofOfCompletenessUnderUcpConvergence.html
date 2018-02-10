@@ -1,0 +1,152 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of completeness under ucp convergence</title>
+<!--Generated on Sat Feb 10 11:58:11 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of completeness under ucp convergence</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="(\Omega,\mathcal{F},(\mathcal{F}_{t})_{t\in\mathbb{R}_{+}},\mathbb{P})" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>,</mo><msub><mrow><mo stretchy="false">(</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>t</mi><mo>∈</mo><msub><mi>ℝ</mi><mo>+</mo></msub></mrow></msub><mo>,</mo><mi>ℙ</mi><mo stretchy="false">)</mo></mrow></math> be a filtered probability space, <math id="p2.m2" class="ltx_Math" alttext="\mathcal{M}" display="inline"><mi class="ltx_font_mathcaligraphic">ℳ</mi></math> be a sub-<math id="p2.m3" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>-algebra of <math id="p2.m4" class="ltx_Math" alttext="\mathcal{B}(\mathbb{R}_{+})\otimes\mathcal{F}" display="inline"><mrow><mrow><mi class="ltx_font_mathcaligraphic">ℬ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>ℝ</mi><mo>+</mo></msub><mo stretchy="false">)</mo></mrow></mrow><mo>⊗</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi></mrow></math>, and <math id="p2.m5" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> be a set of real valued functions on <math id="p2.m6" class="ltx_Math" alttext="\mathbb{R}_{+}" display="inline"><msub><mi>ℝ</mi><mo>+</mo></msub></math> which is closed (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Closed</span>) under uniform convergence on compacts. We show that both the set of <math id="p2.m7" class="ltx_Math" alttext="\mathcal{M}" display="inline"><mi class="ltx_font_mathcaligraphic">ℳ</mi></math>-measurable processes and the set of jointly measurable processes with sample paths almost surely in <math id="p2.m8" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> are complete (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Complete</span>) under ucp convergence. The method used will be to show that we can pass to a subsequence which almost surely converges uniformly on compacts.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">We start by writing out the metric generating the topology of uniform convergence on compacts (compact-open topology) for functions <math id="p3.m1" class="ltx_Math" alttext="\mathbb{R}_{+}\rightarrow\mathbb{R}" display="inline"><mrow><msub><mi>ℝ</mi><mo>+</mo></msub><mo>→</mo><mi>ℝ</mi></mrow></math>. This is the same as uniform convergence on each of the bounded intervals <math id="p3.m2" class="ltx_Math" alttext="[0,n)" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></math> for positive integers <math id="p3.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>,</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="d(X)\equiv\sum_{n=1}^{\infty}2^{-n}\min\left(1,\sup_{t&lt;n}|X_{t}|\right)." display="block"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≡</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msup><mn>2</mn><mrow><mo>-</mo><mi>n</mi></mrow></msup><mo>⁢</mo><mrow><mi>min</mi><mo>⁡</mo><mrow><mo>(</mo><mn>1</mn><mo>,</mo><mrow><munder><mo movablelimits="false">sup</mo><mrow><mi>t</mi><mo>&lt;</mo><mi>n</mi></mrow></munder><mo>⁡</mo><mrow><mo stretchy="false">|</mo><msub><mi>X</mi><mi>t</mi></msub><mo stretchy="false">|</mo></mrow></mrow><mo>)</mo></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then, the metric is <math id="p3.m4" class="ltx_Math" alttext="(X,Y)\mapsto d(X-Y)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow><mo>↦</mo><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Convergence under the ucp topology is given by</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="D^{\rm ucp}(X)=\mathbb{E}[d(X)]" display="block"><mrow><mrow><msup><mi>D</mi><mi>ucp</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>𝔼</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for any jointly measurable stochastic process <math id="p3.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, with the (pseudo)metric being <math id="p3.m6" class="ltx_Math" alttext="(X,Y)\mapsto D^{\rm ucp}(X-Y)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow><mo>↦</mo><mrow><msup><mi>D</mi><mi>ucp</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>-</mo><mi>Y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Now, suppose that <math id="p4.m1" class="ltx_Math" alttext="X^{n}" display="inline"><msup><mi>X</mi><mi>n</mi></msup></math> is a sequence of jointly measurable processes such that <math id="p4.m2" class="ltx_Math" alttext="X^{n}-X^{m}\xrightarrow{\rm ucp}0" display="inline"><mrow><mrow><msup><mi>X</mi><mi>n</mi></msup><mo>-</mo><msup><mi>X</mi><mi>m</mi></msup></mrow><mover accent="true"><mo>→</mo><mo>ucp</mo></mover><mn>0</mn></mrow></math> as <math id="p4.m3" class="ltx_Math" alttext="m,n\rightarrow\infty" display="inline"><mrow><mrow><mi>m</mi><mo>,</mo><mi>n</mi></mrow><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>. Then, <math id="p4.m4" class="ltx_Math" alttext="D^{\rm ucp}(X^{n}-X^{m})\rightarrow 0" display="inline"><mrow><mrow><msup><mi>D</mi><mi>ucp</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>X</mi><mi>n</mi></msup><mo>-</mo><msup><mi>X</mi><mi>m</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mn>0</mn></mrow></math> and we may pass to a subsequence <math id="p4.m5" class="ltx_Math" alttext="X^{n_{k}}" display="inline"><msup><mi>X</mi><msub><mi>n</mi><mi>k</mi></msub></msup></math> satisfying <math id="p4.m6" class="ltx_Math" alttext="D^{\rm ucp}(X^{n_{j}}-X^{n_{k}})\leq 2^{-j}" display="inline"><mrow><mrow><msup><mi>D</mi><mi>ucp</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>X</mi><msub><mi>n</mi><mi>j</mi></msub></msup><mo>-</mo><msup><mi>X</mi><msub><mi>n</mi><mi>k</mi></msub></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><msup><mn>2</mn><mrow><mo>-</mo><mi>j</mi></mrow></msup></mrow></math> whenever <math id="p4.m7" class="ltx_Math" alttext="k&gt;j" display="inline"><mrow><mi>k</mi><mo>&gt;</mo><mi>j</mi></mrow></math>. So,</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\mathbb{E}\left[\sum_{k}d(X^{n_{k}}-X^{n_{k+1}})\right]=\sum_{k}D^{\rm ucp}(X^%
+{n_{k}}-X^{n_{k+1}})\leq\sum_{k}2^{-k}=1." display="block"><mrow><mrow><mrow><mi>𝔼</mi><mo>⁢</mo><mrow><mo>[</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>k</mi></munder><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>X</mi><msub><mi>n</mi><mi>k</mi></msub></msup><mo>-</mo><msup><mi>X</mi><msub><mi>n</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>]</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>k</mi></munder><mrow><msup><mi>D</mi><mi>ucp</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>X</mi><msub><mi>n</mi><mi>k</mi></msub></msup><mo>-</mo><msup><mi>X</mi><msub><mi>n</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>≤</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mi>k</mi></munder><msup><mn>2</mn><mrow><mo>-</mo><mi>k</mi></mrow></msup></mrow><mo>=</mo><mn>1</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In particular, this shows that <math id="p4.m8" class="ltx_Math" alttext="\sum_{k}d(X^{n_{k}}-X^{n_{k+1}})" display="inline"><mrow><msub><mo largeop="true" symmetric="true">∑</mo><mi>k</mi></msub><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>X</mi><msub><mi>n</mi><mi>k</mi></msub></msup><mo>-</mo><msup><mi>X</mi><msub><mi>n</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is almost surely finite and, therefore,</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="d(X^{n_{j}}-X^{n_{k}})\leq\sum_{i=j}^{k-1}d(X^{n_{i}}-X^{n_{i+1}})\rightarrow 0" display="block"><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>X</mi><msub><mi>n</mi><mi>j</mi></msub></msup><mo>-</mo><msup><mi>X</mi><msub><mi>n</mi><mi>k</mi></msub></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mi>j</mi></mrow><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></munderover><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>X</mi><msub><mi>n</mi><mi>i</mi></msub></msup><mo>-</mo><msup><mi>X</mi><msub><mi>n</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>→</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">as <math id="p4.m9" class="ltx_Math" alttext="k&gt;j\rightarrow\infty" display="inline"><mrow><mi>k</mi><mo>&gt;</mo><mi>j</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>, with probability one.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">So, the sequence <math id="p5.m1" class="ltx_Math" alttext="X^{n_{k}}" display="inline"><msup><mi>X</mi><msub><mi>n</mi><mi>k</mi></msub></msup></math> is almost surely Cauchy (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/CauchySequence</span>), under the topology of uniform convergence on compacts. We set</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="X_{t}(\omega)\equiv\left\{\begin{array}[]{ll}\lim_{k\rightarrow\infty}X^{n_{k}%
+}_{t}(\omega),&amp;\textrm{if the limit exists},\\
+0,&amp;\textrm{otherwise}.\end{array}\right." display="block"><mrow><mrow><msub><mi>X</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≡</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>k</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><msubsup><mi>X</mi><mi>t</mi><msub><mi>n</mi><mi>k</mi></msub></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mtext>if the limit exists</mtext><mo>,</mo></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><mn>0</mn><mo>,</mo></mrow></mtd><mtd columnalign="left"><mrow><mtext>otherwise</mtext><mo>.</mo></mrow></mtd></mtr></mtable><mi></mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As measurability of real valued functions is preserved under pointwise convergence, it follows that if <math id="p5.m2" class="ltx_Math" alttext="X^{n}" display="inline"><msup><mi>X</mi><mi>n</mi></msup></math> are <math id="p5.m3" class="ltx_Math" alttext="\mathcal{M}" display="inline"><mi class="ltx_font_mathcaligraphic">ℳ</mi></math>-measurable, then so is <math id="p5.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. In particular, <math id="p5.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a jointly measurable process.
+Furthermore, since convergence is almost surely uniform on compacts, if <math id="p5.m6" class="ltx_Math" alttext="X^{n}" display="inline"><msup><mi>X</mi><mi>n</mi></msup></math> have sample paths in <math id="p5.m7" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> with probability one then so does <math id="p5.m8" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">It only remains to show that <math id="p6.m1" class="ltx_Math" alttext="X^{n}\xrightarrow{\rm ucp}X" display="inline"><mrow><msup><mi>X</mi><mi>n</mi></msup><mover accent="true"><mo>→</mo><mo>ucp</mo></mover><mi mathvariant="normal">X</mi></mrow></math>. However, we have already shown that <math id="p6.m2" class="ltx_Math" alttext="d(X^{n_{k}}-X)\rightarrow 0" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>X</mi><msub><mi>n</mi><mi>k</mi></msub></msup><mo>-</mo><mi>X</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mn>0</mn></mrow></math> with probability one, hence <math id="p6.m3" class="ltx_Math" alttext="D^{\rm ucp}(X^{n_{k}}-X)\rightarrow 0" display="inline"><mrow><mrow><msup><mi>D</mi><mi>ucp</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>X</mi><msub><mi>n</mi><mi>k</mi></msub></msup><mo>-</mo><mi>X</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mn>0</mn></mrow></math>.</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="D^{\rm ucp}(X^{n}-X)\leq D^{\rm ucp}(X^{n}-X^{n_{k}})+D^{\rm ucp}(X^{n_{k}}-X)." display="block"><mrow><mrow><mrow><msup><mi>D</mi><mi>ucp</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>X</mi><mi>n</mi></msup><mo>-</mo><mi>X</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mrow><msup><mi>D</mi><mi>ucp</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>X</mi><mi>n</mi></msup><mo>-</mo><msup><mi>X</mi><msub><mi>n</mi><mi>k</mi></msub></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msup><mi>D</mi><mi>ucp</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>X</mi><msub><mi>n</mi><mi>k</mi></msub></msup><mo>-</mo><mi>X</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Letting <math id="p6.m4" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> go to infinity, this is bounded by <math id="p6.m5" class="ltx_Math" alttext="\sup_{m&gt;n}D^{\rm ucp}(X^{n}-X^{m})" display="inline"><mrow><msub><mo>sup</mo><mrow><mi>m</mi><mo>&gt;</mo><mi>n</mi></mrow></msub><mo>⁡</mo><mrow><msup><mi>D</mi><mi>ucp</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>X</mi><mi>n</mi></msup><mo>-</mo><msup><mi>X</mi><mi>m</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, which goes to zero as <math id="p6.m6" class="ltx_Math" alttext="n\rightarrow\infty" display="inline"><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>.</p>
+</div>
+<div id="p7" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of completeness under ucp convergence</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfCompletenessUnderUcpConvergence</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:40:35</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:40:35</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60G07</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 60G05</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:58:11 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html><html>
+<head>
+<title>semimartingale</title>
+<!--Generated on Sat Feb 10 11:58:25 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">semimartingale</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Semimartingales are adapted stochastic processes which can be used as integrators in the general theory of stochastic integration. Examples of semimartingales include Brownian motion, all local martingales, finite variation processes and Levy processes.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Given a filtered probability space <math id="p2.m1" class="ltx_Math" alttext="(\Omega,\mathcal{F},(\mathcal{F}_{t})_{t\in\mathbb{R}_{+}},\mathbb{P})" display="inline"><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>,</mo><msub><mrow><mo stretchy="false">(</mo><msub><mi class="ltx_font_mathcaligraphic">ℱ</mi><mi>t</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>t</mi><mo>∈</mo><msub><mi>ℝ</mi><mo>+</mo></msub></mrow></msub><mo>,</mo><mi>ℙ</mi><mo stretchy="false">)</mo></mrow></math>, we consider real-valued stochastic processes <math id="p2.m2" class="ltx_Math" alttext="X_{t}" display="inline"><msub><mi>X</mi><mi>t</mi></msub></math> with time index <math id="p2.m3" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> ranging over the nonnegative real numbers.
+Then, semimartingales have historically been defined as follows.</p>
+</div>
+<div id="Thmdefinitionx1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition</span>.</h6>
+<div id="Thmdefinitionx1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">A semimartingale <math id="Thmdefinitionx1.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a cadlag adapted process having the decomposition <math id="Thmdefinitionx1.p1.m2" class="ltx_Math" alttext="X=M+V" display="inline"><mrow><mi>X</mi><mo mathvariant="normal">=</mo><mrow><mi>M</mi><mo mathvariant="normal">+</mo><mi>V</mi></mrow></mrow></math> for a local martingale <math id="Thmdefinitionx1.p1.m3" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> and a finite variation process <math id="Thmdefinitionx1.p1.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</span></p>
+</div>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">More recently, the following alternative definition has also become common.
+For simple predictable integrands <math id="p3.m1" class="ltx_Math" alttext="\xi" display="inline"><mi>ξ</mi></math>, the stochastic integral <math id="p3.m2" class="ltx_Math" alttext="\int\xi\,dX" display="inline"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mi>ξ</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>X</mi></mrow></mrow></mrow></math> is easily defined for any process <math id="p3.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. The following definition characterizes semimartingales as processes for which this integral is well behaved.</p>
+</div>
+<div id="Thmdefinitionx2" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition</span>.</h6>
+<div id="Thmdefinitionx2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">A semimartingale <math id="Thmdefinitionx2.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a cadlag adapted process such that</span></p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\left\{\int_{0}^{t}\xi\,dX:|\xi|\leq 1\textrm{ is simple predictable}\right\}" display="block"><mrow><mo>{</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><mpadded width="+1.7pt"><mi>ξ</mi></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>X</mi></mrow></mrow></mrow><mo>:</mo><mrow><mrow><mo stretchy="false">|</mo><mi>ξ</mi><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mn>1</mn><mo>⁢</mo><mtext mathvariant="italic"> is simple predictable</mtext></mrow></mrow><mo>}</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">is bounded in probability for each <math id="Thmdefinitionx2.p1.m2" class="ltx_Math" alttext="t\in\mathbb{R}_{+}" display="inline"><mrow><mi>t</mi><mo mathvariant="normal">∈</mo><msub><mi mathvariant="normal">R</mi><mo mathvariant="normal">+</mo></msub></mrow></math>.</span></p>
+</div>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Writing <math id="p4.m1" class="ltx_Math" alttext="\|\xi\|" display="inline"><mrow><mo>∥</mo><mi>ξ</mi><mo>∥</mo></mrow></math> for the supremum norm of a process <math id="p4.m2" class="ltx_Math" alttext="\xi" display="inline"><mi>ξ</mi></math>, this definition characterizes semimartingales as processes for which</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\int_{0}^{t}\xi^{n}\,dX\rightarrow 0" display="block"><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><mpadded width="+1.7pt"><msup><mi>ξ</mi><mi>n</mi></msup></mpadded><mo>⁢</mo><mrow><mo>𝑑</mo><mi>X</mi></mrow></mrow></mrow><mo>→</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">in probability as <math id="p4.m3" class="ltx_Math" alttext="n\rightarrow\infty" display="inline"><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math> for each <math id="p4.m4" class="ltx_Math" alttext="t&gt;0" display="inline"><mrow><mi>t</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, where <math id="p4.m5" class="ltx_Math" alttext="\xi^{n}" display="inline"><msup><mi>ξ</mi><mi>n</mi></msup></math> is any sequence of simple predictable processes satisfying <math id="p4.m6" class="ltx_Math" alttext="\|\xi^{n}\|\rightarrow 0" display="inline"><mrow><mrow><mo>∥</mo><msup><mi>ξ</mi><mi>n</mi></msup><mo>∥</mo></mrow><mo>→</mo><mn>0</mn></mrow></math>. This property is necessary and, as it turns out, sufficient for the development of a theory of stochastic integration for which results such as bounded convergence holds.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">The equivalence of these two definitions of semimartingales is stated by the Bichteler-Dellacherie theorem.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">A stochastic process <math id="p6.m1" class="ltx_Math" alttext="X_{t}=(X^{1}_{t},X^{2}_{t},\ldots,X^{n}_{t})" display="inline"><mrow><msub><mi>X</mi><mi>t</mi></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><msubsup><mi>X</mi><mi>t</mi><mn>1</mn></msubsup><mo>,</mo><msubsup><mi>X</mi><mi>t</mi><mn>2</mn></msubsup><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msubsup><mi>X</mi><mi>t</mi><mi>n</mi></msubsup><mo stretchy="false">)</mo></mrow></mrow></math> taking values in <math id="p6.m2" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> is said to be a semimartingale if <math id="p6.m3" class="ltx_Math" alttext="X^{k}_{t}" display="inline"><msubsup><mi>X</mi><mi>t</mi><mi>k</mi></msubsup></math> is a semimartingale for each <math id="p6.m4" class="ltx_Math" alttext="k=1,2,\ldots,n" display="inline"><mrow><mi>k</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi></mrow></mrow></math>.</p>
+</div>
+<div id="p7" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">semimartingale</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Semimartingale</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:36:38</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:36:38</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">8</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">gel (22282)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60G07</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 60G48</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 60H05</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sat Feb 10 11:58:25 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
