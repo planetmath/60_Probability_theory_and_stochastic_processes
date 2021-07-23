@@ -39,7 +39,7 @@
 
 Let $(\Omega,\mathcal{F},P)$ be a probability space and $X$ a real random variable defined on $\Omega$.  $X$ is said to be \emph{symmetric} if $-X$ has the same distribution function as $X$.  A distribution function $F:\mathbb{R}\to [0,1]$ is said to be \emph{symmetric} if it is the distribution function of a symmetric random variable.
 
-\textbf{Remark}.  By definition, if a random variable $X$ is symmetric, then $E[X]$ exists ($<\infty$).  Furthermore, $E[X]=E[-X]=-E[X]$, so that $E[X]=0$.  Furthermore, let $F$ be the distribution function of $X$.  If $F$ is continuous at $x\in\mathbb{R}$, then $$F(-x)=P(X\le -x)=P(-X\le -x)=P(X\ge x)=1-P(X\le x)=1-F(x),$$ so that $F(x)+F(-x)=1$.  This also shows that if $X$ has a density function $f(x)$, then $f(x)=f(-x)$.
+\textbf{Remark}.  If a random variable $X$ is symmetric and integrable (that is, $E|X|$ is finite), then $E[X]=E[-X]=-E[X]$, so that $E[X]=0$.  Furthermore, let $F$ be the distribution function of $X$.  If $F$ is continuous at $x\in\mathbb{R}$, then $$F(-x)=P(X\le -x)=P(-X\le -x)=P(X\ge x)=1-P(X\le x)=1-F(x),$$ so that $F(x)+F(-x)=1$.  This also shows that if $X$ has a density function $f(x)$, then $f(x)=f(-x)$. Notice that symmetry does not imply integrability, e.g. a standard Cauchy random variable is symmetric but not integrable.
 
 There are many examples of symmetric random variables, and the most common one being the normal random variables centered at $0$.  For any random variable $X$, then the difference $\Delta X$ of two independent random variables, identically distributed as $X$ is symmetric.
 %%%%%
